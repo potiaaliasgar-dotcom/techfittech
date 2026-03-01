@@ -99,7 +99,7 @@ export function MMACages() {
             </section>
 
             {/* Product Comparison 1: Cages (Split Layout + Cage Aesthetic) */}
-            <section className="py-24 md:py-32 bg-zinc-950 text-white relative overflow-hidden border-b-8 border-red-600 min-h-[100svh] flex items-center">
+            <section className="py-12 lg:py-32 bg-zinc-950 text-white relative overflow-hidden border-b-8 border-red-600 lg:min-h-[100svh] flex items-center">
                 {/* Subtle Chainlink/Grid Watermark Pattern */}
                 <div
                     className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none mix-blend-overlay"
@@ -110,15 +110,15 @@ export function MMACages() {
                 />
 
                 <div className="container px-4 mx-auto relative z-10 w-full">
-                    <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center h-full">
+                    <div className="flex flex-col lg:flex-row gap-8 lg:gap-24 items-center">
 
                         {/* Left Panel: Header & Info */}
                         <div className="w-full lg:w-1/3 flex flex-col items-start text-left shrink-0">
                             <div className="flex items-center gap-3 md:gap-4 mb-2 md:mb-4">
                                 <div className="h-[2px] w-8 md:w-12 bg-red-600"></div>
-                                <span className="text-red-600 font-bold uppercase tracking-widest text-xs md:text-sm">The Combat Zone</span>
+                                <span className="text-red-600 font-bold tracking-widest text-xs md:text-sm">The Combat Zone</span>
                             </div>
-                            <h2 className="text-4xl md:text-6xl lg:text-[5rem] font-black tracking-tighter uppercase text-white leading-[0.85] mb-4 md:mb-8 drop-shadow-sm flex flex-col">
+                            <h2 className="text-4xl md:text-6xl lg:text-[5rem] font-black tracking-tighter text-white leading-[0.85] mb-4 md:mb-8 drop-shadow-sm flex flex-col">
                                 <span>Floor Cage</span>
                                 <span className="text-zinc-600 font-light text-2xl md:text-4xl my-2">vs</span>
                                 <span>Podium Cage</span>
@@ -199,17 +199,17 @@ export function MMACages() {
             </section>
 
             {/* Product Comparison 2: Rings (Split Layout + Ring Aesthetic) */}
-            <section className="py-24 md:py-32 bg-white text-black relative border-b border-zinc-200 min-h-[100svh] flex items-center overflow-hidden">
+            <section className="py-12 lg:py-32 bg-white text-black relative border-b border-zinc-200 lg:min-h-[100svh] flex items-center overflow-hidden">
                 <div className="container px-4 mx-auto relative z-10 w-full">
-                    <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-24 items-center h-full">
+                    <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-24 items-center">
 
                         {/* Right Panel (now visually on right): Header & Info */}
                         <div className="w-full lg:w-1/3 flex flex-col items-start lg:items-end text-left lg:text-right shrink-0">
                             <div className="flex items-center gap-3 md:gap-4 mb-2 md:mb-4 lg:flex-row-reverse">
                                 <div className="h-[2px] w-8 md:w-12 bg-black"></div>
-                                <span className="text-black font-bold uppercase tracking-widest text-xs md:text-sm">Boxing & Kickboxing</span>
+                                <span className="text-black font-bold tracking-widest text-xs md:text-sm">Boxing & Kickboxing</span>
                             </div>
-                            <h2 className="text-4xl md:text-6xl lg:text-[5rem] font-black tracking-tighter uppercase text-black leading-[0.85] mb-4 md:mb-8 drop-shadow-sm flex flex-col">
+                            <h2 className="text-4xl md:text-6xl lg:text-[5rem] font-black tracking-tighter text-black leading-[0.85] mb-4 md:mb-8 drop-shadow-sm flex flex-col">
                                 <span>Training Ring</span>
                                 <span className="text-zinc-400 font-light text-2xl md:text-4xl my-2">vs</span>
                                 <span>Competition</span>
@@ -280,7 +280,7 @@ export function MMACages() {
             </section>
 
             {/* The Techfit Advantage */}
-            <section className="py-24 bg-zinc-950 text-white overflow-hidden">
+            <section className="py-12 lg:py-24 bg-zinc-950 text-white overflow-hidden">
                 <div className="container px-4 mx-auto relative">
                     <div className="absolute top-0 right-0 text-[15rem] font-black text-zinc-900 leading-none -translate-y-1/2 translate-x-1/4 pointer-events-none select-none z-0">PRO</div>
 
@@ -330,7 +330,7 @@ export function MMACages() {
             </section>
 
             {/* FAQs */}
-            <section className="py-24 bg-white relative">
+            <section className="py-12 lg:py-24 bg-white relative">
                 <div className="container px-4 mx-auto max-w-4xl">
                     <div className="flex flex-col items-center mb-16 text-center">
                         <div className="flex items-center gap-3 md:gap-4 mb-2 md:mb-4 justify-center">
