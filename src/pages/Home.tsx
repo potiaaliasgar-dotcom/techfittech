@@ -368,19 +368,19 @@ export function Home() {
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2" className="border-2 border-black bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-6 py-2 transition-all data-[state=open]:shadow-none data-[state=open]:translate-x-[4px] data-[state=open]:translate-y-[4px]">
-                            <AccordionTrigger className="text-xl md:text-2xl font-black uppercase hover:text-red-600 data-[state=open]:text-red-600 text-left py-6 hover:no-underline">What is the lead time for a custom order?</AccordionTrigger>
+                            <AccordionTrigger className="text-xl md:text-2xl font-black hover:text-red-600 data-[state=open]:text-red-600 text-left py-6 hover:no-underline">What is the lead time for a custom order?</AccordionTrigger>
                             <AccordionContent className="text-zinc-700 text-lg leading-relaxed pb-6 font-medium">
                                 Lead times vary depending on the extent of customization and the type of equipment. Generally, custom rigs and cages take about 2-4 weeks from order confirmation to dispatch.
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-3" className="border-2 border-black bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-6 py-2 transition-all data-[state=open]:shadow-none data-[state=open]:translate-x-[4px] data-[state=open]:translate-y-[4px]">
-                            <AccordionTrigger className="text-xl md:text-2xl font-black uppercase hover:text-red-600 data-[state=open]:text-red-600 text-left py-6 hover:no-underline">Does the equipment come with a warranty?</AccordionTrigger>
+                            <AccordionTrigger className="text-xl md:text-2xl font-black hover:text-red-600 data-[state=open]:text-red-600 text-left py-6 hover:no-underline">Does the equipment come with a warranty?</AccordionTrigger>
                             <AccordionContent className="text-zinc-700 text-lg leading-relaxed pb-6 font-medium">
                                 Yes, we stand behind the quality of our products. Our structural steel frames come with a solid warranty against manufacturing defects.
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-4" className="border-2 border-black bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-6 py-2 transition-all data-[state=open]:shadow-none data-[state=open]:translate-x-[4px] data-[state=open]:translate-y-[4px]">
-                            <AccordionTrigger className="text-xl md:text-2xl font-black uppercase hover:text-red-600 data-[state=open]:text-red-600 text-left py-6 hover:no-underline">How do I get a price quote?</AccordionTrigger>
+                            <AccordionTrigger className="text-xl md:text-2xl font-black hover:text-red-600 data-[state=open]:text-red-600 text-left py-6 hover:no-underline">How do I get a price quote?</AccordionTrigger>
                             <AccordionContent className="text-zinc-700 text-lg leading-relaxed pb-6 font-medium">
                                 You can easily get a quote by connecting with us directly via WhatsApp, or sending an email to techfitpa@gmail.com with your requirements.
                             </AccordionContent>
