@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle, Rocket, Shield, Users, Target } from "lucide-react";
+import { Rocket, TrendingUp, Flag, Shield, Users, Target, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/Homepagebg.webp";
@@ -10,18 +10,27 @@ export function About() {
     const storyItems = [
         {
             year: "2012",
-            title: "Inception",
-            desc: "Started supplying the Indian fitness industry with innovative, locally manufactured equipment."
+            title: "The Inception",
+            desc: "Techfit was founded with a singular vision: to revolutionize the Indian fitness equipment landscape with world-class manufacturing.",
+            fullDesc: "Since our inception in 2012, we have been supplying the Indian fitness industry with our line of innovative fitness equipment. We are constantly adding new and innovative products to our portfolio.",
+            icon: Rocket,
+            color: "red"
         },
         {
             year: "2016",
-            title: "Strategic Growth",
-            desc: "Acquired IMOT Industries, integrating 15 years of cardio assembly expertise into our portfolio."
+            title: "Strategic Acquisition",
+            desc: "Acquisition of IMOT Industries, bringing 15 years of cardio expertise and technical goodwill to the Techfit family.",
+            fullDesc: "In 2016, we bought over IMOT Industries which came backed with 15 years of experience in assembling cardio equipment and goodwill. The introduction of an upgraded cardio series has brought with it superior features and usability to the Indian market.",
+            icon: TrendingUp,
+            color: "black"
         },
         {
-            year: "Today",
-            title: "Industry Leader",
-            desc: "Providing a complete range of Strength, MMA, Cardio & CrossFit equipment across India."
+            year: "Present",
+            title: "Market Leadership",
+            desc: "Dominating the market with the most comprehensive range of Strength, MMA, and CrossFit solutions built 100% in India.",
+            fullDesc: "Today we offer fitness enthusiasts the complete range of Strength, Free Weights, MMA, Cardio & Cross fit Equipment of the highest quality, along with several customized options.",
+            icon: Flag,
+            color: "red"
         }
     ];
 
@@ -178,53 +187,83 @@ export function About() {
             </section>
 
             {/* Our Story / Timeline Section */}
-            <section className="py-24 bg-white relative">
-                <div className="container px-4 mx-auto">
-                    <div className="max-w-4xl mx-auto mb-16">
-                        <div className="flex items-center gap-3 mb-4">
+            <section className="py-24 sm:py-32 bg-white relative overflow-hidden">
+                {/* Background Text Watermark */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-black text-zinc-50 opacity-[0.03] select-none pointer-events-none uppercase tracking-tighter whitespace-nowrap z-0">
+                    Legacy of Innovation
+                </div>
+
+                <div className="container px-4 mx-auto relative z-10">
+                    <div className="max-w-4xl mx-auto mb-20 text-center sm:text-left">
+                        <div className="flex items-center justify-center sm:justify-start gap-3 mb-4">
                             <div className="h-[2px] w-8 bg-red-600"></div>
-                            <span className="text-red-600 font-bold uppercase tracking-widest text-xs">Chronicle</span>
+                            <span className="text-red-600 font-bold uppercase tracking-[0.3em] text-[10px] sm:text-xs">Our Chronicle</span>
                         </div>
-                        <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-black">
+                        <h2 className="text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tighter text-black leading-none">
                             Our <span className="text-red-600">Story.</span>
                         </h2>
                     </div>
 
-                    <div className="relative max-w-5xl mx-auto">
-                        <div className="absolute left-0 sm:left-1/2 top-0 bottom-0 w-1 bg-zinc-100 -translate-x-1/2 hidden sm:block"></div>
+                    <div className="relative max-w-6xl mx-auto">
+                        {/* The Rail/Track */}
+                        <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-[2px] sm:w-1 bg-zinc-100 sm:-translate-x-1/2 z-0">
+                            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-600/20 to-transparent animate-pulse" />
+                        </div>
 
-                        <div className="space-y-12 sm:space-y-24">
-                            {storyItems.map((item, i) => (
-                                <motion.div
-                                    key={i}
-                                    initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    className={`flex flex-col sm:flex-row items-center gap-8 sm:gap-16 ${i % 2 === 0 ? "sm:flex-row-reverse" : ""}`}
-                                >
-                                    <div className="hidden sm:flex absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-black border-4 border-red-600 z-10"></div>
+                        <div className="space-y-16 sm:space-y-32">
+                            {storyItems.map((item, i) => {
+                                const Icon = item.icon;
+                                return (
+                                    <motion.div
+                                        key={i}
+                                        initial={{ opacity: 0, x: i % 2 === 0 ? 50 : -50 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true, margin: "-100px" }}
+                                        transition={{ duration: 0.8, type: "spring" }}
+                                        className={`flex flex-col sm:flex-row items-start sm:items-center gap-8 ${i % 2 === 0 ? "sm:flex-row-reverse" : ""}`}
+                                    >
+                                        {/* Milestone Marker */}
+                                        <div className="absolute left-4 sm:left-1/2 -translate-x-[11px] sm:-translate-x-1/2 w-6 h-6 sm:w-10 sm:h-10 rounded-full bg-white border-4 border-red-600 shadow-[0_0_20px_rgba(220,38,38,0.3)] z-20 flex items-center justify-center group">
+                                            <div className="w-1.5 h-1.5 sm:w-3 sm:h-3 rounded-full bg-red-600 group-hover:scale-150 transition-transform duration-300" />
+                                        </div>
 
-                                    <div className="flex-1 w-full bg-zinc-50 p-8 md:p-12 border-2 border-zinc-100 relative group hover:border-red-600 transition-colors shadow-sm">
-                                        <div className="text-5xl font-black text-zinc-100 group-hover:text-red-600/10 transition-colors absolute top-4 right-4 leading-none select-none">
-                                            {item.year}
+                                        {/* Content Card */}
+                                        <div className="flex-1 w-full pl-12 sm:pl-0">
+                                            <div className="bg-white border-2 border-zinc-100 p-6 sm:p-10 md:p-12 relative group hover:border-red-600 transition-all duration-500 shadow-xl hover:shadow-2xl hover:-translate-y-2">
+                                                {/* Corner Accent */}
+                                                <div className="absolute top-0 right-0 w-12 h-12 bg-zinc-50 flex items-center justify-center group-hover:bg-red-600 transition-colors duration-500">
+                                                    <Icon className={`h-6 w-6 ${item.color === 'red' ? 'text-red-600' : 'text-black'} group-hover:text-white transition-colors`} />
+                                                </div>
+
+
+                                                <div className="relative z-10">
+                                                    <div className="mb-6">
+                                                        <div className="flex items-center gap-2 mb-2 sm:hidden">
+                                                            <div className="h-[1px] w-4 bg-red-600"></div>
+                                                            <span className="text-red-600 font-bold text-sm tracking-widest">{item.year}</span>
+                                                        </div>
+                                                        <h3 className="text-2xl sm:text-3xl font-black uppercase tracking-tighter text-black group-hover:text-red-600 transition-colors leading-none">
+                                                            {item.title}
+                                                        </h3>
+                                                    </div>
+
+                                                    <div className="text-zinc-600 font-medium leading-relaxed space-y-4 text-sm sm:text-base">
+                                                        <p className="font-bold text-black">{item.desc}</p>
+                                                        <p>{item.fullDesc}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <h3 className="text-2xl font-black uppercase tracking-tighter text-black mb-4 relative z-10">{item.title}</h3>
-                                        <div className="text-zinc-500 font-medium leading-relaxed relative z-10 space-y-4">
-                                            <p>{item.desc}</p>
-                                            {item.year === "2012" && (
-                                                <p>Since our inception in 2012, we have been supplying the Indian fitness industry, with our line of innovative fitness equipment. We are constantly adding new and innovative products to our portfolio.</p>
-                                            )}
-                                            {item.year === "2016" && (
-                                                <p>In 2016, we bought over IMOT Industries which came backed with 15 years of experience in assembling cardio equipment and goodwill. The introduction of an upgraded cardio series has brought with it superior features and usability to the Indian market.</p>
-                                            )}
-                                            {item.year === "Today" && (
-                                                <p>Today we offer fitness enthusiasts the complete range of Strength, Free Weights, MMA, Cardio & Cross fit Equipment of the highest quality, along with several customized options.</p>
-                                            )}
+
+                                        {/* Spacer with Large Year for Desktop */}
+                                        <div className={`flex-1 hidden sm:flex items-center ${i % 2 === 0 ? "justify-end pr-16" : "justify-start pl-16"} pointer-events-none`}>
+                                            <span className="text-8xl md:text-9xl font-black text-zinc-100 group-hover:text-red-600/20 transition-colors duration-500 select-none">
+                                                {item.year}
+                                            </span>
                                         </div>
-                                    </div>
-                                    <div className="flex-1 hidden sm:block"></div>
-                                </motion.div>
-                            ))}
+                                    </motion.div>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
