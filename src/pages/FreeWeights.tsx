@@ -22,12 +22,12 @@ import {
     CarouselItem,
 } from "@/components/ui/carousel";
 
-import heroBg from "@/assets/Lineup/Free-Weights-Strength.webp";
-import image1 from "@/assets/ModularGrid/image-1-4.webp";
-import image3 from "@/assets/ModularGrid/image-3-4.webp";
-import image4 from "@/assets/ModularGrid/image-4-3.webp";
-import image5 from "@/assets/Advantage/image-5-2.webp";
-import image6 from "@/assets/Advantage/image-4-1.webp";
+import heroBg from "@/assets/commercial-free-weights-strength-machines.webp";
+import image1 from "@/assets/productCatalog/rubber-dumbell.webp";
+import image2 from "@/assets/productCatalog/rubber-plates.webp";
+import image3 from "@/assets/productCatalog/full-power-rack.webp";
+import image4 from "@/assets/productCatalog/Deadlift-platfrom.webp";
+import image5 from "@/assets/productCatalog/Deadlift-platfrom.webp";
 
 interface Product {
     id: number;
@@ -47,17 +47,17 @@ function ProductCard({ product, onClick, onQuoteClick, isMobile = false }: { pro
             className={`group relative bg-white border border-zinc-200 hover:border-red-600 transition-all duration-500 overflow-hidden flex flex-col ${isMobile ? "mx-1 shadow-lg" : "shadow-sm hover:shadow-xl"}`}
         >
             {/* Image Container - Large & Prominent */}
-            <div className="aspect-[4/3] overflow-hidden relative bg-zinc-50 cursor-pointer" onClick={onClick}>
+            <div className="aspect-[4/3] overflow-hidden relative bg-white cursor-pointer p-8 sm:p-12" onClick={onClick}>
                 <img
                     src={product.img}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
                     alt={product.title}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-50/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 {/* Corner Accents */}
-                <div className="absolute top-3 right-3 w-5 h-5 border-t-2 border-r-2 border-white/40 group-hover:border-red-600 transition-colors duration-300"></div>
-                <div className="absolute bottom-3 left-3 w-5 h-5 border-b-2 border-l-2 border-white/40 group-hover:border-red-600 transition-colors duration-300"></div>
+                <div className="absolute top-4 right-4 w-6 h-6 border-t-2 border-r-2 border-zinc-100 group-hover:border-red-600 transition-colors duration-300"></div>
+                <div className="absolute bottom-4 left-4 w-6 h-6 border-b-2 border-l-2 border-zinc-100 group-hover:border-red-600 transition-colors duration-300"></div>
             </div>
 
             {/* Content Area - Compact & Clean */}
@@ -140,7 +140,7 @@ export function FreeWeights() {
             specs: "2.5kg - 50kg",
             desc: "Precision balanced hex dumbbells with premium rubber coating and ergonomic knurled handles.",
             tag: "Best Seller",
-            img: image5
+            img: image1
         },
         {
             id: 2,
@@ -149,7 +149,7 @@ export function FreeWeights() {
             specs: "2.5kg - 50kg",
             desc: "High-density rubber plates with steel insert for smooth loading and minimal bounce.",
             tag: "Durable",
-            img: image4
+            img: image2
         },
         {
             id: 3,
@@ -167,25 +167,17 @@ export function FreeWeights() {
             specs: "Commercial Spec",
             desc: "Triple-layer sound reduction system with heavy-duty rubber tiles and bamboo center.",
             tag: "Heavy Duty",
-            img: image1
+            img: image4
         },
-        {
-            id: 5,
-            title: "Olympic Rods",
-            subtitle: "Precision Bar",
-            specs: "20kg / 15kg",
-            desc: "Elite Olympic bars with smooth bearings and superior knurling.",
-            tag: "Elite",
-            img: image6
-        }
+
     ];
 
     const advantageImages = [
-        { src: image5, title: "Precision Casting", tag: "Manufacturing" },
-        { src: image4, title: "Impact Tested", tag: "Quality Control" },
-        { src: image3, title: "Custom Branding", tag: "Personalization" },
         { src: image1, title: "Global Standards", tag: "Commercial" },
-        { src: image6, title: "Master Craft", tag: "Engineering" },
+        { src: image2, title: "Master Craft", tag: "Engineering" },
+        { src: image3, title: "Custom Branding", tag: "Personalization" },
+        { src: image4, title: "Impact Tested", tag: "Quality Control" },
+        { src: image5, title: "Precision Casting", tag: "Manufacturing" },
     ];
 
     return (
@@ -265,18 +257,11 @@ export function FreeWeights() {
                         </p>
                     </div>
 
-                    {/* Desktop Grid View: 3 + 2 Layout */}
-                    <div className="hidden sm:flex flex-col gap-6">
-                        <div className="grid grid-cols-3 gap-6">
-                            {products.slice(0, 3).map((product) => (
-                                <ProductCard key={product.id} product={product} onClick={() => setActiveProduct(product.id)} onQuoteClick={scrollToEnquiry} />
-                            ))}
-                        </div>
-                        <div className="grid grid-cols-2 gap-6 max-w-[66%] mx-auto w-full">
-                            {products.slice(3, 5).map((product) => (
-                                <ProductCard key={product.id} product={product} onClick={() => setActiveProduct(product.id)} onQuoteClick={scrollToEnquiry} />
-                            ))}
-                        </div>
+                    {/* Desktop Grid View: 2x2 Layout */}
+                    <div className="hidden sm:grid grid-cols-2 gap-10 max-w-4xl mx-auto">
+                        {products.map((product) => (
+                            <ProductCard key={product.id} product={product} onClick={() => setActiveProduct(product.id)} onQuoteClick={scrollToEnquiry} />
+                        ))}
                     </div>
 
                     {/* Mobile Carousel View: Horizontal Only */}
