@@ -55,7 +55,7 @@ export function Home() {
                     style={{ y: yBg }}
                     className="absolute inset-0 z-0 bg-black"
                 >
-                    <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80 scale-105" style={{ backgroundImage: `url(${heroBg})` }} />
+                    <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 scale-105" style={{ backgroundImage: `url(${heroBg})` }} />
                     <div className="absolute inset-0 bg-gradient-to-t from-white/30 via-transparent to-black/60" />
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/40" />
                 </motion.div>

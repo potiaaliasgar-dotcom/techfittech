@@ -70,7 +70,7 @@ export function CrossFitRigs() {
             {/* Hero Section */}
             <section ref={heroRef} className="relative w-full min-h-[60vh] py-20 flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0 bg-black">
-                    <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60 scale-105" style={{ backgroundImage: `url(${heroBg})` }} />
+                    <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 scale-105" style={{ backgroundImage: `url(${heroBg})` }} />
                     <div className="absolute inset-0 bg-gradient-to-t from-white/30 via-transparent to-black/60" />
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/40" />
                 </div>

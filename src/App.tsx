@@ -7,9 +7,9 @@ import { About } from "./pages/About";
 import { MMACages } from "./pages/MMACages";
 import { CrossFitRigs } from "./pages/CrossFitRigs";
 import { FreeWeights } from "./pages/FreeWeights";
+import { PadelPickleball } from "./pages/PadelPickleball";
 
 // Page stubs
-const PadelPickleball = () => <div className="p-24 text-center min-h-[60vh] text-4xl font-black uppercase text-black">Padel & Pickleball <span className="text-red-600 text-xl block mt-4">Coming Soon</span></div>;
 const NotFound = () => <div className="p-24 text-center text-4xl font-black uppercase text-red-600 min-h-[60vh]">404 - Page Not Found</div>;
 
 function App() {
