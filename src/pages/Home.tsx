@@ -134,7 +134,7 @@ export function Home() {
             </div>
 
             {/* Products Section (Carousel) */}
-            <section id="products" className="py-8 md:py-24 flex items-center bg-white border-b border-zinc-200 relative z-20 overflow-hidden min-h-[100svh] md:min-h-0">
+            <section id="products" className="py-8 md:py-24 flex items-center bg-white border-b border-zinc-200 relative z-20 overflow-hidden">
                 {/* Background Watermark */}
                 {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none text-[20vw] font-black tracking-tighter uppercase whitespace-nowrap z-0">
                     LINEUP
@@ -162,13 +162,13 @@ export function Home() {
                             <Carousel
                                 opts={{
                                     align: "start",
-                                    loop: true,
+                                    loop: false,
                                 }}
                                 className="w-full"
                             >
                                 <CarouselContent className="-ml-4 md:-ml-6">
                                     {/* Product 1 */}
-                                    <CarouselItem className="pl-4 md:pl-6 md:basis-1/2 lg:basis-1/2 shrink-0">
+                                    <CarouselItem className="pl-4 md:pl-6 basis-[85%] md:basis-1/2 lg:basis-1/2 shrink-0">
                                         <motion.div whileHover={{ y: -15 }} className="group h-full flex flex-col shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] border-2 border-black bg-white transition-all duration-300">
                                             <div className="relative aspect-[3/2] md:aspect-[3/2] bg-zinc-200 overflow-hidden border-b-2 border-black max-h-[260px] md:max-h-none">
                                                 <div className="absolute top-2 md:top-4 left-2 md:left-4 z-20 bg-black text-white font-bold px-2 py-1 md:px-3 md:py-1 text-[10px] md:text-xs uppercase tracking-widest border border-white/20">
@@ -188,7 +188,7 @@ export function Home() {
                                     </CarouselItem>
 
                                     {/* Product 2 */}
-                                    <CarouselItem className="pl-4 md:pl-6 md:basis-1/2 lg:basis-1/2 shrink-0">
+                                    <CarouselItem className="pl-4 md:pl-6 basis-[85%] md:basis-1/2 lg:basis-1/2 shrink-0">
                                         <motion.div whileHover={{ y: -15 }} className="group h-full flex flex-col shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] border-2 border-black bg-white transition-all duration-300">
                                             <div className="relative aspect-[3/2] md:aspect-[3/2] bg-zinc-200 overflow-hidden border-b-2 border-black max-h-[260px] md:max-h-none">
                                                 <div className="absolute top-2 md:top-4 left-2 md:left-4 z-20 bg-black text-white font-bold px-2 py-1 md:px-3 md:py-1 text-[10px] md:text-xs uppercase tracking-widest border border-white/20">
@@ -208,7 +208,7 @@ export function Home() {
                                     </CarouselItem>
 
                                     {/* Product 3 */}
-                                    <CarouselItem className="pl-4 md:pl-6 md:basis-1/2 lg:basis-1/2 shrink-0">
+                                    <CarouselItem className="pl-4 md:pl-6 basis-[85%] md:basis-1/2 lg:basis-1/2 shrink-0">
                                         <motion.div whileHover={{ y: -15 }} className="group h-full flex flex-col shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] border-2 border-black bg-white transition-all duration-300">
                                             <div className="relative aspect-[3/2] md:aspect-[3/2] bg-zinc-200 overflow-hidden border-b-2 border-black max-h-[260px] md:max-h-none">
                                                 <div className="absolute top-2 md:top-4 left-2 md:left-4 z-20 bg-black text-white font-bold px-2 py-1 md:px-3 md:py-1 text-[10px] md:text-xs uppercase tracking-widest border border-white/20">
@@ -362,7 +362,7 @@ export function Home() {
                     </div>
                     <Accordion type="single" collapsible className="w-full space-y-4">
                         <AccordionItem value="item-1" className="border-2 border-black bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-6 py-2 transition-all data-[state=open]:shadow-none data-[state=open]:translate-x-[4px] data-[state=open]:translate-y-[4px]">
-                            <AccordionTrigger className="text-xl md:text-2xl font-black uppercase hover:text-red-600 data-[state=open]:text-red-600 text-left py-6 hover:no-underline">Do you provide installation services?</AccordionTrigger>
+                            <AccordionTrigger className="text-xl md:text-2xl font-black hover:text-red-600 data-[state=open]:text-red-600 text-left py-6 hover:no-underline">Do you provide installation services?</AccordionTrigger>
                             <AccordionContent className="text-zinc-700 text-lg leading-relaxed pb-6 font-medium">
                                 Yes. TechFit provides end-to-end support. For Rigs, Cages, and Rings, we can send a technical team to your location for professional assembly. Alternatively, we provide a detailed video guide and manual for your local contractor to follow.
                             </AccordionContent>
