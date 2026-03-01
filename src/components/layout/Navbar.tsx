@@ -71,9 +71,11 @@ export function Navbar() {
                 </nav>
 
                 <div className="flex items-center gap-4">
-                    <Button variant="default" className="hidden xl:flex bg-black text-white hover:bg-red-600 rounded-none px-6 py-6 h-auto uppercase font-black tracking-widest transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(220,38,38,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none border-2 border-black">
-                        Get a Quote
-                    </Button>
+                    <Link to="/free-weights">
+                        <Button variant="default" className="hidden xl:flex bg-black text-white hover:bg-red-600 rounded-none px-6 py-6 h-auto uppercase font-black tracking-widest transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(220,38,38,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none border-2 border-black">
+                            Get a Quote
+                        </Button>
+                    </Link>
 
                     <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
                         <SheetTrigger asChild>
@@ -120,9 +122,11 @@ export function Navbar() {
                                     </div>
                                 </div>
                                 <div className="p-6 bg-zinc-50 border-t-4 border-black mt-auto">
-                                    <Button className="w-full bg-black text-white hover:bg-red-600 rounded-none py-8 h-auto uppercase font-black tracking-widest transition-all text-lg shadow-[4px_4px_0px_0px_rgba(220,38,38,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none border-2 border-black">
-                                        Get a Quote
-                                    </Button>
+                                    <Link to="/free-weights" onClick={() => setIsMobileMenuOpen(false)}>
+                                        <Button className="w-full bg-black text-white hover:bg-red-600 rounded-none py-8 h-auto uppercase font-black tracking-widest transition-all text-lg shadow-[4px_4px_0px_0px_rgba(220,38,38,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none border-2 border-black">
+                                            Get a Quote
+                                        </Button>
+                                    </Link>
                                     <p className="text-center text-[10px] font-bold uppercase tracking-widest text-zinc-400 mt-6">
                                         Engineered in Mumbai ★ Built for India
                                     </p>
