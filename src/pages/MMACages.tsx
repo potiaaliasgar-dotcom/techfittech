@@ -419,13 +419,9 @@ export function MMACages() {
                 <div className="container relative z-10 px-4 mx-auto text-center">
                     <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 leading-tight">
                         Building a Combat Zone? <br />
-                        Let's Talk Infrastructure.
                     </h2>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button className="bg-white text-red-600 hover:bg-black hover:text-white rounded-none px-10 py-8 h-auto uppercase font-black tracking-[0.2em] transition-all text-xl border-2 border-white">
-                            Get a Factory Quote
-                        </Button>
-                        <Button variant="outline" className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-red-600 rounded-none px-10 py-8 h-auto uppercase font-black tracking-[0.2em] transition-all text-xl">
+                        <Button variant="outline" className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-red-600 rounded-none px-10 py-8 h-auto font-black tracking-[0.2em] transition-all text-xl">
                             Request Catalogue
                         </Button>
                     </div>
