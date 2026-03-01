@@ -48,6 +48,8 @@ function ProductCard({ product, onClick, isMobile = false }: { product: Product;
             <div className="aspect-[4/3] overflow-hidden relative bg-white cursor-pointer p-8 sm:p-12" onClick={onClick}>
                 <img
                     src={product.img}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
                     alt={product.title}
                 />
@@ -293,6 +295,8 @@ export function FreeWeights() {
                             <img
                                 src={advantageImages[0].src}
                                 alt={advantageImages[0].title}
+                                loading="lazy"
+                                decoding="async"
                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-60 group-hover:opacity-70 transition-opacity"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

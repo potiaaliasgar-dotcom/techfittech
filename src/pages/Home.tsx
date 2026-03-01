@@ -188,7 +188,7 @@ export function Home() {
                                                     Competition-Ring
                                                 </div>
                                                 <div className="absolute inset-0 bg-red-600/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity z-10 duration-500"></div>
-                                                <img src={ringImg} alt="Competition Ring" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+                                                <img src={ringImg} alt="Competition Ring" loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
                                             </div>
                                             <div className="p-6 flex flex-col flex-1 bg-white relative">
                                                 <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight mb-3 text-black border-b-2 border-red-600 pb-1 md:pb-2 inline-block self-start">MMA Octagons & Rings</h3>
@@ -208,7 +208,7 @@ export function Home() {
                                                     CrossFit-Rigs (2)
                                                 </div>
                                                 <div className="absolute inset-0 bg-red-600/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity z-10 duration-500"></div>
-                                                <img src={rigsImg} alt="CrossFit Rigs" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+                                                <img src={rigsImg} alt="CrossFit Rigs" loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
                                             </div>
                                             <div className="p-6 flex flex-col flex-1 bg-white relative">
                                                 <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight mb-3 text-black border-b-2 border-red-600 pb-1 md:pb-2 inline-block self-start">CrossFit Rigs</h3>
@@ -228,7 +228,7 @@ export function Home() {
                                                     Free-Weights-Strength
                                                 </div>
                                                 <div className="absolute inset-0 bg-red-600/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity z-10 duration-500"></div>
-                                                <img src={weightsImg} alt="Free Weights" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+                                                <img src={weightsImg} alt="Free Weights" loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
                                             </div>
                                             <div className="p-6 flex flex-col flex-1 bg-white relative">
                                                 <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight mb-3 text-black border-b-2 border-red-600 pb-1 md:pb-2 inline-block self-start">Free Weights & Strength</h3>
@@ -289,6 +289,8 @@ export function Home() {
                                             <img
                                                 src={logo}
                                                 alt={`Partner Logo ${index + 1}`}
+                                                loading="lazy"
+                                                decoding="async"
                                                 className="max-h-full max-w-full object-contain mix-blend-multiply hover:scale-110 transition-transform duration-300"
                                             />
                                         </div>

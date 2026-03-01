@@ -170,7 +170,7 @@ export function MMACages() {
                             >
                                 <div className="aspect-[3/2] sm:aspect-[4/3] bg-zinc-900 overflow-hidden relative w-full border-b-2 sm:border-b-4 border-zinc-800 group-hover:border-red-600 transition-colors flex-[0_0_auto]">
                                     <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-900/40 to-transparent z-10 mix-blend-multiply opacity-60" />
-                                    <img src={floorCageImg} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Floor Cage" />
+                                    <img src={floorCageImg} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Floor Cage" />
 
                                     {/* Mobile Tap Hint */}
                                     <div className="absolute top-2 right-2 sm:hidden z-20">
@@ -208,7 +208,7 @@ export function MMACages() {
                             >
                                 <div className="aspect-[3/2] sm:aspect-[4/3] bg-zinc-900 overflow-hidden relative w-full border-b-2 sm:border-b-4 border-zinc-800 group-hover:border-red-600 transition-colors flex-[0_0_auto]">
                                     <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-900/40 to-transparent z-10 mix-blend-multiply opacity-60" />
-                                    <img src={podiumCageImg} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" alt="Podium Cage" />
+                                    <img src={podiumCageImg} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" alt="Podium Cage" />
 
                                     {/* Podium Base Visual indicator */}
                                     <div className="absolute bottom-0 left-0 w-full h-3 sm:h-4 bg-zinc-800 border-t border-zinc-700 font-mono text-[6px] sm:text-[8px] text-zinc-500 px-2 flex items-center tracking-widest hidden sm:flex z-20">
@@ -280,7 +280,7 @@ export function MMACages() {
                                 <div className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 w-4 h-4 sm:w-6 sm:h-6 bg-red-600 rounded-sm z-30 shadow-md"></div>
 
                                 <div className="aspect-[3/2] sm:aspect-[4/3] bg-zinc-100 overflow-hidden relative w-full border-b focus:outline-none flex-[0_0_auto]">
-                                    <img src={trainingRingImg} className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" alt="Training Ring" />
+                                    <img src={trainingRingImg} loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" alt="Training Ring" />
 
                                     {/* Mobile Tap Hint */}
                                     <div className="absolute top-2 right-2 sm:hidden z-20">
@@ -315,7 +315,7 @@ export function MMACages() {
                                 <div className="absolute -top-2 -right-2 sm:-top-3 -right-3 w-4 h-4 sm:w-6 sm:h-6 bg-red-600 rounded-sm z-30 shadow-md"></div>
 
                                 <div className="aspect-[3/2] sm:aspect-[4/3] bg-zinc-100 overflow-hidden relative w-full border-b focus:outline-none flex-[0_0_auto]">
-                                    <img src={competitionRingImg} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Competition Ring" />
+                                    <img src={competitionRingImg} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Competition Ring" />
 
                                     {/* Mobile Tap Hint */}
                                     <div className="absolute top-2 right-2 sm:hidden z-20">
@@ -379,12 +379,12 @@ export function MMACages() {
 
                         <div className="grid grid-cols-2 gap-4">
                             <div className="space-y-4">
-                                <img src={image1} alt="Process 1" />
-                                <img src={image2} className="w-full h-48 object-cover border-b-4 border-zinc-800" alt="Process 2" />
+                                <img src={image1} loading="lazy" decoding="async" alt="Process 1" />
+                                <img src={image2} loading="lazy" decoding="async" className="w-full h-48 object-cover border-b-4 border-zinc-800" alt="Process 2" />
                             </div>
                             <div className="space-y-4 pt-12">
-                                <img src={image3} className="w-full h-48 object-cover border-b-4 border-zinc-800" alt="Process 3" />
-                                <img src={image4} className="w-full h-80 object-cover border-b-4 border-red-600" alt="Process 4" />
+                                <img src={image3} loading="lazy" decoding="async" className="w-full h-48 object-cover border-b-4 border-zinc-800" alt="Process 3" />
+                                <img src={image4} loading="lazy" decoding="async" className="w-full h-80 object-cover border-b-4 border-red-600" alt="Process 4" />
                             </div>
                         </div>
                     </div>

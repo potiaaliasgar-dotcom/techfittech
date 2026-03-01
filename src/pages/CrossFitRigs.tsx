@@ -171,7 +171,7 @@ export function CrossFitRigs() {
                                 }}
                             >
                                 <div className="aspect-[3/2] sm:aspect-[4/3] bg-zinc-900 overflow-hidden relative w-full border-b-2 sm:border-b-4 border-zinc-800 group-hover:border-red-600 transition-colors flex-[0_0_auto]">
-                                    <img src={wallmounted} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 p-4 sm:p-8" alt="Wall Mounted Rig" />
+                                    <img src={wallmounted} loading="lazy" decoding="async" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 p-4 sm:p-8" alt="Wall Mounted Rig" />
                                     <div className="absolute top-2 right-2 sm:hidden z-20">
                                         <div className="bg-red-600/80 p-1 rounded-full animate-pulse">
                                             <Zap className="h-3 w-3 text-white" />
@@ -202,7 +202,7 @@ export function CrossFitRigs() {
                                 }}
                             >
                                 <div className="aspect-[3/2] sm:aspect-[4/3] bg-zinc-900 overflow-hidden relative w-full border-b-2 sm:border-b-4 border-zinc-800 group-hover:border-red-600 transition-colors flex-[0_0_auto]">
-                                    <img src={islandRigs} className="w-full h-full object-contain group-hover:scale-105 transition-all duration-700 p-4 sm:p-8" alt="Island Rig" />
+                                    <img src={islandRigs} loading="lazy" decoding="async" className="w-full h-full object-contain group-hover:scale-105 transition-all duration-700 p-4 sm:p-8" alt="Island Rig" />
                                     <div className="absolute top-2 right-2 sm:hidden z-20">
                                         <div className="bg-red-600/80 p-1 rounded-full animate-pulse">
                                             <Zap className="h-3 w-3 text-white" />
@@ -267,6 +267,8 @@ export function CrossFitRigs() {
                                                 <img
                                                     src={img.src}
                                                     alt={img.title}
+                                                    loading="lazy"
+                                                    decoding="async"
                                                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                                                 />
                                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

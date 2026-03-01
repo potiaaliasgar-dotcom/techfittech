@@ -10,7 +10,7 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import heroBg from "@/assets/aqua-hero.png";
+import heroBg from "@/assets/aqua-hero.webp";
 
 export function Aqua() {
     const heroRef = useRef<HTMLDivElement>(null);
@@ -203,6 +203,8 @@ export function Aqua() {
                             <img
                                 src={heroBg}
                                 alt="Premium Aqua Fitness Installation"
+                                loading="lazy"
+                                decoding="async"
                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />

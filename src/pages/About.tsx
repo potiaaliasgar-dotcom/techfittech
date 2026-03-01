@@ -3,8 +3,8 @@ import { Rocket, TrendingUp, Flag, Shield, Users, Target, CheckCircle } from "lu
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/Homepagebg.webp";
-import AliPotia from "@/assets/Ali-Potia.jpg"
-import aboutUs from "@/assets/aboutus.png";
+import AliPotia from "@/assets/Ali-Potia.webp"
+import aboutUs from "@/assets/aboutus.webp";
 
 export function About() {
     const storyItems = [
@@ -167,7 +167,7 @@ export function About() {
                         <div className="grid grid-cols-2 gap-4">
                             <div className="space-y-4">
                                 <div className="h-64 bg-zinc-900 border-2 border-zinc-800 overflow-hidden group">
-                                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover grayscale opacity-40 group-hover:scale-110 group-hover:opacity-100 transition-all duration-700" alt="R&D" />
+                                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000&auto=format&fit=crop" loading="lazy" decoding="async" className="w-full h-full object-cover grayscale opacity-40 group-hover:scale-110 group-hover:opacity-100 transition-all duration-700" alt="R&D" />
                                 </div>
                                 <div className="h-48 bg-red-600 flex items-center justify-center text-5xl font-black uppercase text-white tracking-widest leading-none p-6">
                                     R&D Lab
@@ -178,7 +178,7 @@ export function About() {
                                     QC Test
                                 </div>
                                 <div className="h-64 bg-zinc-900 border-2 border-zinc-800 overflow-hidden group">
-                                    <img src={aboutUs} className="w-full h-full object-cover grayscale opacity-40 group-hover:scale-110 group-hover:opacity-100 transition-all duration-700" alt="Testing" />
+                                    <img src={aboutUs} loading="lazy" decoding="async" className="w-full h-full object-cover grayscale opacity-40 group-hover:scale-110 group-hover:opacity-100 transition-all duration-700" alt="Testing" />
                                 </div>
                             </div>
                         </div>
@@ -286,7 +286,7 @@ export function About() {
 
                             <div className="lg:col-span-5 relative flex justify-center lg:justify-start">
                                 <div className="w-full max-w-[280px] sm:max-w-md aspect-[4/5] bg-zinc-200 border-4 border-black relative z-10 overflow-hidden shadow-[12px_12px_0px_0px_rgba(220,38,38,1)] sm:shadow-[24px_24px_0px_0px_rgba(220,38,38,1)] group">
-                                    <img src={AliPotia} className="w-full h-full object-cover opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" alt="Ali Potia" />
+                                    <img src={AliPotia} loading="lazy" decoding="async" className="w-full h-full object-cover opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" alt="Ali Potia" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
                                     <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10">
                                         <h3 className="text-2xl sm:text-4xl font-black uppercase text-white tracking-tighter leading-none">Ali Potia</h3>
