@@ -274,25 +274,27 @@ export function About() {
                 <div className="container px-4 mx-auto">
                     <div className="max-w-6xl mx-auto">
                         <div className="grid lg:grid-cols-12 gap-16 items-center">
-                            <div className="lg:col-span-12 mb-4">
-                                <div className="flex items-center gap-3 mb-4">
+                            <div className="lg:col-span-12 mb-8 sm:mb-16 text-center sm:text-left">
+                                <div className="flex items-center justify-center sm:justify-start gap-3 mb-4">
                                     <div className="h-[2px] w-8 bg-red-600"></div>
-                                    <span className="text-red-600 font-bold uppercase tracking-widest text-xs">Leadership</span>
+                                    <span className="text-red-600 font-bold uppercase tracking-[0.3em] text-[10px] sm:text-xs">Our Leadership</span>
                                 </div>
-                                <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-black">
+                                <h2 className="text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tighter text-black leading-none">
                                     Meet Our <span className="text-red-600">Team.</span>
                                 </h2>
                             </div>
 
-                            <div className="lg:col-span-5 relative">
-                                <div className="aspect-[4/5] bg-zinc-200 border-4 border-black relative z-10 overflow-hidden shadow-[24px_24px_0px_0px_rgba(220,38,38,1)]">
-                                    <img src={AliPotia} className="w-full h-full object-cover grayscale opacity-80" alt="Ali Potia" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                                    <div className="absolute bottom-10 left-10">
-                                        <h3 className="text-4xl font-black uppercase text-white tracking-tighter leading-none">Ali Potia</h3>
-                                        <p className="text-red-600 font-black uppercase text-sm mt-3 tracking-[0.3em]">Chief Executive Officer</p>
+                            <div className="lg:col-span-5 relative flex justify-center lg:justify-start">
+                                <div className="w-full max-w-[280px] sm:max-w-md aspect-[4/5] bg-zinc-200 border-4 border-black relative z-10 overflow-hidden shadow-[12px_12px_0px_0px_rgba(220,38,38,1)] sm:shadow-[24px_24px_0px_0px_rgba(220,38,38,1)] group">
+                                    <img src={AliPotia} className="w-full h-full object-cover opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" alt="Ali Potia" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                                    <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10">
+                                        <h3 className="text-2xl sm:text-4xl font-black uppercase text-white tracking-tighter leading-none">Ali Potia</h3>
+                                        <p className="text-red-600 font-black uppercase text-[10px] sm:text-sm mt-2 sm:mt-3 tracking-[0.3em]">Chief Executive Officer</p>
                                     </div>
                                 </div>
+                                {/* Decorative Accent */}
+                                <div className="absolute -top-4 -left-4 sm:-top-8 sm:-left-8 w-16 h-16 sm:w-32 sm:h-32 border-t-4 border-l-4 border-red-600/20 z-0 hidden sm:block" />
                             </div>
 
                             <div className="lg:col-span-7 space-y-8">

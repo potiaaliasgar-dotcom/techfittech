@@ -140,7 +140,7 @@ export function GetAQuote() {
                             </div>
 
                             {/* Map Integration */}
-                            <div className="relative aspect-square sm:aspect-video lg:aspect-[4/3] border-4 border-black shadow-[16px_16px_0px_0px_rgba(220,38,38,1)] overflow-hidden">
+                            <div className="relative aspect-[4/3] sm:aspect-video lg:aspect-[4/3] border-4 border-black shadow-[8px_8px_0px_0px_rgba(220,38,38,1)] sm:shadow-[16px_16px_0px_0px_rgba(220,38,38,1)] overflow-hidden">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.193630263649!2d72.84805627581734!3d18.96759798221147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce4cdb3a98ff%3A0x41004bdeb8ca9a41!2s309%2C%20Boat%20Hard%20Rd%2C%20Darukhana%2C%20Byculla%2C%20Mumbai%2C%20Maharashtra%20400010!5e0!3m2!1sen!2sin!4v1711923000000!5m2!1sen!2sin"
                                     width="100%"
