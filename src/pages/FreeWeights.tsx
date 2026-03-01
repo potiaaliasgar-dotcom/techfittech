@@ -24,8 +24,8 @@ import {
 
 import heroBg from "@/assets/commercial-free-weights-strength-machines.webp";
 import productImage1 from "@/assets/productCatalog/rubber-dumbell.webp";
-import productImage2 from "@/assets/productCatalog/rubber-plates.webp";
-import productImage3 from "@/assets/productCatalog/full-power-rack.webp";
+import productImage2 from "@/assets/productCatalog/Rubber-Plates.webp";
+import productImage3 from "@/assets/productCatalog/Full-power-rack.webp";
 import productImage4 from "@/assets/productCatalog/Deadlift-platfrom.webp";
 
 import image3 from "@/assets/weightGallery/image-3-5.webp";
