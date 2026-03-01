@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, ChevronRight, X } from "lucide-react";
 import logoImg from "@/assets/logo.png";
 import { Button } from "@/components/ui/button";
@@ -23,6 +23,7 @@ export function Navbar() {
     const { scrollY } = useScroll();
     const [hidden, setHidden] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const location = useLocation();
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         const previous = scrollY.getPrevious() ?? 0;
@@ -49,21 +50,24 @@ export function Navbar() {
                 </Link>
 
                 <nav className="hidden xl:flex items-center h-full">
-                    {navLinks.map((link, index) => (
-                        <div key={link.name} className="flex items-center h-full">
-                            <Link
-                                to={link.path}
-                                onClick={() => window.scrollTo(0, 0)}
-                                className="px-3 xl:px-4 text-[10px] xl:text-xs font-black uppercase tracking-[0.05em] xl:tracking-widest transition-all hover:text-red-600 relative group h-full flex items-center whitespace-nowrap"
-                            >
-                                {link.name}
-                                <span className="absolute bottom-0 left-0 w-0 h-1 bg-red-600 transition-all duration-300 group-hover:w-full" />
-                            </Link>
-                            {index < navLinks.length - 1 && (
-                                <div className="h-4 w-[1px] bg-zinc-300 mx-1 xl:mx-2" />
-                            )}
-                        </div>
-                    ))}
+                    {navLinks.map((link, index) => {
+                        const isActive = location.pathname === link.path;
+                        return (
+                            <div key={link.name} className="flex items-center h-full">
+                                <Link
+                                    to={link.path}
+                                    onClick={() => window.scrollTo(0, 0)}
+                                    className={`px-3 xl:px-4 text-[10px] xl:text-xs font-black uppercase tracking-[0.05em] xl:tracking-widest transition-all hover:text-red-600 relative group h-full flex items-center whitespace-nowrap ${isActive ? "text-red-600" : ""}`}
+                                >
+                                    {link.name}
+                                    <span className={`absolute bottom-0 left-0 h-1 bg-red-600 transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"}`} />
+                                </Link>
+                                {index < navLinks.length - 1 && (
+                                    <div className="h-4 w-[1px] bg-zinc-300 mx-1 xl:mx-2" />
+                                )}
+                            </div>
+                        );
+                    })}
                 </nav>
 
                 <div className="flex items-center gap-4">
@@ -90,26 +94,29 @@ export function Navbar() {
                                 </div>
                                 <div className="flex-1 overflow-y-auto py-8 px-6">
                                     <div className="grid gap-2">
-                                        {navLinks.map((link, idx) => (
-                                            <motion.div
-                                                initial={{ opacity: 0, x: 20 }}
-                                                animate={{ opacity: 1, x: 0 }}
-                                                transition={{ delay: idx * 0.05 }}
-                                                key={link.name}
-                                            >
-                                                <Link
-                                                    to={link.path}
-                                                    onClick={() => {
-                                                        setIsMobileMenuOpen(false);
-                                                        window.scrollTo(0, 0);
-                                                    }}
-                                                    className="flex items-center justify-between py-3 text-lg font-black uppercase tracking-tighter border-b border-zinc-100 hover:text-red-600 group transition-colors"
+                                        {navLinks.map((link, idx) => {
+                                            const isActive = location.pathname === link.path;
+                                            return (
+                                                <motion.div
+                                                    initial={{ opacity: 0, x: 20 }}
+                                                    animate={{ opacity: 1, x: 0 }}
+                                                    transition={{ delay: idx * 0.05 }}
+                                                    key={link.name}
                                                 >
-                                                    {link.name}
-                                                    <ChevronRight className="h-5 w-5 opacity-0 group-hover:opacity-100 transition-all -translate-x-4 group-hover:translate-x-0" />
-                                                </Link>
-                                            </motion.div>
-                                        ))}
+                                                    <Link
+                                                        to={link.path}
+                                                        onClick={() => {
+                                                            setIsMobileMenuOpen(false);
+                                                            window.scrollTo(0, 0);
+                                                        }}
+                                                        className={`flex items-center justify-between py-3 text-lg font-black uppercase tracking-tighter border-b border-zinc-100 hover:text-red-600 group transition-colors ${isActive ? "text-red-600" : ""}`}
+                                                    >
+                                                        {link.name}
+                                                        <ChevronRight className={`h-5 w-5 transition-all -translate-x-4 group-hover:translate-x-0 ${isActive ? "opacity-100 translate-x-0" : "opacity-0 group-hover:opacity-100"}`} />
+                                                    </Link>
+                                                </motion.div>
+                                            );
+                                        })}
                                     </div>
                                 </div>
                                 <div className="p-6 bg-zinc-50 border-t-4 border-black mt-auto">

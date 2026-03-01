@@ -15,8 +15,10 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel";
-import heroBg from "@/assets/Homepagebg.webp";
-import rigsImg from "@/assets/Lineup/CrossFit-Rigs-2.webp";
+import heroBg from "@/assets/crossfit_rigs.webp";
+
+import wallmounted from "@/assets/ConfigOptions/Wall-Mounted-Series-Space-Saver-.webp"
+import islandRigs from "@/assets/ConfigOptions/Island-Rigs-Centerpiece-.webp"
 
 // Placeholder images for rigs (using weights/cages/rings if specific ones aren't available, but user mentioned image 1..4)
 import image1 from "@/assets/Advantage/image-1-2.webp"
@@ -69,8 +71,8 @@ export function CrossFitRigs() {
             <section ref={heroRef} className="relative w-full min-h-[60vh] py-20 flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0 bg-black">
                     <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60 scale-105" style={{ backgroundImage: `url(${heroBg})` }} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-black/60" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white/30 via-transparent to-black/60" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/40" />
                 </div>
 
                 <div className="container relative z-10 px-4 flex flex-col items-center text-center">
@@ -89,7 +91,7 @@ export function CrossFitRigs() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tighter uppercase max-w-4xl leading-[0.9] text-white"
+                        className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tighter uppercase max-w-4xl leading-[0.9] text-white drop-shadow-2xl"
                     >
                         Heavy Duty <br />
                         <span className="text-red-600">Functional Training Rigs</span>
@@ -163,8 +165,7 @@ export function CrossFitRigs() {
                                 }}
                             >
                                 <div className="aspect-[3/2] sm:aspect-[4/3] bg-zinc-900 overflow-hidden relative w-full border-b-2 sm:border-b-4 border-zinc-800 group-hover:border-red-600 transition-colors flex-[0_0_auto]">
-                                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-900/40 to-transparent z-10 mix-blend-multiply opacity-60" />
-                                    <img src={rigsImg} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Wall Mounted Rig" />
+                                    <img src={wallmounted} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 p-4 sm:p-8" alt="Wall Mounted Rig" />
                                     <div className="absolute top-2 right-2 sm:hidden z-20">
                                         <div className="bg-red-600/80 p-1 rounded-full animate-pulse">
                                             <Zap className="h-3 w-3 text-white" />
@@ -195,8 +196,7 @@ export function CrossFitRigs() {
                                 }}
                             >
                                 <div className="aspect-[3/2] sm:aspect-[4/3] bg-zinc-900 overflow-hidden relative w-full border-b-2 sm:border-b-4 border-zinc-800 group-hover:border-red-600 transition-colors flex-[0_0_auto]">
-                                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-900/40 to-transparent z-10 mix-blend-multiply opacity-60" />
-                                    <img src={rigsImg} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" alt="Island Rig" />
+                                    <img src={islandRigs} className="w-full h-full object-contain group-hover:scale-105 transition-all duration-700 p-4 sm:p-8" alt="Island Rig" />
                                     <div className="absolute top-2 right-2 sm:hidden z-20">
                                         <div className="bg-red-600/80 p-1 rounded-full animate-pulse">
                                             <Zap className="h-3 w-3 text-white" />

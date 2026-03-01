@@ -56,8 +56,8 @@ export function Home() {
                     className="absolute inset-0 z-0 bg-black"
                 >
                     <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80 scale-105" style={{ backgroundImage: `url(${heroBg})` }} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-black/60" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white/30 via-transparent to-black/60" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/40" />
                 </motion.div>
 
                 <motion.div
@@ -79,7 +79,7 @@ export function Home() {
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                        className="text-2xl sm:text-7xl md:text-5xl lg:text-[5rem] font-black tracking-tighter uppercase max-w-6xl leading-[0.85] text-white drop-shadow-2xl mix-blend-overlay"
+                        className="text-2xl sm:text-7xl md:text-5xl lg:text-[5rem] font-black tracking-tighter uppercase max-w-6xl leading-[0.85] text-white drop-shadow-2xl"
                     >
                         India’s <span className="text-red-600">Premier</span> Manufacturer of MMA Cages & Commercial Gym Rigs.
                     </motion.h1>

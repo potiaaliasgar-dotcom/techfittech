@@ -60,8 +60,8 @@ export function MMACages() {
             <section ref={heroRef} className="relative w-full min-h-[60vh] py-20 flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0 bg-black">
                     <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60 scale-105" style={{ backgroundImage: `url(${heroBg})` }} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-black/60" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white/30 via-transparent to-black/60" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/40" />
                 </div>
 
                 <div className="container relative z-10 px-4 flex flex-col items-center text-center">
@@ -80,7 +80,7 @@ export function MMACages() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tighter uppercase max-w-4xl leading-[0.9] text-white"
+                        className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tighter uppercase max-w-4xl leading-[0.9] text-white drop-shadow-2xl"
                     >
                         Professional Grade <br />
                         <span className="text-red-600">MMA Cages & Rings</span>
