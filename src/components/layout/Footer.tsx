@@ -5,32 +5,6 @@ export function Footer() {
     return (
         <footer className="w-full bg-white text-black flex flex-col items-center">
 
-            {/* Trusted By Section */}
-            <section className="w-full py-24 border-t border-zinc-200 bg-zinc-50">
-                <div className="container mx-auto px-4 mb-16 text-center">
-                    <h2 className="text-3xl md:text-5xl font-black tracking-tighter uppercase text-black">Trusted By</h2>
-                </div>
-                <div className="relative flex w-full overflow-hidden">
-                    <div className="flex animate-marquee opacity-80 grayscale hover:grayscale-0 transition-all duration-500 items-center justify-center gap-16 md:gap-32 whitespace-nowrap px-8">
-                        <h3 className="text-3xl font-black tracking-tighter uppercase text-black">wave gym logo</h3>
-                        <h3 className="text-3xl font-black tracking-tighter uppercase text-black">superhuman logo</h3>
-                        <h3 className="text-3xl font-black tracking-tighter uppercase text-black">MMA matrix Gym logo</h3>
-                        <h3 className="text-3xl font-black tracking-tighter uppercase text-black">SYKZ LOGO (1)</h3>
-                        <h3 className="text-3xl font-black tracking-tighter uppercase text-black">MFN logo</h3>
-                        <h3 className="text-3xl font-black tracking-tighter uppercase text-black">gold gym logo</h3>
-                        <h3 className="text-3xl font-black tracking-tighter uppercase text-black">cult logo</h3>
-                        {/* Duplicate for seamless looping */}
-                        <h3 className="text-3xl font-black tracking-tighter uppercase text-black">wave gym logo</h3>
-                        <h3 className="text-3xl font-black tracking-tighter uppercase text-black">superhuman logo</h3>
-                        <h3 className="text-3xl font-black tracking-tighter uppercase text-black">MMA matrix Gym logo</h3>
-                        <h3 className="text-3xl font-black tracking-tighter uppercase text-black">SYKZ LOGO (1)</h3>
-                        <h3 className="text-3xl font-black tracking-tighter uppercase text-black">MFN logo</h3>
-                        <h3 className="text-3xl font-black tracking-tighter uppercase text-black">gold gym logo</h3>
-                        <h3 className="text-3xl font-black tracking-tighter uppercase text-black">cult logo</h3>
-                    </div>
-                </div>
-            </section>
-
             {/* Main Footer Links & Info */}
             <div className="w-full bg-white border-t border-zinc-200 py-16 md:py-24">
                 <div className="container mx-auto px-4 md:px-6">
