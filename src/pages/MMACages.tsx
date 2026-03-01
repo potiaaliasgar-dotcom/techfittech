@@ -464,7 +464,7 @@ export function MMACages() {
                                 <Button
                                     onClick={() => setActiveCage(null)}
                                     size="sm"
-                                    className="mt-6 w-full bg-red-600 hover:bg-red-700 text-white rounded-none uppercase font-black tracking-widest text-[10px]"
+                                    className="mt-6 w-full bg-red-600 hover:bg-red-700 text-white rounded-none font-black tracking-widest text-[10px]"
                                 >
                                     Close Detail
                                 </Button>
@@ -505,7 +505,7 @@ export function MMACages() {
                                 <Button
                                     onClick={() => setActiveCage(null)}
                                     size="sm"
-                                    className="mt-6 w-full bg-red-600 hover:bg-red-700 text-white rounded-none uppercase font-black tracking-widest text-[10px]"
+                                    className="mt-6 w-full bg-red-600 hover:bg-red-700 text-white rounded-none font-black tracking-widest text-[10px]"
                                 >
                                     Close Detail
                                 </Button>
@@ -546,7 +546,7 @@ export function MMACages() {
                                 <Button
                                     onClick={() => setActiveRing(null)}
                                     size="sm"
-                                    className="mt-6 w-full bg-black hover:bg-zinc-800 text-white rounded-none uppercase font-black tracking-widest text-[10px]"
+                                    className="mt-6 w-full bg-black hover:bg-zinc-800 text-white rounded-none font-black tracking-widest text-[10px]"
                                 >
                                     Close Detail
                                 </Button>
