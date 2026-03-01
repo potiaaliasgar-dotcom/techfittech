@@ -21,10 +21,10 @@ import wallmounted from "@/assets/ConfigOptions/Wall-Mounted-Series-Space-Saver-
 import islandRigs from "@/assets/ConfigOptions/Island-Rigs-Centerpiece-.webp"
 
 // Placeholder images for rigs (using weights/cages/rings if specific ones aren't available, but user mentioned image 1..4)
-import image1 from "@/assets/Advantage/image-1-2.webp"
-import image2 from "@/assets/Advantage/image-2-2.webp"
-import image3 from "@/assets/Advantage/image-3-2.webp"
-import image4 from "@/assets/Advantage/image-4-1.webp"
+import image1 from "@/assets/ModularGrid/image-1-4.webp"
+import image2 from "@/assets/ModularGrid/image-2-4.webp"
+import image3 from "@/assets/ModularGrid/image-3-4.webp"
+import image4 from "@/assets/ModularGrid/image-4-3.webp"
 
 export function CrossFitRigs() {
     const heroRef = useRef(null);
