@@ -20,13 +20,13 @@ import Autoplay from "embla-carousel-autoplay";
 import heroBg from "@/assets/Homepagebg.webp";
 
 // Lineup Images
-import ringImg from "@/assets/lineup/Competition-Ring.webp";
-import rigsImg from "@/assets/lineup/CrossFit-Rigs-2.webp";
-import weightsImg from "@/assets/lineup/Free-Weights-Strength.webp";
+import ringImg from "@/assets/Lineup/Competition-Ring.webp";
+import rigsImg from "@/assets/Lineup/CrossFit-Rigs-2.webp";
+import weightsImg from "@/assets/Lineup/Free-Weights-Strength.webp";
 
 // Dynamic Trusted By Logos
 const trustedByLogos = Object.values(
-    import.meta.glob("../assets/trustedby/*.{png,jpg,jpeg,svg,webp}", { eager: true, query: '?url', import: 'default' })
+    import.meta.glob("../assets/TrustedBy/*.{png,jpg,jpeg,svg,webp}", { eager: true, query: '?url', import: 'default' })
 ) as string[];
 
 export function Home() {
