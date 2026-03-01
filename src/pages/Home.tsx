@@ -19,6 +19,11 @@ import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import heroBg from "@/assets/Homepagebg.webp";
 
+// Lineup Images
+import ringImg from "@/assets/lineup/Competition-Ring.webp";
+import rigsImg from "@/assets/lineup/CrossFit-Rigs-2.webp";
+import weightsImg from "@/assets/lineup/Free-Weights-Strength.webp";
+
 export function Home() {
     const heroRef = useRef(null);
     const { scrollYProgress } = useScroll({
@@ -165,7 +170,7 @@ export function Home() {
                                                     Competition-Ring
                                                 </div>
                                                 <div className="absolute inset-0 bg-red-600/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity z-10 duration-500"></div>
-                                                <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=1000&auto=format&fit=crop" alt="Competition Ring" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale" />
+                                                <img src={ringImg} alt="Competition Ring" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
                                             </div>
                                             <div className="p-6 flex flex-col flex-1 bg-white relative">
                                                 <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight mb-3 text-black border-b-2 border-red-600 pb-1 md:pb-2 inline-block self-start">MMA Octagons & Rings</h3>
@@ -185,7 +190,7 @@ export function Home() {
                                                     CrossFit-Rigs (2)
                                                 </div>
                                                 <div className="absolute inset-0 bg-red-600/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity z-10 duration-500"></div>
-                                                <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1000&auto=format&fit=crop" alt="CrossFit Rigs" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale" />
+                                                <img src={rigsImg} alt="CrossFit Rigs" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
                                             </div>
                                             <div className="p-6 flex flex-col flex-1 bg-white relative">
                                                 <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight mb-3 text-black border-b-2 border-red-600 pb-1 md:pb-2 inline-block self-start">CrossFit Rigs</h3>
@@ -205,7 +210,7 @@ export function Home() {
                                                     Free-Weights-Strength
                                                 </div>
                                                 <div className="absolute inset-0 bg-red-600/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity z-10 duration-500"></div>
-                                                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1000&auto=format&fit=crop" alt="Free Weights" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale" />
+                                                <img src={weightsImg} alt="Free Weights" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
                                             </div>
                                             <div className="p-6 flex flex-col flex-1 bg-white relative">
                                                 <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight mb-3 text-black border-b-2 border-red-600 pb-1 md:pb-2 inline-block self-start">Free Weights & Strength</h3>
