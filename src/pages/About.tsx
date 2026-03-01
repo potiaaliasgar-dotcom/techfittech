@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/Homepagebg.webp";
 import AliPotia from "@/assets/Ali-Potia.jpg"
+import aboutUs from "@/assets/aboutus.png";
 
 export function About() {
     const storyItems = [
@@ -168,7 +169,7 @@ export function About() {
                                     QC Test
                                 </div>
                                 <div className="h-64 bg-zinc-900 border-2 border-zinc-800 overflow-hidden group">
-                                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover grayscale opacity-40 group-hover:scale-110 group-hover:opacity-100 transition-all duration-700" alt="Testing" />
+                                    <img src={aboutUs} className="w-full h-full object-cover grayscale opacity-40 group-hover:scale-110 group-hover:opacity-100 transition-all duration-700" alt="Testing" />
                                 </div>
                             </div>
                         </div>
