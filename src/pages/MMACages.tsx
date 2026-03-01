@@ -335,17 +335,17 @@ export function MMACages() {
             </section>
 
             {/* The Techfit Advantage */}
-            <section className="py-12 lg:py-24 bg-zinc-950 text-white overflow-hidden">
-                <div className="container px-4 mx-auto relative">
+            <section className="py-12 lg:py-24 bg-zinc-950 text-white overflow-hidden min-h-[100svh] flex items-center">
+                <div className="container px-4 mx-auto relative lg:py-0 py-8">
                     {/* <div className="absolute top-0 right-0 text-[15rem] font-black text-zinc-900 leading-none -translate-y-1/2 translate-x-1/4 pointer-events-none select-none z-0">PRO</div> */}
 
-                    <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="relative z-10 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
                         <div className="space-y-8">
                             <div className="flex items-center gap-3 md:gap-4 mb-2 md:mb-4">
                                 <div className="h-[2px] w-8 md:w-12 bg-red-600"></div>
                                 <span className="text-red-600 font-bold uppercase tracking-widest text-xs md:text-sm">The Techfit Advantage</span>
                             </div>
-                            <h2 className="text-4xl md:text-6xl lg:text-[5rem] font-black tracking-tighter uppercase text-white leading-[0.85] mb-4 md:mb-8 drop-shadow-sm">
+                            <h2 className="text-4xl md:text-5xl lg:text-[4rem] font-black tracking-tighter uppercase text-white leading-[0.85] mb-4 md:mb-8 drop-shadow-sm">
                                 Superior Strength.<br />Professional Standards.
                             </h2>
 
@@ -362,8 +362,8 @@ export function MMACages() {
                                             {adv.icon}
                                         </div>
                                         <div>
-                                            <h4 className="text-xl font-black uppercase tracking-widest mb-2">{adv.title}</h4>
-                                            <p className="text-zinc-400 font-medium">{adv.desc}</p>
+                                            <h4 className="text-xl md:text-lg font-black uppercase tracking-widest mb-2">{adv.title}</h4>
+                                            <p className="text-zinc-400 md:text-sm font-medium">{adv.desc}</p>
                                         </div>
                                     </motion.div>
                                 ))}
