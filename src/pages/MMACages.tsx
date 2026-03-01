@@ -442,32 +442,33 @@ export function MMACages() {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setActiveCage(null)}
-                            className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm sm:hidden"
-                        />
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] max-w-sm z-[101] bg-zinc-900 border border-red-600/50 p-6 shadow-2xl sm:hidden flex flex-col items-start"
-                            onClick={(e) => e.stopPropagation()}
+                            className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm sm:hidden flex items-center justify-center p-4"
                         >
-                            <div className="flex justify-between items-center mb-4 w-full">
-                                <div className="h-1 w-8 bg-red-600" />
-                                <button onClick={() => setActiveCage(null)} className="text-zinc-500 hover:text-white transition-colors">
-                                    <Zap className="h-4 w-4" />
-                                </button>
-                            </div>
-                            <h4 className="text-xl font-black uppercase tracking-tighter mb-2 text-white text-left">Floor Cage</h4>
-                            <p className="text-zinc-400 text-sm font-medium leading-relaxed text-left">
-                                Ground-mounted MMA cage designed for academies and training facilities. Compact, stable, and ideal for spaces requiring professional-grade performance without elevated platforms.
-                            </p>
-                            <Button
-                                onClick={() => setActiveCage(null)}
-                                size="sm"
-                                className="mt-6 w-full bg-red-600 hover:bg-red-700 text-white rounded-none uppercase font-black tracking-widest text-[10px]"
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                                animate={{ opacity: 1, scale: 1, y: 0 }}
+                                exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                                className="w-full max-w-sm bg-zinc-900 border border-red-600/50 p-6 shadow-2xl flex flex-col items-start"
+                                onClick={(e) => e.stopPropagation()}
                             >
-                                Close Detail
-                            </Button>
+                                <div className="flex justify-between items-center mb-4 w-full">
+                                    <div className="h-1 w-8 bg-red-600" />
+                                    <button onClick={() => setActiveCage(null)} className="text-zinc-500 hover:text-white transition-colors">
+                                        <Zap className="h-4 w-4" />
+                                    </button>
+                                </div>
+                                <h4 className="text-xl font-black uppercase tracking-tighter mb-2 text-white text-left">Floor Cage</h4>
+                                <p className="text-zinc-400 text-sm font-medium leading-relaxed text-left">
+                                    Ground-mounted MMA cage designed for academies and training facilities. Compact, stable, and ideal for spaces requiring professional-grade performance without elevated platforms.
+                                </p>
+                                <Button
+                                    onClick={() => setActiveCage(null)}
+                                    size="sm"
+                                    className="mt-6 w-full bg-red-600 hover:bg-red-700 text-white rounded-none uppercase font-black tracking-widest text-[10px]"
+                                >
+                                    Close Detail
+                                </Button>
+                            </motion.div>
                         </motion.div>
                     </>
                 )}
@@ -482,32 +483,33 @@ export function MMACages() {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setActiveCage(null)}
-                            className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm sm:hidden"
-                        />
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] max-w-sm z-[101] bg-zinc-900 border border-red-600/50 p-6 shadow-2xl sm:hidden flex flex-col items-start"
-                            onClick={(e) => e.stopPropagation()}
+                            className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm sm:hidden flex items-center justify-center p-4"
                         >
-                            <div className="flex justify-between items-center mb-4 w-full">
-                                <div className="h-1 w-8 bg-red-600" />
-                                <button onClick={() => setActiveCage(null)} className="text-zinc-500 hover:text-white transition-colors">
-                                    <Zap className="h-4 w-4" />
-                                </button>
-                            </div>
-                            <h4 className="text-xl font-black uppercase tracking-tighter mb-2 text-white text-left">Podium Cage</h4>
-                            <p className="text-zinc-400 text-sm font-medium leading-relaxed text-left">
-                                Elevated MMA cage engineered for competitions and showcase environments. Offers enhanced visibility, reinforced structure, and premium finishing suitable for events and broadcast setups.
-                            </p>
-                            <Button
-                                onClick={() => setActiveCage(null)}
-                                size="sm"
-                                className="mt-6 w-full bg-red-600 hover:bg-red-700 text-white rounded-none uppercase font-black tracking-widest text-[10px]"
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                                animate={{ opacity: 1, scale: 1, y: 0 }}
+                                exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                                className="w-full max-w-sm bg-zinc-900 border border-red-600/50 p-6 shadow-2xl flex flex-col items-start"
+                                onClick={(e) => e.stopPropagation()}
                             >
-                                Close Detail
-                            </Button>
+                                <div className="flex justify-between items-center mb-4 w-full">
+                                    <div className="h-1 w-8 bg-red-600" />
+                                    <button onClick={() => setActiveCage(null)} className="text-zinc-500 hover:text-white transition-colors">
+                                        <Zap className="h-4 w-4" />
+                                    </button>
+                                </div>
+                                <h4 className="text-xl font-black uppercase tracking-tighter mb-2 text-white text-left">Podium Cage</h4>
+                                <p className="text-zinc-400 text-sm font-medium leading-relaxed text-left">
+                                    Elevated MMA cage engineered for competitions and showcase environments. Offers enhanced visibility, reinforced structure, and premium finishing suitable for events and broadcast setups.
+                                </p>
+                                <Button
+                                    onClick={() => setActiveCage(null)}
+                                    size="sm"
+                                    className="mt-6 w-full bg-red-600 hover:bg-red-700 text-white rounded-none uppercase font-black tracking-widest text-[10px]"
+                                >
+                                    Close Detail
+                                </Button>
+                            </motion.div>
                         </motion.div>
                     </>
                 )}
@@ -522,32 +524,33 @@ export function MMACages() {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setActiveRing(null)}
-                            className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm sm:hidden"
-                        />
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] max-w-sm z-[101] bg-white border border-zinc-200 p-6 shadow-2xl sm:hidden flex flex-col items-start"
-                            onClick={(e) => e.stopPropagation()}
+                            className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm sm:hidden flex items-center justify-center p-4"
                         >
-                            <div className="flex justify-between items-center mb-4 w-full">
-                                <div className="h-1 w-8 bg-black" />
-                                <button onClick={() => setActiveRing(null)} className="text-zinc-400 hover:text-black transition-colors">
-                                    <Zap className="h-4 w-4" />
-                                </button>
-                            </div>
-                            <h4 className="text-xl font-black uppercase tracking-tighter mb-2 text-black text-left">Training Ring</h4>
-                            <p className="text-zinc-600 text-sm font-medium leading-relaxed text-left">
-                                Durable boxing ring built for daily training and skill development. Designed for gyms and academies with focus on safety, shock absorption, and long-term use.
-                            </p>
-                            <Button
-                                onClick={() => setActiveRing(null)}
-                                size="sm"
-                                className="mt-6 w-full bg-black hover:bg-zinc-800 text-white rounded-none uppercase font-black tracking-widest text-[10px]"
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                                animate={{ opacity: 1, scale: 1, y: 0 }}
+                                exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                                className="w-full max-w-sm bg-white border border-zinc-200 p-6 shadow-2xl flex flex-col items-start"
+                                onClick={(e) => e.stopPropagation()}
                             >
-                                Close Detail
-                            </Button>
+                                <div className="flex justify-between items-center mb-4 w-full">
+                                    <div className="h-1 w-8 bg-black" />
+                                    <button onClick={() => setActiveRing(null)} className="text-zinc-400 hover:text-black transition-colors">
+                                        <Zap className="h-4 w-4" />
+                                    </button>
+                                </div>
+                                <h4 className="text-xl font-black uppercase tracking-tighter mb-2 text-black text-left">Training Ring</h4>
+                                <p className="text-zinc-600 text-sm font-medium leading-relaxed text-left">
+                                    Durable boxing ring built for daily training and skill development. Designed for gyms and academies with focus on safety, shock absorption, and long-term use.
+                                </p>
+                                <Button
+                                    onClick={() => setActiveRing(null)}
+                                    size="sm"
+                                    className="mt-6 w-full bg-black hover:bg-zinc-800 text-white rounded-none uppercase font-black tracking-widest text-[10px]"
+                                >
+                                    Close Detail
+                                </Button>
+                            </motion.div>
                         </motion.div>
                     </>
                 )}
@@ -562,32 +565,33 @@ export function MMACages() {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setActiveRing(null)}
-                            className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm sm:hidden"
-                        />
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] max-w-sm z-[101] bg-white border border-red-600/50 p-6 shadow-2xl sm:hidden flex flex-col items-start"
-                            onClick={(e) => e.stopPropagation()}
+                            className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm sm:hidden flex items-center justify-center p-4"
                         >
-                            <div className="flex justify-between items-center mb-4 w-full">
-                                <div className="h-1 w-8 bg-red-600" />
-                                <button onClick={() => setActiveRing(null)} className="text-zinc-400 hover:text-black transition-colors">
-                                    <Zap className="h-4 w-4" />
-                                </button>
-                            </div>
-                            <h4 className="text-xl font-black uppercase tracking-tighter mb-2 text-black text-left">Competition Ring</h4>
-                            <p className="text-zinc-600 text-sm font-medium leading-relaxed text-left">
-                                Professional boxing ring designed to meet competition standards. Built for tournaments, promotions, and events requiring maximum stability, aesthetics, and athlete safety.
-                            </p>
-                            <Button
-                                onClick={() => setActiveRing(null)}
-                                size="sm"
-                                className="mt-6 w-full bg-red-600 hover:bg-red-700 text-white rounded-none uppercase font-black tracking-widest text-[10px]"
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                                animate={{ opacity: 1, scale: 1, y: 0 }}
+                                exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                                className="w-full max-w-sm bg-white border border-red-600/50 p-6 shadow-2xl flex flex-col items-start"
+                                onClick={(e) => e.stopPropagation()}
                             >
-                                Close Detail
-                            </Button>
+                                <div className="flex justify-between items-center mb-4 w-full">
+                                    <div className="h-1 w-8 bg-red-600" />
+                                    <button onClick={() => setActiveRing(null)} className="text-zinc-400 hover:text-black transition-colors">
+                                        <Zap className="h-4 w-4" />
+                                    </button>
+                                </div>
+                                <h4 className="text-xl font-black uppercase tracking-tighter mb-2 text-black text-left">Competition Ring</h4>
+                                <p className="text-zinc-600 text-sm font-medium leading-relaxed text-left">
+                                    Professional boxing ring designed to meet competition standards. Built for tournaments, promotions, and events requiring maximum stability, aesthetics, and athlete safety.
+                                </p>
+                                <Button
+                                    onClick={() => setActiveRing(null)}
+                                    size="sm"
+                                    className="mt-6 w-full bg-red-600 hover:bg-red-700 text-white rounded-none uppercase font-black tracking-widest text-[10px]"
+                                >
+                                    Close Detail
+                                </Button>
+                            </motion.div>
                         </motion.div>
                     </>
                 )}
