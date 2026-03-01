@@ -276,7 +276,7 @@ export function Home() {
                                             <img
                                                 src={logo}
                                                 alt={`Partner Logo ${index + 1}`}
-                                                className="max-h-full max-w-full object-contain filter-none hover:scale-110 transition-transform duration-300"
+                                                className="max-h-full max-w-full object-contain [filter:invert(1)_hue-rotate(180deg)] [mix-blend-mode:screen] hover:scale-110 transition-transform duration-300"
                                             />
                                         </div>
                                     </CarouselItem>
@@ -288,7 +288,7 @@ export function Home() {
                                             <img
                                                 src={logo}
                                                 alt={`Partner Logo Duplicate ${index + 1}`}
-                                                className="max-h-full max-w-full object-contain filter-none hover:scale-110 transition-transform duration-300"
+                                                className="max-h-full max-w-full object-contain [filter:invert(1)_hue-rotate(180deg)] [mix-blend-mode:screen] hover:scale-110 transition-transform duration-300"
                                             />
                                         </div>
                                     </CarouselItem>
