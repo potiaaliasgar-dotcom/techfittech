@@ -7,6 +7,7 @@ export function Layout() {
     return (
         <div className="flex min-h-screen flex-col bg-white text-black selection:bg-red-600 selection:text-white font-sans">
             <Navbar />
+            <div className="h-20" /> {/* Spacer for fixed Navbar */}
             <main className="flex-1">
                 <Outlet />
             </main>

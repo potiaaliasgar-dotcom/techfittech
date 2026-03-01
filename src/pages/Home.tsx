@@ -62,7 +62,7 @@ export function Home() {
 
                 <motion.div
                     style={{ opacity: opacityText }}
-                    className="container relative z-10 px-4 flex flex-col items-center text-center -mt-20"
+                    className="container relative z-10 px-4 flex flex-col items-center text-center"
                 >
                     {/* <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}

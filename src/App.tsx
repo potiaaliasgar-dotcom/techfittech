@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Layout } from "./components/layout/Layout";
+import { ScrollToTop } from "./components/layout/ScrollToTop";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { MMACages } from "./pages/MMACages";
@@ -13,6 +14,7 @@ const NotFound = () => <div className="p-24 text-center text-4xl font-black uppe
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
