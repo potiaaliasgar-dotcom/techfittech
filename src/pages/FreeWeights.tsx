@@ -23,11 +23,16 @@ import {
 } from "@/components/ui/carousel";
 
 import heroBg from "@/assets/commercial-free-weights-strength-machines.webp";
-import image1 from "@/assets/productCatalog/rubber-dumbell.webp";
-import image2 from "@/assets/productCatalog/rubber-plates.webp";
-import image3 from "@/assets/productCatalog/full-power-rack.webp";
-import image4 from "@/assets/productCatalog/Deadlift-platfrom.webp";
-import image5 from "@/assets/productCatalog/Deadlift-platfrom.webp";
+import productImage1 from "@/assets/productCatalog/rubber-dumbell.webp";
+import productImage2 from "@/assets/productCatalog/rubber-plates.webp";
+import productImage3 from "@/assets/productCatalog/full-power-rack.webp";
+import productImage4 from "@/assets/productCatalog/Deadlift-platfrom.webp";
+
+import image3 from "@/assets/weightGallery/image-3-5.webp";
+import image2 from "@/assets/weightGallery/image-1-5.webp";
+import image4 from "@/assets/weightGallery/image-4-4.webp";
+import image1 from "@/assets/weightGallery/image-5-3.webp";
+import image5 from "@/assets/weightGallery/iamge-6.webp";
 
 interface Product {
     id: number;
@@ -140,7 +145,7 @@ export function FreeWeights() {
             specs: "2.5kg - 50kg",
             desc: "Precision balanced hex dumbbells with premium rubber coating and ergonomic knurled handles.",
             tag: "Best Seller",
-            img: image1
+            img: productImage1
         },
         {
             id: 2,
@@ -149,7 +154,7 @@ export function FreeWeights() {
             specs: "2.5kg - 50kg",
             desc: "High-density rubber plates with steel insert for smooth loading and minimal bounce.",
             tag: "Durable",
-            img: image2
+            img: productImage2
         },
         {
             id: 3,
@@ -158,7 +163,7 @@ export function FreeWeights() {
             specs: "Color/Black",
             desc: "Heavy-duty 75x75mm structural steel frame with laser-cut hole numbering.",
             tag: "Pro Series",
-            img: image3
+            img: productImage3
         },
         {
             id: 4,
@@ -167,7 +172,7 @@ export function FreeWeights() {
             specs: "Commercial Spec",
             desc: "Triple-layer sound reduction system with heavy-duty rubber tiles and bamboo center.",
             tag: "Heavy Duty",
-            img: image4
+            img: productImage4
         },
 
     ];
@@ -309,28 +314,33 @@ export function FreeWeights() {
 
                     {/* Single Hero Image */}
                     <div className="max-w-4xl mx-auto">
-                        <div className="relative aspect-[16/9] sm:aspect-[2/1] overflow-hidden border border-zinc-200 group cursor-pointer" onClick={() => setGalleryIndex(0)}>
+                        <div className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden border border-zinc-200 group cursor-pointer bg-black" onClick={() => setGalleryIndex(0)}>
                             <img
                                 src={advantageImages[0].src}
                                 alt={advantageImages[0].title}
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-60 group-hover:opacity-70 transition-opacity"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                            <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
+                            <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4">
                                 <div>
                                     <p className="text-white/80 text-[10px] font-bold uppercase tracking-widest mb-1">{advantageImages[0].tag}</p>
                                     <p className="text-white text-xl sm:text-2xl font-black uppercase tracking-tight">{advantageImages[0].title}</p>
                                 </div>
+                                <Button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        setGalleryIndex(0);
+                                    }}
+                                    className="bg-transparent text-white hover:text-red-600 rounded-none px-0 py-2 h-auto uppercase font-black tracking-[0.2em] text-[10px] sm:text-xs transition-all duration-300 group/btn relative"
+                                >
+                                    <span className="relative">
+                                        Discover Gallery
+                                        <div className="absolute -bottom-2 left-0 w-full h-[2px] bg-red-600 group-hover/btn:bg-white transition-colors"></div>
+                                    </span>
+                                    <ArrowRight className="ml-3 h-4 w-4 transition-transform group-hover/btn:translate-x-2" />
+                                </Button>
                             </div>
-                        </div>
-                        <div className="flex justify-center mt-8">
-                            <Button
-                                onClick={() => setGalleryIndex(0)}
-                                className="bg-black text-white hover:bg-red-600 rounded-none px-10 py-6 h-auto uppercase font-black tracking-widest transition-all duration-300 group"
-                            >
-                                Discover Gallery
-                                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                            </Button>
                         </div>
                     </div>
                 </div>
