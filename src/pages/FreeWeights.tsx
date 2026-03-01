@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
-import { ArrowRight, Zap, X, FileText, Package, ListChecks, ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ArrowRight, Zap, X, FileText, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
     Accordion,
@@ -8,14 +9,6 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Input } from "@/components/ui/input";
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from "@/components/ui/select";
 import {
     Carousel,
     CarouselContent,
@@ -43,7 +36,7 @@ interface Product {
     img: string;
 }
 
-function ProductCard({ product, onClick, onQuoteClick, isMobile = false }: { product: Product; onClick: () => void; onQuoteClick: () => void; isMobile?: boolean }) {
+function ProductCard({ product, onClick, isMobile = false }: { product: Product; onClick: () => void; isMobile?: boolean }) {
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -79,14 +72,15 @@ function ProductCard({ product, onClick, onQuoteClick, isMobile = false }: { pro
                         <div className="w-3 h-[2px] bg-red-600"></div>
                         <span className="text-xs font-black uppercase tracking-wider text-zinc-700">{product.specs}</span>
                     </div>
-                    <Button
-                        onClick={onQuoteClick}
-                        size="sm"
-                        className="bg-black text-white hover:bg-red-600 rounded-none h-9 px-4 text-[10px] uppercase font-black tracking-widest transition-all duration-300"
-                    >
-                        Get Quote
-                        <ArrowRight className="h-3 w-3 ml-1" />
-                    </Button>
+                    <Link to="/get-a-quote">
+                        <Button
+                            size="sm"
+                            className="bg-black text-white hover:bg-red-600 rounded-none h-9 px-4 text-[10px] uppercase font-black tracking-widest transition-all duration-300"
+                        >
+                            Get Quote
+                            <ArrowRight className="h-3 w-3 ml-1" />
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </motion.div>
@@ -95,28 +89,8 @@ function ProductCard({ product, onClick, onQuoteClick, isMobile = false }: { pro
 
 export function FreeWeights() {
     const heroRef = useRef(null);
-    const enquiryRef = useRef<HTMLDivElement>(null);
     const [activeProduct, setActiveProduct] = useState<number | null>(null);
     const [galleryIndex, setGalleryIndex] = useState<number | null>(null);
-    const [submitted, setSubmitted] = useState(false);
-    const [formData, setFormData] = useState({
-        item: "",
-        quantity: "",
-        phone: ""
-    });
-
-    const scrollToEnquiry = () => {
-        enquiryRef.current?.scrollIntoView({ behavior: 'smooth' });
-    };
-
-    const handleInquirySubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        if (formData.phone.length !== 10) {
-            alert("Please enter a valid 10-digit mobile number.");
-            return;
-        }
-        setSubmitted(true);
-    };
 
     const faqs = [
         {
@@ -232,15 +206,16 @@ export function FreeWeights() {
                         transition={{ duration: 0.8, delay: 0.8 }}
                         className="mt-10"
                     >
-                        <Button
-                            onClick={scrollToEnquiry}
-                            size="sm"
-                            className="bg-red-600 hover:bg-black text-white rounded-none px-12 py-8 text-sm font-black tracking-widest transition-all duration-300 hover:scale-[1.02] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] group"
-                        >
-                            <FileText className="h-5 w-5" />
-                            Get A Quote
-                            <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                        </Button>
+                        <Link to="/get-a-quote">
+                            <Button
+                                size="sm"
+                                className="bg-red-600 hover:bg-black text-white rounded-none px-12 py-8 text-sm font-black tracking-widest transition-all duration-300 hover:scale-[1.02] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] group"
+                            >
+                                <FileText className="h-5 w-5" />
+                                Get A Quote
+                                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                            </Button>
+                        </Link>
                     </motion.div>
                 </div>
             </section>
@@ -265,7 +240,7 @@ export function FreeWeights() {
                     {/* Desktop Grid View: 2x2 Layout */}
                     <div className="hidden sm:grid grid-cols-2 gap-10 max-w-4xl mx-auto">
                         {products.map((product) => (
-                            <ProductCard key={product.id} product={product} onClick={() => setActiveProduct(product.id)} onQuoteClick={scrollToEnquiry} />
+                            <ProductCard key={product.id} product={product} onClick={() => setActiveProduct(product.id)} />
                         ))}
                     </div>
 
@@ -281,7 +256,7 @@ export function FreeWeights() {
                             <CarouselContent className="-ml-0">
                                 {products.map((product) => (
                                     <CarouselItem key={product.id} className="pl-4 basis-[85%]">
-                                        <ProductCard product={product} onClick={() => setActiveProduct(product.id)} onQuoteClick={scrollToEnquiry} isMobile />
+                                        <ProductCard product={product} onClick={() => setActiveProduct(product.id)} isMobile />
                                     </CarouselItem>
                                 ))}
                             </CarouselContent>
@@ -374,149 +349,24 @@ export function FreeWeights() {
                     </Accordion>
                 </div>
             </section>
-            {/* Bulk Enquiry Form Section (Final CTA) */}
-            <section ref={enquiryRef} className="py-12 bg-zinc-50 relative overflow-hidden">
-                <div className="container px-4 mx-auto">
-                    <div className="max-w-5xl mx-auto">
-                        <div className="grid lg:grid-cols-2 gap-16 items-center">
-
-                            {/* Form Info */}
-                            <div>
-                                <div className="flex items-center gap-3 mb-6">
-                                    <div className="h-[2px] w-8 bg-red-600"></div>
-                                    <span className="text-red-600 font-bold uppercase tracking-widest text-xs">Direct Factory Access</span>
-                                </div>
-                                <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase text-black leading-[0.85] mb-8">
-                                    Bulk <br /> <span className="text-red-600">Enquiry.</span>
-                                </h2>
-                                <p className="text-zinc-600 text-lg font-medium leading-relaxed mb-10">
-                                    Planning a commercial facility or a large-scale studio? Get priority manufacturing slots and factory-direct pricing by submitting your details below.
-                                </p>
-
-                                <div className="space-y-6">
-                                    <div className="flex gap-4 items-start">
-                                        <div className="bg-red-600 p-2 text-white">
-                                            <Package className="h-5 w-5" />
-                                        </div>
-                                        <div>
-                                            <h4 className="font-black uppercase tracking-tighter text-black">Custom Branding</h4>
-                                            <p className="text-sm text-zinc-500 font-medium">Available for bulk orders of plates and dumbbells.</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-4 items-start">
-                                        <div className="bg-black p-2 text-white">
-                                            <ListChecks className="h-5 w-5" />
-                                        </div>
-                                        <div>
-                                            <h4 className="font-black uppercase tracking-tighter text-black">Facility Design</h4>
-                                            <p className="text-sm text-zinc-500 font-medium">Free digital layout consultation included with quotes.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Actual Form */}
-                            <div className="relative">
-                                {submitted ? (
-                                    <motion.div
-                                        initial={{ opacity: 0, scale: 0.9 }}
-                                        animate={{ opacity: 1, scale: 1 }}
-                                        className="bg-white p-12 text-center space-y-6 border-4 border-black shadow-[16px_16px_0px_0px_rgba(220,38,38,1)]"
-                                    >
-                                        <div className="flex justify-center">
-                                            <Package className="h-16 w-16 text-red-600" />
-                                        </div>
-                                        <h3 className="text-3xl font-black uppercase tracking-tighter text-black">Inquiry Sent</h3>
-                                        <p className="text-zinc-500 font-medium text-sm">
-                                            Our factory representative will reach out to you on <strong>+91 {formData.phone}</strong> shortly.
-                                        </p>
-                                        <Button
-                                            onClick={() => setSubmitted(false)}
-                                            className="w-full bg-black text-white rounded-none uppercase font-black tracking-widest h-14"
-                                        >
-                                            Submit Another
-                                        </Button>
-                                    </motion.div>
-                                ) : (
-                                    <motion.div
-                                        initial={{ opacity: 0, x: 20 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        viewport={{ once: true }}
-                                        className="bg-white p-8 md:p-12 border-2 border-zinc-200 shadow-2xl relative"
-                                    >
-                                        <div className="absolute -top-3 -right-3 bg-red-600 text-white px-4 py-1 text-[10px] font-black uppercase tracking-widest">
-                                            Factory Direct
-                                        </div>
-
-                                        <form onSubmit={handleInquirySubmit} className="space-y-6">
-                                            <div className="space-y-2">
-                                                <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400">Select Item Needed</label>
-                                                <Select onValueChange={(val: string) => setFormData({ ...formData, item: val })} required>
-                                                    <SelectTrigger className="rounded-none border-2 border-zinc-100 h-14 font-extrabold focus:border-red-600 focus:ring-0 transition-all">
-                                                        <SelectValue placeholder="Select Item" />
-                                                    </SelectTrigger>
-                                                    <SelectContent className="rounded-none border-2 border-black">
-                                                        <SelectItem value="dumbbells">Rubber Dumbbell</SelectItem>
-                                                        <SelectItem value="plates">Rubber Plates</SelectItem>
-                                                        <SelectItem value="racks">Full Power Rack</SelectItem>
-                                                        <SelectItem value="platform">Deadlift Platform</SelectItem>
-                                                    </SelectContent>
-                                                </Select>
-                                            </div>
-
-                                            <div className="space-y-2">
-                                                <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400">Estimated Quantity</label>
-                                                <Input
-                                                    type="number"
-                                                    placeholder="Enter weight in kg"
-                                                    required
-                                                    value={formData.quantity}
-                                                    onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
-                                                    className="rounded-none border-2 border-zinc-100 h-14 font-extrabold focus:border-red-600 focus:ring-0 transition-all placeholder:font-medium"
-                                                />
-                                            </div>
-
-                                            <div className="space-y-2">
-                                                <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400">Phone Number</label>
-                                                <div className="relative">
-                                                    <div className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-2 border-r border-zinc-200 pr-3 pointer-events-none z-10">
-                                                        <span className="text-sm font-black text-black">+91</span>
-                                                    </div>
-                                                    <Input
-                                                        type="text"
-                                                        inputMode="numeric"
-                                                        placeholder="Enter 10-digit mobile"
-                                                        maxLength={10}
-                                                        required
-                                                        value={formData.phone}
-                                                        onChange={(e) => {
-                                                            const val = e.target.value.replace(/\D/g, '');
-                                                            if (val.length <= 10) {
-                                                                setFormData({ ...formData, phone: val });
-                                                            }
-                                                        }}
-                                                        className="rounded-none border-2 border-zinc-100 h-14 pl-16 font-extrabold focus:border-red-600 focus:ring-0 transition-all placeholder:font-medium"
-                                                    />
-                                                </div>
-                                            </div>
-
-                                            <Button
-                                                type="submit"
-                                                className="w-full bg-red-600 text-white hover:bg-black rounded-none h-16 uppercase font-black tracking-widest transition-all text-lg group"
-                                            >
-                                                Submit Inquiry
-                                                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                                            </Button>
-                                        </form>
-                                    </motion.div>
-                                )}
-                            </div>
-                        </div>
+            {/* Bulk Enquiry Section (Final CTA) */}
+            <section className="py-24 bg-red-600 text-white relative overflow-hidden">
+                <div className="absolute inset-0 bg-black/10 z-0" />
+                <div className="container relative z-10 px-4 mx-auto text-center">
+                    <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 leading-tight">
+                        Bulk <br /> <span className="text-black">Enquiry.</span>
+                    </h2>
+                    <p className="text-white/90 text-xl font-bold mb-10 max-w-2xl mx-auto">
+                        Planning a commercial facility or a large-scale studio? Get priority manufacturing slots and factory-direct pricing.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Link to="/get-a-quote">
+                            <Button variant="outline" className="bg-white text-red-600 border-2 border-white hover:bg-black hover:text-white rounded-none px-12 py-8 h-auto font-black tracking-[0.2em] transition-all text-xl">
+                                Request Factory Quote
+                            </Button>
+                        </Link>
                     </div>
                 </div>
-
-                {/* Background Pattern */}
-                <div className="absolute inset-x-0 bottom-0 top-1/2 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.03] z-0 pointer-events-none" />
             </section>
 
             {/* Product Detail Popup (Mobile Only) */}
@@ -561,15 +411,16 @@ export function FreeWeights() {
                                         {products.find(p => p.id === activeProduct)?.desc}
                                     </p>
 
-                                    <Button
-                                        onClick={() => {
-                                            setActiveProduct(null);
-                                            scrollToEnquiry();
-                                        }}
-                                        className="w-full bg-black text-white hover:bg-red-600 rounded-none h-14 uppercase font-black tracking-widest transition-all"
-                                    >
-                                        Request Factory Quote
-                                    </Button>
+                                    <Link to="/get-a-quote">
+                                        <Button
+                                            onClick={() => {
+                                                setActiveProduct(null);
+                                            }}
+                                            className="w-full bg-black text-white hover:bg-red-600 rounded-none h-14 uppercase font-black tracking-widest transition-all"
+                                        >
+                                            Request Factory Quote
+                                        </Button>
+                                    </Link>
                                 </>
                             )}
                         </motion.div>

@@ -103,6 +103,12 @@ export function Home() {
                             View our products
                             <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-2" />
                         </Button>
+                        <Link to="/get-a-quote">
+                            <Button size="sm" className="w-full sm:w-auto bg-white text-black hover:bg-black hover:text-white rounded-none px-12 py-8 text-sm font-black tracking-widest transition-all duration-300 hover:scale-[1.02] shadow-[8px_8px_0px_0px_rgba(220,38,38,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] border-2 border-black group">
+                                Get a factory quote
+                                <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-2" />
+                            </Button>
+                        </Link>
                     </motion.div>
                 </motion.div>
             </section>
@@ -382,7 +388,12 @@ export function Home() {
                         <AccordionItem value="item-4" className="border-2 border-black bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] px-6 py-2 transition-all data-[state=open]:shadow-none data-[state=open]:translate-x-[4px] data-[state=open]:translate-y-[4px]">
                             <AccordionTrigger className="text-xl md:text-2xl font-black hover:text-red-600 data-[state=open]:text-red-600 text-left py-6 hover:no-underline">How do I get a price quote?</AccordionTrigger>
                             <AccordionContent className="text-zinc-700 text-lg leading-relaxed pb-6 font-medium">
-                                You can easily get a quote by connecting with us directly via WhatsApp, or sending an email to techfitpa@gmail.com with your requirements.
+                                <p className="mb-4">You can easily get a quote by submitting your details on our dedicated quote page, or connecting with us directly via WhatsApp.</p>
+                                <Link to="/get-a-quote">
+                                    <Button className="bg-red-600 text-white rounded-none uppercase font-black tracking-widest px-8">
+                                        Request Factory Quote
+                                    </Button>
+                                </Link>
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>

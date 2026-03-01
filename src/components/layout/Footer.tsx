@@ -54,7 +54,7 @@ export function Footer() {
                             <ul className="space-y-4">
                                 <li><Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-zinc-400 hover:text-white transition-colors font-bold uppercase tracking-tight text-sm md:text-base inline-block hover:translate-x-1 transition-transform">Home</Link></li>
                                 <li><Link to="/about" onClick={() => window.scrollTo(0, 0)} className="text-zinc-400 hover:text-white transition-colors font-bold uppercase tracking-tight text-sm md:text-base inline-block hover:translate-x-1 transition-transform">About Us</Link></li>
-                                <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="text-zinc-400 hover:text-white transition-colors font-bold uppercase tracking-tight text-sm md:text-base inline-block hover:translate-x-1 transition-transform">Contact</Link></li>
+                                <li><Link to="/get-a-quote" onClick={() => window.scrollTo(0, 0)} className="text-zinc-400 hover:text-white transition-colors font-bold uppercase tracking-tight text-sm md:text-base inline-block hover:translate-x-1 transition-transform">Contact</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -70,11 +70,16 @@ export function Footer() {
                                 <a href="mailto:techfitpa@gmail.com" className="block text-lg font-bold text-zinc-400 hover:text-white transition-colors underline underline-offset-4 decoration-red-600">
                                     techfitpa@gmail.com
                                 </a>
-                                <p className="text-zinc-400 font-medium text-sm leading-relaxed">
+                                <a
+                                    href="https://www.google.com/maps/dir//309,+Boat+Hard+Rd+Darukhana,+Byculla+Mumbai,+Maharashtra+400010/@18.9755155,72.8505722,11z/data=!4m5!4m4!1m0!1m2!1m1!1s0x3be7ce4cdb3a98ff:0x41004bdeb8ca9a41"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block text-zinc-400 font-medium text-sm leading-relaxed hover:text-white transition-colors"
+                                >
                                     309, Boat Hard Rd, Darukhana,<br />
                                     Byculla, Mumbai,<br />
                                     Maharashtra 400010
-                                </p>
+                                </a>
                             </div>
                         </div>
                     </div>

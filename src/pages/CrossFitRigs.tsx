@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { ArrowRight, Zap, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -112,10 +113,12 @@ export function CrossFitRigs() {
                         transition={{ duration: 0.8, delay: 0.8 }}
                         className="mt-10"
                     >
-                        <Button size="sm" className="bg-red-600 hover:bg-black text-white rounded-none px-12 py-8 text-sm font-black tracking-widest transition-all duration-300 hover:scale-[1.02] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] group">
-                            Get Design Consultation
-                            <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                        </Button>
+                        <Link to="/get-a-quote">
+                            <Button size="sm" className="bg-red-600 hover:bg-black text-white rounded-none px-12 py-8 text-sm font-black tracking-widest transition-all duration-300 hover:scale-[1.02] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] group">
+                                Get Design Consultation
+                                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                            </Button>
+                        </Link>
                     </motion.div>
                 </div>
             </section>
@@ -328,9 +331,11 @@ export function CrossFitRigs() {
                         Building a Combat Zone? <br />
                     </h2>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button variant="outline" className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-red-600 rounded-none px-10 py-8 h-auto font-black tracking-[0.2em] transition-all text-xl">
-                            Get a Factory Quote
-                        </Button>
+                        <Link to="/get-a-quote">
+                            <Button variant="outline" className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-red-600 rounded-none px-10 py-8 h-auto font-black tracking-[0.2em] transition-all text-xl">
+                                Get a Factory Quote
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </section>

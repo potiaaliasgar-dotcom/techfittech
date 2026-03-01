@@ -8,6 +8,7 @@ import { MMACages } from "./pages/MMACages";
 import { CrossFitRigs } from "./pages/CrossFitRigs";
 import { FreeWeights } from "./pages/FreeWeights";
 import { PadelPickleball } from "./pages/PadelPickleball";
+import { GetAQuote } from "./pages/GetAQuote";
 
 // Page stubs
 const NotFound = () => <div className="p-24 text-center text-4xl font-black uppercase text-red-600 min-h-[60vh]">404 - Page Not Found</div>;
@@ -24,6 +25,7 @@ function App() {
           <Route path="crossfit-rigs" element={<CrossFitRigs />} />
           <Route path="free-weights" element={<FreeWeights />} />
           <Route path="padel-pickleball" element={<PadelPickleball />} />
+          <Route path="get-a-quote" element={<GetAQuote />} />
           <Route path="about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Route>
