@@ -17,6 +17,7 @@ import {
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
+import heroBg from "@/assets/Homepagebg.webp";
 
 export function Home() {
     const heroRef = useRef(null);
@@ -44,7 +45,7 @@ export function Home() {
                     style={{ y: yBg }}
                     className="absolute inset-0 z-0 bg-black"
                 >
-                    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2940&auto=format&fit=crop')] bg-cover bg-center bg-no-repeat opacity-50 mix-blend-luminosity scale-105" />
+                    <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80 scale-105" style={{ backgroundImage: `url(${heroBg})` }} />
                     <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-black/60" />
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white" />
                 </motion.div>
