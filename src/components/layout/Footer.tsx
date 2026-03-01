@@ -81,15 +81,10 @@ export function Footer() {
                 </div>
 
                 {/* Sub-Footer */}
-                <div className="mt-16 md:mt-24 pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p className="text-zinc-500 text-xs font-bold uppercase tracking-[0.3em]">
-                        &copy; {currentYear} TECHFIT INDUSTRIAL. ALL RIGHTS RESERVED.
+                <div className="mt-16 md:mt-24 pt-8 border-t border-zinc-900 flex justify-center items-center">
+                    <p className="text-zinc-500 text-xs font-bold tracking-[0.3em] text-center">
+                        &copy; {currentYear} TechFit Industrial. All Rights Reserved.
                     </p>
-                    <div className="flex items-center gap-2 text-zinc-700 text-[10px] font-black uppercase tracking-widest">
-                        <span>Built with Precision</span>
-                        {/* <div className="h-1 w-1 bg-red-600 rounded-full" /> */}
-                        {/* <span>Mumbai Floor-to-Gym</span> */}
-                    </div>
                 </div>
             </div>
         </footer>
