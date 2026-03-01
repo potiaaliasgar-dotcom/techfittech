@@ -99,14 +99,21 @@ export function Home() {
                         transition={{ duration: 0.8, delay: 1 }}
                         className="flex flex-col sm:flex-row gap-4 mt-12"
                     >
-                        <Button size="sm" className="bg-red-600 hover:bg-black text-white rounded-none px-12 py-8 text-sm font-black tracking-widest transition-all duration-300 hover:scale-[1.02] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] group" onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}>
+                        <Button
+                            size="sm"
+                            className="bg-red-600 hover:bg-black text-white rounded-none px-6 sm:px-12 py-6 sm:py-8 text-[10px] sm:text-sm font-black tracking-widest transition-all duration-300 hover:scale-[1.02] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] group"
+                            onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
+                        >
                             View our products
-                            <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-2" />
+                            <ArrowRight className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:translate-x-2" />
                         </Button>
-                        <Link to="/get-a-quote">
-                            <Button size="sm" className="w-full sm:w-auto bg-white text-black hover:bg-black hover:text-white rounded-none px-12 py-8 text-sm font-black tracking-widest transition-all duration-300 hover:scale-[1.02] shadow-[8px_8px_0px_0px_rgba(220,38,38,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] border-2 border-black group">
+                        <Link to="/get-a-quote" className="w-full sm:w-auto">
+                            <Button
+                                size="sm"
+                                className="w-full bg-white text-black hover:bg-black hover:text-white rounded-none px-6 sm:px-12 py-6 sm:py-8 text-[10px] sm:text-sm font-black tracking-widest transition-all duration-300 hover:scale-[1.02] shadow-[4px_4px_0px_0px_rgba(220,38,38,1)] sm:shadow-[8px_8px_0px_0px_rgba(220,38,38,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] border-2 border-black group"
+                            >
                                 Get a factory quote
-                                <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-2" />
+                                <ArrowRight className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:translate-x-2" />
                             </Button>
                         </Link>
                     </motion.div>

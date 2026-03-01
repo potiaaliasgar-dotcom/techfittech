@@ -261,10 +261,10 @@ export function GetAQuote() {
 
                                         <Button
                                             type="submit"
-                                            className="w-full bg-red-600 text-white hover:bg-black rounded-none h-16 uppercase font-black tracking-[0.2em] transition-all text-lg group"
+                                            className="w-full bg-red-600 text-white hover:bg-black rounded-none h-14 sm:h-16 uppercase font-black tracking-widest sm:tracking-[0.2em] transition-all text-sm sm:text-lg group"
                                         >
                                             Get A Factory Quote
-                                            <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-2" />
+                                            <ArrowRight className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:translate-x-2" />
                                         </Button>
                                     </form>
                                 </motion.div>

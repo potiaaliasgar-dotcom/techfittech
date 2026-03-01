@@ -1,7 +1,8 @@
+
 import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Zap, Maximize, Award, X } from "lucide-react";
+import { Zap, FileText, ArrowRight, Maximize, Award, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
     Accordion,
@@ -103,7 +104,10 @@ export function MMACages() {
                         className="mt-10"
                     >
                         <Link to="/get-a-quote">
-                            <Button size="sm" className="bg-red-600 hover:bg-black text-white rounded-none px-12 py-8 text-sm font-black tracking-widest transition-all duration-300 hover:scale-[1.02] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] group">
+                            <Button
+                                className="bg-red-600 hover:bg-black text-white rounded-none px-8 sm:px-12 py-6 sm:py-8 text-sm font-black tracking-widest transition-all duration-300 hover:scale-[1.02] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] group"
+                            >
+                                <FileText className="h-5 w-5" />
                                 Request Price List
                                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                             </Button>
@@ -145,7 +149,7 @@ export function MMACages() {
                         {/* Right Panel: The Cages */}
                         <div className="w-full lg:w-2/3 grid grid-cols-2 gap-3 sm:gap-6 lg:gap-8 sm:items-stretch items-start relative">
                             {/* Decorative background horizontal 'fence' lines */}
-                            <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-full w-full opacity-10 pointer-events-none hidden sm:flex flex-col justify-evenly z-0">
+                            <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-full w-full opacity-10 pointer-events-none mix-blend-overlay hidden sm:flex flex-col justify-evenly z-0">
                                 <div className="h-[2px] bg-red-600 w-[120%] -ml-[10%] mb-12 transform rotate-1"></div>
                                 <div className="h-[2px] bg-red-600 w-[120%] -ml-[10%] transform -rotate-1"></div>
                             </div>
@@ -403,7 +407,7 @@ export function MMACages() {
 
                     <Accordion type="single" collapsible className="w-full space-y-4">
                         {faqs.map((faq, i) => (
-                            <AccordionItem key={i} value={`item-${i}`} className="border-2 border-zinc-100 px-6 py-2 data-[state=open]:border-red-600 transition-colors">
+                            <AccordionItem key={i} value={`item - ${i} `} className="border-2 border-zinc-100 px-6 py-2 data-[state=open]:border-red-600 transition-colors">
                                 <AccordionTrigger className="text-lg font-black tracking-tighter hover:no-underline text-left">
                                     {faq.q}
                                 </AccordionTrigger>
@@ -417,16 +421,16 @@ export function MMACages() {
             </section>
 
             {/* Final CTA */}
-            <section className="py-24 bg-red-600 text-white relative overflow-hidden">
+            <section className="py-16 sm:py-24 bg-red-600 text-white relative overflow-hidden">
                 <div className="absolute inset-0 bg-black/10 z-0" />
                 <div className="container relative z-10 px-4 mx-auto text-center">
-                    <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 leading-tight">
+                    <h2 className="text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-tighter mb-8 leading-tight">
                         Building a Combat Zone? <br />
                     </h2>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
                         <Link to="/get-a-quote">
-                            <Button variant="outline" className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-red-600 rounded-none px-10 py-8 h-auto font-black tracking-[0.2em] transition-all text-xl">
-                                Get A Factory Quote
+                            <Button className="bg-white text-red-600 hover:bg-black hover:text-white rounded-none px-8 sm:px-12 py-6 sm:py-8 h-auto font-black tracking-widest sm:tracking-[0.2em] text-sm sm:text-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px]">
+                                Get a Factory Quote
                             </Button>
                         </Link>
                     </div>

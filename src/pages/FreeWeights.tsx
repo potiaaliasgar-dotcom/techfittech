@@ -209,7 +209,7 @@ export function FreeWeights() {
                         <Link to="/get-a-quote">
                             <Button
                                 size="sm"
-                                className="bg-red-600 hover:bg-black text-white rounded-none px-12 py-8 text-sm font-black tracking-widest transition-all duration-300 hover:scale-[1.02] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] group"
+                                className="bg-red-600 hover:bg-black text-white rounded-none px-8 sm:px-12 py-6 sm:py-8 text-sm font-black tracking-widest transition-all duration-300 hover:scale-[1.02] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] group"
                             >
                                 <FileText className="h-5 w-5" />
                                 Get A Quote
@@ -350,19 +350,16 @@ export function FreeWeights() {
                 </div>
             </section>
             {/* Bulk Enquiry Section (Final CTA) */}
-            <section className="py-24 bg-red-600 text-white relative overflow-hidden">
+            <section className="py-16 sm:py-24 bg-red-600 text-white relative overflow-hidden">
                 <div className="absolute inset-0 bg-black/10 z-0" />
                 <div className="container relative z-10 px-4 mx-auto text-center">
-                    <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 leading-tight">
-                        Bulk <br /> <span className="text-black">Enquiry.</span>
+                    <h2 className="text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-tighter mb-8 leading-tight">
+                        Building a Combat Zone? <br />
                     </h2>
-                    <p className="text-white/90 text-xl font-bold mb-10 max-w-2xl mx-auto">
-                        Planning a commercial facility or a large-scale studio? Get priority manufacturing slots and factory-direct pricing.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
                         <Link to="/get-a-quote">
-                            <Button variant="outline" className="bg-white text-red-600 border-2 border-white hover:bg-black hover:text-white rounded-none px-12 py-8 h-auto font-black tracking-[0.2em] transition-all text-xl">
-                                Request Factory Quote
+                            <Button className="bg-white text-red-600 hover:bg-black hover:text-white rounded-none px-8 sm:px-12 py-6 sm:py-8 h-auto font-black tracking-widest sm:tracking-[0.2em] text-sm sm:text-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px]">
+                                Get a Factory Quote
                             </Button>
                         </Link>
                     </div>

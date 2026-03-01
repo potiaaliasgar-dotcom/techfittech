@@ -92,11 +92,11 @@ export function PadelPickleball() {
                     >
                         <Link to="/get-a-quote">
                             <Button
-                                className="bg-red-600 hover:bg-black text-white rounded-none px-12 py-8 text-sm font-black tracking-widest transition-all duration-300 hover:scale-[1.02] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] group"
+                                className="bg-red-600 hover:bg-black text-white rounded-none px-6 sm:px-12 py-6 sm:py-8 text-[10px] sm:text-sm font-black tracking-widest transition-all duration-300 hover:scale-[1.02] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] group"
                             >
-                                <FileText className="h-5 w-5" />
+                                <FileText className="h-4 w-4 sm:h-5 sm:w-5" />
                                 Request Price List
-                                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
                             </Button>
                         </Link>
                     </motion.div>
@@ -130,23 +130,23 @@ export function PadelPickleball() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-                            <div className="absolute bottom-8 left-8 right-8 flex items-end justify-between gap-4">
+                            <div className="absolute bottom-4 left-4 right-4 sm:bottom-8 sm:left-8 sm:right-8 flex items-end justify-between gap-2 sm:gap-4">
                                 <div>
-                                    <p className="text-white/80 text-[10px] font-bold uppercase tracking-widest mb-1">{advantageImages[0].tag}</p>
-                                    <p className="text-white text-xl sm:text-3xl font-black uppercase tracking-tight">{advantageImages[0].title}</p>
+                                    <p className="text-white/80 text-[8px] sm:text-[10px] font-bold uppercase tracking-widest mb-1">{advantageImages[0].tag}</p>
+                                    <p className="text-white text-lg sm:text-3xl font-black uppercase tracking-tight">{advantageImages[0].title}</p>
                                 </div>
                                 <Button
                                     onClick={(e) => {
                                         e.stopPropagation();
                                         setGalleryIndex(0);
                                     }}
-                                    className="bg-transparent text-white hover:text-red-600 rounded-none px-0 py-2 h-auto uppercase font-black tracking-[0.2em] text-[10px] sm:text-xs transition-all duration-300 group/btn relative"
+                                    className="bg-transparent text-white hover:text-red-600 rounded-none px-0 py-2 h-auto uppercase font-black tracking-[0.2em] text-[8px] sm:text-xs transition-all duration-300 group/btn relative shrink-0"
                                 >
                                     <span className="relative">
                                         Discover Gallery
                                         <div className="absolute -bottom-2 left-0 w-full h-[2px] bg-red-600 group-hover/btn:bg-white transition-colors"></div>
                                     </span>
-                                    <ArrowRight className="ml-3 h-4 w-4 transition-transform group-hover/btn:translate-x-2" />
+                                    <ArrowRight className="ml-2 sm:ml-3 h-3 w-3 sm:h-4 sm:w-4 transition-transform group-hover/btn:translate-x-2" />
                                 </Button>
                             </div>
                         </div>
@@ -184,18 +184,15 @@ export function PadelPickleball() {
             </section>
 
             {/* Final CTA - Simple Red Section */}
-            <section className="py-24 bg-red-600 text-white relative overflow-hidden">
+            <section className="py-16 sm:py-24 bg-red-600 text-white relative overflow-hidden">
                 <div className="absolute inset-0 bg-black/10 z-0" />
                 <div className="container relative z-10 px-4 mx-auto text-center">
-                    <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 leading-tight">
+                    <h2 className="text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-tighter mb-8 leading-tight">
                         Building a Combat Zone? <br />
                     </h2>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
                         <Link to="/get-a-quote">
-                            <Button
-                                variant="outline"
-                                className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-red-600 rounded-none px-12 py-8 h-auto font-black tracking-[0.2em] transition-all text-xl"
-                            >
+                            <Button className="bg-white text-red-600 hover:bg-black hover:text-white rounded-none px-8 sm:px-12 py-6 sm:py-8 h-auto font-black tracking-widest sm:tracking-[0.2em] text-sm sm:text-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px]">
                                 Get a Factory Quote
                             </Button>
                         </Link>

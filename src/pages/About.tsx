@@ -1,52 +1,287 @@
 import { motion } from "framer-motion";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Rocket, Shield, Users, Target } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import heroBg from "@/assets/Homepagebg.webp";
+import AliPotia from "@/assets/Ali-Potia.jpg"
 
 export function About() {
+    const storyItems = [
+        {
+            year: "2012",
+            title: "Inception",
+            desc: "Started supplying the Indian fitness industry with innovative, locally manufactured equipment."
+        },
+        {
+            year: "2016",
+            title: "Strategic Growth",
+            desc: "Acquired IMOT Industries, integrating 15 years of cardio assembly expertise into our portfolio."
+        },
+        {
+            year: "Today",
+            title: "Industry Leader",
+            desc: "Providing a complete range of Strength, MMA, Cardio & CrossFit equipment across India."
+        }
+    ];
+
     return (
-        <div className="flex flex-col w-full bg-white text-black min-h-screen">
-            {/* Hero */}
-            <section className="relative w-full py-24 md:py-32 bg-black text-white overflow-hidden">
-                <div className="absolute inset-0 bg-zinc-900 opacity-80 mix-blend-multiply"></div>
-                <div className="container relative z-10 px-4 md:px-6 text-center">
+        <div className="flex flex-col w-full bg-white text-black min-h-screen relative font-sans">
+            {/* Hero Section */}
+            <section className="relative w-full min-h-[60vh] flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 z-0 bg-black">
+                    <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 scale-105" style={{ backgroundImage: `url(${heroBg})` }} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white/30 via-transparent to-black/60" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/40" />
+                </div>
+
+                <div className="container relative z-10 px-4 flex flex-col items-center text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="mb-6 flex items-center gap-2"
+                    >
+                        <div className="h-[2px] w-8 bg-red-600"></div>
+                        <span className="text-red-600 font-bold uppercase tracking-[0.3em] text-xs sm:text-sm">Powering India's Fitness</span>
+                        <div className="h-[2px] w-8 bg-red-600"></div>
+                    </motion.div>
+
                     <motion.h1
-                        initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-                        className="text-4xl md:text-6xl font-black uppercase tracking-tighter"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 }}
+                        className="text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter uppercase max-w-5xl leading-[0.9] text-white drop-shadow-2xl"
                     >
-                        The TechFit <span className="text-red-600">Story</span>
+                        About <br />
+                        <span className="text-red-600">TechFit.</span>
                     </motion.h1>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
-                        className="mt-6 max-w-2xl mx-auto text-zinc-400 text-lg md:text-xl"
-                    >
-                        Powering India's fitness revolution since day one. We manufacture premium, competition-grade gym equipment from our direct-to-you factory in Mumbai.
-                    </motion.p>
                 </div>
             </section>
 
-            {/* Make in India Section */}
-            <section className="py-24">
-                <div className="container px-4 md:px-6">
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-6">Proudly <span className="text-red-600">Make In India</span></h2>
-                            <p className="text-zinc-600 text-lg mb-6 leading-relaxed">
-                                We believe in the power of local manufacturing. By controlling our entire production line in Mumbai, we bypass expensive import duties and middleman margins, passing the ultimate savings directly to gym owners and fitness entrepreneurs.
-                            </p>
-                            <ul className="space-y-4">
-                                {['High-grade gauge steel construction', 'Custom dimensional modifications', 'Zero middleman markups', 'End-to-End Installation Services'].map((item, i) => (
-                                    <li key={i} className="flex items-center gap-3 text-zinc-700 font-medium">
-                                        <CheckCircle className="h-5 w-5 text-red-600" />
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
-                        </motion.div>
-                        <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative">
-                            <div className="aspect-square bg-zinc-100 overflow-hidden relative">
-                                <div className="absolute inset-0 bg-red-600 translate-x-4 translate-y-4 -z-10"></div>
-                                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000&auto=format&fit=crop" alt="Factory Manufacturing" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+            {/* Company Profile Section */}
+            <section className="py-24 bg-white relative">
+                <div className="container px-4 mx-auto">
+                    <div className="grid lg:grid-cols-12 gap-16 items-start">
+                        <div className="lg:col-span-12 mb-8">
+                            <div className="flex items-center gap-3 mb-4">
+                                <div className="h-[2px] w-8 bg-red-600"></div>
+                                <span className="text-red-600 font-bold uppercase tracking-widest text-xs">Since 2012</span>
                             </div>
-                        </motion.div>
+                            <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter uppercase text-black leading-[0.85] mb-2">
+                                Company <br /> <span className="text-red-600">Profile.</span>
+                            </h2>
+                        </div>
+
+                        <div className="lg:col-span-7 space-y-8">
+                            <p className="text-xl md:text-2xl font-black uppercase tracking-tight text-black leading-tight border-l-8 border-red-600 pl-8">
+                                Techfit is the only manufacturer in India who creates the one-two punch of both world-class Gyms, MMA gear and equipment.
+                            </p>
+                            <div className="space-y-6 text-zinc-600 text-lg font-medium leading-relaxed">
+                                <p>
+                                    Our imaginative designs are aesthetically pleasing and ergonomically created to "move as you do." Our innovations go beyond what is currently available, with the use of bio-mechanical development and enhanced usability features. Our fully loaded fitness equipment comes with a blend of automation and functionality; and our range is not only efficient but economical too.
+                                </p>
+                                <p>
+                                    In recent times, Techfit has shot ahead by delivering high-class production administration to many international brands. Rich production coupled with years of management experience and a spot-on after-sales customer service, gives us a keen edge. Our Techfit technology team consults with numerous experts from across the global as well as domestically, and we pride ourselves on adhering to the strictest international design standards.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="lg:col-span-5 grid grid-cols-2 gap-4">
+                            {[
+                                { icon: <Shield className="h-6 w-6" />, title: "Bio-Mechanical", desc: "Ergonomic designs built to move as you do." },
+                                { icon: <Rocket className="h-6 w-6" />, title: "Innovation", desc: "Strictest international design standards." },
+                                { icon: <Users className="h-6 w-6" />, title: "Expert Support", desc: "Elite after-sales customer service." },
+                                { icon: <CheckCircle className="h-6 w-6" />, title: "Economical", desc: "Direct factory pricing for Indian gyms." }
+                            ].map((item, i) => (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    transition={{ delay: i * 0.1 }}
+                                    className="p-6 bg-zinc-50 border-2 border-zinc-100 space-y-4 hover:border-red-600 transition-colors group"
+                                >
+                                    <div className="p-3 bg-red-600 text-white w-fit group-hover:bg-black transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                                        {item.icon}
+                                    </div>
+                                    <div>
+                                        <h4 className="font-black uppercase tracking-tighter text-black">{item.title}</h4>
+                                        <p className="text-[10px] sm:text-xs text-zinc-500 font-medium leading-tight mt-1">{item.desc}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* R&D Section - Dark Theme */}
+            <section className="py-24 bg-zinc-950 text-white relative overflow-hidden">
+                <div className="absolute top-0 left-1/4 w-96 h-96 bg-red-600/10 blur-[120px] rounded-full pointer-events-none" />
+                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-zinc-800/20 blur-[100px] rounded-full pointer-events-none" />
+
+                <div className="container px-4 mx-auto relative z-10">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <div className="flex items-center gap-3 mb-6">
+                                <div className="h-[2px] w-8 bg-red-600"></div>
+                                <span className="text-red-600 font-bold uppercase tracking-widest text-xs">Testing & Precision</span>
+                            </div>
+                            <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase leading-[0.85] mb-10">
+                                Research & <br /> <span className="text-red-600">Development.</span>
+                            </h2>
+                            <div className="space-y-8 text-zinc-400 text-lg font-medium leading-relaxed">
+                                <p>
+                                    Techfit believes in innovation on a continuous basis. Our Quality Control managers have a watertight arrangement for durability, noise, static and balance testing. Additionally, we have an alternate assembly line for rust elimination, phosphate, spray, motor and electronic instruments.
+                                </p>
+                                <p>
+                                    In view of this expert approach, each and every machine is principally aimed at targeting the right muscle group, thereby ensuring the fastest visible outcome. Our world class ergonomically manufactured fitness equipment is supplied to hotels, clubs, gyms, the real estate sector and HNI’s with fitness gear custom-made to their needs. Today Techfit is fully equipped to keep India fighting fit, with a fitness experience that tests the ultimate durability and endurance levels of potential champions.
+                                </p>
+                                <div className="grid sm:grid-cols-2 gap-6 pt-6">
+                                    <div className="flex gap-4">
+                                        <div className="text-red-600 pt-1"><Target className="h-6 w-6" /></div>
+                                        <div>
+                                            <h4 className="text-white font-black uppercase text-sm mb-1 tracking-widest">Muscle Focus</h4>
+                                            <p className="text-xs">Precision engineering for targeted outcomes.</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-4">
+                                        <div className="text-red-600 pt-1"><Shield className="h-6 w-6" /></div>
+                                        <div>
+                                            <h4 className="text-white font-black uppercase text-sm mb-1 tracking-widest">Watertight QC</h4>
+                                            Maintaining standards across all assembly lines.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="space-y-4">
+                                <div className="h-64 bg-zinc-900 border-2 border-zinc-800 overflow-hidden group">
+                                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover grayscale opacity-40 group-hover:scale-110 group-hover:opacity-100 transition-all duration-700" alt="R&D" />
+                                </div>
+                                <div className="h-48 bg-red-600 flex items-center justify-center text-5xl font-black uppercase text-white tracking-widest leading-none p-6">
+                                    R&D Lab
+                                </div>
+                            </div>
+                            <div className="space-y-4 pt-12">
+                                <div className="h-48 bg-zinc-800 flex items-center justify-center text-4xl font-black uppercase text-red-600 tracking-tighter p-6 border-2 border-zinc-700">
+                                    QC Test
+                                </div>
+                                <div className="h-64 bg-zinc-900 border-2 border-zinc-800 overflow-hidden group">
+                                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover grayscale opacity-40 group-hover:scale-110 group-hover:opacity-100 transition-all duration-700" alt="Testing" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Our Story / Timeline Section */}
+            <section className="py-24 bg-white relative">
+                <div className="container px-4 mx-auto">
+                    <div className="max-w-4xl mx-auto mb-16">
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="h-[2px] w-8 bg-red-600"></div>
+                            <span className="text-red-600 font-bold uppercase tracking-widest text-xs">Chronicle</span>
+                        </div>
+                        <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-black">
+                            Our <span className="text-red-600">Story.</span>
+                        </h2>
+                    </div>
+
+                    <div className="relative max-w-5xl mx-auto">
+                        <div className="absolute left-0 sm:left-1/2 top-0 bottom-0 w-1 bg-zinc-100 -translate-x-1/2 hidden sm:block"></div>
+
+                        <div className="space-y-12 sm:space-y-24">
+                            {storyItems.map((item, i) => (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    className={`flex flex-col sm:flex-row items-center gap-8 sm:gap-16 ${i % 2 === 0 ? "sm:flex-row-reverse" : ""}`}
+                                >
+                                    <div className="hidden sm:flex absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-black border-4 border-red-600 z-10"></div>
+
+                                    <div className="flex-1 w-full bg-zinc-50 p-8 md:p-12 border-2 border-zinc-100 relative group hover:border-red-600 transition-colors shadow-sm">
+                                        <div className="text-5xl font-black text-zinc-100 group-hover:text-red-600/10 transition-colors absolute top-4 right-4 leading-none select-none">
+                                            {item.year}
+                                        </div>
+                                        <h3 className="text-2xl font-black uppercase tracking-tighter text-black mb-4 relative z-10">{item.title}</h3>
+                                        <div className="text-zinc-500 font-medium leading-relaxed relative z-10 space-y-4">
+                                            <p>{item.desc}</p>
+                                            {item.year === "2012" && (
+                                                <p>Since our inception in 2012, we have been supplying the Indian fitness industry, with our line of innovative fitness equipment. We are constantly adding new and innovative products to our portfolio.</p>
+                                            )}
+                                            {item.year === "2016" && (
+                                                <p>In 2016, we bought over IMOT Industries which came backed with 15 years of experience in assembling cardio equipment and goodwill. The introduction of an upgraded cardio series has brought with it superior features and usability to the Indian market.</p>
+                                            )}
+                                            {item.year === "Today" && (
+                                                <p>Today we offer fitness enthusiasts the complete range of Strength, Free Weights, MMA, Cardio & Cross fit Equipment of the highest quality, along with several customized options.</p>
+                                            )}
+                                        </div>
+                                    </div>
+                                    <div className="flex-1 hidden sm:block"></div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Meet Our Team Section */}
+            <section className="py-24 bg-zinc-50 border-y-2 border-zinc-100 relative">
+                <div className="container px-4 mx-auto">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="grid lg:grid-cols-12 gap-16 items-center">
+                            <div className="lg:col-span-12 mb-4">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <div className="h-[2px] w-8 bg-red-600"></div>
+                                    <span className="text-red-600 font-bold uppercase tracking-widest text-xs">Leadership</span>
+                                </div>
+                                <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-black">
+                                    Meet Our <span className="text-red-600">Team.</span>
+                                </h2>
+                            </div>
+
+                            <div className="lg:col-span-5 relative">
+                                <div className="aspect-[4/5] bg-zinc-200 border-4 border-black relative z-10 overflow-hidden shadow-[24px_24px_0px_0px_rgba(220,38,38,1)]">
+                                    <img src={AliPotia} className="w-full h-full object-cover grayscale opacity-80" alt="Ali Potia" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                                    <div className="absolute bottom-10 left-10">
+                                        <h3 className="text-4xl font-black uppercase text-white tracking-tighter leading-none">Ali Potia</h3>
+                                        <p className="text-red-600 font-black uppercase text-sm mt-3 tracking-[0.3em]">Chief Executive Officer</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="lg:col-span-7 space-y-8">
+                                <p className="text-2xl font-black uppercase tracking-tight text-black leading-tight border-l-8 border-red-600 pl-8">
+                                    "We are fitness people. We have all worked in gyms for most of our lives and want to make a difference for you and your members."
+                                </p>
+                                <div className="text-zinc-600 text-lg font-medium leading-relaxed bg-white p-8 border-2 border-zinc-200 shadow-xl">
+                                    Ali, having completed his higher education in the field of Business Administration from Kingston University, London, is an entrepreneur with fitness expertise.
+                                    His vision has driven Techfit to become one of India's most innovative equipment manufacturers.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Final CTA */}
+            <section className="py-16 sm:py-24 bg-red-600 text-white relative overflow-hidden">
+                <div className="absolute inset-0 bg-black/10 z-0" />
+                <div className="container relative z-10 px-4 mx-auto text-center">
+                    <h2 className="text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-tighter mb-8 leading-tight">
+                        Building a Combat Zone? <br />
+                    </h2>
+                    <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
+                        <Link to="/get-a-quote">
+                            <Button className="bg-white text-red-600 hover:bg-black hover:text-white rounded-none px-8 sm:px-12 py-6 sm:py-8 h-auto font-black tracking-widest sm:tracking-[0.2em] text-sm sm:text-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px]">
+                                Get a Factory Quote
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </section>
