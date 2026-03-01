@@ -173,12 +173,12 @@ export function MMACages() {
                                     </div>
                                 </div>
 
-                                <div className="p-2 sm:p-6 lg:p-8 flex flex-col flex-1 relative z-20 bg-zinc-900/95 backdrop-blur-sm justify-center">
-                                    <h4 className="text-base sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-0.5 sm:mb-2 lg:mb-4 text-white group-hover:text-red-600 transition-colors">Floor Cage</h4>
+                                <div className="p-3 sm:p-6 lg:p-8 flex flex-col sm:flex-1 relative z-20 bg-zinc-900/95 backdrop-blur-sm sm:justify-center">
+                                    <h4 className="text-lg sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-1 sm:mb-2 lg:mb-4 text-white group-hover:text-red-600 transition-colors">Floor Cage</h4>
                                     <p className="text-zinc-400 text-[10px] sm:text-xs md:text-sm lg:text-base font-medium leading-tight lg:leading-relaxed hidden sm:block">
                                         Ground-mounted MMA cage designed for academies and training facilities. Compact, stable, and ideal for spaces requiring professional-grade performance without elevated platforms.
                                     </p>
-                                    <span className="text-[7px] uppercase font-bold tracking-widest text-zinc-500 sm:hidden">Tap for details</span>
+                                    <span className="text-[8px] uppercase font-bold tracking-widest text-zinc-500 sm:hidden">Tap for details</span>
                                 </div>
 
 
@@ -216,12 +216,12 @@ export function MMACages() {
                                     </div>
                                 </div>
 
-                                <div className="p-2 sm:p-6 lg:p-8 flex flex-col flex-1 relative z-20 bg-zinc-900/95 backdrop-blur-sm justify-center">
-                                    <h4 className="text-base sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-0.5 sm:mb-2 lg:mb-4 text-white group-hover:text-red-600 transition-colors">Podium Cage</h4>
+                                <div className="p-3 sm:p-6 lg:p-8 flex flex-col sm:flex-1 relative z-20 bg-zinc-900/95 backdrop-blur-sm sm:justify-center">
+                                    <h4 className="text-lg sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-1 sm:mb-2 lg:mb-4 text-white group-hover:text-red-600 transition-colors">Podium Cage</h4>
                                     <p className="text-zinc-400 text-[10px] sm:text-xs md:text-sm lg:text-base font-medium leading-tight lg:leading-relaxed hidden sm:block">
                                         Elevated MMA cage engineered for competitions and showcase environments. Offers enhanced visibility, reinforced structure, and premium finishing suitable for events and broadcast setups.
                                     </p>
-                                    <span className="text-[7px] uppercase font-bold tracking-widest text-zinc-500 sm:hidden">Tap for details</span>
+                                    <span className="text-[8px] uppercase font-bold tracking-widest text-zinc-500 sm:hidden">Tap for details</span>
                                 </div>
 
 
@@ -283,13 +283,13 @@ export function MMACages() {
                                     </div>
                                 </div>
 
-                                <div className="p-2 sm:p-6 lg:p-8 flex flex-col flex-1 relative z-20 bg-white justify-center">
-                                    <h4 className="text-base sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-0.5 sm:mb-2 lg:mb-4 text-black text-black">Training Ring</h4>
-                                    <div className="w-8 sm:w-12 h-0.5 sm:h-1 bg-zinc-200 mb-1 sm:mb-6 group-hover:bg-black transition-colors" />
+                                <div className="p-3 sm:p-6 lg:p-8 flex flex-col sm:flex-1 relative z-20 bg-white sm:justify-center">
+                                    <h4 className="text-lg sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-1 sm:mb-2 lg:mb-4 text-black text-black">Training Ring</h4>
+                                    <div className="w-8 sm:w-12 h-0.5 sm:h-1 bg-zinc-200 mb-2 sm:mb-6 group-hover:bg-black transition-colors" />
                                     <p className="text-zinc-600 text-[10px] sm:text-xs md:text-sm lg:text-base font-medium leading-tight lg:leading-relaxed hidden sm:block">
                                         Durable boxing ring built for daily training and skill development. Designed for gyms and academies with focus on safety, shock absorption, and long-term use.
                                     </p>
-                                    <span className="text-[7px] uppercase font-bold tracking-widest text-zinc-400 sm:hidden">Tap for details</span>
+                                    <span className="text-[8px] uppercase font-bold tracking-widest text-zinc-400 sm:hidden">Tap for details</span>
                                 </div>
 
 
@@ -318,13 +318,13 @@ export function MMACages() {
                                     </div>
                                 </div>
 
-                                <div className="p-2 sm:p-6 lg:p-8 flex flex-col flex-1 relative z-20 bg-white justify-center">
-                                    <h4 className="text-base sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-0.5 sm:mb-2 lg:mb-4 text-black group-hover:text-red-600 transition-colors">Competition Ring</h4>
-                                    <div className="w-8 sm:w-12 h-0.5 sm:h-1 bg-zinc-200 mb-1 sm:mb-6 group-hover:bg-red-600 transition-colors" />
+                                <div className="p-3 sm:p-6 lg:p-8 flex flex-col sm:flex-1 relative z-20 bg-white sm:justify-center">
+                                    <h4 className="text-lg sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-1 sm:mb-2 lg:mb-4 text-black group-hover:text-red-600 transition-colors">Competition Ring</h4>
+                                    <div className="w-8 sm:w-12 h-0.5 sm:h-1 bg-zinc-200 mb-2 sm:mb-6 group-hover:bg-red-600 transition-colors" />
                                     <p className="text-zinc-600 text-[10px] sm:text-xs md:text-sm lg:text-base font-medium leading-tight lg:leading-relaxed hidden sm:block">
                                         Professional boxing ring designed to meet competition standards. Built for tournaments, promotions, and events requiring maximum stability, aesthetics, and athlete safety.
                                     </p>
-                                    <span className="text-[7px] uppercase font-bold tracking-widest text-zinc-400 sm:hidden">Tap for details</span>
+                                    <span className="text-[8px] uppercase font-bold tracking-widest text-zinc-400 sm:hidden">Tap for details</span>
                                 </div>
 
 
