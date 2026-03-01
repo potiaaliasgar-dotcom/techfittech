@@ -24,6 +24,15 @@ import ringImg from "@/assets/lineup/Competition-Ring.webp";
 import rigsImg from "@/assets/lineup/CrossFit-Rigs-2.webp";
 import weightsImg from "@/assets/lineup/Free-Weights-Strength.webp";
 
+// Trusted By Logos
+import goldGymLogo from "@/assets/trustedby/gold-gym-logo.webp";
+import mfnLogo from "@/assets/trustedby/MFN-logo.webp";
+import mmaMatrixLogo from "@/assets/trustedby/MMA-matrix-Gym-logo.webp";
+import sykzLogo from "@/assets/trustedby/SYKZ-LOGO-1.webp";
+import superhumanLogo from "@/assets/trustedby/superhuman-logo.webp";
+import waveGymLogo from "@/assets/trustedby/wave-gym-logo.webp";
+import cultLogo from "@/assets/trustedby/cult-logo.webp";
+
 export function Home() {
     const heroRef = useRef(null);
     const { scrollYProgress } = useScroll({
@@ -265,23 +274,36 @@ export function Home() {
                             className="w-full"
                         >
                             <CarouselContent className="items-center">
-                                <CarouselItem className="basis-1/2 md:basis-1/3 flex justify-center">
-                                    <h3 className="text-3xl md:text-4xl font-black tracking-tighter uppercase text-neutral-500 hover:text-white transition-colors duration-300">gold gym logo</h3>
+                                <CarouselItem className="basis-1/2 md:basis-1/4 flex justify-center p-4">
+                                    <img src={goldGymLogo} alt="Gold Gym" className="h-20 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
                                 </CarouselItem>
-                                <CarouselItem className="basis-1/2 md:basis-1/3 flex justify-center">
-                                    <h3 className="text-3xl md:text-4xl font-black tracking-tighter uppercase text-neutral-500 hover:text-white transition-colors duration-300">MFN logo</h3>
+                                <CarouselItem className="basis-1/2 md:basis-1/4 flex justify-center p-4">
+                                    <img src={mfnLogo} alt="MFN" className="h-16 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
                                 </CarouselItem>
-                                <CarouselItem className="basis-1/2 md:basis-1/3 flex justify-center">
-                                    <h3 className="text-3xl md:text-4xl font-black tracking-tighter uppercase text-neutral-500 hover:text-white transition-colors duration-300">MMA matrix Gym logo</h3>
+                                <CarouselItem className="basis-1/2 md:basis-1/4 flex justify-center p-4">
+                                    <img src={mmaMatrixLogo} alt="MMA Matrix" className="h-20 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
                                 </CarouselItem>
-                                <CarouselItem className="basis-1/2 md:basis-1/3 flex justify-center">
-                                    <h3 className="text-3xl md:text-4xl font-black tracking-tighter uppercase text-neutral-500 hover:text-white transition-colors duration-300">gold gym logo</h3>
+                                <CarouselItem className="basis-1/2 md:basis-1/4 flex justify-center p-4">
+                                    <img src={sykzLogo} alt="SYKZ" className="h-16 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
                                 </CarouselItem>
-                                <CarouselItem className="basis-1/2 md:basis-1/3 flex justify-center">
-                                    <h3 className="text-3xl md:text-4xl font-black tracking-tighter uppercase text-neutral-500 hover:text-white transition-colors duration-300">MFN logo</h3>
+                                <CarouselItem className="basis-1/2 md:basis-1/4 flex justify-center p-4">
+                                    <img src={superhumanLogo} alt="Superhuman" className="h-16 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
                                 </CarouselItem>
-                                <CarouselItem className="basis-1/2 md:basis-1/3 flex justify-center">
-                                    <h3 className="text-3xl md:text-4xl font-black tracking-tighter uppercase text-neutral-500 hover:text-white transition-colors duration-300">MMA matrix Gym logo</h3>
+                                <CarouselItem className="basis-1/2 md:basis-1/4 flex justify-center p-4">
+                                    <img src={waveGymLogo} alt="Wave Gym" className="h-20 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+                                </CarouselItem>
+                                <CarouselItem className="basis-1/2 md:basis-1/4 flex justify-center p-4">
+                                    <img src={cultLogo} alt="Cult Fit" className="h-16 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+                                </CarouselItem>
+                                {/* Duplicates for loop stability */}
+                                <CarouselItem className="basis-1/2 md:basis-1/4 flex justify-center p-4">
+                                    <img src={goldGymLogo} alt="Gold Gym" className="h-20 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+                                </CarouselItem>
+                                <CarouselItem className="basis-1/2 md:basis-1/4 flex justify-center p-4">
+                                    <img src={mfnLogo} alt="MFN" className="h-16 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
+                                </CarouselItem>
+                                <CarouselItem className="basis-1/2 md:basis-1/4 flex justify-center p-4">
+                                    <img src={mmaMatrixLogo} alt="MMA Matrix" className="h-20 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
                                 </CarouselItem>
                             </CarouselContent>
                         </Carousel>
