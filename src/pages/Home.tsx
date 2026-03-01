@@ -24,14 +24,10 @@ import ringImg from "@/assets/lineup/Competition-Ring.webp";
 import rigsImg from "@/assets/lineup/CrossFit-Rigs-2.webp";
 import weightsImg from "@/assets/lineup/Free-Weights-Strength.webp";
 
-// Trusted By Logos
-import goldGymLogo from "@/assets/trustedby/gold-gym-logo.webp";
-import mfnLogo from "@/assets/trustedby/MFN-logo.webp";
-import mmaMatrixLogo from "@/assets/trustedby/MMA-matrix-Gym-logo.webp";
-import sykzLogo from "@/assets/trustedby/SYKZ-LOGO-1.webp";
-import superhumanLogo from "@/assets/trustedby/superhuman-logo.webp";
-import waveGymLogo from "@/assets/trustedby/wave-gym-logo.webp";
-import cultLogo from "@/assets/trustedby/cult-logo.webp";
+// Dynamic Trusted By Logos
+const trustedByLogos = Object.values(
+    import.meta.glob("/src/assets/trustedby/*.{png,jpg,jpeg,svg,webp}", { eager: true, import: 'default' })
+) as string[];
 
 export function Home() {
     const heroRef = useRef(null);
@@ -274,37 +270,29 @@ export function Home() {
                             className="w-full"
                         >
                             <CarouselContent className="items-center">
-                                <CarouselItem className="basis-1/2 md:basis-1/4 flex justify-center p-4">
-                                    <img src={goldGymLogo} alt="Gold Gym" className="h-20 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-                                </CarouselItem>
-                                <CarouselItem className="basis-1/2 md:basis-1/4 flex justify-center p-4">
-                                    <img src={mfnLogo} alt="MFN" className="h-16 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-                                </CarouselItem>
-                                <CarouselItem className="basis-1/2 md:basis-1/4 flex justify-center p-4">
-                                    <img src={mmaMatrixLogo} alt="MMA Matrix" className="h-20 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-                                </CarouselItem>
-                                <CarouselItem className="basis-1/2 md:basis-1/4 flex justify-center p-4">
-                                    <img src={sykzLogo} alt="SYKZ" className="h-16 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-                                </CarouselItem>
-                                <CarouselItem className="basis-1/2 md:basis-1/4 flex justify-center p-4">
-                                    <img src={superhumanLogo} alt="Superhuman" className="h-16 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-                                </CarouselItem>
-                                <CarouselItem className="basis-1/2 md:basis-1/4 flex justify-center p-4">
-                                    <img src={waveGymLogo} alt="Wave Gym" className="h-20 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-                                </CarouselItem>
-                                <CarouselItem className="basis-1/2 md:basis-1/4 flex justify-center p-4">
-                                    <img src={cultLogo} alt="Cult Fit" className="h-16 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-                                </CarouselItem>
+                                {trustedByLogos.map((logo, index) => (
+                                    <CarouselItem key={index} className="basis-1/2 md:basis-1/4 flex justify-center p-4">
+                                        <div className="flex items-center justify-center w-full h-24">
+                                            <img
+                                                src={logo}
+                                                alt={`Partner Logo ${index + 1}`}
+                                                className="max-h-full max-w-full object-contain filter-none hover:scale-110 transition-transform duration-300"
+                                            />
+                                        </div>
+                                    </CarouselItem>
+                                ))}
                                 {/* Duplicates for loop stability */}
-                                <CarouselItem className="basis-1/2 md:basis-1/4 flex justify-center p-4">
-                                    <img src={goldGymLogo} alt="Gold Gym" className="h-20 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-                                </CarouselItem>
-                                <CarouselItem className="basis-1/2 md:basis-1/4 flex justify-center p-4">
-                                    <img src={mfnLogo} alt="MFN" className="h-16 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-                                </CarouselItem>
-                                <CarouselItem className="basis-1/2 md:basis-1/4 flex justify-center p-4">
-                                    <img src={mmaMatrixLogo} alt="MMA Matrix" className="h-20 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-                                </CarouselItem>
+                                {trustedByLogos.slice(0, 4).map((logo, index) => (
+                                    <CarouselItem key={`dup-${index}`} className="basis-1/2 md:basis-1/4 flex justify-center p-4">
+                                        <div className="flex items-center justify-center w-full h-24">
+                                            <img
+                                                src={logo}
+                                                alt={`Partner Logo Duplicate ${index + 1}`}
+                                                className="max-h-full max-w-full object-contain filter-none hover:scale-110 transition-transform duration-300"
+                                            />
+                                        </div>
+                                    </CarouselItem>
+                                ))}
                             </CarouselContent>
                         </Carousel>
                     </div>
