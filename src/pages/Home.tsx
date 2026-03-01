@@ -26,7 +26,7 @@ import weightsImg from "@/assets/lineup/Free-Weights-Strength.webp";
 
 // Dynamic Trusted By Logos
 const trustedByLogos = Object.values(
-    import.meta.glob("../assets/trustedby/*.{png,jpg,jpeg,svg,webp}", { eager: true, import: 'default' })
+    import.meta.glob("../assets/trustedby/*.{png,jpg,jpeg,svg,webp}", { eager: true, query: '?url', import: 'default' })
 ) as string[];
 
 export function Home() {
@@ -243,7 +243,7 @@ export function Home() {
             </section>
 
             {/* Powering India's Best Gyms Section */}
-            <section className="py-16 md:py-24 flex items-center bg-zinc-50 border-y-8 border-red-600 overflow-hidden relative">
+            <section className="py-16 md:py-24 flex items-center bg-white border-y-8 border-red-600 overflow-hidden relative">
                 <div className="absolute inset-0 opacity-5 bg-[url('https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=2000&auto=format&fit=crop')] bg-cover mix-blend-multiply" />
                 <div className="container mx-auto px-4 md:px-6 relative z-10 w-full mb-16">
                     <div className="flex flex-col items-start text-left shrink-0 mb-16">
