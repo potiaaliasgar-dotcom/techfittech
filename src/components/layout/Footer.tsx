@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin } from "lucide-react";
+import logoImg from "@/assets/logo.png";
 
 export function Footer() {
     return (
@@ -13,7 +14,7 @@ export function Footer() {
                         {/* Column 1: Info (Spans 5 columns on large screens) */}
                         <div className="space-y-6 md:col-span-5 lg:col-span-5 pr-8">
                             <Link to="/" className="inline-block">
-                                <span className="text-4xl font-black tracking-tighter uppercase">techfit</span>
+                                <img src={logoImg} alt="TechFit" className="h-16 w-auto object-contain" />
                             </Link>
                             <p className="text-zinc-600 text-xl leading-relaxed max-w-sm">
                                 Leading Manufacturer supplying to Mumbai, Delhi, Bangalore, Hyderabad, and all major Indian cities.

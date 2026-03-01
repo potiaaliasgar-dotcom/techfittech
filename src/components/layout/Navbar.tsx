@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Menu } from "lucide-react";
+import logoImg from "@/assets/logo.png";
 import { Button } from "@/components/ui/button";
 import {
     Sheet,
@@ -21,7 +22,7 @@ export function Navbar() {
         <header className="sticky top-0 z-50 w-full border-b bg-white text-black shadow-sm">
             <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
                 <Link to="/" className="flex items-center gap-2">
-                    <span className="text-2xl font-bold tracking-tighter uppercase sm:text-3xl">TechFit<span className="text-red-600">.</span></span>
+                    <img src={logoImg} alt="TechFit" className="h-12 w-auto object-contain" />
                 </Link>
                 <nav className="hidden lg:flex gap-6 items-center">
                     {navLinks.map((link) => (
@@ -47,8 +48,8 @@ export function Navbar() {
                         </SheetTrigger>
                         <SheetContent side="right" className="bg-white text-black">
                             <div className="grid gap-6 p-6">
-                                <Link to="/" className="text-2xl font-bold tracking-tighter uppercase mb-4">
-                                    TechFit<span className="text-red-600">.</span>
+                                <Link to="/" className="inline-block mb-4">
+                                    <img src={logoImg} alt="TechFit" className="h-10 w-auto object-contain" />
                                 </Link>
                                 {navLinks.map((link) => (
                                     <Link
