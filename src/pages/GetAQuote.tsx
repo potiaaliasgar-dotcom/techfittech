@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { ArrowRight, Mail, MapPin, Phone, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -16,6 +16,7 @@ import heroBg from "@/assets/pickle-and-Paddle-Ball-banner-image.webp";
 
 export function GetAQuote() {
     const [submitted, setSubmitted] = useState(false);
+    const [formKey, setFormKey] = useState(0);
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -34,7 +35,12 @@ export function GetAQuote() {
             return;
         }
         setSubmitted(true);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    const closeModal = () => {
+        setSubmitted(false);
+        setFormData({ name: "", email: "", phone: "", gymName: "", city: "", requirement: "", budget: "", message: "" });
+        setFormKey(prev => prev + 1);
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -155,120 +161,95 @@ export function GetAQuote() {
 
                         {/* Right Column: Form */}
                         <div>
-                            {submitted ? (
-                                <motion.div
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    className="bg-white p-12 text-center space-y-8 border-4 border-black shadow-[20px_20px_0px_0px_rgba(220,38,38,1)]"
-                                >
-                                    <div className="flex justify-center">
-                                        <div className="p-6 bg-red-600 rounded-full">
-                                            <Send className="h-16 w-16 text-white" />
-                                        </div>
-                                    </div>
-                                    <div className="space-y-4">
-                                        <h3 className="text-4xl font-black uppercase tracking-tighter text-black">Message Received.</h3>
-                                        <p className="text-zinc-600 text-lg font-medium leading-relaxed">
-                                            Our factory representative will review your requirements and reach out on your mobile number within 12-24 hours.
-                                        </p>
-                                    </div>
-                                    <Button
-                                        onClick={() => setSubmitted(false)}
-                                        className="w-full bg-black text-white hover:bg-red-600 rounded-none uppercase font-black tracking-widest h-16 transition-all"
-                                    >
-                                        Submit Another Inquiry
-                                    </Button>
-                                </motion.div>
-                            ) : (
-                                <motion.div
-                                    initial={{ opacity: 0, x: 20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    className="bg-zinc-50 p-8 md:p-12 border-2 border-zinc-200 relative shadow-xl"
-                                >
-                                    <div className="absolute -top-4 -right-4 bg-red-600 text-white px-6 py-2 text-xs font-black uppercase tracking-[0.2em] shadow-lg">
-                                        Priority Slot Request
-                                    </div>
+                            <motion.div
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                className="bg-zinc-50 p-8 md:p-12 border-2 border-zinc-200 relative shadow-xl"
+                            >
+                                <div className="absolute -top-4 -right-4 bg-red-600 text-white px-6 py-2 text-xs font-black uppercase tracking-[0.2em] shadow-lg">
+                                    Say hello!
+                                </div>
 
-                                    <form onSubmit={handleSubmit} className="space-y-6">
-                                        <div className="grid md:grid-cols-2 gap-6">
-                                            <div className="space-y-2">
-                                                <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400">Your Name</label>
-                                                <Input name="name" value={formData.name} onChange={handleChange} required placeholder="John Doe" className="rounded-none border-2 border-zinc-200 h-14 font-extrabold focus:border-red-600 focus:ring-0" />
-                                            </div>
-                                            <div className="space-y-2">
-                                                <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400">Email Address</label>
-                                                <Input name="email" value={formData.email} onChange={handleChange} required type="email" placeholder="john@example.com" className="rounded-none border-2 border-zinc-200 h-14 font-extrabold focus:border-red-600 focus:ring-0" />
-                                            </div>
-                                        </div>
-
-                                        <div className="grid md:grid-cols-2 gap-6">
-                                            <div className="space-y-2">
-                                                <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400">Phone Number</label>
-                                                <div className="relative">
-                                                    <div className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-2 border-r border-zinc-200 pr-3 pointer-events-none z-10">
-                                                        <span className="text-sm font-black text-black">+91</span>
-                                                    </div>
-                                                    <Input name="phone" value={formData.phone} onChange={handleChange} required maxLength={10} placeholder="10-digit mobile" className="pl-16 rounded-none border-2 border-zinc-200 h-14 font-extrabold focus:border-red-600 focus:ring-0" />
-                                                </div>
-                                            </div>
-                                            <div className="space-y-2">
-                                                <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400">Gym Name</label>
-                                                <Input name="gymName" value={formData.gymName} onChange={handleChange} required placeholder="TechFit Studio" className="rounded-none border-2 border-zinc-200 h-14 font-extrabold focus:border-red-600 focus:ring-0" />
-                                            </div>
-                                        </div>
-
-                                        <div className="grid md:grid-cols-2 gap-6">
-                                            <div className="space-y-2">
-                                                <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400">City</label>
-                                                <Input name="city" value={formData.city} onChange={handleChange} required placeholder="Mumbai" className="rounded-none border-2 border-zinc-200 h-14 font-extrabold focus:border-red-600 focus:ring-0" />
-                                            </div>
-                                            <div className="space-y-2">
-                                                <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400">Requirement</label>
-                                                <Select required onValueChange={(val) => setFormData(prev => ({ ...prev, requirement: val }))}>
-                                                    <SelectTrigger className="rounded-none border-2 border-zinc-200 h-14 font-extrabold focus:border-red-600 focus:ring-0">
-                                                        <SelectValue placeholder="Select Category" />
-                                                    </SelectTrigger>
-                                                    <SelectContent className="rounded-none border-2 border-black">
-                                                        <SelectItem value="mma-cages">MMA Cages & Rings</SelectItem>
-                                                        <SelectItem value="free-weights">Commercial Free Weights</SelectItem>
-                                                        <SelectItem value="crossfit-rigs">CrossFit Rigs & Racks</SelectItem>
-                                                        <SelectItem value="padel-pickleball">Padel & Pickleball Courts</SelectItem>
-                                                        <SelectItem value="full-setup">Complete Gym Setup</SelectItem>
-                                                    </SelectContent>
-                                                </Select>
-                                            </div>
-                                        </div>
-
+                                <form key={formKey} onSubmit={handleSubmit} className="space-y-6">
+                                    <div className="grid md:grid-cols-2 gap-6">
                                         <div className="space-y-2">
-                                            <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400">Budget Range (Optional)</label>
-                                            <Select onValueChange={(val) => setFormData(prev => ({ ...prev, budget: val }))}>
+                                            <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400">Your Name</label>
+                                            <Input name="name" value={formData.name} onChange={handleChange} required placeholder="John Doe" className="rounded-none border-2 border-zinc-200 h-14 font-extrabold focus:border-red-600 focus:ring-0" />
+                                        </div>
+                                        <div className="space-y-2">
+                                            <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400">Email Address</label>
+                                            <Input name="email" value={formData.email} onChange={handleChange} required type="email" placeholder="john@example.com" className="rounded-none border-2 border-zinc-200 h-14 font-extrabold focus:border-red-600 focus:ring-0" />
+                                        </div>
+                                    </div>
+
+                                    <div className="grid md:grid-cols-2 gap-6">
+                                        <div className="space-y-2">
+                                            <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400">Phone Number</label>
+                                            <div className="relative">
+                                                <div className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-2 border-r border-zinc-200 pr-3 pointer-events-none z-10">
+                                                    <span className="text-sm font-black text-black">+91</span>
+                                                </div>
+                                                <Input name="phone" value={formData.phone} onChange={handleChange} required maxLength={10} placeholder="10-digit mobile" className="pl-16 rounded-none border-2 border-zinc-200 h-14 font-extrabold focus:border-red-600 focus:ring-0" />
+                                            </div>
+                                        </div>
+                                        <div className="space-y-2">
+                                            <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400">Gym Name</label>
+                                            <Input name="gymName" value={formData.gymName} onChange={handleChange} required placeholder="TechFit Studio" className="rounded-none border-2 border-zinc-200 h-14 font-extrabold focus:border-red-600 focus:ring-0" />
+                                        </div>
+                                    </div>
+
+                                    <div className="grid md:grid-cols-2 gap-6">
+                                        <div className="space-y-2">
+                                            <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400">City</label>
+                                            <Input name="city" value={formData.city} onChange={handleChange} required placeholder="Mumbai" className="rounded-none border-2 border-zinc-200 h-14 font-extrabold focus:border-red-600 focus:ring-0" />
+                                        </div>
+                                        <div className="space-y-2">
+                                            <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400">Requirement</label>
+                                            <Select required onValueChange={(val) => setFormData(prev => ({ ...prev, requirement: val }))}>
                                                 <SelectTrigger className="rounded-none border-2 border-zinc-200 h-14 font-extrabold focus:border-red-600 focus:ring-0">
-                                                    <SelectValue placeholder="Select Range" />
+                                                    <SelectValue placeholder="Select Category" />
                                                 </SelectTrigger>
                                                 <SelectContent className="rounded-none border-2 border-black">
-                                                    <SelectItem value="under-5l">Under ₹5 Lakhs</SelectItem>
-                                                    <SelectItem value="5-15l">₹5 - ₹15 Lakhs</SelectItem>
-                                                    <SelectItem value="15-30l">₹15 - ₹30 Lakhs</SelectItem>
-                                                    <SelectItem value="above-30l">₹30 Lakhs +</SelectItem>
+                                                    <SelectItem value="mma-cages">MMA Cages & Rings</SelectItem>
+                                                    <SelectItem value="free-weights">Commercial Free Weights</SelectItem>
+                                                    <SelectItem value="crossfit-rigs">CrossFit Rigs & Racks</SelectItem>
+                                                    <SelectItem value="padel-pickleball">Padel & Pickleball Courts</SelectItem>
+                                                    <SelectItem value="aqua">Aqua Fitness</SelectItem>
+                                                    <SelectItem value="full-setup">Complete Gym Setup</SelectItem>
                                                 </SelectContent>
                                             </Select>
                                         </div>
+                                    </div>
 
-                                        <div className="space-y-2">
-                                            <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400">Your Message</label>
-                                            <Textarea name="message" value={formData.message} onChange={handleChange} required placeholder="Tell us about your project requirements..." className="rounded-none border-2 border-zinc-200 min-h-[120px] font-extrabold focus:border-red-600 focus:ring-0 p-4" />
-                                        </div>
+                                    <div className="space-y-2">
+                                        <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400">Budget Range (Optional)</label>
+                                        <Select onValueChange={(val) => setFormData(prev => ({ ...prev, budget: val }))}>
+                                            <SelectTrigger className="rounded-none border-2 border-zinc-200 h-14 font-extrabold focus:border-red-600 focus:ring-0">
+                                                <SelectValue placeholder="Select Range" />
+                                            </SelectTrigger>
+                                            <SelectContent className="rounded-none border-2 border-black">
+                                                <SelectItem value="under-5l">Under ₹5 Lakhs</SelectItem>
+                                                <SelectItem value="5-15l">₹5 - ₹15 Lakhs</SelectItem>
+                                                <SelectItem value="15-30l">₹15 - ₹30 Lakhs</SelectItem>
+                                                <SelectItem value="above-30l">₹30 Lakhs +</SelectItem>
+                                            </SelectContent>
+                                        </Select>
+                                    </div>
 
-                                        <Button
-                                            type="submit"
-                                            className="w-full bg-red-600 text-white hover:bg-black rounded-none h-14 sm:h-16 uppercase font-black tracking-widest sm:tracking-[0.2em] transition-all text-sm sm:text-lg group"
-                                        >
-                                            Get A Factory Quote
-                                            <ArrowRight className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:translate-x-2" />
-                                        </Button>
-                                    </form>
-                                </motion.div>
-                            )}
+                                    <div className="space-y-2">
+                                        <label className="text-[10px] font-black uppercase tracking-widest text-zinc-400">Your Message</label>
+                                        <Textarea name="message" value={formData.message} onChange={handleChange} required placeholder="Tell us about your project requirements..." className="rounded-none border-2 border-zinc-200 min-h-[120px] font-extrabold focus:border-red-600 focus:ring-0 p-4" />
+                                    </div>
+
+                                    <Button
+                                        type="submit"
+                                        className="w-full bg-red-600 text-white hover:bg-black rounded-none h-14 sm:h-16 font-black tracking-widest sm:tracking-[0.2em] transition-all text-sm sm:text-lg group"
+                                    >
+                                        Get A Factory Quote
+                                        <ArrowRight className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:translate-x-2" />
+                                    </Button>
+                                </form>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
@@ -276,6 +257,46 @@ export function GetAQuote() {
 
             {/* Background Accent */}
             <div className="absolute inset-0 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.02] pointer-events-none z-0" />
+
+            {/* Success Modal */}
+            <AnimatePresence>
+                {submitted && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-[200] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
+                        onClick={() => closeModal()}
+                    >
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.85, y: 30 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.85, y: 30 }}
+                            transition={{ type: "spring", duration: 0.5 }}
+                            className="bg-white p-8 sm:p-12 text-center space-y-8 border-4 border-black shadow-[16px_16px_0px_0px_rgba(220,38,38,1)] max-w-md w-full"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <div className="flex justify-center">
+                                <div className="p-6 bg-red-600 rounded-full animate-bounce">
+                                    <Send className="h-12 w-12 sm:h-16 sm:w-16 text-white" />
+                                </div>
+                            </div>
+                            <div className="space-y-4">
+                                <h3 className="text-3xl sm:text-4xl font-black uppercase tracking-tighter text-black">Message Received.</h3>
+                                <p className="text-zinc-600 text-base sm:text-lg font-medium leading-relaxed">
+                                    Our factory representative will review your requirements and reach out on your mobile number within 12-24 hours.
+                                </p>
+                            </div>
+                            <Button
+                                onClick={() => closeModal()}
+                                className="w-full bg-black text-white hover:bg-red-600 rounded-none uppercase font-black tracking-widest h-14 sm:h-16 transition-all text-sm sm:text-base"
+                            >
+                                Close
+                            </Button>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 }
