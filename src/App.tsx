@@ -8,6 +8,7 @@ import { MMACages } from "./pages/MMACages";
 import { CrossFitRigs } from "./pages/CrossFitRigs";
 import { FreeWeights } from "./pages/FreeWeights";
 import { PadelPickleball } from "./pages/PadelPickleball";
+import { Aqua } from "./pages/Aqua";
 import { GetAQuote } from "./pages/GetAQuote";
 
 // Page stubs
@@ -25,6 +26,7 @@ function App() {
           <Route path="crossfit-rigs" element={<CrossFitRigs />} />
           <Route path="free-weights" element={<FreeWeights />} />
           <Route path="padel-pickleball" element={<PadelPickleball />} />
+          <Route path="aqua" element={<Aqua />} />
           <Route path="get-a-quote" element={<GetAQuote />} />
           <Route path="about" element={<About />} />
           <Route path="*" element={<NotFound />} />

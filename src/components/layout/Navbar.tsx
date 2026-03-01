@@ -16,6 +16,7 @@ const navLinks = [
     { name: "CrossFit Rigs", path: "/crossfit-rigs" },
     { name: "Free Weights", path: "/free-weights" },
     { name: "Padel & Pickleball", path: "/padel-pickleball" },
+    { name: "Aqua", path: "/aqua" },
     // { name: "About Us", path: "/about" },
 ];
 
@@ -42,7 +43,7 @@ export function Navbar() {
             }}
             animate={hidden ? "hidden" : "visible"}
             transition={{ duration: 0.35, ease: "easeInOut" }}
-            className={`fixed top-0 left-0 right-0 w-full border-b border-zinc-200/50 bg-white/80 backdrop-blur-md text-black h-20 transition-all ${isMobileMenuOpen ? "z-40" : "z-[100]"}`}
+            className={`fixed top-0 left-0 right-0 w-full border-b border-zinc-200/50 bg-white/80 backdrop-blur-md text-black h-16 sm:h-20 transition-all ${isMobileMenuOpen ? "z-40" : "z-[100]"}`}
         >
             <div className="container mx-auto flex h-full items-center justify-between px-4 md:px-6">
                 <Link to="/" className="flex items-center gap-2 group transition-transform duration-300 hover:scale-105 shrink-0">
@@ -57,13 +58,13 @@ export function Navbar() {
                                 <Link
                                     to={link.path}
                                     onClick={() => window.scrollTo(0, 0)}
-                                    className={`px-3 xl:px-4 text-[10px] xl:text-xs font-black uppercase tracking-[0.05em] xl:tracking-widest transition-all hover:text-red-600 relative group h-full flex items-center whitespace-nowrap ${isActive ? "text-red-600" : ""}`}
+                                    className={`px-2 xl:px-3 text-[12px] xl:text-[12px] font-black uppercase tracking-[0.03em] xl:tracking-[0.08em] transition-all hover:text-red-600 relative group h-full flex items-center whitespace-nowrap ${isActive ? "text-red-600" : ""}`}
                                 >
                                     {link.name}
                                     <span className={`absolute bottom-0 left-0 h-1 bg-red-600 transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"}`} />
                                 </Link>
                                 {index < navLinks.length - 1 && (
-                                    <div className="h-4 w-[1px] bg-zinc-300 mx-1 xl:mx-2" />
+                                    <div className="h-3 w-[1px] bg-zinc-200 mx-0.5 xl:mx-1" />
                                 )}
                             </div>
                         );
@@ -72,7 +73,7 @@ export function Navbar() {
 
                 <div className="flex items-center gap-4">
                     <Link to="/get-a-quote">
-                        <Button variant="default" className="hidden xl:flex bg-black text-white hover:bg-red-600 rounded-none px-4 xl:px-6 py-4 xl:py-6 h-auto uppercase font-black tracking-widest transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(220,38,38,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none border-2 border-black text-[10px] xl:text-xs">
+                        <Button variant="default" className="hidden xl:flex bg-black text-white hover:bg-red-600 rounded-none px-3 xl:px-5 py-3 xl:py-5 h-auto uppercase font-black tracking-wider transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(220,38,38,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none border-2 border-black text-[9px] xl:text-[10px]">
                             Get a Quote
                         </Button>
                     </Link>
