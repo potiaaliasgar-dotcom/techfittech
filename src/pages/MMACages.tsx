@@ -8,10 +8,11 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
-import heroBg from "@/assets/Homepagebg.webp";
+import heroBg from "@/assets/MMA-cages-boxing-rings.webp";
 
 // Lineup Images for context (reusing where appropriate or using placeholders)
 import ringImg from "@/assets/Lineup/Competition-Ring.webp";
+
 
 export function MMACages() {
     const heroRef = useRef(null);
@@ -89,7 +90,7 @@ export function MMACages() {
                         transition={{ duration: 0.8, delay: 0.8 }}
                         className="mt-10"
                     >
-                        <Button className="bg-black text-white hover:bg-red-600 rounded-none px-10 py-7 h-auto uppercase font-black tracking-[0.2em] transition-all duration-300 shadow-[8px_8px_0px_0px_rgba(220,38,38,1)] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none border-2 border-black group">
+                        <Button size="sm" className="bg-red-600 hover:bg-black text-white rounded-none px-12 py-8 text-sm font-black tracking-widest transition-all duration-300 hover:scale-[1.02] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[4px] hover:translate-y-[4px] group" onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}>
                             Request Price List
                             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                         </Button>
@@ -113,11 +114,11 @@ export function MMACages() {
 
                         {/* Left Panel: Header & Info */}
                         <div className="w-full lg:w-1/3 flex flex-col items-start text-left shrink-0">
-                            <div className="flex items-center gap-3 md:gap-4 mb-4">
+                            <div className="flex items-center gap-3 md:gap-4 mb-2 md:mb-4">
                                 <div className="h-[2px] w-8 md:w-12 bg-red-600"></div>
                                 <span className="text-red-600 font-bold uppercase tracking-widest text-xs md:text-sm">The Combat Zone</span>
                             </div>
-                            <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase text-white leading-[0.85] mb-8 drop-shadow-sm flex flex-col">
+                            <h2 className="text-4xl md:text-6xl lg:text-[5rem] font-black tracking-tighter uppercase text-white leading-[0.85] mb-4 md:mb-8 drop-shadow-sm flex flex-col">
                                 <span>Floor Cage</span>
                                 <span className="text-zinc-600 font-light text-2xl md:text-4xl my-2">vs</span>
                                 <span>Podium Cage</span>
@@ -204,11 +205,11 @@ export function MMACages() {
 
                         {/* Right Panel (now visually on right): Header & Info */}
                         <div className="w-full lg:w-1/3 flex flex-col items-start lg:items-end text-left lg:text-right shrink-0">
-                            <div className="flex items-center gap-3 md:gap-4 mb-4 lg:flex-row-reverse">
+                            <div className="flex items-center gap-3 md:gap-4 mb-2 md:mb-4 lg:flex-row-reverse">
                                 <div className="h-[2px] w-8 md:w-12 bg-black"></div>
                                 <span className="text-black font-bold uppercase tracking-widest text-xs md:text-sm">Boxing & Kickboxing</span>
                             </div>
-                            <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase text-black leading-[0.85] mb-8 drop-shadow-sm flex flex-col">
+                            <h2 className="text-4xl md:text-6xl lg:text-[5rem] font-black tracking-tighter uppercase text-black leading-[0.85] mb-4 md:mb-8 drop-shadow-sm flex flex-col">
                                 <span>Training Ring</span>
                                 <span className="text-zinc-400 font-light text-2xl md:text-4xl my-2">vs</span>
                                 <span>Competition</span>
@@ -285,8 +286,13 @@ export function MMACages() {
 
                     <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
                         <div className="space-y-8">
-                            <h2 className="text-sm font-black uppercase tracking-[0.4em] text-red-600 drop-shadow-glow">The Techfit Advantage</h2>
-                            <h3 className="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-tight">Superior Strength. <br />Professional Standards.</h3>
+                            <div className="flex items-center gap-3 md:gap-4 mb-2 md:mb-4">
+                                <div className="h-[2px] w-8 md:w-12 bg-red-600"></div>
+                                <span className="text-red-600 font-bold uppercase tracking-widest text-xs md:text-sm">The Techfit Advantage</span>
+                            </div>
+                            <h2 className="text-4xl md:text-6xl lg:text-[5rem] font-black tracking-tighter uppercase text-white leading-[0.85] mb-4 md:mb-8 drop-shadow-sm">
+                                Superior Strength.<br />Professional Standards.
+                            </h2>
 
                             <div className="space-y-12 mt-12">
                                 {advantages.map((adv, i) => (
@@ -327,14 +333,20 @@ export function MMACages() {
             <section className="py-24 bg-white relative">
                 <div className="container px-4 mx-auto max-w-4xl">
                     <div className="flex flex-col items-center mb-16 text-center">
-                        <h2 className="text-sm font-black tracking-[0.4em] text-red-600 mb-4">Support & Guidance</h2>
-                        <h3 className="text-3xl md:text-5xl font-black tracking-tighter">Everything You Need To Know</h3>
+                        <div className="flex items-center gap-3 md:gap-4 mb-2 md:mb-4 justify-center">
+                            <div className="h-[2px] w-8 md:w-12 bg-red-600"></div>
+                            <span className="text-red-600 font-bold uppercase tracking-widest text-xs md:text-sm">Support & Guidance</span>
+                        </div>
+                        <h2 className="text-4xl md:text-6xl lg:text-[5rem] font-black tracking-tighter uppercase text-black leading-[0.85] mb-4 md:mb-8 drop-shadow-sm flex flex-col">
+                            <span>Frequently Asked</span>
+                            <span className="text-red-600">Questions</span>
+                        </h2>
                     </div>
 
                     <Accordion type="single" collapsible className="w-full space-y-4">
                         {faqs.map((faq, i) => (
                             <AccordionItem key={i} value={`item-${i}`} className="border-2 border-zinc-100 px-6 py-2 data-[state=open]:border-red-600 transition-colors">
-                                <AccordionTrigger className="text-lg font-black uppercase tracking-tighter hover:no-underline text-left">
+                                <AccordionTrigger className="text-lg font-black tracking-tighter hover:no-underline text-left">
                                     {faq.q}
                                 </AccordionTrigger>
                                 <AccordionContent className="text-zinc-600 text-lg font-medium leading-relaxed pb-6">
