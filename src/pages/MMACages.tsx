@@ -11,7 +11,10 @@ import {
 import heroBg from "@/assets/MMA-cages-boxing-rings.webp";
 
 // Lineup Images for context (reusing where appropriate or using placeholders)
-import ringImg from "@/assets/Lineup/Competition-Ring.webp";
+import floorCageImg from "@/assets/Cages/Floor-Cage.webp";
+import podiumCageImg from "@/assets/Cages/Podium-Cage.webp";
+import trainingRingImg from "@/assets/Cages/Training-Ring.webp";
+import competitionRingImg from "@/assets/Cages/Competition-Ring.webp"
 
 
 export function MMACages() {
@@ -151,7 +154,7 @@ export function MMACages() {
                             >
                                 <div className="aspect-[4/3] bg-zinc-950 overflow-hidden relative w-full border-b-4 border-zinc-800 group-hover:border-red-600 transition-colors">
                                     <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent z-10 mix-blend-multiply opacity-80" />
-                                    <img src="https://images.unsplash.com/photo-1599058917233-35835bc320e8?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" alt="Floor Cage" />
+                                    <img src={floorCageImg} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 grayscale group-hover:grayscale-0" alt="Floor Cage" />
                                 </div>
 
                                 <div className="p-8 flex flex-col flex-1 relative z-20 bg-zinc-900/90 backdrop-blur-sm">
@@ -178,7 +181,7 @@ export function MMACages() {
                             >
                                 <div className="aspect-[4/3] bg-zinc-950 overflow-hidden relative w-full border-b-4 border-zinc-800 group-hover:border-red-600 transition-colors">
                                     <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent z-10 mix-blend-multiply opacity-80" />
-                                    <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" alt="Podium Cage" />
+                                    <img src={podiumCageImg} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" alt="Podium Cage" />
 
                                     {/* Podium Base Visual indicator */}
                                     <div className="absolute bottom-0 left-0 w-full h-4 bg-zinc-800 border-t border-zinc-700 font-mono text-[8px] text-zinc-500 px-2 flex items-center tracking-widest">
@@ -239,7 +242,7 @@ export function MMACages() {
                                 <div className="absolute -top-3 -right-3 w-6 h-6 bg-red-600 rounded-sm z-30 shadow-md"></div>
 
                                 <div className="aspect-[4/3] bg-zinc-100 overflow-hidden relative w-full border-b focus:outline-none">
-                                    <img src="https://images.unsplash.com/photo-1509190156295-58273dc7778b?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 blur-[1px] group-hover:blur-0 grayscale group-hover:grayscale-0" alt="Training Ring" />
+                                    <img src={trainingRingImg} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 group-hover:blur-0 grayscale group-hover:grayscale-0" alt="Training Ring" />
                                 </div>
 
                                 <div className="p-8 flex flex-col flex-1 relative z-20 bg-white">
@@ -263,7 +266,7 @@ export function MMACages() {
                                 <div className="absolute -top-3 -right-3 w-6 h-6 bg-red-600 rounded-sm z-30 shadow-md"></div>
 
                                 <div className="aspect-[4/3] bg-zinc-100 overflow-hidden relative w-full border-b focus:outline-none">
-                                    <img src={ringImg} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 blur-[1px] group-hover:blur-0 grayscale group-hover:grayscale-0" alt="Competition Ring" />
+                                    <img src={competitionRingImg} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 group-hover:blur-0 grayscale group-hover:grayscale-0" alt="Competition Ring" />
                                 </div>
 
                                 <div className="p-8 flex flex-col flex-1 relative z-20 bg-white">
