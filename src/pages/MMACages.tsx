@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useRef, useState } from "react";
 import { ArrowRight, Zap, Maximize, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -16,9 +16,17 @@ import podiumCageImg from "@/assets/Cages/Podium-Cage.webp";
 import trainingRingImg from "@/assets/Cages/Training-Ring.webp";
 import competitionRingImg from "@/assets/Cages/Competition-Ring.webp";
 
+import image1 from "@/assets/Advantage/image-1-2.webp"
+import image2 from "@/assets/Advantage/image-2-2.webp"
+import image3 from "@/assets/Advantage/image-3-2.webp"
+import image4 from "@/assets/Advantage/image-4-1.webp"
+// import image5 from "@/assets/Advantage/image-5-2.webp"
+
 
 export function MMACages() {
     const heroRef = useRef(null);
+    const [activeCage, setActiveCage] = useState<number | null>(null);
+    const [activeRing, setActiveRing] = useState<number | null>(null);
 
     const faqs = [
         {
@@ -141,9 +149,10 @@ export function MMACages() {
 
                             {/* Floor Cage Box */}
                             <motion.div
+                                onClick={() => setActiveCage(activeCage === 1 ? null : 1)}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                className="group relative bg-zinc-900 flex flex-col hover:border-red-600 transition-colors duration-500 z-10 shadow-2xl"
+                                className="group relative bg-zinc-900 flex flex-col hover:border-red-600 transition-colors duration-500 z-10 shadow-2xl cursor-pointer sm:cursor-default"
                                 style={{
                                     // Visual 'Cage' Border Effect
                                     border: '4px solid #18181b', // zinc-900
@@ -155,22 +164,33 @@ export function MMACages() {
                                 <div className="aspect-[4/3] bg-zinc-900 overflow-hidden relative w-full border-b-2 sm:border-b-4 border-zinc-800 group-hover:border-red-600 transition-colors flex-[0_0_auto]">
                                     <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-900/40 to-transparent z-10 mix-blend-multiply opacity-60" />
                                     <img src={floorCageImg} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Floor Cage" />
+
+                                    {/* Mobile Tap Hint */}
+                                    <div className="absolute top-2 right-2 sm:hidden z-20">
+                                        <div className="bg-red-600/80 p-1 rounded-full animate-pulse">
+                                            <Zap className="h-3 w-3 text-white" />
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div className="p-3 sm:p-6 lg:p-8 flex flex-col flex-1 relative z-20 bg-zinc-900/95 backdrop-blur-sm justify-center">
-                                    <h4 className="text-xl sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-1 sm:mb-2 lg:mb-4 text-white group-hover:text-red-600 transition-colors">Floor Cage</h4>
+                                <div className="p-2 sm:p-6 lg:p-8 flex flex-col flex-1 relative z-20 bg-zinc-900/95 backdrop-blur-sm justify-center">
+                                    <h4 className="text-base sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-0.5 sm:mb-2 lg:mb-4 text-white group-hover:text-red-600 transition-colors">Floor Cage</h4>
                                     <p className="text-zinc-400 text-[10px] sm:text-xs md:text-sm lg:text-base font-medium leading-tight lg:leading-relaxed hidden sm:block">
                                         Ground-mounted MMA cage designed for academies and training facilities. Compact, stable, and ideal for spaces requiring professional-grade performance without elevated platforms.
                                     </p>
+                                    <span className="text-[7px] uppercase font-bold tracking-widest text-zinc-500 sm:hidden">Tap for details</span>
                                 </div>
+
+
                             </motion.div>
 
                             {/* Podium Cage Box */}
                             <motion.div
+                                onClick={() => setActiveCage(activeCage === 2 ? null : 2)}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.2 }}
-                                className="group relative bg-zinc-900 flex flex-col hover:border-red-600 transition-colors duration-500 z-10 shadow-2xl sm:mt-12"
+                                className="group relative bg-zinc-900 flex flex-col hover:border-red-600 transition-colors duration-500 z-10 shadow-2xl sm:mt-12 cursor-pointer sm:cursor-default"
                                 style={{
                                     // Visual 'Cage' Border Effect
                                     border: '4px solid #18181b',
@@ -187,14 +207,24 @@ export function MMACages() {
                                     <div className="absolute bottom-0 left-0 w-full h-3 sm:h-4 bg-zinc-800 border-t border-zinc-700 font-mono text-[6px] sm:text-[8px] text-zinc-500 px-2 flex items-center tracking-widest hidden sm:flex z-20">
                                         ELEVATED PLATFORM
                                     </div>
+
+                                    {/* Mobile Tap Hint */}
+                                    <div className="absolute top-2 right-2 sm:hidden z-20">
+                                        <div className="bg-red-600/80 p-1 rounded-full animate-pulse">
+                                            <Zap className="h-3 w-3 text-white" />
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div className="p-3 sm:p-6 lg:p-8 flex flex-col flex-1 relative z-20 bg-zinc-900/95 backdrop-blur-sm justify-center">
-                                    <h4 className="text-xl sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-1 sm:mb-2 lg:mb-4 text-white group-hover:text-red-600 transition-colors">Podium Cage</h4>
+                                <div className="p-2 sm:p-6 lg:p-8 flex flex-col flex-1 relative z-20 bg-zinc-900/95 backdrop-blur-sm justify-center">
+                                    <h4 className="text-base sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-0.5 sm:mb-2 lg:mb-4 text-white group-hover:text-red-600 transition-colors">Podium Cage</h4>
                                     <p className="text-zinc-400 text-[10px] sm:text-xs md:text-sm lg:text-base font-medium leading-tight lg:leading-relaxed hidden sm:block">
                                         Elevated MMA cage engineered for competitions and showcase environments. Offers enhanced visibility, reinforced structure, and premium finishing suitable for events and broadcast setups.
                                     </p>
+                                    <span className="text-[7px] uppercase font-bold tracking-widest text-zinc-500 sm:hidden">Tap for details</span>
                                 </div>
+
+
                             </motion.div>
                         </div>
                     </div>
@@ -233,49 +263,71 @@ export function MMACages() {
 
                             {/* Training Ring Box */}
                             <motion.div
+                                onClick={() => setActiveRing(activeRing === 1 ? null : 1)}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                className="group relative bg-white border-2 border-zinc-200 flex flex-col hover:border-black transition-colors duration-500 z-10 shadow-xl"
+                                className="group relative bg-white border-2 border-zinc-200 flex flex-col hover:border-black transition-colors duration-500 z-10 shadow-xl cursor-pointer sm:cursor-default"
                             >
                                 {/* "Ring Corner" posts visual */}
                                 <div className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 w-4 h-4 sm:w-6 sm:h-6 bg-blue-600 rounded-sm z-30 shadow-md"></div>
                                 <div className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 w-4 h-4 sm:w-6 sm:h-6 bg-red-600 rounded-sm z-30 shadow-md"></div>
 
                                 <div className="aspect-[4/3] bg-zinc-100 overflow-hidden relative w-full border-b focus:outline-none flex-[0_0_auto]">
-                                    <img src={trainingRingImg} className="w-full h-full object-cover transition-transform duration-700" alt="Training Ring" />
+                                    <img src={trainingRingImg} className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" alt="Training Ring" />
+
+                                    {/* Mobile Tap Hint */}
+                                    <div className="absolute top-2 right-2 sm:hidden z-20">
+                                        <div className="bg-black/60 p-1 rounded-full animate-pulse">
+                                            <Zap className="h-3 w-3 text-white" />
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div className="p-3 sm:p-6 lg:p-8 flex flex-col flex-1 relative z-20 bg-white justify-center">
-                                    <h4 className="text-xl sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-1 sm:mb-2 lg:mb-4 text-black">Training Ring</h4>
-                                    <div className="w-8 sm:w-12 h-1 bg-zinc-200 mb-2 sm:mb-6 group-hover:bg-black transition-colors" />
+                                <div className="p-2 sm:p-6 lg:p-8 flex flex-col flex-1 relative z-20 bg-white justify-center">
+                                    <h4 className="text-base sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-0.5 sm:mb-2 lg:mb-4 text-black text-black">Training Ring</h4>
+                                    <div className="w-8 sm:w-12 h-0.5 sm:h-1 bg-zinc-200 mb-1 sm:mb-6 group-hover:bg-black transition-colors" />
                                     <p className="text-zinc-600 text-[10px] sm:text-xs md:text-sm lg:text-base font-medium leading-tight lg:leading-relaxed hidden sm:block">
                                         Durable boxing ring built for daily training and skill development. Designed for gyms and academies with focus on safety, shock absorption, and long-term use.
                                     </p>
+                                    <span className="text-[7px] uppercase font-bold tracking-widest text-zinc-400 sm:hidden">Tap for details</span>
                                 </div>
+
+
                             </motion.div>
 
                             {/* Competition Ring Box */}
                             <motion.div
+                                onClick={() => setActiveRing(activeRing === 2 ? null : 2)}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.2 }}
-                                className="group relative bg-white border-2 border-zinc-200 flex flex-col hover:border-black transition-colors duration-500 z-10 shadow-xl sm:mt-12"
+                                className="group relative bg-white border-2 border-zinc-200 flex flex-col hover:border-black transition-colors duration-500 z-10 shadow-xl sm:mt-12 cursor-pointer sm:cursor-default"
                             >
                                 {/* "Ring Corner" posts visual */}
-                                <div className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 w-4 h-4 sm:w-6 sm:h-6 bg-blue-600 rounded-sm z-30 shadow-md"></div>
-                                <div className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 w-4 h-4 sm:w-6 sm:h-6 bg-red-600 rounded-sm z-30 shadow-md"></div>
+                                <div className="absolute -top-2 -left-2 sm:-top-3 -left-3 w-4 h-4 sm:w-6 sm:h-6 bg-blue-600 rounded-sm z-30 shadow-md"></div>
+                                <div className="absolute -top-2 -right-2 sm:-top-3 -right-3 w-4 h-4 sm:w-6 sm:h-6 bg-red-600 rounded-sm z-30 shadow-md"></div>
 
                                 <div className="aspect-[4/3] bg-zinc-100 overflow-hidden relative w-full border-b focus:outline-none flex-[0_0_auto]">
                                     <img src={competitionRingImg} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Competition Ring" />
+
+                                    {/* Mobile Tap Hint */}
+                                    <div className="absolute top-2 right-2 sm:hidden z-20">
+                                        <div className="bg-black/60 p-1 rounded-full animate-pulse">
+                                            <Zap className="h-3 w-3 text-white" />
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div className="p-3 sm:p-6 lg:p-8 flex flex-col flex-1 relative z-20 bg-white justify-center">
-                                    <h4 className="text-xl sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-1 sm:mb-2 lg:mb-4 text-black group-hover:text-red-600 transition-colors">Competition Ring</h4>
-                                    <div className="w-8 sm:w-12 h-1 bg-zinc-200 mb-2 sm:mb-6 group-hover:bg-red-600 transition-colors" />
+                                <div className="p-2 sm:p-6 lg:p-8 flex flex-col flex-1 relative z-20 bg-white justify-center">
+                                    <h4 className="text-base sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-0.5 sm:mb-2 lg:mb-4 text-black group-hover:text-red-600 transition-colors">Competition Ring</h4>
+                                    <div className="w-8 sm:w-12 h-0.5 sm:h-1 bg-zinc-200 mb-1 sm:mb-6 group-hover:bg-red-600 transition-colors" />
                                     <p className="text-zinc-600 text-[10px] sm:text-xs md:text-sm lg:text-base font-medium leading-tight lg:leading-relaxed hidden sm:block">
                                         Professional boxing ring designed to meet competition standards. Built for tournaments, promotions, and events requiring maximum stability, aesthetics, and athlete safety.
                                     </p>
+                                    <span className="text-[7px] uppercase font-bold tracking-widest text-zinc-400 sm:hidden">Tap for details</span>
                                 </div>
+
+
                             </motion.div>
                         </div>
                     </div>
@@ -285,7 +337,7 @@ export function MMACages() {
             {/* The Techfit Advantage */}
             <section className="py-12 lg:py-24 bg-zinc-950 text-white overflow-hidden">
                 <div className="container px-4 mx-auto relative">
-                    <div className="absolute top-0 right-0 text-[15rem] font-black text-zinc-900 leading-none -translate-y-1/2 translate-x-1/4 pointer-events-none select-none z-0">PRO</div>
+                    {/* <div className="absolute top-0 right-0 text-[15rem] font-black text-zinc-900 leading-none -translate-y-1/2 translate-x-1/4 pointer-events-none select-none z-0">PRO</div> */}
 
                     <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
                         <div className="space-y-8">
@@ -320,12 +372,12 @@ export function MMACages() {
 
                         <div className="grid grid-cols-2 gap-4">
                             <div className="space-y-4">
-                                <img src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?q=80&w=400&h=500&auto=format&fit=crop" className="w-full h-80 object-cover border-b-4 border-red-600" alt="Process 1" />
-                                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=400&h=300&auto=format&fit=crop" className="w-full h-48 object-cover border-b-4 border-zinc-800" alt="Process 2" />
+                                <img src={image1} alt="Process 1" />
+                                <img src={image2} className="w-full h-48 object-cover border-b-4 border-zinc-800" alt="Process 2" />
                             </div>
                             <div className="space-y-4 pt-12">
-                                <img src="https://images.unsplash.com/photo-1593079831268-3381b0fdb5bf?q=80&w=400&h=300&auto=format&fit=crop" className="w-full h-48 object-cover border-b-4 border-zinc-800" alt="Process 3" />
-                                <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=400&h=500&auto=format&fit=crop" className="w-full h-80 object-cover border-b-4 border-red-600" alt="Process 4" />
+                                <img src={image3} className="w-full h-48 object-cover border-b-4 border-zinc-800" alt="Process 3" />
+                                <img src={image4} className="w-full h-80 object-cover border-b-4 border-red-600" alt="Process 4" />
                             </div>
                         </div>
                     </div>
@@ -379,6 +431,167 @@ export function MMACages() {
                     </div>
                 </div>
             </section>
+
+            {/* Global Mobile Popups */}
+            {/* Floor Cage Modal */}
+            <AnimatePresence>
+                {activeCage === 1 && (
+                    <>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setActiveCage(null)}
+                            className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm sm:hidden"
+                        />
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] max-w-sm z-[101] bg-zinc-900 border border-red-600/50 p-6 shadow-2xl sm:hidden flex flex-col items-start"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <div className="flex justify-between items-center mb-4 w-full">
+                                <div className="h-1 w-8 bg-red-600" />
+                                <button onClick={() => setActiveCage(null)} className="text-zinc-500 hover:text-white transition-colors">
+                                    <Zap className="h-4 w-4" />
+                                </button>
+                            </div>
+                            <h4 className="text-xl font-black uppercase tracking-tighter mb-2 text-white text-left">Floor Cage</h4>
+                            <p className="text-zinc-400 text-sm font-medium leading-relaxed text-left">
+                                Ground-mounted MMA cage designed for academies and training facilities. Compact, stable, and ideal for spaces requiring professional-grade performance without elevated platforms.
+                            </p>
+                            <Button
+                                onClick={() => setActiveCage(null)}
+                                size="sm"
+                                className="mt-6 w-full bg-red-600 hover:bg-red-700 text-white rounded-none uppercase font-black tracking-widest text-[10px]"
+                            >
+                                Close Detail
+                            </Button>
+                        </motion.div>
+                    </>
+                )}
+            </AnimatePresence>
+
+            {/* Podium Cage Modal */}
+            <AnimatePresence>
+                {activeCage === 2 && (
+                    <>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setActiveCage(null)}
+                            className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm sm:hidden"
+                        />
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] max-w-sm z-[101] bg-zinc-900 border border-red-600/50 p-6 shadow-2xl sm:hidden flex flex-col items-start"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <div className="flex justify-between items-center mb-4 w-full">
+                                <div className="h-1 w-8 bg-red-600" />
+                                <button onClick={() => setActiveCage(null)} className="text-zinc-500 hover:text-white transition-colors">
+                                    <Zap className="h-4 w-4" />
+                                </button>
+                            </div>
+                            <h4 className="text-xl font-black uppercase tracking-tighter mb-2 text-white text-left">Podium Cage</h4>
+                            <p className="text-zinc-400 text-sm font-medium leading-relaxed text-left">
+                                Elevated MMA cage engineered for competitions and showcase environments. Offers enhanced visibility, reinforced structure, and premium finishing suitable for events and broadcast setups.
+                            </p>
+                            <Button
+                                onClick={() => setActiveCage(null)}
+                                size="sm"
+                                className="mt-6 w-full bg-red-600 hover:bg-red-700 text-white rounded-none uppercase font-black tracking-widest text-[10px]"
+                            >
+                                Close Detail
+                            </Button>
+                        </motion.div>
+                    </>
+                )}
+            </AnimatePresence>
+
+            {/* Training Ring Modal */}
+            <AnimatePresence>
+                {activeRing === 1 && (
+                    <>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setActiveRing(null)}
+                            className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm sm:hidden"
+                        />
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] max-w-sm z-[101] bg-white border border-zinc-200 p-6 shadow-2xl sm:hidden flex flex-col items-start"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <div className="flex justify-between items-center mb-4 w-full">
+                                <div className="h-1 w-8 bg-black" />
+                                <button onClick={() => setActiveRing(null)} className="text-zinc-400 hover:text-black transition-colors">
+                                    <Zap className="h-4 w-4" />
+                                </button>
+                            </div>
+                            <h4 className="text-xl font-black uppercase tracking-tighter mb-2 text-black text-left">Training Ring</h4>
+                            <p className="text-zinc-600 text-sm font-medium leading-relaxed text-left">
+                                Durable boxing ring built for daily training and skill development. Designed for gyms and academies with focus on safety, shock absorption, and long-term use.
+                            </p>
+                            <Button
+                                onClick={() => setActiveRing(null)}
+                                size="sm"
+                                className="mt-6 w-full bg-black hover:bg-zinc-800 text-white rounded-none uppercase font-black tracking-widest text-[10px]"
+                            >
+                                Close Detail
+                            </Button>
+                        </motion.div>
+                    </>
+                )}
+            </AnimatePresence>
+
+            {/* Competition Ring Modal */}
+            <AnimatePresence>
+                {activeRing === 2 && (
+                    <>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setActiveRing(null)}
+                            className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm sm:hidden"
+                        />
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] max-w-sm z-[101] bg-white border border-red-600/50 p-6 shadow-2xl sm:hidden flex flex-col items-start"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <div className="flex justify-between items-center mb-4 w-full">
+                                <div className="h-1 w-8 bg-red-600" />
+                                <button onClick={() => setActiveRing(null)} className="text-zinc-400 hover:text-black transition-colors">
+                                    <Zap className="h-4 w-4" />
+                                </button>
+                            </div>
+                            <h4 className="text-xl font-black uppercase tracking-tighter mb-2 text-black text-left">Competition Ring</h4>
+                            <p className="text-zinc-600 text-sm font-medium leading-relaxed text-left">
+                                Professional boxing ring designed to meet competition standards. Built for tournaments, promotions, and events requiring maximum stability, aesthetics, and athlete safety.
+                            </p>
+                            <Button
+                                onClick={() => setActiveRing(null)}
+                                size="sm"
+                                className="mt-6 w-full bg-red-600 hover:bg-red-700 text-white rounded-none uppercase font-black tracking-widest text-[10px]"
+                            >
+                                Close Detail
+                            </Button>
+                        </motion.div>
+                    </>
+                )}
+            </AnimatePresence>
         </div>
     );
 }
