@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, X, FileText, ChevronLeft, ChevronRight, Droplets, Waves, Thermometer, Shield, Zap } from "lucide-react";
+import { ArrowRight, X, FileText, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
     Accordion,
@@ -9,66 +9,47 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselPrevious,
+    CarouselNext,
+} from "@/components/ui/carousel";
 
 import heroBg from "@/assets/aqua-hero.webp";
+import treadmillImg from "@/assets/aqua/Techfit_Aqua_Series_Premium_Brochure_page-0001.jpg";
+import bikeImg from "@/assets/aqua/Techfit_Aqua_Series_Premium_Brochure_page-0003.jpg";
+import moonWalkerImg from "@/assets/aqua/Techfit_Aqua_Series_Premium_Brochure_page-0002.jpg";
+
 
 export function Aqua() {
     const heroRef = useRef<HTMLDivElement>(null);
     const [galleryIndex, setGalleryIndex] = useState<number | null>(null);
 
-    const features = [
-        {
-            icon: Droplets,
-            title: "Aqua Resistance Training",
-            desc: "Water-based resistance systems engineered for maximum muscle engagement with minimal joint stress. Perfect for rehabilitation and advanced conditioning."
-        },
-        {
-            icon: Waves,
-            title: "Hydrotherapy Integration",
-            desc: "Integrated hydrotherapy jets and temperature control for recovery, wellness, and therapeutic fitness solutions in commercial and residential setups."
-        },
-        {
-            icon: Thermometer,
-            title: "Climate-Controlled Pools",
-            desc: "Precision-engineered pool heating and cooling systems that maintain optimal water temperature year-round for peak performance training."
-        },
-        {
-            icon: Shield,
-            title: "Commercial-Grade Durability",
-            desc: "Built with marine-grade stainless steel, anti-corrosion coatings, and industrial filtration systems designed for high-traffic fitness facilities."
-        },
-        {
-            icon: Zap,
-            title: "Underwater Fitness Equipment",
-            desc: "Specialized underwater treadmills, cycling stations, and resistance machines engineered for aquatic fitness programs and athletic recovery."
-        }
-    ];
-
-    const faqs = [
-        {
-            q: "What types of aqua fitness equipment do you offer?",
-            a: "We provide a comprehensive range of aquatic fitness solutions including underwater treadmills, aqua cycling stations, resistance jet systems, hydrotherapy pools, and modular pool-based training platforms. All equipment is manufactured with marine-grade materials for maximum durability."
-        },
-        {
-            q: "Can the aqua fitness systems be installed in existing facilities?",
-            a: "Yes. Our modular aqua fitness systems are designed for both new constructions and retrofitting into existing pools and fitness facilities. Our turnkey installation team handles everything from structural assessment to final commissioning."
-        },
-        {
-            q: "What maintenance is required for aqua fitness equipment?",
-            a: "Our equipment is built with anti-corrosion materials and sealed mechanical systems that require minimal maintenance. We provide comprehensive maintenance packages and 24/7 technical support for all commercial installations."
-        },
-        {
-            q: "Is aqua fitness suitable for rehabilitation?",
-            a: "Absolutely. Aqua fitness is one of the most effective forms of rehabilitation training. The buoyancy of water reduces joint stress by up to 90% while providing natural resistance for muscle strengthening. Our systems are used by physiotherapy clinics, sports rehabilitation centers, and hospitals."
-        }
-    ];
+    // const faqs = [
+    //     {
+    //         q: "What types of aqua fitness equipment do you offer?",
+    //         a: "We provide a comprehensive range of aquatic fitness solutions including underwater treadmills, aqua cycling stations, resistance jet systems, hydrotherapy pools, and modular pool-based training platforms. All equipment is manufactured with marine-grade materials for maximum durability."
+    //     },
+    //     {
+    //         q: "Can the aqua fitness systems be installed in existing facilities?",
+    //         a: "Yes. Our modular aqua fitness systems are designed for both new constructions and retrofitting into existing pools and fitness facilities. Our turnkey installation team handles everything from structural assessment to final commissioning."
+    //     },
+    //     {
+    //         q: "What maintenance is required for aqua fitness equipment?",
+    //         a: "Our equipment is built with anti-corrosion materials and sealed mechanical systems that require minimal maintenance. We provide comprehensive maintenance packages and 24/7 technical support for all commercial installations."
+    //     },
+    //     {
+    //         q: "Is aqua fitness suitable for rehabilitation?",
+    //         a: "Absolutely. Aqua fitness is one of the most effective forms of rehabilitation training. The buoyancy of water reduces joint stress by up to 90% while providing natural resistance for muscle strengthening. Our systems are used by physiotherapy clinics, sports rehabilitation centers, and hospitals."
+    //     }
+    // ];
 
     const galleryImages = [
-        { title: "Infinity Training Pool", tag: "Pool Design" },
-        { title: "Underwater Treadmill", tag: "Cardio Equipment" },
-        { title: "Aqua Cycling Station", tag: "Resistance Training" },
-        { title: "Hydrotherapy Zone", tag: "Recovery Systems" },
-        { title: "Commercial Installation", tag: "Turnkey Solutions" },
+        { title: "Aqua Moon Walker", tag: "Underwater Elliptical", src: moonWalkerImg },
+        { title: "Aqua Bike", tag: "Underwater Cycle", src: bikeImg },
+        { title: "Aqua Treadmill", tag: "Manual Underwater Treadmill", src: treadmillImg },
     ];
 
     return (
@@ -89,7 +70,7 @@ export function Aqua() {
                         className="mb-6 flex items-center gap-2"
                     >
                         <div className="h-[2px] w-8 bg-red-600"></div>
-                        <span className="text-red-600 font-bold uppercase tracking-[0.3em] text-xs sm:text-sm">Aquatic Fitness Solutions</span>
+                        <span className="text-red-600 font-bold uppercase tracking-[0.3em] text-xs sm:text-sm">Manual Underwater Treadmill</span>
                         <div className="h-[2px] w-8 bg-red-600"></div>
                     </motion.div>
 
@@ -99,8 +80,8 @@ export function Aqua() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter uppercase max-w-5xl leading-[0.9] text-white drop-shadow-2xl mb-8"
                     >
-                        Premium <br />
-                        <span className="text-red-600">Aqua Fitness</span>
+                        TECHFIT <br />
+                        <span className="text-red-600">AQUA TREADMILL</span>
                     </motion.h1>
 
                     <motion.p
@@ -109,12 +90,13 @@ export function Aqua() {
                         transition={{ duration: 1, delay: 0.6 }}
                         className="mx-auto max-w-[800px] text-zinc-900 md:text-xl font-bold tracking-tight bg-white/80 backdrop-blur-sm px-8 py-6 border-l-4 border-red-600 shadow-xl leading-relaxed"
                     >
-                        Next-generation aquatic fitness equipment and pool solutions for gyms, wellness centers, rehabilitation facilities, and luxury residences. Engineered for performance, built for durability.
+                        Premium SS316 marine-grade underwater stainless steel treadmill. Engineered for performance, built for excellence.
                     </motion.p>
+
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.8 }}
+                        transition={{ duration: 0.8, delay: 1.6 }}
                         className="mt-10"
                     >
                         <Link to="/get-a-quote">
@@ -130,103 +112,67 @@ export function Aqua() {
                 </div>
             </section>
 
-            {/* Features Section */}
-            <section className="py-24 bg-white border-t-2 border-zinc-100">
-                <div className="container px-4 mx-auto">
-                    <div className="text-center mb-16">
-                        <div className="flex items-center justify-center gap-3 mb-4">
-                            <div className="h-[2px] w-8 bg-red-600"></div>
-                            <span className="text-red-600 font-bold uppercase tracking-widest text-[10px] sm:text-xs">Why Choose Techfit Aqua</span>
-                            <div className="h-[2px] w-8 bg-red-600"></div>
-                        </div>
-                        <h2 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter uppercase text-black leading-[0.85] mb-4">
-                            Aqua. <span className="text-red-600">Redefined.</span>
-                        </h2>
-                        <p className="text-zinc-500 font-medium text-base md:text-lg max-w-lg mx-auto">
-                            Cutting-edge aquatic fitness solutions designed to transform any facility into a world-class wellness destination.
-                        </p>
-                    </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                        {features.map((feature, i) => {
-                            const Icon = feature.icon;
-                            return (
-                                <motion.div
-                                    key={i}
-                                    initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: i * 0.1 }}
-                                    className="bg-zinc-50 border-2 border-zinc-100 p-8 relative group hover:border-red-600 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl"
-                                >
-                                    <div className="absolute top-0 right-0 w-12 h-12 bg-zinc-100 flex items-center justify-center group-hover:bg-red-600 transition-colors duration-500">
-                                        <Icon className="h-6 w-6 text-zinc-400 group-hover:text-white transition-colors" />
-                                    </div>
-                                    <div className="mb-6">
-                                        <div className="w-12 h-12 bg-red-600/10 flex items-center justify-center mb-4">
-                                            <Icon className="h-6 w-6 text-red-600" />
-                                        </div>
-                                        <h3 className="text-xl font-black uppercase tracking-tighter text-black group-hover:text-red-600 transition-colors">
-                                            {feature.title}
-                                        </h3>
-                                    </div>
-                                    <p className="text-zinc-500 font-medium leading-relaxed text-sm">
-                                        {feature.desc}
-                                    </p>
-                                </motion.div>
-                            );
-                        })}
-                    </div>
-                </div>
-            </section>
-
-            {/* Hero Image Showcase */}
-            <section className="py-24 bg-zinc-950 text-white relative overflow-hidden">
-                <div className="absolute inset-0 opacity-10">
-                    <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroBg})` }} />
-                </div>
-                <div className="container px-4 mx-auto relative z-10">
-                    <div className="max-w-5xl mx-auto text-center">
-                        <div className="flex items-center justify-center gap-3 mb-4">
-                            <div className="h-[2px] w-8 bg-red-600"></div>
-                            <span className="text-red-600 font-bold uppercase tracking-widest text-[10px] sm:text-xs">Premium Installations</span>
-                            <div className="h-[2px] w-8 bg-red-600"></div>
-                        </div>
-                        <h2 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter uppercase leading-[0.85] mb-6">
-                            Built for <span className="text-red-600">Excellence.</span>
-                        </h2>
-                        <p className="text-zinc-400 font-medium text-base md:text-lg max-w-2xl mx-auto mb-12">
-                            From luxury wellness centers to professional rehabilitation clinics, our aqua fitness solutions deliver unmatched quality and performance.
-                        </p>
-
-                        <div className="relative aspect-[16/10] overflow-hidden border-4 border-white/10 group cursor-pointer" onClick={() => setGalleryIndex(0)}>
-                            <img
-                                src={heroBg}
-                                alt="Premium Aqua Fitness Installation"
-                                loading="lazy"
-                                decoding="async"
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                            <div className="absolute bottom-4 left-4 right-4 sm:bottom-8 sm:left-8 sm:right-8 flex items-end justify-between gap-2 sm:gap-4">
-                                <div>
-                                    <p className="text-white/80 text-[8px] sm:text-[10px] font-bold uppercase tracking-widest mb-1">Turnkey Solutions</p>
-                                    <p className="text-white text-lg sm:text-3xl font-black uppercase tracking-tight">Infinity Training Pool</p>
-                                </div>
-                                <Button
-                                    onClick={(e) => {
-                                        e.stopPropagation();
-                                        setGalleryIndex(0);
-                                    }}
-                                    className="bg-transparent text-white hover:text-red-600 rounded-none px-0 py-2 h-auto uppercase font-black tracking-[0.2em] text-[8px] sm:text-xs transition-all duration-300 group/btn relative shrink-0"
-                                >
-                                    <span className="relative">
-                                        Discover Gallery
-                                        <div className="absolute -bottom-2 left-0 w-full h-[2px] bg-red-600 group-hover/btn:bg-white transition-colors"></div>
-                                    </span>
-                                    <ArrowRight className="ml-2 sm:ml-3 h-3 w-3 sm:h-4 sm:w-4 transition-transform group-hover/btn:translate-x-2" />
-                                </Button>
+            {/* Aqua Equipment Section — Lineup Style */}
+            <section className="py-8 md:py-24 flex items-center bg-white border-t-2 border-zinc-100 relative z-20 overflow-hidden">
+                <div className="container mx-auto px-4 md:px-6 relative z-10 flex flex-col h-full justify-center">
+                    <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 lg:gap-24 h-full">
+                        {/* Left Panel: Header & Info */}
+                        <div className="w-full md:w-1/3 flex flex-col items-start text-left shrink-0">
+                            <div className="flex items-center gap-3 md:gap-4 mb-2 md:mb-4">
+                                <div className="h-[2px] w-8 md:w-12 bg-red-600"></div>
+                                <span className="text-red-600 font-bold uppercase tracking-widest text-xs md:text-sm">Premium SS316 Marine Grade</span>
                             </div>
+                            <h2 className="text-4xl md:text-6xl lg:text-[5rem] font-black tracking-tighter uppercase text-black leading-[0.85] mb-4 md:mb-8 drop-shadow-sm flex items-center justify-between w-full md:block">
+                                <div>Our <br className="hidden md:block" /><span className="text-red-600">Equipment</span></div>
+                            </h2>
+                            <p className="hidden md:block text-zinc-600 font-medium text-lg leading-relaxed mb-8 border-l-4 border-black pl-6 max-w-sm">
+                                Underwater Stainless Steel fitness equipment built for durability and performance. SS316 Marine Grade construction across our entire Aqua range.
+                            </p>
+                            <div className="hidden md:block w-24 h-2 bg-black"></div>
+                        </div>
+
+                        {/* Right Panel: Carousel */}
+                        <div className="w-full md:w-2/3 relative flex-1 flex flex-col justify-center">
+                            <Carousel
+                                opts={{
+                                    align: "start",
+                                    loop: true,
+                                }}
+                                className="w-full"
+                            >
+                                <CarouselContent className="-ml-4 md:-ml-6">
+                                    {galleryImages.map((item, i) => (
+                                        <CarouselItem key={i} className="pl-4 md:pl-6 basis-[85%] md:basis-1/2 lg:basis-1/2 shrink-0">
+                                            <motion.div whileHover={{ y: -15 }} className="group h-full flex flex-col shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] border-2 border-black bg-white transition-all duration-300">
+                                                <div className="relative aspect-[3/2] bg-zinc-200 overflow-hidden border-b-2 border-black max-h-[260px] md:max-h-none cursor-pointer" onClick={() => setGalleryIndex(i)}>
+                                                    <div className="absolute top-2 md:top-4 left-2 md:left-4 z-20 bg-black text-white font-bold px-2 py-1 md:px-3 md:py-1 text-[10px] md:text-xs uppercase tracking-widest border border-white/20">
+                                                        {item.tag}
+                                                    </div>
+                                                    <div className="absolute inset-0 bg-red-600/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity z-10 duration-500"></div>
+                                                    <img src={item.src} alt={item.title} loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+                                                </div>
+                                                <div className="p-6 flex flex-col flex-1 bg-white relative">
+                                                    <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight mb-3 text-black border-b-2 border-red-600 pb-1 md:pb-2 inline-block self-start">{item.title}</h3>
+                                                    {/* <p className="text-zinc-600 mb-6 flex-1 leading-relaxed font-medium text-sm md:text-base line-clamp-3 md:line-clamp-none">{item.desc}</p> */}
+                                                    <Link to="/get-a-quote" className="inline-flex items-center text-white bg-black hover:bg-red-600 font-black uppercase tracking-widest text-xs md:text-sm transition-colors mt-auto px-6 py-4 w-full justify-between group-hover:pl-6 md:group-hover:pl-8 duration-300">
+                                                        Get Quote <ChevronRight className="h-2 w-2 md:h-3 md:w-3" />
+                                                    </Link>
+                                                </div>
+                                            </motion.div>
+                                        </CarouselItem>
+                                    ))}
+                                </CarouselContent>
+                                <div className="hidden md:flex justify-start gap-4 mt-8">
+                                    <CarouselPrevious className="static translate-y-0 border-2 border-black rounded-none h-12 w-12 hover:bg-red-600 hover:text-white" />
+                                    <CarouselNext className="static translate-y-0 border-2 border-black rounded-none h-12 w-12 hover:bg-red-600 hover:text-white" />
+                                </div>
+                                <div className="flex justify-center md:hidden mt-4 w-full">
+                                    <span className="border-2 border-black bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] px-4 py-1.5 text-[10px] font-black uppercase tracking-widest flex items-center gap-2 text-black">
+                                        <ArrowRight className="h-3 w-3 rotate-180" /> SWIPE TO EXPLORE <ArrowRight className="h-3 w-3" />
+                                    </span>
+                                </div>
+                            </Carousel>
                         </div>
                     </div>
                 </div>
@@ -247,22 +193,44 @@ export function Aqua() {
                     </div>
 
                     <Accordion type="single" collapsible className="w-full space-y-4 max-w-4xl mx-auto">
-                        {faqs.map((faq, i) => (
-                            <AccordionItem key={i} value={`item-${i}`} className="border-2 border-zinc-200 bg-white px-8 py-4 data-[state=open]:border-red-600 transition-colors">
-                                <AccordionTrigger className="text-xl font-black tracking-tighter hover:no-underline text-left">
-                                    {faq.q}
-                                </AccordionTrigger>
-                                <AccordionContent className="text-zinc-600 text-lg font-medium leading-relaxed pb-6 whitespace-pre-line">
-                                    {faq.a}
-                                </AccordionContent>
-                            </AccordionItem>
-                        ))}
+                        <AccordionItem value="item-1" className="border-2 border-zinc-200 bg-white px-8 py-4 data-[state=open]:border-red-600 transition-colors">
+                            <AccordionTrigger className="text-xl font-black tracking-tighter hover:no-underline text-left">
+                                What is SS316 Marine Grade Stainless Steel?
+                            </AccordionTrigger>
+                            <AccordionContent className="text-zinc-600 text-lg font-medium leading-relaxed pb-6 whitespace-pre-line">
+                                SS316 is a premium-grade stainless steel alloy known for its superior corrosion resistance, especially in saltwater and chlorinated pool environments. All our Aqua equipment is built with SS316 to ensure maximum longevity and zero rust, even with continuous underwater use.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="item-2" className="border-2 border-zinc-200 bg-white px-8 py-4 data-[state=open]:border-red-600 transition-colors">
+                            <AccordionTrigger className="text-xl font-black tracking-tighter hover:no-underline text-left">
+                                What is the recommended water depth for Aqua equipment?
+                            </AccordionTrigger>
+                            <AccordionContent className="text-zinc-600 text-lg font-medium leading-relaxed pb-6 whitespace-pre-line">
+                                Our Aqua Treadmill, Bike, and Moon Walker are optimized for water depths of 900mm to 1200mm. This range provides the ideal balance of buoyancy and resistance for effective underwater training and rehabilitation.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="item-3" className="border-2 border-zinc-200 bg-white px-8 py-4 data-[state=open]:border-red-600 transition-colors">
+                            <AccordionTrigger className="text-xl font-black tracking-tighter hover:no-underline text-left">
+                                What is the weight capacity of the Aqua Treadmill?
+                            </AccordionTrigger>
+                            <AccordionContent className="text-zinc-600 text-lg font-medium leading-relaxed pb-6 whitespace-pre-line">
+                                The Aqua Treadmill supports a weight capacity of up to 160 kg. It features a heavy-duty manual treadmill belt and dual stability support rails for safe, self-paced underwater training.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="item-4" className="border-2 border-zinc-200 bg-white px-8 py-4 data-[state=open]:border-red-600 transition-colors">
+                            <AccordionTrigger className="text-xl font-black tracking-tighter hover:no-underline text-left">
+                                Can the Aqua equipment be installed in existing pools?
+                            </AccordionTrigger>
+                            <AccordionContent className="text-zinc-600 text-lg font-medium leading-relaxed pb-6 whitespace-pre-line">
+                                Yes. Our modular Aqua equipment is designed for both new constructions and retrofitting into existing pool facilities. Our turnkey installation team handles everything from structural assessment to final commissioning.
+                            </AccordionContent>
+                        </AccordionItem>
                     </Accordion>
-                </div>
-            </section>
+                </div >
+            </section >
 
             {/* Final CTA */}
-            <section className="py-16 sm:py-24 bg-red-600 text-white relative overflow-hidden">
+            < section className="py-16 sm:py-24 bg-red-600 text-white relative overflow-hidden" >
                 <div className="absolute inset-0 bg-black/10 z-0" />
                 <div className="container relative z-10 px-4 mx-auto text-center">
                     <h2 className="text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-tighter mb-8 leading-tight">
@@ -276,71 +244,73 @@ export function Aqua() {
                         </Link>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Gallery Lightbox Modal */}
             <AnimatePresence>
-                {galleryIndex !== null && (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-[200] bg-black/95 flex flex-col items-center justify-center p-4 backdrop-blur-xl"
-                    >
-                        {/* Header */}
-                        <div className="absolute top-0 left-0 right-0 p-6 flex items-center justify-between z-10 bg-gradient-to-b from-black/50 to-transparent">
-                            <div>
-                                <h4 className="text-white text-xl font-black uppercase tracking-tighter">Aqua Gallery</h4>
-                                <p className="text-red-600 text-[10px] font-bold uppercase tracking-widest">{galleryImages[galleryIndex].title}</p>
+                {
+                    galleryIndex !== null && (
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="fixed inset-0 z-[200] bg-black/95 flex flex-col items-center justify-center p-4 backdrop-blur-xl"
+                        >
+                            {/* Header */}
+                            <div className="absolute top-0 left-0 right-0 p-6 flex items-center justify-between z-10 bg-gradient-to-b from-black/50 to-transparent">
+                                <div>
+                                    <h4 className="text-white text-xl font-black uppercase tracking-tighter">Aqua Gallery</h4>
+                                    <p className="text-red-600 text-[10px] font-bold uppercase tracking-widest">{galleryImages[galleryIndex].title}</p>
+                                </div>
+                                <button
+                                    onClick={() => setGalleryIndex(null)}
+                                    className="h-12 w-12 flex items-center justify-center text-white hover:text-red-600 transition-colors border-2 border-white/20 hover:border-red-600"
+                                >
+                                    <X className="h-6 w-6" />
+                                </button>
                             </div>
-                            <button
-                                onClick={() => setGalleryIndex(null)}
-                                className="h-12 w-12 flex items-center justify-center text-white hover:text-red-600 transition-colors border-2 border-white/20 hover:border-red-600"
-                            >
-                                <X className="h-6 w-6" />
-                            </button>
-                        </div>
 
-                        {/* Image */}
-                        <div className="relative w-full h-[70vh] flex items-center justify-center">
-                            <motion.img
-                                key={galleryIndex}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.3 }}
-                                src={heroBg}
-                                className="max-h-full max-w-full object-contain shadow-[0_0_50px_rgba(0,0,0,0.5)] border-4 border-white/10"
-                                alt="Gallery View"
-                            />
-                        </div>
+                            {/* Image */}
+                            <div className="relative w-full h-[70vh] flex items-center justify-center p-4">
+                                <motion.img
+                                    key={galleryIndex}
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    transition={{ duration: 0.3 }}
+                                    src={galleryImages[galleryIndex].src}
+                                    className="max-h-full max-w-full object-contain shadow-[0_0_50px_rgba(0,0,0,0.5)] border-4 border-white/10 bg-white"
+                                    alt={galleryImages[galleryIndex].title}
+                                />
+                            </div>
 
-                        {/* Navigation */}
-                        <div className="flex items-center gap-12 mt-12 bg-white/5 backdrop-blur-md p-4 border border-white/10 rounded-full">
-                            <button
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    setGalleryIndex((prev) => (prev !== null ? (prev === 0 ? galleryImages.length - 1 : prev - 1) : null));
-                                }}
-                                className="h-14 w-14 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all"
-                            >
-                                <ChevronLeft className="h-8 w-8" />
-                            </button>
-                            <span className="text-white font-black font-mono text-lg">
-                                {galleryIndex + 1} <span className="text-white/30">/</span> {galleryImages.length}
-                            </span>
-                            <button
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    setGalleryIndex((prev) => (prev !== null ? (prev === galleryImages.length - 1 ? 0 : prev + 1) : null));
-                                }}
-                                className="h-14 w-14 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all"
-                            >
-                                <ChevronRight className="h-8 w-8" />
-                            </button>
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </div>
+                            {/* Navigation */}
+                            <div className="flex items-center gap-12 mt-12 bg-white/5 backdrop-blur-md p-4 border border-white/10 rounded-full">
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        setGalleryIndex((prev) => (prev !== null ? (prev === 0 ? galleryImages.length - 1 : prev - 1) : null));
+                                    }}
+                                    className="h-14 w-14 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all"
+                                >
+                                    <ChevronLeft className="h-8 w-8" />
+                                </button>
+                                <span className="text-white font-black font-mono text-lg">
+                                    {galleryIndex + 1} <span className="text-white/30">/</span> {galleryImages.length}
+                                </span>
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        setGalleryIndex((prev) => (prev !== null ? (prev === galleryImages.length - 1 ? 0 : prev + 1) : null));
+                                    }}
+                                    className="h-14 w-14 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all"
+                                >
+                                    <ChevronRight className="h-8 w-8" />
+                                </button>
+                            </div>
+                        </motion.div>
+                    )
+                }
+            </AnimatePresence >
+        </div >
     );
 }
