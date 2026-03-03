@@ -18,9 +18,9 @@ import {
 } from "@/components/ui/carousel";
 
 import heroBg from "@/assets/aqua-hero.webp";
-import treadmillImg from "@/assets/aqua/Techfit_Aqua_Series_Premium_Brochure_page-0001.jpg";
-import bikeImg from "@/assets/aqua/Techfit_Aqua_Series_Premium_Brochure_page-0003.jpg";
-import moonWalkerImg from "@/assets/aqua/Techfit_Aqua_Series_Premium_Brochure_page-0002.jpg";
+import treadmillImg from "@/assets/Aqua/Techfit_Aqua_Series_Premium_Brochure_page-0001.jpg";
+import bikeImg from "@/assets/Aqua/Techfit_Aqua_Series_Premium_Brochure_page-0003.jpg";
+import moonWalkerImg from "@/assets/Aqua/Techfit_Aqua_Series_Premium_Brochure_page-0002.jpg";
 
 
 export function Aqua() {
