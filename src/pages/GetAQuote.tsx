@@ -166,8 +166,8 @@ export function GetAQuote() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 className="bg-zinc-50 p-8 md:p-12 border-2 border-zinc-200 relative shadow-xl"
                             >
-                                <div className="absolute -top-4 -right-4 bg-red-600 text-white px-6 py-2 text-xs font-black uppercase tracking-[0.2em] shadow-lg">
-                                    Say hello!
+                                <div className="absolute -top-4 -right-4 bg-red-600 text-white px-6 py-2 text-xs font-black tracking-[0.2em] shadow-lg">
+                                    Let’s Build It!
                                 </div>
 
                                 <form key={formKey} onSubmit={handleSubmit} className="space-y-6">
