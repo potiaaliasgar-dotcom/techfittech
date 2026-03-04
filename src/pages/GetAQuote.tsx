@@ -15,6 +15,7 @@ import {
 import heroBg from "@/assets/pickle-and-Paddle-Ball-banner-image.webp";
 
 export function GetAQuote() {
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
     const [formKey, setFormKey] = useState(0);
     const [formData, setFormData] = useState({
@@ -28,13 +29,38 @@ export function GetAQuote() {
         message: ""
     });
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
         if (formData.phone.length !== 10) {
             alert("Please enter a valid 10-digit mobile number.");
             return;
         }
-        setSubmitted(true);
+
+        setIsSubmitting(true);
+
+        try {
+            const response = await fetch("/api/gmail-contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error || "Failed to send request. Please try again later.");
+            }
+
+            setSubmitted(true);
+        } catch (error: any) {
+            console.error("Submission error:", error);
+            alert(error.message || "Our factory mail server is currently experiencing issues. Please try again later.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const closeModal = () => {
@@ -243,10 +269,11 @@ export function GetAQuote() {
 
                                     <Button
                                         type="submit"
-                                        className="w-full bg-red-600 text-white hover:bg-black rounded-none h-14 sm:h-16 font-black tracking-widest sm:tracking-[0.2em] transition-all text-sm sm:text-lg group"
+                                        disabled={isSubmitting}
+                                        className="w-full bg-red-600 text-white hover:bg-black rounded-none h-14 sm:h-16 font-black tracking-widest sm:tracking-[0.2em] transition-all text-sm sm:text-lg group disabled:opacity-70 disabled:cursor-not-allowed"
                                     >
-                                        Get A Factory Quote
-                                        <ArrowRight className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:translate-x-2" />
+                                        {isSubmitting ? "Sending Request..." : "Get A Factory Quote"}
+                                        {!isSubmitting && <ArrowRight className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:translate-x-2" />}
                                     </Button>
                                 </form>
                             </motion.div>
