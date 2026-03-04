@@ -40,7 +40,7 @@ export function GetAQuote() {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch("/api/gmail-contact", {
+            const response = await fetch("https://techfit-backend.vercel.app/api/gmail-contact", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
