@@ -81,7 +81,7 @@ export function Home() {
                         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                         className="text-2xl sm:text-7xl md:text-5xl lg:text-[5rem] font-black tracking-tighter uppercase max-w-6xl leading-[0.85] text-white drop-shadow-2xl"
                     >
-                        India’s <span className="text-red-600">Premier</span> Manufacturer of MMA Cages & Commercial Gym Rigs.
+                        India’s <span className="text-red-600">Premier</span> Manufacturer of MMA Cages & functional training rigs.
                     </motion.h1>
 
                     <motion.p
@@ -335,6 +335,15 @@ export function Home() {
                     <div className="grid md:grid-cols-3 gap-8">
                         <motion.div whileHover={{ y: -10 }} className="group flex flex-col items-start bg-zinc-50 border-2 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:bg-black hover:text-white transition-all duration-300">
                             <div className="h-16 w-16 bg-red-600 border-2 border-black flex items-center justify-center mb-8 rotate-3 group-hover:-rotate-3 transition-transform text-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group-hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
+                                <Dumbbell className="h-8 w-8" />
+                            </div>
+                            <span className="text-sm font-black text-red-600 mb-2 block uppercase tracking-widest border border-red-600 px-2 py-1">Customization</span>
+                            {/* <h3 className="text-3xl font-black uppercase tracking-tight mb-4">Customization</h3> */}
+                            <p className="text-zinc-600 group-hover:text-zinc-300 text-lg leading-relaxed font-medium">We build to your gym's exact dimensions.</p>
+                        </motion.div>
+
+                        <motion.div whileHover={{ y: -10 }} className="group flex flex-col items-start bg-zinc-50 border-2 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:bg-black hover:text-white transition-all duration-300 mt-0 md:mt-12">
+                            <div className="h-16 w-16 bg-red-600 border-2 border-black flex items-center justify-center mb-8 -rotate-3 group-hover:rotate-3 transition-transform text-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group-hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
                                 <Target className="h-8 w-8" />
                             </div>
                             <span className="text-sm font-black text-red-600 mb-2 block uppercase tracking-widest border border-red-600 px-2 py-1">Factory Direct</span>
@@ -342,22 +351,13 @@ export function Home() {
                             <p className="text-zinc-600 group-hover:text-zinc-300 text-lg leading-relaxed font-medium">No middleman margins. You buy directly from the source.</p>
                         </motion.div>
 
-                        <motion.div whileHover={{ y: -10 }} className="group flex flex-col items-start bg-zinc-50 border-2 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:bg-black hover:text-white transition-all duration-300 mt-0 md:mt-12">
-                            <div className="h-16 w-16 bg-red-600 border-2 border-black flex items-center justify-center mb-8 -rotate-3 group-hover:rotate-3 transition-transform text-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group-hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
+                        <motion.div whileHover={{ y: -10 }} className="group flex flex-col items-start bg-zinc-50 border-2 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:bg-black hover:text-white transition-all duration-300 mt-0 md:mt-24">
+                            <div className="h-16 w-16 bg-red-600 border-2 border-black flex items-center justify-center mb-8 rotate-6 group-hover:-rotate-6 transition-transform text-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group-hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
                                 <ShieldAlert className="h-8 w-8" />
                             </div>
                             <span className="text-sm font-black text-red-600 mb-2 block uppercase tracking-widest border border-red-600 px-2 py-1">Heavy Duty</span>
                             {/* <h3 className="text-3xl font-black uppercase tracking-tight mb-4">Heavy Duty</h3> */}
                             <p className="text-zinc-600 group-hover:text-zinc-300 text-lg leading-relaxed font-medium">Commercial grade steel gauge tested for safety.</p>
-                        </motion.div>
-
-                        <motion.div whileHover={{ y: -10 }} className="group flex flex-col items-start bg-zinc-50 border-2 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:bg-black hover:text-white transition-all duration-300 mt-0 md:mt-24">
-                            <div className="h-16 w-16 bg-red-600 border-2 border-black flex items-center justify-center mb-8 rotate-6 group-hover:-rotate-6 transition-transform text-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group-hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
-                                <Dumbbell className="h-8 w-8" />
-                            </div>
-                            <span className="text-sm font-black text-red-600 mb-2 block uppercase tracking-widest border border-red-600 px-2 py-1">Customization</span>
-                            {/* <h3 className="text-3xl font-black uppercase tracking-tight mb-4">Customization</h3> */}
-                            <p className="text-zinc-600 group-hover:text-zinc-300 text-lg leading-relaxed font-medium">We build to your gym's exact dimensions.</p>
                         </motion.div>
                     </div>
                 </div>

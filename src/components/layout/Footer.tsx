@@ -64,8 +64,8 @@ export function Footer() {
                         <div className="space-y-6">
                             <h4 className="text-xs font-black uppercase tracking-[0.2em] text-zinc-500 border-l-2 border-red-600 pl-3">Get in Touch</h4>
                             <div className="space-y-4">
-                                <a href="tel:+919820166910" className="block text-2xl font-black text-white hover:text-red-600 transition-colors tracking-tighter">
-                                    +91 98201 66910
+                                <a href="tel:+919326447321" className="block text-2xl font-black text-white hover:text-red-600 transition-colors tracking-tighter">
+                                    +91 93264 47321
                                 </a>
                                 <a href="mailto:techfitpa@gmail.com" className="block text-lg font-bold text-zinc-400 hover:text-white transition-colors underline underline-offset-4 decoration-red-600">
                                     techfitpa@gmail.com
