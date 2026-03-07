@@ -116,231 +116,6 @@ export function MMACages() {
                 </div>
             </section>
 
-            {/* Product Comparison 1: Cages (Split Layout + Cage Aesthetic) */}
-            <section className="py-12 lg:py-32 bg-zinc-950 text-white relative overflow-hidden border-b-8 border-red-600 sm:min-h-[100svh] flex items-center">
-                {/* Subtle Chainlink/Grid Watermark Pattern */}
-                <div
-                    className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none mix-blend-overlay"
-                    style={{
-                        backgroundImage: 'linear-gradient(45deg, #fff 1px, transparent 1px), linear-gradient(-45deg, #fff 1px, transparent 1px)',
-                        backgroundSize: '40px 40px'
-                    }}
-                />
-
-                <div className="container px-4 mx-auto relative z-10 w-full">
-                    <div className="flex flex-col lg:flex-row gap-6 lg:gap-24 items-center">
-
-                        {/* Left Panel: Header & Info */}
-                        <div className="w-full lg:w-1/3 flex flex-col items-start text-left shrink-0">
-                            <div className="flex items-center gap-2 md:gap-4 mb-2">
-                                <div className="h-[2px] w-6 md:w-12 bg-red-600"></div>
-                                <span className="text-red-600 font-bold tracking-widest text-[10px] sm:text-xs md:text-sm">The Combat Zone</span>
-                            </div>
-                            <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-[5rem] font-black tracking-tighter text-white leading-[0.85] mb-2 md:mb-8 drop-shadow-sm flex flex-col">
-                                <span>Floor Cage</span>
-                                <span className="text-zinc-600 font-light text-xl sm:text-2xl md:text-4xl my-1 sm:my-2">vs</span>
-                                <span>Podium Cage</span>
-                            </h2>
-                            <p className="text-zinc-400 font-medium text-xs sm:text-sm md:text-lg leading-snug lg:leading-relaxed mb-4 lg:mb-8 border-l-2 md:border-l-4 border-red-600 pl-4 lg:pl-6 max-w-sm">
-                                Academy-grade ground cages versus elevated broadcast structures. Engineered for impact, built to exact professional specifications.
-                            </p>
-                        </div>
-
-                        {/* Right Panel: The Cages */}
-                        <div className="w-full lg:w-2/3 grid grid-cols-2 gap-3 sm:gap-6 lg:gap-8 sm:items-stretch items-start relative">
-                            {/* Decorative background horizontal 'fence' lines */}
-                            <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-full w-full opacity-10 pointer-events-none mix-blend-overlay hidden sm:flex flex-col justify-evenly z-0">
-                                <div className="h-[2px] bg-red-600 w-[120%] -ml-[10%] mb-12 transform rotate-1"></div>
-                                <div className="h-[2px] bg-red-600 w-[120%] -ml-[10%] transform -rotate-1"></div>
-                            </div>
-
-                            {/* Floor Cage Box */}
-                            <motion.div
-                                onClick={() => setActiveCage(activeCage === 1 ? null : 1)}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                className="group relative bg-zinc-900 flex flex-col hover:border-red-600 transition-colors duration-500 z-10 shadow-2xl cursor-pointer sm:cursor-default"
-                                style={{
-                                    // Visual 'Cage' Border Effect
-                                    border: '4px solid #18181b', // zinc-900
-                                    boxShadow: 'inset 0 0 0 1px rgba(255,255,255,0.1), 0 20px 25px -5px rgba(0, 0, 0, 0.5)',
-                                    backgroundImage: 'linear-gradient(90deg, transparent 95%, rgba(220, 38, 38, 0.2) 95%)',
-                                    backgroundSize: '30px 100%'
-                                }}
-                            >
-                                <div className="aspect-[3/2] sm:aspect-[4/3] bg-zinc-900 overflow-hidden relative w-full border-b-2 sm:border-b-4 border-zinc-800 group-hover:border-red-600 transition-colors flex-[0_0_auto]">
-                                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-900/40 to-transparent z-10 mix-blend-multiply opacity-60" />
-                                    <img src={floorCageImg} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Floor Cage" />
-
-                                    {/* Mobile Tap Hint */}
-                                    <div className="absolute top-2 right-2 sm:hidden z-20">
-                                        <div className="bg-red-600/80 p-1 rounded-full animate-pulse">
-                                            <Zap className="h-3 w-3 text-white" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="p-2 sm:p-6 lg:p-8 flex flex-col sm:flex-1 relative z-20 bg-zinc-900/95 backdrop-blur-sm sm:justify-center">
-                                    <h4 className="text-lg sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-1 sm:mb-2 lg:mb-4 text-white group-hover:text-red-600 transition-colors">Floor Cage</h4>
-                                    <p className="text-zinc-400 text-[10px] sm:text-xs md:text-sm lg:text-base font-medium leading-tight lg:leading-relaxed hidden sm:block">
-                                        Ground-mounted MMA cage designed for academies and training facilities. Compact, stable, and ideal for spaces requiring professional-grade performance without elevated platforms.
-                                    </p>
-                                    <span className="text-[7px] uppercase font-bold tracking-widest text-zinc-500 sm:hidden">Tap for details</span>
-                                </div>
-
-
-                            </motion.div>
-
-                            {/* Podium Cage Box */}
-                            <motion.div
-                                onClick={() => setActiveCage(activeCage === 2 ? null : 2)}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.2 }}
-                                className="group relative bg-zinc-900 flex flex-col hover:border-red-600 transition-colors duration-500 z-10 shadow-2xl sm:mt-12 cursor-pointer sm:cursor-default"
-                                style={{
-                                    // Visual 'Cage' Border Effect
-                                    border: '4px solid #18181b',
-                                    boxShadow: 'inset 0 0 0 1px rgba(255,255,255,0.1), 0 20px 25px -5px rgba(0, 0, 0, 0.5)',
-                                    backgroundImage: 'linear-gradient(90deg, transparent 95%, rgba(220, 38, 38, 0.2) 95%)',
-                                    backgroundSize: '30px 100%'
-                                }}
-                            >
-                                <div className="aspect-[3/2] sm:aspect-[4/3] bg-zinc-900 overflow-hidden relative w-full border-b-2 sm:border-b-4 border-zinc-800 group-hover:border-red-600 transition-colors flex-[0_0_auto]">
-                                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-900/40 to-transparent z-10 mix-blend-multiply opacity-60" />
-                                    <img src={podiumCageImg} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" alt="Podium Cage" />
-
-                                    {/* Podium Base Visual indicator */}
-                                    <div className="absolute bottom-0 left-0 w-full h-3 sm:h-4 bg-zinc-800 border-t border-zinc-700 font-mono text-[6px] sm:text-[8px] text-zinc-500 px-2 flex items-center tracking-widest hidden sm:flex z-20">
-                                        ELEVATED PLATFORM
-                                    </div>
-
-                                    {/* Mobile Tap Hint */}
-                                    <div className="absolute top-2 right-2 sm:hidden z-20">
-                                        <div className="bg-red-600/80 p-1 rounded-full animate-pulse">
-                                            <Zap className="h-3 w-3 text-white" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="p-2 sm:p-6 lg:p-8 flex flex-col sm:flex-1 relative z-20 bg-zinc-900/95 backdrop-blur-sm sm:justify-center">
-                                    <h4 className="text-lg sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-1 sm:mb-2 lg:mb-4 text-white group-hover:text-red-600 transition-colors">Podium Cage</h4>
-                                    <p className="text-zinc-400 text-[10px] sm:text-xs md:text-sm lg:text-base font-medium leading-tight lg:leading-relaxed hidden sm:block">
-                                        Elevated MMA cage engineered for competitions and showcase environments. Offers enhanced visibility, reinforced structure, and premium finishing suitable for events and broadcast setups.
-                                    </p>
-                                    <span className="text-[7px] uppercase font-bold tracking-widest text-zinc-500 sm:hidden">Tap for details</span>
-                                </div>
-
-
-                            </motion.div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Product Comparison 2: Rings (Split Layout + Ring Aesthetic) */}
-            <section className="py-12 lg:py-32 bg-white text-black relative border-b border-zinc-200 sm:min-h-[100svh] flex items-center overflow-hidden">
-                <div className="container px-4 mx-auto relative z-10 w-full">
-                    <div className="flex flex-col lg:flex-row-reverse gap-6 lg:gap-24 items-center">
-
-                        {/* Right Panel (now visually on right): Header & Info */}
-                        <div className="w-full lg:w-1/3 flex flex-col items-start lg:items-end text-left lg:text-right shrink-0">
-                            <div className="flex items-center gap-2 md:gap-4 mb-2 lg:flex-row-reverse">
-                                <div className="h-[2px] w-6 md:w-12 bg-black"></div>
-                                <span className="text-black font-bold tracking-widest text-[10px] sm:text-xs md:text-sm">Boxing & Kickboxing</span>
-                            </div>
-                            <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-[5rem] font-black tracking-tighter text-black leading-[0.85] mb-2 md:mb-8 drop-shadow-sm flex flex-col">
-                                <span>Training Ring</span>
-                                <span className="text-zinc-400 font-light text-xl sm:text-2xl md:text-4xl my-1 sm:my-2">vs</span>
-                                <span>Competition</span>
-                            </h2>
-                            <p className="text-zinc-600 font-medium text-xs sm:text-sm md:text-lg leading-snug lg:leading-relaxed mb-4 lg:mb-8 border-l-2 lg:border-l-0 lg:border-r-4 border-black pl-4 lg:pl-0 lg:pr-6 max-w-sm">
-                                Daily grind durability versus tournament showcase stability. Shock-absorbing foundations built for champions.
-                            </p>
-                        </div>
-
-                        {/* Left Panel (now visually on left): The Rings */}
-                        <div className="w-full lg:w-2/3 grid grid-cols-2 gap-3 sm:gap-6 lg:gap-8 sm:items-stretch items-start relative">
-                            {/* Decorative 'Ring Ropes' background */}
-                            <div className="absolute inset-x-0 top-[40%] -translate-y-1/2 h-full w-full opacity-[0.03] pointer-events-none hidden sm:flex flex-col justify-center gap-6 md:gap-12 z-0">
-                                <div className="h-4 w-[150%] -ml-[25%] bg-black transform rotate-2"></div>
-                                <div className="h-4 w-[150%] -ml-[25%] bg-black transform -rotate-1"></div>
-                                <div className="h-4 w-[150%] -ml-[25%] bg-black transform rotate-1"></div>
-                            </div>
-
-                            {/* Training Ring Box */}
-                            <motion.div
-                                onClick={() => setActiveRing(activeRing === 1 ? null : 1)}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                className="group relative bg-white border-2 border-zinc-200 flex flex-col hover:border-black transition-colors duration-500 z-10 shadow-xl cursor-pointer sm:cursor-default"
-                            >
-                                {/* "Ring Corner" posts visual */}
-                                <div className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 w-4 h-4 sm:w-6 sm:h-6 bg-blue-600 rounded-sm z-30 shadow-md"></div>
-                                <div className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 w-4 h-4 sm:w-6 sm:h-6 bg-red-600 rounded-sm z-30 shadow-md"></div>
-
-                                <div className="aspect-[3/2] sm:aspect-[4/3] bg-zinc-100 overflow-hidden relative w-full border-b focus:outline-none flex-[0_0_auto]">
-                                    <img src={trainingRingImg} loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" alt="Training Ring" />
-
-                                    {/* Mobile Tap Hint */}
-                                    <div className="absolute top-2 right-2 sm:hidden z-20">
-                                        <div className="bg-black/60 p-1 rounded-full animate-pulse">
-                                            <Zap className="h-3 w-3 text-white" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="p-2 sm:p-6 lg:p-8 flex flex-col sm:flex-1 relative z-20 bg-white sm:justify-center">
-                                    <h4 className="text-lg sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-1 sm:mb-2 lg:mb-4 text-black text-black">Training Ring</h4>
-                                    <div className="w-8 sm:w-12 h-0.5 sm:h-1 bg-zinc-200 mb-2 sm:mb-6 group-hover:bg-black transition-colors" />
-                                    <p className="text-zinc-600 text-[10px] sm:text-xs md:text-sm lg:text-base font-medium leading-tight lg:leading-relaxed hidden sm:block">
-                                        Durable boxing ring built for daily training and skill development. Designed for gyms and academies with focus on safety, shock absorption, and long-term use.
-                                    </p>
-                                    <span className="text-[7px] uppercase font-bold tracking-widest text-zinc-400 sm:hidden">Tap for details</span>
-                                </div>
-
-
-                            </motion.div>
-
-                            {/* Competition Ring Box */}
-                            <motion.div
-                                onClick={() => setActiveRing(activeRing === 2 ? null : 2)}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.2 }}
-                                className="group relative bg-white border-2 border-zinc-200 flex flex-col hover:border-black transition-colors duration-500 z-10 shadow-xl sm:mt-12 cursor-pointer sm:cursor-default"
-                            >
-                                {/* "Ring Corner" posts visual */}
-                                <div className="absolute -top-2 -left-2 sm:-top-3 -left-3 w-4 h-4 sm:w-6 sm:h-6 bg-blue-600 rounded-sm z-30 shadow-md"></div>
-                                <div className="absolute -top-2 -right-2 sm:-top-3 -right-3 w-4 h-4 sm:w-6 sm:h-6 bg-red-600 rounded-sm z-30 shadow-md"></div>
-
-                                <div className="aspect-[3/2] sm:aspect-[4/3] bg-zinc-100 overflow-hidden relative w-full border-b focus:outline-none flex-[0_0_auto]">
-                                    <img src={competitionRingImg} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Competition Ring" />
-
-                                    {/* Mobile Tap Hint */}
-                                    <div className="absolute top-2 right-2 sm:hidden z-20">
-                                        <div className="bg-black/60 p-1 rounded-full animate-pulse">
-                                            <Zap className="h-3 w-3 text-white" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="p-2 sm:p-6 lg:p-8 flex flex-col sm:flex-1 relative z-20 bg-white sm:justify-center">
-                                    <h4 className="text-lg sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-1 sm:mb-2 lg:mb-4 text-black group-hover:text-red-600 transition-colors">Competition Ring</h4>
-                                    <div className="w-8 sm:w-12 h-0.5 sm:h-1 bg-zinc-200 mb-2 sm:mb-6 group-hover:bg-red-600 transition-colors" />
-                                    <p className="text-zinc-600 text-[10px] sm:text-xs md:text-sm lg:text-base font-medium leading-tight lg:leading-relaxed hidden sm:block">
-                                        Professional boxing ring designed to meet competition standards. Built for tournaments, promotions, and events requiring maximum stability, aesthetics, and athlete safety.
-                                    </p>
-                                    <span className="text-[7px] uppercase font-bold tracking-widest text-zinc-400 sm:hidden">Tap for details</span>
-                                </div>
-
-
-                            </motion.div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             {/* The Techfit Advantage */}
             <section className="py-12 lg:py-24 bg-zinc-950 text-white overflow-hidden min-h-[100svh] flex items-center">
                 <div className="container px-4 mx-auto relative lg:py-0 py-8">
@@ -386,6 +161,221 @@ export function MMACages() {
                                 <img src={image3} loading="lazy" decoding="async" className="w-full h-48 object-cover border-b-4 border-zinc-800" alt="Process 3" />
                                 <img src={image4} loading="lazy" decoding="async" className="w-full h-80 object-cover border-b-4 border-red-600" alt="Process 4" />
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Product Comparison 1: Cages (Split Layout + Cage Aesthetic) */}
+            <section className="py-12 lg:py-20 bg-white text-black relative overflow-hidden border-b border-zinc-200 sm:min-h-[80svh] flex items-center">
+                {/* Subtle Chainlink/Grid Watermark Pattern */}
+                <div
+                    className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none mix-blend-overlay"
+                    style={{
+                        backgroundImage: 'linear-gradient(45deg, #000 1px, transparent 1px), linear-gradient(-45deg, #000 1px, transparent 1px)',
+                        backgroundSize: '40px 40px'
+                    }}
+                />
+
+                <div className="container px-4 mx-auto relative z-10 w-full">
+                    <div className="flex flex-col lg:flex-row gap-6 lg:gap-24 items-center">
+
+                        {/* Left Panel: Header & Info */}
+                        <div className="w-full lg:w-1/3 flex flex-col items-start text-left shrink-0">
+                            <div className="flex items-center gap-2 md:gap-4 mb-2">
+                                <div className="h-[2px] w-6 md:w-12 bg-red-600"></div>
+                                <span className="text-red-600 font-bold tracking-widest text-[10px] sm:text-xs md:text-sm">The Combat Zone</span>
+                            </div>
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-black tracking-tighter text-black leading-[0.85] mb-2 md:mb-6 drop-shadow-sm flex flex-col">
+                                <span>Floor Cage</span>
+                                <span className="text-zinc-600 font-light text-xl sm:text-2xl md:text-3xl my-1 sm:my-2">vs</span>
+                                <span>Podium Cage</span>
+                            </h2>
+                            <p className="text-zinc-600 font-medium text-xs sm:text-sm md:text-base leading-snug lg:leading-relaxed mb-4 lg:mb-6 border-l-2 md:border-l-4 border-red-600 pl-4 lg:pl-6 max-w-sm">
+                                Academy-grade ground cages versus elevated broadcast structures. Engineered for impact, built to exact professional specifications.
+                            </p>
+                        </div>
+
+                        {/* Right Panel: The Cages */}
+                        <div className="w-full lg:w-2/3 grid grid-cols-2 gap-3 sm:gap-6 lg:gap-8 sm:items-stretch items-start relative">
+                            {/* Decorative background horizontal 'fence' lines */}
+                            <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-full w-full opacity-10 pointer-events-none mix-blend-overlay hidden sm:flex flex-col justify-evenly z-0">
+                                <div className="h-[2px] bg-red-600 w-[120%] -ml-[10%] mb-12 transform rotate-1"></div>
+                                <div className="h-[2px] bg-red-600 w-[120%] -ml-[10%] transform -rotate-1"></div>
+                            </div>
+
+                            {/* Floor Cage Box */}
+                            <motion.div
+                                onClick={() => setActiveCage(activeCage === 1 ? null : 1)}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                className="group relative bg-white border-2 border-zinc-100 flex flex-col hover:border-red-600 transition-colors duration-500 z-10 shadow-2xl cursor-pointer sm:cursor-default"
+                                style={{
+                                    // Visual 'Cage' Border Effect
+                                    boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.05), 0 20px 25px -5px rgba(0, 0, 0, 0.1)',
+                                    backgroundImage: 'linear-gradient(90deg, transparent 95%, rgba(220, 38, 38, 0.1) 95%)',
+                                    backgroundSize: '30px 100%'
+                                }}
+                            >
+                                <div className="aspect-[3/2] sm:aspect-[4/3] bg-zinc-50 overflow-hidden relative w-full border-b-2 sm:border-b-4 border-zinc-100 group-hover:border-red-600 transition-colors flex-[0_0_auto]">
+                                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent z-10 opacity-40" />
+                                    <img src={floorCageImg} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Floor Cage" />
+
+                                    {/* Mobile Tap Hint */}
+                                    <div className="absolute top-2 right-2 sm:hidden z-20">
+                                        <div className="bg-red-600/80 p-1 rounded-full animate-pulse">
+                                            <Zap className="h-3 w-3 text-white" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="p-2 sm:p-5 lg:p-6 flex flex-col sm:flex-1 relative z-20 bg-white sm:justify-center">
+                                    <h4 className="text-lg sm:text-xl lg:text-2xl font-black uppercase tracking-tighter mb-1 sm:mb-2 lg:mb-3 text-black group-hover:text-red-600 transition-colors">Floor Cage</h4>
+                                    <p className="text-zinc-600 text-[10px] sm:text-xs md:text-sm font-medium leading-tight lg:leading-relaxed hidden sm:block">
+                                        Ground-mounted MMA cage designed for academies and training facilities. Compact, stable, and ideal for spaces requiring professional-grade performance without elevated platforms.
+                                    </p>
+                                    <span className="text-[7px] uppercase font-bold tracking-widest text-zinc-400 sm:hidden">Tap for details</span>
+                                </div>
+                            </motion.div>
+
+                            {/* Podium Cage Box */}
+                            <motion.div
+                                onClick={() => setActiveCage(activeCage === 2 ? null : 2)}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.2 }}
+                                className="group relative bg-white border-2 border-zinc-100 flex flex-col hover:border-red-600 transition-colors duration-500 z-10 shadow-2xl sm:mt-12 cursor-pointer sm:cursor-default"
+                                style={{
+                                    // Visual 'Cage' Border Effect
+                                    boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.05), 0 20px 25px -5px rgba(0, 0, 0, 0.1)',
+                                    backgroundImage: 'linear-gradient(90deg, transparent 95%, rgba(220, 38, 38, 0.1) 95%)',
+                                    backgroundSize: '30px 100%'
+                                }}
+                            >
+                                <div className="aspect-[3/2] sm:aspect-[4/3] bg-zinc-50 overflow-hidden relative w-full border-b-2 sm:border-b-4 border-zinc-100 group-hover:border-red-600 transition-colors flex-[0_0_auto]">
+                                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent z-10 opacity-40" />
+                                    <img src={podiumCageImg} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" alt="Podium Cage" />
+
+                                    {/* Podium Base Visual indicator */}
+                                    <div className="absolute bottom-0 left-0 w-full h-3 sm:h-4 bg-zinc-50 border-t border-zinc-100 font-mono text-[6px] sm:text-[8px] text-zinc-400 px-2 flex items-center tracking-widest hidden sm:flex z-20">
+                                        ELEVATED PLATFORM
+                                    </div>
+
+                                    {/* Mobile Tap Hint */}
+                                    <div className="absolute top-2 right-2 sm:hidden z-20">
+                                        <div className="bg-red-600/80 p-1 rounded-full animate-pulse">
+                                            <Zap className="h-3 w-3 text-white" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="p-2 sm:p-5 lg:p-6 flex flex-col sm:flex-1 relative z-20 bg-white sm:justify-center">
+                                    <h4 className="text-lg sm:text-xl lg:text-2xl font-black uppercase tracking-tighter mb-1 sm:mb-2 lg:mb-3 text-black group-hover:text-red-600 transition-colors">Podium Cage</h4>
+                                    <p className="text-zinc-600 text-[10px] sm:text-xs md:text-sm font-medium leading-tight lg:leading-relaxed hidden sm:block">
+                                        Elevated MMA cage engineered for competitions and showcase environments. Offers enhanced visibility, reinforced structure, and premium finishing suitable for events and broadcast setups.
+                                    </p>
+                                    <span className="text-[7px] uppercase font-bold tracking-widest text-zinc-400 sm:hidden">Tap for details</span>
+                                </div>
+                            </motion.div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Product Comparison 2: Rings (Split Layout + Ring Aesthetic) */}
+            <section className="py-12 lg:py-32 bg-zinc-950 text-white relative border-b-8 border-red-600 sm:min-h-[100svh] flex items-center overflow-hidden">
+                <div className="container px-4 mx-auto relative z-10 w-full">
+                    <div className="flex flex-col lg:flex-row-reverse gap-6 lg:gap-24 items-center">
+
+                        {/* Right Panel (now visually on right): Header & Info */}
+                        <div className="w-full lg:w-1/3 flex flex-col items-start lg:items-end text-left lg:text-right shrink-0">
+                            <div className="flex items-center gap-2 md:gap-4 mb-2 lg:flex-row-reverse">
+                                <div className="h-[2px] w-6 md:w-12 bg-red-600"></div>
+                                <span className="text-red-600 font-bold tracking-widest text-[10px] sm:text-xs md:text-sm">Mix Martial Arts</span>
+                            </div>
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-black tracking-tighter text-white leading-[0.85] mb-2 md:mb-6 drop-shadow-sm flex flex-col">
+                                <span>Training Ring</span>
+                                <span className="text-zinc-400 font-light text-xl sm:text-2xl md:text-3xl my-1 sm:my-2">vs</span>
+                                <span>Competition</span>
+                            </h2>
+                            <p className="text-zinc-400 font-medium text-xs sm:text-sm md:text-base leading-snug lg:leading-relaxed mb-4 lg:mb-6 border-l-2 lg:border-l-0 lg:border-r-4 border-red-600 pl-4 lg:pl-0 lg:pr-6 max-w-sm">
+                                Daily grind durability versus tournament showcase stability. Shock-absorbing foundations built for champions.
+                            </p>
+                        </div>
+
+                        {/* Left Panel (now visually on left): The Rings */}
+                        <div className="w-full lg:w-2/3 grid grid-cols-2 gap-3 sm:gap-6 lg:gap-8 sm:items-stretch items-start relative">
+                            {/* Decorative 'Ring Ropes' background */}
+                            <div className="absolute inset-x-0 top-[40%] -translate-y-1/2 h-full w-full opacity-[0.05] pointer-events-none hidden sm:flex flex-col justify-center gap-6 md:gap-12 z-0">
+                                <div className="h-4 w-[150%] -ml-[25%] bg-red-600 transform rotate-2"></div>
+                                <div className="h-4 w-[150%] -ml-[25%] bg-red-600 transform -rotate-1"></div>
+                                <div className="h-4 w-[150%] -ml-[25%] bg-red-600 transform rotate-1"></div>
+                            </div>
+
+                            {/* Training Ring Box */}
+                            <motion.div
+                                onClick={() => setActiveRing(activeRing === 1 ? null : 1)}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                className="group relative bg-zinc-900 border-2 border-white/5 flex flex-col hover:border-red-600 transition-colors duration-500 z-10 shadow-2xl cursor-pointer sm:cursor-default"
+                            >
+                                {/* "Ring Corner" posts visual */}
+                                <div className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 w-4 h-4 sm:w-6 sm:h-6 bg-blue-600 rounded-sm z-30 shadow-md"></div>
+                                <div className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 w-4 h-4 sm:w-6 sm:h-6 bg-red-600 rounded-sm z-30 shadow-md"></div>
+
+                                <div className="aspect-[3/2] sm:aspect-[4/3] bg-zinc-950 overflow-hidden relative w-full border-b border-white/10 focus:outline-none flex-[0_0_auto]">
+                                    <img src={trainingRingImg} loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" alt="Training Ring" />
+
+                                    {/* Mobile Tap Hint */}
+                                    <div className="absolute top-2 right-2 sm:hidden z-20">
+                                        <div className="bg-red-600/80 p-1 rounded-full animate-pulse">
+                                            <Zap className="h-3 w-3 text-white" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="p-2 sm:p-5 lg:p-6 flex flex-col sm:flex-1 relative z-20 bg-zinc-900/50 backdrop-blur-sm sm:justify-center">
+                                    <h4 className="text-lg sm:text-xl lg:text-2xl font-black uppercase tracking-tighter mb-1 sm:mb-2 lg:mb-3 text-white group-hover:text-red-600 transition-colors">Training Ring</h4>
+                                    <div className="w-8 sm:w-12 h-0.5 sm:h-1 bg-zinc-800 mb-2 sm:mb-6 group-hover:bg-red-600 transition-colors" />
+                                    <p className="text-zinc-400 text-[10px] sm:text-xs md:text-sm font-medium leading-tight lg:leading-relaxed hidden sm:block">
+                                        Durable MMA cage/boxing ring built for daily training and skill development. Designed for gyms and academies with focus on safety, shock absorption, and long-term use.
+                                    </p>
+                                    <span className="text-[7px] uppercase font-bold tracking-widest text-zinc-500 sm:hidden">Tap for details</span>
+                                </div>
+                            </motion.div>
+
+                            {/* Competition Ring Box */}
+                            <motion.div
+                                onClick={() => setActiveRing(activeRing === 2 ? null : 2)}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.2 }}
+                                className="group relative bg-zinc-900 border-2 border-white/5 flex flex-col hover:border-red-600 transition-colors duration-500 z-10 shadow-2xl sm:mt-12 cursor-pointer sm:cursor-default"
+                            >
+                                {/* "Ring Corner" posts visual */}
+                                <div className="absolute -top-2 -left-2 sm:-top-3 -left-3 w-4 h-4 sm:w-6 sm:h-6 bg-blue-600 rounded-sm z-30 shadow-md"></div>
+                                <div className="absolute -top-2 -right-2 sm:-top-3 -right-3 w-4 h-4 sm:w-6 sm:h-6 bg-red-600 rounded-sm z-30 shadow-md"></div>
+
+                                <div className="aspect-[3/2] sm:aspect-[4/3] bg-zinc-950 overflow-hidden relative w-full border-b border-white/10 focus:outline-none flex-[0_0_auto]">
+                                    <img src={competitionRingImg} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Competition Ring" />
+
+                                    {/* Mobile Tap Hint */}
+                                    <div className="absolute top-2 right-2 sm:hidden z-20">
+                                        <div className="bg-red-600/80 p-1 rounded-full animate-pulse">
+                                            <Zap className="h-3 w-3 text-white" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="p-2 sm:p-5 lg:p-6 flex flex-col sm:flex-1 relative z-20 bg-zinc-900/50 backdrop-blur-sm sm:justify-center">
+                                    <h4 className="text-lg sm:text-xl lg:text-2xl font-black uppercase tracking-tighter mb-1 sm:mb-2 lg:mb-3 text-white group-hover:text-red-600 transition-colors">Competition Ring</h4>
+                                    <div className="w-8 sm:w-12 h-0.5 sm:h-1 bg-zinc-800 mb-2 sm:mb-6 group-hover:bg-red-600 transition-colors" />
+                                    <p className="text-zinc-400 text-[10px] sm:text-xs md:text-sm font-medium leading-tight lg:leading-relaxed hidden sm:block">
+                                        Professional MMA cage/boxing ring designed to meet competition standards. Built for tournaments, promotions, and events requiring maximum stability, aesthetics, and athlete safety.
+                                    </p>
+                                    <span className="text-[7px] uppercase font-bold tracking-widest text-zinc-500 sm:hidden">Tap for details</span>
+                                </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
