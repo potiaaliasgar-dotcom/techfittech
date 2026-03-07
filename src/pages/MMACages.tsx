@@ -154,12 +154,12 @@ export function MMACages() {
 
                         <div className="grid grid-cols-2 gap-4">
                             <div className="space-y-4">
-                                <img src={image1} loading="lazy" decoding="async" className="w-full h-40 object-cover border-b-4 border-zinc-800" alt="Process 1" />
-                                <img src={image2} loading="lazy" decoding="async" className="w-full h-40 object-cover border-b-4 border-zinc-800" alt="Process 2" />
+                                <img src={image1} loading="lazy" decoding="async" className="w-full h-auto border-b-4 border-zinc-800" alt="Process 1" />
+                                <img src={image2} loading="lazy" decoding="async" className="w-full h-auto border-b-4 border-zinc-800" alt="Process 2" />
                             </div>
                             <div className="space-y-4 pt-12">
-                                <img src={image3} loading="lazy" decoding="async" className="w-full h-40 object-cover border-b-4 border-zinc-800" alt="Process 3" />
-                                <img src={image4} loading="lazy" decoding="async" className="w-full h-64 object-cover border-b-4 border-red-600" alt="Process 4" />
+                                <img src={image3} loading="lazy" decoding="async" className="w-full h-auto border-b-4 border-zinc-800" alt="Process 3" />
+                                <img src={image4} loading="lazy" decoding="async" className="w-full h-auto border-b-4 border-red-600" alt="Process 4" />
                             </div>
                         </div>
                     </div>
