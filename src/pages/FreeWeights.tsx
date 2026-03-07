@@ -16,8 +16,10 @@ import {
 } from "@/components/ui/carousel";
 
 import heroBg from "@/assets/commercial-free-weights-strength-machines.webp";
-import productImage1 from "@/assets/productCatalog/rubber-dumbell.webp";
-import productImage2 from "@/assets/productCatalog/Rubber-Plates.webp";
+import productImage1 from "@/assets/weightGallery/image-4-4.webp"
+// "@/assets/productCatalog/rubber-dumbell.webp";
+import productImage2 from "@/assets/weightGallery/image-1-5.webp"
+// "@/assets/productCatalog/Rubber-Plates.webp";
 import productImage3 from "@/assets/productCatalog/Full-power-rack.webp";
 import productImage4 from "@/assets/productCatalog/Deadlift-platfrom.webp";
 

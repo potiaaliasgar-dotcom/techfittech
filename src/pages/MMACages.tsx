@@ -117,7 +117,7 @@ export function MMACages() {
             </section>
 
             {/* The Techfit Advantage */}
-            <section className="py-12 lg:py-24 bg-zinc-950 text-white overflow-hidden min-h-[100svh] flex items-center">
+            <section className="py-12 lg:py-16 bg-zinc-950 text-white overflow-hidden min-h-[90svh] flex items-center">
                 <div className="container px-4 mx-auto relative lg:py-0 py-8">
                     {/* <div className="absolute top-0 right-0 text-[15rem] font-black text-zinc-900 leading-none -translate-y-1/2 translate-x-1/4 pointer-events-none select-none z-0">PRO</div> */}
 
@@ -127,11 +127,11 @@ export function MMACages() {
                                 <div className="h-[2px] w-8 md:w-12 bg-red-600"></div>
                                 <span className="text-red-600 font-bold uppercase tracking-widest text-xs md:text-sm">The Techfit Advantage</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl lg:text-[4rem] font-black tracking-tighter uppercase text-white leading-[0.85] mb-4 md:mb-8 drop-shadow-sm">
+                            <h2 className="text-4xl md:text-5xl lg:text-[3rem] font-black tracking-tighter uppercase text-white leading-[0.85] mb-4 md:mb-6 drop-shadow-sm">
                                 Superior Strength.<br />Professional Standards.
                             </h2>
 
-                            <div className="space-y-12 mt-12">
+                            <div className="space-y-8 mt-8">
                                 {advantages.map((adv, i) => (
                                     <motion.div
                                         key={i}
@@ -154,12 +154,12 @@ export function MMACages() {
 
                         <div className="grid grid-cols-2 gap-4">
                             <div className="space-y-4">
-                                <img src={image1} loading="lazy" decoding="async" alt="Process 1" />
-                                <img src={image2} loading="lazy" decoding="async" className="w-full h-48 object-cover border-b-4 border-zinc-800" alt="Process 2" />
+                                <img src={image1} loading="lazy" decoding="async" className="w-full h-40 object-cover border-b-4 border-zinc-800" alt="Process 1" />
+                                <img src={image2} loading="lazy" decoding="async" className="w-full h-40 object-cover border-b-4 border-zinc-800" alt="Process 2" />
                             </div>
                             <div className="space-y-4 pt-12">
-                                <img src={image3} loading="lazy" decoding="async" className="w-full h-48 object-cover border-b-4 border-zinc-800" alt="Process 3" />
-                                <img src={image4} loading="lazy" decoding="async" className="w-full h-80 object-cover border-b-4 border-red-600" alt="Process 4" />
+                                <img src={image3} loading="lazy" decoding="async" className="w-full h-40 object-cover border-b-4 border-zinc-800" alt="Process 3" />
+                                <img src={image4} loading="lazy" decoding="async" className="w-full h-64 object-cover border-b-4 border-red-600" alt="Process 4" />
                             </div>
                         </div>
                     </div>
@@ -186,7 +186,7 @@ export function MMACages() {
                                 <div className="h-[2px] w-6 md:w-12 bg-red-600"></div>
                                 <span className="text-red-600 font-bold tracking-widest text-[10px] sm:text-xs md:text-sm">The Combat Zone</span>
                             </div>
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-black tracking-tighter text-black leading-[0.85] mb-2 md:mb-6 drop-shadow-sm flex flex-col">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3rem] font-black tracking-tighter text-black leading-[0.85] mb-2 md:mb-6 drop-shadow-sm flex flex-col">
                                 <span>Floor Cage</span>
                                 <span className="text-zinc-600 font-light text-xl sm:text-2xl md:text-3xl my-1 sm:my-2">vs</span>
                                 <span>Podium Cage</span>
@@ -283,7 +283,7 @@ export function MMACages() {
             </section>
 
             {/* Product Comparison 2: Rings (Split Layout + Ring Aesthetic) */}
-            <section className="py-12 lg:py-32 bg-zinc-950 text-white relative border-b-8 border-red-600 sm:min-h-[100svh] flex items-center overflow-hidden">
+            <section className="py-12 lg:py-20 bg-zinc-950 text-white relative border-b-8 border-red-600 sm:min-h-[85svh] flex items-center overflow-hidden">
                 <div className="container px-4 mx-auto relative z-10 w-full">
                     <div className="flex flex-col lg:flex-row-reverse gap-6 lg:gap-24 items-center">
 
@@ -293,7 +293,7 @@ export function MMACages() {
                                 <div className="h-[2px] w-6 md:w-12 bg-red-600"></div>
                                 <span className="text-red-600 font-bold tracking-widest text-[10px] sm:text-xs md:text-sm">Mix Martial Arts</span>
                             </div>
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-black tracking-tighter text-white leading-[0.85] mb-2 md:mb-6 drop-shadow-sm flex flex-col">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3rem] font-black tracking-tighter text-white leading-[0.85] mb-2 md:mb-6 drop-shadow-sm flex flex-col">
                                 <span>Training Ring</span>
                                 <span className="text-zinc-400 font-light text-xl sm:text-2xl md:text-3xl my-1 sm:my-2">vs</span>
                                 <span>Competition</span>
@@ -350,7 +350,7 @@ export function MMACages() {
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.2 }}
-                                className="group relative bg-zinc-900 border-2 border-white/5 flex flex-col hover:border-red-600 transition-colors duration-500 z-10 shadow-2xl sm:mt-12 cursor-pointer sm:cursor-default"
+                                className="group relative bg-zinc-900 border-2 border-white/5 flex flex-col hover:border-red-600 transition-colors duration-500 z-10 shadow-2xl sm:mt-8 cursor-pointer sm:cursor-default"
                             >
                                 {/* "Ring Corner" posts visual */}
                                 <div className="absolute -top-2 -left-2 sm:-top-3 -left-3 w-4 h-4 sm:w-6 sm:h-6 bg-blue-600 rounded-sm z-30 shadow-md"></div>
@@ -389,7 +389,7 @@ export function MMACages() {
                             <div className="h-[2px] w-8 md:w-12 bg-red-600"></div>
                             <span className="text-red-600 font-bold uppercase tracking-widest text-xs md:text-sm">Support & Guidance</span>
                         </div>
-                        <h2 className="text-4xl md:text-6xl lg:text-[5rem] font-black tracking-tighter uppercase text-black leading-[0.85] mb-4 md:mb-8 drop-shadow-sm flex flex-col">
+                        <h2 className="text-4xl md:text-6xl lg:text-[3.5rem] font-black tracking-tighter uppercase text-black leading-[0.85] mb-4 md:mb-8 drop-shadow-sm flex flex-col">
                             <span>Frequently Asked</span>
                             <span className="text-red-600">Questions</span>
                         </h2>

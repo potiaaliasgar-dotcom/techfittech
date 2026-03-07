@@ -59,8 +59,8 @@ export function CrossFitRigs() {
     ];
 
     const galleryImages = [
-        { src: image1, title: "Custom Setup", tag: "Academy" },
         { src: image2, title: "Wall Mount", tag: "Space Saver" },
+        { src: image1, title: "Custom Setup", tag: "Academy" },
         { src: image3, title: "Island Rig", tag: "Freestanding" },
         { src: image4, title: "Competition", tag: "Pro Grade" },
     ];
@@ -123,6 +123,82 @@ export function CrossFitRigs() {
                             </Button>
                         </Link>
                     </motion.div>
+                </div>
+            </section>
+
+            {/* Modular Grid Carousel Section */}
+            <section className="py-12 lg:py-24 bg-white text-black overflow-hidden relative flex items-center min-h-[100svh]">
+                <div className="container px-4 mx-auto relative z-10">
+                    <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+                        {/* Information Panel */}
+                        <div className="w-full lg:w-1/3 space-y-8">
+                            <div className="flex items-center gap-3 md:gap-4">
+                                <div className="h-[2px] w-8 md:w-12 bg-red-600"></div>
+                                <span className="text-red-600 font-bold uppercase tracking-widest text-xs md:text-sm">Engineered Precision</span>
+                            </div>
+                            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tighter uppercase text-black leading-[0.9] drop-shadow-sm">
+                                Modular Grid.<br />Infinite Configurations.
+                            </h2>
+
+                            <div className="mt-8 pt-6 border-t border-zinc-100">
+                                <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-400 mb-4">Compatible Attachments</h4>
+                                <div className="flex flex-wrap gap-2">
+                                    {attachments.map((tag) => (
+                                        <span key={tag} className="px-3 py-1.5 bg-zinc-100 text-black text-[10px] font-bold uppercase tracking-widest border border-zinc-200 hover:bg-black hover:text-white transition-all cursor-default">
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Carousel Panel */}
+                        <div className="w-full lg:w-2/3 relative">
+                            <div className="absolute -top-12 -left-12 w-64 h-64 bg-red-600/5 blur-[100px] rounded-full z-0" />
+                            <div className="absolute -bottom-12 -right-12 w-96 h-96 bg-zinc-900/5 blur-[120px] rounded-full z-0" />
+
+                            <Carousel
+                                opts={{
+                                    align: "start",
+                                    loop: true,
+                                }}
+                                className="relative z-10 w-full"
+                            >
+                                <CarouselContent>
+                                    {galleryImages.map((img, index) => (
+                                        <CarouselItem key={index} className="basis-full">
+                                            <div className="group relative aspect-[16/10] overflow-hidden border-2 border-black bg-zinc-100 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+                                                <img
+                                                    src={img.src}
+                                                    alt={img.title}
+                                                    loading="lazy"
+                                                    decoding="async"
+                                                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                                />
+                                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                                <div className="absolute bottom-0 left-0 p-8 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
+                                                    <span className="text-red-600 font-black uppercase tracking-widest text-xs mb-2 block">{img.tag}</span>
+                                                    <h3 className="text-white text-3xl font-black uppercase tracking-tighter">{img.title}</h3>
+                                                </div>
+                                                <div className="absolute top-4 left-4 bg-black text-white px-4 py-2 text-[10px] font-black uppercase tracking-widest border-2 border-white/20">
+                                                    Rig Frame {index + 1}
+                                                </div>
+                                            </div>
+                                        </CarouselItem>
+                                    ))}
+                                </CarouselContent>
+                                <div className="hidden md:flex absolute -bottom-16 right-0 gap-4">
+                                    <CarouselPrevious className="static translate-y-0 h-14 w-14 rounded-none border-2 border-black bg-white hover:bg-black hover:text-white transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none translate-x-1 translate-y-1 active:scale-95" />
+                                    <CarouselNext className="static translate-y-0 h-14 w-14 rounded-none border-2 border-black bg-white hover:bg-black hover:text-white transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none translate-x-1 translate-y-1 active:scale-95" />
+                                </div>
+                                <div className="flex justify-center md:hidden mt-12 w-full">
+                                    <span className="border-2 border-black bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] px-6 py-2 text-[10px] font-black uppercase tracking-[0.2em] flex items-center gap-3 text-black">
+                                        <ArrowRight className="h-3 w-3 rotate-180" /> DRAG TO EXPLORE <ArrowRight className="h-3 w-3" />
+                                    </span>
+                                </div>
+                            </Carousel>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -221,83 +297,6 @@ export function CrossFitRigs() {
                     </div>
                 </div>
             </section>
-
-            {/* Modular Grid Carousel Section */}
-            <section className="py-12 lg:py-24 bg-white text-black overflow-hidden relative flex items-center min-h-[100svh]">
-                <div className="container px-4 mx-auto relative z-10">
-                    <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
-                        {/* Information Panel */}
-                        <div className="w-full lg:w-1/3 space-y-8">
-                            <div className="flex items-center gap-3 md:gap-4">
-                                <div className="h-[2px] w-8 md:w-12 bg-red-600"></div>
-                                <span className="text-red-600 font-bold uppercase tracking-widest text-xs md:text-sm">Engineered Precision</span>
-                            </div>
-                            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black tracking-tighter uppercase text-black leading-[0.9] drop-shadow-sm">
-                                Modular Grid.<br />Infinite Configurations.
-                            </h2>
-
-                            <div className="mt-8 pt-6 border-t border-zinc-100">
-                                <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-400 mb-4">Compatible Attachments</h4>
-                                <div className="flex flex-wrap gap-2">
-                                    {attachments.map((tag) => (
-                                        <span key={tag} className="px-3 py-1.5 bg-zinc-100 text-black text-[10px] font-bold uppercase tracking-widest border border-zinc-200 hover:bg-black hover:text-white transition-all cursor-default">
-                                            {tag}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Carousel Panel */}
-                        <div className="w-full lg:w-2/3 relative">
-                            <div className="absolute -top-12 -left-12 w-64 h-64 bg-red-600/5 blur-[100px] rounded-full z-0" />
-                            <div className="absolute -bottom-12 -right-12 w-96 h-96 bg-zinc-900/5 blur-[120px] rounded-full z-0" />
-
-                            <Carousel
-                                opts={{
-                                    align: "start",
-                                    loop: true,
-                                }}
-                                className="relative z-10 w-full"
-                            >
-                                <CarouselContent>
-                                    {galleryImages.map((img, index) => (
-                                        <CarouselItem key={index} className="basis-full">
-                                            <div className="group relative aspect-[16/10] overflow-hidden border-2 border-black bg-zinc-100 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
-                                                <img
-                                                    src={img.src}
-                                                    alt={img.title}
-                                                    loading="lazy"
-                                                    decoding="async"
-                                                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                                                />
-                                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                                <div className="absolute bottom-0 left-0 p-8 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
-                                                    <span className="text-red-600 font-black uppercase tracking-widest text-xs mb-2 block">{img.tag}</span>
-                                                    <h3 className="text-white text-3xl font-black uppercase tracking-tighter">{img.title}</h3>
-                                                </div>
-                                                <div className="absolute top-4 left-4 bg-black text-white px-4 py-2 text-[10px] font-black uppercase tracking-widest border-2 border-white/20">
-                                                    Rig Frame {index + 1}
-                                                </div>
-                                            </div>
-                                        </CarouselItem>
-                                    ))}
-                                </CarouselContent>
-                                <div className="hidden md:flex absolute -bottom-16 right-0 gap-4">
-                                    <CarouselPrevious className="static translate-y-0 h-14 w-14 rounded-none border-2 border-black bg-white hover:bg-black hover:text-white transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none translate-x-1 translate-y-1 active:scale-95" />
-                                    <CarouselNext className="static translate-y-0 h-14 w-14 rounded-none border-2 border-black bg-white hover:bg-black hover:text-white transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none translate-x-1 translate-y-1 active:scale-95" />
-                                </div>
-                                <div className="flex justify-center md:hidden mt-12 w-full">
-                                    <span className="border-2 border-black bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] px-6 py-2 text-[10px] font-black uppercase tracking-[0.2em] flex items-center gap-3 text-black">
-                                        <ArrowRight className="h-3 w-3 rotate-180" /> DRAG TO EXPLORE <ArrowRight className="h-3 w-3" />
-                                    </span>
-                                </div>
-                            </Carousel>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
 
             {/* FAQs */}
             <section className="py-12 lg:py-24 bg-zinc-50 relative">
