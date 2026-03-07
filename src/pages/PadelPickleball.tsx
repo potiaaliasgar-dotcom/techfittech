@@ -11,8 +11,8 @@ import {
 } from "@/components/ui/accordion";
 
 import heroBg from "@/assets/pickle-and-Paddle-Ball-banner-image.webp";
-import image1 from "@/assets/picklePadelGallery/Image-1-6.webp";
-import image2 from "@/assets/picklePadelGallery/Image-2-5.webp";
+// import image1 from "@/assets/picklePadelGallery/Image-1-6.webp";
+// import image2 from "@/assets/picklePadelGallery/Image-2-5.webp";
 import image3 from "@/assets/picklePadelGallery/Image-3-6.webp";
 import image4 from "@/assets/picklePadelGallery/Image-4-5.webp";
 import image5 from "@/assets/picklePadelGallery/Image-5-4.webp";
@@ -22,14 +22,14 @@ export function PadelPickleball() {
     const [galleryIndex, setGalleryIndex] = useState<number | null>(null);
 
     const faqs = [
-        {
-            q: "What is the difference between Pickleball and Paddleball?",
-            a: "While they look similar, the equipment and court rules differ:\n\nPickleball: Uses a perforated hollow plastic ball (like a wiffle ball) and a flat paddle. The game emphasizes placement and patience.\n\nPaddleball: Uses a pressurized rubber ball (similar to a tennis/squash ball) and a solid or perforated paddle. It is generally faster-paced."
-        },
-        {
-            q: "How do the paddles differ?",
-            a: "Pickleball paddles are solid, typically made of composite materials like carbon fiber or fiberglass with a honeycomb core. Paddleball paddles are often solid wood or composite but may have holes (perforations) to reduce air resistance and increase swing speed."
-        },
+        // {
+        //     q: "What is the difference between Pickleball and Paddleball?",
+        //     a: "While they look similar, the equipment and court rules differ:\n\nPickleball: Uses a perforated hollow plastic ball (like a wiffle ball) and a flat paddle. The game emphasizes placement and patience.\n\nPaddleball: Uses a pressurized rubber ball (similar to a tennis/squash ball) and a solid or perforated paddle. It is generally faster-paced."
+        // },
+        // {
+        //     q: "How do the paddles differ?",
+        //     a: "Pickleball paddles are solid, typically made of composite materials like carbon fiber or fiberglass with a honeycomb core. Paddleball paddles are often solid wood or composite but may have holes (perforations) to reduce air resistance and increase swing speed."
+        // },
         {
             q: "How do the courts differ?",
             a: "A Pickleball court is 20' x 44', similar to a doubled badminton court. Padel courts are larger (10m x 20m) and are enclosed by glass and mesh walls which are part of the game. Padel is always played in doubles."
@@ -37,8 +37,8 @@ export function PadelPickleball() {
     ];
 
     const advantageImages = [
-        { src: image1, title: "Precision Engineering", tag: "Court Construction" },
-        { src: image2, title: "Premium Turf", tag: "Surface Technology" },
+        // { src: image1, title: "Precision Engineering", tag: "Court Construction" },
+        // { src: image2, title: "Premium Turf", tag: "Surface Technology" },
         { src: image3, title: "Panoramic Glass", tag: "Structural Integrity" },
         { src: image4, title: "LED Lighting", tag: "Night Play" },
         { src: image5, title: "Custom Branding", tag: "Club Identity" },

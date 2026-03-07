@@ -203,7 +203,7 @@ export function CrossFitRigs() {
             </section>
 
             {/* Product Comparison: Rigs */}
-            <section className="py-12 lg:py-32 bg-zinc-950 text-white relative overflow-hidden border-b-8 border-red-600 sm:min-h-[100svh] flex items-center">
+            <section className="py-12 lg:py-20 bg-zinc-950 text-white relative overflow-hidden border-b-8 border-red-600 sm:min-h-[85svh] flex items-center">
                 <div
                     className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none mix-blend-overlay"
                     style={{
@@ -221,12 +221,12 @@ export function CrossFitRigs() {
                                 <div className="h-[2px] w-6 md:w-12 bg-red-600"></div>
                                 <span className="text-red-600 font-bold tracking-widest text-[10px] sm:text-xs md:text-sm">Configuration Options</span>
                             </div>
-                            <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-[5rem] font-black tracking-tighter text-white leading-[0.85] mb-2 md:mb-8 drop-shadow-sm flex flex-col">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-black tracking-tighter text-white leading-[0.85] mb-2 md:mb-6 drop-shadow-sm flex flex-col">
                                 <span>Wall Mounted</span>
-                                <span className="text-zinc-600 font-light text-xl sm:text-2xl md:text-4xl my-1 sm:my-2">vs</span>
+                                <span className="text-zinc-600 font-light text-xl sm:text-2xl md:text-3xl my-1 sm:my-2">vs</span>
                                 <span>Island Rigs</span>
                             </h2>
-                            <p className="text-zinc-400 font-medium text-xs sm:text-sm md:text-lg leading-snug lg:leading-relaxed mb-4 lg:mb-8 border-l-2 md:border-l-4 border-red-600 pl-4 lg:pl-6 max-w-sm">
+                            <p className="text-zinc-400 font-medium text-xs sm:text-sm md:text-base leading-snug lg:leading-relaxed mb-4 lg:mb-6 border-l-2 md:border-l-4 border-red-600 pl-4 lg:pl-6 max-w-sm">
                                 Space-efficient wall-mounted solutions versus high-traffic freestanding island rigs. Custom built for your facility's footprint.
                             </p>
                         </div>
@@ -254,9 +254,9 @@ export function CrossFitRigs() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="p-2 sm:p-6 lg:p-8 flex flex-col sm:flex-1 relative z-20 bg-zinc-900/95 backdrop-blur-sm sm:justify-center">
-                                    <h4 className="text-lg sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-1 sm:mb-2 lg:mb-4 text-white group-hover:text-red-600 transition-colors">Wall Mounted Series</h4>
-                                    <p className="text-zinc-400 text-[10px] sm:text-xs md:text-sm lg:text-base font-medium leading-tight lg:leading-relaxed hidden sm:block">
+                                <div className="p-2 sm:p-5 lg:p-6 flex flex-col sm:flex-1 relative z-20 bg-zinc-900/95 backdrop-blur-sm sm:justify-center">
+                                    <h4 className="text-lg sm:text-xl lg:text-2xl font-black uppercase tracking-tighter mb-1 sm:mb-2 lg:mb-3 text-white group-hover:text-red-600 transition-colors">Wall Mounted Series</h4>
+                                    <p className="text-zinc-400 text-[10px] sm:text-xs md:text-sm font-medium leading-tight lg:leading-relaxed hidden sm:block">
                                         Space-saving functional rigs mounted directly to the wall. ( Space Saver ) Ideal for boutique studios and facilities where floor space is a premium.
                                     </p>
                                     <span className="text-[7px] uppercase font-bold tracking-widest text-zinc-500 sm:hidden">Tap for details</span>
@@ -285,9 +285,9 @@ export function CrossFitRigs() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="p-2 sm:p-6 lg:p-8 flex flex-col sm:flex-1 relative z-20 bg-zinc-900/95 backdrop-blur-sm sm:justify-center">
-                                    <h4 className="text-lg sm:text-2xl lg:text-3xl font-black uppercase tracking-tighter mb-1 sm:mb-2 lg:mb-4 text-white group-hover:text-red-600 transition-colors">Island Rigs</h4>
-                                    <p className="text-zinc-400 text-[10px] sm:text-xs md:text-sm lg:text-base font-medium leading-tight lg:leading-relaxed hidden sm:block">
+                                <div className="p-2 sm:p-5 lg:p-6 flex flex-col sm:flex-1 relative z-20 bg-zinc-900/95 backdrop-blur-sm sm:justify-center">
+                                    <h4 className="text-lg sm:text-xl lg:text-2xl font-black uppercase tracking-tighter mb-1 sm:mb-2 lg:mb-3 text-white group-hover:text-red-600 transition-colors">Island Rigs</h4>
+                                    <p className="text-zinc-400 text-[10px] sm:text-xs md:text-sm font-medium leading-tight lg:leading-relaxed hidden sm:block">
                                         The ultimate centerpiece for high-traffic training. ( Centerpiece ) Freestanding, 360-degree access rigs designed for maximum athlete throughput.
                                     </p>
                                     <span className="text-[7px] uppercase font-bold tracking-widest text-zinc-500 sm:hidden">Tap for details</span>

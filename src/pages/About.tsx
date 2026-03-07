@@ -298,9 +298,9 @@ export function About() {
                             </div>
 
                             <div className="lg:col-span-7 space-y-8">
-                                <p className="text-2xl font-black uppercase tracking-tight text-black leading-tight border-l-8 border-red-600 pl-8">
+                                {/* <p className="text-2xl font-black uppercase tracking-tight text-black leading-tight border-l-8 border-red-600 pl-8">
                                     "We are fitness people. We have all worked in gyms for most of our lives and want to make a difference for you and your members."
-                                </p>
+                                </p> */}
                                 <div className="text-zinc-600 text-lg font-medium leading-relaxed bg-white p-8 border-2 border-zinc-200 shadow-xl">
                                     Ali, having completed his higher education in the field of Business Administration from Kingston University, London, is an entrepreneur with fitness expertise.
                                     His vision has driven Techfit to become one of India's most innovative equipment manufacturers.
