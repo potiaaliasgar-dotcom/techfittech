@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Rocket, TrendingUp, Flag, Shield, Users, Target, CheckCircle } from "lucide-react";
+import { Rocket, Shield, Users, Target, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/Homepagebg.webp";
@@ -7,32 +7,6 @@ import AliPotia from "@/assets/Ali-Potia.webp"
 import aboutUs from "@/assets/aboutus.webp";
 
 export function About() {
-    const storyItems = [
-        {
-            year: "2012",
-            title: "The Inception",
-            desc: "Techfit was founded with a singular vision: to revolutionize the Indian fitness equipment landscape with world-class manufacturing.",
-            fullDesc: "Since our inception in 2012, we have been supplying the Indian fitness industry with our line of innovative fitness equipment. We are constantly adding new and innovative products to our portfolio.",
-            icon: Rocket,
-            color: "red"
-        },
-        {
-            year: "2016",
-            title: "Strategic Acquisition",
-            desc: "Acquisition of IMOT Industries, bringing 15 years of cardio expertise and technical goodwill to the Techfit family.",
-            fullDesc: "In 2016, we bought over IMOT Industries which came backed with 15 years of experience in assembling cardio equipment and goodwill. The introduction of an upgraded cardio series has brought with it superior features and usability to the Indian market.",
-            icon: TrendingUp,
-            color: "black"
-        },
-        {
-            year: "Present",
-            title: "Market Leadership",
-            desc: "Dominating the market with the most comprehensive range of Strength, MMA, and CrossFit solutions built 100% in India.",
-            fullDesc: "Today we offer fitness enthusiasts the complete range of Strength, Free Weights, MMA, Cardio & Cross fit Equipment of the highest quality, along with several customized options.",
-            icon: Flag,
-            color: "red"
-        }
-    ];
 
     return (
         <div className="flex flex-col w-full bg-white text-black min-h-screen relative font-sans">
@@ -190,7 +164,7 @@ export function About() {
             <section className="py-24 sm:py-32 bg-white relative overflow-hidden">
                 {/* Background Text Watermark */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-black text-zinc-50 opacity-[0.03] select-none pointer-events-none uppercase tracking-tighter whitespace-nowrap z-0">
-                    Legacy of Innovation
+                    The Inception
                 </div>
 
                 <div className="container px-4 mx-auto relative z-10">
@@ -204,67 +178,34 @@ export function About() {
                         </h2>
                     </div>
 
-                    <div className="relative max-w-6xl mx-auto">
-                        {/* The Rail/Track */}
-                        <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-[2px] sm:w-1 bg-zinc-100 sm:-translate-x-1/2 z-0">
-                            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-600/20 to-transparent animate-pulse" />
-                        </div>
+                    <div className="relative max-w-5xl mx-auto">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="bg-zinc-50 border-2 border-zinc-100 p-8 sm:p-16 relative group hover:border-red-600 transition-all duration-500 shadow-2xl"
+                        >
+                            {/* Corner Accent */}
+                            <div className="absolute top-0 right-0 w-20 h-20 bg-zinc-100 flex items-center justify-center group-hover:bg-red-600 transition-colors duration-500">
+                                <Rocket className="h-10 w-10 text-red-600 group-hover:text-white transition-colors" />
+                            </div>
 
-                        <div className="space-y-16 sm:space-y-32">
-                            {storyItems.map((item, i) => {
-                                const Icon = item.icon;
-                                return (
-                                    <motion.div
-                                        key={i}
-                                        initial={{ opacity: 0, x: i % 2 === 0 ? 50 : -50 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        viewport={{ once: true, margin: "-100px" }}
-                                        transition={{ duration: 0.8, type: "spring" }}
-                                        className={`flex flex-col sm:flex-row items-start sm:items-center gap-8 ${i % 2 === 0 ? "sm:flex-row-reverse" : ""}`}
-                                    >
-                                        {/* Milestone Marker */}
-                                        <div className="absolute left-4 sm:left-1/2 -translate-x-[11px] sm:-translate-x-1/2 w-6 h-6 sm:w-10 sm:h-10 rounded-full bg-white border-4 border-red-600 shadow-[0_0_20px_rgba(220,38,38,0.3)] z-20 flex items-center justify-center group">
-                                            <div className="w-1.5 h-1.5 sm:w-3 sm:h-3 rounded-full bg-red-600 group-hover:scale-150 transition-transform duration-300" />
-                                        </div>
+                            <div className="relative z-10 max-w-3xl">
+                                <h3 className="text-3xl sm:text-5xl font-black uppercase tracking-tighter text-black group-hover:text-red-600 transition-colors leading-none mb-8">
+                                    The Inception
+                                </h3>
 
-                                        {/* Content Card */}
-                                        <div className="flex-1 w-full pl-12 sm:pl-0">
-                                            <div className="bg-white border-2 border-zinc-100 p-6 sm:p-10 md:p-12 relative group hover:border-red-600 transition-all duration-500 shadow-xl hover:shadow-2xl hover:-translate-y-2">
-                                                {/* Corner Accent */}
-                                                <div className="absolute top-0 right-0 w-12 h-12 bg-zinc-50 flex items-center justify-center group-hover:bg-red-600 transition-colors duration-500">
-                                                    <Icon className={`h-6 w-6 ${item.color === 'red' ? 'text-red-600' : 'text-black'} group-hover:text-white transition-colors`} />
-                                                </div>
-
-
-                                                <div className="relative z-10">
-                                                    <div className="mb-6">
-                                                        <div className="flex items-center gap-2 mb-2 sm:hidden">
-                                                            <div className="h-[1px] w-4 bg-red-600"></div>
-                                                            <span className="text-red-600 font-bold text-sm tracking-widest">{item.year}</span>
-                                                        </div>
-                                                        <h3 className="text-2xl sm:text-3xl font-black uppercase tracking-tighter text-black group-hover:text-red-600 transition-colors leading-none">
-                                                            {item.title}
-                                                        </h3>
-                                                    </div>
-
-                                                    <div className="text-zinc-600 font-medium leading-relaxed space-y-4 text-sm sm:text-base">
-                                                        <p className="font-bold text-black">{item.desc}</p>
-                                                        <p>{item.fullDesc}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {/* Spacer with Large Year for Desktop */}
-                                        <div className={`flex-1 hidden sm:flex items-center ${i % 2 === 0 ? "justify-end pr-16" : "justify-start pl-16"} pointer-events-none`}>
-                                            <span className="text-8xl md:text-9xl font-black text-zinc-100 group-hover:text-red-600/20 transition-colors duration-500 select-none">
-                                                {item.year}
-                                            </span>
-                                        </div>
-                                    </motion.div>
-                                );
-                            })}
-                        </div>
+                                <div className="text-zinc-600 font-medium leading-relaxed space-y-6 text-lg sm:text-xl">
+                                    <p className="font-bold text-black border-l-4 border-red-600 pl-6">
+                                        Techfit was founded with a singular vision: to revolutionize the Indian fitness equipment landscape with world-class manufacturing.
+                                    </p>
+                                    <p>
+                                        Since our inception, we have been supplying the Indian fitness industry with our line of innovative fitness equipment. We are constantly adding new and innovative products to our portfolio.
+                                    </p>
+                                </div>
+                            </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
@@ -298,12 +239,22 @@ export function About() {
                             </div>
 
                             <div className="lg:col-span-7 space-y-8">
-                                {/* <p className="text-2xl font-black uppercase tracking-tight text-black leading-tight border-l-8 border-red-600 pl-8">
-                                    "We are fitness people. We have all worked in gyms for most of our lives and want to make a difference for you and your members."
-                                </p> */}
-                                <div className="text-zinc-600 text-lg font-medium leading-relaxed bg-white p-8 border-2 border-zinc-200 shadow-xl">
-                                    Ali, having completed his higher education in the field of Business Administration from Kingston University, London, is an entrepreneur with fitness expertise.
-                                    His vision has driven Techfit to become one of India's most innovative equipment manufacturers.
+                                <div className="bg-white p-8 sm:p-10 border-2 border-zinc-100 shadow-2xl relative overflow-hidden group hover:border-red-600 transition-all duration-500">
+                                    <div className="absolute top-0 right-0 w-24 h-24 bg-zinc-50 -rotate-12 translate-x-12 -translate-y-12 group-hover:bg-red-600 transition-colors duration-500" />
+                                    <div className="relative z-10">
+                                        <h4 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-black mb-6 flex items-center gap-4">
+                                            <span className="w-12 h-[2px] bg-red-600"></span>
+                                            Visionary Leadership
+                                        </h4>
+                                        <div className="text-zinc-600 text-lg sm:text-xl font-medium leading-relaxed space-y-4">
+                                            <p>
+                                                Ali, having completed his higher education in the field of Business Administration from Kingston University, London, is an entrepreneur with fitness expertise.
+                                            </p>
+                                            <p>
+                                                His vision has driven Techfit to become one of India's most innovative equipment manufacturers, bridging the gap between international quality and local manufacturing excellence.
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
