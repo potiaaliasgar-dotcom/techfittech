@@ -1,5 +1,6 @@
 {
     "buildCommand": "node scripts/generate-seo-pages.mjs",
+    "outputDirectory": "dist",
     "rewrites": [
         {
             "source": "/(.*)",

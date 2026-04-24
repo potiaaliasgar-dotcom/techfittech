@@ -5,11 +5,8 @@
  * Reads the root index.html and generates route-specific copies
  * with correct <title>, meta description, canonical, OG and Twitter tags.
  * 
- * Vercel serves static files BEFORE rewrites, so /about/index.html
- * will be served for /about requests — meaning LinkedIn, WhatsApp,
- * Slack and all other crawlers get the correct meta tags without JS.
- *
- * Usage:  node scripts/generate-seo-pages.mjs
+ * This script now acts as a build command that outputs to a 'dist' directory,
+ * satisfying Vercel's requirements while keeping the project root clean.
  */
 
 import fs from 'fs';
@@ -19,6 +16,8 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const SOURCE = path.join(ROOT, 'index.html');
+const DIST = path.join(ROOT, 'dist');
+const PUBLIC = path.join(ROOT, 'public');
 
 const BASE = 'https://www.techfittech.com';
 const DEFAULT_OG_IMG = BASE + '/og-image.jpg';
@@ -165,86 +164,63 @@ function escapeHtml(str) {
   return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
-function replaceMetaTag(html, selector, newContent) {
-  // Replace content attribute value of a meta tag matched by a regex
-  return html.replace(selector, newContent);
-}
-
 function generatePage(html, route, seo) {
   const fullUrl = BASE + '/' + route;
   let out = html;
 
-  // 1. <title>
-  out = out.replace(
-    /<title>[^<]*<\/title>/,
-    `<title>${escapeHtml(seo.title)}</title>`
-  );
-
-  // 2. <meta name="description" ...>
-  out = out.replace(
-    /(<meta\s+name="description"\s+id="meta-description"\s+content=")[^"]*(")/,
-    `$1${escapeHtml(seo.desc)}$2`
-  );
-
-  // 3. <link rel="canonical" ...>
-  out = out.replace(
-    /(<link\s+rel="canonical"\s+id="canonical-link"\s+href=")[^"]*(")/,
-    `$1${fullUrl}$2`
-  );
-
-  // 4. og:url
-  out = out.replace(
-    /(<meta\s+property="og:url"\s+content=")[^"]*("\s+id="og-url")/,
-    `$1${fullUrl}$2`
-  );
-
-  // 5. og:title
-  out = out.replace(
-    /(<meta\s+property="og:title"\s+content=")[^"]*("\s+id="og-title")/,
-    `$1${escapeHtml(seo.title)}$2`
-  );
-
-  // 6. og:description
-  out = out.replace(
-    /(<meta\s+property="og:description"\s+content=")[^"]*("\s+id="og-description")/s,
-    `$1${escapeHtml(seo.desc)}$2`
-  );
-
-  // 7. og:image
-  out = out.replace(
-    /(<meta\s+property="og:image"\s+content=")[^"]*("\s+id="og-image")/,
-    `$1${seo.img}$2`
-  );
-
-  // 8. twitter:title
-  out = out.replace(
-    /(<meta\s+name="twitter:title"\s+content=")[^"]*("\s+id="tw-title")/,
-    `$1${escapeHtml(seo.title)}$2`
-  );
-
-  // 9. twitter:description
-  out = out.replace(
-    /(<meta\s+name="twitter:description"\s+content=")[^"]*("\s+id="tw-description")/s,
-    `$1${escapeHtml(seo.desc)}$2`
-  );
-
-  // 10. twitter:image
-  out = out.replace(
-    /(<meta\s+name="twitter:image"\s+content=")[^"]*("\s+id="tw-image")/,
-    `$1${seo.img}$2`
-  );
+  out = out.replace(/<title>[^<]*<\/title>/, `<title>${escapeHtml(seo.title)}</title>`);
+  out = out.replace(/(<meta\s+name="description"\s+id="meta-description"\s+content=")[^"]*(")/, `$1${escapeHtml(seo.desc)}$2`);
+  out = out.replace(/(<link\s+rel="canonical"\s+id="canonical-link"\s+href=")[^"]*(")/, `$1${fullUrl}$2`);
+  out = out.replace(/(<meta\s+property="og:url"\s+content=")[^"]*("\s+id="og-url")/, `$1${fullUrl}$2`);
+  out = out.replace(/(<meta\s+property="og:title"\s+content=")[^"]*("\s+id="og-title")/, `$1${escapeHtml(seo.title)}$2`);
+  out = out.replace(/(<meta\s+property="og:description"\s+content=")[^"]*("\s+id="og-description")/s, `$1${escapeHtml(seo.desc)}$2`);
+  out = out.replace(/(<meta\s+property="og:image"\s+content=")[^"]*("\s+id="og-image")/, `$1${seo.img}$2`);
+  out = out.replace(/(<meta\s+name="twitter:title"\s+content=")[^"]*("\s+id="tw-title")/, `$1${escapeHtml(seo.title)}$2`);
+  out = out.replace(/(<meta\s+name="twitter:description"\s+content=")[^"]*("\s+id="tw-description")/s, `$1${escapeHtml(seo.desc)}$2`);
+  out = out.replace(/(<meta\s+name="twitter:image"\s+content=")[^"]*("\s+id="tw-image")/, `$1${seo.img}$2`);
 
   return out;
 }
 
-// ── MAIN ──
-console.log('🔧 Generating SEO-optimised static pages...\n');
+function copyRecursiveSync(src, dest) {
+  const exists = fs.existsSync(src);
+  const stats = exists && fs.statSync(src);
+  const isDirectory = exists && stats.isDirectory();
+  if (isDirectory) {
+    if (!fs.existsSync(dest)) fs.mkdirSync(dest, { recursive: true });
+    fs.readdirSync(src).forEach((childItemName) => {
+      copyRecursiveSync(path.join(src, childItemName), path.join(dest, childItemName));
+    });
+  } else {
+    fs.copyFileSync(src, dest);
+  }
+}
 
+// ── MAIN ──
+console.log('🚀 Starting Static Site Build...\n');
+
+// 1. Prepare DIST folder
+if (fs.existsSync(DIST)) {
+  fs.rmSync(DIST, { recursive: true, force: true });
+}
+fs.mkdirSync(DIST, { recursive: true });
+
+// 2. Copy main index.html
+fs.copyFileSync(SOURCE, path.join(DIST, 'index.html'));
+console.log('  📄 Copied index.html');
+
+// 3. Copy public folder contents
+if (fs.existsSync(PUBLIC)) {
+  copyRecursiveSync(PUBLIC, DIST);
+  console.log('  📁 Copied public/ assets');
+}
+
+// 4. Generate SEO sub-pages
 const sourceHtml = fs.readFileSync(SOURCE, 'utf8');
 let count = 0;
 
 for (const [route, seo] of Object.entries(SEO_MAP)) {
-  const outDir = path.join(ROOT, route);
+  const outDir = path.join(DIST, route);
   const outFile = path.join(outDir, 'index.html');
 
   if (!fs.existsSync(outDir)) {
@@ -254,9 +230,7 @@ for (const [route, seo] of Object.entries(SEO_MAP)) {
   const html = generatePage(sourceHtml, route, seo);
   fs.writeFileSync(outFile, html, 'utf8');
   count++;
-  console.log(`  ✅ /${route}/index.html`);
 }
 
-console.log(`\n🎉 Done! Generated ${count} route-specific pages.`);
-console.log('   Vercel serves static files before rewrites, so crawlers');
-console.log('   will now see correct meta tags for each sub-page.\n');
+console.log(`\n🎉 Build complete! Generated ${count} route-specific pages in 'dist/'.`);
+
