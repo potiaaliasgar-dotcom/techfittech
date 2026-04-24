@@ -1318,6 +1318,78 @@
       display: none
     }
 
+    /* ─── CLIENT GRID (ALTEON) ─── */
+    .client-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1.25rem;
+      margin-top: 3rem;
+    }
+
+    .client-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 120px;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .client-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(74, 222, 128, 0.08) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .client-card:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(74, 222, 128, 0.3);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .client-card:hover::before {
+      opacity: 1;
+    }
+
+    .client-card img {
+      max-height: 60px;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.1));
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      z-index: 1;
+    }
+
+    .client-card:hover img {
+      transform: scale(1.1);
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+    }
+
+    @media (max-width: 768px) {
+      .client-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 0.75rem;
+      }
+      .client-card {
+        padding: 1rem;
+        min-height: 100px;
+      }
+      .client-card img {
+        max-height: 45px;
+      }
+    }
+
     /* ─── INSTALLATION GALLERY ─── */
     .install-grid {
       display: grid;
@@ -4329,81 +4401,78 @@ ${footer()}
       </p>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:.85rem;margin-top:2.6rem">
+    <div class="client-grid">
 
-    <!-- Hospitality -->
+<!-- Hospitality -->
 <div class="client-card">
   <img src="assets/images/alteon/ritz-carlton.jpeg" alt="The Ritz-Carlton">
 </div>
 
 <!-- Real Estate -->
 <div class="client-card">
-  <img src="assets/images/alteon/real_estate/dlf.png" alt="DLF">
+  <img src="assets/images/alteon/dlf.jpeg" alt="DLF">
 </div>
+
 <!-- Corporate -->
 <div class="client-card">
-  <img src="assets/images/alteon/corporate/reliance.png" alt="Reliance">
+  <img src="assets/images/alteon/reliance.jpeg" alt="Reliance">
 </div>
 
 <div class="client-card">
-  <img src="assets/images/alteon/corporate/zerodha.png" alt="Zerodha">
+  <img src="assets/images/alteon/zerodha.jpeg" alt="Zerodha">
 </div>
 
 <!-- Fitness -->
 <div class="client-card">
-  <img src="assets/images/alteon/fitness_wellness/golds-gym.png" alt="Gold's Gym">
+  <img src="assets/images/alteon/golds-gym.jpeg" alt="Gold's Gym">
 </div>
 
 <div class="client-card">
-  <img src="assets/images/alteon/fitness_wellness/dr-patil-healthcare.png" alt="D Y Patil Healthcare">
+  <img src="assets/images/alteon/dy-patil.jpeg" alt="D Y Patil Healthcare">
 </div>
 
 <div class="client-card">
-  <img src="assets/images/alteon/fitness_wellness/mma-matrix-gym.png" alt="MMA Matrix Gym">
+  <img src="assets/images/alteon/mma-matrix.jpeg" alt="MMA Matrix Gym">
 </div>
 
 <div class="client-card">
-  <img src="assets/images/alteon/fitness_wellness/ultrahuman.png" alt="Ultrahuman">
+  <img src="assets/images/alteon/ultrahuman.jpeg" alt="Ultrahuman">
 </div>
 
 <div class="client-card">
-  <img src="assets/images/alteon/fitness_wellness/biopeak.png" alt="Biopeak">
+  <img src="assets/images/alteon/biopeak.jpeg" alt="Biopeak">
 </div>
 
 <div class="client-card">
-  <img src="assets/images/alteon/fitness_wellness/prana.png" alt="Prana">
+  <img src="assets/images/alteon/prana.jpeg" alt="Prana">
 </div>
 
 <div class="client-card">
-  <img src="assets/images/alteon/fitness_wellness/oema.png" alt="Oema">
+  <img src="assets/images/alteon/oema.jpeg" alt="Oema">
 </div>
 
 <div class="client-card">
-  <img src="assets/images/alteon/real_estate/hona.png" alt="Hona">
+  <img src="assets/images/alteon/tulah.jpeg" alt="Tulah">
 </div>
 
 <div class="client-card">
-  <img src="assets/images/alteon/fitness_wellness/tulah.png" alt="Tulah">
+  <img src="assets/images/alteon/dhun.jpeg" alt="Dhun">
 </div>
 
 <div class="client-card">
-  <img src="assets/images/alteon/fitness_wellness/dhun.png" alt="Dhun">
+  <img src="assets/images/alteon/courtside.jpeg" alt="Courtside">
 </div>
 
 <div class="client-card">
-  <img src="assets/images/alteon/fitness_wellness/courtside.png" alt="Courtside">
+  <img src="assets/images/alteon/potenza.jpeg" alt="Potenza">
 </div>
 
 <div class="client-card">
-  <img src="assets/images/alteon/fitness_wellness/potenza.png" alt="Potenza">
+  <img src="assets/images/alteon/serve-society.jpeg" alt="Serve Society">
 </div>
 
 <div class="client-card">
-  <img src="assets/images/alteon/social/serve-society.png" alt="Serve Society">
-</div>
-
-<div class="client-card">
-  <img src="assets/images/alteon/fitness_wellness/aline.png" alt="Aline">
+  <img src="assets/images/alteon/aline.jpeg" alt="Aline">
 </div>
   </div>
 </section>
