@@ -966,18 +966,42 @@
     }
 
     /* ─── NEXT LEVEL PRODUCT RANGE ─── */
+    .product-range-sec {
+      position: relative;
+      background: #fafafa;
+      padding: 8rem 1.5rem;
+      overflow: hidden;
+    }
+
+    .range-watermark {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 25vw;
+      font-weight: 950;
+      color: rgba(0, 0, 0, 0.02);
+      text-transform: uppercase;
+      letter-spacing: -0.05em;
+      pointer-events: none;
+      z-index: 0;
+      white-space: nowrap;
+    }
+
     .seg-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 1.5rem;
       max-width: 1400px;
       margin: 4rem auto 0;
+      position: relative;
+      z-index: 1;
     }
 
     .seg-card {
       background: #fff;
       border: 1px solid #eee;
-      padding: 3.5rem 2rem 3rem;
+      padding: 4rem 2rem 3rem;
       display: flex;
       flex-direction: column;
       height: 100%;
@@ -1003,7 +1027,7 @@
       color: #fff;
       border-color: var(--black);
       transform: translateY(-15px);
-      box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
     }
 
     .seg-card:hover::after {
@@ -1011,7 +1035,7 @@
     }
 
     .seg-card h3 {
-      font-size: 1.6rem;
+      font-size: 1.75rem;
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: -0.04em;
@@ -1023,7 +1047,7 @@
 
     .seg-card p {
       font-size: 0.95rem;
-      line-height: 1.65;
+      line-height: 1.7;
       color: var(--z600);
       margin-bottom: 2rem;
       transition: color 0.3s;
@@ -1060,17 +1084,31 @@
       position: absolute;
       top: 1.5rem;
       left: 2rem;
-      font-size: 4rem;
+      font-size: 4.5rem;
       font-weight: 950;
-      color: #f8f8f8;
+      color: #f5f5f5;
       line-height: 1;
       z-index: -1;
-      transition: color 0.3s;
+      transition: all 0.4s;
       pointer-events: none;
     }
 
     .seg-card:hover .card-num {
-      color: rgba(255,255,255,0.03);
+      color: rgba(255, 255, 255, 0.04);
+      transform: translateX(10px);
+    }
+
+    .card-accent {
+      width: 30px;
+      height: 4px;
+      background: var(--red);
+      margin-bottom: 2rem;
+      transition: width 0.4s;
+    }
+
+    .seg-card:hover .card-accent {
+      width: 60px;
+      box-shadow: 0 0 15px var(--red);
     }
 
     @media(max-width: 1200px) {
@@ -1088,12 +1126,14 @@
     @media(max-width: 550px) {
       .seg-grid {
         grid-template-columns: 1fr !important;
-        gap: 1rem;
+        gap: 1.5rem;
       }
+
       .seg-card {
-        padding: 3rem 1.5rem 2.5rem;
+        padding: 4rem 1.5rem 3rem;
       }
     }
+
 
 
     /* ─── CAROUSEL WRAPPER (shared) ─── */
@@ -1497,14 +1537,14 @@
       width: auto;
       max-width: 100%;
       object-fit: contain;
-      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.1));
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
       transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
       z-index: 1;
     }
 
     .client-card:hover img {
       transform: scale(1.1);
-      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
     }
 
     @media (max-width: 768px) {
@@ -1512,10 +1552,12 @@
         grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
         gap: 0.75rem;
       }
+
       .client-card {
         padding: 1rem;
         min-height: 100px;
       }
+
       .client-card img {
         max-height: 45px;
       }
@@ -3856,8 +3898,8 @@
   <div class="sec-in">
     <div class="phero-label">Made in Mumbai</div>
     <h1 style="color:#fff">TECHFIT<br><span style="color:var(--red)">CUSTOM</span></h1>
-    <p class="phero-sub">India's own commercial-grade fitness fabrication. MMA cages, CrossFit rigs, free weights, padel courts, and aqua fitness equipment \xe2\x80\x94 custom built to your specs.</p>
-    <div style="display:flex;gap:1rem;margin-top:1.5rem;flex-wrap:wrap">
+    <p class="phero-sub">India's own commercial-grade fitness fabrication. MMA cages, CrossFit rigs, free weights, padel courts, and aqua fitness equipment custom built to your specs.</p>
+    <div style="display:flex;gap:1.5rem;margin-top:2.5rem;flex-wrap:wrap;justify-content:center">
       <button class="btn-red" onclick="go('contact')">Get a Custom Quote</button>
       <button class="btn-outline" onclick="go('mma-cages')">Explore Products</button>
     </div>
