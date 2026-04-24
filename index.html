@@ -855,6 +855,35 @@
       color: rgba(255, 255, 255, .5)
     }
 
+    @media(max-width: 700px) {
+      .brands-logos {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: .8rem;
+      }
+      .brand-logo-box {
+        padding: .8rem .4rem;
+        text-align: center;
+      }
+      .brand-logo-box img {
+        max-width: 100% !important;
+        height: auto;
+      }
+      .brand-logo-name {
+        font-size: 8px;
+        line-height: 1.2;
+      }
+      .brand-logo-box:nth-child(1),
+      .brand-logo-box:nth-child(2),
+      .brand-logo-box:nth-child(3) {
+        grid-column: span 2;
+      }
+      .brand-logo-box:nth-child(4),
+      .brand-logo-box:nth-child(5) {
+        grid-column: span 3;
+      }
+    }
+
     /* ─── CLIENT SEGMENTS ─── */
     .segments {
       display: grid;
