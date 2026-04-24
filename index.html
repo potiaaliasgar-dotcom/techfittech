@@ -15,7 +15,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechFit | Gym, Wellness &amp; Sports Infrastructure India | Mumbai</title>
-  <meta name="description"
+  <meta name="description" id="meta-description"
     content="TechFit is India's gym, wellness &amp; sports infrastructure partner. Authorised distributor for BH Fitness, Tunturi, California Fitness &amp; Alteon. Mumbai-based.">
   <meta name="keywords"
     content="gym setup India, gym wellness India, recovery suite India, hotel wellness setup, commercial gym equipment Mumbai, MMA cage manufacturer India, boxing ring manufacturer, BH Fitness distributor India, Tunturi India, California Fitness India, Authorised distributor, wellness equipment, Alteon wellness India, gym consultant Mumbai, CrossFit rig, free weights manufacturer, custom gym fabrication, hotel gym setup, residential gym amenity, school fitness equipment, TechFit, TechFit Active, padel court builder, pickleball court India, Matrix Fight Night cage, Super Fight League, Kumite 1">
@@ -25,24 +25,26 @@
   <meta name="geo.placename" content="Mumbai">
   <meta name="geo.position" content="18.977;72.844">
   <meta name="ICBM" content="18.977, 72.844">
-  <link rel="canonical" href="https://www.techfittech.com/">
+  <link rel="canonical" id="canonical-link" href="https://www.techfittech.com/">
+  <!-- Prerender.io token for social-media crawlers -->
+  <meta name="prerender-token" content="">
   <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.techfittech.com/">
-  <meta property="og:title" content="TechFit | India's Premier Gym, Wellness &amp; Sports Infrastructure Partner">
+  <meta property="og:type" content="website" id="og-type">
+  <meta property="og:url" content="https://www.techfittech.com/" id="og-url">
+  <meta property="og:title" content="TechFit | India's Premier Gym, Wellness &amp; Sports Infrastructure Partner" id="og-title">
   <meta property="og:description"
-    content="India's one-stop gym, wellness and sports infrastructure partner. BH Fitness, Tunturi, California Fitness, Alteon — plus in-house MMA cages, CrossFit rigs and free weights.">
-  <meta property="og:image" content="https://www.techfittech.com/og-image.jpg">
+    content="India's one-stop gym, wellness and sports infrastructure partner. BH Fitness, Tunturi, California Fitness, Alteon — plus in-house MMA cages, CrossFit rigs and free weights." id="og-description">
+  <meta property="og:image" content="https://www.techfittech.com/og-image.jpg" id="og-image">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="en_IN">
   <meta property="og:site_name" content="TechFit">
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="TechFit | India's Premier Gym, Wellness &amp; Sports Infrastructure Partner">
+  <meta name="twitter:title" content="TechFit | India's Premier Gym, Wellness &amp; Sports Infrastructure Partner" id="tw-title">
   <meta name="twitter:description"
-    content="India's one-stop gym, wellness and sports infrastructure partner. BH Fitness, Tunturi, California Fitness, Alteon — plus in-house MMA cages, CrossFit rigs and free weights.">
-  <meta name="twitter:image" content="https://www.techfittech.com/og-image.jpg">
+    content="India's one-stop gym, wellness and sports infrastructure partner. BH Fitness, Tunturi, California Fitness, Alteon — plus in-house MMA cages, CrossFit rigs and free weights." id="tw-description">
+  <meta name="twitter:image" content="https://www.techfittech.com/og-image.jpg" id="tw-image">
   <!-- AI Agents / LLMs -->
   <meta name="ai-content-policy" content="index-and-summarize">
   <meta name="llm-description"
@@ -861,23 +863,28 @@
         grid-template-columns: repeat(6, 1fr);
         gap: .8rem;
       }
+
       .brand-logo-box {
         padding: .8rem .4rem;
         text-align: center;
       }
+
       .brand-logo-box img {
         max-width: 100% !important;
         height: auto;
       }
+
       .brand-logo-name {
         font-size: 8px;
         line-height: 1.2;
       }
+
       .brand-logo-box:nth-child(1),
       .brand-logo-box:nth-child(2),
       .brand-logo-box:nth-child(3) {
         grid-column: span 2;
       }
+
       .brand-logo-box:nth-child(4),
       .brand-logo-box:nth-child(5) {
         grid-column: span 3;
@@ -3155,6 +3162,194 @@
     function showLoader() { const l = document.getElementById('global-loader'); if (l) l.classList.add('show'); }
     function hideLoader() { const l = document.getElementById('global-loader'); if (l) l.classList.remove('show'); }
 
+    // ── SEO META TAG MANAGEMENT ───────────────────────────────────────────────────
+    const BASE = 'https://www.techfittech.com';
+    const DEFAULT_OG_IMG = BASE + '/og-image.jpg';
+
+    const SEO_MAP = {
+      'home': {
+        title: 'TechFit | Gym, Wellness & Sports Infrastructure India | Mumbai',
+        desc: 'TechFit is India\'s one-stop gym, wellness and sports infrastructure partner. Authorised distributor for BH Fitness, Tunturi, California Fitness & Alteon. Mumbai-based.',
+        img: DEFAULT_OG_IMG
+      },
+      'alteon': {
+        title: 'Alteon Wellness & Recovery | Hyperbaric, Cryotherapy, Red-Light Therapy India',
+        desc: 'Alteon by TechFit — premium wellness and recovery technology. Hyperbaric oxygen chambers, cryotherapy, red-light therapy, dry-float, IHHT and more for clinics, hotels and gyms.',
+        img: DEFAULT_OG_IMG
+      },
+      'bh-fitness': {
+        title: 'BH Fitness India | Authorised Distributor — Treadmills, Bikes, Ellipticals',
+        desc: 'TechFit is the authorised distributor of BH Fitness commercial gym equipment in India. Treadmills, exercise bikes, ellipticals and strength machines for gyms, hotels and corporates.',
+        img: DEFAULT_OG_IMG
+      },
+      'tunturi': {
+        title: 'Tunturi India | Authorised Distributor — Nordic Fitness Equipment',
+        desc: 'TechFit is the authorised distributor of Tunturi fitness equipment in India. From Finland — premium cardio, strength and functional-training gear for commercial and home gyms.',
+        img: DEFAULT_OG_IMG
+      },
+      'california-fitness': {
+        title: 'California Fitness India | Authorised Distributor — Commercial Gym Equipment',
+        desc: 'TechFit is the authorised distributor of California Fitness in India. Professional-grade cardio and strength equipment for gyms, studios and fitness chains.',
+        img: DEFAULT_OG_IMG
+      },
+      'techfit': {
+        title: 'TechFit Active | In-House Gym & Sports Equipment Manufacturer India',
+        desc: 'TechFit Active — India\'s in-house manufacturer of MMA cages, boxing rings, CrossFit rigs, free weights, padel courts and aqua fitness equipment. Factory in Mumbai.',
+        img: DEFAULT_OG_IMG
+      },
+      'mma-cages': {
+        title: 'MMA Cages & Boxing Rings India | TechFit — Manufacturer & Supplier',
+        desc: 'Competition and training MMA octagons, floor cages, podium cages and boxing rings by TechFit. Trusted by Matrix Fight Night, Super Fight League and Kumite 1.',
+        img: DEFAULT_OG_IMG
+      },
+      'crossfit-rigs': {
+        title: 'CrossFit Rigs & Functional Training India | TechFit Manufacturer',
+        desc: 'Custom CrossFit rigs, wall-mounted pull-up systems, calisthenics structures and modular functional-training rigs. Designed and manufactured by TechFit in Mumbai.',
+        img: DEFAULT_OG_IMG
+      },
+      'free-weights': {
+        title: 'Free Weights & Strength Equipment India | TechFit Manufacturer',
+        desc: 'Olympic barbells, rubber-coated dumbbells, bumper plates, power racks, squat stands and deadlift platforms. Manufactured in India by TechFit.',
+        img: DEFAULT_OG_IMG
+      },
+      'padel-pickleball': {
+        title: 'Padel & Pickleball Courts India | TechFit — Design, Build & Install',
+        desc: 'End-to-end padel and pickleball court construction in India. Design, fabrication and installation for clubs, resorts, housing societies and corporate campuses.',
+        img: DEFAULT_OG_IMG
+      },
+      'aqua': {
+        title: 'Aqua Fitness & Underwater Treadmills India | TechFit',
+        desc: 'Underwater treadmills, aqua therapy pools and aqua fitness equipment by TechFit. Designed for physiotherapy clinics, hotels, wellness centres and rehabilitation facilities.',
+        img: DEFAULT_OG_IMG
+      },
+      'wellness-solutions': {
+        title: 'Wellness Solutions India | TechFit — Recovery, Longevity & Spa Equipment',
+        desc: 'Complete wellness solutions by TechFit — from hyperbaric chambers and cryotherapy to infrared saunas and float pods. Turnkey wellness infrastructure for hotels, clinics and gyms.',
+        img: DEFAULT_OG_IMG
+      },
+      'services': {
+        title: 'Gym & Wellness Services India | TechFit — Design, Install, AMC',
+        desc: 'TechFit services — gym design consultation, equipment supply, installation, flooring, AMC and after-sales support. Full turnkey solutions across India.',
+        img: DEFAULT_OG_IMG
+      },
+      'about': {
+        title: 'About TechFit | India\'s Premier Gym & Sports Infrastructure Company',
+        desc: 'Founded in Mumbai, TechFit is India\'s leading gym, wellness and sports infrastructure company. Learn about our story, leadership, manufacturing facility and vision.',
+        img: DEFAULT_OG_IMG
+      },
+      'contact': {
+        title: 'Contact TechFit | Get a Free Gym & Wellness Consultation',
+        desc: 'Get in touch with TechFit for a free gym setup consultation. Call +91 98201 66910 or visit us at 309 Boat Hard Rd, Darukhana, Byculla, Mumbai 400010.',
+        img: DEFAULT_OG_IMG
+      },
+      'for-gyms': {
+        title: 'Gym & Studio Setup India | TechFit — Equipment, Design & Installation',
+        desc: 'Complete gym and studio setup solutions by TechFit. From equipment selection to layout design, flooring and installation — get your gym running fast.',
+        img: DEFAULT_OG_IMG
+      },
+      'for-developers': {
+        title: 'Real-Estate Developer Gym Amenities India | TechFit',
+        desc: 'Premium gym and wellness amenities for residential and commercial real-estate developers. TechFit partners with India\'s top builders for world-class fitness infrastructure.',
+        img: DEFAULT_OG_IMG
+      },
+      'for-schools': {
+        title: 'School & Institution Fitness Setup India | TechFit',
+        desc: 'Safe, age-appropriate fitness equipment and sports infrastructure for schools, colleges and institutions. Designed and supplied by TechFit across India.',
+        img: DEFAULT_OG_IMG
+      },
+      'for-hotels': {
+        title: 'Hotel Gym & Wellness Setup India | TechFit',
+        desc: 'Turnkey hotel gym and wellness solutions. Premium equipment from BH Fitness, Tunturi and California Fitness — plus spa, recovery and Alteon wellness technology.',
+        img: DEFAULT_OG_IMG
+      },
+      'blogs': {
+        title: 'TechFit Blog | Gym, Wellness & Sports Industry Insights India',
+        desc: 'Industry insights, case studies and news from TechFit — India\'s leading gym, wellness and sports infrastructure company.',
+        img: DEFAULT_OG_IMG
+      },
+      'blog-mfn': {
+        title: 'Matrix Fight Night — MMA Cage by TechFit | Case Study',
+        desc: 'How TechFit designed and built the competition-grade MMA octagon for Matrix Fight Night — India\'s premier mixed martial arts promotion.',
+        img: DEFAULT_OG_IMG
+      },
+      'blog-sfl': {
+        title: 'Super Fight League — MMA Cage by TechFit | Case Study',
+        desc: 'TechFit manufactured the professional MMA cage for Super Fight League, one of India\'s biggest combat sports events.',
+        img: DEFAULT_OG_IMG
+      },
+      'blog-kumite': {
+        title: 'Kumite 1 League — Boxing Ring by TechFit | Case Study',
+        desc: 'TechFit built the competition boxing ring for Kumite 1 League, India\'s high-profile combat sports league.',
+        img: DEFAULT_OG_IMG
+      },
+      'blog-mma-matrix': {
+        title: 'MMA Matrix — Tiger Shroff\'s Gym by TechFit | Case Study',
+        desc: 'TechFit designed and equipped MMA Matrix — Bollywood actor Tiger Shroff\'s signature mixed martial arts training gym.',
+        img: DEFAULT_OG_IMG
+      },
+      'blog-one-stop': {
+        title: 'One-Stop Gym Infrastructure — TechFit Advantage | Blog',
+        desc: 'Why TechFit is the one-stop solution for all gym infrastructure needs — from equipment and flooring to design, installation and maintenance.',
+        img: DEFAULT_OG_IMG
+      },
+      'blog-wellness-boom': {
+        title: 'India\'s Wellness Boom — Alteon & Recovery Tech | Blog',
+        desc: 'Exploring India\'s growing wellness and longevity market, and how Alteon recovery technology is leading the charge.',
+        img: DEFAULT_OG_IMG
+      },
+      'gym-flooring': {
+        title: 'Gym Flooring India | TechFit — Rubber, Turf & Interlocking Tiles',
+        desc: 'Professional gym flooring solutions — rubber rolls, interlocking tiles, artificial turf and shock-absorbent mats. Supplied and installed by TechFit across India.',
+        img: DEFAULT_OG_IMG
+      },
+      'flooring': {
+        title: 'Gym Flooring India | TechFit — Rubber, Turf & Interlocking Tiles',
+        desc: 'Professional gym flooring solutions — rubber rolls, interlocking tiles, artificial turf and shock-absorbent mats. Supplied and installed by TechFit across India.',
+        img: DEFAULT_OG_IMG
+      }
+    };
+
+    function updateSEO() {
+      const routeKey = page || 'home';
+      const seo = SEO_MAP[routeKey] || SEO_MAP['home'];
+      const path = routeKey === 'home' ? '/' : '/' + routeKey;
+      const fullUrl = BASE + path;
+
+      // 1. Canonical URL
+      const canonical = document.getElementById('canonical-link');
+      if (canonical) canonical.setAttribute('href', fullUrl);
+
+      // 2. Title
+      document.title = seo.title;
+
+      // 3. Meta description
+      const metaDesc = document.getElementById('meta-description');
+      if (metaDesc) metaDesc.setAttribute('content', seo.desc);
+
+      // 4. Open Graph tags
+      const ogUrl = document.getElementById('og-url');
+      if (ogUrl) ogUrl.setAttribute('content', fullUrl);
+
+      const ogTitle = document.getElementById('og-title');
+      if (ogTitle) ogTitle.setAttribute('content', seo.title);
+
+      const ogDesc = document.getElementById('og-description');
+      if (ogDesc) ogDesc.setAttribute('content', seo.desc);
+
+      const ogImg = document.getElementById('og-image');
+      if (ogImg) ogImg.setAttribute('content', seo.img || DEFAULT_OG_IMG);
+
+      // 5. Twitter Card tags
+      const twTitle = document.getElementById('tw-title');
+      if (twTitle) twTitle.setAttribute('content', seo.title);
+
+      const twDesc = document.getElementById('tw-description');
+      if (twDesc) twDesc.setAttribute('content', seo.desc);
+
+      const twImg = document.getElementById('tw-image');
+      if (twImg) twImg.setAttribute('content', seo.img || DEFAULT_OG_IMG);
+    }
+
     let searchTimeout;
     function handleSearch(val) {
       q = val; pg = 1;
@@ -3197,7 +3392,7 @@
 
       setTimeout(() => {
         window.scrollTo({ top: 0, behavior: 'instant' });
-        render(); navActive();
+        render(); navActive(); updateSEO();
         setTimeout(() => hideLoader(), 50);
       }, 300);
     }
@@ -4125,27 +4320,89 @@ ${footer()}
     <div class="sec-hdr center">
       <span class="sec-label" style="color:#4ade80">In Good Company</span>
       <h2 class="sec-title" style="color:#fff">SELECT ALTEON CLIENTS</h2>
-      <p class="sec-sub" style="color:rgba(255,255,255,.65);max-width:760px;margin:1rem auto 0">Wellness installations across India&#x2019;s most discerning hospitality, longevity and performance brands.</p>
+      <p class="sec-sub" style="color:rgba(255,255,255,.65);max-width:760px;margin:1rem auto 0">
+        Wellness installations across India’s most discerning hospitality, longevity and performance brands.
+      </p>
     </div>
+
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:.85rem;margin-top:2.6rem">
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.55rem;padding:1.05rem .9rem;text-align:center;font-size:.92rem;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:.01em">The Ritz-Carlton</div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.55rem;padding:1.05rem .9rem;text-align:center;font-size:.92rem;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:.01em">DLF</div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.55rem;padding:1.05rem .9rem;text-align:center;font-size:.92rem;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:.01em">Reliance Industries</div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.55rem;padding:1.05rem .9rem;text-align:center;font-size:.92rem;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:.01em">Zerodha</div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.55rem;padding:1.05rem .9rem;text-align:center;font-size:.92rem;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:.01em">Gold&#x2019;s Gym</div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.55rem;padding:1.05rem .9rem;text-align:center;font-size:.92rem;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:.01em">D Y Patil Healthcare</div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.55rem;padding:1.05rem .9rem;text-align:center;font-size:.92rem;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:.01em">Tama Matrix Gym</div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.55rem;padding:1.05rem .9rem;text-align:center;font-size:.92rem;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:.01em">Ultrahuman</div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.55rem;padding:1.05rem .9rem;text-align:center;font-size:.92rem;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:.01em">Biopeak</div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.55rem;padding:1.05rem .9rem;text-align:center;font-size:.92rem;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:.01em">Prana</div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.55rem;padding:1.05rem .9rem;text-align:center;font-size:.92rem;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:.01em">Pema</div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.55rem;padding:1.05rem .9rem;text-align:center;font-size:.92rem;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:.01em">Rejuva</div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.55rem;padding:1.05rem .9rem;text-align:center;font-size:.92rem;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:.01em">Tulah</div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.55rem;padding:1.05rem .9rem;text-align:center;font-size:.92rem;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:.01em">Dhun</div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.55rem;padding:1.05rem .9rem;text-align:center;font-size:.92rem;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:.01em">Courtside</div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.55rem;padding:1.05rem .9rem;text-align:center;font-size:.92rem;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:.01em">Potenza</div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.55rem;padding:1.05rem .9rem;text-align:center;font-size:.92rem;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:.01em">Serve Society</div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.55rem;padding:1.05rem .9rem;text-align:center;font-size:.92rem;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:.01em">Aliine</div>
+
+      <!-- Hospitality -->
+      <div class="client-card">
+        <img src="assets/images/alteon/hospitality/ritz_carlton.png" alt="The Ritz-Carlton">
+      </div>
+
+      <!-- Real Estate -->
+      <div class="client-card">
+        <img src="assets/images/alteon/real_estate/dlf.png" alt="DLF">
+      </div>
+
+      <!-- Corporate -->
+      <div class="client-card">
+        <img src="assets/images/alteon/corporate/reliance.png" alt="Reliance">
+      </div>
+
+      <div class="client-card">
+        <img src="assets/images/alteon/corporate/zerodha.png" alt="Zerodha">
+      </div>
+
+      <!-- Fitness -->
+      <div class="client-card">
+        <img src="assets/images/alteon/fitness_wellness/golds_gym.png" alt="Gold's Gym">
+      </div>
+
+      <div class="client-card">
+        <img src="assets/images/alteon/fitness_wellness/dr_patil.png" alt="D Y Patil Healthcare">
+      </div>
+
+      <div class="client-card">
+        <img src="assets/images/alteon/fitness_wellness/mma_matrix.png" alt="MMA Matrix Gym">
+      </div>
+
+      <div class="client-card">
+        <img src="assets/images/alteon/fitness_wellness/ultrahuman.png" alt="Ultrahuman">
+      </div>
+
+      <div class="client-card">
+        <img src="assets/images/alteon/fitness_wellness/biopeak.png" alt="Biopeak">
+      </div>
+
+      <div class="client-card">
+        <img src="assets/images/alteon/fitness_wellness/prana.png" alt="Prana">
+      </div>
+
+      <div class="client-card">
+        <img src="assets/images/alteon/fitness_wellness/oema.png" alt="Oema">
+      </div>
+
+      <div class="client-card">
+        <img src="assets/images/alteon/real_estate/hona.png" alt="Hona">
+      </div>
+
+      <div class="client-card">
+        <img src="assets/images/alteon/fitness_wellness/tulah.png" alt="Tulah">
+      </div>
+
+      <div class="client-card">
+        <img src="assets/images/alteon/fitness_wellness/dhun.png" alt="Dhun">
+      </div>
+
+      <div class="client-card">
+        <img src="assets/images/alteon/fitness_wellness/courtside.png" alt="Courtside">
+      </div>
+
+      <div class="client-card">
+        <img src="assets/images/alteon/fitness_wellness/potenza.png" alt="Potenza">
+      </div>
+
+      <div class="client-card">
+        <img src="assets/images/alteon/social/serve_society.png" alt="Serve Society">
+      </div>
+
+      <div class="client-card">
+        <img src="assets/images/alteon/fitness_wellness/aline.png" alt="Aline">
+      </div>
+
     </div>
   </div>
 </section>
@@ -6652,11 +6909,11 @@ ${footer()}`;
       } else {
         parseUrl();
       }
-      render(); navActive();
+      render(); navActive(); updateSEO();
     });
 
     parseUrl();
-    render(); navActive();
+    render(); navActive(); updateSEO();
   </script>
   <!-- SEO hidden content for crawlers -->
   <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">
@@ -6682,6 +6939,16 @@ ${footer()}`;
         <path
           d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.917 2.722.917.55 0 2.17-.287 2.607-.97.22-.342.22-.657.152-1.017-.1-.517-2.305-1.59-2.75-1.59zm-2.895 7.52c-1.264 0-2.5-.33-3.596-.942l-.25-.143-2.635.688.688-2.57-.17-.28a7.266 7.266 0 0 1-1.117-3.85c0-4.006 3.27-7.272 7.28-7.272A7.269 7.269 0 0 1 23.5 17.63a7.281 7.281 0 0 1-7.286 7.277zm0-16.084c-4.872 0-8.838 3.966-8.838 8.83 0 1.56.41 3.082 1.183 4.434L5.52 27.17l5.56-1.46a8.843 8.843 0 0 0 13.137-7.66c0-4.862-3.966-8.82-8.84-8.82z" />
       </svg></span></a>
+
+  <!-- Prerender.io — serves cached static HTML to social-media / SEO bots -->
+  <script>
+    (function(){
+      // Only load prerender middleware for bots, not real users
+      var defined = 'prerenderReady' in window ? window.prerenderReady : true;
+      window.prerenderReady = defined;
+    })();
+  </script>
+  <script src="https://cdn.prerender.io/prerender.js"></script>
 </body>
 
 </html>
