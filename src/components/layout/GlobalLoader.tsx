@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import logoImg from "@/assets/logo.png";
+// import logoImg from "@/assets/logo.png";
+import logoImg from "@/assets/images/other/img-7edcc2dfb4.png"
 
 export function GlobalLoader() {
     const location = useLocation();
