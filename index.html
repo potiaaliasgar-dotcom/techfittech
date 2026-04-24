@@ -965,6 +965,137 @@
       cursor: pointer;
     }
 
+    /* ─── NEXT LEVEL PRODUCT RANGE ─── */
+    .seg-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.5rem;
+      max-width: 1400px;
+      margin: 4rem auto 0;
+    }
+
+    .seg-card {
+      background: #fff;
+      border: 1px solid #eee;
+      padding: 3.5rem 2rem 3rem;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      position: relative;
+      cursor: pointer;
+      z-index: 1;
+      text-align: left;
+    }
+
+    .seg-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--black);
+      z-index: -1;
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .seg-card:hover {
+      color: #fff;
+      border-color: var(--black);
+      transform: translateY(-15px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+    }
+
+    .seg-card:hover::after {
+      transform: scaleY(1);
+    }
+
+    .seg-card h3 {
+      font-size: 1.6rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.04em;
+      margin-bottom: 1.2rem;
+      line-height: 1;
+      transition: color 0.3s;
+      color: var(--black);
+    }
+
+    .seg-card p {
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: var(--z600);
+      margin-bottom: 2rem;
+      transition: color 0.3s;
+      font-weight: 500;
+    }
+
+    .seg-card:hover h3 {
+      color: #fff;
+    }
+
+    .seg-card:hover p {
+      color: var(--z400);
+    }
+
+    .seg-card .segment-cta {
+      margin-top: auto;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      transition: all 0.3s;
+    }
+
+    .seg-card:hover .segment-cta {
+      color: var(--red);
+      gap: 1.25rem;
+    }
+
+    .seg-card .card-num {
+      position: absolute;
+      top: 1.5rem;
+      left: 2rem;
+      font-size: 4rem;
+      font-weight: 950;
+      color: #f8f8f8;
+      line-height: 1;
+      z-index: -1;
+      transition: color 0.3s;
+      pointer-events: none;
+    }
+
+    .seg-card:hover .card-num {
+      color: rgba(255,255,255,0.03);
+    }
+
+    @media(max-width: 1200px) {
+      .seg-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media(max-width: 850px) {
+      .seg-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width: 550px) {
+      .seg-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+      }
+      .seg-card {
+        padding: 3rem 1.5rem 2.5rem;
+      }
+    }
+
+
     /* ─── CAROUSEL WRAPPER (shared) ─── */
     .carousel-wrap {
       position: relative
@@ -3740,31 +3871,36 @@
       <h2 class="sec-title">WHAT WE BUILD</h2>
       <p class="sec-sub">Five product categories. All designed and fabricated in-house at our Byculla facility.</p>
     </div>
-    <div class="seg-grid" style="margin-top:3rem">
-      <div class="seg-card" onclick="go('mma-cages')" style="cursor:pointer">
-        <h3>MMA Cages &amp; Rings</h3>
+    <div class="seg-grid">
+      <div class="seg-card" onclick="go('mma-cages')">
+        <div class="card-num">01</div>
+        <h3>MMA Cages<br>&amp; Rings</h3>
         <p>Professional UFC-spec cages, boxing rings, and combat sports structures. Custom dimensions, powder-coat finishes, and full installation.</p>
-        <button class="segment-cta" style="margin-top:auto">EXPLORE MMA &rarr;</button>
+        <button class="segment-cta">EXPLORE MMA &rarr;</button>
       </div>
-      <div class="seg-card" onclick="go('crossfit-rigs')" style="cursor:pointer">
-        <h3>CrossFit Rigs</h3>
+      <div class="seg-card" onclick="go('crossfit-rigs')">
+        <div class="card-num">02</div>
+        <h3>CrossFit<br>Rigs</h3>
         <p>Modular pull-up rigs, wall-mounted systems, and full functional training structures for CrossFit boxes and functional training areas.</p>
-        <button class="segment-cta" style="margin-top:auto">EXPLORE RIGS &rarr;</button>
+        <button class="segment-cta">EXPLORE RIGS &rarr;</button>
       </div>
-      <div class="seg-card" onclick="go('free-weights')" style="cursor:pointer">
-        <h3>Free Weights</h3>
+      <div class="seg-card" onclick="go('free-weights')">
+        <div class="card-num">03</div>
+        <h3>Free<br>Weights</h3>
         <p>Custom dumbbells, barbells, kettlebells, weight plates, and storage systems. Manufactured to commercial standards with anti-corrosion finishes.</p>
-        <button class="segment-cta" style="margin-top:auto">EXPLORE WEIGHTS &rarr;</button>
+        <button class="segment-cta">EXPLORE WEIGHTS &rarr;</button>
       </div>
-      <div class="seg-card" onclick="go('padel-pickleball')" style="cursor:pointer">
-        <h3>Padel &amp; Pickleball</h3>
-        <p>Full padel court construction and pickleball court fit-outs. From steel structure to glass panels, netting, and artificial turf &mdash; turnkey delivery.</p>
-        <button class="segment-cta" style="margin-top:auto">EXPLORE COURTS &rarr;</button>
+      <div class="seg-card" onclick="go('padel-pickleball')">
+        <div class="card-num">04</div>
+        <h3>Padel &amp;<br>Pickleball</h3>
+        <p>Full padel court construction and pickleball court fit-outs. From steel structure to glass panels, netting, and artificial turf — turnkey delivery.</p>
+        <button class="segment-cta">EXPLORE COURTS &rarr;</button>
       </div>
-      <div class="seg-card" onclick="go('aqua')" style="cursor:pointer">
-        <h3>Aqua Fitness</h3>
+      <div class="seg-card" onclick="go('aqua')">
+        <div class="card-num">05</div>
+        <h3>Aqua<br>Fitness</h3>
         <p>Underwater treadmills, resistance bikes, and aqua therapy equipment. Corrosion-resistant builds for commercial pool environments.</p>
-        <button class="segment-cta" style="margin-top:auto">EXPLORE AQUA &rarr;</button>
+        <button class="segment-cta">EXPLORE AQUA &rarr;</button>
       </div>
     </div>
   </div>
