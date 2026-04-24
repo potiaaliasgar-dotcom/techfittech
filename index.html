@@ -3251,6 +3251,173 @@
         transform: translateX(250%);
       }
     }
+    /* ─── NEXT LEVEL PRODUCT RANGE ─── */
+    .product-range-sec {
+      position: relative;
+      background: #fafafa;
+      padding: 8rem 1.5rem;
+      overflow: hidden;
+    }
+
+    .range-watermark {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 25vw;
+      font-weight: 950;
+      color: rgba(0,0,0,0.02);
+      text-transform: uppercase;
+      letter-spacing: -0.05em;
+      pointer-events: none;
+      z-index: 0;
+      white-space: nowrap;
+    }
+
+    .seg-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.5rem;
+      max-width: 1400px;
+      margin: 4rem auto 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .seg-card {
+      background: #fff;
+      border: 1px solid #eee;
+      padding: 4rem 2rem 3rem;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      position: relative;
+      cursor: pointer;
+      z-index: 1;
+      text-align: left;
+    }
+
+    .seg-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--black);
+      z-index: -1;
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .seg-card:hover {
+      color: #fff;
+      border-color: var(--black);
+      transform: translateY(-15px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+    }
+
+    .seg-card:hover::after {
+      transform: scaleY(1);
+    }
+
+    .seg-card h3 {
+      font-size: 1.75rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.04em;
+      margin-bottom: 1.2rem;
+      line-height: 1;
+      transition: color 0.3s;
+      color: var(--black);
+    }
+
+    .seg-card p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--z600);
+      margin-bottom: 2rem;
+      transition: color 0.3s;
+      font-weight: 500;
+    }
+
+    .seg-card:hover h3 {
+      color: #fff;
+    }
+
+    .seg-card:hover p {
+      color: var(--z400);
+    }
+
+    .seg-card .segment-cta {
+      margin-top: auto;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      transition: all 0.3s;
+    }
+
+    .seg-card:hover .segment-cta {
+      color: var(--red);
+      gap: 1.25rem;
+    }
+
+    .seg-card .card-num {
+      position: absolute;
+      top: 1.5rem;
+      left: 2rem;
+      font-size: 4.5rem;
+      font-weight: 950;
+      color: #f5f5f5;
+      line-height: 1;
+      z-index: -1;
+      transition: all 0.4s;
+      pointer-events: none;
+    }
+
+    .seg-card:hover .card-num {
+      color: rgba(255,255,255,0.04);
+      transform: translateX(10px);
+    }
+
+    .card-accent {
+      width: 30px;
+      height: 4px;
+      background: var(--red);
+      margin-bottom: 2rem;
+      transition: width 0.4s;
+    }
+
+    .seg-card:hover .card-accent {
+      width: 60px;
+      box-shadow: 0 0 15px var(--red);
+    }
+
+    @media(max-width: 1200px) {
+      .seg-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media(max-width: 850px) {
+      .seg-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width: 550px) {
+      .seg-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+      }
+      .seg-card {
+        padding: 4rem 1.5rem 3rem;
+      }
+    }
   </style>
 </head>
 
@@ -3797,6 +3964,57 @@
       return `<div class="faq-item"><button class="faq-q">${q}<span>+</span></button><div class="faq-a">${a}</div></div>`;
     }
 
+    function renderProductRange() {
+      return `
+<section class="product-range-sec">
+  <div class="range-watermark">CRAFTED</div>
+  <div class="sec-in">
+    <div class="sec-hdr center">
+      <span class="sec-label">Product Range</span>
+      <h2 class="sec-title">WHAT WE BUILD</h2>
+      <p class="sec-sub">Five product categories. All designed and fabricated in-house at our Byculla facility.</p>
+    </div>
+    <div class="seg-grid">
+      <div class="seg-card" onclick="go('mma-cages')">
+        <div class="card-num">01</div>
+        <div class="card-accent"></div>
+        <h3>MMA Cages<br>&amp; Rings</h3>
+        <p>Professional UFC-spec cages, boxing rings, and combat sports structures. Custom dimensions, powder-coat finishes, and full installation.</p>
+        <button class="segment-cta">EXPLORE MMA &rarr;</button>
+      </div>
+      <div class="seg-card" onclick="go('crossfit-rigs')">
+        <div class="card-num">02</div>
+        <div class="card-accent"></div>
+        <h3>CrossFit<br>Rigs</h3>
+        <p>Modular pull-up rigs, wall-mounted systems, and full functional training structures for CrossFit boxes and functional training areas.</p>
+        <button class="segment-cta">EXPLORE RIGS &rarr;</button>
+      </div>
+      <div class="seg-card" onclick="go('free-weights')">
+        <div class="card-num">03</div>
+        <div class="card-accent"></div>
+        <h3>Free<br>Weights</h3>
+        <p>Custom dumbbells, barbells, kettlebells, weight plates, and storage systems. Manufactured to commercial standards with anti-corrosion finishes.</p>
+        <button class="segment-cta">EXPLORE WEIGHTS &rarr;</button>
+      </div>
+      <div class="seg-card" onclick="go('padel-pickleball')">
+        <div class="card-num">04</div>
+        <div class="card-accent"></div>
+        <h3>Padel &amp;<br>Pickleball</h3>
+        <p>Full padel court construction and pickleball court fit-outs. From steel structure to glass panels, netting, and artificial turf — turnkey delivery.</p>
+        <button class="segment-cta">EXPLORE COURTS &rarr;</button>
+      </div>
+      <div class="seg-card" onclick="go('aqua')">
+        <div class="card-num">05</div>
+        <div class="card-accent"></div>
+        <h3>Aqua<br>Fitness</h3>
+        <p>Underwater treadmills, resistance bikes, and aqua therapy equipment. Corrosion-resistant builds for commercial pool environments.</p>
+        <button class="segment-cta">EXPLORE AQUA &rarr;</button>
+      </div>
+    </div>
+  </div>
+</section>`;
+    }
+
     function ctaBand(h, sub, btn, page) {
       return `<div class="cta-band">
   <h2>${h}</h2>
@@ -3898,7 +4116,7 @@
   <div class="sec-in">
     <div class="phero-label">Made in Mumbai</div>
     <h1 style="color:#fff">TECHFIT<br><span style="color:var(--red)">CUSTOM</span></h1>
-    <p class="phero-sub">India's own commercial-grade fitness fabrication. MMA cages, CrossFit rigs, free weights, padel courts, and aqua fitness equipment custom built to your specs.</p>
+    <p class="phero-sub">India's own commercial-grade fitness fabrication. MMA cages, CrossFit rigs, free weights, padel courts, and aqua fitness equipment — custom built to your specs.</p>
     <div style="display:flex;gap:1.5rem;margin-top:2.5rem;flex-wrap:wrap;justify-content:center">
       <button class="btn-red" onclick="go('contact')">Get a Custom Quote</button>
       <button class="btn-outline" onclick="go('mma-cages')">Explore Products</button>
@@ -3906,47 +4124,7 @@
   </div>
 </section>
 
-<section class="sec sec-gray">
-  <div class="sec-in">
-    <div class="sec-hdr center">
-      <span class="sec-label">Product Range</span>
-      <h2 class="sec-title">WHAT WE BUILD</h2>
-      <p class="sec-sub">Five product categories. All designed and fabricated in-house at our Byculla facility.</p>
-    </div>
-    <div class="seg-grid">
-      <div class="seg-card" onclick="go('mma-cages')">
-        <div class="card-num">01</div>
-        <h3>MMA Cages<br>&amp; Rings</h3>
-        <p>Professional UFC-spec cages, boxing rings, and combat sports structures. Custom dimensions, powder-coat finishes, and full installation.</p>
-        <button class="segment-cta">EXPLORE MMA &rarr;</button>
-      </div>
-      <div class="seg-card" onclick="go('crossfit-rigs')">
-        <div class="card-num">02</div>
-        <h3>CrossFit<br>Rigs</h3>
-        <p>Modular pull-up rigs, wall-mounted systems, and full functional training structures for CrossFit boxes and functional training areas.</p>
-        <button class="segment-cta">EXPLORE RIGS &rarr;</button>
-      </div>
-      <div class="seg-card" onclick="go('free-weights')">
-        <div class="card-num">03</div>
-        <h3>Free<br>Weights</h3>
-        <p>Custom dumbbells, barbells, kettlebells, weight plates, and storage systems. Manufactured to commercial standards with anti-corrosion finishes.</p>
-        <button class="segment-cta">EXPLORE WEIGHTS &rarr;</button>
-      </div>
-      <div class="seg-card" onclick="go('padel-pickleball')">
-        <div class="card-num">04</div>
-        <h3>Padel &amp;<br>Pickleball</h3>
-        <p>Full padel court construction and pickleball court fit-outs. From steel structure to glass panels, netting, and artificial turf — turnkey delivery.</p>
-        <button class="segment-cta">EXPLORE COURTS &rarr;</button>
-      </div>
-      <div class="seg-card" onclick="go('aqua')">
-        <div class="card-num">05</div>
-        <h3>Aqua<br>Fitness</h3>
-        <p>Underwater treadmills, resistance bikes, and aqua therapy equipment. Corrosion-resistant builds for commercial pool environments.</p>
-        <button class="segment-cta">EXPLORE AQUA &rarr;</button>
-      </div>
-    </div>
-  </div>
-</section>
+${renderProductRange()}
 
 <section class="sec">
   <div class="sec-in">
@@ -4663,11 +4841,62 @@ ${footer()}
     </div>
   </div>
 </section>
-${ctaBand("Design Your Wellness Ecosystem", "From recovery pods to full hydrothermal circuits — TechFit will spec, supply and install a complete Alteon wellness experience for your facility.", "Talk to Us Today")}
+${renderProductRange()}
 ${footer()}
 `;
     }
 
+
+    function renderProductRange() {
+      return `
+<section class="product-range-sec">
+  <div class="range-watermark">CRAFTED</div>
+  <div class="sec-in">
+    <div class="sec-hdr center">
+      <span class="sec-label">Product Range</span>
+      <h2 class="sec-title">WHAT WE BUILD</h2>
+      <p class="sec-sub">Five product categories. All designed and fabricated in-house at our Byculla facility.</p>
+    </div>
+    <div class="seg-grid">
+      <div class="seg-card" onclick="go('mma-cages')">
+        <div class="card-num">01</div>
+        <div class="card-accent"></div>
+        <h3>MMA Cages<br>&amp; Rings</h3>
+        <p>Professional UFC-spec cages, boxing rings, and combat sports structures. Custom dimensions, powder-coat finishes, and full installation.</p>
+        <button class="segment-cta">EXPLORE MMA &rarr;</button>
+      </div>
+      <div class="seg-card" onclick="go('crossfit-rigs')">
+        <div class="card-num">02</div>
+        <div class="card-accent"></div>
+        <h3>CrossFit<br>Rigs</h3>
+        <p>Modular pull-up rigs, wall-mounted systems, and full functional training structures for CrossFit boxes and functional training areas.</p>
+        <button class="segment-cta">EXPLORE RIGS &rarr;</button>
+      </div>
+      <div class="seg-card" onclick="go('free-weights')">
+        <div class="card-num">03</div>
+        <div class="card-accent"></div>
+        <h3>Free<br>Weights</h3>
+        <p>Custom dumbbells, barbells, kettlebells, weight plates, and storage systems. Manufactured to commercial standards with anti-corrosion finishes.</p>
+        <button class="segment-cta">EXPLORE WEIGHTS &rarr;</button>
+      </div>
+      <div class="seg-card" onclick="go('padel-pickleball')">
+        <div class="card-num">04</div>
+        <div class="card-accent"></div>
+        <h3>Padel &amp;<br>Pickleball</h3>
+        <p>Full padel court construction and pickleball court fit-outs. From steel structure to glass panels, netting, and artificial turf — turnkey delivery.</p>
+        <button class="segment-cta">EXPLORE COURTS &rarr;</button>
+      </div>
+      <div class="seg-card" onclick="go('aqua')">
+        <div class="card-num">05</div>
+        <div class="card-accent"></div>
+        <h3>Aqua<br>Fitness</h3>
+        <p>Underwater treadmills, resistance bikes, and aqua therapy equipment. Corrosion-resistant builds for commercial pool environments.</p>
+        <button class="segment-cta">EXPLORE AQUA &rarr;</button>
+      </div>
+    </div>
+  </div>
+</section>`;
+    }
 
     function renderHome() {
       return `
@@ -5275,7 +5504,7 @@ ${footer()}
     <div class="phero-label">TechFit Custom · Fabricated in Mumbai</div>
     <h1>PROFESSIONAL GRADE<br>MMA CAGES &amp; BOXING RINGS</h1>
     <p class="phero-sub">Floor mount, elevated &amp; competition grade. Custom sizes from 16ft to 30ft. Designed and fabricated in-house for gyms, academies, and arenas across India.</p>
-    <div style="display:flex;gap:1rem;flex-wrap:wrap">
+    <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center">
       <button class="btn-red" onclick="go('contact')">Request Price List</button>
       <button class="btn-outline" onclick="go('contact')">Get A Quote</button>
     </div>
@@ -5368,7 +5597,7 @@ ${footer()}
   </div>
 </div></section>
 
-${ctaBand('Custom-Configured for Your Combat Zone', 'Factory pricing direct from TechFit. No middlemen.', 'Request A Quote', 'contact')}
+${renderProductRange()}
 ${footer()}`;
     }
 
@@ -5379,7 +5608,7 @@ ${footer()}`;
     <div class="phero-label">TechFit Custom · Fabricated in Mumbai</div>
     <h1>HEAVY DUTY<br>FUNCTIONAL TRAINING RIGS</h1>
     <p class="phero-sub">Modular designs that grow with your gym. Wall-mounted or freestanding. Premium 11-gauge structural steel, engineered for the hardest use in commercial environments.</p>
-    <div style="display:flex;gap:1rem;flex-wrap:wrap">
+    <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center">
       <button class="btn-red" onclick="go('contact')">Get Design Consultation</button>
       <button class="btn-outline" onclick="go('contact')">Request Price List</button>
     </div>
@@ -5451,11 +5680,11 @@ ${footer()}`;
     function renderFreeWeights() {
       return `
 <div class="phero" style="background:linear-gradient(135deg,#18181B 0%,#27272A 40%,#DC2626 120%)">
-  <div class="sec-in">
+  <div class="sec-in" style="text-align:center">
     <div class="phero-label">TechFit Commercial · Wholesale Pricing</div>
     <h1>COMMERCIAL FREE WEIGHTS<br>&amp; STRENGTH EQUIPMENT</h1>
-    <p class="phero-sub">Factory-direct pricing for gym owners and facility operators. Hex dumbbells, Olympic plates, power racks, deadlift platforms, and competition bars. Bulk order discounts available.</p>
-    <div style="display:flex;gap:1rem;flex-wrap:wrap">
+    <p class="phero-sub" style="margin-left:auto;margin-right:auto">Factory-direct pricing for gym owners and facility operators. Hex dumbbells, Olympic plates, power racks, deadlift platforms, and competition bars. Bulk order discounts available.</p>
+    <div style="display:flex;gap:1.5rem;margin-top:2.5rem;flex-wrap:wrap;justify-content:center">
       <button class="btn-red" onclick="go('contact')">Get A Quote</button>
       <button class="btn-outline" onclick="go('contact')">Bulk Order Enquiry</button>
     </div>
@@ -5608,7 +5837,7 @@ ${footer()}`;
   </div>
 </div></section>
 
-${ctaBand('Best-in-Class Pricing for Gym Owners', 'Factory-direct wholesale. Bulk order discounts. Custom branding.', 'Request Wholesale Quote', 'contact')}
+${renderProductRange()}
 ${footer()}`;
     }
 
