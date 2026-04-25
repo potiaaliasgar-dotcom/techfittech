@@ -55,9 +55,10 @@
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-  <link rel="preload" as="image" href="assets/images/other/img-7edcc2dfb4.png">
+    rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="preload" as="image" href="assets/images/other/img-7edcc2dfb4.png" fetchpriority="high">
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
 {
@@ -135,11 +136,12 @@
       --z900: #18181B;
       --z800: #27272A;
       --z700: #3F3F46;
-      --z600: #52525B;
-      --z500: #71717A;
-      --z400: #A1A1AA;
-      --z300: #D4D4D8;
-      --z200: #E4E4E7;
+      --z700: #3F3F46;
+      --z600: #4B4B52;
+      --z500: #5F5F66;
+      --z400: #71717A;
+      --z300: #A1A1AA;
+      --z200: #D4D4D8;
       --z100: #F4F4F5;
       --z50: #FAFAFA;
       --white: #FFFFFF;
@@ -443,7 +445,7 @@
 
     .nav-mob button {
       display: block;
-      padding: .7rem 1.5rem;
+      padding: .9rem 1.5rem;
       font-size: 12px;
       font-weight: 800;
       text-transform: uppercase;
@@ -2323,6 +2325,14 @@
       background: var(--z50);
       padding: 1rem
     }
+    .brand-logo-name {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--z600);
+      opacity: .85;
+    }
 
     .modal-body {
       padding: 1.5rem
@@ -3435,7 +3445,7 @@
   <!-- End Google Tag Manager (noscript) -->
   <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
-      <h1>TechFit | Gym Setup, Equipment &amp; Wellness Solutions Mumbai</h1>
+      <h2>TechFit | Gym Setup, Equipment &amp; Wellness Solutions Mumbai</h2>
       <p>India's gym, wellness &amp; sports infrastructure partner with 300+ gyms delivered. Distributor for BH Fitness,
         Tunturi, California, and Alteon Wellness. Based in Mumbai.</p>
       <p><strong>Services:</strong> Gym design &amp; layout, commercial equipment supply, custom fabrication of
@@ -4904,7 +4914,7 @@ ${footer()}
   <div class="hero-bg"></div>
   <div class="hero-glow"></div>
   <div class="hero-in">
-    <h1>GYM SETUP, EQUIPMENT<br><em>&amp; WELLNESS SOLUTIONS</em><br>MUMBAI</h1>
+    <h1 id="main-title">GYM SETUP, EQUIPMENT<br><em>&amp; WELLNESS SOLUTIONS</em><br>MUMBAI</h1>
     <p class="hero-sub">India's gym, wellness &amp; sports infrastructure partner. 300+ gyms delivered. Distributor for BH Fitness, Tunturi, California, Alteon Wellness.</p>
     <div class="hero-btns">
       <button class="btn-red" onclick="go('contact')">Get a Free Gym Consultation</button>
@@ -5019,24 +5029,24 @@ ${footer()}
   <div class="sec-in">
     <div class="brands-strip-label">Official Partners &amp; Brands We Supply</div>
     <div class="brands-logos">
-      <div class="brand-logo-box" onclick="go('bh-fitness')">
+      <a href="/bh-fitness" class="brand-logo-box" onclick="event.preventDefault();go('bh-fitness')">
         <img src="${CLIENT_LOGOS['BH Fitness Brand']}" alt="BH Fitness" style="max-height:44px;max-width:130px;object-fit:contain;filter:brightness(0) invert(1)" loading="lazy">
         <div class="brand-logo-name" style="margin-top:.4rem">Europe's No.1</div>
-      </div>
-      <div class="brand-logo-box" onclick="go('tunturi')">
+      </a>
+      <a href="/tunturi" class="brand-logo-box" onclick="event.preventDefault();go('tunturi')">
         <img src="${CLIENT_LOGOS['Tunturi Brand']}" alt="Tunturi" style="max-height:36px;max-width:130px;object-fit:contain;filter:brightness(0) invert(1)" loading="lazy">
         <div class="brand-logo-name" style="margin-top:.4rem">Finnish Quality Since 1922</div>
-      </div>
-      <div class="brand-logo-box" onclick="go('california-fitness')">
+      </a>
+      <a href="/california-fitness" class="brand-logo-box" onclick="event.preventDefault();go('california-fitness')">
         <img src="${CLIENT_LOGOS['California Brand']}" alt="California Fitness" style="max-height:44px;max-width:140px;object-fit:contain;filter:brightness(0) invert(1)" loading="lazy">
         <div class="brand-logo-name" style="margin-top:.4rem">Commercial Grade</div>
-      </div>
-      <div class="brand-logo-box" onclick="go('techfit')"><img src="assets/images/other/img-7edcc2dfb4.png" alt="TechFit" style="max-height:52px;max-width:160px;object-fit:contain;background:#fff;padding:.35rem .6rem;border-radius:.25rem" loading="lazy">
+      </a>
+      <a href="/techfit" class="brand-logo-box" onclick="event.preventDefault();go('techfit')"><img src="assets/images/other/img-7edcc2dfb4.png" alt="TechFit" style="max-height:52px;max-width:160px;object-fit:contain;background:#fff;padding:.35rem .6rem;border-radius:.25rem" loading="lazy">
         <div class="brand-logo-name" style="margin-top:.4rem">TechFit Custom · Made in Mumbai</div>
-      </div>
-      <div class="brand-logo-box" onclick="go('alteon')"><div style="background:#fff;padding:.5rem .8rem;border-radius:.2rem;display:inline-block"><img src="${CLIENT_LOGOS['Alteon']}" alt="Alteon" style="max-height:34px;max-width:120px;object-fit:contain;display:block" loading="lazy"></div>
+      </a>
+      <a href="/alteon" class="brand-logo-box" onclick="event.preventDefault();go('alteon')"><div style="background:#fff;padding:.5rem .8rem;border-radius:.2rem;display:inline-block"><img src="${CLIENT_LOGOS['Alteon']}" alt="Alteon" style="max-height:34px;max-width:120px;object-fit:contain;display:block" loading="lazy"></div>
         <div class="brand-logo-name" style="margin-top:.4rem">Wellness &amp; Recovery</div>
-      </div>
+      </a>
     </div>
   </div>
 </div>
@@ -5049,33 +5059,33 @@ ${footer()}
       <p class="sec-sub">Whether you're a gym owner, real estate developer, school, hotel or wellness operator — we configure the right solution for your space, budget, and users.</p>
     </div>
     <div class="segments">
-      <div class="segment" onclick="go('for-gyms')">
+      <a href="/for-gyms" class="segment" onclick="event.preventDefault();go('for-gyms')">
         <img class="segment-img" src="assets/images/other/img-05cf274f17.jpg" alt="Gyms & Studios" loading="lazy">
         <div class="segment-body">
           <div class="segment-tag">Commercial</div>
           <h3>For Gyms &amp; Studios</h3>
           <p>Full-service gym fit-outs for standalone gyms, boutique studios, CrossFit boxes, and MMA academies.</p>
-          <button class="segment-cta">EXPLORE SOLUTIONS →</button>
+          <div class="segment-cta">EXPLORE SOLUTIONS →</div>
         </div>
-      </div>
-      <div class="segment" onclick="go('for-developers')">
+      </a>
+      <a href="/for-developers" class="segment" onclick="event.preventDefault();go('for-developers')">
         <img class="segment-img" src="assets/images/other/img-944651fec5.jpg" alt="Developers" loading="lazy">
         <div class="segment-body">
           <div class="segment-tag">Real Estate</div>
           <h3>For Developers &amp; Builders</h3>
           <p>Turnkey gym amenity packages for residential towers, co-living spaces, and mixed-use developments.</p>
-          <button class="segment-cta">EXPLORE SOLUTIONS →</button>
+          <div class="segment-cta">EXPLORE SOLUTIONS →</div>
         </div>
-      </div>
-      <div class="segment" onclick="go('for-schools')">
+      </a>
+      <a href="/for-schools" class="segment" onclick="event.preventDefault();go('for-schools')">
         <img class="segment-img" src="assets/images/other/img-9dedf4a699.jpg" alt="Schools" loading="lazy">
         <div class="segment-body">
           <div class="segment-tag">Institutions</div>
           <h3>For Schools &amp; Institutions</h3>
           <p>Age-appropriate fitness and sports infrastructure for schools, colleges, defence, and government facilities.</p>
-          <button class="segment-cta">EXPLORE SOLUTIONS →</button>
+          <div class="segment-cta">EXPLORE SOLUTIONS →</div>
         </div>
-      </div>
+      </a>
       <div class="segment" onclick="go('for-hotels')">
         <img class="segment-img" src="assets/images/other/img-d53678c1df.png" alt="Hotels & Corporates" loading="lazy">
         <div class="segment-body">
@@ -5502,7 +5512,7 @@ ${footer()}
 <div class="phero" style="background-image:linear-gradient(to bottom,rgba(9,9,11,0.85),rgba(9,9,11,0.92)),url('assets/images/other/seg-e74ca4429e.jpg');background-size:cover;background-position:center">
   <div class="sec-in">
     <div class="phero-label">TechFit Custom · Fabricated in Mumbai</div>
-    <h1>PROFESSIONAL GRADE<br>MMA CAGES &amp; BOXING RINGS</h1>
+    <h2>PROFESSIONAL GRADE<br>MMA CAGES &amp; BOXING RINGS</h2>
     <p class="phero-sub">Floor mount, elevated &amp; competition grade. Custom sizes from 16ft to 30ft. Designed and fabricated in-house for gyms, academies, and arenas across India.</p>
     <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center">
       <button class="btn-red" onclick="go('contact')">Request Price List</button>
@@ -5606,7 +5616,7 @@ ${footer()}`;
 <div class="phero" style="background-image:linear-gradient(to bottom,rgba(9,9,11,0.85),rgba(9,9,11,0.92)),url('assets/images/other/seg-d37a340a28.jpg');background-size:cover;background-position:center">
   <div class="sec-in">
     <div class="phero-label">TechFit Custom · Fabricated in Mumbai</div>
-    <h1>HEAVY DUTY<br>FUNCTIONAL TRAINING RIGS</h1>
+    <h2>HEAVY DUTY<br>FUNCTIONAL TRAINING RIGS</h2>
     <p class="phero-sub">Modular designs that grow with your gym. Wall-mounted or freestanding. Premium 11-gauge structural steel, engineered for the hardest use in commercial environments.</p>
     <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center">
       <button class="btn-red" onclick="go('contact')">Get Design Consultation</button>
@@ -5682,7 +5692,7 @@ ${footer()}`;
 <div class="phero" style="background:linear-gradient(135deg,#18181B 0%,#27272A 40%,#DC2626 120%)">
   <div class="sec-in" style="text-align:center">
     <div class="phero-label">TechFit Commercial · Wholesale Pricing</div>
-    <h1>COMMERCIAL FREE WEIGHTS<br>&amp; STRENGTH EQUIPMENT</h1>
+    <h2>COMMERCIAL FREE WEIGHTS<br>&amp; STRENGTH EQUIPMENT</h2>
     <p class="phero-sub" style="margin-left:auto;margin-right:auto">Factory-direct pricing for gym owners and facility operators. Hex dumbbells, Olympic plates, power racks, deadlift platforms, and competition bars. Bulk order discounts available.</p>
     <div style="display:flex;gap:1.5rem;margin-top:2.5rem;flex-wrap:wrap;justify-content:center">
       <button class="btn-red" onclick="go('contact')">Get A Quote</button>
@@ -5846,7 +5856,7 @@ ${footer()}`;
 <div class="phero">
   <div class="sec-in" style="text-align:center">
     <div class="phero-label">TechFit Sports Infrastructure</div>
-    <h1>PROFESSIONAL GRADE<br>PADEL &amp; PICKLEBALL COURTS</h1>
+    <h2>PROFESSIONAL GRADE<br>PADEL &amp; PICKLEBALL COURTS</h2>
     <p class="phero-sub" style="margin-left:auto;margin-right:auto">Engineered for performance, durability, and playability. Turnkey indoor and outdoor court solutions for clubs, academies, residential projects, and commercial sports facilities.</p>
     <div style="display:flex;gap:1.5rem;margin-top:2.5rem;flex-wrap:wrap;justify-content:center">
       <button class="btn-red" onclick="go('contact')">Request Price List</button>
@@ -5922,7 +5932,7 @@ ${footer()}`;
 <div class="phero" style="background:linear-gradient(135deg,#09090B 0%,#0369a1 50%,#06b6d4 110%)">
   <div class="sec-in" style="text-align:center">
     <div class="phero-label">TechFit Aqua · SS316 Marine Grade</div>
-    <h1>TECHFIT AQUA<br>FITNESS EQUIPMENT</h1>
+    <h2>TECHFIT AQUA<br>FITNESS EQUIPMENT</h2>
     <p class="phero-sub" style="margin-left:auto;margin-right:auto">Premium SS316 marine-grade underwater stainless steel fitness equipment. Treadmills, bikes, and ellipticals engineered for aquatic training, rehabilitation, and luxury wellness facilities.</p>
     <div style="display:flex;gap:1.5rem;margin-top:2.5rem;flex-wrap:wrap;justify-content:center">
       <button class="btn-red" onclick="go('contact')">Request Price List</button>
@@ -6031,7 +6041,7 @@ ${footer()}`;
 <div class="phero">
   <div class="sec-in">
     <div class="phero-label">Who We Help &amp; What We Do</div>
-    <h1>SOLUTIONS &amp; SERVICES</h1>
+    <h2>SOLUTIONS &amp; SERVICES</h2>
     <p class="phero-sub">We serve gyms, real estate developers, schools, hotels, corporates and wellness operators. For every client type we offer the same thing — a complete, end-to-end gym, wellness &amp; sports setup under one roof.</p>
   </div>
 </div>
@@ -6199,7 +6209,7 @@ ${footer()}`;
 <div class="phero">
   <div class="sec-in">
     <div class="phero-label">Our Portfolio</div>
-    <h1>COMPLETED PROJECTS</h1>
+    <h2>COMPLETED PROJECTS</h2>
     <p class="phero-sub">300+ gym setups and sports facilities delivered across India. Each project is custom-configured for the client's space, brand, and budget.</p>
   </div>
 </div>
@@ -6282,7 +6292,7 @@ ${footer()}`;
 <div class="phero">
   <div class="sec-in">
     <div class="phero-label">Wellness Solutions</div>
-    <h1>INTEGRATED WELLNESS INFRASTRUCTURE</h1>
+    <h2>INTEGRATED WELLNESS INFRASTRUCTURE</h2>
     <p class="phero-sub">From longevity labs in luxury hotels to recovery suites in residential towers &mdash; we design, supply and install the full wellness tech stack for India&rsquo;s most ambitious spaces.</p>
   </div>
 </div>
@@ -6379,7 +6389,7 @@ ${footer()}`;
 <div class="phero">
   <div class="sec-in">
     <div class="phero-label">About TechFit</div>
-    <h1>ABOUT US</h1>
+    <h2>ABOUT US</h2>
     <p class="phero-sub">From a Mumbai-based custom fabrication workshop to India&#x2019;s one-stop gym, wellness and sports infrastructure partner.</p>
   </div>
 </div>
@@ -6617,7 +6627,7 @@ ${footer()}
 <div class="phero">
   <div class="sec-in">
     <div class="phero-label">TechFit Insights</div>
-    <h1>BLOG &amp; CASE STUDIES</h1>
+    <h2>BLOG &amp; CASE STUDIES</h2>
     <p class="phero-sub">Stories from the workshop floor and the arena. Combat-sports installations, gym-fit-out playbooks, and what we&#x2019;ve learned building 300+ facilities across India.</p>
   </div>
 </div>
@@ -6865,7 +6875,7 @@ ${footer()}
 <div class="phero" style="background:linear-gradient(135deg,#09090b 55%,#1a0a00)">
   <div class="sec-in">
     <div class="phero-label">TechFit Flooring &middot; Commercial Grade</div>
-    <h1>GYM RUBBER FLOORING<br>&amp; SPORTS SURFACES</h1>
+    <h2>GYM RUBBER FLOORING<br>&amp; SPORTS SURFACES</h2>
     <p class="phero-sub">Heavy-duty rubber floor tiles engineered for commercial gyms, CrossFit boxes, free-weight zones, functional training floors and sports facilities. 10 mm to 50 mm thickness, interlocking or seamless installation.</p>
     <div style="display:flex;gap:1rem;flex-wrap:wrap">
       <button class="btn-red" onclick="go('contact')">Request Flooring Quote</button>
@@ -7089,7 +7099,7 @@ ${footer()}
 <div class="phero">
   <div class="sec-in">
     <div class="phero-label">Free Consultation</div>
-    <h1>PLAN YOUR FACILITY</h1>
+    <h2>PLAN YOUR FACILITY</h2>
     <p class="phero-sub">Tell us about your project. We'll assess your space, recommend the right equipment and layout, and give you a detailed proposal — at no cost.</p>
   </div>
 </div>

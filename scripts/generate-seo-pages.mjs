@@ -164,6 +164,14 @@ function escapeHtml(str) {
   return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
+function minifyHtml(html) {
+  return html
+    .replace(/<!--[\s\S]*?-->/g, '') // Remove comments
+    .replace(/>\s+</g, '><') // Remove whitespace between tags
+    .replace(/\s{2,}/g, ' ') // Collapse multiple spaces
+    .trim();
+}
+
 function generatePage(html, route, seo) {
   const fullUrl = BASE + '/' + route;
   let out = html;
@@ -179,7 +187,7 @@ function generatePage(html, route, seo) {
   out = out.replace(/(<meta\s+name="twitter:description"\s+content=")[^"]*("\s+id="tw-description")/s, `$1${escapeHtml(seo.desc)}$2`);
   out = out.replace(/(<meta\s+name="twitter:image"\s+content=")[^"]*("\s+id="tw-image")/, `$1${seo.img}$2`);
 
-  return out;
+  return minifyHtml(out);
 }
 
 function copyRecursiveSync(src, dest) {
@@ -231,6 +239,10 @@ for (const [route, seo] of Object.entries(SEO_MAP)) {
   fs.writeFileSync(outFile, html, 'utf8');
   count++;
 }
+
+// 5. Minify and write main index.html to dist
+const minifiedRoot = minifyHtml(sourceHtml);
+fs.writeFileSync(path.join(DIST, 'index.html'), minifiedRoot, 'utf8');
 
 console.log(`\n🎉 Build complete! Generated ${count} route-specific pages in 'dist/'.`);
 
