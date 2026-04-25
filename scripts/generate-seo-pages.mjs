@@ -166,9 +166,9 @@ function escapeHtml(str) {
 
 function minifyHtml(html) {
   return html
-    .replace(/<!--[\s\S]*?-->/g, '') // Remove comments
+    .replace(/<!--[\s\S]*?-->/g, '') // Remove HTML comments
     .replace(/>\s+</g, '><') // Remove whitespace between tags
-    .replace(/\s{2,}/g, ' ') // Collapse multiple spaces
+    .replace(/[ \t]{2,}/g, ' ') // Collapse multiple horizontal spaces only
     .trim();
 }
 
