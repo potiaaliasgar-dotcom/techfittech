@@ -5564,7 +5564,7 @@ ${footer()}
           <h3>Send an Enquiry</h3>
           <input type="text" id="cf-name" name="name" placeholder="Your Name / Gym Name *">
           <input type="tel" id="cf-phone" name="phone" placeholder="Phone Number *">
-          <input type="email" id="cf-email" name="email" placeholder="Email Address">
+          <input type="email" id="cf-email" name="email" placeholder="Email Address *">
           <select id="cf-type" name="facility_type">
             <option value="">Type of Facility *</option>
             <option>Commercial Gym / Studio</option>
@@ -5701,34 +5701,73 @@ ${footer()}`;
       document.getElementById('modal').classList.remove('open');
     }
     function submitContact() {
+      const btn = document.querySelector('.contact-form button[type="submit"]');
+      const originalText = btn.textContent;
+
       const name = document.getElementById('cf-name').value.trim();
-      const phone = document.getElementById('cf-phone').value.trim();
-      if (!name || !phone) { alert('Please enter your name and phone number.'); return; }
+      let phone = document.getElementById('cf-phone').value.trim();
+      phone = phone.replace(/\D/g, '').slice(0, 10);
+
+      const email = document.getElementById('cf-email').value.trim();
+      const city = document.getElementById('cf-location').value.trim();
+      const type = document.getElementById('cf-type').value;
+      const msg = document.getElementById('cf-msg').value.trim();
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email || !emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      if (!name || phone.length !== 10) {
+        alert('Please enter your name and a valid 10-digit mobile number.');
+        return;
+      }
+
+      if (!type) {
+        alert('Please select the Type of Facility.');
+        return;
+      }
+
+      if (!city) {
+        alert('Please enter your City / Location.');
+        return;
+      }
+
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
       const data = {
-        name, phone,
-        email: document.getElementById('cf-email').value.trim(),
-        facility_type: document.getElementById('cf-type').value,
-        location: document.getElementById('cf-location').value.trim(),
-        message: document.getElementById('cf-msg').value.trim(),
-        _subject: 'TechFit Website Enquiry',
-        _template: 'table'
+        name: name,
+        email: email,
+        phone: phone,
+        gymName: type,
+        city: city,
+        requirement: type,
+        budget: "Not specified",
+        message: msg || "Not provided"
       };
-      fetch('https://formsubmit.co/ajax/techfitpa@gmail.com', {
+
+      fetch('https://techfit-backend.vercel.app/api/gmail-contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
       })
-        .then(r => r.json())
+        .then(r => r.json().then(res => ({ status: r.status, ok: r.ok, body: res })))
         .then(res => {
-          if (res.success === 'true' || res.success === true) {
+          if (res.ok) {
             toast('\u2713 Enquiry sent! We will call you within one business day.');
             ['cf-name', 'cf-phone', 'cf-email', 'cf-location', 'cf-msg'].forEach(id => document.getElementById(id).value = '');
             document.getElementById('cf-type').selectedIndex = 0;
           } else {
-            alert('Sorry, something went wrong. Please WhatsApp us on +91 98201 66910.');
+            alert('Our factory mail server is currently experiencing issues. Please WhatsApp us on +91 98201 66910.');
           }
         })
-        .catch(() => alert('Network error. Please WhatsApp us on +91 98201 66910.'));
+        .catch(() => alert('Our factory mail server is currently experiencing issues. Please WhatsApp us on +91 98201 66910.'))
+        .finally(() => {
+          btn.textContent = originalText;
+          btn.disabled = false;
+        });
     }
     function toast(msg) {
       const t = document.getElementById('toast');
