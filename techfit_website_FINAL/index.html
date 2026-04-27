@@ -2462,8 +2462,10 @@
         <div class="modal-specs" id="m-specs"></div>
       </div>
       <div class="modal-footer">
-        <input class="m-inp" id="m-inp" type="text" placeholder="Your name / gym name">
-        <button class="btn-red" onclick="submitEnq(this)">Send Enquiry</button>
+        <button class="btn-red" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; background-color: #25D366; color: white;" onclick="submitEnq()">
+          <svg style="width:18px;height:18px" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.917 2.722.917.55 0 2.17-.287 2.607-.97.22-.342.22-.657.152-1.017-.1-.517-2.305-1.59-2.75-1.59zm-2.895 7.52c-1.264 0-2.5-.33-3.596-.942l-.25-.143-2.635.688.688-2.57-.17-.28a7.266 7.266 0 0 1-1.117-3.85c0-4.006 3.27-7.272 7.28-7.272A7.269 7.269 0 0 1 23.5 17.63a7.281 7.281 0 0 1-7.286 7.277zm0-16.084c-4.872 0-8.838 3.966-8.838 8.83 0 1.56.41 3.082 1.183 4.434L5.52 27.17l5.56-1.46a8.843 8.843 0 0 0 13.137-7.66c0-4.862-3.966-8.82-8.84-8.82z"/></svg>
+          Enquire on WhatsApp
+        </button>
       </div>
     </div>
   </div>
@@ -5576,7 +5578,7 @@ ${footer()}
             <option>Wellness / Recovery / Longevity Centre</option>
             <option>Other</option>
           </select>
-          <input type="text" id="cf-location" name="location" placeholder="City / Location">
+          <input type="text" id="cf-location" name="location" placeholder="City / Location *">
           <textarea id="cf-msg" name="message" rows="4" placeholder="Tell us about your requirements — size of space, budget range, preferred brands, timeline…"></textarea>
           <input type="hidden" name="_subject" value="TechFit Website Enquiry">
           <input type="hidden" name="_template" value="table">
@@ -5636,7 +5638,6 @@ ${footer()}`;
       }
       sp.innerHTML = specsHtml;
 
-      document.getElementById('m-inp').value = '';
       document.getElementById('modal').classList.add('open');
     }
 
@@ -5695,10 +5696,12 @@ ${footer()}`;
     function openEnq(slug, brandName) { openModal(slug, brandName) }
     function closeModal(e) { if (e.target === document.getElementById('modal')) closeModalBtn() }
     function closeModalBtn() { document.getElementById('modal').classList.remove('open') }
-    function submitEnq(btn) {
+    function submitEnq() {
       const prod = document.getElementById('m-title').textContent;
-      toast('✓ Enquiry sent for ' + prod.substring(0, 35) + '…');
-      document.getElementById('modal').classList.remove('open');
+      const brand = document.getElementById('m-brand').textContent;
+      const text = encodeURIComponent(`Hi TechFit! I'd like to enquire about the product: ${prod} (${brand})`);
+      window.open(`https://wa.me/919820166910?text=${text}`, '_blank');
+      closeModalBtn();
     }
     function submitContact() {
       const btn = document.querySelector('.contact-form button[type="submit"]');
