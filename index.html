@@ -5,6 +5,15 @@
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5PQVLK3D');</script>
   <!-- End Google Tag Manager -->
+  <!-- Google Ads gtag.js -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17959203178"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17959203178');
+  </script>
+  <!-- End Google Ads gtag.js -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="SpipFTL09MXQT_LPxdREwjVusc0znYaMKOhnknn_lsc" />
@@ -7322,6 +7331,15 @@ ${footer()}`;
         const result = await response.json();
         if (!response.ok) throw new Error(result.error || "Failed to send request.");
         toast('\u2713 Enquiry sent! We will call you within one business day.');
+        // Fire Google Ads "Submit Lead Form" conversion
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-17959203178/ObCTCPuJmv0bEOrizvNC',
+            'value': 1.0,
+            'currency': 'INR'
+          });
+          console.log('[TechFit] Google Ads conversion fired: Submit Lead Form');
+        }
         ['cf-name', 'cf-phone', 'cf-email', 'cf-location', 'cf-msg'].forEach(id => document.getElementById(id).value = '');
         document.getElementById('cf-type').selectedIndex = 0;
       } catch (error) {

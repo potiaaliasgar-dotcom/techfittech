@@ -14,6 +14,13 @@ import {
 
 import heroBg from "@/assets/pickle-and-Paddle-Ball-banner-image.webp";
 
+// Declare gtag on window for TypeScript
+declare global {
+    interface Window {
+        gtag?: (...args: any[]) => void;
+    }
+}
+
 export function GetAQuote() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
@@ -55,6 +62,16 @@ export function GetAQuote() {
             }
 
             setSubmitted(true);
+
+            // Fire Google Ads "Submit Lead Form" conversion
+            if (window.gtag) {
+                window.gtag('event', 'conversion', {
+                    'send_to': 'AW-17959203178/ObCTCPuJmv0bEOrizvNC',
+                    'value': 1.0,
+                    'currency': 'INR'
+                });
+                console.log('[TechFit] Google Ads conversion fired: Submit Lead Form');
+            }
         } catch (error: any) {
             console.error("Submission error:", error);
             alert(error.message || "Our factory mail server is currently experiencing issues. Please try again later.");
