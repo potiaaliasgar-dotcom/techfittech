@@ -7271,6 +7271,15 @@ ${footer()}`;
       const prod = document.getElementById('m-title').textContent;
       const brand = document.getElementById('m-brand').textContent;
       const text = encodeURIComponent(`Hi TechFit! I'd like to enquire about the product: ${prod} (${brand})`);
+      // Fire Google Ads conversion for WhatsApp enquiry
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17959203178/ObCTCPuJmv0bEOrizvNC',
+          'value': 1.0,
+          'currency': 'INR'
+        });
+        console.log('[TechFit] Google Ads conversion fired: WhatsApp Enquiry (Product)');
+      }
       window.open(`https://wa.me/919820166910?text=${text}`, '_blank');
       closeModalBtn();
     }
@@ -7398,6 +7407,18 @@ ${footer()}`;
 
     parseUrl();
     render(); navActive(); updateSEO();
+    // Global WhatsApp click tracking — fires conversion on any wa.me link click
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[href*="wa.me"]');
+      if (link && typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17959203178/ObCTCPuJmv0bEOrizvNC',
+          'value': 1.0,
+          'currency': 'INR'
+        });
+        console.log('[TechFit] Google Ads conversion fired: WhatsApp Click');
+      }
+    });
   </script>
   <!-- SEO hidden content for crawlers -->
   <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">

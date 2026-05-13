@@ -21,6 +21,15 @@ export function Layout() {
                     rel="noreferrer"
                     className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg transition-transform hover:scale-110 flex items-center justify-center"
                     aria-label="Contact on WhatsApp"
+                    onClick={() => {
+                        if (window.gtag) {
+                            window.gtag('event', 'conversion', {
+                                'send_to': 'AW-17959203178/ObCTCPuJmv0bEOrizvNC',
+                                'value': 1.0,
+                                'currency': 'INR'
+                            });
+                        }
+                    }}
                 >
                     <MessageCircle className="h-6 w-6" />
                 </a>
