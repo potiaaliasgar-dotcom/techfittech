@@ -98,7 +98,7 @@ export function MMACages() {
                     "name": "Who are the best MMA cage manufacturers in India?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "TechFit (Techfit Health Fitness), based in Mumbai, is widely regarded as one of India's best MMA cage manufacturers. They are the official cage supplier for Matrix Fight Night (MFN), Super Fight League (SFL), and Kumite 1 League, India's top MMA promotions."
+                        "text": "TechFit (Techfit Health Fitness Private Limited), based in Mumbai, is widely regarded as one of India's best MMA cage manufacturers. They are the official cage supplier for Matrix Fight Night (MFN), Super Fight League (SFL), and Kumite 1 League, India's top MMA promotions."
                     }
                 },
                 {
@@ -153,7 +153,7 @@ export function MMACages() {
             },
             "manufacturer": {
                 "@type": "Organization",
-                "name": "Techfit Health Fitness",
+                "name": "Techfit Health Fitness Private Limited",
                 "url": "https://www.techfittech.com/",
                 "address": {
                     "@type": "PostalAddress",
