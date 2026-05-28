@@ -194,6 +194,13 @@ const SCHEMAS = {
         "description": "Custom-manufactured MMA cages and boxing rings for training academies and professional events. Floor-mount, podium/elevated, and hexagon configurations. Sizes from 16ft to 30ft. 4mm+ heavy-gauge steel, anti-slip canvas, high-density foam padding.",
         "brand": { "@type": "Brand", "name": "TechFit" },
         "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/get-a-quote", "seller": { "@type": "Organization", "name": "TechFit" } }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.techfittech.com/" },
+          { "@type": "ListItem", "position": 2, "name": "MMA Cages", "item": "https://www.techfittech.com/mma-cages" }
+        ]
       }
     ]
   },
@@ -220,6 +227,13 @@ const SCHEMAS = {
         "description": "Heavy-duty modular CrossFit rigs constructed from 11-gauge structural steel. Compatible with J-Cups, spotter arms, dip bars, landmines, and wall ball targets.",
         "brand": { "@type": "Brand", "name": "TechFit" },
         "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/get-a-quote", "seller": { "@type": "Organization", "name": "TechFit" } }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.techfittech.com/" },
+          { "@type": "ListItem", "position": 2, "name": "CrossFit Rigs", "item": "https://www.techfittech.com/crossfit-rigs" }
+        ]
       }
     ]
   },
@@ -246,6 +260,13 @@ const SCHEMAS = {
         "description": "High-durability commercial free weight packages including knurled Olympic barbells, high-impact virgin rubber bumper plates, custom rubber hex dumbbells, power racks, and platforms.",
         "brand": { "@type": "Brand", "name": "TechFit" },
         "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/get-a-quote", "seller": { "@type": "Organization", "name": "TechFit" } }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.techfittech.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Free Weights", "item": "https://www.techfittech.com/free-weights" }
+        ]
       }
     ]
   },
@@ -272,6 +293,13 @@ const SCHEMAS = {
         "description": "ITF-compliant panoramic padel court construction featuring structural high-gauge steel columns, tempered safety glass, monofilament padel turf, and LED lighting.",
         "brand": { "@type": "Brand", "name": "TechFit" },
         "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/get-a-quote", "seller": { "@type": "Organization", "name": "TechFit" } }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.techfittech.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Padel & Pickleball", "item": "https://www.techfittech.com/padel-pickleball" }
+        ]
       }
     ]
   },
@@ -298,8 +326,262 @@ const SCHEMAS = {
         "description": "SS316 marine-grade rust-resistant underwater treadmill with manual belt operation, shock-absorbing belt design, and 160kg user capacity.",
         "brand": { "@type": "Brand", "name": "TechFit" },
         "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/get-a-quote", "seller": { "@type": "Organization", "name": "TechFit" } }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.techfittech.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Aqua Fitness", "item": "https://www.techfittech.com/aqua" }
+        ]
       }
     ]
+  },
+  'gym-flooring': {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.techfittech.com/gym-flooring#webpage",
+        "url": "https://www.techfittech.com/gym-flooring",
+        "name": "Gym Flooring India | TechFit",
+        "description": "Professional rubber tiles, interlocking flooring, synthetic turf, and shock-absorbing rubber rolls for commercial gym fitouts and weight rooms in India."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.techfittech.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Gym Flooring", "item": "https://www.techfittech.com/gym-flooring" }
+        ]
+      }
+    ]
+  },
+  'flooring': {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.techfittech.com/flooring#webpage",
+        "url": "https://www.techfittech.com/flooring",
+        "name": "Gym Flooring India | TechFit",
+        "description": "Professional rubber tiles, interlocking flooring, synthetic turf, and shock-absorbing rubber rolls for commercial gym fitouts and weight rooms in India."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.techfittech.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Gym Flooring", "item": "https://www.techfittech.com/flooring" }
+        ]
+      }
+    ]
+  },
+  'bh-fitness': {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.techfittech.com/bh-fitness#webpage",
+        "url": "https://www.techfittech.com/bh-fitness",
+        "name": "BH Fitness India | Authorised Distributor — TechFit",
+        "description": "Authorized India distributor of BH Fitness commercial gym equipment. Treadmills, exercise spin bikes, ellipticals, and strength machines."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.techfittech.com/" },
+          { "@type": "ListItem", "position": 2, "name": "BH Fitness", "item": "https://www.techfittech.com/bh-fitness" }
+        ]
+      }
+    ]
+  },
+  'tunturi': {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.techfittech.com/tunturi#webpage",
+        "url": "https://www.techfittech.com/tunturi",
+        "name": "Tunturi India | Authorised Distributor — TechFit",
+        "description": "Authorized India distributor of Tunturi Finnish fitness equipment. Cardio, strength and functional training gears for commercial gym setups."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.techfittech.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Tunturi", "item": "https://www.techfittech.com/tunturi" }
+        ]
+      }
+    ]
+  },
+  'california-fitness': {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.techfittech.com/california-fitness#webpage",
+        "url": "https://www.techfittech.com/california-fitness",
+        "name": "California Fitness India | Authorised Distributor — TechFit",
+        "description": "Authorized India distributor of California Fitness commercial gym equipment. Heavy-duty cardio, strength platforms, and functional accessories."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.techfittech.com/" },
+          { "@type": "ListItem", "position": 2, "name": "California Fitness", "item": "https://www.techfittech.com/california-fitness" }
+        ]
+      }
+    ]
+  },
+  'alteon': {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.techfittech.com/alteon#webpage",
+        "url": "https://www.techfittech.com/alteon",
+        "name": "Alteon Wellness & Recovery Technology India — TechFit",
+        "description": "Authorized supplier of Alteon Wellness biohacking and longevity technology: Cryotherapy, hyperbaric oxygen chambers, red light therapy, IHHT and float pods."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.techfittech.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Alteon Wellness", "item": "https://www.techfittech.com/alteon" }
+        ]
+      }
+    ]
+  },
+  'wellness-solutions': {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.techfittech.com/wellness-solutions#webpage",
+        "url": "https://www.techfittech.com/wellness-solutions",
+        "name": "Wellness Solutions India | TechFit",
+        "description": "End-to-end luxury wellness, spa, and recovery suite design and fitout solutions. Authorised supplier for Alteon Wellness chambers."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.techfittech.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Wellness Solutions", "item": "https://www.techfittech.com/wellness-solutions" }
+        ]
+      }
+    ]
+  },
+  'blog-mfn': {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.techfittech.com/blog-mfn"
+    },
+    "headline": "Matrix Fight Night — MMA Cage by TechFit | Case Study",
+    "description": "How TechFit designed and built the competition-grade MMA octagon for Matrix Fight Night — India's premier mixed martial arts promotion.",
+    "image": "https://www.techfittech.com/og-image.jpg",
+    "author": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TechFit",
+      "logo": { "@type": "ImageObject", "url": "https://www.techfittech.com/src/assets/logo.png" }
+    },
+    "datePublished": "2026-05-28",
+    "dateModified": "2026-05-28"
+  },
+  'blog-sfl': {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.techfittech.com/blog-sfl"
+    },
+    "headline": "Super Fight League — MMA Cage by TechFit | Case Study",
+    "description": "TechFit manufactured the professional MMA cage for Super Fight League, one of India's biggest combat sports events.",
+    "image": "https://www.techfittech.com/og-image.jpg",
+    "author": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TechFit",
+      "logo": { "@type": "ImageObject", "url": "https://www.techfittech.com/src/assets/logo.png" }
+    },
+    "datePublished": "2026-05-28",
+    "dateModified": "2026-05-28"
+  },
+  'blog-kumite': {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.techfittech.com/blog-kumite"
+    },
+    "headline": "Kumite 1 League — Boxing Ring by TechFit | Case Study",
+    "description": "TechFit built the competition boxing ring for Kumite 1 League, India's high-profile combat sports league.",
+    "image": "https://www.techfittech.com/og-image.jpg",
+    "author": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TechFit",
+      "logo": { "@type": "ImageObject", "url": "https://www.techfittech.com/src/assets/logo.png" }
+    },
+    "datePublished": "2026-05-28",
+    "dateModified": "2026-05-28"
+  },
+  'blog-mma-matrix': {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.techfittech.com/blog-mma-matrix"
+    },
+    "headline": "MMA Matrix — Tiger Shroff's Gym by TechFit | Case Study",
+    "description": "TechFit designed and equipped MMA Matrix — Bollywood actor Tiger Shroff's signature mixed martial arts training gym.",
+    "image": "https://www.techfittech.com/og-image.jpg",
+    "author": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TechFit",
+      "logo": { "@type": "ImageObject", "url": "https://www.techfittech.com/src/assets/logo.png" }
+    },
+    "datePublished": "2026-05-28",
+    "dateModified": "2026-05-28"
+  },
+  'blog-one-stop': {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.techfittech.com/blog-one-stop"
+    },
+    "headline": "One-Stop Gym Infrastructure — TechFit Advantage | Blog",
+    "description": "Why TechFit is the one-stop solution for all gym infrastructure needs — from equipment and flooring to design, installation and maintenance.",
+    "image": "https://www.techfittech.com/og-image.jpg",
+    "author": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TechFit",
+      "logo": { "@type": "ImageObject", "url": "https://www.techfittech.com/src/assets/logo.png" }
+    },
+    "datePublished": "2026-05-28",
+    "dateModified": "2026-05-28"
+  },
+  'blog-wellness-boom': {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.techfittech.com/blog-wellness-boom"
+    },
+    "headline": "India's Wellness Boom — Alteon & Recovery Tech | Blog",
+    "description": "Exploring India's growing wellness and longevity market, and how Alteon recovery technology is leading the charge.",
+    "image": "https://www.techfittech.com/og-image.jpg",
+    "author": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TechFit",
+      "logo": { "@type": "ImageObject", "url": "https://www.techfittech.com/src/assets/logo.png" }
+    },
+    "datePublished": "2026-05-28",
+    "dateModified": "2026-05-28"
   }
 };
 
