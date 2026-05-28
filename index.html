@@ -8092,17 +8092,18 @@ ${footer()}`;
 
     parseUrl();
     render(); navActive(); updateSEO();
-    // Global conversion tracking for WhatsApp and Phone Call link clicks
+    // Global conversion tracking for WhatsApp, Phone Call, and Email link clicks
     document.addEventListener('click', function(e) {
       var waLink = e.target.closest('a[href*="wa.me"]');
       var telLink = e.target.closest('a[href^="tel:"]');
-      if ((waLink || telLink) && typeof gtag === 'function') {
+      var mailLink = e.target.closest('a[href^="mailto:"]');
+      if ((waLink || telLink || mailLink) && typeof gtag === 'function') {
         gtag('event', 'conversion', {
           'send_to': 'AW-17959203178/ObCTCPuJmv0bEOrizvNC',
           'value': 1.0,
           'currency': 'INR'
         });
-        console.log('[TechFit] Google Ads conversion fired: ' + (waLink ? 'WhatsApp Click' : 'Phone Call Click'));
+        console.log('[TechFit] Google Ads conversion fired: ' + (waLink ? 'WhatsApp Click' : telLink ? 'Phone Call Click' : 'Email Click'));
       }
     });
   </script>
