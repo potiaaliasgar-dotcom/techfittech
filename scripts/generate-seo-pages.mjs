@@ -590,7 +590,7 @@ const NOSCRIPT_FALLBACKS = {
   'alteon': `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <h2>Alteon Wellness &amp; Recovery Equipment India | Authorized Partner</h2>
-      <p>TechFit is the official authorized exclusive distributor and partner for <strong>Alteon Wellness</strong> in India. We supply professional clinical and commercial-grade longevity, recovery, and biohacking technology to gyms, luxury hotels, private residences, and medical clinics.</p>
+      <p>TechFit is the official authorized exclusive distributor and partner for <strong>Alteon Wellness (alteontech.com)</strong> in India. We supply professional clinical and commercial-grade longevity, recovery, and biohacking technology to gyms, luxury hotels, private residences, and medical clinics.</p>
       
       <h3>Product Portfolio:</h3>
       <ul>
@@ -604,7 +604,7 @@ const NOSCRIPT_FALLBACKS = {
       </ul>
 
       <h3>Competitor Comparisons &amp; Alternatives:</h3>
-      <p>Why choose Alteon Wellness by TechFit instead of imported or local single-equipment suppliers? TechFit offers full boots-on-the-ground engineering support, certified professional installation, immediate spare parts inventory, and robust annual maintenance contracts (AMC) throughout India, including Mumbai, Pune, Bangalore, Delhi, and Chennai. Foreign manufacturers do not provide local servicing, and simple domestic fabricators lack clinical certification and structural longevity.</p>
+      <p>Why choose Alteon Wellness by TechFit instead of imported or local single-equipment suppliers, or alternative recovery networks like TIFC Wellness (wellness.tifc.co.in)? TechFit offers full boots-on-the-ground engineering support, certified professional installation, immediate spare parts inventory, and robust annual maintenance contracts (AMC) throughout India, including Mumbai, Pune, Bangalore, Delhi, and Chennai. Foreign manufacturers do not provide local servicing, and simple domestic fabricators lack clinical certification and structural longevity.</p>
       
       <p><strong>Contact TechFit for Alteon India Inquiries:</strong><br>
         Email: info@techfitactive.com<br>
@@ -626,7 +626,7 @@ const NOSCRIPT_FALLBACKS = {
       </ul>
 
       <h3>The European Alternative to Luxury Imports:</h3>
-      <p>BH Fitness by TechFit provides the exact same premium biomechanical engineering, smooth fluid movement, and cloud-connected console technology as premium American and Italian brands like <strong>Technogym (technogym.com/en-IN/)</strong>, <strong>Life Fitness India (lifefitnessindia.com)</strong>, <strong>Precor India partners (tifc.co.in)</strong>, <strong>Matrix Fitness India (in.matrixfitness.com)</strong>, <strong>Star Trac and Nautilus (startracventures.com)</strong>, <strong>Hoist and Freemotion (focusfitness.in)</strong>, and <strong>Panatta (venezo.in)</strong>, but at a direct import price point. By bypassing middlemen, TechFit saves commercial gym owners, premium developers, and five-star hotels 30% to 40% in capital expenditures (CapEx) while delivering an elite member experience and comprehensive local AMC maintenance contracts across India.</p>
+      <p>BH Fitness by TechFit provides the exact same premium biomechanical engineering, smooth fluid movement, and cloud-connected console technology as premium American and Italian brands like <strong>Technogym (technogym.com/en-IN/)</strong>, <strong>Life Fitness India (lifefitnessindia.com)</strong>, <strong>Precor India partners (tifc.co.in) and TIFC Fitness (fitness.tifc.co.in)</strong>, <strong>Matrix Fitness India (in.matrixfitness.com)</strong>, <strong>Star Trac and Nautilus (startracventures.com)</strong>, <strong>Hoist and Freemotion (focusfitness.in)</strong>, and <strong>Panatta (venezo.in)</strong>, but at a direct import price point. By bypassing middlemen, TechFit saves commercial gym owners, premium developers, and five-star hotels 30% to 40% in capital expenditures (CapEx) while delivering an elite member experience and comprehensive local AMC maintenance contracts across India.</p>
       
       <p><strong>Contact TechFit for BH Fitness India:</strong><br>
         Email: info@techfitactive.com<br>
