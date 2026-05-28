@@ -7983,6 +7983,26 @@ ${footer()}`;
         }
         ['cf-name', 'cf-phone', 'cf-email', 'cf-location', 'cf-msg'].forEach(id => document.getElementById(id).value = '');
         document.getElementById('cf-type').selectedIndex = 0;
+
+        // Save lead parameters in sessionStorage for Enhanced Conversions in GTM
+        try {
+          sessionStorage.setItem('lead_email', email);
+          sessionStorage.setItem('lead_phone', phone);
+          sessionStorage.setItem('lead_name', name);
+          
+          if (window.dataLayer) {
+            window.dataLayer.push({
+              'event': 'lead_submitted',
+              'lead_email': email,
+              'lead_phone': phone,
+              'lead_name': name
+            });
+          }
+          console.log('[TechFit] Lead data stored in sessionStorage and pushed to dataLayer');
+        } catch (e) {
+          console.error('[TechFit] Failed to save lead data:', e);
+        }
+
         // Redirect to thank-you page for Enhanced Conversions tracking
         history.pushState({}, '', '/thank-you');
         page = 'thank-you';
@@ -8072,16 +8092,17 @@ ${footer()}`;
 
     parseUrl();
     render(); navActive(); updateSEO();
-    // Global WhatsApp click tracking — fires conversion on any wa.me link click
+    // Global conversion tracking for WhatsApp and Phone Call link clicks
     document.addEventListener('click', function(e) {
-      var link = e.target.closest('a[href*="wa.me"]');
-      if (link && typeof gtag === 'function') {
+      var waLink = e.target.closest('a[href*="wa.me"]');
+      var telLink = e.target.closest('a[href^="tel:"]');
+      if ((waLink || telLink) && typeof gtag === 'function') {
         gtag('event', 'conversion', {
           'send_to': 'AW-17959203178/ObCTCPuJmv0bEOrizvNC',
           'value': 1.0,
           'currency': 'INR'
         });
-        console.log('[TechFit] Google Ads conversion fired: WhatsApp Click');
+        console.log('[TechFit] Google Ads conversion fired: ' + (waLink ? 'WhatsApp Click' : 'Phone Call Click'));
       }
     });
   </script>
