@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Temporary and study assets
+brochures_to_study/
+public/assets/images/extracted/

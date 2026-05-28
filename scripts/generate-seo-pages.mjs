@@ -5,8 +5,8 @@
  * Reads the root index.html and generates route-specific copies
  * with correct <title>, meta description, canonical, OG and Twitter tags.
  * 
- * This script now acts as a build command that outputs to a 'dist' directory,
- * satisfying Vercel's requirements while keeping the project root clean.
+ * Also statically injects route-specific JSON-LD schemas directly into the <head>
+ * at build-time to ensure search engines receive complete schemas without executing JS.
  */
 
 import fs from 'fs';
@@ -160,6 +160,144 @@ const SEO_MAP = {
   }
 };
 
+// ==========================================
+// STATICALLY PRE-RENDERED JSON-LD SCHEMAS
+// ==========================================
+const SCHEMAS = {
+  'mma-cages': {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.techfittech.com/mma-cages#webpage",
+        "url": "https://www.techfittech.com/mma-cages",
+        "name": "MMA Cages & Boxing Rings — TechFit India",
+        "description": "India's leading manufacturer of professional MMA cages, UFC-style octagons, floor cages, podium cages, and competition boxing rings. Custom sizes 16ft–30ft. Official supplier to Matrix Fight Night, Super Fight League, and Kumite 1 League."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Who manufactures MMA cages in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is India's leading manufacturer of professional MMA cages, UFC-style octagons, and boxing rings, based in Mumbai. They supply MMA cages to gyms, academies, and professional fight promotions across India." } },
+          { "@type": "Question", "name": "Who are the best MMA cage manufacturers in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit (Techfit Health Fitness), based in Mumbai, is widely regarded as one of India's best MMA cage manufacturers. They are the official cage supplier for Matrix Fight Night (MFN), Super Fight League (SFL), and Kumite 1 League, India's top MMA promotions." } },
+          { "@type": "Question", "name": "Who supplies UFC-style octagons in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit manufactures and supplies UFC-style octagon cages in India, including floor-mounted and elevated podium configurations. They build to custom sizes from 16ft to 30ft for training academies and professional events." } },
+          { "@type": "Question", "name": "Who makes boxing rings in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit manufactures professional boxing rings in India — both training-grade rings for academies and competition-grade rings for tournaments and events. Based in Mumbai with pan-India delivery." } }
+        ]
+      },
+      {
+        "@type": "Product",
+        "name": "TechFit MMA Cage — Professional Series",
+        "description": "Custom-manufactured MMA cages and boxing rings for training academies and professional events. Floor-mount, podium/elevated, and hexagon configurations. Sizes from 16ft to 30ft. 4mm+ heavy-gauge steel, anti-slip canvas, high-density foam padding.",
+        "brand": { "@type": "Brand", "name": "TechFit" },
+        "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/get-a-quote", "seller": { "@type": "Organization", "name": "TechFit" } }
+      }
+    ]
+  },
+  'crossfit-rigs': {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.techfittech.com/crossfit-rigs#webpage",
+        "url": "https://www.techfittech.com/crossfit-rigs",
+        "name": "Modular CrossFit Rigs & Racks Manufacturer India — TechFit",
+        "description": "India's premier manufacturer of commercial-grade modular CrossFit rigs, wall-mounted rigs, freestanding functional training systems, calisthenics rigs, and power racks. 11-gauge structural steel."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Who manufactures CrossFit rigs in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit manufactures heavy-duty modular CrossFit rigs and racks in India, based in Mumbai. They use 11-gauge structural steel and provide custom solutions with pan-India delivery." } },
+          { "@type": "Question", "name": "CrossFit rig manufacturer India", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is the top CrossFit rig manufacturer in India, supplying modular functional training rigs for commercial gyms, CrossFit boxes, hotels, and sports academies." } }
+        ]
+      },
+      {
+        "@type": "Product",
+        "name": "TechFit Modular CrossFit Rig — Commercial Series",
+        "description": "Heavy-duty modular CrossFit rigs constructed from 11-gauge structural steel. Compatible with J-Cups, spotter arms, dip bars, landmines, and wall ball targets.",
+        "brand": { "@type": "Brand", "name": "TechFit" },
+        "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/get-a-quote", "seller": { "@type": "Organization", "name": "TechFit" } }
+      }
+    ]
+  },
+  'free-weights': {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.techfittech.com/free-weights#webpage",
+        "url": "https://www.techfittech.com/free-weights",
+        "name": "Commercial Free Weights & Dumbbells Manufacturer India — TechFit",
+        "description": "TechFit manufactures professional-grade commercial free weights in India: rubber hex dumbbells, Olympic bumper plates, Olympic barbells, power cages, and deadlift platforms."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Who manufactures dumbbells in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit manufactures commercial-grade rubber hex dumbbells in India (sizes 2.5kg to 50kg), featuring drop-forged handles and premium knurling for ultimate durability." } },
+          { "@type": "Question", "name": "Olympic barbell manufacturer India", "acceptedAnswer": { "@type": "Answer", "text": "TechFit manufactures commercial Olympic barbells in India, including 20kg men's and 15kg women's bars rated to 700kg+ with needle bearings and hard chrome finishes." } }
+        ]
+      },
+      {
+        "@type": "Product",
+        "name": "TechFit Commercial Free Weights Package",
+        "description": "High-durability commercial free weight packages including knurled Olympic barbells, high-impact virgin rubber bumper plates, custom rubber hex dumbbells, power racks, and platforms.",
+        "brand": { "@type": "Brand", "name": "TechFit" },
+        "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/get-a-quote", "seller": { "@type": "Organization", "name": "TechFit" } }
+      }
+    ]
+  },
+  'padel-pickleball': {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.techfittech.com/padel-pickleball#webpage",
+        "url": "https://www.techfittech.com/padel-pickleball",
+        "name": "Turnkey Padel Court Builder & Construction India — TechFit",
+        "description": "TechFit designs and constructs professional, ITF-compliant panoramic padel courts and pickleball courts across India. High-wind structural framing, panoramic glass, and turf."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Best padel court builder India", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is India's leading padel court builder, providing complete turnkey construction from site assessment, civil works, steel framing, panoramic glass installation, turf, and LED lighting." } },
+          { "@type": "Question", "name": "Pickleball court construction India", "acceptedAnswer": { "@type": "Answer", "text": "TechFit builds indoor and outdoor pickleball courts in India, including surface coating, net installation, and fencing." } }
+        ]
+      },
+      {
+        "@type": "Product",
+        "name": "TechFit Turnkey Padel Court Installation",
+        "description": "ITF-compliant panoramic padel court construction featuring structural high-gauge steel columns, tempered safety glass, monofilament padel turf, and LED lighting.",
+        "brand": { "@type": "Brand", "name": "TechFit" },
+        "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/get-a-quote", "seller": { "@type": "Organization", "name": "TechFit" } }
+      }
+    ]
+  },
+  'aqua': {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.techfittech.com/aqua#webpage",
+        "url": "https://www.techfittech.com/aqua",
+        "name": "SS316 Underwater Treadmills & Aqua Fitness Equipment India — TechFit",
+        "description": "TechFit is India's premier supplier of SS316 marine-grade aqua fitness equipment: underwater treadmills, aqua bikes, and aqua moon walkers for hydrotherapy, sports rehabilitation, and hotels."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Underwater treadmill supplier India", "acceptedAnswer": { "@type": "Answer", "text": "TechFit supplies premium SS316 marine-grade underwater treadmills in India for hotel pools, rehabilitation centres, physiotherapy clinics, and home pools." } },
+          { "@type": "Question", "name": "Aqua fitness equipment India", "acceptedAnswer": { "@type": "Answer", "text": "TechFit's Aqua Series includes marine-grade underwater treadmills, underwater spin exercise bikes, and aqua moon walkers." } }
+        ]
+      },
+      {
+        "@type": "Product",
+        "name": "TechFit Aqua Treadmill — SS316 Series",
+        "description": "SS316 marine-grade rust-resistant underwater treadmill with manual belt operation, shock-absorbing belt design, and 160kg user capacity.",
+        "brand": { "@type": "Brand", "name": "TechFit" },
+        "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/get-a-quote", "seller": { "@type": "Organization", "name": "TechFit" } }
+      }
+    ]
+  }
+};
+
 function escapeHtml(str) {
   return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
@@ -187,6 +325,12 @@ function generatePage(html, route, seo) {
   out = out.replace(/(<meta\s+name="twitter:description"\s+content=")[^"]*("\s+id="tw-description")/s, `$1${escapeHtml(seo.desc)}$2`);
   out = out.replace(/(<meta\s+name="twitter:image"\s+content=")[^"]*("\s+id="tw-image")/, `$1${seo.img}$2`);
 
+  // Inject the static JSON-LD schema into the <head> of this route copy!
+  if (SCHEMAS[route]) {
+    const schemaBlock = `\n  <script type="application/ld+json">\n${JSON.stringify(SCHEMAS[route], null, 2)}\n  </script>`;
+    out = out.replace('</head>', `${schemaBlock}\n</head>`);
+  }
+
   return minifyHtml(out);
 }
 
@@ -205,28 +349,25 @@ function copyRecursiveSync(src, dest) {
 }
 
 // ── MAIN ──
-console.log('🚀 Starting Static Site Build...\n');
+console.log('🚀 Starting Static Site SEO Prerendering...\n');
 
-// 1. Prepare DIST folder
-if (fs.existsSync(DIST)) {
-  fs.rmSync(DIST, { recursive: true, force: true });
-}
-fs.mkdirSync(DIST, { recursive: true });
-
-// 2. Copy main index.html
-fs.copyFileSync(SOURCE, path.join(DIST, 'index.html'));
-console.log('  📄 Copied index.html');
-
-// 3. Copy public folder contents
-if (fs.existsSync(PUBLIC)) {
-  copyRecursiveSync(PUBLIC, DIST);
-  console.log('  📁 Copied public/ assets');
+// 1. Check if DIST folder exists (must be compiled first)
+if (!fs.existsSync(DIST)) {
+  console.error('❌ Error: dist/ directory not found! Please run the compilation build command first (e.g., npm run build).');
+  process.exit(1);
 }
 
-// 4. Generate SEO sub-pages
-const sourceHtml = fs.readFileSync(SOURCE, 'utf8');
+const compiledIndexHtmlPath = path.join(DIST, 'index.html');
+if (!fs.existsSync(compiledIndexHtmlPath)) {
+  console.error('❌ Error: dist/index.html not found! Please compile the app first.');
+  process.exit(1);
+}
+
+// 2. Read compiled index.html as sourceHtml
+const sourceHtml = fs.readFileSync(compiledIndexHtmlPath, 'utf8');
 let count = 0;
 
+// 3. Generate SEO sub-pages
 for (const [route, seo] of Object.entries(SEO_MAP)) {
   const outDir = path.join(DIST, route);
   const outFile = path.join(outDir, 'index.html');
@@ -240,9 +381,4 @@ for (const [route, seo] of Object.entries(SEO_MAP)) {
   count++;
 }
 
-// 5. Minify and write main index.html to dist
-const minifiedRoot = minifyHtml(sourceHtml);
-fs.writeFileSync(path.join(DIST, 'index.html'), minifiedRoot, 'utf8');
-
-console.log(`\n🎉 Build complete! Generated ${count} route-specific pages in 'dist/'.`);
-
+console.log(`\n🎉 SEO Prerendering complete! Generated ${count} route-specific pages in 'dist/'.`);

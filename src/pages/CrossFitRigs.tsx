@@ -134,78 +134,8 @@ export function CrossFitRigs() {
     ]
 };
 
-        const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-        {
-            "@type": "WebPage",
-            "@id": "https://www.techfittech.com/crossfit-rigs#webpage",
-            "url": "https://www.techfittech.com/crossfit-rigs",
-            "name": "Modular CrossFit Rigs & Racks Manufacturer India — TechFit",
-            "description": "India's premier manufacturer of commercial-grade modular CrossFit rigs, wall-mounted rigs, freestanding functional training systems, calisthenics rigs, and power racks. 11-gauge structural steel."
-        },
-        {
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "Who manufactures CrossFit rigs in India?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "TechFit manufactures heavy-duty modular CrossFit rigs and racks in India, based in Mumbai. They use 11-gauge structural steel and provide custom solutions with pan-India delivery."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "CrossFit rig manufacturer India",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "TechFit is the top CrossFit rig manufacturer in India, supplying modular functional training rigs for commercial gyms, CrossFit boxes, hotels, and sports academies."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Who supplies CrossFit rigs in India?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "TechFit supplies heavy-duty CrossFit rigs, custom pull-up bars, wall-mounted space-saving rigs, and freestanding training platforms across India."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "What is the difference between Space Saver and Freestanding Rigs?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Space Saver rigs are wall-mounted systems that fold back or stay tight against walls to save floor space. Freestanding island rigs are central functional training structures designed to serve multiple users from all sides."
-                    }
-                }
-            ]
-        },
-        {
-            "@type": "Product",
-            "name": "TechFit Modular CrossFit Rig — Commercial Series",
-            "description": "Heavy-duty modular CrossFit rigs constructed from 11-gauge structural steel. Compatible with J-Cups, spotter arms, dip bars, landmines, and wall ball targets. Wall-mounted and freestanding configurations.",
-            "brand": {
-                "@type": "Brand",
-                "name": "TechFit"
-            },
-            "offers": {
-                "@type": "Offer",
-                "priceCurrency": "INR",
-                "availability": "https://schema.org/InStock",
-                "url": "https://www.techfittech.com/get-a-quote",
-                "seller": {
-                    "@type": "Organization",
-                    "name": "TechFit"
-                }
-            }
-        }
-    ]
-};
-
     return (
         <div className="flex flex-col w-full bg-white text-black overflow-hidden relative">
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
             {/* Hero Section */}
