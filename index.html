@@ -8004,15 +8004,28 @@ ${footer()}`;
 
     function renderThankYou() {
       return `
-<div class="phero"><div class="sec-in"><div class="phero-label">Thank You</div><h2>ENQUIRY RECEIVED</h2><p class="phero-sub">We'll call you within one business day to understand your requirements and schedule your free consultation.</p></div></div>
-<section class="sec"><div class="sec-in" style="text-align:center;padding:60px 20px;">
-  <div class="feat-card" style="max-width:560px;margin:0 auto;">
-    <h3 style="margin-bottom:12px;">✓ You're all set!</h3>
-    <p>Our team will reach out shortly. In the meantime, feel free to explore our solutions or WhatsApp us directly.</p>
-    <br>
-    <a href="/contact" onclick="event.preventDefault();history.pushState({},'','/contact');render();" style="display:inline-block;margin-top:8px;padding:12px 28px;background:#e31e24;color:#fff;border-radius:4px;text-decoration:none;font-weight:700;">← Back to Contact</a>
+<div class="phero">
+  <div class="sec-in">
+    <div class="phero-label">Thank You</div>
+    <h1>ENQUIRY RECEIVED</h1>
+    <p class="phero-sub" style="font-size:1.2rem;max-width:720px;">We'll call you within one business day to understand your requirements and schedule your free consultation.</p>
   </div>
-</div></section>
+</div>
+<section class="sec">
+  <div class="sec-in" style="text-align:center;padding:80px 20px;">
+    <div class="feat-card" style="max-width:680px;margin:0 auto;padding:50px 40px;box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+      <h3 style="margin-bottom:20px;font-size:2.2rem;color:var(--red);">✓ You're all set!</h3>
+      <p style="font-size:1.25rem;line-height:1.8;color:rgba(255,255,255,0.9);margin-bottom:24px;">
+        Our team of fitness infrastructure experts will reach out shortly.<br>
+        In the meantime, feel free to explore our solutions or WhatsApp us directly.
+      </p>
+      <div style="display:flex;gap:1.2rem;justify-content:center;margin-top:24px;flex-wrap:wrap">
+        <a href="/contact" onclick="event.preventDefault();history.pushState({},'','/contact');render();" style="display:inline-block;padding:16px 36px;background:#e31e24;color:#fff;border-radius:4px;text-decoration:none;font-weight:700;font-size:1.05rem;transition:transform 0.2s ease;">← Back to Contact</a>
+        <a href="https://wa.me/919820166910?text=Hi%20TechFit!%20I%20just%20submitted%20a%20form%20and%20wanted%20to%20follow%20up." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:16px 36px;background:#25D366;color:#fff;border-radius:4px;text-decoration:none;font-weight:700;font-size:1.05rem;">💬 Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
 ${footer()}`;
     }
 
