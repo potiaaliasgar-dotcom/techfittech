@@ -26,3 +26,7 @@ dist-ssr
 # Temporary and study assets
 brochures_to_study/
 public/assets/images/extracted/
+
+# macOS Finder duplicates
+* 2.*
+* 3.*

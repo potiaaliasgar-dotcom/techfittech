@@ -163,6 +163,18 @@ const SEO_MAP = {
     desc: 'Thank you for contacting TechFit. We have received your inquiry and our team will get in touch with you shortly.',
     img: DEFAULT_OG_IMG,
     noindex: true
+  },
+  'privacy-policy': {
+    title: 'Privacy Policy | TechFit India',
+    desc: 'Read the privacy policy of Techfit Health Fitness Private Limited. Learn how we collect, use, and protect your information.',
+    img: DEFAULT_OG_IMG,
+    noindex: true
+  },
+  'terms-of-service': {
+    title: 'Terms of Service | TechFit India',
+    desc: 'Read the terms of service governing TechFit supply, custom fabrication, and equipment installation in India.',
+    img: DEFAULT_OG_IMG,
+    noindex: true
   }
 };
 
@@ -484,10 +496,10 @@ const SCHEMAS = {
     "publisher": {
       "@type": "Organization",
       "name": "TechFit",
-      "logo": { "@type": "ImageObject", "url": "https://www.techfittech.com/src/assets/logo.png" }
+      "logo": { "@type": "ImageObject", "url": "https://www.techfittech.com/logo.png" }
     },
-    "datePublished": "2026-05-28",
-    "dateModified": "2026-05-28"
+    "datePublished": "2025-06-15",
+    "dateModified": "2026-02-10"
   },
   'blog-sfl': {
     "@context": "https://schema.org",
@@ -503,10 +515,10 @@ const SCHEMAS = {
     "publisher": {
       "@type": "Organization",
       "name": "TechFit",
-      "logo": { "@type": "ImageObject", "url": "https://www.techfittech.com/src/assets/logo.png" }
+      "logo": { "@type": "ImageObject", "url": "https://www.techfittech.com/logo.png" }
     },
-    "datePublished": "2026-05-28",
-    "dateModified": "2026-05-28"
+    "datePublished": "2025-08-22",
+    "dateModified": "2026-03-01"
   },
   'blog-kumite': {
     "@context": "https://schema.org",
@@ -522,10 +534,10 @@ const SCHEMAS = {
     "publisher": {
       "@type": "Organization",
       "name": "TechFit",
-      "logo": { "@type": "ImageObject", "url": "https://www.techfittech.com/src/assets/logo.png" }
+      "logo": { "@type": "ImageObject", "url": "https://www.techfittech.com/logo.png" }
     },
-    "datePublished": "2026-05-28",
-    "dateModified": "2026-05-28"
+    "datePublished": "2025-10-05",
+    "dateModified": "2026-03-15"
   },
   'blog-mma-matrix': {
     "@context": "https://schema.org",
@@ -541,10 +553,10 @@ const SCHEMAS = {
     "publisher": {
       "@type": "Organization",
       "name": "TechFit",
-      "logo": { "@type": "ImageObject", "url": "https://www.techfittech.com/src/assets/logo.png" }
+      "logo": { "@type": "ImageObject", "url": "https://www.techfittech.com/logo.png" }
     },
-    "datePublished": "2026-05-28",
-    "dateModified": "2026-05-28"
+    "datePublished": "2025-12-10",
+    "dateModified": "2026-04-05"
   },
   'blog-one-stop': {
     "@context": "https://schema.org",
@@ -560,10 +572,10 @@ const SCHEMAS = {
     "publisher": {
       "@type": "Organization",
       "name": "TechFit",
-      "logo": { "@type": "ImageObject", "url": "https://www.techfittech.com/src/assets/logo.png" }
+      "logo": { "@type": "ImageObject", "url": "https://www.techfittech.com/logo.png" }
     },
-    "datePublished": "2026-05-28",
-    "dateModified": "2026-05-28"
+    "datePublished": "2026-01-20",
+    "dateModified": "2026-05-01"
   },
   'blog-wellness-boom': {
     "@context": "https://schema.org",
@@ -579,10 +591,10 @@ const SCHEMAS = {
     "publisher": {
       "@type": "Organization",
       "name": "TechFit",
-      "logo": { "@type": "ImageObject", "url": "https://www.techfittech.com/src/assets/logo.png" }
+      "logo": { "@type": "ImageObject", "url": "https://www.techfittech.com/logo.png" }
     },
-    "datePublished": "2026-05-28",
-    "dateModified": "2026-05-28"
+    "datePublished": "2026-03-15",
+    "dateModified": "2026-05-15"
   }
 };
 
@@ -590,21 +602,21 @@ const NOSCRIPT_FALLBACKS = {
   'alteon': `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <h2>Alteon Wellness &amp; Recovery Equipment India | Authorized Partner</h2>
-      <p>TechFit is the official authorized exclusive distributor and partner for <strong>Alteon Wellness (alteontech.com)</strong> in India. We supply professional clinical and commercial-grade longevity, recovery, and biohacking technology to gyms, luxury hotels, private residences, and medical clinics.</p>
+      <p>TechFit is the official authorized exclusive distributor and partner for <strong>Alteon Wellness (alteontech.com)</strong> in India. We supply professional clinical and commercial-grade longevity, recovery, and biohacking technology to health clubs, hotels, residential developments, longevity clinics, and physical therapy centers.</p>
       
-      <h3>Product Portfolio:</h3>
+      <h3>Alteon Recovery Product Portfolio:</h3>
       <ul>
-        <li><strong>Elysion Hyperbaric Chambers (HBOT):</strong> Clinical hard-shell monoplace oxygen chambers operating at 1.5 ATA to 2.0 ATA. The ultimate professional-grade alternative to clinical systems (Sechrist, Perry Baromedical) and far safer/more effective than low-pressure soft-shell inflatable chambers (Macy-Pan, OxyHealth, OxyNova, Summit to Sea). Highly superior to local medical fabricators like Meditech Technologies India (meditechindia.org), BHPL (bhpl.co.in), Cogmac / Oxycea (oxycea.com), and Universe Surgical (universesurgical.com).</li>
-        <li><strong>Cryoblast Pro Whole-Body Cryotherapy:</strong> High-performance electric whole-body cryo chambers running on pure electricity (nitrogen-free, dry-air). Safe, ultra-low operating cost compared to liquid nitrogen chambers (Cryomed, CryoAction) and superior alternative to luxury brands like Mecotec, CryoScience, Zimmer, and Juka.</li>
-        <li><strong>Alteon ReVITAL Infrared Saunas:</strong> Premium far-infrared saunas and wellness chambers, offering commercial-grade longevity therapy. Elite alternative to Sunlighten, Clearlight, TyloHelo, and Klafs.</li>
-        <li><strong>Alteon PBM Neo clinical Red Light Therapy:</strong> Medical-grade photobiomodulation (PBM) full-body panels and pads, delivering precise therapeutic wavelengths. Superior to home-grade panels like Joovv, PlatinumLED, and Mito Red Light.</li>
-        <li><strong>Alteon Biopod Dry Floatation Beds:</strong> Zero-gravity waterless floatation systems for mental relaxation and muscle recovery. Premium alternative to Zerobody, Starpool, and Dreampod.</li>
-        <li><strong>Alteon Cell Trainer (IHHT):</strong> Interval Hypoxic-Hyperoxic Training system for active altitude training, cell rejuvenation, and cardiovascular performance. Premier alternative to CellGym, Hypoxico, and Live O2.</li>
-        <li><strong>Alteon Compression Therapy:</strong> Multi-chamber pneumatic compression systems for lymphatic drainage and athletic recovery. Top alternative to Ballancer Pro, LymphaPress, and Tactile Medical.</li>
+        <li><strong>Elysion Hyperbaric Chambers (HBOT):</strong> Clinical hard-shell monoplace oxygen chambers operating at 1.5 ATA to 2.0 ATA with luxury modular cabin space. Built for clinical safety and structural longevity, delivering high-purity oxygen to tissues.</li>
+        <li><strong>Cryoblast Pro Whole-Body Cryotherapy:</strong> High-performance electric whole-body cryo chambers running on pure dry air (nitrogen-free). Safe, ultra-low operating cost compared to traditional liquid nitrogen cryo cabins.</li>
+        <li><strong>Alteon ReVITAL Infrared Saunas:</strong> Premium far-infrared saunas and wellness chambers, offering commercial-grade longevity therapy with integrated controls and luxury hemlock/cedar wood specs.</li>
+        <li><strong>Alteon PBM Neo Clinical Red Light Therapy:</strong> Medical-grade photobiomodulation (PBM) full-body panels and pads, delivering precise therapeutic wavelengths (680/850 nm) for cellular energy and recovery.</li>
+        <li><strong>Alteon Biopod Dry Floatation Beds:</strong> Zero-gravity waterless floatation systems for spinal decompression, mental relaxation, and rapid muscle recovery.</li>
+        <li><strong>Alteon Cell Trainer (IHHT):</strong> Interval Hypoxic-Hyperoxic Training systems for active cellular rejuvenation, athletic performance, and cardiovascular stamina.</li>
+        <li><strong>Alteon Compression Therapy:</strong> Multi-chamber pneumatic compression systems for lymphatic drainage and rapid metabolic clearance.</li>
       </ul>
 
-      <h3>Competitor Comparisons &amp; Alternatives:</h3>
-      <p>Why choose Alteon Wellness by TechFit instead of imported or local single-equipment suppliers, or alternative recovery networks like TIFC Wellness (wellness.tifc.co.in)? TechFit offers full boots-on-the-ground engineering support, certified professional installation, immediate spare parts inventory, and robust annual maintenance contracts (AMC) throughout India, including Mumbai, Pune, Bangalore, Delhi, and Chennai. Foreign manufacturers do not provide local servicing, and simple domestic fabricators lack clinical certification and structural longevity.</p>
+      <h3>Turnkey Sourcing &amp; Engineering:</h3>
+      <p>TechFit provides full boots-on-the-ground engineering support, certified professional installation, immediate spare parts inventory, and robust annual maintenance contracts (AMC) throughout India, including Mumbai, Pune, Bangalore, Delhi, Gurgaon, Noida, Chennai, and Hyderabad, ensuring 100% operational uptime.</p>
       
       <p><strong>Contact TechFit for Alteon India Inquiries:</strong><br>
         Email: info@techfitactive.com<br>
@@ -617,16 +629,16 @@ const NOSCRIPT_FALLBACKS = {
   'bh-fitness': `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <h2>BH Fitness India | Official Authorized Distributor</h2>
-      <p>TechFit is the official authorized importer and distributor for <strong>BH Fitness</strong> commercial gym equipment in India. Headquartered in Spain, BH Fitness is Europe's No. 1 commercial fitness brand, delivering world-class biomechanics, structural durability, and cloud-connected display consoles.</p>
+      <p>TechFit is the official authorized distributor for <strong>BH Fitness</strong> commercial gym equipment in India. Headquartered in Spain, BH Fitness is a leading global commercial fitness brand, delivering world-class biomechanics, structural durability, and cloud-connected display consoles.</p>
       
       <h3>Product Lines:</h3>
       <ul>
-        <li><strong>Commercial Cardio (LK &amp; Move Series):</strong> Heavy-duty commercial treadmills, upright exercise bikes, recumbent bikes, and elliptical trainers featuring interactive touchscreen consoles and virtual active training.</li>
+        <li><strong>Commercial Cardio (LK &amp; Move Series):</strong> Heavy-duty commercial treadmills, upright exercise bikes, recumbent bikes, ellipticals, and HIIT rowers/air-bikes featuring interactive touchscreen consoles and virtual active training.</li>
         <li><strong>Commercial Strength (TR &amp; PL Series):</strong> Premium plate-loaded strength stations, selectorized weight-stack machine lines, dual-pulley functional trainers, cable crossovers, and heavy-duty adjustable benches.</li>
       </ul>
 
-      <h3>The European Alternative to Luxury Imports:</h3>
-      <p>BH Fitness by TechFit provides the exact same premium biomechanical engineering, smooth fluid movement, and cloud-connected console technology as premium American and Italian brands like <strong>Technogym (technogym.com/en-IN/)</strong>, <strong>Life Fitness India (lifefitnessindia.com)</strong>, <strong>Precor India partners (tifc.co.in) and TIFC Fitness (fitness.tifc.co.in)</strong>, <strong>Matrix Fitness India (in.matrixfitness.com)</strong>, <strong>Star Trac and Nautilus (startracventures.com)</strong>, <strong>Hoist and Freemotion (focusfitness.in)</strong>, and <strong>Panatta (venezo.in)</strong>, but at a direct import price point. By bypassing middlemen, TechFit saves commercial gym owners, premium developers, and five-star hotels 30% to 40% in capital expenditures (CapEx) while delivering an elite member experience and comprehensive local AMC maintenance contracts across India.</p>
+      <h3>Authorised Sourcing &amp; Local AMC Support:</h3>
+      <p>TechFit provides the commercial fitness industry with direct-import pricing options, full spatial planning, and comprehensive Annual Maintenance Contracts (AMC) serviced by local engineers. By sourcing directly, club owners, premium real estate developers, and five-star hospitality sites can optimize capital expenditures (CapEx) while delivering an elite biomechanical experience and long-term service reliability.</p>
       
       <p><strong>Contact TechFit for BH Fitness India:</strong><br>
         Email: info@techfitactive.com<br>
@@ -654,9 +666,9 @@ const NOSCRIPT_FALLBACKS = {
   </noscript>`,
   'california-fitness': `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
-      <h2>California Fitness India | Commercial Gym Equipment Authorized Distributor</h2>
+      <h2>California Fitness India | Commercial Strength &amp; Cardio Sourcing</h2>
       <p>TechFit is the official authorized distributor of <strong>California Fitness</strong> equipment in India, delivering heavy-duty commercial cardio, selectorized strength stacks, plate-loaded machines, and free-weight benches designed specifically for commercial health clubs, high-traffic corporate fitness facilities, and personal training studios.</p>
-      <p>California Fitness is built for high durability, smooth movement paths, and ease of serviceability. It provides gym owners with a highly reliable, heavy-use alternative to traditional domestic brands like Jerai Fitness (jeraifitness.com), jeraihomegym.com, Being Strong (beingstrong.in), and Viva Fitness (vivafitness.net), backed by TechFit's direct installation and pan-India AMC service framework.</p>
+      <p>California Fitness is built for high durability, smooth movement paths, and ease of serviceability. It provides gym owners with a highly reliable, heavy-use alternative for commercial fitness facilities, backed by TechFit's direct installation, layout planning, and pan-India AMC service framework.</p>
       <p><strong>Contact TechFit for California Fitness India:</strong><br>
         Email: info@techfitactive.com<br>
         Phone: +91 98201 66910<br>
@@ -667,17 +679,17 @@ const NOSCRIPT_FALLBACKS = {
   'mma-cages': `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <h2>MMA Cages &amp; Boxing Rings Manufacturer India | TechFit</h2>
-      <p>TechFit is the undisputed market leader in professional combat sports infrastructure in India. We design, custom-fabricate, and install competition-grade MMA cages (octagons, hexagons, floor cages, and podium cages) and professional boxing rings at our heavy manufacturing facility in Mumbai.</p>
+      <p>TechFit is the undisputed market leader in professional combat sports infrastructure in India. We design, custom-fabricate, and install competition-grade MMA cages (octagons, hexagons, floor cages, and elevated podium cages) and professional boxing rings at our heavy manufacturing facility in Mumbai.</p>
       
       <h3>Combat Sports Infrastructure Highlights:</h3>
       <ul>
         <li><strong>Official Cage Supplier:</strong> TechFit is the official cage and ring supplier to India's top professional fight promotions, including <strong>Matrix Fight Night (MFN)</strong>, <strong>Super Fight League (SFL)</strong>, and <strong>Kumite 1 League</strong>.</li>
         <li><strong>Elite Client Choice:</strong> Chosen by elite combat training clubs such as Bollywood actor Tiger Shroff's signature gym, <strong>MMA Matrix</strong>.</li>
-        <li><strong>Custom Build Specifications:</strong> Built to international competition standards using 4mm+ heavy-gauge structural steel frames, high-density impact safety padding, heavy-gauge vinyl fencing, and custom anti-slip canvases.</li>
+        <li><strong>Custom Build Specifications:</strong> Built to international competition safety standards using 4mm+ heavy-gauge structural steel frames, high-density impact safety padding, heavy-gauge vinyl fencing, and custom anti-slip canvases.</li>
       </ul>
 
-      <h3>The Superior Indian Custom Combat Alternative:</h3>
-      <p>Unlike traditional generic sports brands like <strong>USI Universal (usiuniversal.com)</strong>, <strong>Cosco (cosco.in)</strong>, <strong>Vinex (vinex.in)</strong>, or <strong>Stag (stag.in)</strong>, TechFit customizes every combat structure to the precise dimensions, color scheme, and branding requirements of your facility. We offer a world-class, locally manufactured alternative to ultra-premium imported combat brands like Rogue Fitness (roguefitness.com), Eleiko (eleiko.com), Everlast, Ringside, Title, and Combat Sports International (CSI) at a fraction of the import timeline and freight cost.</p>
+      <h3>Bespoke Custom Fabrications:</h3>
+      <p>TechFit customizes every combat structure to the precise dimensions, color scheme, and branding requirements of your facility. We offer a world-class, locally manufactured alternative that eliminates high ocean freight shipping costs and logistical import delays, backed by local structural engineering certs and boots-on-the-ground support.</p>
       
       <p><strong>Contact TechFit for Custom MMA Cages &amp; Rings:</strong><br>
         Email: info@techfitactive.com<br>
@@ -698,8 +710,8 @@ const NOSCRIPT_FALLBACKS = {
         <li><strong>Bespoke Custom Layouts:</strong> Custom color finishes, laser-cut logo numbering, and bespoke configurations.</li>
       </ul>
 
-      <h3>The Premium Alternative to Rogue, Eleiko, &amp; Force USA:</h3>
-      <p>TechFit CrossFit structures deliver the exact same structural thickness, load capacity, and modular compatibility as imported functional giants like <strong>Rogue Fitness (roguefitness.com)</strong>, <strong>Sorinex</strong>, <strong>Eleiko (eleiko.com)</strong>, and <strong>Force USA</strong>, but without the high shipping costs, import duties, and months of delay. It is a highly customizable, heavy-duty alternative to domestic brands like Jerai Fitness (jeraifitness.com), jeraihomegym.com, Being Strong (beingstrong.in), or Viva Fitness (vivafitness.net).</p>
+      <h3>Premium Structural Integrity:</h3>
+      <p>TechFit CrossFit structures deliver outstanding structural thickness, load capacity, and modular compatibility for premium health clubs, athletic spaces, and functional boxes in India, bypassing high shipping costs, import duties, and months of logistical delay with direct delivery and custom layout designs.</p>
       
       <p><strong>Contact TechFit for Custom Rigs &amp; Frames:</strong><br>
         Email: info@techfitactive.com<br>
@@ -720,7 +732,7 @@ const NOSCRIPT_FALLBACKS = {
         <li><strong>Bumper Plates &amp; Olympic Discs:</strong> Premium virgin rubber bumper plates, competition colored discs, and tri-grip rubber-coated iron plates.</li>
         <li><strong>Power Racks &amp; Platforms:</strong> Professional half-racks, full cages, squat stands, and multi-layer shock-absorption deadlift platforms.</li>
       </ul>
-      <p>TechFit strength free weights provide a direct premium local alternative to imported strength giants like Eleiko (eleiko.com), Rogue Fitness (roguefitness.com), and American Barbell, as well as Indian strength brands like Jerai Fitness (jeraifitness.com), jeraihomegym.com, or Being Strong (beingstrong.in).</p>
+      <p>TechFit strength free weights provide direct, local, high-durability fitness gear fabricated directly in Mumbai, saving gym developers high shipping rates while ensuring strict compliance with commercial load ratings.</p>
       <p><strong>Contact TechFit for Strength Free Weights:</strong><br>
         Email: info@techfitactive.com<br>
         Phone: +91 98201 66910<br>
@@ -758,7 +770,7 @@ const NOSCRIPT_FALLBACKS = {
         <li><strong>Aqua Bikes &amp; Ellipticals:</strong> Heavy-duty aquatic exercise bikes and elliptical trainers for low-impact cardio.</li>
         <li><strong>Aqua Therapy Pools:</strong> Custom modular therapy pools with integrated water currents, grab bars, and accessibility ramps.</li>
       </ul>
-      <p>TechFit aqua equipment offers a highly cost-effective, direct local alternative with pan-India maintenance support to imported aqua giants like HydroWorx, SwimEx, and Endless Pools (endlesspools.com).</p>
+      <p>TechFit aqua equipment offers custom localized stainless steel engineering, high-durability marine-grade design, and complete after-sales servicing with local AMC coverage, bypassing complex import logistics and third-party repair networks.</p>
       <p><strong>Contact TechFit for Aqua Equipment:</strong><br>
         Email: info@techfitactive.com<br>
         Phone: +91 98201 66910<br>
@@ -771,15 +783,15 @@ const NOSCRIPT_FALLBACKS = {
       <h2>Wellness Solutions &amp; Longevity Recovery Equipment India | TechFit</h2>
       <p>TechFit is India's leading turnkey longevity and wellness solutions infrastructure provider. We design, supply, install, and service state-of-the-art biological recovery and spa technology from the premium <strong>Alteon Wellness</strong> collection, catering to commercial longevity centers, professional sports clubs, wellness resorts, residential complexes, and luxury private estates.</p>
       
-      <h3>turnkey Recovery Portfolio:</h3>
+      <h3>Turnkey Recovery Portfolio:</h3>
       <ul>
-        <li><strong>Hyperbaric Oxygen Chambers (HBOT):</strong> Clinical hard-shell chambers operating at elevated atmospheric pressures. A premium hard-shell alternative to Sechrist and a safer, certified alternative to Macy-Pan or OxyHealth soft chambers.</li>
-        <li><strong>Nitrogen-Free Whole-Body Cryotherapy:</strong> Dry electric whole-body cryotherapy chambers running on clean electrical energy at -110°C to -140°C. Perfect electric alternative to Mecotec, Zimmer, Zimmer Cryo, CryoBuilt, and liquid nitrogen chambers (Cryomed).</li>
-        <li><strong>Medical-Grade Red Light Therapy (PBM):</strong> Clinical full-body photobiomodulation panels and chambers offering precise therapeutic wavelengths. Superior to domestic panels (Joovv, Mito Red Light).</li>
-        <li><strong>Biopod Zero-Gravity Dry Floatation:</strong> Waterless floatation beds providing instant stress reduction, spine decompression, and muscular relief. Top premium alternative to Zerobody and Starpool.</li>
-        <li><strong>IHHT Cellular Air Trainers:</strong> Passive altitude interval training systems for rapid cellular rejuvenation. Elite alternative to CellGym, Hypoxico, and Live O2.</li>
+        <li><strong>Hyperbaric Oxygen Chambers (HBOT):</strong> Clinical hard-shell chambers operating at elevated atmospheric pressures (1.5–2.0 ATA). Built for clinical safety and certified structural integrity.</li>
+        <li><strong>Nitrogen-Free Whole-Body Cryotherapy:</strong> Dry electric whole-body cryotherapy chambers running on clean electrical energy at -110°C to -140°C, delivering safe, chemical-free cold exposure.</li>
+        <li><strong>Medical-Grade Red Light Therapy (PBM):</strong> Clinical full-body photobiomodulation panels and chambers offering precise therapeutic wavelengths (680/850 nm) to boost energy and recovery.</li>
+        <li><strong>Biopod Zero-Gravity Dry Floatation:</strong> Waterless floatation beds providing instant stress reduction, spine decompression, and muscular relief.</li>
+        <li><strong>IHHT Cellular Air Trainers:</strong> Passive altitude interval training systems for rapid cellular rejuvenation and cellular performance.</li>
       </ul>
-      <p>TechFit provides end-to-end layouts, certified plumbing and electrical engineering preparation, and localized AMC maintenance contracts. This ensures 100% operational uptime, which imported recovery brands cannot support.</p>
+      <p>TechFit provides end-to-end layouts, certified plumbing and electrical engineering preparation, and localized AMC maintenance contracts. This ensures 100% operational uptime, backed by a dedicated local engineer dispatch network.</p>
       <p><strong>Contact TechFit for Wellness &amp; Recovery Solutions:</strong><br>
         Email: info@techfitactive.com<br>
         Phone: +91 98201 66910<br>
@@ -798,9 +810,8 @@ const NOSCRIPT_FALLBACKS = {
         <li><strong>Premium Equipment Supply:</strong> Direct factory authorized supply of world-class European cardio (BH Fitness, Tunturi), commercial strength lines (California Fitness), and custom structural fitness fabrications.</li>
         <li><strong>Custom Combat &amp; Rig Fabrication:</strong> Heavy industrial manufacturing of competition MMA octagons, floor cages, dynamic boxing rings, CrossFit functional rigs, and steel free weights.</li>
         <li><strong>Professional Gym Flooring &amp; Sports Infrastructure:</strong> Premium sound-insulating rubber flooring rolls, interlocking tiles, custom turf tracks, and complete ITF-compliant padel and pickleball court builds.</li>
-        <li><strong>Pan-India Maintenance &amp; AMC Services:</strong> Localized post-sales technical support, rapid spare parts fulfillment, emergency breakdown servicing, and cost-effective annual maintenance contracts (AMC) to minimize gym downtime.</li>
       </ul>
-      <p>Backed by over 300 successful turnkeys across India, TechFit represents the premier single-contract alternative to managing multiple fragmented contractors, single-brand importers, or local domestic builders like Jerai Fitness (jeraifitness.com), Being Strong (beingstrong.in), Viva Fitness (vivafitness.net), Shua Fitness (shuafitness.in), Aerofit (aerofit.co), Fitline (fitlineindia.com), Fitking (indiansunnyfitness.com), Fitgenix (fitgenix.in), Into Wellness (intowellness.in), and Energie Fitness (energiefitness.in).</p>
+      <p>Backed by over 300 successful turnkeys across India, TechFit represents the premier single-contract partner for premium commercial amenities, coordinating the entire planning, delivery, and pan-India AMC after-sales service from our Mumbai center.</p>
       <p><strong>Contact TechFit Gym Services:</strong><br>
         Email: info@techfitactive.com<br>
         Phone: +91 98201 66910<br>
@@ -809,6 +820,7 @@ const NOSCRIPT_FALLBACKS = {
     </div>
   </noscript>`
 };
+
 
 function escapeHtml(str) {
   return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
