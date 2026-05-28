@@ -24,8 +24,8 @@ const DEFAULT_OG_IMG = BASE + '/og-image.jpg';
 
 const SEO_MAP = {
   'alteon': {
-    title: 'Alteon Wellness & Recovery | Hyperbaric, Cryotherapy, Red-Light Therapy India',
-    desc: 'Alteon by TechFit — premium wellness and recovery technology. Hyperbaric oxygen chambers, cryotherapy, red-light therapy, dry-float, IHHT and more for clinics, hotels and gyms.',
+    title: 'Alteon Wellness India | Official Exclusive Distributor & Partner',
+    desc: 'Official authorized exclusive distributor of Alteon Wellness in India. Direct supplier of Alteon Elysion HBOT hyperbaric chambers, Cryoblast Pro cryotherapy, infrared saunas, and red light therapy systems with local installation and AMC support.',
     img: DEFAULT_OG_IMG
   },
   'bh-fitness': {
