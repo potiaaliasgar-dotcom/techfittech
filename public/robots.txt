@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 
+# Social Media Crawlers
 User-agent: Twitterbot
 Allow: /
 
@@ -14,6 +15,46 @@ User-agent: WhatsApp
 Allow: /
 
 User-agent: Slackbot
+Allow: /
+
+# AI Chatbot & LLM Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
 Allow: /
 
 Sitemap: https://www.techfittech.com/sitemap.xml
