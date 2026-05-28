@@ -26,153 +26,220 @@ const SEO_MAP = {
   'alteon': {
     title: 'Alteon Wellness & Recovery | Hyperbaric, Cryotherapy, Red-Light Therapy India',
     desc: 'Alteon by TechFit — premium wellness and recovery technology. Hyperbaric oxygen chambers, cryotherapy, red-light therapy, dry-float, IHHT and more for clinics, hotels and gyms.',
+    h1: 'Alteon Wellness & Recovery Technology India',
+    lastmod: '2026-05-24',
     img: DEFAULT_OG_IMG
   },
   'bh-fitness': {
     title: 'BH Fitness India | Authorised Distributor — Treadmills, Bikes, Ellipticals',
     desc: 'TechFit is the authorised distributor of BH Fitness commercial gym equipment in India. Treadmills, exercise bikes, ellipticals and strength machines for gyms, hotels and corporates.',
+    h1: 'BH Fitness India | Authorised Distributor — Treadmills, Bikes, Ellipticals',
+    lastmod: '2026-05-25',
     img: DEFAULT_OG_IMG
   },
   'tunturi': {
     title: 'Tunturi India | Authorised Distributor — Nordic Fitness Equipment',
     desc: 'TechFit is the authorised distributor of Tunturi fitness equipment in India. From Finland — premium cardio, strength and functional-training gear for commercial and home gyms.',
+    h1: 'Tunturi India | Authorised Distributor — Nordic Fitness Equipment',
+    lastmod: '2026-05-22',
     img: DEFAULT_OG_IMG
   },
   'california-fitness': {
     title: 'California Fitness India | Authorised Distributor — Commercial Gym Equipment',
     desc: 'TechFit is the authorised distributor of California Fitness in India. Professional-grade cardio and strength equipment for gyms, studios and fitness chains.',
+    h1: 'California Fitness India | Authorised Distributor — Gym Equipment',
+    lastmod: '2026-05-20',
     img: DEFAULT_OG_IMG
   },
   'techfit': {
     title: 'TechFit Active | In-House Gym & Sports Equipment Manufacturer India',
     desc: "TechFit Active — India's in-house manufacturer of MMA cages, boxing rings, CrossFit rigs, free weights, padel courts and aqua fitness equipment. Factory in Mumbai.",
+    h1: 'TechFit Active | Gym & Sports Equipment Manufacturer India',
+    lastmod: '2026-05-26',
     img: DEFAULT_OG_IMG
   },
   'mma-cages': {
     title: 'MMA Cages & Boxing Rings India | TechFit — Manufacturer & Supplier',
     desc: 'Competition and training MMA octagons, floor cages, podium cages and boxing rings by TechFit. Trusted by Matrix Fight Night, Super Fight League and Kumite 1.',
+    h1: 'MMA Cages & Boxing Rings India | TechFit Manufacturer',
+    lastmod: '2026-05-27',
     img: DEFAULT_OG_IMG
   },
   'crossfit-rigs': {
     title: 'CrossFit Rigs & Functional Training India | TechFit Manufacturer',
     desc: 'Custom CrossFit rigs, wall-mounted pull-up systems, calisthenics structures and modular functional-training rigs. Designed and manufactured by TechFit in Mumbai.',
+    h1: 'CrossFit Rigs & Functional Training India | TechFit Manufacturer',
+    lastmod: '2026-05-26',
     img: DEFAULT_OG_IMG
   },
   'free-weights': {
     title: 'Free Weights & Strength Equipment India | TechFit Manufacturer',
     desc: 'Olympic barbells, rubber-coated dumbbells, bumper plates, power racks, squat stands and deadlift platforms. Manufactured in India by TechFit.',
+    h1: 'Free Weights & Strength Equipment India | TechFit Manufacturer',
+    lastmod: '2026-05-25',
     img: DEFAULT_OG_IMG
   },
   'padel-pickleball': {
     title: 'Padel & Pickleball Courts India | TechFit — Design, Build & Install',
     desc: 'End-to-end padel and pickleball court construction in India. Design, fabrication and installation for clubs, resorts, housing societies and corporate campuses.',
+    h1: 'Padel & Pickleball Court Construction India | TechFit',
+    lastmod: '2026-05-24',
     img: DEFAULT_OG_IMG
   },
   'aqua': {
     title: 'Aqua Fitness & Underwater Treadmills India | TechFit',
     desc: 'Underwater treadmills, aqua therapy pools and aqua fitness equipment by TechFit. Designed for physiotherapy clinics, hotels, wellness centres and rehabilitation facilities.',
+    h1: 'Aqua Fitness & Underwater Treadmills India | TechFit',
+    lastmod: '2026-05-23',
     img: DEFAULT_OG_IMG
   },
   'wellness-solutions': {
     title: 'Wellness Solutions India | TechFit — Recovery, Longevity & Spa Equipment',
     desc: 'Complete wellness solutions by TechFit — from hyperbaric chambers and cryotherapy to infrared saunas and float pods. Turnkey wellness infrastructure for hotels, clinics and gyms.',
+    h1: 'Wellness Solutions India | TechFit Recovery & Longevity',
+    lastmod: '2026-05-27',
     img: DEFAULT_OG_IMG
   },
   'services': {
     title: 'Gym & Wellness Services India | TechFit — Design, Install, AMC',
     desc: 'TechFit services — gym design consultation, equipment supply, installation, flooring, AMC and after-sales support. Full turnkey solutions across India.',
+    h1: 'Gym & Wellness Setup Services India | TechFit',
+    lastmod: '2026-05-27',
     img: DEFAULT_OG_IMG
   },
   'about': {
     title: "About TechFit | India's Premier Gym & Sports Infrastructure Company",
     desc: "Founded in Mumbai, TechFit is India's leading gym, wellness and sports infrastructure company. Learn about our story, leadership, manufacturing facility and vision.",
+    h1: "About TechFit | India's Premier Gym & Sports Infrastructure Company",
+    lastmod: '2026-05-20',
     img: DEFAULT_OG_IMG
   },
   'contact': {
     title: 'Contact TechFit | Get a Free Gym & Wellness Consultation',
     desc: 'Get in touch with TechFit for a free gym setup consultation. Call +91 98201 66910 or visit us at 309 Boat Hard Rd, Darukhana, Byculla, Mumbai 400010.',
+    h1: 'Contact TechFit | Get a Free Gym & Wellness Consultation',
+    lastmod: '2026-05-28',
     img: DEFAULT_OG_IMG
   },
   'for-gyms': {
     title: 'Gym & Studio Setup India | TechFit — Equipment, Design & Installation',
     desc: 'Complete gym and studio setup solutions by TechFit. From equipment selection to layout design, flooring and installation — get your gym running fast.',
+    h1: 'Gym & Studio Setup India | TechFit Turnkey Solutions',
+    lastmod: '2026-05-24',
     img: DEFAULT_OG_IMG
   },
   'for-developers': {
     title: 'Real-Estate Developer Gym Amenities India | TechFit',
     desc: "Premium gym and wellness amenities for residential and commercial real-estate developers. TechFit partners with India's top builders for world-class fitness infrastructure.",
+    h1: 'Real-Estate Developer Gym Amenities India | TechFit',
+    lastmod: '2026-05-24',
     img: DEFAULT_OG_IMG
   },
   'for-schools': {
     title: 'School & Institution Fitness Setup India | TechFit',
     desc: 'Safe, age-appropriate fitness equipment and sports infrastructure for schools, colleges and institutions. Designed and supplied by TechFit across India.',
+    h1: 'School & Institution Fitness Setup India | TechFit',
+    lastmod: '2026-05-22',
     img: DEFAULT_OG_IMG
   },
   'for-hotels': {
     title: 'Hotel Gym & Wellness Setup India | TechFit',
     desc: 'Turnkey hotel gym and wellness solutions. Premium equipment from BH Fitness, Tunturi and California Fitness — plus spa, recovery and Alteon wellness technology.',
+    h1: 'Hotel Gym & Wellness Setup India | TechFit',
+    lastmod: '2026-05-24',
     img: DEFAULT_OG_IMG
   },
   'blogs': {
     title: 'TechFit Blog | Gym, Wellness & Sports Industry Insights India',
     desc: "Industry insights, case studies and news from TechFit — India's leading gym, wellness and sports infrastructure company.",
+    h1: 'TechFit Blog | Gym, Wellness & Sports Industry Insights India',
+    lastmod: '2026-05-28',
     img: DEFAULT_OG_IMG
   },
   'blog-mfn': {
     title: 'Matrix Fight Night — MMA Cage by TechFit | Case Study',
     desc: "How TechFit designed and built the competition-grade MMA octagon for Matrix Fight Night — India's premier mixed martial arts promotion.",
+    h1: 'Matrix Fight Night — MMA Cage by TechFit | Case Study',
+    lastmod: '2026-02-10',
     img: DEFAULT_OG_IMG
   },
   'blog-sfl': {
     title: 'Super Fight League — MMA Cage by TechFit | Case Study',
     desc: "TechFit manufactured the professional MMA cage for Super Fight League, one of India's biggest combat sports events.",
+    h1: 'Super Fight League — MMA Cage by TechFit | Case Study',
+    lastmod: '2026-03-01',
     img: DEFAULT_OG_IMG
   },
   'blog-kumite': {
     title: "Kumite 1 League — Boxing Ring by TechFit | Case Study",
     desc: "TechFit built the competition boxing ring for Kumite 1 League, India's high-profile combat sports league.",
+    h1: 'Kumite 1 League — Boxing Ring by TechFit | Case Study',
+    lastmod: '2026-03-15',
     img: DEFAULT_OG_IMG
   },
   'blog-mma-matrix': {
     title: "MMA Matrix — Tiger Shroff's Gym by TechFit | Case Study",
     desc: "TechFit designed and equipped MMA Matrix — Bollywood actor Tiger Shroff's signature mixed martial arts training gym.",
+    h1: "MMA Matrix — Tiger Shroff's Gym by TechFit | Case Study",
+    lastmod: '2026-04-05',
     img: DEFAULT_OG_IMG
   },
   'blog-one-stop': {
     title: 'One-Stop Gym Infrastructure — TechFit Advantage | Blog',
     desc: 'Why TechFit is the one-stop solution for all gym infrastructure needs — from equipment and flooring to design, installation and maintenance.',
+    h1: 'One-Stop Gym Infrastructure — TechFit Advantage',
+    lastmod: '2026-05-01',
     img: DEFAULT_OG_IMG
   },
   'blog-wellness-boom': {
     title: "India's Wellness Boom — Alteon & Recovery Tech | Blog",
     desc: "Exploring India's growing wellness and longevity market, and how Alteon recovery technology is leading the charge.",
+    h1: "India's Wellness Boom — Alteon & Recovery Tech",
+    lastmod: '2026-05-15',
     img: DEFAULT_OG_IMG
   },
   'gym-flooring': {
     title: 'Gym Flooring India | TechFit — Rubber, Turf & Interlocking Tiles',
     desc: 'Professional gym flooring solutions — rubber rolls, interlocking tiles, artificial turf and shock-absorbent mats. Supplied and installed by TechFit across India.',
+    h1: 'Gym Flooring India | TechFit Rubber & Turf Solutions',
+    lastmod: '2026-05-25',
     img: DEFAULT_OG_IMG
   },
   'flooring': {
     title: 'Gym Flooring India | TechFit — Rubber, Turf & Interlocking Tiles',
     desc: 'Professional gym flooring solutions — rubber rolls, interlocking tiles, artificial turf and shock-absorbent mats. Supplied and installed by TechFit across India.',
+    h1: 'Gym Flooring India | TechFit Rubber & Turf Solutions',
+    lastmod: '2026-05-25',
+    img: DEFAULT_OG_IMG
+  },
+  'get-a-quote': {
+    title: 'Get a Free Gym & Wellness Consultation | TechFit India',
+    desc: 'Get in touch with TechFit for a free gym setup consultation. Call +91 98201 66910 or visit us at 309 Boat Hard Rd, Darukhana, Byculla, Mumbai 400010.',
+    h1: 'Get a Free Gym & Wellness Consultation | TechFit India',
+    lastmod: '2026-05-28',
     img: DEFAULT_OG_IMG
   },
   'thank-you': {
     title: 'Thank You for Your Enquiry | TechFit India',
     desc: 'Thank you for contacting TechFit. We have received your inquiry and our team will get in touch with you shortly.',
+    h1: 'Thank You for Your Enquiry | TechFit India',
+    lastmod: '2026-05-28',
     img: DEFAULT_OG_IMG,
     noindex: true
   },
   'privacy-policy': {
     title: 'Privacy Policy | TechFit India',
     desc: 'Read the privacy policy of Techfit Health Fitness Private Limited. Learn how we collect, use, and protect your information.',
+    h1: 'Privacy Policy | TechFit India',
+    lastmod: '2026-05-28',
     img: DEFAULT_OG_IMG,
     noindex: true
   },
   'terms-of-service': {
     title: 'Terms of Service | TechFit India',
     desc: 'Read the terms of service governing TechFit supply, custom fabrication, and equipment installation in India.',
+    h1: 'Terms of Service | TechFit India',
+    lastmod: '2026-05-28',
     img: DEFAULT_OG_IMG,
     noindex: true
   }
@@ -849,6 +916,12 @@ function generatePage(html, route, seo) {
   out = out.replace(/(<meta\s+name="twitter:description"\s+content=")[^"]*("\s+id="tw-description")/s, `$1${escapeHtml(seo.desc)}$2`);
   out = out.replace(/(<meta\s+name="twitter:image"\s+content=")[^"]*("\s+id="tw-image")/, `$1${seo.img}$2`);
 
+  // Replace the default H1 with route-specific H1
+  if (seo.h1) {
+    const h1Block = `<h1 class="sr-h1" style="position:absolute;left:-9999px" id="main-h1">${escapeHtml(seo.h1)}</h1>`;
+    out = out.replace(/<h1 class="sr-h1" style="position:absolute;left:-9999px" id="main-h1">.*?<\/h1>/, h1Block);
+  }
+
   // Inject the static JSON-LD schema into the <head> of this route copy!
   if (SCHEMAS[route]) {
     const schemaBlock = `\n  <script type="application/ld+json">\n${JSON.stringify(SCHEMAS[route], null, 2)}\n  </script>`;
@@ -937,3 +1010,30 @@ for (const [route, seo] of Object.entries(SEO_MAP)) {
 }
 
 console.log(`\n🎉 SEO Prerendering complete! Generated ${count} route-specific pages in 'dist/'.`);
+
+// 4. Generate dynamic sitemap.xml
+function generateSitemap(seoMap) {
+  let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+  
+  // Add homepage first
+  xml += `    <url><loc>https://www.techfittech.com/</loc><lastmod>2026-05-28</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n`;
+  
+  for (const [route, seo] of Object.entries(seoMap)) {
+    if (seo.noindex) continue;
+    
+    const priority = route.startsWith('blog-') ? '0.6' : (route === 'get-a-quote' ? '0.9' : '0.8');
+    const changefreq = route.startsWith('blog-') ? 'monthly' : 'weekly';
+    const lastmod = seo.lastmod || '2026-05-28';
+    
+    xml += `    <url><loc>https://www.techfittech.com/${route}</loc><lastmod>${lastmod}</lastmod><changefreq>${changefreq}</changefreq><priority>${priority}</priority></url>\n`;
+  }
+  
+  xml += '</urlset>\n';
+  
+  fs.writeFileSync(path.join(DIST, 'sitemap.xml'), xml, 'utf8');
+  fs.writeFileSync(path.join(PUBLIC, 'sitemap.xml'), xml, 'utf8');
+  console.log('✔ Dynamic sitemap.xml successfully generated in public/ and dist/');
+}
+
+generateSitemap(SEO_MAP);
