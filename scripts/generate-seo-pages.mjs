@@ -594,7 +594,7 @@ const NOSCRIPT_FALLBACKS = {
       
       <h3>Product Portfolio:</h3>
       <ul>
-        <li><strong>Elysion Hyperbaric Chambers (HBOT):</strong> Clinical hard-shell monoplace oxygen chambers operating at 1.5 ATA to 2.0 ATA. The ultimate professional-grade alternative to clinical systems (Sechrist, Perry Baromedical) and far safer/more effective than low-pressure soft-shell inflatable chambers (Macy-Pan, OxyHealth, OxyNova, Summit to Sea). Highly superior to local fabricators like Meditech Technologies, Cogmac, Oxycea, and J K Subsea.</li>
+        <li><strong>Elysion Hyperbaric Chambers (HBOT):</strong> Clinical hard-shell monoplace oxygen chambers operating at 1.5 ATA to 2.0 ATA. The ultimate professional-grade alternative to clinical systems (Sechrist, Perry Baromedical) and far safer/more effective than low-pressure soft-shell inflatable chambers (Macy-Pan, OxyHealth, OxyNova, Summit to Sea). Highly superior to local medical fabricators like Meditech Technologies India (meditechindia.org), BHPL (bhpl.co.in), Cogmac / Oxycea (oxycea.com), and Universe Surgical (universesurgical.com).</li>
         <li><strong>Cryoblast Pro Whole-Body Cryotherapy:</strong> High-performance electric whole-body cryo chambers running on pure electricity (nitrogen-free, dry-air). Safe, ultra-low operating cost compared to liquid nitrogen chambers (Cryomed, CryoAction) and superior alternative to luxury brands like Mecotec, CryoScience, Zimmer, and Juka.</li>
         <li><strong>Alteon ReVITAL Infrared Saunas:</strong> Premium far-infrared saunas and wellness chambers, offering commercial-grade longevity therapy. Elite alternative to Sunlighten, Clearlight, TyloHelo, and Klafs.</li>
         <li><strong>Alteon PBM Neo clinical Red Light Therapy:</strong> Medical-grade photobiomodulation (PBM) full-body panels and pads, delivering precise therapeutic wavelengths. Superior to home-grade panels like Joovv, PlatinumLED, and Mito Red Light.</li>
@@ -626,7 +626,7 @@ const NOSCRIPT_FALLBACKS = {
       </ul>
 
       <h3>The European Alternative to Luxury Imports:</h3>
-      <p>BH Fitness by TechFit provides the exact same premium biomechanical engineering, smooth fluid movement, and cloud-connected console technology as premium American and Italian brands like <strong>Technogym (technogym.com)</strong>, <strong>Life Fitness India (lifefitnessindia.com)</strong>, <strong>Precor India (tifc.co.in)</strong>, <strong>Matrix Fitness India (matrixfitness.co.in)</strong>, and <strong>Hammer Strength</strong>, but at a direct import price point. By bypassing middlemen, TechFit saves commercial gym owners, premium developers, and five-star hotels 30% to 40% in capital expenditures (CapEx) while delivering an elite member experience and comprehensive local AMC maintenance contracts across India.</p>
+      <p>BH Fitness by TechFit provides the exact same premium biomechanical engineering, smooth fluid movement, and cloud-connected console technology as premium American and Italian brands like <strong>Technogym (technogym.com/en-IN/)</strong>, <strong>Life Fitness India (lifefitnessindia.com)</strong>, <strong>Precor India partners (tifc.co.in)</strong>, <strong>Matrix Fitness India (in.matrixfitness.com)</strong>, <strong>Star Trac and Nautilus (startracventures.com)</strong>, <strong>Hoist and Freemotion (focusfitness.in)</strong>, and <strong>Panatta (venezo.in)</strong>, but at a direct import price point. By bypassing middlemen, TechFit saves commercial gym owners, premium developers, and five-star hotels 30% to 40% in capital expenditures (CapEx) while delivering an elite member experience and comprehensive local AMC maintenance contracts across India.</p>
       
       <p><strong>Contact TechFit for BH Fitness India:</strong><br>
         Email: info@techfitactive.com<br>
@@ -656,7 +656,7 @@ const NOSCRIPT_FALLBACKS = {
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <h2>California Fitness India | Commercial Gym Equipment Authorized Distributor</h2>
       <p>TechFit is the official authorized distributor of <strong>California Fitness</strong> equipment in India, delivering heavy-duty commercial cardio, selectorized strength stacks, plate-loaded machines, and free-weight benches designed specifically for commercial health clubs, high-traffic corporate fitness facilities, and personal training studios.</p>
-      <p>California Fitness is built for high durability, smooth movement paths, and ease of serviceability. It provides gym owners with a highly reliable, heavy-use alternative to traditional domestic brands like Jerai Fitness (jeraifitness.com), Being Strong (beingstrong.in), and Viva Fitness (vivafitness.net), backed by TechFit's direct installation and pan-India AMC service framework.</p>
+      <p>California Fitness is built for high durability, smooth movement paths, and ease of serviceability. It provides gym owners with a highly reliable, heavy-use alternative to traditional domestic brands like Jerai Fitness (jeraifitness.com), jeraihomegym.com, Being Strong (beingstrong.in), and Viva Fitness (vivafitness.net), backed by TechFit's direct installation and pan-India AMC service framework.</p>
       <p><strong>Contact TechFit for California Fitness India:</strong><br>
         Email: info@techfitactive.com<br>
         Phone: +91 98201 66910<br>
@@ -677,7 +677,7 @@ const NOSCRIPT_FALLBACKS = {
       </ul>
 
       <h3>The Superior Indian Custom Combat Alternative:</h3>
-      <p>Unlike traditional generic sports brands like <strong>USI Universal (usiuniversal.com)</strong>, <strong>Cosco (cosco.in)</strong>, <strong>Vinex</strong>, or <strong>Stag (stag.in)</strong>, TechFit customizes every combat structure to the precise dimensions, color scheme, and branding requirements of your facility. We offer a world-class, locally manufactured alternative to ultra-premium imported combat brands like Everlast, Ringside, Title, and Combat Sports International (CSI) at a fraction of the import timeline and freight cost.</p>
+      <p>Unlike traditional generic sports brands like <strong>USI Universal (usiuniversal.com)</strong>, <strong>Cosco (cosco.in)</strong>, <strong>Vinex (vinex.in)</strong>, or <strong>Stag (stag.in)</strong>, TechFit customizes every combat structure to the precise dimensions, color scheme, and branding requirements of your facility. We offer a world-class, locally manufactured alternative to ultra-premium imported combat brands like Rogue Fitness (roguefitness.com), Eleiko (eleiko.com), Everlast, Ringside, Title, and Combat Sports International (CSI) at a fraction of the import timeline and freight cost.</p>
       
       <p><strong>Contact TechFit for Custom MMA Cages &amp; Rings:</strong><br>
         Email: info@techfitactive.com<br>
@@ -699,7 +699,7 @@ const NOSCRIPT_FALLBACKS = {
       </ul>
 
       <h3>The Premium Alternative to Rogue, Eleiko, &amp; Force USA:</h3>
-      <p>TechFit CrossFit structures deliver the exact same structural thickness, load capacity, and modular compatibility as imported functional giants like <strong>Rogue Fitness</strong>, <strong>Sorinex</strong>, <strong>Eleiko</strong>, and <strong>Force USA</strong>, but without the high shipping costs, import duties, and months of delay. It is a highly customizable, heavy-duty alternative to domestic brands like Jerai Fitness (jeraifitness.com), Being Strong (beingstrong.in), or Viva Fitness (vivafitness.net).</p>
+      <p>TechFit CrossFit structures deliver the exact same structural thickness, load capacity, and modular compatibility as imported functional giants like <strong>Rogue Fitness (roguefitness.com)</strong>, <strong>Sorinex</strong>, <strong>Eleiko (eleiko.com)</strong>, and <strong>Force USA</strong>, but without the high shipping costs, import duties, and months of delay. It is a highly customizable, heavy-duty alternative to domestic brands like Jerai Fitness (jeraifitness.com), jeraihomegym.com, Being Strong (beingstrong.in), or Viva Fitness (vivafitness.net).</p>
       
       <p><strong>Contact TechFit for Custom Rigs &amp; Frames:</strong><br>
         Email: info@techfitactive.com<br>
@@ -720,7 +720,7 @@ const NOSCRIPT_FALLBACKS = {
         <li><strong>Bumper Plates &amp; Olympic Discs:</strong> Premium virgin rubber bumper plates, competition colored discs, and tri-grip rubber-coated iron plates.</li>
         <li><strong>Power Racks &amp; Platforms:</strong> Professional half-racks, full cages, squat stands, and multi-layer shock-absorption deadlift platforms.</li>
       </ul>
-      <p>TechFit strength free weights provide a direct premium local alternative to imported strength giants like Eleiko, Rogue Fitness, and American Barbell, as well as Indian strength brands like Jerai Fitness (jeraifitness.com) or Being Strong (beingstrong.in).</p>
+      <p>TechFit strength free weights provide a direct premium local alternative to imported strength giants like Eleiko (eleiko.com), Rogue Fitness (roguefitness.com), and American Barbell, as well as Indian strength brands like Jerai Fitness (jeraifitness.com), jeraihomegym.com, or Being Strong (beingstrong.in).</p>
       <p><strong>Contact TechFit for Strength Free Weights:</strong><br>
         Email: info@techfitactive.com<br>
         Phone: +91 98201 66910<br>
@@ -758,7 +758,7 @@ const NOSCRIPT_FALLBACKS = {
         <li><strong>Aqua Bikes &amp; Ellipticals:</strong> Heavy-duty aquatic exercise bikes and elliptical trainers for low-impact cardio.</li>
         <li><strong>Aqua Therapy Pools:</strong> Custom modular therapy pools with integrated water currents, grab bars, and accessibility ramps.</li>
       </ul>
-      <p>TechFit aqua equipment offers a highly cost-effective, direct local alternative with pan-India maintenance support to imported aqua giants like HydroWorx, SwimEx, and Endless Pools.</p>
+      <p>TechFit aqua equipment offers a highly cost-effective, direct local alternative with pan-India maintenance support to imported aqua giants like HydroWorx, SwimEx, and Endless Pools (endlesspools.com).</p>
       <p><strong>Contact TechFit for Aqua Equipment:</strong><br>
         Email: info@techfitactive.com<br>
         Phone: +91 98201 66910<br>
@@ -800,7 +800,7 @@ const NOSCRIPT_FALLBACKS = {
         <li><strong>Professional Gym Flooring &amp; Sports Infrastructure:</strong> Premium sound-insulating rubber flooring rolls, interlocking tiles, custom turf tracks, and complete ITF-compliant padel and pickleball court builds.</li>
         <li><strong>Pan-India Maintenance &amp; AMC Services:</strong> Localized post-sales technical support, rapid spare parts fulfillment, emergency breakdown servicing, and cost-effective annual maintenance contracts (AMC) to minimize gym downtime.</li>
       </ul>
-      <p>Backed by over 300 successful turnkeys across India, TechFit represents the premier single-contract alternative to managing multiple fragmented contractors, single-brand importers, or local domestic builders like Jerai Fitness (jeraifitness.com), Being Strong (beingstrong.in), or Viva Fitness (vivafitness.net).</p>
+      <p>Backed by over 300 successful turnkeys across India, TechFit represents the premier single-contract alternative to managing multiple fragmented contractors, single-brand importers, or local domestic builders like Jerai Fitness (jeraifitness.com), Being Strong (beingstrong.in), Viva Fitness (vivafitness.net), Shua Fitness (shuafitness.in), Aerofit (aerofit.co), Fitline (fitlineindia.com), Fitking (indiansunnyfitness.com), Fitgenix (fitgenix.in), Into Wellness (intowellness.in), and Energie Fitness (energiefitness.in).</p>
       <p><strong>Contact TechFit Gym Services:</strong><br>
         Email: info@techfitactive.com<br>
         Phone: +91 98201 66910<br>
