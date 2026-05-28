@@ -51,6 +51,7 @@ const ROUTES = [
   '/blog-one-stop',
   '/blog-wellness-boom',
   '/gym-flooring',
+  '/thank-you',
 ];
 
 async function prerender() {

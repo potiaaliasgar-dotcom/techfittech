@@ -4332,6 +4332,11 @@
         title: 'Gym Flooring India | TechFit — Rubber, Turf & Interlocking Tiles',
         desc: 'Professional gym flooring solutions — rubber rolls, interlocking tiles, artificial turf and shock-absorbent mats. Supplied and installed by TechFit across India.',
         img: DEFAULT_OG_IMG
+      },
+      'thank-you': {
+        title: 'Thank You for Your Enquiry | TechFit India',
+        desc: 'Thank you for contacting TechFit. We have received your inquiry and our team will get in touch with you shortly.',
+        img: DEFAULT_OG_IMG
       }
     };
 
@@ -4445,6 +4450,7 @@
         'services': renderServices,
         'about': renderAbout,
         'contact': renderContact,
+        'thank-you': renderThankYou,
         'blogs': renderBlogs,
         'gym-flooring': renderFlooring,
         'flooring': renderFlooring,
@@ -7947,6 +7953,12 @@ ${footer()}`;
         }
         ['cf-name', 'cf-phone', 'cf-email', 'cf-location', 'cf-msg'].forEach(id => document.getElementById(id).value = '');
         document.getElementById('cf-type').selectedIndex = 0;
+        // Redirect to thank-you page for Enhanced Conversions tracking
+        history.pushState({}, '', '/thank-you');
+        page = 'thank-you';
+        render();
+        navActive();
+        updateSEO();
       } catch (error) {
         alert('Our factory mail server is currently experiencing issues. Please WhatsApp us on +91 98201 66910.');
       } finally {
@@ -7958,6 +7970,20 @@ ${footer()}`;
       const t = document.getElementById('toast');
       t.textContent = msg; t.className = 'toast show';
       setTimeout(() => t.className = 'toast', 2800);
+    }
+
+    function renderThankYou() {
+      return `
+<div class="phero"><div class="sec-in"><div class="phero-label">Thank You</div><h2>ENQUIRY RECEIVED</h2><p class="phero-sub">We'll call you within one business day to understand your requirements and schedule your free consultation.</p></div></div>
+<section class="sec"><div class="sec-in" style="text-align:center;padding:60px 20px;">
+  <div class="feat-card" style="max-width:560px;margin:0 auto;">
+    <h3 style="margin-bottom:12px;">✓ You're all set!</h3>
+    <p>Our team will reach out shortly. In the meantime, feel free to explore our solutions or WhatsApp us directly.</p>
+    <br>
+    <a href="/contact" onclick="event.preventDefault();history.pushState({},'','/contact');render();" style="display:inline-block;margin-top:8px;padding:12px 28px;background:#e31e24;color:#fff;border-radius:4px;text-decoration:none;font-weight:700;">← Back to Contact</a>
+  </div>
+</div></section>
+\${footer()}`;
     }
 
     function render404() {
@@ -7979,7 +8005,7 @@ ${footer()}`;
       const path = window.location.pathname.substring(1) || 'home';
       const urlParams = new URLSearchParams(window.location.search);
 
-      const validPages = ['home', 'for-gyms', 'for-developers', 'for-schools', 'for-hotels', 'techfit', 'alteon', 'bh-fitness', 'tunturi', 'california-fitness', 'mma-cages', 'crossfit-rigs', 'free-weights', 'padel-pickleball', 'aqua', 'wellness-solutions', 'services', 'about', 'contact', 'blogs', 'gym-flooring', 'flooring', 'blog-mfn', 'blog-sfl', 'blog-kumite', 'blog-mma-matrix', 'blog-one-stop', 'blog-wellness-boom'];
+      const validPages = ['home', 'for-gyms', 'for-developers', 'for-schools', 'for-hotels', 'techfit', 'alteon', 'bh-fitness', 'tunturi', 'california-fitness', 'mma-cages', 'crossfit-rigs', 'free-weights', 'padel-pickleball', 'aqua', 'wellness-solutions', 'services', 'about', 'contact', 'blogs', 'gym-flooring', 'flooring', 'blog-mfn', 'blog-sfl', 'blog-kumite', 'blog-mma-matrix', 'blog-one-stop', 'blog-wellness-boom', 'thank-you'];
 
       if (validPages.includes(path) || path === '') {
         page = path || 'home';

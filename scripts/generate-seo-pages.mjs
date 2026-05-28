@@ -157,6 +157,11 @@ const SEO_MAP = {
     title: 'Gym Flooring India | TechFit — Rubber, Turf & Interlocking Tiles',
     desc: 'Professional gym flooring solutions — rubber rolls, interlocking tiles, artificial turf and shock-absorbent mats. Supplied and installed by TechFit across India.',
     img: DEFAULT_OG_IMG
+  },
+  'thank-you': {
+    title: 'Thank You for Your Enquiry | TechFit India',
+    desc: 'Thank you for contacting TechFit. We have received your inquiry and our team will get in touch with you shortly.',
+    img: DEFAULT_OG_IMG
   }
 };
 
