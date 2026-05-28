@@ -161,8 +161,8 @@ const SEO_MAP = {
   'thank-you': {
     title: 'Thank You for Your Enquiry | TechFit India',
     desc: 'Thank you for contacting TechFit. We have received your inquiry and our team will get in touch with you shortly.',
-    img: DEFAULT_OG_IMG
-      noindex: true
+    img: DEFAULT_OG_IMG,
+    noindex: true
   }
 };
 
