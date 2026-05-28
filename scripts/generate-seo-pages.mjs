@@ -162,6 +162,7 @@ const SEO_MAP = {
     title: 'Thank You for Your Enquiry | TechFit India',
     desc: 'Thank you for contacting TechFit. We have received your inquiry and our team will get in touch with you shortly.',
     img: DEFAULT_OG_IMG
+      noindex: true
   }
 };
 
@@ -617,6 +618,14 @@ function generatePage(html, route, seo) {
     const schemaBlock = `\n  <script type="application/ld+json">\n${JSON.stringify(SCHEMAS[route], null, 2)}\n  </script>`;
     out = out.replace('</head>', `${schemaBlock}\n</head>`);
   }
+
+      // Noindex for conversion/utility pages
+      if (seo.noindex) {
+              out = out.replace(
+                        /(<meta\s+name="robots"\s+content=")[^"]*(")/,
+                        '$1noindex, nofollow$2'
+                      );
+      }
 
   return minifyHtml(out);
 }
