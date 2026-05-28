@@ -44,8 +44,62 @@ export function PadelPickleball() {
         { src: image5, title: "Custom Branding", tag: "Club Identity" },
     ];
 
+        const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebPage",
+            "@id": "https://www.techfittech.com/padel-pickleball#webpage",
+            "url": "https://www.techfittech.com/padel-pickleball",
+            "name": "Turnkey Padel Court Builder & Construction India — TechFit",
+            "description": "TechFit designs and constructs professional, ITF-compliant panoramic padel courts and pickleball courts across India. High-wind structural framing, panoramic glass, premium AstroTurf, and LED lighting."
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Best padel court builder India",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TechFit is India's leading padel court builder, providing complete turnkey construction from site assessment, civil works, steel framing, panoramic glass installation, premium AstroTurf laying, and LED lighting."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Pickleball court construction India",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TechFit builds indoor and outdoor pickleball courts in India, including surface coating, net installation, and fencing."
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "Product",
+            "name": "TechFit Turnkey Padel Court Installation",
+            "description": "ITF-compliant panoramic padel court construction featuring structural high-gauge steel columns, 12mm tempered panoramic safety glass, premium monofilament padel turf, LED lighting, and custom branding.",
+            "brand": {
+                "@type": "Brand",
+                "name": "TechFit"
+            },
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "INR",
+                "availability": "https://schema.org/InStock",
+                "url": "https://www.techfittech.com/get-a-quote",
+                "seller": {
+                    "@type": "Organization",
+                    "name": "TechFit"
+                }
+            }
+        }
+    ]
+};
+
     return (
         <div className="flex flex-col w-full bg-white text-black overflow-hidden relative font-sans">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
             {/* Hero Section */}
             <section ref={heroRef} className="relative w-full min-h-[70vh] py-20 flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0 bg-black">

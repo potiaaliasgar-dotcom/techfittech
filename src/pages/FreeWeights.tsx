@@ -163,8 +163,70 @@ export function FreeWeights() {
         { src: image5, title: "Precision Casting", tag: "Manufacturing" },
     ];
 
+        const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebPage",
+            "@id": "https://www.techfittech.com/free-weights#webpage",
+            "url": "https://www.techfittech.com/free-weights",
+            "name": "Commercial Free Weights & Dumbbells Manufacturer India — TechFit",
+            "description": "TechFit manufactures professional-grade commercial free weights in India: rubber hex dumbbells, Olympic bumper plates, Olympic barbells, power cages, and deadlift platforms at factory-direct wholesale pricing."
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Who manufactures dumbbells in India?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TechFit manufactures commercial-grade rubber hex dumbbells in India (sizes 2.5kg to 50kg), featuring drop-forged handles and premium knurling for ultimate durability."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Olympic barbell manufacturer India",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TechFit manufactures commercial Olympic barbells in India, including 20kg men's and 15kg women's bars rated to 700kg+ with needle bearings and hard chrome finishes."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Who supplies commercial dumbbells in Mumbai?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TechFit is one of Mumbai's leading commercial gym dumbbell suppliers, offering wholesale rubber hex dumbbells, circular PU dumbbells, and dumbbell racks direct from their factory."
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "Product",
+            "name": "TechFit Commercial Free Weights Package",
+            "description": "High-durability commercial free weight packages including knurled Olympic barbells, high-impact virgin rubber bumper plates, custom rubber hex dumbbells, power racks, and deadlift platforms.",
+            "brand": {
+                "@type": "Brand",
+                "name": "TechFit"
+            },
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "INR",
+                "availability": "https://schema.org/InStock",
+                "url": "https://www.techfittech.com/get-a-quote",
+                "seller": {
+                    "@type": "Organization",
+                    "name": "TechFit"
+                }
+            }
+        }
+    ]
+};
+
     return (
         <div className="flex flex-col w-full bg-white text-black overflow-hidden relative font-sans">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
             {/* Hero Section */}
             <section ref={heroRef} className="relative w-full min-h-[60vh] py-16 flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0 bg-black">

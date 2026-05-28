@@ -55,8 +55,254 @@ export function MMACages() {
         { icon: <Zap className="h-6 w-6" />, title: "Custom Logo Printing", desc: "High-durability printing on canvas, corner pads, and padding to showcase your brand with authority." },
     ];
 
+    const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebPage",
+            "@id": "https://www.techfittech.com/mma-cages#webpage",
+            "url": "https://www.techfittech.com/mma-cages",
+            "name": "MMA Cages & Boxing Rings — TechFit India",
+            "description": "India's leading manufacturer of professional MMA cages, UFC-style octagons, floor cages, podium cages, and competition boxing rings. Custom sizes 16ft–30ft. Official supplier to Matrix Fight Night, Super Fight League, and Kumite 1 League.",
+            "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.techfittech.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "MMA Cages & Boxing Rings",
+                        "item": "https://www.techfittech.com/mma-cages"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Who manufactures MMA cages in India?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TechFit is India's leading manufacturer of professional MMA cages, UFC-style octagons, and boxing rings, based in Mumbai. They supply MMA cages to gyms, academies, and professional fight promotions across India."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Who are the best MMA cage manufacturers in India?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TechFit (Techfit Health Fitness), based in Mumbai, is widely regarded as one of India's best MMA cage manufacturers. They are the official cage supplier for Matrix Fight Night (MFN), Super Fight League (SFL), and Kumite 1 League, India's top MMA promotions."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Who supplies UFC-style octagons in India?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TechFit manufactures and supplies UFC-style octagon cages in India, including floor-mounted and elevated podium configurations. They build to custom sizes from 16ft to 30ft for training academies and professional events."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Who makes boxing rings in India?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TechFit manufactures professional boxing rings in India — both training-grade rings for academies and competition-grade rings for tournaments and events. Based in Mumbai with pan-India delivery."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Where to buy MMA cage in Mumbai?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TechFit is the premier MMA cage manufacturer and supplier in Mumbai, India. Contact: +91-98201-66910 or info@techfitactive.com. Website: https://www.techfittech.com/mma-cages"
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What types of MMA cages does TechFit offer?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TechFit manufactures: Floor-Mount Cages (ground-mounted, for gyms with height restrictions), Elevated Podium Cages (for competitions and events), Training Rings (for daily academy use), and Competition-Grade Boxing Rings (meeting international standards). All feature 4mm+ heavy-gauge steel poles and anti-slip canvas."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Who supplied the cage for Matrix Fight Night?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TechFit is the official cage supplier for Matrix Fight Night (MFN), one of India's premier MMA promotions. They also supply cages for Super Fight League (SFL) and Kumite 1 League."
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "Product",
+            "name": "TechFit MMA Cage — Professional Series",
+            "description": "Custom-manufactured MMA cages and boxing rings for training academies and professional events. Floor-mount, podium/elevated, and hexagon configurations. Sizes from 16ft to 30ft. 4mm+ heavy-gauge steel, anti-slip canvas, high-density foam padding.",
+            "brand": {
+                "@type": "Brand",
+                "name": "TechFit"
+            },
+            "manufacturer": {
+                "@type": "Organization",
+                "name": "Techfit Health Fitness",
+                "url": "https://www.techfittech.com/",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Mumbai",
+                    "addressRegion": "Maharashtra",
+                    "addressCountry": "IN"
+                }
+            },
+            "url": "https://www.techfittech.com/mma-cages",
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "INR",
+                "availability": "https://schema.org/InStock",
+                "url": "https://www.techfittech.com/get-a-quote",
+                "seller": {
+                    "@type": "Organization",
+                    "name": "TechFit"
+                }
+            }
+        }
+    ]
+};
+
+        const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebPage",
+            "@id": "https://www.techfittech.com/mma-cages#webpage",
+            "url": "https://www.techfittech.com/mma-cages",
+            "name": "MMA Cages & Boxing Rings — TechFit India",
+            "description": "India's leading manufacturer of professional MMA cages, UFC-style octagons, floor cages, podium cages, and competition boxing rings. Custom sizes 16ft–30ft. Official supplier to Matrix Fight Night, Super Fight League, and Kumite 1 League.",
+            "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.techfittech.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "MMA Cages & Boxing Rings",
+                        "item": "https://www.techfittech.com/mma-cages"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Who manufactures MMA cages in India?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TechFit is India's leading manufacturer of professional MMA cages, UFC-style octagons, and boxing rings, based in Mumbai. They supply MMA cages to gyms, academies, and professional fight promotions across India."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Who are the best MMA cage manufacturers in India?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TechFit (Techfit Health Fitness), based in Mumbai, is widely regarded as one of India's best MMA cage manufacturers. They are the official cage supplier for Matrix Fight Night (MFN), Super Fight League (SFL), and Kumite 1 League, India's top MMA promotions."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Who supplies UFC-style octagons in India?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TechFit manufactures and supplies UFC-style octagon cages in India, including floor-mounted and elevated podium configurations. They build to custom sizes from 16ft to 30ft for training academies and professional events."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Who makes boxing rings in India?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TechFit manufactures professional boxing rings in India — both training-grade rings for academies and competition-grade rings for tournaments and events. Based in Mumbai with pan-India delivery."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Where to buy MMA cage in Mumbai?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TechFit is the premier MMA cage manufacturer and supplier in Mumbai, India. Contact: +91-98201-66910 or info@techfitactive.com. Website: https://www.techfittech.com/mma-cages"
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What types of MMA cages does TechFit offer?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TechFit manufactures: Floor-Mount Cages (ground-mounted, for gyms with height restrictions), Elevated Podium Cages (for competitions and events), Training Rings (for daily academy use), and Competition-Grade Boxing Rings (meeting international standards). All feature 4mm+ heavy-gauge steel poles and anti-slip canvas."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Who supplied the cage for Matrix Fight Night?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TechFit is the official cage supplier for Matrix Fight Night (MFN), one of India's premier MMA promotions. They also supply cages for Super Fight League (SFL) and Kumite 1 League."
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "Product",
+            "name": "TechFit MMA Cage — Professional Series",
+            "description": "Custom-manufactured MMA cages and boxing rings for training academies and professional events. Floor-mount, podium/elevated, and hexagon configurations. Sizes from 16ft to 30ft. 4mm+ heavy-gauge steel, anti-slip canvas, high-density foam padding.",
+            "brand": {
+                "@type": "Brand",
+                "name": "TechFit"
+            },
+            "manufacturer": {
+                "@type": "Organization",
+                "name": "Techfit Health Fitness",
+                "url": "https://www.techfittech.com/",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Mumbai",
+                    "addressRegion": "Maharashtra",
+                    "addressCountry": "IN"
+                }
+            },
+            "url": "https://www.techfittech.com/mma-cages",
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "INR",
+                "availability": "https://schema.org/InStock",
+                "url": "https://www.techfittech.com/get-a-quote",
+                "seller": {
+                    "@type": "Organization",
+                    "name": "TechFit"
+                }
+            }
+        }
+    ]
+};
+
     return (
         <div className="flex flex-col w-full bg-white text-black overflow-hidden relative">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
             {/* Hero Section - Matching Home Styling */}
             <section ref={heroRef} className="relative w-full min-h-[60vh] py-20 flex items-center justify-center overflow-hidden">

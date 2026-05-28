@@ -63,14 +63,23 @@ export function GetAQuote() {
 
             setSubmitted(true);
 
-            // Fire Google Ads "Submit Lead Form" conversion
+            // Fire Google Ads "Submit Lead Form" conversion with Enhanced Conversions user_data
             if (window.gtag) {
+                window.gtag('set', 'user_data', {
+                    'email': formData.email,
+                    'phone_number': '+91' + formData.phone,
+                    'address': {
+                        'first_name': formData.name.split(' ')[0],
+                        'last_name': formData.name.split(' ').slice(1).join(' ') || '',
+                        'city': formData.city
+                    }
+                });
                 window.gtag('event', 'conversion', {
                     'send_to': 'AW-17959203178/ObCTCPuJmv0bEOrizvNC',
                     'value': 1.0,
                     'currency': 'INR'
                 });
-                console.log('[TechFit] Google Ads conversion fired: Submit Lead Form');
+                console.log('[TechFit] Google Ads conversion fired: Submit Lead Form with user_data');
             }
         } catch (error: any) {
             console.error("Submission error:", error);

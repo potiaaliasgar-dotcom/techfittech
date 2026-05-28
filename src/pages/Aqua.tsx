@@ -52,8 +52,62 @@ export function Aqua() {
         { title: "Aqua Treadmill", tag: "Manual Underwater Treadmill", src: treadmillImg },
     ];
 
+        const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebPage",
+            "@id": "https://www.techfittech.com/aqua#webpage",
+            "url": "https://www.techfittech.com/aqua",
+            "name": "SS316 Underwater Treadmills & Aqua Fitness Equipment India — TechFit",
+            "description": "TechFit is India's premier supplier of SS316 marine-grade aqua fitness equipment: underwater treadmills, aqua bikes, and aqua moon walkers for hydrotherapy, sports rehabilitation, and hotels."
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Underwater treadmill supplier India",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TechFit supplies premium SS316 marine-grade underwater treadmills in India for hotel pools, rehabilitation centres, physiotherapy clinics, and home pools."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Aqua fitness equipment India",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "TechFit's Aqua Series includes marine-grade underwater treadmills, underwater spin exercise bikes, and aqua moon walkers, all designed for chlorinated and salt-water pools."
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "Product",
+            "name": "TechFit Aqua Treadmill — SS316 Series",
+            "description": "SS316 marine-grade rust-resistant underwater treadmill with manual belt operation, shock-absorbing belt design, and 160kg user capacity. Ideal for hotels, clinics, and professional sports rehab.",
+            "brand": {
+                "@type": "Brand",
+                "name": "TechFit"
+            },
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "INR",
+                "availability": "https://schema.org/InStock",
+                "url": "https://www.techfittech.com/get-a-quote",
+                "seller": {
+                    "@type": "Organization",
+                    "name": "TechFit"
+                }
+            }
+        }
+    ]
+};
+
     return (
         <div className="flex flex-col w-full bg-white text-black overflow-hidden relative font-sans">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
             {/* Hero Section */}
             <section ref={heroRef} className="relative w-full min-h-[70vh] py-20 flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0 bg-black">
