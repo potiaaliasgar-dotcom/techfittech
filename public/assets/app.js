@@ -247,7 +247,7 @@ async function submitEmbeddedQuote(projectType) {
       },
       'contact': {
         title: 'Contact TechFit | Get a Free Gym & Wellness Consultation',
-        desc: 'Get in touch with TechFit for a free gym setup consultation. Call +91 98201 66910 or visit us at Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400049, India.',
+        desc: 'Get in touch with TechFit for a free gym setup consultation. Call +91 98201 66910 or visit us at Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India.',
         img: DEFAULT_OG_IMG
       },
       'for-gyms': {
@@ -751,7 +751,7 @@ async function submitEmbeddedQuote(projectType) {
         <h4>Get in Touch</h4>
         <a href="tel:+919820166910" class="footer-tel">+91 98201 66910</a>
         <a href="mailto:info@techfitactive.com" class="footer-email">info@techfitactive.com</a>
-        <a href="https://share.google/IahWbxIMm9ywKR9qp" target="_blank" rel="noopener" class="footer-addr">Plot No 309, Coal Bunder Road E,<br>Reay Road, Darukhana,<br>Mumbai, Maharashtra 400049</a>
+        <a href="https://share.google/IahWbxIMm9ywKR9qp" target="_blank" rel="noopener" class="footer-addr">Plot No 309, Coal Bunder Road E,<br>Reay Road, Darukhana,<br>Mumbai, Maharashtra 400010</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -3815,7 +3815,7 @@ ${footer()}
         </a>
         <a href="https://share.google/IahWbxIMm9ywKR9qp" target="_blank" rel="noopener" class="ci-link">
           <span class="ci-icon">📍</span>
-          <div class="ci-text"><strong>TechFit Industrial</strong><br>Plot No 309, Coal Bunder Road E,<br>Reay Road, Darukhana,<br>Mumbai, Maharashtra 400049</div>
+          <div class="ci-text"><strong>TechFit Industrial</strong><br>Plot No 309, Coal Bunder Road E,<br>Reay Road, Darukhana,<br>Mumbai, Maharashtra 400010</div>
         </a>
         <br>
         <div class="feat-card"><h4>What happens next?</h4><p>After you submit, our team will call within one business day to understand your requirements and schedule a free consultation. No sales pressure — just expert advice.</p></div>
@@ -5068,7 +5068,7 @@ ${footer()}
     publishedDate: `2026-05-30`,
     category: `City Setup`,
     related: [{"slug":"commercial-gym-setup-cost-india","name":"Commercial Gym Setup Cost Guide"},{"slug":"how-to-set-up-a-commercial-gym","name":"How to Set Up a Gym Step-by-Step"}],
-    faqs: [{"q":"Where is TechFit's manufacturing facility located?","a":"TechFit's primary manufacturing factory and corporate headquarters are located at Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400049, India."}],
+    faqs: [{"q":"Where is TechFit's manufacturing facility located?","a":"TechFit's primary manufacturing factory and corporate headquarters are located at Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India."}],
     htmlContent: `<h2>Mumbai Factory-Direct Turnkey Advantages</h2> <p>For gym owners, real estate developers, and corporate facility managers in the Mumbai Metropolitan Region (MMR), TechFit represents the ultimate B2B partner. Our state-of-the-art manufacturing factory is located directly in the heart of Mumbai (Byculla). This coastal proximity gives Mumbai clients unmatched B2B advantages: <strong>zero interstate transport delays</strong>, rapid on-site spatial design consultations, factory-direct pricing on custom-fabricated steel rigs and competition MMA cages, and **immediate, same-day AMC engineer dispatches** for absolute facility uptime.</p> <h2>Acoustic & Moisture-Proof Sourcing for Mumbai</h2> <p>Operating a commercial facility in Mumbai introduces unique geographic challenges. Our high-humidity coastal climate degrades cheap steel quickly; TechFit applies **specialized dual powder-coating protection** to all custom fabricated functional structures, cages, and racks, completely preventing rust. Additionally, we customize high-impact, soundproof rubber flooring tiles for Mumbai's high-density commercial spaces to isolate dropped weights and protect concrete structural floors from transferring noise to residential tenants below.</p>`
   },
   'commercial-gym-setup-pune': {

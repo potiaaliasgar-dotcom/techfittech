@@ -158,7 +158,7 @@ const SEO_MAP = {
   },
   'contact': {
     title: 'Contact TechFit | Get a Free Gym & Wellness Consultation',
-    desc: 'Get in touch with TechFit for a free gym setup consultation. Call +91 98201 66910 or visit us at Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400049, India.',
+    desc: 'Get in touch with TechFit for a free gym setup consultation. Call +91 98201 66910 or visit us at Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India.',
     h1: 'Contact TechFit | Get a Free Gym & Wellness Consultation',
     lastmod: '2026-05-28',
     img: OG_CARDIO
@@ -256,7 +256,7 @@ const SEO_MAP = {
   },
   'get-a-quote': {
     title: 'Get a Free Gym & Wellness Consultation | TechFit India',
-    desc: 'Get in touch with TechFit for a free gym setup consultation. Call +91 98201 66910 or visit us at Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400049, India.',
+    desc: 'Get in touch with TechFit for a free gym setup consultation. Call +91 98201 66910 or visit us at Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India.',
     h1: 'Get a Free Gym & Wellness Consultation | TechFit India',
     lastmod: '2026-05-28',
     img: OG_CARDIO
@@ -1576,7 +1576,7 @@ const SCHEMAS = {
         "@id": "https://www.techfittech.com/contact#webpage",
         "url": "https://www.techfittech.com/contact",
         "name": "Contact TechFit | Get a Free Gym & Wellness Consultation",
-        "description": "Get in touch with TechFit for a free gym setup consultation. Call +91 98201 66910 or visit us at Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400049, India."
+        "description": "Get in touch with TechFit for a free gym setup consultation. Call +91 98201 66910 or visit us at Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India."
       },
       {
         "@type": "Place",
@@ -1587,7 +1587,7 @@ const SCHEMAS = {
           "streetAddress": "Plot No 309, Coal Bunder Road E, Reay Road, Darukhana",
           "addressLocality": "Mumbai",
           "addressRegion": "Maharashtra",
-          "postalCode": "400049",
+          "postalCode": "400010",
           "addressCountry": "IN"
         },
         "geo": {
@@ -1642,7 +1642,7 @@ const SCHEMAS = {
         "@id": "https://www.techfittech.com/get-a-quote#webpage",
         "url": "https://www.techfittech.com/get-a-quote",
         "name": "Get a Free Gym & Wellness Consultation | TechFit India",
-        "description": "Get in touch with TechFit for a free gym setup consultation. Call +91 98201 66910 or visit us at Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400049, India."
+        "description": "Get in touch with TechFit for a free gym setup consultation. Call +91 98201 66910 or visit us at Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India."
       },
       {
         "@type": "BreadcrumbList",
@@ -2137,7 +2137,7 @@ const SCHEMAS = {
         "@type": "FAQPage",
         "inLanguage": "en-IN",
         "mainEntity": [
-          { "@type": "Question", "name": "Where is TechFit's manufacturing facility located?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit's primary manufacturing factory and corporate headquarters are located at Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400049, India." } }
+          { "@type": "Question", "name": "Where is TechFit's manufacturing facility located?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit's primary manufacturing factory and corporate headquarters are located at Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India." } }
         ]
       },
       {
@@ -2352,7 +2352,7 @@ const NOSCRIPT_FALLBACKS = {
       <p><strong>Contact TechFit for Alteon India Inquiries:</strong><br>
         Email: info@techfitactive.com<br>
         Phone: +91 98201 66910<br>
-        Address: Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400049, India<br>
+        Address: Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India<br>
         Website: <a href="https://www.techfittech.com/alteon">techfittech.com/alteon</a>
       </p>
     </div>
@@ -2639,7 +2639,7 @@ const NOSCRIPT_FALLBACKS = {
       
       <div style="background-color:#f8f9fa;padding:1.5rem;border-left:4px solid #0056b3;margin-top:1.5rem;border-radius:4px;">
         <p style="margin:0;font-weight:bold;color:#111;">TechFit Sourcing &amp; Engineering Office</p>
-        <p style="margin:5px 0 0 0;font-size:0.95rem;">Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400049, India</p>
+        <p style="margin:5px 0 0 0;font-size:0.95rem;">Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India</p>
         <p style="margin:5px 0 0 0;font-size:0.95rem;">Email: <a href="mailto:info@techfitactive.com" style="color:#0056b3;text-decoration:none;">info@techfitactive.com</a> | Phone: +91 98201 66910</p>
       </div>
     </div>
@@ -2728,7 +2728,7 @@ const NOSCRIPT_FALLBACKS = {
       
       <div style="background-color:#f8f9fa;padding:1.5rem;border-left:4px solid #0056b3;margin-top:1.5rem;border-radius:4px;">
         <p style="margin:0;font-weight:bold;color:#111;">TechFit Sourcing &amp; Engineering Office</p>
-        <p style="margin:5px 0 0 0;font-size:0.95rem;">Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400049, India</p>
+        <p style="margin:5px 0 0 0;font-size:0.95rem;">Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India</p>
         <p style="margin:5px 0 0 0;font-size:0.95rem;">Email: <a href="mailto:info@techfitactive.com" style="color:#0056b3;text-decoration:none;">info@techfitactive.com</a> | Phone: +91 98201 66910</p>
       </div>
     </div>
@@ -2817,7 +2817,7 @@ const NOSCRIPT_FALLBACKS = {
       
       <div style="background-color:#f8f9fa;padding:1.5rem;border-left:4px solid #0056b3;margin-top:1.5rem;border-radius:4px;">
         <p style="margin:0;font-weight:bold;color:#111;">TechFit Sourcing &amp; Engineering Office</p>
-        <p style="margin:5px 0 0 0;font-size:0.95rem;">Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400049, India</p>
+        <p style="margin:5px 0 0 0;font-size:0.95rem;">Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India</p>
         <p style="margin:5px 0 0 0;font-size:0.95rem;">Email: <a href="mailto:info@techfitactive.com" style="color:#0056b3;text-decoration:none;">info@techfitactive.com</a> | Phone: +91 98201 66910</p>
       </div>
     </div>
@@ -2910,7 +2910,7 @@ const NOSCRIPT_FALLBACKS = {
       
       <div style="background-color:#f8f9fa;padding:1.5rem;border-left:4px solid #0056b3;margin-top:1.5rem;border-radius:4px;">
         <p style="margin:0;font-weight:bold;color:#111;">TechFit Sourcing &amp; Engineering Office</p>
-        <p style="margin:5px 0 0 0;font-size:0.95rem;">Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400049, India</p>
+        <p style="margin:5px 0 0 0;font-size:0.95rem;">Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India</p>
         <p style="margin:5px 0 0 0;font-size:0.95rem;">Email: <a href="mailto:info@techfitactive.com" style="color:#0056b3;text-decoration:none;">info@techfitactive.com</a> | Phone: +91 98201 66910</p>
       </div>
     </div>
@@ -2998,7 +2998,7 @@ const NOSCRIPT_FALLBACKS = {
       
       <div style="background-color:#f8f9fa;padding:1.5rem;border-left:4px solid #0056b3;margin-top:1.5rem;border-radius:4px;">
         <p style="margin:0;font-weight:bold;color:#111;">TechFit Sourcing &amp; Engineering Office</p>
-        <p style="margin:5px 0 0 0;font-size:0.95rem;">Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400049, India</p>
+        <p style="margin:5px 0 0 0;font-size:0.95rem;">Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India</p>
         <p style="margin:5px 0 0 0;font-size:0.95rem;">Email: <a href="mailto:info@techfitactive.com" style="color:#0056b3;text-decoration:none;">info@techfitactive.com</a> | Phone: +91 98201 66910</p>
       </div>
     </div>
@@ -3090,7 +3090,7 @@ const NOSCRIPT_FALLBACKS = {
       
       <div style="background-color:#f8f9fa;padding:1.5rem;border-left:4px solid #0056b3;margin-top:1.5rem;border-radius:4px;">
         <p style="margin:0;font-weight:bold;color:#111;">TechFit Sourcing &amp; Engineering Office</p>
-        <p style="margin:5px 0 0 0;font-size:0.95rem;">Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400049, India</p>
+        <p style="margin:5px 0 0 0;font-size:0.95rem;">Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India</p>
         <p style="margin:5px 0 0 0;font-size:0.95rem;">Email: <a href="mailto:info@techfitactive.com" style="color:#0056b3;text-decoration:none;">info@techfitactive.com</a> | Phone: +91 98201 66910</p>
       </div>
     </div>
@@ -3356,7 +3356,7 @@ function generatePage(html, route, seo) {
       <p><strong>Contact TechFit India:</strong><br>
         Email: info@techfitactive.com<br>
         Phone: +91 98201 66910<br>
-        Address: Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400049, India<br>
+        Address: Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India<br>
         Website: <a href="https://www.techfittech.com/${route}">techfittech.com/${route}</a>
       </p>
     </div>
@@ -3376,7 +3376,7 @@ function generatePage(html, route, seo) {
       <p><strong>Contact:</strong><br>
         Email: info@techfitactive.com<br>
         Phone: +91 98201 66910<br>
-        Address: Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400049, India<br>
+        Address: Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India<br>
         Sister site: <a href="https://www.techfitactive.com/">techfitactive.com</a></p>
       <p>This site requires JavaScript for the product catalogue and interactive pages. Please enable JavaScript for the
         full experience.</p>

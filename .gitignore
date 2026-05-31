@@ -1,5 +1,13 @@
+# Dependency directories
+node_modules/
+
+# Build and deployment outputs
+dist/
+dist-ssr/
+.vercel/
+
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,26 +15,32 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Diagnostic and testing coverage
+coverage/
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# OS cache files
 .DS_Store
+Thumbs.db
+
+# IDEs and Editors
+.vscode/
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-# Temporary and study assets
-brochures_to_study/
+# Temporary research assets
 public/assets/images/extracted/
 
 # macOS Finder duplicates
 * 2.*
 * 3.*
+
+# Large catalogs, brochures, and price lists
+*.pdf
+*.xlsx
+# Exceptions to allow built/regenerated PDF lead magnets if needed
+!public/lead-magnets/TechFit-Commercial-Gym-Setup-Cost-Guide-India-2026.pdf
+
