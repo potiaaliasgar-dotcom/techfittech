@@ -21,6 +21,14 @@
     gtag('config', 'AW-17959203178');
   </script>
   <!-- End Google Ads gtag.js -->
+  <!-- Microsoft Clarity Tracking Code -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window,document,"clarity","script","your_clarity_project_id_placeholder");
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="SpipFTL09MXQT_LPxdREwjVusc0znYaMKOhnknn_lsc" />
@@ -74,21 +82,68 @@
   "url": "https://www.techfittech.com/",
   "email": "info@techfitactive.com",
   "telephone": "+91-98201-66910",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-98201-66910",
+    "contactType": "sales",
+    "availableLanguage": ["en", "hi", "mr"],
+    "areaServed": "IN"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "09:00",
+    "closes": "18:00"
+  },
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "309, Boat Hard Rd, Darukhana",
-    "addressLocality": "Byculla",
+    "streetAddress": "Plot No 309, Coal Bunder Road E, Reay Road, Darukhana",
+    "addressLocality": "Mumbai",
     "addressRegion": "Maharashtra",
-    "postalCode": "400010",
+    "postalCode": "400049",
     "addressCountry": "IN"
   },
   "geo": { "@type": "GeoCoordinates", "latitude": 18.977, "longitude": 72.844 },
   "areaServed": { "@type": "Country", "name": "India" },
   "priceRange": "$$$",
   "foundingDate": "2016",
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Mumbai, Maharashtra, India"
+  },
+  "alternateName": ["TechFit Active", "Techfit Health Fitness Private Limited", "TechFit India"],
+  "slogan": "India's Gym, Wellness & Sports Infrastructure Partner",
+  "award": "Official Cage Supplier — Matrix Fight Night (MFN 1–15)",
+  "knowsLanguage": ["en", "hi", "mr"],
   "founders": [
-    { "@type": "Person", "name": "Ali Asgar Salim Potia" },
-    { "@type": "Person", "name": "Pranav Bagga" }
+    {
+      "@type": "Person",
+      "name": "Ali Asgar Salim Potia",
+      "givenName": "Ali",
+      "familyName": "Potia",
+      "additionalName": "Asgar Salim",
+      "sameAs": [
+        "https://www.linkedin.com/in/aliasgar-potia-7051b656/",
+        "https://www.instagram.com/aliasgarpotia/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Pranav Bagga",
+      "givenName": "Pranav",
+      "familyName": "Bagga",
+      "sameAs": [
+        "https://www.linkedin.com/in/pranavbagga/",
+        "https://www.instagram.com/pranavbagga/"
+      ]
+    }
   ],
   "knowsAbout": [
     "Commercial gym setup India",
@@ -113,6 +168,8 @@
     "https://www.indiamart.com/techfit-active/",
     "https://www.justdial.com/Mumbai/Techfit-Active",
     "https://www.techfitactive.com/",
+    "https://www.alteontech.com/",
+    "https://www.techfittech.com/",
     "https://share.google/IahWbxIMm9ywKR9qp"
   ],
   "hasOfferCatalog": {
@@ -127,39 +184,19 @@
       { "@type": "OfferCatalog", "name": "Sports Infrastructure", "description": "Padel courts, pickleball courts" },
       { "@type": "OfferCatalog", "name": "Aqua Fitness", "description": "Underwater treadmills and aqua therapy equipment" }
     ]
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "bestRating": "5.0",
-    "ratingCount": "3",
-    "reviewCount": "3"
-  },
-  "review": [
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Ayesha Shroff" },
-      "datePublished": "2026-05-28",
-      "reviewBody": "TechFit handled everything — design, equipment supply and installation. The BH Fitness range along with the TechFit customised products such as MMA Cage, CrossFit Rig and Free Weights we got has been durable, outstanding and aesthetically pleasing. Our members love it.",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5.0", "bestRating": "5.0" }
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Mr. Ram Raheja" },
-      "datePublished": "2026-05-28",
-      "reviewBody": "We needed a complete gym amenity for our residential towers. TechFit provided a turnkey solution — on time, within budget, with excellent equipment quality and outstanding after-sales support.",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5.0", "bestRating": "5.0" }
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Mr. Gurjeet Gandhi" },
-      "datePublished": "2026-05-28",
-      "reviewBody": "TechFit has been a true partner across every Cloud 9 Gym we've built. They don't just supply equipment — they engineer a customised solution for each space, factoring in footfall, training programs, member experience and long-term serviceability. From BH Fitness commercial cardio to in-house MMA cages and CrossFit rigs, they've delivered on every commitment.",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5.0", "bestRating": "5.0" }
-    }
-  ]
+  }
 }
 </script>
+<!--
+Future-Proofing: When real Google reviews exist, set ENABLE_AGGREGATE_RATING = true in scripts/generate-seo-pages.mjs to inject this:
+"aggregateRating": {
+  "@type": "AggregateRating",
+  "ratingValue": "4.9",
+  "reviewCount": "25",
+  "bestRating": "5",
+  "worstRating": "1"
+}
+-->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -281,7 +318,7 @@
       "name": "Where is TechFit located?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "TechFit is headquartered at 309, Boat Hard Rd, Darukhana, Byculla, Mumbai, Maharashtra 400010, India. Contact: +91-98201-66910 or info@techfitactive.com."
+        "text": "TechFit is headquartered at Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400049, India. Contact: +91-98201-66910 or info@techfitactive.com."
       }
     },
     {
@@ -689,7 +726,27 @@
                 { "@type": "Question", "name": "Who are the best commercial gym equipment suppliers in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is one of India's best commercial gym equipment suppliers — authorised distributor of BH Fitness, Tunturi, and California Fitness, plus manufacturer of free weights, CrossFit rigs, and MMA cages." } }
               ]
             },
-            { "@type": "Product", "name": "BH Fitness Commercial Gym Equipment — India", "description": "BH Fitness commercial treadmills (LK Series, i.RUN), upright and recumbent bikes, ellipticals, strength machines, functional trainers, and cable machines. Available through TechFit, authorised distributor in India.", "brand": { "@type": "Brand", "name": "BH Fitness" }, "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/bh-fitness", "seller": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" } } }
+            { "@type": "Product", "name": "BH Fitness Commercial Gym Equipment — India", "description": "BH Fitness commercial treadmills (LK Series, i.RUN), upright and recumbent bikes, ellipticals, strength machines, functional trainers, and cable machines. Available through TechFit, authorised distributor in India.", "brand": { "@type": "Brand", "name": "BH Fitness" }, "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/bh-fitness", "seller": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" } } },
+            {
+              "@type": "Service",
+              "@id": "https://www.techfittech.com/bh-fitness#service",
+              "name": "Authorised Distribution, Installation, and AMC for BH Fitness in India",
+              "serviceType": "Commercial Cardio & Strength distribution",
+              "inLanguage": "en-IN",
+              "areaServed": [
+                { "@type": "Country", "name": "India" },
+                { "@type": "AdministrativeArea", "name": "Maharashtra" },
+                { "@type": "City", "name": "Mumbai" }
+              ],
+              "provider": { "@id": "https://www.techfittech.com/#organization" },
+              "description": "Authorized India distributor of BH Fitness commercial gym equipment. Treadmills, exercise spin bikes, ellipticals, and strength machines.",
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "INR",
+                "availability": "https://schema.org/InStock",
+                "url": "https://www.techfittech.com/get-a-quote"
+              }
+            }
           ]
         },
         '/tunturi': {
@@ -715,7 +772,27 @@
                 { "@type": "Question", "name": "Who is the Tunturi dealer in Mumbai?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is the authorised Tunturi dealer in Mumbai and across India. Contact: +91-98201-66910 or info@techfitactive.com." } }
               ]
             },
-            { "@type": "Product", "name": "Tunturi Fitness Equipment — India", "description": "Tunturi premium Finnish fitness equipment including treadmills, rowing machines, upright bikes, and home fitness equipment. Available through TechFit, authorised distributor in India.", "brand": { "@type": "Brand", "name": "Tunturi" }, "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/tunturi", "seller": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" } } }
+            { "@type": "Product", "name": "Tunturi Fitness Equipment — India", "description": "Tunturi premium Finnish fitness equipment including treadmills, rowing machines, upright bikes, and home fitness equipment. Available through TechFit, authorised distributor in India.", "brand": { "@type": "Brand", "name": "Tunturi" }, "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/tunturi", "seller": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" } } },
+            {
+              "@type": "Service",
+              "@id": "https://www.techfittech.com/tunturi#service",
+              "name": "Authorised Distribution, Installation, and AMC for Tunturi in India",
+              "serviceType": "Nordic Wellness & Cardio distribution",
+              "inLanguage": "en-IN",
+              "areaServed": [
+                { "@type": "Country", "name": "India" },
+                { "@type": "AdministrativeArea", "name": "Maharashtra" },
+                { "@type": "City", "name": "Mumbai" }
+              ],
+              "provider": { "@id": "https://www.techfittech.com/#organization" },
+              "description": "Authorized India distributor of Tunturi Finnish fitness equipment. Cardio, strength and functional training gears for commercial gym setups.",
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "INR",
+                "availability": "https://schema.org/InStock",
+                "url": "https://www.techfittech.com/get-a-quote"
+              }
+            }
           ]
         },
         '/california-fitness': {
@@ -739,7 +816,27 @@
                 { "@type": "Question", "name": "California Fitness gym equipment India", "acceptedAnswer": { "@type": "Answer", "text": "California Fitness functional training rigs, plate-loaded machines, and strength equipment are available in India through TechFit, the authorised distributor. Call +91-98201-66910." } }
               ]
             },
-            { "@type": "Product", "name": "California Fitness Equipment — India", "description": "California Fitness functional training equipment, strength machines, and plate-loaded equipment for commercial gyms. Available through TechFit, authorised distributor in India.", "brand": { "@type": "Brand", "name": "California Fitness" }, "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/california-fitness", "seller": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" } } }
+            { "@type": "Product", "name": "California Fitness Equipment — India", "description": "California Fitness functional training equipment, strength machines, and plate-loaded equipment for commercial gyms. Available through TechFit, authorised distributor in India.", "brand": { "@type": "Brand", "name": "California Fitness" }, "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/california-fitness", "seller": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" } } },
+            {
+              "@type": "Service",
+              "@id": "https://www.techfittech.com/california-fitness#service",
+              "name": "Authorised Distribution, Installation, and AMC for California Fitness in India",
+              "serviceType": "Selectorized & Free Weight distribution",
+              "inLanguage": "en-IN",
+              "areaServed": [
+                { "@type": "Country", "name": "India" },
+                { "@type": "AdministrativeArea", "name": "Maharashtra" },
+                { "@type": "City", "name": "Mumbai" }
+              ],
+              "provider": { "@id": "https://www.techfittech.com/#organization" },
+              "description": "Authorized India distributor of California Fitness equipment. Functional training, strength machines, and plate-loaded equipment for commercial gyms.",
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "INR",
+                "availability": "https://schema.org/InStock",
+                "url": "https://www.techfittech.com/get-a-quote"
+              }
+            }
           ]
         },
         '/alteon': {
@@ -755,7 +852,7 @@
             {
               "@type": "FAQPage",
               "mainEntity": [
-                { "@type": "Question", "name": "Who is the authorised distributor of Alteon Wellness in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit (Techfit Health Fitness Private Limited), Mumbai, is the authorised distributor of Alteon Wellness in India. The range includes Cryoblast Pro cryotherapy chambers, Elysion HBOT chambers, PBM Neo/Pro red light panels, IHHT Cell Trainer, Biopod dry float pods, ReVITAL infrared chambers, and Alteon cold plunge systems." } }, ,
+                { "@type": "Question", "name": "Who is the authorised distributor of Alteon Wellness in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit (Techfit Health Fitness Private Limited), Mumbai, is the authorised distributor of Alteon Wellness in India. The range includes Cryoblast Pro cryotherapy chambers, Elysion HBOT chambers, PBM Neo/Pro red light panels, IHHT Cell Trainer, Biopod dry float pods, ReVITAL infrared chambers, and Alteon cold plunge systems." } },
                 { "@type": "Question", "name": "Who are the best wellness equipment suppliers in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is one of India's best wellness and recovery equipment suppliers, based in Mumbai. As the authorised Alteon distributor they supply cryotherapy, HBOT, red light therapy, IHHT, dry float, infrared, and cold plunge to wellness centres, sports facilities, and longevity clinics across India." } },
                 { "@type": "Question", "name": "Who are the best wellness equipment suppliers in Mumbai?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is Mumbai's leading wellness and recovery equipment supplier — authorised Alteon distributor supplying the complete recovery tech stack to hotels, gyms, and wellness centres." } },
                 { "@type": "Question", "name": "Where to buy wellness equipment in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is India's go-to supplier for commercial wellness and recovery equipment. Visit https://www.techfittech.com/alteon or call +91-98201-66910." } },
@@ -771,7 +868,27 @@
                 { "@type": "Question", "name": "Cryotherapy machine India", "acceptedAnswer": { "@type": "Answer", "text": "The Alteon Cryoblast Pro electric cryotherapy chamber is available in India through TechFit. Whole-body cryotherapy at -110°C to -140°C for sports recovery and wellness. Contact: +91-98201-66910." } }
               ]
             },
-            { "@type": "Product", "name": "Alteon Wellness & Recovery Equipment — India", "description": "Alteon professional wellness recovery equipment including cryotherapy, hyperbaric chambers (HBOT), red light therapy, IHHT Cell Trainer, dry float pods, infrared wellness chambers, and cold plunge systems. Available through TechFit in India.", "brand": { "@type": "Brand", "name": "Alteon" }, "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/alteon", "seller": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" } } }
+            { "@type": "Product", "name": "Alteon Wellness & Recovery Equipment — India", "description": "Alteon professional wellness recovery equipment including cryotherapy, hyperbaric chambers (HBOT), red light therapy, IHHT Cell Trainer, dry float pods, infrared wellness chambers, and cold plunge systems. Available through TechFit in India.", "brand": { "@type": "Brand", "name": "Alteon" }, "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/alteon", "seller": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" } } },
+            {
+              "@type": "Service",
+              "@id": "https://www.techfittech.com/alteon#service",
+              "name": "Authorised Distribution, Installation, and AMC for Alteon Wellness in India",
+              "serviceType": "Clinical Wellness & Longevity distribution",
+              "inLanguage": "en-IN",
+              "areaServed": [
+                { "@type": "Country", "name": "India" },
+                { "@type": "AdministrativeArea", "name": "Maharashtra" },
+                { "@type": "City", "name": "Mumbai" }
+              ],
+              "provider": { "@id": "https://www.techfittech.com/#organization" },
+              "description": "Authorized India distributor of Alteon Wellness. Cryotherapy chambers, hyperbaric oxygen therapy (HBOT), red light therapy, IHHT Cell Trainer, dry float pods, infrared wellness chambers, and cold plunge systems.",
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "INR",
+                "availability": "https://schema.org/InStock",
+                "url": "https://www.techfittech.com/get-a-quote"
+              }
+            }
           ]
         }
       };
@@ -790,7 +907,8 @@
 </head>
 
 <body>
-  <h1 class="sr-h1" style="position:absolute;left:-9999px" id="main-h1">TechFit — India's Premier Gym &amp; Sports Infrastructure Company</h1>
+  <a href="#app" class="skip-to-content">Skip to main content</a>
+  <h2 class="sr-h1" style="position:absolute;left:-9999px" id="main-h1">TechFit — India's Premier Gym &amp; Sports Infrastructure Company</h2>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PQVLK3D" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
@@ -815,7 +933,7 @@
       <p><strong>Contact:</strong><br>
         Email: info@techfitactive.com<br>
         Phone: +91 98201 66910<br>
-        Address: 309, Boat Hard Rd, Darukhana, Byculla, Mumbai 400010<br>
+        Address: Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400049, India<br>
         Sister site: <a href="https://www.techfitactive.com/">techfitactive.com</a></p>
       <p>This site requires JavaScript for the product catalogue and interactive pages. Please enable JavaScript for the
         full experience.</p>
@@ -940,6 +1058,7 @@
   <div class="toast" id="toast"></div>
 
   <script defer src="/assets/app.js"></script>
+  <script defer src="/assets/exit-intent.js"></script>
   <!-- SEO rich content for search and AI RAG engines -->
   <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">
     <h2>TechFit &mdash; Gym Setup, Equipment Sourcing, Fabrication &amp; Wellness Solutions India</h2>
@@ -967,6 +1086,22 @@
         <path
           d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.917 2.722.917.55 0 2.17-.287 2.607-.97.22-.342.22-.657.152-1.017-.1-.517-2.305-1.59-2.75-1.59zm-2.895 7.52c-1.264 0-2.5-.33-3.596-.942l-.25-.143-2.635.688.688-2.57-.17-.28a7.266 7.266 0 0 1-1.117-3.85c0-4.006 3.27-7.272 7.28-7.272A7.269 7.269 0 0 1 23.5 17.63a7.281 7.281 0 0 1-7.286 7.277zm0-16.084c-4.872 0-8.838 3.966-8.838 8.83 0 1.56.41 3.082 1.183 4.434L5.52 27.17l5.56-1.46a8.843 8.843 0 0 0 13.137-7.66c0-4.862-3.966-8.82-8.84-8.82z" />
       </svg></span></a>
+
+  <!-- Mobile Sticky CTA Bar -->
+  <div id="mobile-sticky-cta" class="mobile-only-cta" aria-label="Quick Contact Bar">
+    <a href="tel:+919820166910" class="cta-btn cta-call" aria-label="Call TechFit Sales Team" title="Call Now">
+      <span class="cta-icon">📞</span>
+      <span class="cta-label">Call Now</span>
+    </a>
+    <a href="https://wa.me/919820166910" id="dynamic-whatsapp-cta" target="_blank" rel="noopener" class="cta-btn cta-whatsapp" aria-label="Inquire on WhatsApp" title="WhatsApp Quote">
+      <span class="cta-icon">💬</span>
+      <span class="cta-label">WhatsApp</span>
+    </a>
+    <button onclick="go('contact')" class="cta-btn cta-quote" aria-label="Request an Instant Quote" title="Get Quote">
+      <span class="cta-icon">📋</span>
+      <span class="cta-label">Get Quote</span>
+    </button>
+  </div>
 
   <!-- Prerender.io — serves cached static HTML to social-media / SEO bots -->
   <script>

@@ -3310,3 +3310,195 @@
         padding: 4rem 1.5rem 3rem;
       }
     }
+
+    /* Mobile Sticky CTA Bar Styles */
+    .mobile-only-cta {
+      display: none;
+    }
+
+    @media (max-width: 767px) {
+      .mobile-only-cta {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 72px;
+        background: rgba(9, 9, 11, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(220, 38, 38, 0.3);
+        z-index: 9999;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0 0.5rem;
+      }
+
+      /* Move the floating WhatsApp button higher to avoid overlap */
+      a[href^="https://wa.me/919820166910"] {
+        bottom: 90px !important;
+      }
+
+      /* Add bottom-padding globally to prevent content cutoff by the bar */
+      body {
+        padding-bottom: 80px !important;
+      }
+
+      .cta-btn {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        height: 100%;
+        background: none;
+        border: none;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        padding: 0;
+      }
+
+      .cta-btn:active {
+        transform: scale(0.96);
+        color: #fff;
+      }
+
+      .cta-icon {
+        font-size: 1.25rem;
+        line-height: 1;
+      }
+
+      /* Emphasize the Quote button with metallic red styling */
+      .cta-quote {
+        color: var(--red) !important;
+        font-weight: 700;
+        text-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
+      }
+    }
+
+    /* ─── EMBEDDED B2B QUOTE FORM ─── */
+    .embedded-quote-sec {
+      background: var(--z950) !important;
+      border-top: 1px solid var(--z800);
+      padding: 5rem 1.5rem;
+    }
+    .embedded-quote-form-wrap {
+      max-width: 700px;
+      margin: 0 auto;
+      background: var(--black);
+      border: 1px solid var(--z800);
+      border-radius: 8px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .eq-title {
+      color: var(--red);
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-align: center;
+    }
+    .eq-desc {
+      color: var(--z300);
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .eq-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .eq-form-group {
+      display: flex;
+      flex-direction: column;
+    }
+    .eq-form-group label {
+      color: var(--z100);
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .eq-form-group input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: var(--z900);
+      border: 1.5px solid var(--z800);
+      border-radius: 4px;
+      color: var(--white);
+      font-family: var(--font);
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+    .eq-form-group input:focus {
+      border-color: var(--red);
+      box-shadow: 0 0 0 2px var(--red-20);
+    }
+    .eq-submit-btn {
+      width: 100%;
+      padding: 0.9rem;
+      font-size: 0.95rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-radius: 4px;
+      background: var(--red);
+      color: var(--white);
+      border: none;
+      transition: background 0.15s;
+      cursor: pointer;
+    }
+    .eq-submit-btn:hover {
+      background: var(--red-h);
+    }
+
+    @media(max-width: 700px) {
+      .eq-form-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .embedded-quote-form-wrap {
+        padding: 1.5rem 1rem;
+      }
+      .eq-title {
+        font-size: 1.4rem;
+      }
+    }
+
+    /* ─── SKIP TO CONTENT (ACCESSIBILITY) ─── */
+    .skip-to-content {
+      position: absolute;
+      top: -100px;
+      left: 1.5rem;
+      background: var(--red);
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      z-index: 10000;
+      transition: top 0.2s ease;
+      outline: none;
+      border-radius: 0 0 4px 4px;
+      box-shadow: 0 4px 20px rgba(220, 38, 38, 0.4);
+    }
+    .skip-to-content:focus {
+      top: 10px;
+    }

@@ -1,35 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url><loc>https://www.techfittech.com/</loc><lastmod>2026-05-28</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-    <url><loc>https://www.techfittech.com/alteon</loc><lastmod>2026-05-24</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/bh-fitness</loc><lastmod>2026-05-25</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/tunturi</loc><lastmod>2026-05-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/california-fitness</loc><lastmod>2026-05-20</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/techfit</loc><lastmod>2026-05-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/mma-cages</loc><lastmod>2026-05-27</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/crossfit-rigs</loc><lastmod>2026-05-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/free-weights</loc><lastmod>2026-05-25</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/padel-pickleball</loc><lastmod>2026-05-24</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/aqua</loc><lastmod>2026-05-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/wellness-solutions</loc><lastmod>2026-05-27</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/services</loc><lastmod>2026-05-27</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/about</loc><lastmod>2026-05-20</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/contact</loc><lastmod>2026-05-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/for-gyms</loc><lastmod>2026-05-24</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/for-developers</loc><lastmod>2026-05-24</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/for-schools</loc><lastmod>2026-05-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/for-hotels</loc><lastmod>2026-05-24</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/blogs</loc><lastmod>2026-05-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/blog-mfn</loc><lastmod>2026-02-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.techfittech.com/blog-sfl</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.techfittech.com/blog-kumite</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.techfittech.com/blog-mma-matrix</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.techfittech.com/blog-one-stop</loc><lastmod>2026-05-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.techfittech.com/blog-wellness-boom</loc><lastmod>2026-05-15</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.techfittech.com/gym-flooring</loc><lastmod>2026-05-25</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/flooring</loc><lastmod>2026-05-25</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/get-a-quote</loc><lastmod>2026-05-28</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-    <url><loc>https://www.techfittech.com/alternatives/technogym-india</loc><lastmod>2026-05-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/alternatives/life-fitness-india</loc><lastmod>2026-05-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.techfittech.com/alternatives/sechrist-hyperbaric-india</loc><lastmod>2026-05-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://www.techfittech.com/sitemap-pages.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.techfittech.com/sitemap-images.xml</loc>
+  </sitemap>
+</sitemapindex>

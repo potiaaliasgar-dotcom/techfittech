@@ -39,7 +39,7 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Googlebot-Extended
+User-agent: Google-Extended
 Allow: /
 
 User-agent: Applebot-Extended
@@ -58,3 +58,4 @@ User-agent: YouBot
 Allow: /
 
 Sitemap: https://www.techfittech.com/sitemap.xml
+Sitemap: https://www.techfittech.com/sitemap-images.xml
