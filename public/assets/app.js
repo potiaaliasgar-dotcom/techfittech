@@ -755,7 +755,7 @@ async function submitEmbeddedQuote(projectType) {
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 TechFit Industrial. All Rights Reserved.</p>
+      <p>© 2026 TechFit. All Rights Reserved.</p>
       <div style="display:flex;gap:1.5rem;margin:1rem 0;justify-content:center;flex-wrap:wrap">
         <button onclick="go('privacy-policy')" style="background:none;border:none;color:rgba(255,255,255,.5);font-size:.85rem;cursor:pointer;padding:0;font-family:inherit" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Privacy Policy</button>
         <button onclick="go('terms-of-service')" style="background:none;border:none;color:rgba(255,255,255,.5);font-size:.85rem;cursor:pointer;padding:0;font-family:inherit" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Terms of Service</button>
@@ -3815,7 +3815,7 @@ ${footer()}
         </a>
         <a href="https://share.google/IahWbxIMm9ywKR9qp" target="_blank" rel="noopener" class="ci-link">
           <span class="ci-icon">📍</span>
-          <div class="ci-text"><strong>TechFit Industrial</strong><br>Plot No 309, Coal Bunder Road E,<br>Reay Road, Darukhana,<br>Mumbai, Maharashtra 400010</div>
+          <div class="ci-text"><strong>TechFit</strong><br>Plot No 309, Coal Bunder Road E,<br>Reay Road, Darukhana,<br>Mumbai, Maharashtra 400010</div>
         </a>
         <br>
         <div class="feat-card"><h4>What happens next?</h4><p>After you submit, our team will call within one business day to understand your requirements and schedule a free consultation. No sales pressure — just expert advice.</p></div>
