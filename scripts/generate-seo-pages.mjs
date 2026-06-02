@@ -93,6 +93,13 @@ const SEO_MAP = {
     lastmod: '2026-05-20',
     img: OG_CARDIO
   },
+  'bendis-pilates': {
+    title: 'Bendis Pilates India | Premium Hand-Crafted Pilates Equipment',
+    desc: 'TechFit is the authorised distributor of Bendis Pilates in India. Hand-crafted Turkish reformers, cadillacs, chairs, barrels and studio accessories since 2009.',
+    h1: 'Bendis Pilates Premium Studio Equipment India',
+    lastmod: '2026-06-02',
+    img: DEFAULT_OG_IMG
+  },
   'techfit': {
     title: 'TechFit Active | In-House Gym & Sports Equipment Manufacturer India',
     desc: "TechFit Active — India's in-house manufacturer of MMA cages, boxing rings, CrossFit rigs, free weights, padel courts and aqua fitness equipment. Factory in Mumbai.",
@@ -897,6 +904,52 @@ const SCHEMAS = {
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.techfittech.com/" },
           { "@type": "ListItem", "position": 2, "name": "California Fitness", "item": "https://www.techfittech.com/california-fitness" }
         ]
+      }
+    ]
+  },
+  'bendis-pilates': {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.techfittech.com/bendis-pilates#webpage",
+        "url": "https://www.techfittech.com/bendis-pilates",
+        "name": "Bendis Pilates Studio Equipment India — TechFit",
+        "description": "TechFit is the authorised distributor of Bendis Pilates in India. Hand-crafted premium Pilates reformers, cadillacs, chairs, barrels and studio accessories for professional studios and physiotherapy centres."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Who is the authorised distributor of Bendis Pilates in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit (Techfit Health Fitness Private Limited), Mumbai, is the authorised distributor of Bendis Pilates equipment in India. They supply the full range of Bendis Pilates reformers, cadillacs, chairs, barrels, and studio accessories." } },
+          { "@type": "Question", "name": "Where to buy Pilates reformer in India?", "acceptedAnswer": { "@type": "Answer", "text": "Buy Bendis Pilates reformers in India through TechFit, the authorised distributor. Standard reformers, tower reformers, folding reformers, and cadillac reformers available. https://www.techfittech.com/bendis-pilates or +91-98201-66910." } },
+          { "@type": "Question", "name": "Best Pilates studio equipment supplier in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is India's leading Pilates studio equipment supplier. As the authorised Bendis Pilates distributor, they supply hand-crafted Turkish reformers, cadillacs, chairs, barrels and accessories to studios and physiotherapy centres across India." } },
+          { "@type": "Question", "name": "Bendis Pilates reformer price India", "acceptedAnswer": { "@type": "Answer", "text": "For Bendis Pilates reformer pricing in India, contact TechFit — the authorised distributor. Prices vary by model (Reformer, Tower Reformer, Folding Reformer, Cadillac Reformer). Call +91-98201-66910 or email info@techfitactive.com." } },
+          { "@type": "Question", "name": "Who sells Pilates equipment in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit sells Bendis Pilates equipment in India — hand-crafted in Turkey from certified beech wood with antibacterial leather. Full range available for studios, physio centres, and luxury home gyms." } },
+          { "@type": "Question", "name": "Pilates cadillac reformer India", "acceptedAnswer": { "@type": "Answer", "text": "Bendis Pilates Cadillac Reformers (High and Low models) are available in India through TechFit. Combined Reformer, Tower and Cadillac in one piece of equipment. Contact +91-98201-66910." } },
+          { "@type": "Question", "name": "Best Pilates reformer for studio India", "acceptedAnswer": { "@type": "Answer", "text": "The Bendis Pilates Reformer is one of the best studio-grade Pilates reformers available in India — 8-wheel carriage, certified beech wood, antibacterial leather. Available through TechFit, authorised distributor." } },
+          { "@type": "Question", "name": "Pilates equipment for physiotherapy centre India", "acceptedAnswer": { "@type": "Answer", "text": "Bendis Pilates equipment is ideal for physiotherapy centres in India. Reformers, cadillacs, chairs, ladder barrels and spine correctors designed for clinical and therapeutic use. Available through TechFit." } }
+        ]
+      },
+      { "@type": "Product", "name": "Bendis Pilates Studio Equipment — India", "description": "Bendis Pilates hand-crafted premium Pilates equipment including reformers, cadillac reformers, tower reformers, folding reformers, chairs, ladder barrels, wall units, spring walls, and accessories. Available through TechFit, authorised distributor in India.", "brand": { "@type": "Brand", "name": "Bendis Pilates" }, "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/bendis-pilates", "seller": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" } } },
+      {
+        "@type": "Service",
+        "@id": "https://www.techfittech.com/bendis-pilates#service",
+        "name": "Authorised Distribution, Installation, and Support for Bendis Pilates in India",
+        "serviceType": "Premium Pilates Studio Equipment Distribution",
+        "inLanguage": "en-IN",
+        "areaServed": [
+          { "@type": "Country", "name": "India" },
+          { "@type": "AdministrativeArea", "name": "Maharashtra" },
+          { "@type": "City", "name": "Mumbai" }
+        ],
+        "provider": { "@id": "https://www.techfittech.com/#organization" },
+        "description": "Authorized India distributor of Bendis Pilates. Hand-crafted Turkish Pilates reformers, cadillacs, chairs, barrels and studio accessories for professional studios and physiotherapy centres.",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.techfittech.com/get-a-quote"
+        }
       }
     ]
   },
@@ -3132,7 +3185,7 @@ function enrichSchema(route, schema) {
   const speakableRoutes = [
     'mma-cages', 'crossfit-rigs', 'free-weights', 'padel-pickleball', 'aqua', 
     'gym-flooring', 'flooring', 'wellness-solutions', 'alteon', 'bh-fitness', 
-    'tunturi', 'california-fitness', 'techfit'
+    'tunturi', 'california-fitness', 'bendis-pilates', 'techfit'
   ];
   if (speakableRoutes.includes(route)) {
     const webPage = findEntity('WebPage');
@@ -3149,6 +3202,7 @@ function enrichSchema(route, schema) {
     'bh-fitness': { brand: 'BH Fitness', name: 'BH Fitness B2B Gym Equipment' },
     'tunturi': { brand: 'Tunturi', name: 'Tunturi Nordic Fitness Gear' },
     'california-fitness': { brand: 'California Fitness', name: 'California Fitness Strength Equipment' },
+    'bendis-pilates': { brand: 'Bendis Pilates', name: 'Bendis Pilates Premium Studio Equipment' },
     'alteon': {
       staticProds: [
         { name: 'Alteon Cryoblast Pro Cryotherapy Chamber', desc: 'Clinical electric whole-body cryo chamber running on pure dry air (nitrogen-free) for cellular recovery.' },
