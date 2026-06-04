@@ -714,6 +714,12 @@ Future-Proofing: When real Google reviews exist, set ENABLE_AGGREGATE_RATING = t
       "position": 16,
       "name": "Bendis Pilates Studio Equipment",
       "url": "https://www.techfittech.com/bendis-pilates"
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "name": "Jordan Fitness Premium Accessories",
+      "url": "https://www.techfittech.com/jordan-fitness"
     }
   ]
 }
@@ -958,6 +964,47 @@ Future-Proofing: When real Google reviews exist, set ENABLE_AGGREGATE_RATING = t
               }
             }
           ]
+        },
+        '/jordan-fitness': {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://www.techfittech.com/jordan-fitness#webpage",
+              "url": "https://www.techfittech.com/jordan-fitness",
+              "name": "Jordan Fitness Premium Gym Accessories India — TechFit",
+              "description": "TechFit is the authorised distributor of Jordan Fitness in India. Premium commercial dumbbells, kettlebells, Olympic plates, sandbags, slam balls, and group fitness gear."
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                { "@type": "Question", "name": "Who is the authorised distributor of Jordan Fitness in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit (Techfit Health Fitness Private Limited), Mumbai, is the authorised distributor of Jordan Fitness in India. They supply premium Jordan dumbbells, kettlebells, weight plates, and training accessories." } },
+                { "@type": "Question", "name": "Where to buy Jordan Fitness accessories in India?", "acceptedAnswer": { "@type": "Answer", "text": "Buy official Jordan Fitness free weights and functional training gear in India through TechFit. Full range of Urethane dumbbells, bumper plates, power bags, slam balls, and storage racks are available. Contact +91-98201-66910." } },
+                { "@type": "Question", "name": "Best commercial gym accessories supplier in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is India's leading commercial gym infrastructure supplier. As the authorised Jordan Fitness distributor, they supply premium UK-designed gym accessories, free weights, and functional training systems." } }
+              ]
+            },
+            { "@type": "Product", "name": "Jordan Fitness Commercial Gym Accessories — India", "description": "Jordan Fitness premium gym accessories including Custom Urethane dumbbells, hex rubber dumbbells, chrome dumbbells, urethane grip plates, rubber bumper plates, kettlebells, slam balls, power bags, and storage solutions. Available through TechFit, authorised distributor in India.", "brand": { "@type": "Brand", "name": "Jordan Fitness" }, "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/jordan-fitness", "seller": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" } } },
+            {
+              "@type": "Service",
+              "@id": "https://www.techfittech.com/jordan-fitness#service",
+              "name": "Authorised Distribution, Installation, and Support for Jordan Fitness in India",
+              "serviceType": "Premium Gym Accessories & Free Weights Distribution",
+              "inLanguage": "en-IN",
+              "areaServed": [
+                { "@type": "Country", "name": "India" },
+                { "@type": "AdministrativeArea", "name": "Maharashtra" },
+                { "@type": "City", "name": "Mumbai" }
+              ],
+              "provider": { "@id": "https://www.techfittech.com/#organization" },
+              "description": "Authorized India distributor of Jordan Fitness. Premium UK-designed commercial dumbbells, kettlebells, Olympic plates, sandbags, slam balls, and group fitness gear.",
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "INR",
+                "availability": "https://schema.org/InStock",
+                "url": "https://www.techfittech.com/get-a-quote"
+              }
+            }
+          ]
         }
       };
 
@@ -1041,6 +1088,7 @@ Future-Proofing: When real Google reviews exist, set ENABLE_AGGREGATE_RATING = t
             <div class="nd-group">Brands We Carry</div>
             <button class="nd-item" onclick="go('bh-fitness')">BH Fitness</button>
             <button class="nd-item" onclick="go('tunturi')">Tunturi</button>
+            <button class="nd-item" onclick="go('jordan-fitness')">Jordan Fitness</button>
             <button class="nd-item" onclick="go('california-fitness')">California Fitness</button>
             <div class="nd-group">TechFit Custom</div>
             <button class="nd-item" onclick="go('mma-cages')">MMA Cages &amp; Rings</button>
@@ -1076,6 +1124,7 @@ Future-Proofing: When real Google reviews exist, set ENABLE_AGGREGATE_RATING = t
       <span class="mob-group">Brands We Carry</span>
       <button class="mob-sub" onclick="go('bh-fitness')">BH Fitness</button>
       <button class="mob-sub" onclick="go('tunturi')">Tunturi</button>
+      <button class="mob-sub" onclick="go('jordan-fitness')">Jordan Fitness</button>
       <button class="mob-sub" onclick="go('california-fitness')">California Fitness</button>
       <span class="mob-group">TechFit Custom</span>
       <button class="mob-sub" onclick="go('mma-cages')">MMA Cages &amp; Rings</button>

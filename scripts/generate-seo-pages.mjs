@@ -100,6 +100,13 @@ const SEO_MAP = {
     lastmod: '2026-06-02',
     img: DEFAULT_OG_IMG
   },
+  'jordan-fitness': {
+    title: 'Jordan Fitness India | Premium Gym Accessories & Functional Training',
+    desc: 'TechFit is the authorised distributor of Jordan Fitness in India. Premium commercial dumbbells, kettlebells, weight plates, sandbags, slam balls, and group fitness gear.',
+    h1: 'Jordan Fitness Premium Gym Accessories India',
+    lastmod: '2026-06-04',
+    img: DEFAULT_OG_IMG
+  },
   'techfit': {
     title: 'TechFit Active | In-House Gym & Sports Equipment Manufacturer India',
     desc: "TechFit Active — India's in-house manufacturer of MMA cages, boxing rings, CrossFit rigs, free weights, padel courts and aqua fitness equipment. Factory in Mumbai.",
@@ -944,6 +951,47 @@ const SCHEMAS = {
         ],
         "provider": { "@id": "https://www.techfittech.com/#organization" },
         "description": "Authorized India distributor of Bendis Pilates. Hand-crafted Turkish Pilates reformers, cadillacs, chairs, barrels and studio accessories for professional studios and physiotherapy centres.",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.techfittech.com/get-a-quote"
+        }
+      }
+    ]
+  },
+  'jordan-fitness': {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.techfittech.com/jordan-fitness#webpage",
+        "url": "https://www.techfittech.com/jordan-fitness",
+        "name": "Jordan Fitness Premium Gym Accessories India — TechFit",
+        "description": "TechFit is the authorised distributor of Jordan Fitness in India. Premium commercial dumbbells, kettlebells, Olympic plates, sandbags, slam balls, and group fitness gear."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Who is the authorised distributor of Jordan Fitness in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit (Techfit Health Fitness Private Limited), Mumbai, is the authorised distributor of Jordan Fitness in India. They supply premium Jordan dumbbells, kettlebells, weight plates, and training accessories." } },
+          { "@type": "Question", "name": "Where to buy Jordan Fitness accessories in India?", "acceptedAnswer": { "@type": "Answer", "text": "Buy official Jordan Fitness free weights and functional training gear in India through TechFit. Full range of Urethane dumbbells, bumper plates, power bags, slam balls, and storage racks are available. Contact +91-98201-66910." } },
+          { "@type": "Question", "name": "Best commercial gym accessories supplier in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is India's leading commercial gym infrastructure supplier. As the authorised Jordan Fitness distributor, they supply premium UK-designed gym accessories, free weights, and functional training systems." } }
+        ]
+      },
+      { "@type": "Product", "name": "Jordan Fitness Commercial Gym Accessories — India", "description": "Jordan Fitness premium gym accessories including Custom Urethane dumbbells, hex rubber dumbbells, chrome dumbbells, urethane grip plates, rubber bumper plates, kettlebells, slam balls, power bags, and storage solutions. Available through TechFit, authorised distributor in India.", "brand": { "@type": "Brand", "name": "Jordan Fitness" }, "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/jordan-fitness", "seller": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" } } },
+      {
+        "@type": "Service",
+        "@id": "https://www.techfittech.com/jordan-fitness#service",
+        "name": "Authorised Distribution, Installation, and Support for Jordan Fitness in India",
+        "serviceType": "Premium Gym Accessories & Free Weights Distribution",
+        "inLanguage": "en-IN",
+        "areaServed": [
+          { "@type": "Country", "name": "India" },
+          { "@type": "AdministrativeArea", "name": "Maharashtra" },
+          { "@type": "City", "name": "Mumbai" }
+        ],
+        "provider": { "@id": "https://www.techfittech.com/#organization" },
+        "description": "Authorized India distributor of Jordan Fitness. Premium UK-designed commercial dumbbells, kettlebells, Olympic plates, sandbags, slam balls, and group fitness gear.",
         "offers": {
           "@type": "Offer",
           "priceCurrency": "INR",
@@ -3185,7 +3233,7 @@ function enrichSchema(route, schema) {
   const speakableRoutes = [
     'mma-cages', 'crossfit-rigs', 'free-weights', 'padel-pickleball', 'aqua', 
     'gym-flooring', 'flooring', 'wellness-solutions', 'alteon', 'bh-fitness', 
-    'tunturi', 'california-fitness', 'bendis-pilates', 'techfit'
+    'tunturi', 'california-fitness', 'bendis-pilates', 'jordan-fitness', 'techfit'
   ];
   if (speakableRoutes.includes(route)) {
     const webPage = findEntity('WebPage');
@@ -3203,6 +3251,7 @@ function enrichSchema(route, schema) {
     'tunturi': { brand: 'Tunturi', name: 'Tunturi Nordic Fitness Gear' },
     'california-fitness': { brand: 'California Fitness', name: 'California Fitness Strength Equipment' },
     'bendis-pilates': { brand: 'Bendis Pilates', name: 'Bendis Pilates Premium Studio Equipment' },
+    'jordan-fitness': { brand: 'Jordan Fitness', name: 'Jordan Fitness Premium Gym Accessories' },
     'alteon': {
       staticProds: [
         { name: 'Alteon Cryoblast Pro Cryotherapy Chamber', desc: 'Clinical electric whole-body cryo chamber running on pure dry air (nitrogen-free) for cellular recovery.' },
