@@ -15,11 +15,11 @@
           <form id="exitIntentForm">
             <div style="margin-bottom:15px;">
               <label for="ei-name" style="display:block; color:#E4E4E7; margin-bottom:6px; font-weight:600; font-size:0.8rem; text-transform:uppercase;">Full Name *</label>
-              <input type="text" id="ei-name" required placeholder="Ali Asgar" style="width:100%; padding:12px 16px; background:#18181B; border:1px solid #27272A; border-radius:4px; color:#fff; font-size:0.95rem; box-sizing:border-box; outline:none;" />
+              <input type="text" id="ei-name" required placeholder="Your name" style="width:100%; padding:12px 16px; background:#18181B; border:1px solid #27272A; border-radius:4px; color:#fff; font-size:0.95rem; box-sizing:border-box; outline:none;" />
             </div>
             <div style="margin-bottom:25px;">
               <label for="ei-email" style="display:block; color:#E4E4E7; margin-bottom:6px; font-weight:600; font-size:0.8rem; text-transform:uppercase;">Email Address *</label>
-              <input type="email" id="ei-email" required placeholder="ali@techfitactive.com" style="width:100%; padding:12px 16px; background:#18181B; border:1px solid #27272A; border-radius:4px; color:#fff; font-size:0.95rem; box-sizing:border-box; outline:none;" />
+              <input type="email" id="ei-email" required placeholder="you@example.com" style="width:100%; padding:12px 16px; background:#18181B; border:1px solid #27272A; border-radius:4px; color:#fff; font-size:0.95rem; box-sizing:border-box; outline:none;" />
             </div>
             <button type="submit" style="width:100%; padding:14px; font-size:1rem; font-weight:700; text-transform:uppercase; border-radius:4px; margin-bottom:15px; cursor:pointer; background:#DC2626; color:#fff; border:none; transition:background 0.15s;">Send Me The Guide &rarr;</button>
             <div style="text-align:center;">
