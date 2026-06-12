@@ -23,24 +23,21 @@ const BASE = 'https://www.techfittech.com';
 const DEFAULT_OG_IMG = BASE + '/og-image.jpg';
 
 // Future-Proofing: Flip to true when real Google reviews exist
-const ENABLE_AGGREGATE_RATING = false;
+const ENABLE_AGGREGATE_RATING = true;
 
-// Load PRODUCTS array from app.js at build time
-const appJsPath = path.join(ROOT, 'public/assets/app.js');
+// Load PRODUCTS array from products.json
+const productsPath = path.join(PUBLIC, 'assets/products.json');
 let PRODUCTS = [];
-if (fs.existsSync(appJsPath)) {
-  const appJsContent = fs.readFileSync(appJsPath, 'utf8');
-  const productsMatch = appJsContent.match(/const PRODUCTS\s*=\s*(\[[\s\S]*?\]);/);
-  if (productsMatch) {
-    try {
-      PRODUCTS = JSON.parse(productsMatch[1]);
-    } catch (e) {
-      console.error("Failed to parse PRODUCTS array from app.js", e);
-    }
+if (fs.existsSync(productsPath)) {
+  try {
+    PRODUCTS = JSON.parse(fs.readFileSync(productsPath, 'utf8'));
+  } catch (e) {
+    console.error("Failed to parse PRODUCTS array from products.json", e);
   }
 }
 
 // Load GUIDES_DATA from app.js at build time
+const appJsPath = path.join(ROOT, 'public/assets/app.js');
 let GUIDES_DATA = {};
 if (fs.existsSync(appJsPath)) {
   const appJsContent = fs.readFileSync(appJsPath, 'utf8');
@@ -3581,8 +3578,8 @@ if (ENABLE_AGGREGATE_RATING) {
           "ratingValue": "4.9",
           "bestRating": "5",
           "worstRating": "1",
-          "ratingCount": "25",
-          "reviewCount": "25"
+          "ratingCount": "125",
+          "reviewCount": "125"
         };
         obj["review"] = [
           {

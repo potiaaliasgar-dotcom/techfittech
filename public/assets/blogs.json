@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "mfn",
+    "title": "Inside the Octagon: How TechFit Built the Fighting Cage for Matrix Fight Night (MFN)",
+    "excerpt": "The story behind India's most broadcast-ready MMA cage — engineered and installed by TechFit for Matrix Fight Night.",
+    "category": "Case Study",
+    "date": "April 2026",
+    "readTime": "6 min read",
+    "image": "/assets/images/other/img-13eebfc2ab.jpg"
+  },
+  {
+    "slug": "sfl",
+    "title": "Super Fight League (SFL): Building a Championship-Grade Cage for India's Premier MMA Promotion",
+    "excerpt": "How TechFit partnered with Super Fight League to deliver a tournament-specification cage that meets international broadcast standards.",
+    "category": "Case Study",
+    "date": "March 2026",
+    "readTime": "5 min read",
+    "image": "/assets/images/other/img-fe2a9be7c7.jpg"
+  },
+  {
+    "slug": "kumite",
+    "title": "Kumite 1 League: Engineering a Professional Boxing Ring for Live Broadcast",
+    "excerpt": "From canvas tension to corner post hardness — the details that separate a commercial boxing ring from a championship one.",
+    "category": "Case Study",
+    "date": "February 2026",
+    "readTime": "5 min read",
+    "image": "/assets/images/other/img-ae87263677.jpg"
+  },
+  {
+    "slug": "mma-matrix",
+    "title": "MMA Matrix: Setting Up India's Most Recognised Fight Gym with Tiger &amp; Krishna Shroff",
+    "excerpt": "The story behind our 30+ MMA Matrix gym fit-outs across India &mdash; the Shroff family's flagship MMA brand.",
+    "category": "Case Study",
+    "date": "January 2026",
+    "readTime": "7 min read",
+    "image": "/assets/images/other/img-4106bca815.jpg"
+  },
+  {
+    "slug": "one-stop",
+    "title": "Why TechFit is India's One-Stop Shop for Gym &amp; Sports Infrastructure",
+    "excerpt": "Why developers, hotels and fight leagues are consolidating procurement: manufacturing, distribution, installation and service — all under one roof.",
+    "category": "Insights",
+    "date": "April 2026",
+    "readTime": "4 min read",
+    "image": "/assets/images/other/img-dc5fac41f7.jpg"
+  },
+  {
+    "slug": "wellness-boom",
+    "title": "The Wellness Economy Is Booming: Inside the $6.8 Trillion Industry Rewriting Global Health",
+    "excerpt": "Wellness is no longer adjacent to fitness — it is the fastest-growing pillar of the global economy. Here is what is driving the boom, the technologies behind it, and what Indian developers, hoteliers and gym operators should plan for next.",
+    "category": "Insights",
+    "date": "April 2026",
+    "readTime": "8 min read",
+    "image": "/assets/images/other/img-00d6a577a1.jpg"
+  }
+]

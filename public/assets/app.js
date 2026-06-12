@@ -471,6 +471,20 @@ async function submitEmbeddedQuote(projectType) {
       setTimeout(() => {
         window.scrollTo({ top: 0, behavior: 'instant' });
         render(); navActive(); updateSEO();
+      // Initialize scroll animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+      
+      setTimeout(() => {
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      }, 500);
+
         setTimeout(() => hideLoader(), 20);
       }, 50);
     }
@@ -702,35 +716,35 @@ async function submitEmbeddedQuote(projectType) {
       <p class="sec-sub">Five product categories. All designed and fabricated in-house at our Byculla facility.</p>
     </div>
     <div class="seg-grid">
-      <div class="seg-card" onclick="go('mma-cages')">
+      <div class="seg-card reveal" onclick="go('mma-cages')">
         <div class="card-num">01</div>
         <div class="card-accent"></div>
         <h3>MMA Cages<br>&amp; Rings</h3>
         <p>Professional UFC-spec cages, boxing rings, and combat sports structures. Custom dimensions, powder-coat finishes, and full installation.</p>
         <button class="segment-cta">EXPLORE MMA &rarr;</button>
       </div>
-      <div class="seg-card" onclick="go('crossfit-rigs')">
+      <div class="seg-card reveal" onclick="go('crossfit-rigs')">
         <div class="card-num">02</div>
         <div class="card-accent"></div>
         <h3>CrossFit<br>Rigs</h3>
         <p>Modular pull-up rigs, wall-mounted systems, and full functional training structures for CrossFit boxes and functional training areas.</p>
         <button class="segment-cta">EXPLORE RIGS &rarr;</button>
       </div>
-      <div class="seg-card" onclick="go('free-weights')">
+      <div class="seg-card reveal" onclick="go('free-weights')">
         <div class="card-num">03</div>
         <div class="card-accent"></div>
         <h3>Free<br>Weights</h3>
         <p>Custom dumbbells, barbells, kettlebells, weight plates, and storage systems. Manufactured to commercial standards with anti-corrosion finishes.</p>
         <button class="segment-cta">EXPLORE WEIGHTS &rarr;</button>
       </div>
-      <div class="seg-card" onclick="go('padel-pickleball')">
+      <div class="seg-card reveal" onclick="go('padel-pickleball')">
         <div class="card-num">04</div>
         <div class="card-accent"></div>
         <h3>Padel &amp;<br>Pickleball</h3>
         <p>Full padel court construction and pickleball court fit-outs. From steel structure to glass panels, netting, and artificial turf — turnkey delivery.</p>
         <button class="segment-cta">EXPLORE COURTS &rarr;</button>
       </div>
-      <div class="seg-card" onclick="go('aqua')">
+      <div class="seg-card reveal" onclick="go('aqua')">
         <div class="card-num">05</div>
         <div class="card-accent"></div>
         <h3>Aqua<br>Fitness</h3>
@@ -2225,7 +2239,7 @@ ${footer()}
   <div class="sec-in">
     <div class="sec-hdr center"><span class="sec-label">Full Product Lineup</span><h2 class="sec-title">CAGE &amp; RING OPTIONS</h2></div>
     <div class="lineup-grid">
-      <div class="lineup-card" onclick="go('contact')">
+      <div class="lineup-card reveal" onclick="go('contact')">
         <img class="lineup-img" src="/assets/images/other/img-895bfd0f75.jpg" alt="TechFit Floor Mount MMA Cage" onerror="this.style.background='#1a1a1a'" loading="lazy">
         <div class="lineup-card-body">
           <div class="lineup-chip">Floor Mount</div>
@@ -2235,7 +2249,7 @@ ${footer()}
           <button class="lineup-cta" onclick="go('contact')">GET QUOTE →</button>
         </div>
       </div>
-      <div class="lineup-card" onclick="go('contact')">
+      <div class="lineup-card reveal" onclick="go('contact')">
         <img class="lineup-img" src="/assets/images/other/img-022feeaa5c.jpg" alt="TechFit Elevated Podium MMA Cage" onerror="this.style.background='#1a1a1a'" loading="lazy">
         <div class="lineup-card-body">
           <div class="lineup-chip">Elevated · Competition</div>
@@ -2245,7 +2259,7 @@ ${footer()}
           <button class="lineup-cta" onclick="go('contact')">GET QUOTE →</button>
         </div>
       </div>
-      <div class="lineup-card" onclick="go('contact')">
+      <div class="lineup-card reveal" onclick="go('contact')">
         <img class="lineup-img" src="/assets/images/other/img-431ccdde96.jpg" alt="TechFit Professional Training Boxing Ring" onerror="this.style.background='#1a1a1a'" loading="lazy">
         <div class="lineup-card-body">
           <div class="lineup-chip">Daily Training</div>
@@ -2255,7 +2269,7 @@ ${footer()}
           <button class="lineup-cta" onclick="go('contact')">GET QUOTE →</button>
         </div>
       </div>
-      <div class="lineup-card" onclick="go('contact')">
+      <div class="lineup-card reveal" onclick="go('contact')">
         <img class="lineup-img" src="/assets/images/other/img-2727704f45.jpg" alt="TechFit Competition Grade Boxing Ring" onerror="this.style.background='#1a1a1a'" loading="lazy">
         <div class="lineup-card-body">
           <div class="lineup-chip">Competition Grade</div>
@@ -2391,7 +2405,7 @@ ${footer()}`;
   <div class="sec-in">
     <div class="sec-hdr center"><span class="sec-label">Product Catalogue</span><h2 class="sec-title">FULL STRENGTH RANGE</h2></div>
     <div class="lineup-grid">
-      <div class="lineup-card" onclick="go('contact')">
+      <div class="lineup-card reveal" onclick="go('contact')">
         <img class="lineup-img" src="/assets/images/other/img-356b7a8ee5.jpg" alt="TechFit Rubber Hex Dumbbells" loading="lazy">
         <div class="lineup-card-body">
           <div class="lineup-chip best-seller-chip">Best Seller</div>
@@ -2402,7 +2416,7 @@ ${footer()}`;
         </div>
       </div>
 
-      <div class="lineup-card" onclick="go('contact')">
+      <div class="lineup-card reveal" onclick="go('contact')">
         <img class="lineup-img" src="/assets/images/other/img-23f50c3f30.jpg" alt="TechFit Nitrile Rubber Dumbbells" loading="lazy">
         <div class="lineup-card-body">
           <div class="lineup-chip">Premium</div>
@@ -2413,7 +2427,7 @@ ${footer()}`;
         </div>
       </div>
 
-      <div class="lineup-card" onclick="go('contact')">
+      <div class="lineup-card reveal" onclick="go('contact')">
         <img class="lineup-img" src="/assets/images/other/img-a2f88d9acf.jpg" alt="TechFit Olympic Rubber Plates" loading="lazy">
         <div class="lineup-card-body">
           <div class="lineup-chip">Olympic Series</div>
@@ -2424,7 +2438,7 @@ ${footer()}`;
         </div>
       </div>
 
-      <div class="lineup-card" onclick="go('contact')">
+      <div class="lineup-card reveal" onclick="go('contact')">
         <img class="lineup-img" src="/assets/images/other/img-2a6ba6d2ef.jpg" alt="TechFit Nitrile Olympic Plates" loading="lazy">
         <div class="lineup-card-body">
           <div class="lineup-chip">Premium</div>
@@ -2435,7 +2449,7 @@ ${footer()}`;
         </div>
       </div>
 
-      <div class="lineup-card" onclick="go('contact')">
+      <div class="lineup-card reveal" onclick="go('contact')">
         <img class="lineup-img" src="/assets/images/other/img-b88d6d93e0.jpg" alt="TechFit Full Power Rack" loading="lazy">
         <div class="lineup-card-body">
           <div class="lineup-chip">Pro Series</div>
@@ -2446,7 +2460,7 @@ ${footer()}`;
         </div>
       </div>
 
-      <div class="lineup-card" onclick="go('contact')">
+      <div class="lineup-card reveal" onclick="go('contact')">
         <img class="lineup-img" src="/assets/images/other/img-6ab5d039c4.jpg" alt="TechFit Power Cage / Squat Rack" loading="lazy">
         <div class="lineup-card-body">
           <div class="lineup-chip">Heavy Duty</div>
@@ -2457,7 +2471,7 @@ ${footer()}`;
         </div>
       </div>
 
-      <div class="lineup-card" onclick="go('contact')">
+      <div class="lineup-card reveal" onclick="go('contact')">
         <img class="lineup-img" src="/assets/images/other/img-fbed50cb82.jpg" alt="TechFit Full Commercial Rack" loading="lazy">
         <div class="lineup-card-body">
           <div class="lineup-chip">Commercial</div>
@@ -2468,7 +2482,7 @@ ${footer()}`;
         </div>
       </div>
 
-      <div class="lineup-card" onclick="go('contact')">
+      <div class="lineup-card reveal" onclick="go('contact')">
         <img class="lineup-img" src="/assets/images/other/img-4f819e260f.jpg" alt="TechFit Accessories Rack" loading="lazy">
         <div class="lineup-card-body">
           <div class="lineup-chip">Storage</div>
@@ -2479,7 +2493,7 @@ ${footer()}`;
         </div>
       </div>
 
-      <div class="lineup-card" onclick="go('contact')">
+      <div class="lineup-card reveal" onclick="go('contact')">
         <img class="lineup-img" src="/assets/images/other/img-e2758a4938.jpg" alt="TechFit Deadlift Platform" loading="lazy">
         <div class="lineup-card-body">
           <div class="lineup-chip">Competition</div>
@@ -2490,7 +2504,7 @@ ${footer()}`;
         </div>
       </div>
 
-      <div class="lineup-card" onclick="go('contact')">
+      <div class="lineup-card reveal" onclick="go('contact')">
         <img class="lineup-img" src="/assets/images/other/img-ca5ff2656e.jpg" alt="TechFit Heavy Duty Olympic Bars" loading="lazy">
         <div class="lineup-card-body">
           <div class="lineup-chip">Barbells</div>
@@ -3251,62 +3265,7 @@ ${footer()}
     // ── CONTACT PAGE ───────────────────────────────────────────────────────────────
 
     // ── BLOGS ─────────────────────────────────────────────────────────────────────
-    const BLOG_POSTS = [
-      {
-        slug: 'mfn',
-        title: 'Inside the Octagon: How TechFit Built the Fighting Cage for Matrix Fight Night (MFN)',
-        excerpt: 'The story behind India\'s most broadcast-ready MMA cage — engineered and installed by TechFit for Matrix Fight Night.',
-        category: 'Case Study',
-        date: 'April 2026',
-        readTime: '6 min read',
-        image: "/assets/images/other/img-13eebfc2ab.jpg"
-      },
-      {
-        slug: 'sfl',
-        title: 'Super Fight League (SFL): Building a Championship-Grade Cage for India\'s Premier MMA Promotion',
-        excerpt: 'How TechFit partnered with Super Fight League to deliver a tournament-specification cage that meets international broadcast standards.',
-        category: 'Case Study',
-        date: 'March 2026',
-        readTime: '5 min read',
-        image: "/assets/images/other/img-fe2a9be7c7.jpg"
-      },
-      {
-        slug: 'kumite',
-        title: 'Kumite 1 League: Engineering a Professional Boxing Ring for Live Broadcast',
-        excerpt: 'From canvas tension to corner post hardness — the details that separate a commercial boxing ring from a championship one.',
-        category: 'Case Study',
-        date: 'February 2026',
-        readTime: '5 min read',
-        image: "/assets/images/other/img-ae87263677.jpg"
-      },
-      {
-        slug: 'mma-matrix',
-        title: 'MMA Matrix: Setting Up India\'s Most Recognised Fight Gym with Tiger &amp; Krishna Shroff',
-        excerpt: 'The story behind our 30+ MMA Matrix gym fit-outs across India &mdash; the Shroff family\'s flagship MMA brand.',
-        category: 'Case Study',
-        date: 'January 2026',
-        readTime: '7 min read',
-        image: "/assets/images/other/img-4106bca815.jpg"
-      },
-      {
-        slug: 'one-stop',
-        title: 'Why TechFit is India\'s One-Stop Shop for Gym &amp; Sports Infrastructure',
-        excerpt: 'Why developers, hotels and fight leagues are consolidating procurement: manufacturing, distribution, installation and service — all under one roof.',
-        category: 'Insights',
-        date: 'April 2026',
-        readTime: '4 min read',
-        image: "/assets/images/other/img-dc5fac41f7.jpg"
-      },
-      {
-        slug: 'wellness-boom',
-        title: 'The Wellness Economy Is Booming: Inside the $6.8 Trillion Industry Rewriting Global Health',
-        excerpt: 'Wellness is no longer adjacent to fitness — it is the fastest-growing pillar of the global economy. Here is what is driving the boom, the technologies behind it, and what Indian developers, hoteliers and gym operators should plan for next.',
-        category: 'Insights',
-        date: 'April 2026',
-        readTime: '8 min read',
-        image: "/assets/images/other/img-00d6a577a1.jpg"
-      }
-    ];
+    
 
     function renderBlogs() {
       return `
@@ -3322,7 +3281,7 @@ ${footer()}
   <div class="sec-in">
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:2rem">
       ${BLOG_POSTS.map(p => `
-        <article class="blog-card" onclick="go('blog-'+'${p.slug}')" style="cursor:pointer;background:#fff;overflow:hidden;border:1px solid var(--z200);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s">
+        <article class="blog-card reveal" onclick="go('blog-'+'${p.slug}')" style="cursor:pointer;background:#fff;overflow:hidden;border:1px solid var(--z200);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s">
           <img src="${p.image}" alt="${p.title}" style="width:100%;height:220px;object-fit:cover" loading="lazy">
           <div style="padding:1.5rem;display:flex;flex-direction:column;flex:1">
             <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem">
@@ -3345,188 +3304,26 @@ ${footer()}
 `;
     }
 
-    const BLOG_CONTENT = {
-      'mfn': {
-        title: 'Inside the Octagon: How TechFit Built the Fighting Cage for Matrix Fight Night (MFN)',
-        category: 'Case Study',
-        date: 'April 2026',
-        readTime: '6 min read',
-        image: "/assets/images/other/img-13eebfc2ab.jpg",
-        content: `
-      <div style="text-align:center;margin:1rem 0 2rem"><img src="/assets/images/other/img-d89ead107e.png" alt="Matrix Fight Night Logo" style="max-height:80px;width:auto;margin:0 auto;display:inline-block" loading="lazy"></div><p>Matrix Fight Night (MFN) is one of India&#x2019;s premier MMA promotions &mdash; owned and operated by Tiger Shroff, his mother Ayesha Shroff and his sister Krishna Shroff, and known for television-grade broadcast production, celebrity-backed card nights, and some of the country&#x2019;s hardest-hitting prospects. When MFN went looking for a fighting cage that would stand up to both the athletes and the cameras, they came to TechFit.</p>
-      <h2>The Brief</h2>
-      <p>A championship cage needs to do three jobs at once. It has to protect athletes from edges and snags, reassure judges and officials with consistent dimensions and rigidity, and give broadcast partners clean, unobstructed sight lines for a premium TV product. Anything less and the event downgrades itself.</p>
-      <h2>What We Delivered</h2>
-      <p>A full competition-grade octagon fabricated at our Byculla workshop and installed on-site in under 72 hours. Key specs:</p>
-      <ul>
-        <li>4mm+ heavy-gauge powder-coated steel poles</li>
-        <li>High-tensile vinyl-coated chain link fencing for visibility and grip</li>
-        <li>Multi-layer high-density foam padding on every upright and corner post</li>
-        <li>Anti-slip, broadcast-logo-printed canvas with custom MFN branding</li>
-        <li>Elevated podium platform with reinforced steel framing for audience visibility</li>
-      </ul>
-      <h2>Why It Matters</h2>
-      <p>A cage is more than steel and canvas &mdash; it&#x2019;s a fighter&#x2019;s workplace and a brand&#x2019;s billboard. Building this at home in Mumbai meant MFN got championship specs at a fraction of imported cost, with local service for every future event. That&#x2019;s what it looks like when fight-league infrastructure is treated like fight-league infrastructure.</p>
-    `
-      },
-      'sfl': {
-        title: 'Super Fight League (SFL): Building a Championship-Grade Cage for India\'s Premier MMA Promotion',
-        category: 'Case Study',
-        date: 'March 2026',
-        readTime: '5 min read',
-        image: "/assets/images/other/img-fe2a9be7c7.jpg",
-        content: `
-      <div style="text-align:center;margin:1rem 0 2rem"><img src="/assets/images/other/img-57854f9f21.png" alt="Super Fight League Logo" style="max-height:120px;width:auto;margin:0 auto;display:inline-block;border-radius:.3rem" loading="lazy"></div><p>Super Fight League (SFL) &mdash; originally founded by Sanjay Dutt and Raj Kundra in 2012 &mdash; was the promotion that first put Indian MMA on the global map. SFL runs in a signature circular "O\u2019Zone" cage: chain-link fence coated in black vinyl, set atop a raised platform for broadcast visibility. When the league expanded its event calendar, they needed a cage that could travel between venues, set up fast, and deliver the same broadcast-ready finish each night.</p>
-      <h2>The Challenge</h2>
-      <p>Most cages are designed as permanent installations. SFL needed something modular &mdash; high-strength enough to survive repeated assembly and disassembly without compromising safety or appearance.</p>
-      <h2>The TechFit Solution</h2>
-      <p>We engineered a modular elevated cage with quick-release fasteners on structural nodes, pre-tensioned mesh panels that maintain consistent tautness across installations, and a premium competition-grade canvas that carries SFL&#x2019;s branding and sponsor marks. Delivered, installed, and broadcast-ready in a single day.</p>
-      <h2>Takeaway</h2>
-      <p>Fight leagues don&#x2019;t just need a cage. They need a consistent on-camera product, event after event. That&#x2019;s an engineering problem as much as a steel-and-canvas problem &mdash; and one we solve for every combat-sports client.</p>
-    `
-      },
-      'kumite': {
-        title: 'Kumite 1 League: Engineering a Professional Boxing Ring for Live Broadcast',
-        category: 'Case Study',
-        date: 'February 2026',
-        readTime: '5 min read',
-        image: "/assets/images/other/img-ae87263677.jpg",
-        content: `
-      <p>Kumite 1 League (K1L) is India&#x2019;s leading MMA and combat-sports promotion, launched under Toyam Industries in 2018 with brand ambassador Mike Tyson inaugurating the league. K1L runs inside "The Rage Arena" &mdash; their signature hexagon combining a cage and a boxing ring, raised at a height of 3\u20193" across 900 sq ft for the best spectator experience. For one of their flagship events, TechFit delivered the full competition boxing ring.</p>
-      <h2>What Goes Into a Championship Ring</h2>
-      <p>Most viewers never see the work under the canvas. A championship-grade ring rests on a multi-layer shock-absorbing platform, supported by a reinforced steel sub-frame with no flex under load. The canvas is pre-tensioned over a dense foam underlay. The ropes are set to regulation tension, with corner posts and turnbuckles rated for impact. Each of these details is the difference between an athlete rolling out of a fall and an athlete getting injured.</p>
-      <h2>Kumite 1 Delivery</h2>
-      <ul>
-        <li>International-spec 20ft x 20ft competition ring</li>
-        <li>Shock-absorbing layered platform with broadcast-grade canvas</li>
-        <li>Custom sponsor branding on apron and canvas</li>
-        <li>Full installation, rope-tensioning and safety certification</li>
-      </ul>
-      <p>When a fighter steps through the ropes, they should be thinking about their opponent &mdash; not the ring beneath them. That&#x2019;s the job we were hired to do.</p>
-    `
-      },
-      'mma-matrix': {
-        title: 'MMA Matrix: Setting Up India\'s Most Recognised Fight Gym with Tiger &amp; Krishna Shroff',
-        category: 'Case Study',
-        date: 'January 2026',
-        readTime: '7 min read',
-        image: "/assets/images/other/img-4106bca815.jpg",
-        content: `
-      <p>MMA Matrix is the flagship combat-sports gym brand founded by Tiger and Krishna Shroff &mdash; arguably the single biggest force in mainstreaming MMA across India. TechFit has been the infrastructure partner of choice for the MMA Matrix network since day one.</p>
-      <p><strong>Over 30+ MMA Matrix Gyms across India have been equipped by TechFit</strong> &mdash; spanning flagship destinations in Mumbai and Delhi through to new launches across tier-1 and tier-2 cities. From MMA cages and boxing rings to the full cardio and strength floor, we&#x2019;ve standardised what a Matrix gym looks, feels and performs like.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin:1.5rem 0">
-        <img src="/assets/images/other/img-9e41f56565.jpg" alt="MMA Matrix Gym installation" style="width:100%;height:220px;object-fit:cover;border-radius:.3rem" loading="lazy">
-        <img src="/assets/images/other/img-30d1d7ebdf.jpg" alt="MMA Matrix Gym cage" style="width:100%;height:220px;object-fit:cover;border-radius:.3rem" loading="lazy">
-        <img src="/assets/images/other/img-e5be9c6495.jpg" alt="MMA Matrix Gym floor" style="width:100%;height:220px;object-fit:cover;border-radius:.3rem" loading="lazy">
-        <img src="/assets/images/other/img-698231e007.jpg" alt="MMA Matrix Gym functional training" style="width:100%;height:220px;object-fit:cover;border-radius:.3rem" loading="lazy">
-        <img src="/assets/images/other/img-a1c7688de8.jpg" alt="MMA Matrix Gym equipment" style="width:100%;height:220px;object-fit:cover;border-radius:.3rem" loading="lazy">
-      </div>
-      <h2>What We Supply to Every MMA Matrix Gym</h2>
-      <p>Across 30+ MMA Matrix locations we&#x2019;ve standardised a complete fit-out package:</p>
-      <ul>
-        <li>Custom-branded floor-mount MMA cage</li>
-        <li>Professional training ring for boxing and Muay Thai</li>
-        <li>BH Fitness cardio floor &mdash; MOVEMIA and INERTIA lines</li>
-        <li>BH Fitness and Tunturi selectorised and plate-loaded strength</li>
-        <li>California Fitness commercial treadmills and ellipticals for mid-tier builds</li>
-        <li>TechFit CrossFit and functional-training rigs &mdash; wall-mount and island configurations</li>
-        <li>Free weights, power racks, deadlift platforms and flooring fabricated in-house in Mumbai</li>
-        <li>MMA mats, heavy bags, speed bags and ring accessories</li>
-      </ul>
-      <h2>Why It Worked</h2>
-      <p>A one-point-of-contact delivery meant no finger-pointing on the construction timeline. Design, fabrication and installation all sat with one team &mdash; ours. And because we manufactured the combat-sports equipment in-house, Matrix got bespoke branding and dimensions without import lead times. It&#x2019;s the playbook we&#x2019;ve since run for fight gyms and fight leagues across the country.</p>
-      <blockquote style="border-left:4px solid var(--red);padding:1rem 1.5rem;margin:1.5rem 0;background:var(--z50);font-style:italic;color:var(--z700)">
-        &#x201C;TechFit handled everything &mdash; design, equipment supply and installation. The BH Fitness range along with the TechFit customised products such as MMA Cage, CrossFit Rig and Free Weights we got has been durable, outstanding and aesthetically pleasing. Our members love it.&#x201D;
-        <br><br>
-        <strong>&mdash; Ayesha Shroff</strong>, Founder, MMA Matrix Gym
-      </blockquote>
-    `
-      },
-      'one-stop': {
-        title: 'Why TechFit is India\'s One-Stop Shop for Gym &amp; Sports Infrastructure',
-        category: 'Insights',
-        date: 'April 2026',
-        readTime: '4 min read',
-        image: "/assets/images/other/img-dc5fac41f7.jpg",
-        content: `
-      <p>Procurement is a silent killer of gym projects. Between the equipment vendor, the flooring supplier, the cage fabricator, the AMC company and the interior contractor, there&#x2019;s rarely one person who owns the handover date. TechFit exists to solve that.</p>
-      <h2>Five Things Under One Roof</h2>
-      <ul>
-        <li><strong>Distribution:</strong> Authorised partner for BH Fitness, Tunturi and California Fitness &mdash; across every commercial and residential budget tier.</li>
-        <li><strong>Manufacturing:</strong> Combat sports equipment, CrossFit &amp; calisthenics rigs, free weights, and aqua-fitness gear, fabricated in Mumbai.</li>
-        <li><strong>Wellness &amp; Recovery:</strong> Alteon Wellness partnership for hyperbaric, cryotherapy, red-light, dry-float and more.</li>
-        <li><strong>Sports Infrastructure:</strong> Padel courts, pickleball courts, boxing rings and custom combat zones.</li>
-        <li><strong>Operations:</strong> TechFit Active, our sister concern, can run the gym on your behalf &mdash; for hotels, residential towers and corporates that don&#x2019;t want to become gym operators.</li>
-      </ul>
-      <h2>What It Means for You</h2>
-      <p>One contract. One invoice. One project manager. One AMC. One number to call when something breaks. Whether you&#x2019;re a real-estate developer with twelve towers going up, a hotel upgrading your wellness floor, or a school building out a sports wing &mdash; we cover every base.</p>
-    `
-      },
-      'wellness-boom': {
-        title: 'The Wellness Economy Is Booming: Inside the $6.8 Trillion Industry Rewriting Global Health',
-        category: 'Insights',
-        date: 'April 2026',
-        readTime: '8 min read',
-        image: "/assets/images/other/img-00d6a577a1.jpg",
-        body: `
-<p class="lead">In 2024 the global wellness economy crossed <strong>$6.8 trillion</strong>, and the Global Wellness Institute projects it will reach <strong>$9.8 trillion by 2029</strong>. In India alone, the wellness market grew <strong>11.3% annually</strong> between 2019 and 2024 &mdash; the <strong>second-fastest growth rate in the world</strong>. The signal could not be clearer: wellness is no longer adjacent to fitness. It is the fastest-growing pillar of human performance, longevity, and lifestyle &mdash; and it is reshaping how hotels, gyms, residences, and corporates design space.</p>
-
-<h2>Why Wellness Is Outpacing Fitness</h2>
-<p>For most of the last decade, fitness and wellness sat in adjacent lanes. Fitness meant strength, cardio, and weight loss. Wellness meant spa, yoga, and the occasional massage. That neat separation has collapsed. Global spending on personal care and beauty, physical activity, healthy eating, mental wellness, and wellness tourism now dwarfs spending on traditional fitness memberships &mdash; and is compounding faster.</p>
-<p>Three forces are driving the shift. First, the pandemic reset priorities around immunity, sleep, and mental health, and that reset has proven durable. Second, a generation of consumers &mdash; Gen Z and younger millennials in particular &mdash; is treating wellness as identity rather than indulgence, buying biological-age tests, wearables, cold plunges, and recovery memberships the way previous cohorts bought gym passes. Third, the science has caught up. Modalities that were once fringe &mdash; cryotherapy, hyperbaric oxygen, red light therapy, hypoxic training &mdash; now have the peer-reviewed evidence and the equipment maturity to stand behind a clinical-grade promise.</p>
-<p>The Global Wellness Institute&rsquo;s 2025 Global Wellness Economy Country Rankings confirm the macro story: wellness is now a $6.8T economy, projected to hit $9.8T by 2029, growing faster than global GDP in almost every major market. Within that figure, categories like physical activity ($1.1T+), wellness tourism ($1T+), and personal care and beauty ($1.5T+) are each, on their own, larger than the entire global fitness-club industry. That is the order-of-magnitude shift operators need to internalise: you are no longer competing for gym memberships. You are competing for a share of a trillion-dollar longevity wallet.</p>
-
-<h2>India: The World&rsquo;s Second-Fastest-Growing Wellness Market</h2>
-<p>India climbed from #10 to <strong>#7 in the global wellness rankings</strong> between 2019 and 2024, growing at <strong>11.3% CAGR</strong> &mdash; second only to China in absolute growth rate. That growth is not evenly distributed. It is concentrated in three buyer categories that TechFit sees every week:</p>
-<p><strong>Real-estate developers</strong> building premium and luxury residential towers who now treat wellness amenities the way they once treated the clubhouse &mdash; as a non-negotiable differentiator. A recovery suite with cryotherapy and red light therapy moves inventory faster than another banquet hall.</p>
-<p><strong>Luxury hotels and resorts</strong> that are turning their spas into destination-grade wellness floors, with hyperbaric chambers, IHHT, and dry float pods replacing the token treadmill cluster. Wellness tourism is one of the fastest-growing line items in the sector.</p>
-<p><strong>Premium gyms and longevity clinics</strong> that are layering Alteon-grade recovery and performance technology over commercial gym floors to command higher ARPU and retain high-value members.</p>
-
-<h2>The Technologies Powering the Boom</h2>
-<p>Ten wellness technologies are driving most of the investment TechFit sees in India today. Each is commercially proven, clinically supported, and deployable in gyms, hotels, and high-end residences.</p>
-<ul>
-<li><strong>Cryotherapy Chambers.</strong> Ultra-cold exposure (-110&deg;C to -140&deg;C) for inflammation control, recovery, pain relief, and sleep quality. Whole-body nitrogen and electric systems.</li>
-<li><strong>Hyperbaric Oxygen Chambers (HBOT).</strong> Pressurised oxygen therapy for tissue repair, neurological recovery, athletic performance, and anti-aging.</li>
-<li><strong>Red Light Therapy (Photobiomodulation).</strong> Specific wavelengths of red and near-infrared light that accelerate skin repair, muscle recovery, and cellular energy (ATP) production.</li>
-<li><strong>Infrared Sauna.</strong> Lower-temperature, deeper-penetrating sauna experience for detoxification, cardiovascular health, and relaxation.</li>
-<li><strong>IHHT (Intermittent Hypoxic-Hyperoxic Training).</strong> Altitude-simulation therapy that improves mitochondrial efficiency, VO&#8322; max, and metabolic health.</li>
-<li><strong>Dry Float Therapy.</strong> Zero-gravity, sensory-controlled flotation for stress reduction, better sleep, and faster recovery without the water of traditional float pools.</li>
-<li><strong>BIOPOD (Immersive Wellness Pod).</strong> A multi-modality chamber combining light, sound, heat, and aromatherapy &mdash; one footprint, many protocols.</li>
-<li><strong>ReVITALE Chamber.</strong> Full-body rejuvenation chamber integrating red light, oxygen enrichment, and recovery protocols for longevity outcomes.</li>
-<li><strong>Infrashape Lymphatic Drainage.</strong> Non-invasive pressure therapy that stimulates lymphatic circulation, reduces inflammation, and supports recovery.</li>
-<li><strong>Water Massage &amp; Hydrothermal Recovery.</strong> Dry hydro-massage beds and contrast therapy circuits that make elite recovery accessible without the plumbing.</li>
-</ul>
-
-<h2>What Each Technology Delivers</h2>
-<p><strong>For the user:</strong> faster recovery, lower cortisol, improved sleep, reduced inflammation, better cognitive performance, and slower biological aging. These are not soft claims &mdash; they are outcomes with wearable-measurable signals (HRV, sleep scores, recovery indices) that members track on their own phones.</p>
-<p><strong>For the operator:</strong> higher ARPU, stronger member retention, premium-brand positioning, and entirely new revenue streams &mdash; pay-per-session bookings, add-on monthly memberships, and corporate wellness packages. A single cryotherapy chamber can add a six-figure annual revenue line to a commercial gym with modest utilisation. A hyperbaric chamber in a clinical-grade wellness floor can carry a premium-only membership tier.</p>
-<p><strong>For the real-estate developer:</strong> faster absorption of premium inventory, higher per-square-foot value, and wellness as a marketing differentiator for HNW buyers who are already spending on Oura rings, Whoop straps, and longevity clinic memberships. A recovery amenity is no longer a luxury &mdash; in a $3-crore-plus residential address, it is the expectation.</p>
-<p><strong>For the hotel group:</strong> a destination-grade spa and wellness experience that commands premium room rates, drives repeat visits, and opens up the wellness-tourism segment &mdash; one of the fastest-growing categories in hospitality globally.</p>
-
-<p><strong>For the corporate campus:</strong> a dedicated recovery room &mdash; red light, dry float, and a cryotherapy chair &mdash; is now showing up on the perks list at high-end tech and finance employers. It is cheaper than a healthcare-premium hike, it measurably improves sleep and absenteeism, and it signals the right kind of employer-brand commitment to talent that is increasingly wellness-native.</p>
-
-<h2>Case-Study Patterns We See in India</h2>
-<p>Across the projects TechFit has delivered in the last 24 months, three clear archetypes have emerged for the Indian wellness buyer. Understanding which archetype you fit makes the equipment choice and the economics almost mechanical.</p>
-<p><strong>Archetype 1 &mdash; The Luxury Residential Amenity.</strong> A developer carves out 80&ndash;150 sqm on the clubhouse floor and builds a recovery suite with red light, infrared sauna, a hydro-massage bed, and often a dry float pod. Capex sits in the low tens of lakhs, fit-out is fast, and the marketing team gets a premium amenity to feature on the hoarding. ROI is measured in faster absorption and per-sqft premiums, not pay-per-session revenue.</p>
-<p><strong>Archetype 2 &mdash; The Hotel Wellness Floor.</strong> A 5-star or luxury-boutique property converts underused spa space into a modality-rich wellness floor: HBOT, cryotherapy, IHHT, and a red-light suite. The math is room-rate uplift plus walk-in wellness bookings. These properties increasingly package recovery into their wellness-tourism offering, commanding a meaningful share of the growing medical- and wellness-tourism inflow.</p>
-<p><strong>Archetype 3 &mdash; The Premium Gym or Longevity Studio.</strong> An existing commercial gym or new-format longevity studio adds a paid-recovery zone on top of the main floor. Pricing runs pay-per-session or tiered monthly memberships. Here, the equipment mix is optimised for throughput: multiple red-light beds, a single cryotherapy chamber, an IHHT station, and a cluster of hydro-massage beds. Done right, this converts the gym from a fixed-ticket-size business into a recurring recovery-revenue business with meaningfully higher lifetime value.</p>
-
-<h2>The Economics: Why Now Is the Moment</h2>
-<p>The commercial case for wellness technology has changed in three ways. Equipment costs have come down as the category has scaled, typical pay-per-session pricing in Tier 1 Indian cities now supports three-to-five-year paybacks even on hyperbaric chambers and cryotherapy suites, and member willingness-to-pay has climbed sharply. A minimum viable wellness suite &mdash; red light therapy plus an infrared sauna plus a dry hydro-massage bed &mdash; can be deployed in under 40 sqm with a capex that most premium gyms, boutique hotels, and residential clubs can amortise within two to three years.</p>
-<p>For residential developers, the sales impact is even more direct. In comparable projects we have seen wellness-amenitised towers clear inventory 20&ndash;40% faster and command a 5&ndash;10% premium on per-sqft pricing &mdash; a return that dwarfs the amenity&rsquo;s fit-out cost within the first phase of sales.</p>
-
-<h2>How TechFit Helps</h2>
-<p>As the authorised distributor for <strong>Alteon Wellness &amp; Recovery Technology</strong> in India, TechFit handles everything from space planning and equipment selection to installation, staff training, and annual maintenance. Our clients include The Ritz-Carlton, DLF, Reliance Industries, Zerodha, Gold&rsquo;s Gym, D Y Patil Healthcare and many more.</p>
-<p>If you are planning a wellness-led facility &mdash; a gym, a hotel, a residential amenity, a longevity clinic, or a corporate recovery room &mdash; <a onclick="go('contact')" style="color:var(--red);cursor:pointer;font-weight:700">talk to us</a>. We will walk you through the economics, the space plan, and the equipment stack that fits your format, your users, and your budget.</p>
-
-<p class="note"><em>Statistics: Global Wellness Institute, 2025 Global Wellness Economy Country Rankings. Equipment categories reflect Alteon&rsquo;s India portfolio as of April 2026.</em></p>
-`
-      }
-    };
+    
 
     function renderBlog(slug) {
-      const post = BLOG_CONTENT[slug];
-      if (!post) return renderBlogs();
+      // Return a placeholder structure, then fetch and inject markdown
+      setTimeout(async () => {
+        try {
+          const res = await fetch('/assets/blogs/' + slug + '.md');
+          if (res.ok) {
+            const md = await res.text();
+            document.getElementById('blog-content-body').innerHTML = marked.parse(md);
+          } else {
+            document.getElementById('blog-content-body').innerHTML = '<p>Blog post not found.</p>';
+          }
+        } catch (e) {
+          console.error(e);
+        }
+      }, 0);
+      
+      const post = BLOG_POSTS.find(p => p.slug === slug) || { title: '', category: '', date: '', readTime: '', image: '' };
+      
       return `
 <div class="phero" style="padding:5rem 1.5rem">
   <div class="sec-in" style="max-width:860px;margin:0 auto;text-align:center">
@@ -3538,8 +3335,9 @@ ${footer()}
 <section class="sec">
   <div class="sec-in" style="max-width:860px;margin:0 auto">
     <img src="${post.image}" alt="${post.title}" style="width:100%;max-height:480px;object-fit:cover;margin-bottom:2.5rem;border-radius:.25rem" loading="lazy">
-    <div class="blog-body" style="font-size:1rem;line-height:1.85;color:var(--z700)">
-      ${post.content}
+    <div id="blog-content-body" class="blog-body" style="font-size:1rem;line-height:1.85;color:var(--z700)">
+      <!-- Markdown will be injected here -->
+      Loading...
     </div>
     <div style="display:flex;justify-content:center;gap:1rem;margin-top:3rem;flex-wrap:wrap">
       <button class="btn-red" onclick="go('contact')">Start Your Project</button>
@@ -3547,10 +3345,8 @@ ${footer()}
     </div>
   </div>
 </section>
-
-${ctaBand('Planning a Similar Installation?', 'Combat-sports facilities, gym fit-outs, wellness centres &mdash; we do it all.', 'Get a Free Consultation')}
 ${footer()}
-`;
+      `;
     }
 
 
@@ -3588,7 +3384,7 @@ ${footer()}
   <div class="sec-in">
     <div class="sec-hdr center"><span class="sec-label">Tile Thickness Guide</span><h2 class="sec-title">CHOOSE THE RIGHT THICKNESS</h2></div>
     <div class="lineup-grid">
-      <div class="lineup-card" onclick="go('contact')">
+      <div class="lineup-card reveal" onclick="go('contact')">
         <div class="lineup-card-body" style="padding:2rem">
           <div class="lineup-chip">Light Use</div>
           <h3>10 &ndash; 12 mm Tiles</h3>
@@ -3603,7 +3399,7 @@ ${footer()}
         </div>
       </div>
 
-      <div class="lineup-card" onclick="go('contact')">
+      <div class="lineup-card reveal" onclick="go('contact')">
         <div class="lineup-card-body" style="padding:2rem">
           <div class="lineup-chip best-seller-chip">Best Seller</div>
           <h3>15 &ndash; 20 mm Tiles</h3>
@@ -3618,7 +3414,7 @@ ${footer()}
         </div>
       </div>
 
-      <div class="lineup-card" onclick="go('contact')">
+      <div class="lineup-card reveal" onclick="go('contact')">
         <div class="lineup-card-body" style="padding:2rem">
           <div class="lineup-chip">Heavy Drop Zone</div>
           <h3>25 &ndash; 50 mm Tiles</h3>
@@ -3862,6 +3658,11 @@ ${footer()}`;
     function openModal(slug, brandName) {
       const p = PRODUCTS.find(x => x.s === slug && x.b === brandName);
       if (!p) return;
+      if (typeof gtag === 'function') {
+        gtag('event', 'view_item', {
+          items: [{ item_name: p.n, item_brand: p.b, item_category: p.c }]
+        });
+      }
       document.getElementById('m-title').textContent = p.n;
       document.getElementById('m-brand').textContent = p.b + ' — ' + p.c;
       const img = document.getElementById('m-img');
@@ -5233,10 +5034,52 @@ function render404() {
         parseUrl();
       }
       render(); navActive(); updateSEO();
+      // Initialize scroll animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+      
+      setTimeout(() => {
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      }, 500);
+
     });
 
-    parseUrl();
-    render(); navActive(); updateSEO();
+    async function initApp() {
+      try {
+        const [prodRes, blogRes] = await Promise.all([
+          fetch('/assets/products.json'),
+          fetch('/assets/blogs.json')
+        ]);
+        PRODUCTS = await prodRes.json();
+        BLOG_POSTS = await blogRes.json();
+      } catch (e) {
+        console.error('Failed to load JSON data', e);
+      }
+      parseUrl();
+      render(); navActive(); updateSEO();
+      // Initialize scroll animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+      
+      setTimeout(() => {
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      }, 500);
+
+    }
+    initApp();
+
     // Global conversion tracking for WhatsApp, Phone Call, and Email link clicks
     document.addEventListener('click', function (e) {
       var waLink = e.target.closest('a[href*="wa.me"]');
