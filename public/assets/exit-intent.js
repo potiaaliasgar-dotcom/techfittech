@@ -148,8 +148,10 @@
   
   // 1. Desktop: Cursor exit (mouseleave top of screen)
   function initDesktopDetection() {
+    const loadTime = Date.now();
     document.addEventListener('mouseleave', function (e) {
-      if (e.clientY < 10) {
+      const elapsedSinceLoad = Date.now() - loadTime;
+      if (e.clientY < 10 && elapsedSinceLoad > 12000) {
         showModal();
       }
     });
@@ -165,13 +167,13 @@
       const now = Date.now();
       // Only detect within 30 seconds of landing, and after at least 3 seconds (engaging first)
       const elapsedSinceLoad = now - loadTime;
-      if (elapsedSinceLoad < 3000 || elapsedSinceLoad > 30000) return;
+      if (elapsedSinceLoad < 12000 || elapsedSinceLoad > 60000) return;
 
       const currentScrollY = window.scrollY;
       const scrollDiff = lastScrollY - currentScrollY; // positive = scrolling up
       const timeDiff = now - lastTime;
 
-      if (scrollDiff > 80 && timeDiff < 100) {
+      if (scrollDiff > 120 && timeDiff < 150) {
         // Scrolled up more than 80px within 100ms: rapid upward flick
         showModal();
       }
