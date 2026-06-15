@@ -26,7 +26,11 @@
   ],
   "redirects": [
     { "source": "/about-us", "destination": "/about", "permanent": true },
-    { "source": "/about-us/", "destination": "/about", "permanent": true }
+    { "source": "/about-us/", "destination": "/about", "permanent": true },
+    { "source": "/jordan-fitness", "destination": "/free-weights", "permanent": true },
+    { "source": "/jordan-fitness/", "destination": "/free-weights", "permanent": true },
+    { "source": "/bendis-pilates", "destination": "/free-weights", "permanent": true },
+    { "source": "/bendis-pilates/", "destination": "/free-weights", "permanent": true }
   ],
   "rewrites": [
     { "source": "/((?!.*\\.).*)", "destination": "/index.html" }

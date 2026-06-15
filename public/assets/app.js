@@ -537,8 +537,6 @@ async function submitEmbeddedQuote(projectType) {
         'for-hotels': 'Hotel & Corporate Wellness Suites',
         'bh-fitness': 'BH Fitness Commercial Gym Equipment',
         'tunturi': 'Tunturi Wellness & Strength Equipment',
-        'bendis-pilates': 'Bendis Pilates Premium Studio Equipment',
-        'jordan-fitness': 'Jordan Fitness Premium Gym Accessories',
         'california-fitness': 'California Fitness Strength Equipment',
         'mma-cages': 'Custom MMA Cage & Boxing Ring Fabrication',
         'crossfit-rigs': 'Custom CrossFit & Functional Training Rigs',
