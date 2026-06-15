@@ -3417,12 +3417,30 @@ function generatePage(html, route, seo) {
     out = out.replace(/<h2 class="sr-h1" style="position:absolute;left:-9999px" id="main-h1">.*?<\/h2>/, h1Block);
   }
 
+
   // Inject the static JSON-LD schema into the <head> of this route copy!
   if (SCHEMAS[route]) {
     const enriched = enrichSchema(route, SCHEMAS[route]);
     const schemaBlock = `\n  <script type="application/ld+json">\n${JSON.stringify(enriched, null, 2)}\n  </script>`;
     out = out.replace(/<\/head>/i, `${schemaBlock}\n</head>`);
   }
+
+  // Inject Static BreadcrumbList
+  if (route !== 'home' && route !== '' && route !== '/') {
+    // Basic title extraction (before any '—' separator)
+    const routeTitle = seo.title.split('—')[0].trim();
+    const breadcrumbJson = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/" },
+        { "@type": "ListItem", "position": 2, "name": routeTitle, "item": BASE + "/" + route }
+      ]
+    };
+    const breadcrumbBlock = `\n  <script type="application/ld+json">\n${JSON.stringify(breadcrumbJson, null, 2)}\n  </script>`;
+    out = out.replace(/<\/head>/i, `${breadcrumbBlock}\n</head>`);
+  }
+
 
   // Inject route-specific <noscript> fallback block
   let noscriptBlock = '';
