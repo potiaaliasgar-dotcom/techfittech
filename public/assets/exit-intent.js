@@ -151,7 +151,7 @@
     const loadTime = Date.now();
     document.addEventListener('mouseleave', function (e) {
       const elapsedSinceLoad = Date.now() - loadTime;
-      if (e.clientY < 10 && elapsedSinceLoad > 12000) {
+      if (e.clientY < 10 && elapsedSinceLoad > 25000) {
         showModal();
       }
     });
@@ -167,7 +167,7 @@
       const now = Date.now();
       // Only detect within 30 seconds of landing, and after at least 3 seconds (engaging first)
       const elapsedSinceLoad = now - loadTime;
-      if (elapsedSinceLoad < 12000 || elapsedSinceLoad > 60000) return;
+      if (elapsedSinceLoad < 25000 || elapsedSinceLoad > 60000) return;
 
       const currentScrollY = window.scrollY;
       const scrollDiff = lastScrollY - currentScrollY; // positive = scrolling up
