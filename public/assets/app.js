@@ -521,10 +521,11 @@ async function submitEmbeddedQuote(projectType) {
         'alternatives/precor-india': renderPrecorAlternative,
         'alternatives/mecotec-cryotherapy-india': renderMecotecAlternative,
         'alternatives/usi-cosco-techfit-cages': renderUsiCoscoAlternative,
+        'alternatives': renderAlternativesHub,
         '404': render404
       };
       const guideSlugs = ["commercial-gym-setup-cost-india","how-to-set-up-a-commercial-gym","best-commercial-treadmills-india","commercial-gym-equipment-list","hotel-gym-setup-guide","bh-fitness-vs-life-fitness","tunturi-vs-precor","best-gym-equipment-brands-india","imported-vs-indian-gym-equipment","gym-equipment-suppliers-india-compared","commercial-gym-setup-mumbai","commercial-gym-setup-pune","commercial-gym-setup-bangalore","commercial-gym-setup-hyderabad","commercial-gym-setup-delhi-ncr"];
-      if (guideSlugs.includes(page)) {
+      if (guideSlugs.includes(page) || (typeof GUIDES_DATA !== 'undefined' && GUIDES_DATA[page])) {
         app.innerHTML = renderGuide(page);
       } else {
         app.innerHTML = (views[page] || render404)();
@@ -3948,7 +3949,32 @@ ${footer()}
     }
 
     function renderTechnogymAlternative() {
-      return `
+    
+  // Add cross linking for alternatives
+  let crossLinkSection = '';
+  if (slug.startsWith('alternatives/') || slug.includes('-alternative-') || slug.includes('-vs-')) {
+    const alts = Object.keys(commercialPages).filter(k => (k.startsWith('alternatives/') || k.includes('-alternative-') || k.includes('-vs-')) && k !== slug).sort(() => 0.5 - Math.random()).slice(0, 3);
+    if (alts.length > 0) {
+      crossLinkSection = `
+        <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+          <h3 style="color:#fff;font-size:1.5rem;margin-bottom:1.5rem;">Compare Other Brands</h3>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:1.5rem;">
+            ${alts.map(a => `
+              <div style="background:rgba(255,255,255,0.03);padding:1.5rem;border-radius:6px;border:1px solid rgba(255,255,255,0.05)">
+                <h4 style="color:#fff;font-size:1.1rem;margin-bottom:1rem;line-height:1.4">${commercialPages[a] || 'Read Comparison'}</h4>
+                <button class="btn btn-ghost" onclick="go('${a}')" style="width:100%;text-align:center">Read Guide</button>
+              </div>
+            `).join('')}
+          </div>
+          <div style="margin-top:2rem;text-align:center">
+             <button class="btn btn-ghost" onclick="go('alternatives')">View All Brand Comparisons</button>
+          </div>
+        </div>
+      `;
+    }
+  }
+
+  return `
 <section class="phero" style="background:#09090b;padding:8rem 2rem 4rem;border-bottom:1px solid rgba(255,255,255,0.05)">
   <div class="sec-in">
     <div class="phero-label" style="color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:0.85rem">B2B Evaluation Guide</div>
@@ -4082,7 +4108,32 @@ ${footer()}
     }
 
     function renderLifeFitnessAlternative() {
-      return `
+    
+  // Add cross linking for alternatives
+  let crossLinkSection = '';
+  if (slug.startsWith('alternatives/') || slug.includes('-alternative-') || slug.includes('-vs-')) {
+    const alts = Object.keys(commercialPages).filter(k => (k.startsWith('alternatives/') || k.includes('-alternative-') || k.includes('-vs-')) && k !== slug).sort(() => 0.5 - Math.random()).slice(0, 3);
+    if (alts.length > 0) {
+      crossLinkSection = `
+        <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+          <h3 style="color:#fff;font-size:1.5rem;margin-bottom:1.5rem;">Compare Other Brands</h3>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:1.5rem;">
+            ${alts.map(a => `
+              <div style="background:rgba(255,255,255,0.03);padding:1.5rem;border-radius:6px;border:1px solid rgba(255,255,255,0.05)">
+                <h4 style="color:#fff;font-size:1.1rem;margin-bottom:1rem;line-height:1.4">${commercialPages[a] || 'Read Comparison'}</h4>
+                <button class="btn btn-ghost" onclick="go('${a}')" style="width:100%;text-align:center">Read Guide</button>
+              </div>
+            `).join('')}
+          </div>
+          <div style="margin-top:2rem;text-align:center">
+             <button class="btn btn-ghost" onclick="go('alternatives')">View All Brand Comparisons</button>
+          </div>
+        </div>
+      `;
+    }
+  }
+
+  return `
 <section class="phero" style="background:#09090b;padding:8rem 2rem 4rem;border-bottom:1px solid rgba(255,255,255,0.05)">
   <div class="sec-in">
     <div class="phero-label" style="color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:0.85rem">Commercial Gym Sourcing</div>
@@ -4207,7 +4258,32 @@ ${footer()}
     }
 
     function renderSechristAlternative() {
-      return `
+    
+  // Add cross linking for alternatives
+  let crossLinkSection = '';
+  if (slug.startsWith('alternatives/') || slug.includes('-alternative-') || slug.includes('-vs-')) {
+    const alts = Object.keys(commercialPages).filter(k => (k.startsWith('alternatives/') || k.includes('-alternative-') || k.includes('-vs-')) && k !== slug).sort(() => 0.5 - Math.random()).slice(0, 3);
+    if (alts.length > 0) {
+      crossLinkSection = `
+        <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+          <h3 style="color:#fff;font-size:1.5rem;margin-bottom:1.5rem;">Compare Other Brands</h3>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:1.5rem;">
+            ${alts.map(a => `
+              <div style="background:rgba(255,255,255,0.03);padding:1.5rem;border-radius:6px;border:1px solid rgba(255,255,255,0.05)">
+                <h4 style="color:#fff;font-size:1.1rem;margin-bottom:1rem;line-height:1.4">${commercialPages[a] || 'Read Comparison'}</h4>
+                <button class="btn btn-ghost" onclick="go('${a}')" style="width:100%;text-align:center">Read Guide</button>
+              </div>
+            `).join('')}
+          </div>
+          <div style="margin-top:2rem;text-align:center">
+             <button class="btn btn-ghost" onclick="go('alternatives')">View All Brand Comparisons</button>
+          </div>
+        </div>
+      `;
+    }
+  }
+
+  return `
 <section class="phero" style="background:#09090b;padding:8rem 2rem 4rem;border-bottom:1px solid rgba(255,255,255,0.05)">
   <div class="sec-in">
     <div class="phero-label" style="color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:0.85rem">Clinical Wellness Technology</div>
@@ -4332,7 +4408,32 @@ ${footer()}
     }
 
     function renderPrecorAlternative() {
-      return `
+    
+  // Add cross linking for alternatives
+  let crossLinkSection = '';
+  if (slug.startsWith('alternatives/') || slug.includes('-alternative-') || slug.includes('-vs-')) {
+    const alts = Object.keys(commercialPages).filter(k => (k.startsWith('alternatives/') || k.includes('-alternative-') || k.includes('-vs-')) && k !== slug).sort(() => 0.5 - Math.random()).slice(0, 3);
+    if (alts.length > 0) {
+      crossLinkSection = `
+        <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+          <h3 style="color:#fff;font-size:1.5rem;margin-bottom:1.5rem;">Compare Other Brands</h3>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:1.5rem;">
+            ${alts.map(a => `
+              <div style="background:rgba(255,255,255,0.03);padding:1.5rem;border-radius:6px;border:1px solid rgba(255,255,255,0.05)">
+                <h4 style="color:#fff;font-size:1.1rem;margin-bottom:1rem;line-height:1.4">${commercialPages[a] || 'Read Comparison'}</h4>
+                <button class="btn btn-ghost" onclick="go('${a}')" style="width:100%;text-align:center">Read Guide</button>
+              </div>
+            `).join('')}
+          </div>
+          <div style="margin-top:2rem;text-align:center">
+             <button class="btn btn-ghost" onclick="go('alternatives')">View All Brand Comparisons</button>
+          </div>
+        </div>
+      `;
+    }
+  }
+
+  return `
 <section class="phero" style="background:#09090b;padding:8rem 2rem 4rem;border-bottom:1px solid rgba(255,255,255,0.05)">
   <div class="sec-in">
     <div class="phero-label" style="color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:0.85rem">B2B Evaluation Guide</div>
@@ -4456,7 +4557,32 @@ ${footer()}
     }
 
     function renderMecotecAlternative() {
-      return `
+    
+  // Add cross linking for alternatives
+  let crossLinkSection = '';
+  if (slug.startsWith('alternatives/') || slug.includes('-alternative-') || slug.includes('-vs-')) {
+    const alts = Object.keys(commercialPages).filter(k => (k.startsWith('alternatives/') || k.includes('-alternative-') || k.includes('-vs-')) && k !== slug).sort(() => 0.5 - Math.random()).slice(0, 3);
+    if (alts.length > 0) {
+      crossLinkSection = `
+        <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+          <h3 style="color:#fff;font-size:1.5rem;margin-bottom:1.5rem;">Compare Other Brands</h3>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:1.5rem;">
+            ${alts.map(a => `
+              <div style="background:rgba(255,255,255,0.03);padding:1.5rem;border-radius:6px;border:1px solid rgba(255,255,255,0.05)">
+                <h4 style="color:#fff;font-size:1.1rem;margin-bottom:1rem;line-height:1.4">${commercialPages[a] || 'Read Comparison'}</h4>
+                <button class="btn btn-ghost" onclick="go('${a}')" style="width:100%;text-align:center">Read Guide</button>
+              </div>
+            `).join('')}
+          </div>
+          <div style="margin-top:2rem;text-align:center">
+             <button class="btn btn-ghost" onclick="go('alternatives')">View All Brand Comparisons</button>
+          </div>
+        </div>
+      `;
+    }
+  }
+
+  return `
 <section class="phero" style="background:#09090b;padding:8rem 2rem 4rem;border-bottom:1px solid rgba(255,255,255,0.05)">
   <div class="sec-in">
     <div class="phero-label" style="color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:0.85rem">Clinical Wellness Technology</div>
@@ -4580,7 +4706,32 @@ ${footer()}
     }
 
     function renderUsiCoscoAlternative() {
-      return `
+    
+  // Add cross linking for alternatives
+  let crossLinkSection = '';
+  if (slug.startsWith('alternatives/') || slug.includes('-alternative-') || slug.includes('-vs-')) {
+    const alts = Object.keys(commercialPages).filter(k => (k.startsWith('alternatives/') || k.includes('-alternative-') || k.includes('-vs-')) && k !== slug).sort(() => 0.5 - Math.random()).slice(0, 3);
+    if (alts.length > 0) {
+      crossLinkSection = `
+        <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+          <h3 style="color:#fff;font-size:1.5rem;margin-bottom:1.5rem;">Compare Other Brands</h3>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:1.5rem;">
+            ${alts.map(a => `
+              <div style="background:rgba(255,255,255,0.03);padding:1.5rem;border-radius:6px;border:1px solid rgba(255,255,255,0.05)">
+                <h4 style="color:#fff;font-size:1.1rem;margin-bottom:1rem;line-height:1.4">${commercialPages[a] || 'Read Comparison'}</h4>
+                <button class="btn btn-ghost" onclick="go('${a}')" style="width:100%;text-align:center">Read Guide</button>
+              </div>
+            `).join('')}
+          </div>
+          <div style="margin-top:2rem;text-align:center">
+             <button class="btn btn-ghost" onclick="go('alternatives')">View All Brand Comparisons</button>
+          </div>
+        </div>
+      `;
+    }
+  }
+
+  return `
 <section class="phero" style="background:#09090b;padding:8rem 2rem 4rem;border-bottom:1px solid rgba(255,255,255,0.05)">
   <div class="sec-in">
     <div class="phero-label" style="color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:0.85rem">Combat Sports Sourcing</div>
@@ -5076,6 +5227,31 @@ function renderGuide(slug) {
     });
   });
 
+
+  // Add cross linking for alternatives
+  let crossLinkSection = '';
+  if (slug.startsWith('alternatives/') || slug.includes('-alternative-') || slug.includes('-vs-')) {
+    const alts = Object.keys(commercialPages).filter(k => (k.startsWith('alternatives/') || k.includes('-alternative-') || k.includes('-vs-')) && k !== slug).sort(() => 0.5 - Math.random()).slice(0, 3);
+    if (alts.length > 0) {
+      crossLinkSection = `
+        <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+          <h3 style="color:#fff;font-size:1.5rem;margin-bottom:1.5rem;">Compare Other Brands</h3>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:1.5rem;">
+            ${alts.map(a => `
+              <div style="background:rgba(255,255,255,0.03);padding:1.5rem;border-radius:6px;border:1px solid rgba(255,255,255,0.05)">
+                <h4 style="color:#fff;font-size:1.1rem;margin-bottom:1rem;line-height:1.4">${commercialPages[a] || 'Read Comparison'}</h4>
+                <button class="btn btn-ghost" onclick="go('${a}')" style="width:100%;text-align:center">Read Guide</button>
+              </div>
+            `).join('')}
+          </div>
+          <div style="margin-top:2rem;text-align:center">
+             <button class="btn btn-ghost" onclick="go('alternatives')">View All Brand Comparisons</button>
+          </div>
+        </div>
+      `;
+    }
+  }
+
   return `
 <section class="phero" style="background:#09090b;padding:8rem 2rem 4rem;border-bottom:1px solid rgba(255,255,255,0.05)">
   <div class="sec-in">
@@ -5144,6 +5320,63 @@ function renderGuide(slug) {
   </div>
 </section>
 
+${footer()}
+  `;
+}
+
+
+function renderAlternativesHub() {
+  const alts = Object.keys(commercialPages).filter(k => k.startsWith('alternatives/') || k.includes('-alternative-') || k.includes('-vs-'));
+  
+  let gridHtml = '<div class="grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2rem;margin-top:2rem;">';
+  for (const slug of alts) {
+    gridHtml += `
+      <div class="card" style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);padding:1.5rem;border-radius:8px;">
+        <h3 style="color:#fff;font-size:1.2rem;margin-bottom:1rem;line-height:1.4">${commercialPages[slug]}</h3>
+        <button class="btn btn-ghost" onclick="go('${slug}')" style="width:100%;text-align:center">Read Comparison</button>
+      </div>
+    `;
+  }
+  gridHtml += '</div>';
+
+
+  // Add cross linking for alternatives
+  let crossLinkSection = '';
+  if (slug.startsWith('alternatives/') || slug.includes('-alternative-') || slug.includes('-vs-')) {
+    const alts = Object.keys(commercialPages).filter(k => (k.startsWith('alternatives/') || k.includes('-alternative-') || k.includes('-vs-')) && k !== slug).sort(() => 0.5 - Math.random()).slice(0, 3);
+    if (alts.length > 0) {
+      crossLinkSection = `
+        <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+          <h3 style="color:#fff;font-size:1.5rem;margin-bottom:1.5rem;">Compare Other Brands</h3>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:1.5rem;">
+            ${alts.map(a => `
+              <div style="background:rgba(255,255,255,0.03);padding:1.5rem;border-radius:6px;border:1px solid rgba(255,255,255,0.05)">
+                <h4 style="color:#fff;font-size:1.1rem;margin-bottom:1rem;line-height:1.4">${commercialPages[a] || 'Read Comparison'}</h4>
+                <button class="btn btn-ghost" onclick="go('${a}')" style="width:100%;text-align:center">Read Guide</button>
+              </div>
+            `).join('')}
+          </div>
+          <div style="margin-top:2rem;text-align:center">
+             <button class="btn btn-ghost" onclick="go('alternatives')">View All Brand Comparisons</button>
+          </div>
+        </div>
+      `;
+    }
+  }
+
+  return `
+<section class="phero" style="background:#09090b;padding:8rem 2rem 4rem;border-bottom:1px solid rgba(255,255,255,0.05)">
+  <div class="sec-in" style="max-width:1000px;margin:0 auto;text-align:center">
+    <div class="phero-label" style="color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:0.85rem">Brand Comparisons</div>
+    <h1 style="color:#fff;font-size:clamp(2.2rem,5vw,3.5rem);margin:0.5rem 0 1.5rem;line-height:1.15;font-weight:800">Compare Commercial Gym Equipment Brands</h1>
+    <p class="phero-sub" style="color:rgba(255,255,255,0.7);max-width:800px;margin:0 auto">Comprehensive, factual CapEx and sourcing comparisons between major global fitness brands and TechFit's direct-supply commercial infrastructure.</p>
+  </div>
+</section>
+<section class="sec" style="background:#000;padding:4rem 2rem">
+  <div class="sec-in" style="max-width:1200px;margin:0 auto">
+    ${gridHtml}
+  </div>
+</section>
 ${footer()}
   `;
 }
