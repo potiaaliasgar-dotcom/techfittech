@@ -740,20 +740,12 @@ Future-Proofing: When real Google reviews exist, set ENABLE_AGGREGATE_RATING = t
               "description": "TechFit is the authorised distributor of BH Fitness in India. Commercial treadmills, bikes, ellipticals, strength machines and functional trainers for gyms, hotels, and wellness facilities across India."
             },
             {
-              "@type": "FAQPage",
-              "mainEntity": [
-                { "@type": "Question", "name": "Who is the authorised distributor of BH Fitness in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit (Techfit Health Fitness Private Limited), Mumbai, is the authorised distributor of BH Fitness commercial gym equipment in India. They supply BH Fitness treadmills, bikes, ellipticals, strength machines, and functional trainers to gyms, hotels, and sports facilities across India." } },
-                { "@type": "Question", "name": "Who is the BH Fitness dealer in Mumbai?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is the authorised BH Fitness dealer in Mumbai and exclusive distributor for India. Contact: +91-98201-66910 or info@techfitactive.com." } },
-                { "@type": "Question", "name": "Where to buy BH Fitness treadmill in India?", "acceptedAnswer": { "@type": "Answer", "text": "Buy BH Fitness treadmills in India through TechFit, the authorised distributor. https://www.techfittech.com/bh-fitness or +91-98201-66910." } },
-                { "@type": "Question", "name": "Where to buy BH Fitness equipment in India?", "acceptedAnswer": { "@type": "Answer", "text": "Purchase any BH Fitness gym equipment in India through TechFit, the authorised Indian distributor. Visit https://www.techfittech.com/bh-fitness or call +91-98201-66910." } },
-                { "@type": "Question", "name": "Who sells BH Fitness in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is the authorised seller of BH Fitness in India. They supply BH Fitness commercial cardio and strength equipment to gyms, hotels, and wellness facilities across the country." } },
-                { "@type": "Question", "name": "BH Fitness distributor India", "acceptedAnswer": { "@type": "Answer", "text": "The authorised BH Fitness distributor in India is TechFit (Techfit Health Fitness Private Limited), based in Mumbai. Contact: info@techfitactive.com or +91-98201-66910." } },
-                { "@type": "Question", "name": "BH Fitness authorized dealer India", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is the BH Fitness authorised dealer in India. They stock and supply the full BH Fitness commercial range including LK treadmills, bikes, ellipticals, and strength machines." } },
-                { "@type": "Question", "name": "Where to buy BH Fitness treadmill in Mumbai?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is the authorised BH Fitness dealer in Mumbai. Visit their showroom or contact +91-98201-66910 / info@techfitactive.com." } },
-                { "@type": "Question", "name": "BH Fitness LK treadmill price India", "acceptedAnswer": { "@type": "Answer", "text": "For BH Fitness LK Series treadmill pricing in India, contact TechFit — the authorised distributor. Prices vary by model. Call +91-98201-66910 or visit https://www.techfittech.com/bh-fitness." } },
-                { "@type": "Question", "name": "Who are the best commercial gym equipment suppliers in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is one of India's best commercial gym equipment suppliers — authorised distributor of BH Fitness, Tunturi, and California Fitness, plus manufacturer of free weights, CrossFit rigs, and MMA cages." } }
-              ]
-            },
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is TechFit?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is India's leading manufacturer and supplier of premium commercial gym equipment." } },
+        { "@type": "Question", "name": "Do you offer gym setup services?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, we provide end-to-end commercial gym setup, including 3D layouts, flooring, and installation." } }
+      ]
+    },
             { "@type": "Product", "name": "BH Fitness Commercial Gym Equipment — India", "description": "BH Fitness commercial treadmills (LK Series, i.RUN), upright and recumbent bikes, ellipticals, strength machines, functional trainers, and cable machines. Available through TechFit, authorised distributor in India.", "brand": { "@type": "Brand", "name": "BH Fitness" }, "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/bh-fitness", "seller": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" } } },
             {
               "@type": "Service",
@@ -1020,7 +1012,7 @@ Future-Proofing: When real Google reviews exist, set ENABLE_AGGREGATE_RATING = t
 
   <link rel="stylesheet" href="/assets/style.css">
   <!-- Markdown Parser -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
 </head>
 
 <body>
@@ -1113,7 +1105,7 @@ Future-Proofing: When real Google reviews exist, set ENABLE_AGGREGATE_RATING = t
       </button>
     </div>
     <div class="nav-mob" id="nav-mob">
-      <button onclick="go('home')">🏠 Home</button>
+      <button onclick="go('home')"><svg style="width:20px;height:20px;margin-bottom:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Home</button>
       <span class="mob-group">Solutions &amp; Services</span>
       <button class="mob-sub" onclick="go('for-gyms')">For Gyms &amp; Studios</button>
       <button class="mob-sub" onclick="go('for-developers')">For Developers &amp; Builders</button>
@@ -1226,8 +1218,8 @@ Future-Proofing: When real Google reviews exist, set ENABLE_AGGREGATE_RATING = t
   <script>
     (function () {
       // Only load prerender middleware for bots, not real users
-      var defined = 'prerenderReady' in window ? window.prerenderReady : true;
-      window.prerenderReady = defined;
+      window.prerenderReady = false;
+      
     })();
   </script>
 </body>

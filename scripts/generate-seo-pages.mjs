@@ -3430,7 +3430,7 @@ function generatePage(html, route, seo) {
     const g = GUIDES_DATA[route];
     noscriptBlock = `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
-      <h2>${escapeHtml(g.h1)}</h2>
+      <h1>${escapeHtml(g.h1)}</h1>
       <p><em>Published on ${g.publishedDate} by ${g.author} | TechFit Turnkey Sourcing India</em></p>
       ${g.htmlContent}
       
