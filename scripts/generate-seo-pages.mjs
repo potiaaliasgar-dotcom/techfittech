@@ -90,20 +90,6 @@ const SEO_MAP = {
     lastmod: '2026-05-20',
     img: OG_CARDIO
   },
-  'bendis-pilates': {
-    title: 'Bendis Pilates India | Premium Hand-Crafted Pilates Equipment',
-    desc: 'TechFit is the authorised distributor of Bendis Pilates in India. Hand-crafted Turkish reformers, cadillacs, chairs, barrels and studio accessories since 2009.',
-    h1: 'Bendis Pilates Premium Studio Equipment India',
-    lastmod: '2026-06-02',
-    img: DEFAULT_OG_IMG
-  },
-  'jordan-fitness': {
-    title: 'Jordan Fitness India | Premium Gym Accessories & Functional Training',
-    desc: 'TechFit is the authorised distributor of Jordan Fitness in India. Premium commercial dumbbells, kettlebells, weight plates, sandbags, slam balls, and group fitness gear.',
-    h1: 'Jordan Fitness Premium Gym Accessories India',
-    lastmod: '2026-06-04',
-    img: DEFAULT_OG_IMG
-  },
   'techfit': {
     title: 'TechFit Active | In-House Gym & Sports Equipment Manufacturer India',
     desc: "TechFit Active — India's in-house manufacturer of MMA cages, boxing rings, CrossFit rigs, free weights, padel courts and aqua fitness equipment. Factory in Mumbai.",
@@ -3230,7 +3216,7 @@ function enrichSchema(route, schema) {
   const speakableRoutes = [
     'mma-cages', 'crossfit-rigs', 'free-weights', 'padel-pickleball', 'aqua', 
     'gym-flooring', 'flooring', 'wellness-solutions', 'alteon', 'bh-fitness', 
-    'tunturi', 'california-fitness', 'bendis-pilates', 'jordan-fitness', 'techfit'
+    'tunturi', 'california-fitness', 'techfit'
   ];
   if (speakableRoutes.includes(route)) {
     const webPage = findEntity('WebPage');
@@ -3247,8 +3233,6 @@ function enrichSchema(route, schema) {
     'bh-fitness': { brand: 'BH Fitness', name: 'BH Fitness B2B Gym Equipment' },
     'tunturi': { brand: 'Tunturi', name: 'Tunturi Nordic Fitness Gear' },
     'california-fitness': { brand: 'California Fitness', name: 'California Fitness Strength Equipment' },
-    'bendis-pilates': { brand: 'Bendis Pilates', name: 'Bendis Pilates Premium Studio Equipment' },
-    'jordan-fitness': { brand: 'Jordan Fitness', name: 'Jordan Fitness Premium Gym Accessories' },
     'alteon': {
       staticProds: [
         { name: 'Alteon Cryoblast Pro Cryotherapy Chamber', desc: 'Clinical electric whole-body cryo chamber running on pure dry air (nitrogen-free) for cellular recovery.' },
