@@ -553,7 +553,21 @@ async function submitEmbeddedQuote(projectType) {
         'alternatives/sechrist-hyperbaric-india': 'Clinical Hyperbaric Chambers (Sechrist India Alternative)',
         'alternatives/precor-india': 'B2B Cardio & Strength (Precor India Alternative)',
         'alternatives/mecotec-cryotherapy-india': 'Whole Body Cryotherapy (Mecotec India Alternative)',
-        'alternatives/usi-cosco-techfit-cages': 'Custom MMA Cages & Fight Rings (USI/Cosco Alternative)',\n        'alternatives/cybex-india': 'B2B Gym Equipment (Cybex Alternative)',\n        'alternatives/hammer-strength-india': 'B2B Gym Equipment (Hammer Strength Alternative)',\n        'alternatives/nautilus-india': 'B2B Gym Equipment (Nautilus Alternative)',\n        'alternatives/star-trac-india': 'B2B Gym Equipment (Star Trac Alternative)',\n        'alternatives/body-solid-india': 'B2B Gym Equipment (Body-Solid Alternative)',\n        'alternatives/hoist-fitness-india': 'B2B Gym Equipment (Hoist Fitness Alternative)',\n        'alternatives/freemotion-india': 'B2B Gym Equipment (FreeMotion Alternative)',\n        'alternatives/true-fitness-india': 'B2B Gym Equipment (True Fitness Alternative)',\n        'alternatives/american-fitness-india': 'B2B Gym Equipment (American Fitness Alternative)',\n        'alternatives/atlantis-strength-india': 'B2B Gym Equipment (Atlantis Strength Alternative)',\n        'alternatives/fitline-india': 'B2B Gym Equipment (Fitline Alternative)',\n        'alternatives/matrix-fitness-india': 'B2B Gym Equipment (Matrix Fitness Alternative)',\n        'alternatives/jerai-fitness-india': 'B2B Gym Equipment (Jerai Fitness Alternative)',\n        'alternatives/being-strong-india': 'B2B Gym Equipment (Being Strong Alternative)'
+        'alternatives/usi-cosco-techfit-cages': 'Custom MMA Cages & Fight Rings (USI/Cosco Alternative)',
+        'alternatives/cybex-india': 'B2B Gym Equipment (Cybex Alternative)',
+        'alternatives/hammer-strength-india': 'B2B Gym Equipment (Hammer Strength Alternative)',
+        'alternatives/nautilus-india': 'B2B Gym Equipment (Nautilus Alternative)',
+        'alternatives/star-trac-india': 'B2B Gym Equipment (Star Trac Alternative)',
+        'alternatives/body-solid-india': 'B2B Gym Equipment (Body-Solid Alternative)',
+        'alternatives/hoist-fitness-india': 'B2B Gym Equipment (Hoist Fitness Alternative)',
+        'alternatives/freemotion-india': 'B2B Gym Equipment (FreeMotion Alternative)',
+        'alternatives/true-fitness-india': 'B2B Gym Equipment (True Fitness Alternative)',
+        'alternatives/american-fitness-india': 'B2B Gym Equipment (American Fitness Alternative)',
+        'alternatives/atlantis-strength-india': 'B2B Gym Equipment (Atlantis Strength Alternative)',
+        'alternatives/fitline-india': 'B2B Gym Equipment (Fitline Alternative)',
+        'alternatives/matrix-fitness-india': 'B2B Gym Equipment (Matrix Fitness Alternative)',
+        'alternatives/jerai-fitness-india': 'B2B Gym Equipment (Jerai Fitness Alternative)',
+        'alternatives/being-strong-india': 'B2B Gym Equipment (Being Strong Alternative)'
       ,
         'commercial-gym-setup-cost-india': 'Commercial Gym Setup Cost in India (2026 Guide)',
         'how-to-set-up-a-commercial-gym': 'How to Set Up a Commercial Gym in India: Step-by-Step',
@@ -4689,7 +4703,8 @@ ${footer()}
 `;
     }
 
-    const GUIDES_DATA = {\n  'alternatives/cybex-india': {
+    const GUIDES_DATA = {
+  'alternatives/cybex-india': {
     badge: 'B2B Sourcing Guide',
     h1: 'The Best Alternative to Cybex in India: Why Commercial Gyms Choose California Fitness',
     desc: 'Comparing traditional distribution with TechFit\'s direct sourcing for commercial gyms in India. Analyze pricing, biomechanics, lead times, and after-sales service.',
