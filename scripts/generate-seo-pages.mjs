@@ -2626,7 +2626,7 @@ const NOSCRIPT_FALLBACKS = {
         <li><strong>Custom Combat &amp; Rig Fabrication:</strong> Heavy industrial manufacturing of competition MMA octagons, floor cages, dynamic boxing rings, CrossFit functional rigs, and steel free weights.</li>
         <li><strong>Professional Gym Flooring &amp; Sports Infrastructure:</strong> Premium sound-insulating rubber flooring rolls, interlocking tiles, custom turf tracks, and complete ITF-compliant padel and pickleball court builds.</li>
       </ul>
-      <p>Backed by over 300 successful turnkeys across India, TechFit represents the premier single-contract partner for premium commercial amenities, coordinating the entire planning, delivery, and pan-India AMC after-sales service from our Mumbai center.</p>
+      <p>Backed by over 800 successful turnkeys across India, TechFit represents the premier single-contract partner for premium commercial amenities, coordinating the entire planning, delivery, and pan-India AMC after-sales service from our Mumbai center.</p>
       <p><strong>Contact TechFit Gym Services:</strong><br>
         Email: info@techfitactive.com<br>
         Phone: +91 98201 66910<br>
@@ -3449,7 +3449,7 @@ function generatePage(html, route, seo) {
     noscriptBlock = NOSCRIPT_FALLBACKS[route] || `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <h2>TechFit | Gym Setup, Equipment &amp; Wellness Solutions Mumbai</h2>
-      <p>India's gym, wellness &amp; sports infrastructure partner with 300+ gyms delivered. Distributor for BH Fitness,
+      <p>India's gym, wellness &amp; sports infrastructure partner with 800+ installations delivered. Distributor for BH Fitness,
         Tunturi, California, and Alteon Wellness. Based in Mumbai.</p>
       <p><strong>Services:</strong> Gym design &amp; layout, commercial equipment supply, custom fabrication of
         combat-sports equipment and CrossFit rigs, padel and pickleball courts, wellness and recovery technology from

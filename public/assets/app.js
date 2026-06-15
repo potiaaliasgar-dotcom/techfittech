@@ -1586,7 +1586,7 @@ ${footer()}
   <div class="hero-glow"></div>
   <div class="hero-in">
     <h1 id="main-title">GYM SETUP, EQUIPMENT<br><em>&amp; WELLNESS SOLUTIONS</em><br>MUMBAI</h1>
-    <p class="hero-sub">India's gym, wellness &amp; sports infrastructure partner. 300+ gyms delivered. Distributor for BH Fitness, Tunturi, California, Alteon Wellness.</p>
+    <p class="hero-sub">India's gym, wellness &amp; sports infrastructure partner. 800+ installations delivered. Distributor for BH Fitness, Tunturi, California, Alteon Wellness.</p>
     <div class="hero-btns">
       <button class="btn-red" onclick="go('contact')">Get a Free Gym Consultation</button>
       <button class="btn-ghost" onclick="go('blogs')">Read Case Studies</button>
@@ -1596,7 +1596,7 @@ ${footer()}
 
 <div class="ticker-wrap">
   <div class="ticker-in">
-    ${['GYM DESIGN & LAYOUT', 'EQUIPMENT SUPPLY', 'GYM & SPORTS FLOORING', 'CUSTOM FABRICATION', 'WELLNESS & RECOVERY', 'INSTALLATION & AFTER-SALES', '300+ GYMS COMPLETED', 'BH FITNESS · TUNTURI · CALIFORNIA FITNESS · ALTEON'].map(t => `<span class="ticker-item">${t}</span>`).join('').repeat(2)}
+    ${['GYM DESIGN & LAYOUT', 'EQUIPMENT SUPPLY', 'GYM & SPORTS FLOORING', 'CUSTOM FABRICATION', 'WELLNESS & RECOVERY', 'INSTALLATION & AFTER-SALES', '800+ INSTALLATIONS COMPLETED', 'BH FITNESS · TUNTURI · CALIFORNIA FITNESS · ALTEON'].map(t => `<span class="ticker-item">${t}</span>`).join('').repeat(2)}
   </div>
 </div>
 
@@ -1969,7 +1969,7 @@ ${footer()}
         </div>
         <br>
         <div class="feat-grid">
-          <div class="feat-card"><h4>300+ Gyms Completed</h4><p>Proven track record across commercial, residential, institutional, and hospitality sectors.</p></div>
+          <div class="feat-card"><h4>800+ Installations Completed</h4><p>Proven track record across commercial, residential, institutional, and hospitality sectors.</p></div>
           <div class="feat-card"><h4>Indian + International Brands</h4><p>BH Fitness, Tunturi, and California Fitness alongside our own custom fabricated range.</p></div>
           <div class="feat-card"><h4>Custom Configured for Your Space</h4><p>No off-the-shelf packages. Every solution is tailored to your floor plan, user profile, and budget.</p></div>
         </div>
@@ -2880,7 +2880,7 @@ ${footer()}`;
   <div class="sec-in">
     <div class="phero-label">Our Portfolio</div>
     <h2>COMPLETED PROJECTS</h2>
-    <p class="phero-sub">300+ gym setups and sports facilities delivered across India. Each project is custom-configured for the client's space, brand, and budget.</p>
+    <p class="phero-sub">800+ installations and sports facilities delivered across India. Each project is custom-configured for the client's space, brand, and budget.</p>
   </div>
 </div>
 
@@ -3041,7 +3041,7 @@ ${footer()}`;
       <h2 class="sec-title white">A WELLNESS STACK BUILT IN INDIA, FOR INDIA</h2>
     </div>
     <div class="feat-grid" style="margin-top:2.5rem">
-      <div class="feat-card"><h4>300+ Gyms Delivered</h4><p>Proven track record across commercial gyms, hotels and residential projects &mdash; now extending into wellness.</p></div>
+      <div class="feat-card"><h4>800+ Installations Delivered</h4><p>Proven track record across commercial gyms, hotels and residential projects &mdash; now extending into wellness.</p></div>
       <div class="feat-card"><h4>One Invoice, One PM</h4><p>Design through after-sales under one roof &mdash; a single accountable vendor from brief to handover.</p></div>
       <div class="feat-card"><h4>11.3% Annual Growth</h4><p>India is the 2nd fastest-growing wellness market globally, per Global Wellness Institute. We help you capture that tailwind.</p></div>
     </div>
@@ -3084,7 +3084,7 @@ ${footer()}`;
             <p style="font-size:0.85rem;font-weight:700;color:var(--z600);text-transform:uppercase;letter-spacing:0.1em;margin:0">Year Founded</p>
           </div>
           <div style="background:var(--z50);border:1px solid var(--z200);padding:2rem 1rem;border-radius:1rem;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,0.03)">
-            <h4 style="font-size:2.5rem;font-weight:900;color:var(--red);line-height:1;margin-bottom:0.5rem">300+</h4>
+            <h4 style="font-size:2.5rem;font-weight:900;color:var(--red);line-height:1;margin-bottom:0.5rem">800+</h4>
             <p style="font-size:0.85rem;font-weight:700;color:var(--z600);text-transform:uppercase;letter-spacing:0.1em;margin:0">Gyms Completed</p>
           </div>
           <div style="background:var(--z50);border:1px solid var(--z200);padding:2rem 1rem;border-radius:1rem;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,0.03)">
@@ -3132,7 +3132,7 @@ ${footer()}`;
         </div>
       </div>
     </div>
-    <p style="text-align:center;margin-top:2.5rem;font-size:1rem;color:var(--z600);line-height:1.8;max-width:760px;margin-left:auto;margin-right:auto;font-style:italic">Together, Ali Asgar and Pranav have built TechFit around a simple idea: the Indian market deserves a single, accountable partner for gym, wellness and sports infrastructure &mdash; one that manufactures, distributes, designs, installs, and services. From a Mumbai workshop to 300+ facilities delivered across India, every project ships under one invoice, one project manager, and one phone number.</p>
+    <p style="text-align:center;margin-top:2.5rem;font-size:1rem;color:var(--z600);line-height:1.8;max-width:760px;margin-left:auto;margin-right:auto;font-style:italic">Together, Ali Asgar and Pranav have built TechFit around a simple idea: the Indian market deserves a single, accountable partner for gym, wellness and sports infrastructure &mdash; one that manufactures, distributes, designs, installs, and services. From a Mumbai workshop to 800+ installations delivered across India, every project ships under one invoice, one project manager, and one phone number.</p>
   </div>
 </section>
 
