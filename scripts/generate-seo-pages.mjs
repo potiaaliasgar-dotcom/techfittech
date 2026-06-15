@@ -428,7 +428,317 @@ const SEO_MAP = {
     h1: "Commercial Gym Setup in Delhi NCR: Turnkey Gym Sourcing & Alteon Recovery",
     lastmod: "2026-05-30",
     img: OG_RIGS
+  },
+  'commercial-gym-setup-chennai': {
+    title: 'Commercial Gym Setup in Chennai | Equipment Supplier',
+    desc: 'Turnkey commercial gym setup services in Chennai. TechFit provides 3D layout design, premium BH Fitness equipment supply, and local pan-India AMC support.',
+    h1: 'Complete Commercial Gym Setup & Equipment Supplier in Chennai',
+    lastmod: '2026-06-15',
+    img: OG_WEIGHTS
+  },
+  'commercial-gym-setup-kolkata': {
+    title: 'Commercial Gym Setup in Kolkata | Equipment Supplier',
+    desc: 'Turnkey commercial gym setup services in Kolkata. TechFit provides 3D layout design, premium BH Fitness equipment supply, and local pan-India AMC support.',
+    h1: 'Complete Commercial Gym Setup & Equipment Supplier in Kolkata',
+    lastmod: '2026-06-15',
+    img: OG_WEIGHTS
+  },
+  'commercial-gym-setup-ahmedabad': {
+    title: 'Commercial Gym Setup in Ahmedabad | Equipment Supplier',
+    desc: 'Turnkey commercial gym setup services in Ahmedabad. TechFit provides 3D layout design, premium BH Fitness equipment supply, and local pan-India AMC support.',
+    h1: 'Complete Commercial Gym Setup & Equipment Supplier in Ahmedabad',
+    lastmod: '2026-06-15',
+    img: OG_WEIGHTS
+  },
+  'commercial-gym-setup-jaipur': {
+    title: 'Commercial Gym Setup in Jaipur | Equipment Supplier',
+    desc: 'Turnkey commercial gym setup services in Jaipur. TechFit provides 3D layout design, premium BH Fitness equipment supply, and local pan-India AMC support.',
+    h1: 'Complete Commercial Gym Setup & Equipment Supplier in Jaipur',
+    lastmod: '2026-06-15',
+    img: OG_WEIGHTS
+  },
+  'commercial-gym-setup-goa': {
+    title: 'Commercial Gym Setup in Goa | Equipment Supplier',
+    desc: 'Turnkey commercial gym setup services in Goa. TechFit provides 3D layout design, premium BH Fitness equipment supply, and local pan-India AMC support.',
+    h1: 'Complete Commercial Gym Setup & Equipment Supplier in Goa',
+    lastmod: '2026-06-15',
+    img: OG_WEIGHTS
+  },
+  'commercial-gym-setup-chandigarh': {
+    title: 'Commercial Gym Setup in Chandigarh | Equipment Supplier',
+    desc: 'Turnkey commercial gym setup services in Chandigarh. TechFit provides 3D layout design, premium BH Fitness equipment supply, and local pan-India AMC support.',
+    h1: 'Complete Commercial Gym Setup & Equipment Supplier in Chandigarh',
+    lastmod: '2026-06-15',
+    img: OG_WEIGHTS
+  },
+  'commercial-gym-setup-surat': {
+    title: 'Commercial Gym Setup in Surat | Equipment Supplier',
+    desc: 'Turnkey commercial gym setup services in Surat. TechFit provides 3D layout design, premium BH Fitness equipment supply, and local pan-India AMC support.',
+    h1: 'Complete Commercial Gym Setup & Equipment Supplier in Surat',
+    lastmod: '2026-06-15',
+    img: OG_WEIGHTS
+  },
+  'commercial-gym-setup-kochi': {
+    title: 'Commercial Gym Setup in Kochi | Equipment Supplier',
+    desc: 'Turnkey commercial gym setup services in Kochi. TechFit provides 3D layout design, premium BH Fitness equipment supply, and local pan-India AMC support.',
+    h1: 'Complete Commercial Gym Setup & Equipment Supplier in Kochi',
+    lastmod: '2026-06-15',
+    img: OG_WEIGHTS
+  },
+  'hotel-gym-setup-mumbai': {
+    title: 'Hotel Gym Setup & Equipment Supplier in Mumbai',
+    desc: 'Premium hotel and hospitality gym setup in Mumbai. We design space-efficient fitness centers with smart cardio and multi-stations to elevate guest wellness experiences.',
+    h1: 'Premium Hotel & Resort Gym Setup in Mumbai',
+    lastmod: '2026-06-15',
+    img: OG_CARDIO
+  },
+  'hotel-gym-setup-pune': {
+    title: 'Hotel Gym Setup & Equipment Supplier in Pune',
+    desc: 'Premium hotel and hospitality gym setup in Pune. We design space-efficient fitness centers with smart cardio and multi-stations to elevate guest wellness experiences.',
+    h1: 'Premium Hotel & Resort Gym Setup in Pune',
+    lastmod: '2026-06-15',
+    img: OG_CARDIO
+  },
+  'hotel-gym-setup-bangalore': {
+    title: 'Hotel Gym Setup & Equipment Supplier in Bangalore',
+    desc: 'Premium hotel and hospitality gym setup in Bangalore. We design space-efficient fitness centers with smart cardio and multi-stations to elevate guest wellness experiences.',
+    h1: 'Premium Hotel & Resort Gym Setup in Bangalore',
+    lastmod: '2026-06-15',
+    img: OG_CARDIO
+  },
+  'hotel-gym-setup-delhi-ncr': {
+    title: 'Hotel Gym Setup & Equipment Supplier in Delhi NCR',
+    desc: 'Premium hotel and hospitality gym setup in Delhi NCR. We design space-efficient fitness centers with smart cardio and multi-stations to elevate guest wellness experiences.',
+    h1: 'Premium Hotel & Resort Gym Setup in Delhi NCR',
+    lastmod: '2026-06-15',
+    img: OG_CARDIO
+  },
+  'hotel-gym-setup-hyderabad': {
+    title: 'Hotel Gym Setup & Equipment Supplier in Hyderabad',
+    desc: 'Premium hotel and hospitality gym setup in Hyderabad. We design space-efficient fitness centers with smart cardio and multi-stations to elevate guest wellness experiences.',
+    h1: 'Premium Hotel & Resort Gym Setup in Hyderabad',
+    lastmod: '2026-06-15',
+    img: OG_CARDIO
+  },
+  'society-gym-setup-mumbai': {
+    title: 'Society Gym Setup & Clubhouse Equipment in Mumbai',
+    desc: 'Turnkey clubhouse and society gym setup in Mumbai. Durable, safe, and cost-effective fitness equipment tailored for residential complexes and apartment towers.',
+    h1: 'Clubhouse & Society Gym Setup in Mumbai',
+    lastmod: '2026-06-15',
+    img: OG_WEIGHTS
+  },
+  'society-gym-setup-pune': {
+    title: 'Society Gym Setup & Clubhouse Equipment in Pune',
+    desc: 'Turnkey clubhouse and society gym setup in Pune. Durable, safe, and cost-effective fitness equipment tailored for residential complexes and apartment towers.',
+    h1: 'Clubhouse & Society Gym Setup in Pune',
+    lastmod: '2026-06-15',
+    img: OG_WEIGHTS
+  },
+  'society-gym-setup-bangalore': {
+    title: 'Society Gym Setup & Clubhouse Equipment in Bangalore',
+    desc: 'Turnkey clubhouse and society gym setup in Bangalore. Durable, safe, and cost-effective fitness equipment tailored for residential complexes and apartment towers.',
+    h1: 'Clubhouse & Society Gym Setup in Bangalore',
+    lastmod: '2026-06-15',
+    img: OG_WEIGHTS
+  },
+  'society-gym-setup-delhi-ncr': {
+    title: 'Society Gym Setup & Clubhouse Equipment in Delhi NCR',
+    desc: 'Turnkey clubhouse and society gym setup in Delhi NCR. Durable, safe, and cost-effective fitness equipment tailored for residential complexes and apartment towers.',
+    h1: 'Clubhouse & Society Gym Setup in Delhi NCR',
+    lastmod: '2026-06-15',
+    img: OG_WEIGHTS
+  },
+  'society-gym-setup-hyderabad': {
+    title: 'Society Gym Setup & Clubhouse Equipment in Hyderabad',
+    desc: 'Turnkey clubhouse and society gym setup in Hyderabad. Durable, safe, and cost-effective fitness equipment tailored for residential complexes and apartment towers.',
+    h1: 'Clubhouse & Society Gym Setup in Hyderabad',
+    lastmod: '2026-06-15',
+    img: OG_WEIGHTS
+  },
+  'corporate-gym-setup-mumbai': {
+    title: 'Corporate Gym Setup & Employee Wellness in Mumbai',
+    desc: 'Design and equip corporate gyms and employee wellness rooms in Mumbai. Boost productivity and employee retention with TechFit\'s corporate fitness setups.',
+    h1: 'Corporate Gym & Wellness Setup in Mumbai',
+    lastmod: '2026-06-15',
+    img: OG_CARDIO
+  },
+  'corporate-gym-setup-pune': {
+    title: 'Corporate Gym Setup & Employee Wellness in Pune',
+    desc: 'Design and equip corporate gyms and employee wellness rooms in Pune. Boost productivity and employee retention with TechFit\'s corporate fitness setups.',
+    h1: 'Corporate Gym & Wellness Setup in Pune',
+    lastmod: '2026-06-15',
+    img: OG_CARDIO
+  },
+  'corporate-gym-setup-bangalore': {
+    title: 'Corporate Gym Setup & Employee Wellness in Bangalore',
+    desc: 'Design and equip corporate gyms and employee wellness rooms in Bangalore. Boost productivity and employee retention with TechFit\'s corporate fitness setups.',
+    h1: 'Corporate Gym & Wellness Setup in Bangalore',
+    lastmod: '2026-06-15',
+    img: OG_CARDIO
+  },
+  'corporate-gym-setup-delhi-ncr': {
+    title: 'Corporate Gym Setup & Employee Wellness in Delhi NCR',
+    desc: 'Design and equip corporate gyms and employee wellness rooms in Delhi NCR. Boost productivity and employee retention with TechFit\'s corporate fitness setups.',
+    h1: 'Corporate Gym & Wellness Setup in Delhi NCR',
+    lastmod: '2026-06-15',
+    img: OG_CARDIO
+  },
+  'corporate-gym-setup-hyderabad': {
+    title: 'Corporate Gym Setup & Employee Wellness in Hyderabad',
+    desc: 'Design and equip corporate gyms and employee wellness rooms in Hyderabad. Boost productivity and employee retention with TechFit\'s corporate fitness setups.',
+    h1: 'Corporate Gym & Wellness Setup in Hyderabad',
+    lastmod: '2026-06-15',
+    img: OG_CARDIO
+  },
+  'matrix-fitness-alternative-india': {
+    title: 'Matrix Fitness Alternative India | BH Fitness vs Matrix Fitness',
+    desc: 'Comparing Matrix Fitness with BH Fitness for commercial gyms in India. Analyze pricing, biomechanics, motor reliability, and after-sales service.',
+    h1: 'The Best Alternative to Matrix Fitness in India: Why Commercial Gyms Choose BH Fitness',
+    lastmod: '2026-06-15',
+    img: OG_WEIGHTS
+  },
+  'cybex-alternative-india': {
+    title: 'Cybex Alternative India | California Fitness vs Cybex',
+    desc: 'Comparing Cybex with California Fitness for commercial gyms in India. Analyze pricing, biomechanics, motor reliability, and after-sales service.',
+    h1: 'The Best Alternative to Cybex in India: Why Commercial Gyms Choose California Fitness',
+    lastmod: '2026-06-15',
+    img: OG_WEIGHTS
+  },
+  'hammer-strength-alternative-india': {
+    title: 'Hammer Strength Alternative India | California Fitness vs Hammer Strength',
+    desc: 'Comparing Hammer Strength with California Fitness for commercial gyms in India. Analyze pricing, biomechanics, motor reliability, and after-sales service.',
+    h1: 'The Best Alternative to Hammer Strength in India: Why Commercial Gyms Choose California Fitness',
+    lastmod: '2026-06-15',
+    img: OG_WEIGHTS
+  },
+  'nautilus-alternative-india': {
+    title: 'Nautilus Alternative India | Tunturi vs Nautilus',
+    desc: 'Comparing Nautilus with Tunturi for commercial gyms in India. Analyze pricing, biomechanics, motor reliability, and after-sales service.',
+    h1: 'The Best Alternative to Nautilus in India: Why Commercial Gyms Choose Tunturi',
+    lastmod: '2026-06-15',
+    img: OG_WEIGHTS
+  },
+  'cosco-vs-bh-fitness': {
+    title: 'Cosco Alternative India | BH Fitness vs Cosco',
+    desc: 'Comparing Cosco with BH Fitness for commercial gyms in India. Analyze pricing, biomechanics, motor reliability, and after-sales service.',
+    h1: 'The Best Alternative to Cosco in India: Why Commercial Gyms Choose BH Fitness',
+    lastmod: '2026-06-15',
+    img: OG_WEIGHTS
+  },
+  'viva-vs-tunturi': {
+    title: 'Viva Fitness Alternative India | Tunturi vs Viva Fitness',
+    desc: 'Comparing Viva Fitness with Tunturi for commercial gyms in India. Analyze pricing, biomechanics, motor reliability, and after-sales service.',
+    h1: 'The Best Alternative to Viva Fitness in India: Why Commercial Gyms Choose Tunturi',
+    lastmod: '2026-06-15',
+    img: OG_WEIGHTS
+  },
+  'decathlon-domyos-vs-commercial-gym-equipment': {
+    title: 'Decathlon Domyos Alternative India | Commercial Grade Brands vs Decathlon Domyos',
+    desc: 'Comparing Decathlon Domyos with Commercial Grade Brands for commercial gyms in India. Analyze pricing, biomechanics, motor reliability, and after-sales service.',
+    h1: 'The Best Alternative to Decathlon Domyos in India: Why Commercial Gyms Choose Commercial Grade Brands',
+    lastmod: '2026-06-15',
+    img: OG_WEIGHTS
   }
+,
+  'alternatives/cybex-india': {
+    title: "Cybex Alternative India | California Fitness vs Cybex",
+    desc: "Comparing the traditional distribution model of premium brands with California Fitness for commercial gyms in India. Analyze pricing, biomechanics, and after-sales service.",
+    h1: "The Best Alternative to Cybex in India: Why Commercial Gyms Choose California Fitness",
+    lastmod: "2026-06-15",
+    img: OG_WEIGHTS
+  },
+  'alternatives/hammer-strength-india': {
+    title: "Hammer Strength Alternative India | California Fitness vs Hammer Strength",
+    desc: "Comparing the traditional distribution model of premium brands with California Fitness for commercial gyms in India. Analyze pricing, biomechanics, and after-sales service.",
+    h1: "The Best Alternative to Hammer Strength in India: Why Commercial Gyms Choose California Fitness",
+    lastmod: "2026-06-15",
+    img: OG_WEIGHTS
+  },
+  'alternatives/nautilus-india': {
+    title: "Nautilus Alternative India | Tunturi vs Nautilus",
+    desc: "Comparing the traditional distribution model of premium brands with Tunturi for commercial gyms in India. Analyze pricing, biomechanics, and after-sales service.",
+    h1: "The Best Alternative to Nautilus in India: Why Commercial Gyms Choose Tunturi",
+    lastmod: "2026-06-15",
+    img: OG_WEIGHTS
+  },
+  'alternatives/star-trac-india': {
+    title: "Star Trac Alternative India | BH Fitness vs Star Trac",
+    desc: "Comparing the traditional distribution model of premium brands with BH Fitness for commercial gyms in India. Analyze pricing, biomechanics, and after-sales service.",
+    h1: "The Best Alternative to Star Trac in India: Why Commercial Gyms Choose BH Fitness",
+    lastmod: "2026-06-15",
+    img: OG_WEIGHTS
+  },
+  'alternatives/body-solid-india': {
+    title: "Body-Solid Alternative India | California Fitness vs Body-Solid",
+    desc: "Comparing the traditional distribution model of premium brands with California Fitness for commercial gyms in India. Analyze pricing, biomechanics, and after-sales service.",
+    h1: "The Best Alternative to Body-Solid in India: Why Commercial Gyms Choose California Fitness",
+    lastmod: "2026-06-15",
+    img: OG_WEIGHTS
+  },
+  'alternatives/hoist-fitness-india': {
+    title: "Hoist Fitness Alternative India | California Fitness vs Hoist Fitness",
+    desc: "Comparing the traditional distribution model of premium brands with California Fitness for commercial gyms in India. Analyze pricing, biomechanics, and after-sales service.",
+    h1: "The Best Alternative to Hoist Fitness in India: Why Commercial Gyms Choose California Fitness",
+    lastmod: "2026-06-15",
+    img: OG_WEIGHTS
+  },
+  'alternatives/freemotion-india': {
+    title: "FreeMotion Alternative India | BH Fitness vs FreeMotion",
+    desc: "Comparing the traditional distribution model of premium brands with BH Fitness for commercial gyms in India. Analyze pricing, biomechanics, and after-sales service.",
+    h1: "The Best Alternative to FreeMotion in India: Why Commercial Gyms Choose BH Fitness",
+    lastmod: "2026-06-15",
+    img: OG_WEIGHTS
+  },
+  'alternatives/true-fitness-india': {
+    title: "True Fitness Alternative India | Tunturi vs True Fitness",
+    desc: "Comparing the traditional distribution model of premium brands with Tunturi for commercial gyms in India. Analyze pricing, biomechanics, and after-sales service.",
+    h1: "The Best Alternative to True Fitness in India: Why Commercial Gyms Choose Tunturi",
+    lastmod: "2026-06-15",
+    img: OG_WEIGHTS
+  },
+  'alternatives/american-fitness-india': {
+    title: "American Fitness Alternative India | California Fitness vs American Fitness",
+    desc: "Comparing the traditional distribution model of premium brands with California Fitness for commercial gyms in India. Analyze pricing, biomechanics, and after-sales service.",
+    h1: "The Best Alternative to American Fitness in India: Why Commercial Gyms Choose California Fitness",
+    lastmod: "2026-06-15",
+    img: OG_WEIGHTS
+  },
+  'alternatives/atlantis-strength-india': {
+    title: "Atlantis Strength Alternative India | TechFit vs Atlantis Strength",
+    desc: "Comparing the traditional distribution model of premium brands with TechFit for commercial gyms in India. Analyze pricing, biomechanics, and after-sales service.",
+    h1: "The Best Alternative to Atlantis Strength in India: Why Commercial Gyms Choose TechFit",
+    lastmod: "2026-06-15",
+    img: OG_WEIGHTS
+  },
+  'alternatives/fitline-india': {
+    title: "Fitline Alternative India | TechFit vs Fitline",
+    desc: "Comparing the traditional distribution model of premium brands with TechFit for commercial gyms in India. Analyze pricing, biomechanics, and after-sales service.",
+    h1: "The Best Alternative to Fitline in India: Why Commercial Gyms Choose TechFit",
+    lastmod: "2026-06-15",
+    img: OG_WEIGHTS
+  },
+  'alternatives/matrix-fitness-india': {
+    title: "Matrix Fitness Alternative India | BH Fitness vs Matrix Fitness",
+    desc: "Comparing the traditional distribution model of premium brands with BH Fitness for commercial gyms in India. Analyze pricing, biomechanics, and after-sales service.",
+    h1: "The Best Alternative to Matrix Fitness in India: Why Commercial Gyms Choose BH Fitness",
+    lastmod: "2026-06-15",
+    img: OG_WEIGHTS
+  },
+  'alternatives/jerai-fitness-india': {
+    title: "Jerai Fitness Alternative India | TechFit & BH Fitness vs Jerai Fitness",
+    desc: "Comparing the traditional distribution model of premium brands with TechFit & BH Fitness for commercial gyms in India. Analyze pricing, biomechanics, and after-sales service.",
+    h1: "The Best Alternative to Jerai Fitness in India: Why Commercial Gyms Choose TechFit & BH Fitness",
+    lastmod: "2026-06-15",
+    img: OG_WEIGHTS
+  },
+  'alternatives/being-strong-india': {
+    title: "Being Strong Alternative India | TechFit vs Being Strong",
+    desc: "Comparing the traditional distribution model of premium brands with TechFit for commercial gyms in India. Analyze pricing, biomechanics, and after-sales service.",
+    h1: "The Best Alternative to Being Strong in India: Why Commercial Gyms Choose TechFit",
+    lastmod: "2026-06-15",
+    img: OG_WEIGHTS
+  },
+
 };
 
 // ==========================================

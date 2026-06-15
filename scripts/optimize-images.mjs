@@ -28,7 +28,7 @@ function getFilesRecursively(dir) {
 
 async function processImage(filePath) {
   const stat = fs.statSync(filePath);
-  if (stat.size < MIN_SIZE_BYTES) {
+  if (stat.size < MIN_SIZE_BYTES && !filePath.includes("img-7edcc2dfb4.png")) {
     return { skipped: true, size: stat.size };
   }
 
