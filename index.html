@@ -1008,7 +1008,7 @@ Future-Proofing: When real Google reviews exist, set ENABLE_AGGREGATE_RATING = t
         }
       };
 
-      var path = window.location.pathname.replace(//$/, "");
+      var path = window.location.pathname.replace(/\/$/, "");
     if (pageSchemas[path]) {
         var el = document.createElement('script');
         el.type = 'application/ld+json';
@@ -1090,7 +1090,6 @@ Future-Proofing: When real Google reviews exist, set ENABLE_AGGREGATE_RATING = t
             <div class="nd-group">Brands We Carry</div>
             <button class="nd-item" onclick="go('bh-fitness')">BH Fitness</button>
             <button class="nd-item" onclick="go('tunturi')">Tunturi</button>
-            <button class="nd-item" onclick="go('jordan-fitness')">Jordan Fitness</button>
             <button class="nd-item" onclick="go('california-fitness')">California Fitness</button>
             <div class="nd-group">TechFit Custom</div>
             <button class="nd-item" onclick="go('mma-cages')">MMA Cages &amp; Rings</button>
@@ -1102,7 +1101,6 @@ Future-Proofing: When real Google reviews exist, set ENABLE_AGGREGATE_RATING = t
             <div class="nd-group">Wellness &amp; Recovery</div>
             <button class="nd-item" onclick="go('alteon')">Alteon Wellness</button>
             <div class="nd-group">Pilates</div>
-            <button class="nd-item" onclick="go('bendis-pilates')">Bendis Pilates</button>
           </div>
         </div>
         <button class="nl" id="nl-blogs" onclick="go('blogs')">Blog</button>
@@ -1126,7 +1124,6 @@ Future-Proofing: When real Google reviews exist, set ENABLE_AGGREGATE_RATING = t
       <span class="mob-group">Brands We Carry</span>
       <button class="mob-sub" onclick="go('bh-fitness')">BH Fitness</button>
       <button class="mob-sub" onclick="go('tunturi')">Tunturi</button>
-      <button class="mob-sub" onclick="go('jordan-fitness')">Jordan Fitness</button>
       <button class="mob-sub" onclick="go('california-fitness')">California Fitness</button>
       <span class="mob-group">TechFit Custom</span>
       <button class="mob-sub" onclick="go('mma-cages')">MMA Cages &amp; Rings</button>
@@ -1138,7 +1135,6 @@ Future-Proofing: When real Google reviews exist, set ENABLE_AGGREGATE_RATING = t
       <span class="mob-group">Wellness &amp; Recovery</span>
       <button class="mob-sub" onclick="go('alteon')">Alteon Wellness</button>
       <span class="mob-group">Pilates</span>
-      <button class="mob-sub" onclick="go('bendis-pilates')">Bendis Pilates</button>
       <button onclick="go('blogs')">Blog</button>
       <button onclick="go('about')">About Us</button>
       <button onclick="go('contact')">Contact</button>
