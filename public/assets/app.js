@@ -1601,7 +1601,7 @@ ${footer()}
   <div class="hero-glow"></div>
   <div class="hero-in">
     <h1 id="main-title">GYM SETUP, EQUIPMENT<br><em>&amp; WELLNESS SOLUTIONS</em><br>MUMBAI</h1>
-    <p class="hero-sub">India's gym, wellness &amp; sports infrastructure partner. 800+ installations delivered. Dealer for BH Fitness, Tunturi, California, Alteon Wellness.</p>
+    <p class="hero-sub">India's gym, wellness &amp; sports infrastructure partner. 800+ installations delivered. Authorised Dealer for BH Fitness, Tunturi, California, Alteon Wellness.</p>
     <div class="hero-btns">
       <button class="btn-red" onclick="go('contact')">Get a Free Gym Consultation</button>
       <button class="btn-ghost" onclick="go('blogs')">Read Case Studies</button>

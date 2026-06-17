@@ -318,7 +318,7 @@ async function generatePDF() {
   y += 25;
   doc.font('Helvetica')
      .fontSize(10.5)
-     .text('TechFit is the authorized commercial partner and distributor in India for world-class, premium strength, recovery, and cardio brands.', 50, y, { width: 495, lineGap: 4 });
+     .text('TechFit is the authorized commercial partner and dealer in India for world-class, premium strength, recovery, and cardio brands.', 50, y, { width: 495, lineGap: 4 });
 
   y += 50;
   const brands = [

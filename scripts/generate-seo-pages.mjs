@@ -3785,7 +3785,7 @@ function generatePage(html, route, seo) {
     noscriptBlock = NOSCRIPT_FALLBACKS[route] || `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <h2>TechFit | Gym Setup, Equipment &amp; Wellness Solutions Mumbai</h2>
-      <p>India's gym, wellness &amp; sports infrastructure partner with 800+ installations delivered. Dealer for BH Fitness,
+      <p>India's gym, wellness &amp; sports infrastructure partner with 800+ installations delivered. Authorised Dealer for BH Fitness,
         Tunturi, California, and Alteon Wellness. Based in Mumbai.</p>
       <p><strong>Services:</strong> Gym design &amp; layout, commercial equipment supply, custom fabrication of
         combat-sports equipment and CrossFit rigs, padel and pickleball courts, wellness and recovery technology from
