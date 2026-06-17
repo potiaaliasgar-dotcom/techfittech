@@ -78,23 +78,23 @@ const SEO_MAP = {
     img: OG_WELLNESS
   },
   'bh-fitness': {
-    title: 'BH Fitness India | Authorised Distributor — Treadmills, Bikes, Ellipticals',
-    desc: 'TechFit is the authorised distributor of BH Fitness commercial gym equipment in India. Treadmills, exercise bikes, ellipticals and strength machines for gyms, hotels and corporates.',
-    h1: 'BH Fitness India | Authorised Distributor — Treadmills, Bikes, Ellipticals',
+    title: 'BH Fitness India | Authorised Dealer — Treadmills, Bikes, Ellipticals',
+    desc: 'TechFit is the authorised dealer of BH Fitness commercial gym equipment in India. Treadmills, exercise bikes, ellipticals and strength machines for gyms, hotels and corporates.',
+    h1: 'BH Fitness India | Authorised Dealer — Treadmills, Bikes, Ellipticals',
     lastmod: '2026-05-25',
     img: OG_CARDIO
   },
   'tunturi': {
-    title: 'Tunturi India | Authorised Distributor — Nordic Fitness Equipment',
-    desc: 'TechFit is the authorised distributor of Tunturi fitness equipment in India. From Finland — premium cardio, strength and functional-training gear for commercial and home gyms.',
-    h1: 'Tunturi India | Authorised Distributor — Nordic Fitness Equipment',
+    title: 'Tunturi India | Authorised Dealer — Nordic Fitness Equipment',
+    desc: 'TechFit is the authorised dealer of Tunturi fitness equipment in India. From Finland — premium cardio, strength and functional-training gear for commercial and home gyms.',
+    h1: 'Tunturi India | Authorised Dealer — Nordic Fitness Equipment',
     lastmod: '2026-05-22',
     img: OG_CARDIO
   },
   'california-fitness': {
-    title: 'California Fitness India | Authorised Distributor — Commercial Gym Equipment',
-    desc: 'TechFit is the authorised distributor of California Fitness in India. Professional-grade cardio and strength equipment for gyms, studios and fitness chains.',
-    h1: 'California Fitness India | Authorised Distributor — Gym Equipment',
+    title: 'California Fitness India | Authorised Dealer — Commercial Gym Equipment',
+    desc: 'TechFit is the authorised dealer of California Fitness in India. Professional-grade cardio and strength equipment for gyms, studios and fitness chains.',
+    h1: 'California Fitness India | Authorised Dealer — Gym Equipment',
     lastmod: '2026-05-20',
     img: OG_CARDIO
   },
@@ -1105,8 +1105,8 @@ const SCHEMAS = {
         "@type": "WebPage",
         "@id": "https://www.techfittech.com/bh-fitness#webpage",
         "url": "https://www.techfittech.com/bh-fitness",
-        "name": "BH Fitness India | Authorised Distributor — TechFit",
-        "description": "Authorized India distributor of BH Fitness commercial gym equipment. Treadmills, exercise spin bikes, ellipticals, and strength machines."
+        "name": "BH Fitness India | Authorised Dealer — TechFit",
+        "description": "Authorized India dealer of BH Fitness commercial gym equipment. Treadmills, exercise spin bikes, ellipticals, and strength machines."
       },
       {
         "@type": "Service",
@@ -1119,7 +1119,7 @@ const SCHEMAS = {
           { "@type": "City", "name": "Mumbai" }
         ],
         "provider": { "@id": "https://www.techfittech.com/#organization" },
-        "description": "Authorised India distributor for BH Fitness commercial gym equipment — Spanish-engineered treadmills, exercise bikes, ellipticals and strength machines. Direct-import supply, on-site installation and pan-India AMC.",
+        "description": "Authorised India dealer for BH Fitness commercial gym equipment — Spanish-engineered treadmills, exercise bikes, ellipticals and strength machines. Direct-import supply, on-site installation and pan-India AMC.",
         "offers": {
           "@type": "Offer",
           "priceCurrency": "INR",
@@ -1144,8 +1144,8 @@ const SCHEMAS = {
         "@type": "WebPage",
         "@id": "https://www.techfittech.com/tunturi#webpage",
         "url": "https://www.techfittech.com/tunturi",
-        "name": "Tunturi India | Authorised Distributor — TechFit",
-        "description": "Authorized India distributor of Tunturi Finnish fitness equipment. Cardio, strength and functional training gears for commercial gym setups."
+        "name": "Tunturi India | Authorised Dealer — TechFit",
+        "description": "Authorized India dealer of Tunturi Finnish fitness equipment. Cardio, strength and functional training gears for commercial gym setups."
       },
       {
         "@type": "Service",
@@ -1158,7 +1158,7 @@ const SCHEMAS = {
           { "@type": "City", "name": "Mumbai" }
         ],
         "provider": { "@id": "https://www.techfittech.com/#organization" },
-        "description": "Authorised India distributor for Tunturi fitness equipment — Finnish-engineered cardio, strength and functional training gear for commercial gyms, studios and premium homes. Direct supply, installation and AMC.",
+        "description": "Authorised India dealer for Tunturi fitness equipment — Finnish-engineered cardio, strength and functional training gear for commercial gyms, studios and premium homes. Direct supply, installation and AMC.",
         "offers": {
           "@type": "Offer",
           "priceCurrency": "INR",
@@ -1183,8 +1183,8 @@ const SCHEMAS = {
         "@type": "WebPage",
         "@id": "https://www.techfittech.com/california-fitness#webpage",
         "url": "https://www.techfittech.com/california-fitness",
-        "name": "California Fitness India | Authorised Distributor — TechFit",
-        "description": "Authorized India distributor of California Fitness commercial gym equipment. Heavy-duty cardio, strength platforms, and functional accessories."
+        "name": "California Fitness India | Authorised Dealer — TechFit",
+        "description": "Authorized India dealer of California Fitness commercial gym equipment. Heavy-duty cardio, strength platforms, and functional accessories."
       },
       {
         "@type": "Service",
@@ -1197,7 +1197,7 @@ const SCHEMAS = {
           { "@type": "City", "name": "Mumbai" }
         ],
         "provider": { "@id": "https://www.techfittech.com/#organization" },
-        "description": "Authorised India distributor for California Fitness commercial gym equipment. Heavy-duty cardio, selectorized strength stacks and plate-loaded machines for high-traffic health clubs and corporate facilities. Direct supply, install and AMC.",
+        "description": "Authorised India dealer for California Fitness commercial gym equipment. Heavy-duty cardio, selectorized strength stacks and plate-loaded machines for high-traffic health clubs and corporate facilities. Direct supply, install and AMC.",
         "offers": {
           "@type": "Offer",
           "priceCurrency": "INR",
@@ -1223,22 +1223,22 @@ const SCHEMAS = {
         "@id": "https://www.techfittech.com/bendis-pilates#webpage",
         "url": "https://www.techfittech.com/bendis-pilates",
         "name": "Bendis Pilates Studio Equipment India — TechFit",
-        "description": "TechFit is the authorised distributor of Bendis Pilates in India. Hand-crafted premium Pilates reformers, cadillacs, chairs, barrels and studio accessories for professional studios and physiotherapy centres."
+        "description": "TechFit is the authorised dealer of Bendis Pilates in India. Hand-crafted premium Pilates reformers, cadillacs, chairs, barrels and studio accessories for professional studios and physiotherapy centres."
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
-          { "@type": "Question", "name": "Who is the authorised distributor of Bendis Pilates in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit (Techfit Health Fitness Private Limited), Mumbai, is the authorised distributor of Bendis Pilates equipment in India. They supply the full range of Bendis Pilates reformers, cadillacs, chairs, barrels, and studio accessories." } },
-          { "@type": "Question", "name": "Where to buy Pilates reformer in India?", "acceptedAnswer": { "@type": "Answer", "text": "Buy Bendis Pilates reformers in India through TechFit, the authorised distributor. Standard reformers, tower reformers, folding reformers, and cadillac reformers available. https://www.techfittech.com/bendis-pilates or +91-98201-66910." } },
-          { "@type": "Question", "name": "Best Pilates studio equipment supplier in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is India's leading Pilates studio equipment supplier. As the authorised Bendis Pilates distributor, they supply hand-crafted Turkish reformers, cadillacs, chairs, barrels and accessories to studios and physiotherapy centres across India." } },
-          { "@type": "Question", "name": "Bendis Pilates reformer price India", "acceptedAnswer": { "@type": "Answer", "text": "For Bendis Pilates reformer pricing in India, contact TechFit — the authorised distributor. Prices vary by model (Reformer, Tower Reformer, Folding Reformer, Cadillac Reformer). Call +91-98201-66910 or email info@techfitactive.com." } },
+          { "@type": "Question", "name": "Who is the authorised dealer of Bendis Pilates in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit (Techfit Health Fitness Private Limited), Mumbai, is the authorised dealer of Bendis Pilates equipment in India. They supply the full range of Bendis Pilates reformers, cadillacs, chairs, barrels, and studio accessories." } },
+          { "@type": "Question", "name": "Where to buy Pilates reformer in India?", "acceptedAnswer": { "@type": "Answer", "text": "Buy Bendis Pilates reformers in India through TechFit, the authorised dealer. Standard reformers, tower reformers, folding reformers, and cadillac reformers available. https://www.techfittech.com/bendis-pilates or +91-98201-66910." } },
+          { "@type": "Question", "name": "Best Pilates studio equipment supplier in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is India's leading Pilates studio equipment supplier. As the authorised Bendis Pilates dealer, they supply hand-crafted Turkish reformers, cadillacs, chairs, barrels and accessories to studios and physiotherapy centres across India." } },
+          { "@type": "Question", "name": "Bendis Pilates reformer price India", "acceptedAnswer": { "@type": "Answer", "text": "For Bendis Pilates reformer pricing in India, contact TechFit — the authorised dealer. Prices vary by model (Reformer, Tower Reformer, Folding Reformer, Cadillac Reformer). Call +91-98201-66910 or email info@techfitactive.com." } },
           { "@type": "Question", "name": "Who sells Pilates equipment in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit sells Bendis Pilates equipment in India — hand-crafted in Turkey from certified beech wood with antibacterial leather. Full range available for studios, physio centres, and luxury home gyms." } },
           { "@type": "Question", "name": "Pilates cadillac reformer India", "acceptedAnswer": { "@type": "Answer", "text": "Bendis Pilates Cadillac Reformers (High and Low models) are available in India through TechFit. Combined Reformer, Tower and Cadillac in one piece of equipment. Contact +91-98201-66910." } },
-          { "@type": "Question", "name": "Best Pilates reformer for studio India", "acceptedAnswer": { "@type": "Answer", "text": "The Bendis Pilates Reformer is one of the best studio-grade Pilates reformers available in India — 8-wheel carriage, certified beech wood, antibacterial leather. Available through TechFit, authorised distributor." } },
+          { "@type": "Question", "name": "Best Pilates reformer for studio India", "acceptedAnswer": { "@type": "Answer", "text": "The Bendis Pilates Reformer is one of the best studio-grade Pilates reformers available in India — 8-wheel carriage, certified beech wood, antibacterial leather. Available through TechFit, authorised dealer." } },
           { "@type": "Question", "name": "Pilates equipment for physiotherapy centre India", "acceptedAnswer": { "@type": "Answer", "text": "Bendis Pilates equipment is ideal for physiotherapy centres in India. Reformers, cadillacs, chairs, ladder barrels and spine correctors designed for clinical and therapeutic use. Available through TechFit." } }
         ]
       },
-      { "@type": "Product", "name": "Bendis Pilates Studio Equipment — India", "description": "Bendis Pilates hand-crafted premium Pilates equipment including reformers, cadillac reformers, tower reformers, folding reformers, chairs, ladder barrels, wall units, spring walls, and accessories. Available through TechFit, authorised distributor in India.", "brand": { "@type": "Brand", "name": "Bendis Pilates" }, "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/bendis-pilates", "seller": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" } } },
+      { "@type": "Product", "name": "Bendis Pilates Studio Equipment — India", "description": "Bendis Pilates hand-crafted premium Pilates equipment including reformers, cadillac reformers, tower reformers, folding reformers, chairs, ladder barrels, wall units, spring walls, and accessories. Available through TechFit, authorised dealer in India.", "brand": { "@type": "Brand", "name": "Bendis Pilates" }, "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/bendis-pilates", "seller": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" } } },
       {
         "@type": "Service",
         "@id": "https://www.techfittech.com/bendis-pilates#service",
@@ -1251,7 +1251,7 @@ const SCHEMAS = {
           { "@type": "City", "name": "Mumbai" }
         ],
         "provider": { "@id": "https://www.techfittech.com/#organization" },
-        "description": "Authorized India distributor of Bendis Pilates. Hand-crafted Turkish Pilates reformers, cadillacs, chairs, barrels and studio accessories for professional studios and physiotherapy centres.",
+        "description": "Authorized India dealer of Bendis Pilates. Hand-crafted Turkish Pilates reformers, cadillacs, chairs, barrels and studio accessories for professional studios and physiotherapy centres.",
         "offers": {
           "@type": "Offer",
           "priceCurrency": "INR",
@@ -1269,17 +1269,17 @@ const SCHEMAS = {
         "@id": "https://www.techfittech.com/jordan-fitness#webpage",
         "url": "https://www.techfittech.com/jordan-fitness",
         "name": "Jordan Fitness Premium Gym Accessories India — TechFit",
-        "description": "TechFit is the authorised distributor of Jordan Fitness in India. Premium commercial dumbbells, kettlebells, Olympic plates, sandbags, slam balls, and group fitness gear."
+        "description": "TechFit is the authorised dealer of Jordan Fitness in India. Premium commercial dumbbells, kettlebells, Olympic plates, sandbags, slam balls, and group fitness gear."
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
-          { "@type": "Question", "name": "Who is the authorised distributor of Jordan Fitness in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit (Techfit Health Fitness Private Limited), Mumbai, is the authorised distributor of Jordan Fitness in India. They supply premium Jordan dumbbells, kettlebells, weight plates, and training accessories." } },
+          { "@type": "Question", "name": "Who is the authorised dealer of Jordan Fitness in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit (Techfit Health Fitness Private Limited), Mumbai, is the authorised dealer of Jordan Fitness in India. They supply premium Jordan dumbbells, kettlebells, weight plates, and training accessories." } },
           { "@type": "Question", "name": "Where to buy Jordan Fitness accessories in India?", "acceptedAnswer": { "@type": "Answer", "text": "Buy official Jordan Fitness free weights and functional training gear in India through TechFit. Full range of Urethane dumbbells, bumper plates, power bags, slam balls, and storage racks are available. Contact +91-98201-66910." } },
-          { "@type": "Question", "name": "Best commercial gym accessories supplier in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is India's leading commercial gym infrastructure supplier. As the authorised Jordan Fitness distributor, they supply premium UK-designed gym accessories, free weights, and functional training systems." } }
+          { "@type": "Question", "name": "Best commercial gym accessories supplier in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is India's leading commercial gym infrastructure supplier. As the authorised Jordan Fitness dealer, they supply premium UK-designed gym accessories, free weights, and functional training systems." } }
         ]
       },
-      { "@type": "Product", "name": "Jordan Fitness Commercial Gym Accessories — India", "description": "Jordan Fitness premium gym accessories including Custom Urethane dumbbells, hex rubber dumbbells, chrome dumbbells, urethane grip plates, rubber bumper plates, kettlebells, slam balls, power bags, and storage solutions. Available through TechFit, authorised distributor in India.", "brand": { "@type": "Brand", "name": "Jordan Fitness" }, "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/jordan-fitness", "seller": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" } } },
+      { "@type": "Product", "name": "Jordan Fitness Commercial Gym Accessories — India", "description": "Jordan Fitness premium gym accessories including Custom Urethane dumbbells, hex rubber dumbbells, chrome dumbbells, urethane grip plates, rubber bumper plates, kettlebells, slam balls, power bags, and storage solutions. Available through TechFit, authorised dealer in India.", "brand": { "@type": "Brand", "name": "Jordan Fitness" }, "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/jordan-fitness", "seller": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" } } },
       {
         "@type": "Service",
         "@id": "https://www.techfittech.com/jordan-fitness#service",
@@ -1292,7 +1292,7 @@ const SCHEMAS = {
           { "@type": "City", "name": "Mumbai" }
         ],
         "provider": { "@id": "https://www.techfittech.com/#organization" },
-        "description": "Authorized India distributor of Jordan Fitness. Premium UK-designed commercial dumbbells, kettlebells, Olympic plates, sandbags, slam balls, and group fitness gear.",
+        "description": "Authorized India dealer of Jordan Fitness. Premium UK-designed commercial dumbbells, kettlebells, Olympic plates, sandbags, slam balls, and group fitness gear.",
         "offers": {
           "@type": "Offer",
           "priceCurrency": "INR",
@@ -2495,7 +2495,7 @@ const SCHEMAS = {
         "@type": "FAQPage",
         "inLanguage": "en-IN",
         "mainEntity": [
-          { "@type": "Question", "name": "What should I look for in a commercial gym supplier?", "acceptedAnswer": { "@type": "Answer", "text": "A reliable commercial gym supplier in India must possess: 1. Direct authorized manufacturer distributorship (no middleman). 2. In-house heavy-gauge custom steel fabrication capabilities. 3. Certified in-house AMC technician coverage. 4. A massive local spare-parts inventory." } }
+          { "@type": "Question", "name": "What should I look for in a commercial gym supplier?", "acceptedAnswer": { "@type": "Answer", "text": "A reliable commercial gym supplier in India must possess: 1. Direct authorized manufacturer dealership (no middleman). 2. In-house heavy-gauge custom steel fabrication capabilities. 3. Certified in-house AMC technician coverage. 4. A massive local spare-parts inventory." } }
         ]
       },
       {
@@ -2735,7 +2735,7 @@ const NOSCRIPT_FALLBACKS = {
   'alteon': `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <h2>Alteon Wellness &amp; Recovery Equipment India | Authorized Partner</h2>
-      <p>TechFit is the official authorized exclusive distributor and partner for <strong>Alteon Wellness (alteontech.com)</strong> in India. We supply professional clinical and commercial-grade longevity, recovery, and biohacking technology to health clubs, hotels, residential developments, longevity clinics, and physical therapy centers.</p>
+      <p>TechFit is the official authorized exclusive dealer and partner for <strong>Alteon Wellness (alteontech.com)</strong> in India. We supply professional clinical and commercial-grade longevity, recovery, and biohacking technology to health clubs, hotels, residential developments, longevity clinics, and physical therapy centers.</p>
       
       <h3>Alteon Recovery Product Portfolio:</h3>
       <ul>
@@ -2761,8 +2761,8 @@ const NOSCRIPT_FALLBACKS = {
   </noscript>`,
   'bh-fitness': `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
-      <h2>BH Fitness India | Official Authorized Distributor</h2>
-      <p>TechFit is the official authorized distributor for <strong>BH Fitness</strong> commercial gym equipment in India. Headquartered in Spain, BH Fitness is a leading global commercial fitness brand, delivering world-class biomechanics, structural durability, and cloud-connected display consoles.</p>
+      <h2>BH Fitness India | Official Authorized Dealer</h2>
+      <p>TechFit is the official authorized dealer for <strong>BH Fitness</strong> commercial gym equipment in India. Headquartered in Spain, BH Fitness is a leading global commercial fitness brand, delivering world-class biomechanics, structural durability, and cloud-connected display consoles.</p>
       
       <h3>Product Lines:</h3>
       <ul>
@@ -2782,8 +2782,8 @@ const NOSCRIPT_FALLBACKS = {
   </noscript>`,
   'tunturi': `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
-      <h2>Tunturi Fitness India | Authorized Distributor</h2>
-      <p>TechFit is the official authorized distributor of <strong>Tunturi</strong> fitness equipment in India. From Finland, Tunturi is a pioneer in Nordic fitness innovation, designing high-quality cardio, strength, and functional training gear for commercial fitness studios, corporate gyms, residential amenities, and premium home setups since 1922.</p>
+      <h2>Tunturi Fitness India | Authorized Dealer</h2>
+      <p>TechFit is the official authorized dealer of <strong>Tunturi</strong> fitness equipment in India. From Finland, Tunturi is a pioneer in Nordic fitness innovation, designing high-quality cardio, strength, and functional training gear for commercial fitness studios, corporate gyms, residential amenities, and premium home setups since 1922.</p>
       
       <h3>Tunturi Product Highlights:</h3>
       <ul>
@@ -2800,7 +2800,7 @@ const NOSCRIPT_FALLBACKS = {
   'california-fitness': `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <h2>California Fitness India | Commercial Strength &amp; Cardio Sourcing</h2>
-      <p>TechFit is the official authorized distributor of <strong>California Fitness</strong> equipment in India, delivering heavy-duty commercial cardio, selectorized strength stacks, plate-loaded machines, and free-weight benches designed specifically for commercial health clubs, high-traffic corporate fitness facilities, and personal training studios.</p>
+      <p>TechFit is the official authorized dealer of <strong>California Fitness</strong> equipment in India, delivering heavy-duty commercial cardio, selectorized strength stacks, plate-loaded machines, and free-weight benches designed specifically for commercial health clubs, high-traffic corporate fitness facilities, and personal training studios.</p>
       <p>California Fitness is built for high durability, smooth movement paths, and ease of serviceability. It provides gym owners with a highly reliable, heavy-use alternative for commercial fitness facilities, backed by TechFit\'s direct installation, layout planning, and pan-India AMC service framework.</p>
       <p><strong>Contact TechFit for California Fitness India:</strong><br>
         Email: info@techfitactive.com<br>
@@ -2971,20 +2971,20 @@ const NOSCRIPT_FALLBACKS = {
       <p>If your business model depends heavily on leveraging global consumer-facing brand recognition, or if your facility requires a fully closed, cloud-connected digital ecosystem across all cardio lines, investing in these premium imported brands is the correct choice, provided your budget and project timeline permit.</p>
 
       <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">3. Factual B2B Sourcing Comparison Matrix</h3>
-      <p>To help procurement teams make an objective decision, the table below compares direct global importing through standard distributor networks against TechFit\'s integrated direct-sourcing and local custom-manufacturing model.</p>
+      <p>To help procurement teams make an objective decision, the table below compares direct global importing through standard dealer networks against TechFit\'s integrated direct-sourcing and local custom-manufacturing model.</p>
       
       <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;text-align:left;font-size:0.95rem;">
         <thead>
           <tr style="background-color:#f8f9fa;border-bottom:2px solid #dee2e6;">
             <th style="padding:10px;border:1px solid #dee2e6;">Sourcing Parameter</th>
-            <th style="padding:10px;border:1px solid #dee2e6;">Standard Imported Distributors (e.g., Technogym)</th>
+            <th style="padding:10px;border:1px solid #dee2e6;">Standard Imported Dealers (e.g., Technogym)</th>
             <th style="padding:10px;border:1px solid #dee2e6;">TechFit Turnkey Sourcing Model</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td style="padding:10px;border:1px solid #dee2e6;font-weight:bold;">Price Band &amp; CapEx</td>
-            <td style="padding:10px;border:1px solid #dee2e6;">Premium CapEx tier with multiple distributor and broker margins, high initial import markups.</td>
+            <td style="padding:10px;border:1px solid #dee2e6;">Premium CapEx tier with multiple dealer and broker margins, high initial import markups.</td>
             <td style="padding:10px;border:1px solid #dee2e6;">Optimized CapEx. Direct-from-source European cardio combined with in-house custom steel fabrications.</td>
           </tr>
           <tr>
@@ -3014,7 +3014,7 @@ const NOSCRIPT_FALLBACKS = {
       <p>TechFit active health fitness solutions provides a highly optimized, high-impact alternative for premium B2B buyers. We bridge the gap between world-class European engineering and boots-on-the-ground Indian manufacturing and engineering accountability. Our unique approach consists of three distinct pillars:</p>
       
       <h4>A. Premium European Cardio Distribution</h4>
-      <p>Rather than using unproven brands, TechFit partners as the official authorized distributor for premium commercial gym manufacturers like <strong>BH Fitness Spain</strong>. BH Fitness is one of Europe's oldest and most prestigious fitness equipment brands, offering incredible mechanical durability, high-end console displays, and beautiful aesthetics. By sourcing BH Fitness through TechFit, you get the exact same elite biomechanical validation and commercial cardio performance as any tier-1 import, but at factory-direct pricing, completely avoiding third-party importing markups.</p>
+      <p>Rather than using unproven brands, TechFit partners as the official authorized dealer for premium commercial gym manufacturers like <strong>BH Fitness Spain</strong>. BH Fitness is one of Europe's oldest and most prestigious fitness equipment brands, offering incredible mechanical durability, high-end console displays, and beautiful aesthetics. By sourcing BH Fitness through TechFit, you get the exact same elite biomechanical validation and commercial cardio performance as any tier-1 import, but at factory-direct pricing, completely avoiding third-party importing markups.</p>
       
       <h4>B. Bespoke Local Steel Fabrication</h4>
       <p>For strength equipment, CrossFit cages, free-weight racks, and combat sports elements, importing standard steel boxes from overseas is financially inefficient and limits customization. TechFit operates its own heavy-duty manufacturing and custom-fabrication workshop in Byculla, Mumbai. We construct custom rigs, cages, and platforms using heavy 11-gauge (3mm+) structural steel. We can custom powder coat frames to match your facility's branding, embroider custom logos into leather upholstery, and build cages to precise dimensions. This allows your gym to have a unique, custom-branded identity that catalog imports can never match.</p>
@@ -3034,7 +3034,7 @@ const NOSCRIPT_FALLBACKS = {
       <p>Standard factory-imported strength lines are mass-produced in fixed colors—typically silver or dark gray—with standard black or charcoal vinyl cushions. If a developer wants to design a distinctive, high-end wellness environment (such as incorporating gold accents, matte black frames, or custom hand-stitched leather upholstery in the brand's primary colors), standard catalog imports cannot accommodate these requests. TechFit\'s in-house fabrication allows you to specify steel thickness (using heavy 11-gauge steel), frame geometry, powder coating finishes, and logo embroidery, giving you complete creative control over your space's design.</p>
       
       <h4>What should commercial gym developers look for in an Annual Maintenance Contract (AMC)?</h4>
-      <p>When evaluating an AMC, look for three key metrics: response time, spare parts location, and technician origin. Many distributors use third-party regional mechanics who lack brand-specific training and do not carry official replacement parts. A high-quality AMC should guarantee a technician dispatch within 24 to 48 hours, ensure that all critical replacement parts are stored locally within India (preventing customs delays), and be executed by direct employees of the supplier who are fully accountable for your facility's operational uptime.</p>
+      <p>When evaluating an AMC, look for three key metrics: response time, spare parts location, and technician origin. Many dealers use third-party regional mechanics who lack brand-specific training and do not carry official replacement parts. A high-quality AMC should guarantee a technician dispatch within 24 to 48 hours, ensure that all critical replacement parts are stored locally within India (preventing customs delays), and be executed by direct employees of the supplier who are fully accountable for your facility's operational uptime.</p>
 
       <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">6. Tour Our Byculla Workshop &amp; Start Planning</h3>
       <p>Don't settle for slow lead times, high markups, and rigid catalog colors. Discover how TechFit can deliver an elite, custom-branded commercial gym setup optimized for your CapEx and backed by India's most responsive engineering team. Contact our design experts today to review 2D space layouts, tour our custom steel fabrication facility in Byculla, Mumbai, or request a factual quotation for your project.</p>
@@ -3078,7 +3078,7 @@ const NOSCRIPT_FALLBACKS = {
         <tbody>
           <tr>
             <td style="padding:10px;border:1px solid #dee2e6;font-weight:bold;">Price Band &amp; CapEx</td>
-            <td style="padding:10px;border:1px solid #dee2e6;">Premium pricing tier with substantial distributor and dealer markups, plus high shipping costs for heavy steel.</td>
+            <td style="padding:10px;border:1px solid #dee2e6;">Premium pricing tier with substantial dealer and dealer markups, plus high shipping costs for heavy steel.</td>
             <td style="padding:10px;border:1px solid #dee2e6;">Optimized turnkey pricing. European and Nordic cardio combined with heavy-duty local steel manufacturing.</td>
           </tr>
           <tr>
@@ -3103,7 +3103,7 @@ const NOSCRIPT_FALLBACKS = {
       <p>TechFit active health fitness solutions provides commercial gym developers with a highly optimized turnkey solution. We combine the best of European design and engineering with heavy-duty Indian steel manufacturing and centralized engineering accountability, structured across three core areas:</p>
       
       <h4>A. Authorized European Cardio and Strength Lines</h4>
-      <p>TechFit is the official authorized distributor of world-class European cardio and strength brands, including <strong>Tunturi Finland</strong> (renowned for premium Scandinavian cardio design) and <strong>California Fitness</strong> (famous for durable, biomechanically sound strength equipment). By sourcing these premium brands through TechFit, you get the high-end movement paths and digital console integrations expected in luxury facilities, while completely avoiding third-party importing markups and dealer fees.</p>
+      <p>TechFit is the official authorized dealer of world-class European cardio and strength brands, including <strong>Tunturi Finland</strong> (renowned for premium Scandinavian cardio design) and <strong>California Fitness</strong> (famous for durable, biomechanically sound strength equipment). By sourcing these premium brands through TechFit, you get the high-end movement paths and digital console integrations expected in luxury facilities, while completely avoiding third-party importing markups and dealer fees.</p>
       
       <h4>B. Heavy-Duty Local Manufacturing and Lifetime Frame Warranty</h4>
       <p>Importing massive iron weights, heavy power racks, and thick metal platforms from overseas is highly inefficient. TechFit operates its own advanced steel fabrication and powder coating workshop in Byculla, Mumbai. We construct custom rigs, cages, racks, and plates using high-strength 11-gauge (3mm+) structural steel. Because we control the entire manufacturing process, we offer a lifetime warranty on all custom-fabricated structural steel frames, providing gym owners with absolute peace of mind.</p>
@@ -3182,14 +3182,14 @@ const NOSCRIPT_FALLBACKS = {
           </tr>
           <tr>
             <td style="padding:10px;border:1px solid #dee2e6;font-weight:bold;">Local Maintenance &amp; Parts</td>
-            <td style="padding:10px;border:1px solid #dee2e6;">Dependent on independent distributor schedules and overseas spare parts shipping timelines.</td>
+            <td style="padding:10px;border:1px solid #dee2e6;">Dependent on independent dealer schedules and overseas spare parts shipping timelines.</td>
             <td style="padding:10px;border:1px solid #dee2e6;">Direct Mumbai-based service center. Deep spare parts inventory and 24-48 hour certified engineering dispatches.</td>
           </tr>
         </tbody>
       </table>
 
       <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">4. The Alteon Elysion Sourcing Solution: Luxury Design, Clinical Safety</h3>
-      <p>TechFit provides clinical recovery centers, premium longevity clinics, and professional athletic academies in India with a highly optimized alternative. Through our exclusive partnership as the official authorized distributor of <strong>Alteon Wellness</strong>, we supply the state-of-the-art Elysion Hard-Shell Hyperbaric Chamber, structured across three key pillars:</p>
+      <p>TechFit provides clinical recovery centers, premium longevity clinics, and professional athletic academies in India with a highly optimized alternative. Through our exclusive partnership as the official authorized dealer of <strong>Alteon Wellness</strong>, we supply the state-of-the-art Elysion Hard-Shell Hyperbaric Chamber, structured across three key pillars:</p>
       
       <h4>A. Premium Hard-Shell Wellness Sourcing</h4>
       <p>The Alteon Elysion represents the absolute pinnacle of premium wellness-grade hyperbaric engineering. It features a spacious, elegant hard-shell cabin with custom dark-matte finishes, premium wood-accented interiors, large viewports, and integrated multimedia setups. By sourcing Alteon through TechFit, you get clinical-grade performance up to 2.0 ATA in a luxury design that perfectly complements premium recovery clinics and private longevity suites, avoiding sterile hospital-style medical designs.</p>
@@ -3242,20 +3242,20 @@ const NOSCRIPT_FALLBACKS = {
       <p>If your business model depends heavily on leveraging global consumer-facing brand recognition, or if your facility requires a fully closed, cloud-connected digital ecosystem across all cardio lines, investing in these premium imported brands is the correct choice, provided your budget and project timeline permit.</p>
 
       <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">3. Factual B2B Sourcing Comparison Matrix</h3>
-      <p>To help procurement teams make an objective decision, the table below compares direct global importing through standard distributor networks against TechFit\'s integrated direct-sourcing and local custom-manufacturing model.</p>
+      <p>To help procurement teams make an objective decision, the table below compares direct global importing through standard dealer networks against TechFit\'s integrated direct-sourcing and local custom-manufacturing model.</p>
       
       <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;text-align:left;font-size:0.95rem;">
         <thead>
           <tr style="background-color:#f8f9fa;border-bottom:2px solid #dee2e6;">
             <th style="padding:10px;border:1px solid #dee2e6;">Sourcing Parameter</th>
-            <th style="padding:10px;border:1px solid #dee2e6;">Standard Imported Distributors</th>
+            <th style="padding:10px;border:1px solid #dee2e6;">Standard Imported Dealers</th>
             <th style="padding:10px;border:1px solid #dee2e6;">TechFit Turnkey Sourcing Model</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td style="padding:10px;border:1px solid #dee2e6;font-weight:bold;">Price Band &amp; CapEx</td>
-            <td style="padding:10px;border:1px solid #dee2e6;">Premium CapEx tier with multiple distributor and broker margins, high initial import markups.</td>
+            <td style="padding:10px;border:1px solid #dee2e6;">Premium CapEx tier with multiple dealer and broker margins, high initial import markups.</td>
             <td style="padding:10px;border:1px solid #dee2e6;">Optimized CapEx. Direct-from-source European cardio combined with in-house custom steel fabrications.</td>
           </tr>
           <tr>
@@ -3285,7 +3285,7 @@ const NOSCRIPT_FALLBACKS = {
       <p>TechFit active health fitness solutions provides a highly optimized, high-impact alternative for premium B2B buyers. We bridge the gap between world-class European engineering and boots-on-the-ground Indian manufacturing and engineering accountability. Our unique approach consists of three distinct pillars:</p>
       
       <h4>A. Premium European Cardio Distribution</h4>
-      <p>Rather than using unproven brands, TechFit partners as the official authorized distributor for premium commercial gym manufacturers like <strong>BH Fitness Spain</strong> and <strong>Tunturi Finland</strong>. These brands represent Europe's oldest and most prestigious fitness equipment manufacturers, offering incredible mechanical durability, high-end console displays, and beautiful aesthetics. By sourcing these brands through TechFit, you get the exact same elite biomechanical validation and commercial cardio performance as any tier-1 import, but at factory-direct pricing, completely avoiding third-party importing markups.</p>
+      <p>Rather than using unproven brands, TechFit partners as the official authorized dealer for premium commercial gym manufacturers like <strong>BH Fitness Spain</strong> and <strong>Tunturi Finland</strong>. These brands represent Europe's oldest and most prestigious fitness equipment manufacturers, offering incredible mechanical durability, high-end console displays, and beautiful aesthetics. By sourcing these brands through TechFit, you get the exact same elite biomechanical validation and commercial cardio performance as any tier-1 import, but at factory-direct pricing, completely avoiding third-party importing markups.</p>
       
       <h4>B. Bespoke Local Steel Fabrication</h4>
       <p>For strength equipment, CrossFit cages, free-weight racks, and combat sports elements, importing standard steel boxes from overseas is financially inefficient and limits customization. TechFit operates its own heavy-duty manufacturing and custom-fabrication workshop in Byculla, Mumbai. We construct custom rigs, cages, and platforms using heavy 11-gauge (3mm+) structural steel. We can custom powder coat frames to match your facility's branding, embroider custom logos into leather upholstery, and build cages to precise dimensions. This allows your gym to have a unique, custom-branded identity that catalog imports can never match.</p>
@@ -3305,7 +3305,7 @@ const NOSCRIPT_FALLBACKS = {
       <p>Standard factory-imported strength lines are mass-produced in fixed colors—typically silver or dark gray—with standard black or charcoal vinyl cushions. If a developer wants to design a distinctive, high-end wellness environment (such as incorporating gold accents, matte black frames, or custom hand-stitched leather upholstery in the brand's primary colors), standard catalog imports cannot accommodate these requests. TechFit\'s in-house fabrication allows you to specify steel thickness (using heavy 11-gauge steel), frame geometry, powder coating finishes, and logo embroidery, giving you complete creative control over your space's design.</p>
       
       <h4>What should commercial gym developers look for in an Annual Maintenance Contract (AMC)?</h4>
-      <p>When evaluating an AMC, look for three key metrics: response time, spare parts location, and technician origin. Many distributors use third-party regional mechanics who lack brand-specific training and do not carry official replacement parts. A high-quality AMC should guarantee a technician dispatch within 24 to 48 hours, ensure that all critical replacement parts are stored locally within India (preventing customs delays), and be executed by direct employees of the supplier who are fully accountable for your facility's operational uptime.</p>
+      <p>When evaluating an AMC, look for three key metrics: response time, spare parts location, and technician origin. Many dealers use third-party regional mechanics who lack brand-specific training and do not carry official replacement parts. A high-quality AMC should guarantee a technician dispatch within 24 to 48 hours, ensure that all critical replacement parts are stored locally within India (preventing customs delays), and be executed by direct employees of the supplier who are fully accountable for your facility's operational uptime.</p>
 
       <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">6. Tour Our Byculla Workshop &amp; Start Planning</h3>
       <p>Don't settle for slow lead times, high markups, and rigid catalog colors. Discover how TechFit can deliver an elite, custom-branded commercial gym setup optimized for your CapEx and backed by India's most responsive engineering team. Contact our design experts today to review 2D space layouts, tour our custom steel fabrication facility in Byculla, Mumbai, or request a factual quotation for your project.</p>
@@ -3363,14 +3363,14 @@ const NOSCRIPT_FALLBACKS = {
           </tr>
           <tr>
             <td style="padding:10px;border:1px solid #dee2e6;font-weight:bold;">Local Maintenance &amp; Parts</td>
-            <td style="padding:10px;border:1px solid #dee2e6;">Dependent on independent distributor schedules and overseas spare parts shipping timelines.</td>
+            <td style="padding:10px;border:1px solid #dee2e6;">Dependent on independent dealer schedules and overseas spare parts shipping timelines.</td>
             <td style="padding:10px;border:1px solid #dee2e6;">Direct Mumbai-based service center. Deep spare parts inventory and 24-48 hour certified engineering dispatches.</td>
           </tr>
         </tbody>
       </table>
 
       <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">4. The Alteon Elysion Sourcing Solution: Luxury Design, Clinical Safety</h3>
-      <p>TechFit provides clinical recovery centers, premium longevity clinics, and professional athletic academies in India with a highly optimized alternative. Through our exclusive partnership as the official authorized distributor of <strong>Alteon Wellness</strong>, we supply the state-of-the-art Cryoblast Pro electric cryotherapy chamber, structured across three key pillars:</p>
+      <p>TechFit provides clinical recovery centers, premium longevity clinics, and professional athletic academies in India with a highly optimized alternative. Through our exclusive partnership as the official authorized dealer of <strong>Alteon Wellness</strong>, we supply the state-of-the-art Cryoblast Pro electric cryotherapy chamber, structured across three key pillars:</p>
       
       <h4>A. Premium Electric Dry Cryotherapy Sourcing</h4>
       <p>The Alteon Cryoblast Pro represents the absolute pinnacle of premium wellness-grade cryotherapy engineering. It features a spacious, elegant hard-shell cabin with custom dark-matte finishes, premium thermal insulation doors, large viewports, and integrated multimedia setups. By sourcing Alteon through TechFit, you get clinical-grade performance down to -110°C to -140°C in a luxury design that perfectly complements premium recovery clinics and private longevity suites, avoiding sterile hospital-style medical designs and eliminating liquid nitrogen costs and risks.</p>
@@ -3785,7 +3785,7 @@ function generatePage(html, route, seo) {
     noscriptBlock = NOSCRIPT_FALLBACKS[route] || `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <h2>TechFit | Gym Setup, Equipment &amp; Wellness Solutions Mumbai</h2>
-      <p>India's gym, wellness &amp; sports infrastructure partner with 800+ installations delivered. Distributor for BH Fitness,
+      <p>India's gym, wellness &amp; sports infrastructure partner with 800+ installations delivered. Dealer for BH Fitness,
         Tunturi, California, and Alteon Wellness. Based in Mumbai.</p>
       <p><strong>Services:</strong> Gym design &amp; layout, commercial equipment supply, custom fabrication of
         combat-sports equipment and CrossFit rigs, padel and pickleball courts, wellness and recovery technology from
