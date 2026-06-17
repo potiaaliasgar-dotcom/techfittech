@@ -31,8 +31,5 @@
     { "source": "/jordan-fitness/", "destination": "/free-weights", "permanent": true },
     { "source": "/bendis-pilates", "destination": "/free-weights", "permanent": true },
     { "source": "/bendis-pilates/", "destination": "/free-weights", "permanent": true }
-  ],
-  "rewrites": [
-    { "source": "/((?!.*\\.).*)", "destination": "/index.html" }
   ]
 }
