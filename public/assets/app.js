@@ -2018,7 +2018,7 @@ ${footer()}
       'BH Fitness': {
         slug: 'bh-fitness',
         badge: "Europe's No.1 Fitness Brand · Authorised Dealer India",
-        desc: "BH Fitness is Europe\'s leading fitness equipment brand, trusted by over 7,000 commercial gyms worldwide. As the authorised dealer for India, we supply the full BH Fitness range — MOVEMIA connected cardio, INERTIA commercial line, PL Series selectorized strength, AFT360 functional training, and more.",
+        desc: "BH Fitness is Europe\'s leading fitness equipment brand, trusted by over 7,000 commercial gyms worldwide. As the authorised dealer, we supply the full BH Fitness range — MOVEMIA connected cardio, INERTIA commercial line, PL Series selectorized strength, AFT360 functional training, and more.",
         why: ['MOVEMIA — connected cardio with Smart Focus app & entertainment integration', 'INERTIA — full commercial cardio and selectorized strength range', 'PL SERIES — premium plate-loaded strength equipment', 'AFT360 — modular functional training stations', 'Supplied to MMA Matrix, 5-star hotels, residential towers and premium gyms across India'],
         sortOrder: ['MOVEMIA', 'INERTIA', 'PL SERIES', 'AFT360', 'INDOOR CYCLING', 'OTHERS'],
         logo: (typeof CLIENT_LOGOS !== 'undefined' && CLIENT_LOGOS['BH Fitness Brand']) || ''
