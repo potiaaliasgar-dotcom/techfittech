@@ -3549,3 +3549,10 @@
     transition: none !important;
   }
 }
+
+
+@media(max-width: 480px) {
+  .brands-logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
