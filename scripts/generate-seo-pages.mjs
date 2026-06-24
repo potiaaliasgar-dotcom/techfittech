@@ -71,7 +71,7 @@ const SEO_MAP = {
   },
 
   'alteon': {
-    title: 'Alteon Wellness & Recovery | Reseller — Cryotherapy, HBOT, Red-Light',
+    title: 'Alteon Wellness & Recovery | Reseller — Cryotherapy, HBOT...',
     desc: 'TechFit is a reseller of Alteon Wellness & Recovery. Premium recovery technology — hyperbaric oxygen chambers, cryotherapy, red-light therapy, dry-float, IHHT and more.',
     h1: 'Alteon Wellness & Recovery Technology',
     lastmod: '2026-05-24',
@@ -99,35 +99,35 @@ const SEO_MAP = {
     img: OG_CARDIO
   },
   'techfit': {
-    title: 'TechFit Active | In-House Gym & Sports Equipment Manufacturer India',
+    title: 'TechFit Active | In-House Gym & Sports Equipment Manufact...',
     desc: "TechFit Active — India's in-house manufacturer of MMA cages, boxing rings, CrossFit rigs, free weights, padel courts and aqua fitness equipment. Factory in Mumbai.",
     h1: 'TechFit Active | Gym & Sports Equipment Manufacturer India',
     lastmod: '2026-05-26',
     img: OG_RIGS
   },
   'mma-cages': {
-    title: 'MMA Cages & Boxing Rings India | TechFit — Manufacturer & Supplier',
+    title: 'MMA Cages & Boxing Rings India | TechFit — Manufacturer &...',
     desc: 'Competition and training MMA octagons, floor cages, podium cages and boxing rings by TechFit. Trusted by Matrix Fight Night, Super Fight League and Kumite 1.',
     h1: 'MMA Cages & Boxing Rings India | TechFit Manufacturer',
     lastmod: '2026-05-27',
     img: OG_MMA
   },
   'crossfit-rigs': {
-    title: 'CrossFit Rigs & Functional Training India | TechFit Manufacturer',
+    title: 'CrossFit Rigs & Functional Training India | TechFit Manuf...',
     desc: 'Custom CrossFit rigs, wall-mounted pull-up systems, calisthenics structures and modular functional-training rigs. Designed and manufactured by TechFit in Mumbai.',
     h1: 'CrossFit Rigs & Functional Training India | TechFit Manufacturer',
     lastmod: '2026-05-26',
     img: OG_RIGS
   },
   'free-weights': {
-    title: 'Free Weights & Strength Equipment India | TechFit Manufacturer',
+    title: 'Free Weights & Strength Equipment India | TechFit Manufac...',
     desc: 'Olympic barbells, rubber-coated dumbbells, bumper plates, power racks, squat stands and deadlift platforms. Manufactured in India by TechFit.',
     h1: 'Free Weights & Strength Equipment India | TechFit Manufacturer',
     lastmod: '2026-05-25',
     img: OG_WEIGHTS
   },
   'padel-pickleball': {
-    title: 'Padel & Pickleball Courts India | TechFit — Design, Build & Install',
+    title: 'Padel & Pickleball Courts India | TechFit — Design, Build...',
     desc: 'End-to-end padel and pickleball court construction in India. Design, fabrication and installation for clubs, resorts, housing societies and corporate campuses.',
     h1: 'Padel & Pickleball Court Construction India | TechFit',
     lastmod: '2026-05-24',
@@ -141,21 +141,21 @@ const SEO_MAP = {
     img: OG_AQUA
   },
   'wellness-solutions': {
-    title: 'Wellness Solutions India | TechFit — Recovery, Longevity & Spa Equipment',
+    title: 'Wellness Solutions India | TechFit — Recovery, Longevity...',
     desc: 'Complete wellness solutions by TechFit — from hyperbaric chambers and cryotherapy to infrared saunas and float pods. Turnkey wellness infrastructure for hotels, clinics and gyms.',
     h1: 'Wellness Solutions India | TechFit Recovery & Longevity',
     lastmod: '2026-05-27',
     img: OG_WELLNESS
   },
   'services': {
-    title: 'Gym & Wellness Services India | TechFit — Design, Install, AMC',
+    title: 'Gym & Wellness Services India | TechFit — Design, Install...',
     desc: 'TechFit services — gym design consultation, equipment supply, installation, flooring, AMC and after-sales support. Full turnkey solutions across India.',
     h1: 'Gym & Wellness Setup Services India | TechFit',
     lastmod: '2026-05-27',
     img: OG_CARDIO
   },
   'about': {
-    title: "About TechFit | India's Premier Gym & Sports Infrastructure Company",
+    title: "About TechFit | India's Premier Gym & Sports Infrastructu...",
     desc: "Founded in Mumbai, TechFit is India's leading gym, wellness and sports infrastructure company. Learn about our story, leadership, manufacturing facility and vision.",
     h1: "About TechFit | India's Premier Gym & Sports Infrastructure Company",
     lastmod: '2026-05-20',
@@ -169,7 +169,7 @@ const SEO_MAP = {
     img: OG_CARDIO
   },
   'for-gyms': {
-    title: 'Gym & Studio Setup India | TechFit — Equipment, Design & Installation',
+    title: 'Gym & Studio Setup India | TechFit — Equipment, Design &...',
     desc: 'Complete gym and studio setup solutions by TechFit. From equipment selection to layout design, flooring and installation — get your gym running fast.',
     h1: 'Gym & Studio Setup India | TechFit Turnkey Solutions',
     lastmod: '2026-05-24',
@@ -197,7 +197,7 @@ const SEO_MAP = {
     img: OG_CARDIO
   },
   'blogs': {
-    title: 'TechFit Blog | Gym, Wellness & Sports Industry Insights India',
+    title: 'TechFit Blog | Gym, Wellness & Sports Industry Insights I...',
     desc: "Industry insights, case studies and news from TechFit — India's leading gym, wellness and sports infrastructure company.",
     h1: 'TechFit Blog | Gym, Wellness & Sports Industry Insights India',
     lastmod: '2026-05-28',
@@ -246,14 +246,14 @@ const SEO_MAP = {
     img: OG_WELLNESS
   },
   'gym-flooring': {
-    title: 'Gym Flooring India | TechFit — Rubber, Turf & Interlocking Tiles',
+    title: 'Gym Flooring India | TechFit — Rubber, Turf & Interlockin...',
     desc: 'Professional gym flooring solutions — rubber rolls, interlocking tiles, artificial turf and shock-absorbent mats. Supplied and installed by TechFit across India.',
     h1: 'Gym Flooring India | TechFit Rubber & Turf Solutions',
     lastmod: '2026-05-25',
     img: OG_FLOORING
   },
   'flooring': {
-    title: 'Gym Flooring India | TechFit — Rubber, Turf & Interlocking Tiles',
+    title: 'Gym Flooring India | TechFit — Rubber, Turf & Interlockin...',
     desc: 'Professional gym flooring solutions — rubber rolls, interlocking tiles, artificial turf and shock-absorbent mats. Supplied and installed by TechFit across India.',
     h1: 'Gym Flooring India | TechFit Rubber & Turf Solutions',
     lastmod: '2026-05-25',
@@ -298,7 +298,7 @@ const SEO_MAP = {
     img: OG_CARDIO
   },
   'alternatives/life-fitness-india': {
-    title: 'Life Fitness Sourcing Analysis India | Alternatives & Customization',
+    title: 'Life Fitness Sourcing Analysis India | Alternatives & Cus...',
     desc: 'Thinking of Life Fitness for your commercial gym? Evaluate CapEx, direct European imports, in-house high-gauge rigs, and local AMC dispatches.',
     h1: 'Life Fitness Sourcing Analysis: Premium India Alternatives',
     lastmod: '2026-05-28',
@@ -312,126 +312,126 @@ const SEO_MAP = {
     img: OG_WELLNESS
   },
   'alternatives/precor-india': {
-    title: 'Precor India Commercial Gym Sourcing | Pricing & Alternatives',
+    title: 'Precor India Commercial Gym Sourcing | Pricing & Alternat...',
     desc: 'Thinking of Precor for your gym in India? Evaluate prices, shipping lead times, custom frame color options, and localized after-sales AMC support.',
     h1: 'Precor Commercial Equipment: In-Depth India Sourcing Guide',
     lastmod: '2026-05-29',
     img: OG_CARDIO
   },
   'alternatives/mecotec-cryotherapy-india': {
-    title: 'Electric Cryotherapy Chambers India | Mecotec Alternatives & Cost',
+    title: 'Electric Cryotherapy Chambers India | Mecotec Alternative...',
     desc: 'Sourcing a whole-body electric cryotherapy chamber in India? Compare Mecotec with Alteon nitrogen-free electric recovery chambers and local engineering.',
     h1: 'Electric Cryotherapy Chambers: Mecotec India B2B Sourcing Guide',
     lastmod: '2026-05-29',
     img: OG_WELLNESS
   },
   'alternatives/usi-cosco-techfit-cages': {
-    title: 'MMA Cages & Boxing Rings India | USI & Cosco vs TechFit Cages',
+    title: 'MMA Cages & Boxing Rings India | USI & Cosco vs TechFit C...',
     desc: 'Evaluating combat sports infrastructure in India? Compare catalog brands with TechFit bespoke heavy-duty MMA cages, boxing rings, and canvases.',
     h1: 'Commercial Combat Infrastructure: USI & Cosco vs TechFit Cages India',
     lastmod: '2026-05-29',
     img: OG_MMA
   },
   'commercial-gym-setup-cost-india': {
-    title: "Commercial Gym Setup Cost in India (2026 Guide) | TechFit India",
+    title: "Commercial Gym Setup Cost in India (2026 Guide) | TechFit...",
     desc: "An in-depth, transparent breakdown of commercial gym setup costs in India for 2026, detailing CapEx, rent, equipment, flooring, HVAC, and AMC budgets.",
     h1: "Commercial Gym Setup Cost in India: 2026 B2B Budget Guide",
     lastmod: "2026-05-30",
     img: OG_RIGS
   },
   'how-to-set-up-a-commercial-gym': {
-    title: "How to Set Up a Commercial Gym in India: Step-by-Step | TechFit India",
+    title: "How to Set Up a Commercial Gym in India: Step-by-Step | T...",
     desc: "The complete step-by-step roadmap to setting up a successful commercial gym in India, covering licensing, spatial design, equipment selection, and pre-sales marketing.",
     h1: "How to Set Up a Commercial Gym in India: The Ultimate Step-by-Step B2B Roadmap",
     lastmod: "2026-05-30",
     img: OG_WELLNESS
   },
   'best-commercial-treadmills-india': {
-    title: "Best Commercial Treadmills in India (2026 Buying Guide) | TechFit India",
+    title: "Best Commercial Treadmills in India (2026 Buying Guide) |...",
     desc: "An expert evaluation of the best B2B commercial treadmills in India for 2026, comparing motor duty, deck biomechanics, display technology, and AMC service uptime.",
     h1: "Best Commercial Treadmills in India: 2026 Commercial Gym Sourcing Guide",
     lastmod: "2026-05-30",
     img: OG_CARDIO
   },
   'commercial-gym-equipment-list': {
-    title: "Complete Commercial Gym Equipment List & Budget (2026) | TechFit India",
+    title: "Complete Commercial Gym Equipment List & Budget (2026) |...",
     desc: "The comprehensive, professional commercial gym equipment checklist and budget guide, categorized by cardio, selectorized strength, free weights, functional rigs, and recovery systems.",
     h1: "Complete Commercial Gym Equipment List & Sourcing Budget Checklist (2026)",
     lastmod: "2026-05-30",
     img: OG_WELLNESS
   },
   'hotel-gym-setup-guide': {
-    title: "Hotel & Resort Gym Setup: Equipment, Layout & Cost | TechFit India",
+    title: "Hotel & Resort Gym Setup: Equipment, Layout & Cost | Tech...",
     desc: "The definitive B2B hospitality guide on luxury hotel, resort, and corporate gym setups, focusing on guest demography, spacing, equipment, and Alteon recovery suites.",
     h1: "Hotel & Resort Gym Setup Guide: Premium Commercial Amenity Sourcing",
     lastmod: "2026-05-30",
     img: OG_RIGS
   },
   'bh-fitness-vs-life-fitness': {
-    title: "BH Fitness vs Life Fitness: Commercial Gym Sourcing compared | TechFit India",
+    title: "BH Fitness vs Life Fitness: Commercial Gym Sourcing compa...",
     desc: "An objective B2B comparison between BH Fitness (Spain) and Life Fitness, analyzing continuous motor duty, biomechanics, import CapEx, and local AMC speed in India.",
     h1: "BH Fitness vs Life Fitness India: Commercial Equipment Sourcing Comparison",
     lastmod: "2026-05-30",
     img: OG_WELLNESS
   },
   'tunturi-vs-precor': {
-    title: "Tunturi vs Precor: B2B Commercial Sourcing Guide | TechFit India",
+    title: "Tunturi vs Precor: B2B Commercial Sourcing Guide | TechFi...",
     desc: "An expert, factual B2B comparison between Tunturi (Finland) and Precor, analyzing Nordic ergonomics, durability, setup cost, and AMC response time in India.",
     h1: "Tunturi vs Precor India: Commercial Fitness Sourcing Comparison",
     lastmod: "2026-05-30",
     img: OG_WELLNESS
   },
   'best-gym-equipment-brands-india': {
-    title: "Best Commercial Gym Equipment Brands in India Compared (2026) | TechFit India",
+    title: "Best Commercial Gym Equipment Brands in India Compared (2...",
     desc: "An objective B2B comparison of the top commercial gym equipment brands in India for 2026, evaluating Technogym, Life Fitness, Precor, USI, Cosco, and TechFit.",
     h1: "Best Commercial Gym Equipment Brands in India Compared (2026 Buyer Guide)",
     lastmod: "2026-05-30",
     img: OG_WELLNESS
   },
   'imported-vs-indian-gym-equipment': {
-    title: "Imported vs Indian Gym Equipment: Which to Choose? | TechFit India",
+    title: "Imported vs Indian Gym Equipment: Which to Choose? | Tech...",
     desc: "A comprehensive, factual guide analyzing imported European/American gym brands versus Indian custom fabrication, outlining the optimal hybrid sourcing strategy.",
     h1: "Imported vs Indian Gym Equipment: Factual B2B Sourcing Analysis",
     lastmod: "2026-05-30",
     img: OG_WELLNESS
   },
   'gym-equipment-suppliers-india-compared': {
-    title: "Gym Equipment Suppliers in India Compared (2026) | TechFit India",
+    title: "Gym Equipment Suppliers in India Compared (2026) | TechFi...",
     desc: "An objective B2B buyer checklist and audit comparing commercial gym equipment suppliers in India, detailing manufacturing, distribution, and AMC speed.",
     h1: "Commercial Gym Equipment Suppliers in India Compared (2026 Buyer Audit)",
     lastmod: "2026-05-30",
     img: OG_WELLNESS
   },
   'commercial-gym-setup-mumbai': {
-    title: "Commercial Gym Setup in Mumbai | Turnkey Manufacturer & Supplier | TechFit India",
+    title: "Commercial Gym Setup in Mumbai | Turnkey Manufacturer & S...",
     desc: "The complete turnkey guide to commercial gym setups, hotel amenities, and custom fight infrastructure in Mumbai and the MMR, backed by TechFit Byculla factory.",
     h1: "Commercial Gym Setup in Mumbai: Factory-Direct B2B Turnkey Sourcing",
     lastmod: "2026-05-30",
     img: OG_RIGS
   },
   'commercial-gym-setup-pune': {
-    title: "Commercial Gym Setup in Pune | Equipment & Custom Fabrication | TechFit India",
+    title: "Commercial Gym Setup in Pune | Equipment & Custom Fabrica...",
     desc: "Turnkey commercial gym setups, IT park fitness amenities, and corporate wellness suites in Pune, Hinjewadi, Magarpatta, and Baner, backed by TechFit local support.",
     h1: "Commercial Gym Setup in Pune: Premium Turnkey B2B Fitness Solutions",
     lastmod: "2026-05-30",
     img: OG_RIGS
   },
   'commercial-gym-setup-bangalore': {
-    title: "Commercial Gym Setup in Bangalore | Turnkey Equipment Supplier | TechFit India",
+    title: "Commercial Gym Setup in Bangalore | Turnkey Equipment Sup...",
     desc: "The premier guide for turnkey commercial gym setups, corporate wellness centers, and developer clubhouse amenities in Bangalore, Whitefield, and Electronic City.",
     h1: "Commercial Gym Setup in Bangalore: Turnkey Sourcing & TechFit AMC Support",
     lastmod: "2026-05-30",
     img: OG_RIGS
   },
   'commercial-gym-setup-hyderabad': {
-    title: "Commercial Gym Setup in Hyderabad | Equipment & Court Setup | TechFit India",
+    title: "Commercial Gym Setup in Hyderabad | Equipment & Court Set...",
     desc: "Turnkey commercial gym setups, hotel fitness amenities, and sports court (padel/pickleball) installations in Hyderabad, Gachibowli, and Jubilee Hills.",
     h1: "Commercial Gym Setup in Hyderabad: Turnkey Fitness & Sports Court Construction",
     lastmod: "2026-05-30",
     img: OG_RIGS
   },
   'commercial-gym-setup-delhi-ncr': {
-    title: "Commercial Gym Setup in Delhi NCR | Turnkey B2B Equipment | TechFit India",
+    title: "Commercial Gym Setup in Delhi NCR | Turnkey B2B Equipment...",
     desc: "Turnkey B2B commercial gym setups, corporate fitness facilities, and custom functional training rigs in Delhi, Gurgaon, Noida, and the NCR.",
     h1: "Commercial Gym Setup in Delhi NCR: Turnkey Gym Sourcing & Alteon Recovery",
     lastmod: "2026-05-30",
@@ -599,7 +599,7 @@ const SEO_MAP = {
     img: OG_CARDIO
   },
   'matrix-fitness-alternative-india': {
-    title: 'Matrix Fitness Alternative India | BH Fitness vs Matrix Fitness',
+    title: 'Matrix Fitness Alternative India | BH Fitness vs Matrix F...',
     desc: 'Comparing Matrix Fitness with BH Fitness for commercial gyms in India. Analyze pricing, biomechanics, motor reliability, and after-sales service.',
     h1: 'The Best Alternative to Matrix Fitness in India: Why Commercial Gyms Choose BH Fitness',
     lastmod: '2026-06-15',
@@ -613,7 +613,7 @@ const SEO_MAP = {
     img: OG_WEIGHTS
   },
   'hammer-strength-alternative-india': {
-    title: 'Hammer Strength Alternative India | California Fitness vs Hammer Strength',
+    title: 'Hammer Strength Alternative India | California Fitness vs...',
     desc: 'Comparing Hammer Strength with California Fitness for commercial gyms in India. Analyze pricing, biomechanics, motor reliability, and after-sales service.',
     h1: 'The Best Alternative to Hammer Strength in India: Why Commercial Gyms Choose California Fitness',
     lastmod: '2026-06-15',
@@ -641,7 +641,7 @@ const SEO_MAP = {
     img: OG_WEIGHTS
   },
   'decathlon-domyos-vs-commercial-gym-equipment': {
-    title: 'Decathlon Domyos Alternative India | Commercial Grade Brands vs Decathlon Domyos',
+    title: 'Decathlon Domyos Alternative India | Commercial Grade Bra...',
     desc: 'Comparing Decathlon Domyos with Commercial Grade Brands for commercial gyms in India. Analyze pricing, biomechanics, motor reliability, and after-sales service.',
     h1: 'The Best Alternative to Decathlon Domyos in India: Why Commercial Gyms Choose Commercial Grade Brands',
     lastmod: '2026-06-15',
@@ -656,7 +656,7 @@ const SEO_MAP = {
     img: OG_WEIGHTS
   },
   'alternatives/hammer-strength-india': {
-    title: "Hammer Strength Alternative India | California Fitness vs Hammer Strength",
+    title: "Hammer Strength Alternative India | California Fitness vs...",
     desc: "Comparing the traditional distribution model of premium brands with California Fitness for commercial gyms in India. Analyze pricing, biomechanics, and after-sales service.",
     h1: "The Best Alternative to Hammer Strength in India: Why Commercial Gyms Choose California Fitness",
     lastmod: "2026-06-15",
@@ -677,14 +677,14 @@ const SEO_MAP = {
     img: OG_WEIGHTS
   },
   'alternatives/body-solid-india': {
-    title: "Body-Solid Alternative India | California Fitness vs Body-Solid",
+    title: "Body-Solid Alternative India | California Fitness vs Body...",
     desc: "Comparing the traditional distribution model of premium brands with California Fitness for commercial gyms in India. Analyze pricing, biomechanics, and after-sales service.",
     h1: "The Best Alternative to Body-Solid in India: Why Commercial Gyms Choose California Fitness",
     lastmod: "2026-06-15",
     img: OG_WEIGHTS
   },
   'alternatives/hoist-fitness-india': {
-    title: "Hoist Fitness Alternative India | California Fitness vs Hoist Fitness",
+    title: "Hoist Fitness Alternative India | California Fitness vs H...",
     desc: "Comparing the traditional distribution model of premium brands with California Fitness for commercial gyms in India. Analyze pricing, biomechanics, and after-sales service.",
     h1: "The Best Alternative to Hoist Fitness in India: Why Commercial Gyms Choose California Fitness",
     lastmod: "2026-06-15",
@@ -705,14 +705,14 @@ const SEO_MAP = {
     img: OG_WEIGHTS
   },
   'alternatives/american-fitness-india': {
-    title: "American Fitness Alternative India | California Fitness vs American Fitness",
+    title: "American Fitness Alternative India | California Fitness v...",
     desc: "Comparing the traditional distribution model of premium brands with California Fitness for commercial gyms in India. Analyze pricing, biomechanics, and after-sales service.",
     h1: "The Best Alternative to American Fitness in India: Why Commercial Gyms Choose California Fitness",
     lastmod: "2026-06-15",
     img: OG_WEIGHTS
   },
   'alternatives/atlantis-strength-india': {
-    title: "Atlantis Strength Alternative India | TechFit vs Atlantis Strength",
+    title: "Atlantis Strength Alternative India | TechFit vs Atlantis...",
     desc: "Comparing the traditional distribution model of premium brands with TechFit for commercial gyms in India. Analyze pricing, biomechanics, and after-sales service.",
     h1: "The Best Alternative to Atlantis Strength in India: Why Commercial Gyms Choose TechFit",
     lastmod: "2026-06-15",
@@ -726,14 +726,14 @@ const SEO_MAP = {
     img: OG_WEIGHTS
   },
   'alternatives/matrix-fitness-india': {
-    title: "Matrix Fitness Alternative India | BH Fitness vs Matrix Fitness",
+    title: "Matrix Fitness Alternative India | BH Fitness vs Matrix F...",
     desc: "Comparing the traditional distribution model of premium brands with BH Fitness for commercial gyms in India. Analyze pricing, biomechanics, and after-sales service.",
     h1: "The Best Alternative to Matrix Fitness in India: Why Commercial Gyms Choose BH Fitness",
     lastmod: "2026-06-15",
     img: OG_WEIGHTS
   },
   'alternatives/jerai-fitness-india': {
-    title: "Jerai Fitness Alternative India | TechFit & BH Fitness vs Jerai Fitness",
+    title: "Jerai Fitness Alternative India | TechFit & BH Fitness vs...",
     desc: "Comparing the traditional distribution model of premium brands with TechFit & BH Fitness for commercial gyms in India. Analyze pricing, biomechanics, and after-sales service.",
     h1: "The Best Alternative to Jerai Fitness in India: Why Commercial Gyms Choose TechFit & BH Fitness",
     lastmod: "2026-06-15",
@@ -3669,7 +3669,7 @@ function enrichSchema(route, schema) {
   // 2. Speakable Specification on key product/brand pages
   const speakableRoutes = [
     'mma-cages', 'crossfit-rigs', 'free-weights', 'padel-pickleball', 'aqua', 
-    'gym-flooring', 'flooring', 'wellness-solutions', 'alteon', 'bh-fitness', 
+    'gym-flooring', 'wellness-solutions', 'alteon', 'bh-fitness', 
     'tunturi', 'california-fitness', 'techfit'
   ];
   if (speakableRoutes.includes(route)) {

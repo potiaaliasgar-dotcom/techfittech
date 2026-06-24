@@ -1,31 +1,56 @@
 import re
+import json
 
-seo_path = '/Users/batman/Desktop/techfittech/scripts/generate-seo-pages.mjs'
-with open(seo_path, 'r', encoding='utf-8') as f:
-    content = f.read()
+seo_mjs_path = '/Users/batman/Desktop/techfittech/scripts/generate-seo-pages.mjs'
+with open(seo_mjs_path, 'r') as f:
+    lines = f.readlines()
 
-# Remove from PAGES dictionary
-pages_jordan = r"\s*'jordan-fitness': \{[\s\S]*?h1: 'Jordan Fitness Premium Gym Accessories India',\n  \},"
-content = re.sub(pages_jordan, '', content)
-pages_bendis = r"\s*'bendis-pilates': \{[\s\S]*?h1: 'Bendis Pilates Premium Studio Equipment India',\n  \},"
-content = re.sub(pages_bendis, '', content)
+for i, line in enumerate(lines):
+    if 'title: ' in line or 'description: ' in line or 'metaDesc: ' in line:
+        # Find the value
+        match = re.search(r"(title|description|metaDesc):\s*(['\"])(.*?)\2", line)
+        # Wait, \2 will match the same quote character. If there is an apostrophe inside double quotes, it won't break!
+        # What if it's single quotes with an escaped apostrophe inside? JS allows `\'`.
+        # Let's just do a simple replacement for length.
+        if match:
+            key = match.group(1)
+            quote = match.group(2)
+            val = match.group(3)
+            
+            # Trim
+            if key == 'title' and len(val) > 60:
+                val = val[:57].strip() + "..."
+            elif key in ['description', 'metaDesc'] and len(val) > 155:
+                val = val[:152].strip() + "..."
+                
+            # Reconstruct safely. Since we captured the quote type, we can reuse it, 
+            # as long as we don't introduce unescaped quotes.
+            lines[i] = re.sub(r"(title|description|metaDesc):\s*(['\"])(.*?)\2", f"{key}: {quote}{val}{quote}", line)
 
-# Remove from SCHEMAS dictionary
-schemas_jordan = r"\s*'jordan-fitness': \{[\s\S]*?\}\s*\}\s*\}\s*\},"
-content = re.sub(schemas_jordan, '', content)
-schemas_bendis = r"\s*'bendis-pilates': \{[\s\S]*?\}\s*\}\s*\}\s*\},"
-content = re.sub(schemas_bendis, '', content)
+# Reconcile 800+
+for i, line in enumerate(lines):
+    lines[i] = re.sub(r'300\+\s*(facilities|projects|gyms)', r'800+ installations', lines[i], flags=re.IGNORECASE)
 
-# Remove from BRANDS_WITH_CATEGORIES array
-content = content.replace(", 'bendis-pilates', 'jordan-fitness'", "")
+# Deprecate duplicates
+seo_mjs = "".join(lines)
+duplicates = [
+    'cybex-alternative-india',
+    'hammer-strength-alternative-india',
+    'matrix-fitness-alternative-india',
+    'nautilus-alternative-india',
+    'flooring'
+]
+for dup in duplicates:
+    seo_mjs = re.sub(rf"'{dup}',\s*", "", seo_mjs)
 
-# Remove from DYNAMIC_BRAND_PAGES dictionary
-dyn_bendis = r"\s*'bendis-pilates': \{ brand: 'Bendis Pilates', name: 'Bendis Pilates Premium Studio Equipment' \},"
-content = re.sub(dyn_bendis, '', content)
-dyn_jordan = r"\s*'jordan-fitness': \{ brand: 'Jordan Fitness', name: 'Jordan Fitness Premium Gym Accessories' \},"
-content = re.sub(dyn_jordan, '', content)
+# Unique meta descriptions
+alts = ['cybex-india', 'hammer-strength-india', 'nautilus-india', 'matrix-fitness-india']
+for a in alts:
+    brand = a.split('-')[0].capitalize()
+    # It might be in single or double quotes
+    seo_mjs = re.sub(rf"'{a}': \{{[^}}]*?title:\s*(['\"])([^\"]*?)\1,[^\}}]*?description:\s*(['\"]).*?\3", rf"'{a}': {{\n    title: \1\2\1,\n    description: \3Compare {brand} commercial gym equipment prices in India. See why TechFit is the best alternative for CapEx ROI.\3", seo_mjs)
 
-with open(seo_path, 'w', encoding='utf-8') as f:
-    f.write(content)
+with open(seo_mjs_path, 'w') as f:
+    f.write(seo_mjs)
 
-print("Cleaned up generate-seo-pages.mjs")
+print("SEO mjs fixed successfully!")

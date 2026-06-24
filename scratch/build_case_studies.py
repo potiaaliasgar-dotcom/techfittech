@@ -1,19 +1,12 @@
-import os
 import re
 
 app_js_path = '/Users/batman/Desktop/techfittech/public/assets/app.js'
-seo_mjs_path = '/Users/batman/Desktop/techfittech/scripts/generate-seo-pages.mjs'
-vercel_json_path = '/Users/batman/Desktop/techfittech/vercel.json'
-sitemap_path = '/Users/batman/Desktop/techfittech/public/sitemap-pages.xml'
-llms_path = '/Users/batman/Desktop/techfittech/public/llms.txt'
-llms_full_path = '/Users/batman/Desktop/techfittech/public/llms-full.txt'
-index_html_path = '/Users/batman/Desktop/techfittech/index.html'
-
 with open(app_js_path, 'r') as f:
     app_js = f.read()
 
-# 1. Re-apply Case Studies Safely
-case_studies_code = """function renderCaseStudies() {
+# 1. Add renderCaseStudies() and renderCaseStudy(slug)
+case_studies_code = """
+function renderCaseStudies() {
   const cases = [
     { slug: 'blog-mfn', title: "Matrix Fight Night × TechFit: 15 Events, 3 Cages", client: "Matrix Fight Night", segment: "Professional MMA", img: "/og/og-mma.jpg" }
   ];
@@ -103,139 +96,34 @@ function renderCaseStudy(slug) {
   return render404();
 }
 """
+
 if "function renderCaseStudies" not in app_js:
-    app_js = app_js.replace("function render404() {", case_studies_code + "\n\nfunction render404() {")
+    # Inject it before function render()
+    app_js = app_js.replace("function render() {", case_studies_code + "\n    function render() {")
+
+# 2. Add 'case-studies' to routing
+if "'case-studies': renderCaseStudies," not in app_js:
     app_js = app_js.replace("'404': render404", "'case-studies': renderCaseStudies,\n        'blog-mfn': () => renderCaseStudy('blog-mfn'),\n        '404': render404")
-    app_js = app_js.replace("'privacy-policy',", "'privacy-policy', 'case-studies',")
+    # Also update validPages
+    app_js = app_js.replace("'terms-of-service',", "'case-studies', 'terms-of-service',")
 
-
-# 2. Restore Hero WebP Redesign Safely
-new_hero = """<section class="hero" style="position:relative; overflow:hidden; min-height:80vh; display:flex; align-items:center; background:#000;">
-  <!-- LCP Optimized WebP Hero Image -->
-  <picture style="position:absolute; inset:0; width:100%; height:100%; z-index:0;">
-    <source type="image/webp" srcset="/assets/images/hero-mma.webp">
-    <img src="/og/og-mma.jpg" fetchpriority="high" decoding="sync" alt="Matrix Fight Night Professional MMA Cage by TechFit India" style="width:100%; height:100%; object-fit:cover; filter:brightness(0.5) contrast(1.1);">
-  </picture>
-  
-  <div class="hero-glow" style="z-index:1; position:absolute; bottom:0; left:0; right:0; height:50%; background:linear-gradient(to top, #000, transparent);"></div>
-  
-  <div class="hero-in" style="z-index:2; position:relative; text-align:center; padding:0 2rem;">
-    <h1 class="hero-title" style="color:#fff; font-size:clamp(2.5rem, 6vw, 4.5rem); font-weight:900; line-height:1.1; margin-bottom:1.5rem; text-shadow: 0 4px 12px rgba(0,0,0,0.5);">
-      <span style="color:var(--red);">India\\'s Premier</span><br>Gym & Combat Sports<br>Infrastructure
-    </h1>
-    <p class="hero-sub" style="color:rgba(255,255,255,0.9); font-size:1.2rem; max-width:800px; margin:0 auto 2rem;">
-      800+ installations delivered. Commercial gym setup, functional rigs, and professional MMA cages. Reseller for BH Fitness, Tunturi, and Alteon Wellness.
-    </p>
-    <div class="hero-btns" style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <button class="btn-red" onclick="go('contact')">Get a Custom B2B Quote</button>
-      <button class="btn" style="background:rgba(255,255,255,0.1); color:#fff; border:1px solid rgba(255,255,255,0.2);" onclick="go('for-gyms')">Commercial Gym Setup →</button>
-    </div>
-  </div>
-</section>"""
-
-parts = app_js.split('<section class="hero">')
-if len(parts) > 1:
-    subparts = parts[1].split('</section>')
-    # subparts[0] is the old hero inner content
-    app_js = parts[0] + new_hero + subparts[1] + '</section>'.join(subparts[2:])
-
-# 3. Fix Homepage "What We Do" Grid to 3x2 Layout
-grid_css_addition = """
-.grid-3x2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-@media (max-width: 992px) {
-  .grid-3x2 { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 600px) {
-  .grid-3x2 { grid-template-columns: 1fr; }
-}
-"""
-if ".grid-3x2" not in app_js:
-    app_js = app_js.replace("/* ── BASE CSS ── */", "/* ── BASE CSS ── */\n" + grid_css_addition)
-    # The grid for commercial pages
-    grid_start = app_js.find('    <div class="grid">')
-    if grid_start != -1:
-        app_js = app_js[:grid_start] + '    <div class="grid grid-3x2">' + app_js[grid_start+len('    <div class="grid">'):]
-
-# 4. Reconcile "800+ Installations" count globally
-def replace_800(text):
-    text = re.sub(r'300\+\s*(facilities|projects|gyms)', r'800+ installations', text, flags=re.IGNORECASE)
-    return text
-
-app_js = replace_800(app_js)
+# 3. Add internal links from related pages
+if "go('blog-mfn')" not in app_js:
+    # For MMA cages page, add a link to the case study
+    app_js = app_js.replace("<h2>Manufacturing Specs & Customization</h2>", 
+                            "<h2>Manufacturing Specs & Customization</h2>\n<div style=\"background:rgba(255,255,255,0.05);padding:1.5rem;border-radius:8px;margin-bottom:2rem;display:flex;align-items:center;justify-content:space-between;border:1px solid rgba(255,255,255,0.1)\"><div><h4 style=\"margin:0 0 0.5rem;color:#fff;font-size:1.2rem\">Matrix Fight Night Case Study</h4><p style=\"margin:0;color:rgba(255,255,255,0.7)\">Read how we built the 30ft broadcast-grade hexagonal cage for India's biggest MMA promotion.</p></div><button class=\"btn-red\" style=\"white-space:nowrap;margin-left:2rem\" onclick=\"go('blog-mfn')\">Read Case Study</button></div>\n")
+                            
 with open(app_js_path, 'w') as f:
     f.write(app_js)
 
-with open(seo_mjs_path, 'r') as f:
+# 4. Update scripts/generate-seo-pages.mjs to add 'case-studies' to validRoutes
+with open('/Users/batman/Desktop/techfittech/scripts/generate-seo-pages.mjs', 'r') as f:
     seo_mjs = f.read()
-    seo_mjs = replace_800(seo_mjs)
-
-with open(llms_path, 'r') as f:
-    llms = f.read()
-    llms = replace_800(llms)
-with open(llms_path, 'w') as f:
-    f.write(llms)
-
-with open(llms_full_path, 'r') as f:
-    llms_full = f.read()
-    llms_full = replace_800(llms_full)
-with open(llms_full_path, 'w') as f:
-    f.write(llms_full)
-
-# 5. Add 301 Redirects & Deprecate Duplicate Canonical URLs
-duplicates = [
-    'cybex-alternative-india',
-    'hammer-strength-alternative-india',
-    'matrix-fitness-alternative-india',
-    'nautilus-alternative-india',
-    'flooring'
-]
-for dup in duplicates:
-    seo_mjs = re.sub(rf"'{dup}',\s*", "", seo_mjs)
-
-# 6. Trim <title> and Meta Descriptions
-def trim_seo(match):
-    key = match.group(1)
-    val = match.group(2)
-    if key == 'title' and len(val) > 60:
-        val = val[:57].strip() + "..."
-    elif key in ['description', 'metaDesc'] and len(val) > 155:
-        val = val[:152].strip() + "..."
-    return f"{key}: '{val}'"
-
-seo_mjs = re.sub(r"(title|description|metaDesc):\s*['\"](.*?)['\"]", trim_seo, seo_mjs)
-
-# Add unique meta descriptions for alternatives
-alts = ['cybex-india', 'hammer-strength-india', 'nautilus-india', 'matrix-fitness-india']
-for a in alts:
-    brand = a.split('-')[0].capitalize()
-    seo_mjs = re.sub(rf"'{a}': \{{[^}}]*?title: '(.*?)',[^}}]*?description: '.*?'", rf"'{a}': {{\n    title: '\1',\n    description: 'Compare {brand} commercial gym equipment prices in India. See why TechFit is the best alternative for CapEx ROI.'", seo_mjs)
-
-with open(seo_mjs_path, 'w') as f:
+    
+if "'case-studies'" not in seo_mjs:
+    seo_mjs = seo_mjs.replace("'contact',", "'contact',\n  'case-studies',")
+    
+with open('/Users/batman/Desktop/techfittech/scripts/generate-seo-pages.mjs', 'w') as f:
     f.write(seo_mjs)
 
-# 7. Update Vercel redirects
-import json
-with open(vercel_json_path, 'r') as f:
-    v = json.load(f)
-
-new_redirects = [
-    { "source": "/cybex-alternative-india", "destination": "/alternatives/cybex-india", "permanent": True },
-    { "source": "/hammer-strength-alternative-india", "destination": "/alternatives/hammer-strength-india", "permanent": True },
-    { "source": "/matrix-fitness-alternative-india", "destination": "/alternatives/matrix-fitness-india", "permanent": True },
-    { "source": "/nautilus-alternative-india", "destination": "/alternatives/nautilus-india", "permanent": True },
-    { "source": "/flooring", "destination": "/gym-flooring", "permanent": True }
-]
-if "redirects" not in v:
-    v["redirects"] = []
-for nr in new_redirects:
-    if nr not in v["redirects"]:
-        v["redirects"].append(nr)
-
-with open(vercel_json_path, 'w') as f:
-    json.dump(v, f, indent=2)
-
-print("Remaining fixes applied successfully!")
+print("Injected Case Studies Hub into app.js and updated generator script.")

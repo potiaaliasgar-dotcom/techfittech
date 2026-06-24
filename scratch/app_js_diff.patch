@@ -1,0 +1,1882 @@
+diff --git a/public/assets/app.js b/public/assets/app.js
+index 4fc4b15..f61c66b 100644
+--- a/public/assets/app.js
++++ b/public/assets/app.js
+@@ -481,6 +481,1828 @@ async function submitEmbeddedQuote(projectType) {
+       }, 50);
+     }
+ 
++    
++function renderCaseStudies() {
++  const cases = [
++    { slug: 'blog-mfn', title: "Matrix Fight Night × TechFit: 15 Events, 3 Cages", client: "Matrix Fight Night", segment: "Professional MMA", img: "/og/og-mma.jpg" }
++  ];
++  let html = `<section class="phero" style="background:#09090b;padding:8rem 2rem 4rem;border-bottom:1px solid rgba(255,255,255,0.05)">
++    <section class="sec-in" style="max-width:1000px;margin:0 auto;text-align:center">
++      <div class="phero-label" style="color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:0.85rem">Our Work</div>
++      <h1 style="color:#fff;font-size:clamp(2.2rem,5vw,3.5rem);margin:0.5rem 0 1.5rem;line-height:1.15;font-weight:800">Case Studies</h1>
++      <p class="phero-sub" style="color:rgba(255,255,255,0.7);max-width:800px;margin:0 auto">Deep dives into the engineering and execution behind India's premier gym, wellness, and sports infrastructure projects.</p>
++    </section>
++  </section>
++  <section class="sec" style="background:#000;padding:4rem 2rem">
++    <section class="sec-in" style="max-width:1200px;margin:0 auto">
++      <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:2rem;">`;
++      
++  for (const c of cases) {
++    html += `
++        <div class="card" onclick="go('${c.slug}')" style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:12px;overflow:hidden;cursor:pointer;transition:transform 0.2s">
++          <img src="${c.img}" style="width:100%;height:220px;object-fit:cover;border-bottom:1px solid rgba(255,255,255,0.05)">
++          <div style="padding:1.5rem;">
++            <div style="font-size:0.8rem;color:var(--red);text-transform:uppercase;font-weight:600;margin-bottom:0.5rem">${c.segment}</div>
++            <h3 style="color:#fff;font-size:1.25rem;margin-bottom:1rem;line-height:1.4">${c.title}</h3>
++            <p style="color:rgba(255,255,255,0.6);font-size:0.95rem;margin-bottom:0"><strong>Client:</strong> ${c.client}</p>
++          </div>
++        </div>`;
++  }
++  html += `</div></section></section>${footer()}`;
++  return html;
++}
++
++function renderCaseStudy(slug) {
++  if (slug === 'blog-mfn') {
++    return `<section class="phero" style="background:linear-gradient(to bottom,rgba(9,9,11,0.8),rgba(9,9,11,1)),url('/og/og-mma.jpg');background-size:cover;background-position:center;padding:10rem 2rem 4rem;">
++      <section class="sec-in" style="max-width:1000px;margin:0 auto;text-align:center">
++        <div class="phero-label" style="color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:0.85rem">Professional MMA Infrastructure</div>
++        <h1 style="color:#fff;font-size:clamp(2rem,4vw,3rem);margin:0.5rem 0 1.5rem;line-height:1.15;font-weight:800">Matrix Fight Night × TechFit: 15 Events, 3 Cages, and the Hexagon That Built India's Pathway to the UFC</h1>
++      </section>
++    </section>
++    
++    <section class="sec" style="background:#000;padding:4rem 2rem">
++      <section class="sec-in" style="max-width:1000px;margin:0 auto">
++        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;background:rgba(255,255,255,0.03);padding:2rem;border-radius:12px;margin-bottom:4rem;border:1px solid rgba(255,255,255,0.05)">
++          <div><h4 style="color:var(--red);font-size:0.85rem;text-transform:uppercase;margin-bottom:0.5rem">Client</h4><p style="color:#fff;font-size:1.1rem;font-weight:600;margin:0">Matrix Fight Night</p></div>
++          <div><h4 style="color:var(--red);font-size:0.85rem;text-transform:uppercase;margin-bottom:0.5rem">Segment</h4><p style="color:#fff;font-size:1.1rem;font-weight:600;margin:0">Professional MMA</p></div>
++          <div><h4 style="color:var(--red);font-size:0.85rem;text-transform:uppercase;margin-bottom:0.5rem">Timeline</h4><p style="color:#fff;font-size:1.1rem;font-weight:600;margin:0">45 Days</p></div>
++          <div><h4 style="color:var(--red);font-size:0.85rem;text-transform:uppercase;margin-bottom:0.5rem">Outcome</h4><p style="color:#fff;font-size:1.1rem;font-weight:600;margin:0">3 Cages across 15 Events</p></div>
++        </div>
++        
++        <div class="prose" style="color:rgba(255,255,255,0.85);font-size:1.1rem;line-height:1.8">
++          <p>When Matrix Fight Night staged its debut event at the <strong>NSCI Dome in Mumbai on 12 March 2019</strong>, India's MMA scene had fighters, fans, and an appetite for elite competition. What it didn't yet have was a homegrown promotion with infrastructure built to international standards, or a cage manufacturer who could build one without a 90-day ocean shipment from the United States.</p>
++          <p>Seven years later, MFN has run 17 events, sealed a broadcast partnership with Disney+Hotstar, and produced two fighters — <strong>Anshul Jubli and Puja Tomar</strong> — who have gone on to sign with the UFC. TechFit was the official cage supplier for MFN 1 through MFN 15 — fifteen consecutive events, three full cage production cycles, two UFC signings, one continuous relationship.</p>
++          
++          <h2 style="color:#fff;font-size:1.8rem;margin:3rem 0 1.5rem">The brief: a broadcast-grade Indian cage, in 45 days</h2>
++          <p>The brief MFN brought to TechFit was specific:</p>
++          <ul style="margin-bottom:2rem">
++            <li>A 30-foot fighting surface, the same nominal size as cages used at top global promotions</li>
++            <li>Podium-mounted to elevate the action for both the live audience and camera operators</li>
++            <li>A hexagonal layout, not octagonal — a deliberate brand and design choice</li>
++            <li>Custom-printed canvas with MFN's logos, finished to a standard that holds up under HD broadcast cameras</li>
++            <li>Fully portable — delivered in 45 days</li>
++          </ul>
++
++          <h2 style="color:#fff;font-size:1.8rem;margin:3rem 0 1.5rem">Why a hexagon, not an octagon</h2>
++          <p>A hexagonal cage is its own visual signature on broadcast — instantly distinguishable from UFC footage. From a fight-dynamics perspective, six sides at a 30-foot diameter give fighters fewer but wider corners than an octagon at the same diameter. We engineered the hexagonal frame to the same load tolerances and impact specs as a top-level competition octagon.</p>
++
++          <h2 style="color:#fff;font-size:1.8rem;margin:3rem 0 1.5rem">The build: 45 days from steel to canvas</h2>
++          <p>Production for MFN 1 ran 45 days at our Mumbai facility. Four parallel workstreams:</p>
++          <ul style="margin-bottom:2rem">
++            <li><strong>Steel frame and podium substructure:</strong> Heavy-gauge structural steel for the six corner posts and the elevated platform.</li>
++            <li><strong>Vinyl fencing:</strong> Heavy-gauge fencing tensioned across six panels at competition-spec dimensions.</li>
++            <li><strong>High-density padding:</strong> Foam padding sleeves on every post and multi-layer floor padding.</li>
++            <li><strong>The canvas:</strong> High-resolution, multi-color brand graphics on a competition canvas that has to remain anti-slip and read crisply under sports broadcast lighting.</li>
++          </ul>
++
++          <div style="background:rgba(255,255,255,0.03);border-left:4px solid var(--red);padding:2rem;margin:3rem 0;font-style:italic;font-size:1.2rem;color:#fff">
++            "We have worked with TechFit from MFN 1 through MFN 15. Across fifteen events, the cage has done exactly what we needed it to — hold up to broadcast scrutiny, look right on camera, install on time, keep our fighters safe. They have been more than a vendor. They've been part of how MFN has grown."<br><br>
++            <span style="font-size:1rem;font-style:normal;color:rgba(255,255,255,0.6)">— Ayesha Shroff, Co-founder, Matrix Fight Night</span>
++          </div>
++          
++          <p style="margin-top:4rem;text-align:center">
++             <button class="btn-red" onclick="go('mma-cages')">Explore MMA Cages & Boxing Rings →</button>
++          </p>
++        </div>
++      </section>
++    </section>
++    ${footer()}`;
++  }
++  return render404();
++}
++
++    function render() {
++      const app = document.getElementById('app');
++      const views = {
++        'home': renderHome,
++        'for-gyms': () => renderSegment('gyms'),
++        'for-developers': () => renderSegment('developers'),
++        'for-schools': () => renderSegment('schools'),
++        'for-hotels': () => renderSegment('hotels'),
++        'techfit': renderTechFit,
++        'alteon': renderAlteon,
++        'bh-fitness': () => renderBrand('BH Fitness'),
++        'tunturi': () => renderBrand('Tunturi'),
++        'california-fitness': () => renderBrand('California Fitness'),
++        'mma-cages': renderMMA,
++        'crossfit-rigs': renderCrossFit,
++        'free-weights': renderFreeWeights,
++        'padel-pickleball': renderPadel,
++        'aqua': renderAqua,
++        'wellness-solutions': renderWellness,
++        'services': renderServices,
++        'about': renderAbout,
++        'contact': renderContact,
++        'thank-you': renderThankYou,
++        'blogs': renderBlogs,
++        'gym-flooring': renderFlooring,
++        'flooring': renderFlooring,
++        'blog-mfn': () => renderBlog('mfn'),
++        'blog-sfl': () => renderBlog('sfl'),
++        'blog-kumite': () => renderBlog('kumite'),
++        'blog-mma-matrix': () => renderBlog('mma-matrix'),
++        'blog-one-stop': () => renderBlog('one-stop'),
++        'blog-wellness-boom': () => renderBlog('wellness-boom'),
++        'privacy-policy': renderPrivacyPolicy,
++        'terms-of-service': renderTermsOfService,
++        'alternatives/technogym-india': renderTechnogymAlternative,
++        'alternatives/life-fitness-india': renderLifeFitnessAlternative,
++        'alternatives/sechrist-hyperbaric-india': renderSechristAlternative,
++        'alternatives/precor-india': renderPrecorAlternative,
++        'alternatives/mecotec-cryotherapy-india': renderMecotecAlternative,
++        'alternatives/usi-cosco-techfit-cages': renderUsiCoscoAlternative,
++        'alternatives': renderAlternativesHub,
++        'case-studies': renderCaseStudies,
++        'blog-mfn': () => renderCaseStudy('blog-mfn'),
++        '404': render404
++      };
++      const guideSlugs = ["commercial-gym-setup-cost-india","how-to-set-up-a-commercial-gym","best-commercial-treadmills-india","commercial-gym-equipment-list","hotel-gym-setup-guide","bh-fitness-vs-life-fitness","tunturi-vs-precor","best-gym-equipment-brands-india","imported-vs-indian-gym-equipment","gym-equipment-suppliers-india-compared","commercial-gym-setup-mumbai","commercial-gym-setup-pune","commercial-gym-setup-bangalore","commercial-gym-setup-hyderabad","commercial-gym-setup-delhi-ncr"];
++      if (guideSlugs.includes(page) || (typeof GUIDES_DATA !== 'undefined' && GUIDES_DATA[page])) {
++        app.innerHTML = renderGuide(page);
++      } else {
++        app.innerHTML = (views[page] || render404)();
++      }
++
++      // INJECT FAQ IF APPLICABLE
++      if (typeof ROUTE_FAQS !== 'undefined' && ROUTE_FAQS[page]) {
++        let faqHtml = '<section class="sec faq-sec"><section class="sec-in"><h2 class="sec-title">Frequently Asked Questions</h2><div class="faq">';
++        for (const f of ROUTE_FAQS[page]) {
++           faqHtml += faqItem(f.q, f.a);
++        }
++        faqHtml += '</div></section></section>';
++        
++        if (app.innerHTML.includes('<footer')) {
++           app.innerHTML = app.innerHTML.replace('<footer', faqHtml + '<footer');
++        } else {
++           app.innerHTML += faqHtml;
++        }
++      }
++
++      const commercialPages = {
++        'for-gyms': 'Commercial Gym Setup',
++        'for-developers': 'Real Estate & Developer Gym Amenities',
++        'for-schools': 'Educational Institution Gym Setup',
++        'for-hotels': 'Hotel & Corporate Wellness Suites',
++        'bh-fitness': 'BH Fitness Commercial Gym Equipment',
++        'tunturi': 'Tunturi Wellness & Strength Equipment',
++        'california-fitness': 'California Fitness Strength Equipment',
++        'mma-cages': 'Custom MMA Cage & Boxing Ring Fabrication',
++        'crossfit-rigs': 'Custom CrossFit & Functional Training Rigs',
++        'free-weights': 'Commercial Free Weights & Plate Setup',
++        'padel-pickleball': 'Padel & Pickleball Court Infrastructure',
++        'aqua': 'Aqua Fitness & Underwater Rehabilitation Systems',
++        'wellness-solutions': 'Wellness, Cryotherapy & Longevity Suites',
++        'gym-flooring': 'Commercial Gym & Sports Flooring',
++        'flooring': 'Commercial Gym & Sports Flooring',
++        'alteon': 'Alteon Hyperbaric & Wellness Chambers',
++        'techfit': 'TechFit Custom fabricated Gym Rigs & Combat Systems',
++        'alternatives/technogym-india': 'B2B Gym Equipment (Technogym India Alternative)',
++        'alternatives/life-fitness-india': 'B2B Gym Equipment (Life Fitness India Alternative)',
++        'alternatives/sechrist-hyperbaric-india': 'Clinical Hyperbaric Chambers (Sechrist India Alternative)',
++        'alternatives/precor-india': 'B2B Cardio & Strength (Precor India Alternative)',
++        'alternatives/mecotec-cryotherapy-india': 'Whole Body Cryotherapy (Mecotec India Alternative)',
++        'alternatives/usi-cosco-techfit-cages': 'Custom MMA Cages & Fight Rings (USI/Cosco Alternative)',
++        'alternatives/cybex-india': 'B2B Gym Equipment (Cybex Alternative)',
++        'alternatives/hammer-strength-india': 'B2B Gym Equipment (Hammer Strength Alternative)',
++        'alternatives/nautilus-india': 'B2B Gym Equipment (Nautilus Alternative)',
++        'alternatives/star-trac-india': 'B2B Gym Equipment (Star Trac Alternative)',
++        'alternatives/body-solid-india': 'B2B Gym Equipment (Body-Solid Alternative)',
++        'alternatives/hoist-fitness-india': 'B2B Gym Equipment (Hoist Fitness Alternative)',
++        'alternatives/freemotion-india': 'B2B Gym Equipment (FreeMotion Alternative)',
++        'alternatives/true-fitness-india': 'B2B Gym Equipment (True Fitness Alternative)',
++        'alternatives/american-fitness-india': 'B2B Gym Equipment (American Fitness Alternative)',
++        'alternatives/atlantis-strength-india': 'B2B Gym Equipment (Atlantis Strength Alternative)',
++        'alternatives/fitline-india': 'B2B Gym Equipment (Fitline Alternative)',
++        'alternatives/matrix-fitness-india': 'B2B Gym Equipment (Matrix Fitness Alternative)',
++        'alternatives/jerai-fitness-india': 'B2B Gym Equipment (Jerai Fitness Alternative)',
++        'alternatives/being-strong-india': 'B2B Gym Equipment (Being Strong Alternative)'
++      ,
++        'commercial-gym-setup-cost-india': 'Commercial Gym Setup Cost in India (2026 Guide)',
++        'how-to-set-up-a-commercial-gym': 'How to Set Up a Commercial Gym in India: Step-by-Step',
++        'best-commercial-treadmills-india': 'Best Commercial Treadmills in India (2026 Buying Guide)',
++        'commercial-gym-equipment-list': 'Complete Commercial Gym Equipment List & Budget (2026)',
++        'hotel-gym-setup-guide': 'Hotel & Resort Gym Setup: Equipment, Layout & Cost',
++        'bh-fitness-vs-life-fitness': 'BH Fitness vs Life Fitness: Commercial Gym Sourcing compared',
++        'tunturi-vs-precor': 'Tunturi vs Precor: B2B Commercial Sourcing Guide',
++        'best-gym-equipment-brands-india': 'Best Commercial Gym Equipment Brands in India Compared (2026)',
++        'imported-vs-indian-gym-equipment': 'Imported vs Indian Gym Equipment: Which to Choose?',
++        'gym-equipment-suppliers-india-compared': 'Gym Equipment Suppliers in India Compared (2026)',
++        'commercial-gym-setup-mumbai': 'Commercial Gym Setup in Mumbai | Turnkey Manufacturer & Supplier',
++        'commercial-gym-setup-pune': 'Commercial Gym Setup in Pune | Equipment & Custom Fabrication',
++        'commercial-gym-setup-bangalore': 'Commercial Gym Setup in Bangalore | Turnkey Equipment Supplier',
++        'commercial-gym-setup-hyderabad': 'Commercial Gym Setup in Hyderabad | Equipment & Court Setup',
++        'commercial-gym-setup-delhi-ncr': 'Commercial Gym Setup in Delhi NCR | Turnkey B2B Equipment'
++      };
++
++      if (commercialPages[page]) {
++        app.innerHTML += renderQuoteFormHtml(commercialPages[page]);
++      }
++
++      document.querySelectorAll('.faq-q').forEach(btn => {
++        btn.addEventListener('click', () => btn.closest('.faq-item').classList.toggle('open'));
++      });
++      initCarousels();
++    }
++
++    /* ── CAROUSEL WITH < > ARROWS ── */
++    function initCarousels() {
++      if (window.innerWidth > 700) return;
++      const selectors = ['.testi-grid', '.feat-grid', '.pillars', '.segments'];
++      selectors.forEach(sel => {
++        document.querySelectorAll(sel).forEach(track => {
++          if (track.closest('.carousel-wrap')) return; // already wrapped
++          const wrap = document.createElement('div');
++          wrap.className = 'carousel-wrap';
++          track.parentNode.insertBefore(wrap, track);
++          wrap.appendChild(track);
++          track.classList.add('carousel-track');
++
++          // Create prev button
++          const prev = document.createElement('button');
++          prev.className = 'carousel-btn prev';
++          prev.setAttribute('aria-label', 'Previous');
++          prev.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>';
++          wrap.appendChild(prev);
++
++          // Create next button
++          const next = document.createElement('button');
++          next.className = 'carousel-btn next';
++          next.setAttribute('aria-label', 'Next');
++          next.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>';
++          wrap.appendChild(next);
++
++          // Create dots
++          const items = track.children;
++          if (items.length > 1) {
++            const dotsWrap = document.createElement('div');
++            dotsWrap.className = 'carousel-dots';
++            for (let i = 0; i < items.length; i++) {
++              const dot = document.createElement('button');
++              dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
++              dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
++              dot.addEventListener('click', () => {
++                items[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
++              });
++              dotsWrap.appendChild(dot);
++            }
++            wrap.appendChild(dotsWrap);
++
++            // Update dots on scroll
++            let scrollTimer;
++            track.addEventListener('scroll', () => {
++              clearTimeout(scrollTimer);
++              scrollTimer = setTimeout(() => {
++                const scrollLeft = track.scrollLeft;
++                const cardWidth = items[0].offsetWidth;
++                const activeIdx = Math.round(scrollLeft / cardWidth);
++                dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) => {
++                  d.classList.toggle('active', i === activeIdx);
++                });
++              }, 60);
++            }, { passive: true });
++          }
++
++          // Button click handlers
++          prev.addEventListener('click', () => {
++            const cardWidth = items[0].offsetWidth + parseInt(getComputedStyle(track).gap || '16');
++            track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
++          });
++          next.addEventListener('click', () => {
++            const cardWidth = items[0].offsetWidth + parseInt(getComputedStyle(track).gap || '16');
++            track.scrollBy({ left: cardWidth, behavior: 'smooth' });
++          });
++        });
++      });
++    }
++
++    const navMap = {
++      'home': 'nl-home',
++      'for-gyms': 'nl-solutions', 'for-developers': 'nl-solutions', 'for-schools': 'nl-solutions', 'for-hotels': 'nl-solutions', 'wellness-solutions': 'nl-solutions',
++      'bh-fitness': 'nl-products', 'tunturi': 'nl-products', 'california-fitness': 'nl-products',
++      'mma-cages': 'nl-products', 'crossfit-rigs': 'nl-products', 'free-weights': 'nl-products',
++      'padel-pickleball': 'nl-products', 'aqua': 'nl-products',
++      'services': 'nl-services', 'about': 'nl-about', 'contact': 'nl-contact', 'blogs': 'nl-blogs', 'gym-flooring': 'nl-products', 'flooring': 'nl-products', 'blog-mfn': 'nl-blogs', 'blog-sfl': 'nl-blogs', 'blog-kumite': 'nl-blogs', 'blog-mma-matrix': 'nl-blogs', 'blog-one-stop': 'nl-blogs', 'blog-wellness-boom': 'nl-blogs', 'alteon': 'nl-products'
++    };
++    function navActive() {
++      document.querySelectorAll('.nl,.nd-btn').forEach(el => el.classList.remove('active'));
++      const id = navMap[page];
++      if (id) document.getElementById(id)?.classList.add('active');
++    }
++
++    function toggleDD(id) {
++      const menu = document.getElementById(id);
++      const wasOpen = menu.classList.contains('open');
++      closeAllDD();
++      if (!wasOpen) menu.classList.add('open');
++    }
++    function closeAllDD() {
++      document.querySelectorAll('.nd-menu').forEach(m => m.classList.remove('open'));
++    }
++    function toggleMob() {
++      const mob = document.getElementById('nav-mob');
++      const btn = document.getElementById('nav-ham-btn');
++      mob.classList.toggle('open');
++      const isOpen = mob.classList.contains('open');
++      btn.classList.toggle('active', isOpen);
++      btn.setAttribute('aria-expanded', isOpen);
++    }
++    document.addEventListener('click', e => {
++      if (!e.target.closest('.nd')) closeAllDD();
++    });
++
++    // ── SHARED COMPONENTS ──────────────────────────────────────────────────────────
++    function faqItem(q, a) {
++      return `<div class="faq-item"><button class="faq-q">${q}<span>+</span></button><div class="faq-a">${a}</div></div>`;
++    }
++
++    function renderProductRange() {
++      return `
++<section class="product-range-sec">
++  <div class="range-watermark">CRAFTED</div>
++  <section class="sec-in">
++    <div class="sec-hdr center">
++      <span class="sec-label">Product Range</span>
++      <h2 class="sec-title">WHAT WE BUILD</h2>
++      <p class="sec-sub">Five product categories. All designed and fabricated in-house at our Byculla facility.</p>
++    </div>
++    <div class="seg-grid">
++      <div class="seg-card reveal" onclick="go('mma-cages')">
++        <div class="card-num">01</div>
++        <div class="card-accent"></div>
++        <h3>MMA Cages<br>&amp; Rings</h3>
++        <p>Professional UFC-spec cages, boxing rings, and combat sports structures. Custom dimensions, powder-coat finishes, and full installation.</p>
++        <button class="segment-cta">EXPLORE MMA &rarr;</button>
++      </div>
++      <div class="seg-card reveal" onclick="go('crossfit-rigs')">
++        <div class="card-num">02</div>
++        <div class="card-accent"></div>
++        <h3>CrossFit<br>Rigs</h3>
++        <p>Modular pull-up rigs, wall-mounted systems, and full functional training structures for CrossFit boxes and functional training areas.</p>
++        <button class="segment-cta">EXPLORE RIGS &rarr;</button>
++      </div>
++      <div class="seg-card reveal" onclick="go('free-weights')">
++        <div class="card-num">03</div>
++        <div class="card-accent"></div>
++        <h3>Free<br>Weights</h3>
++        <p>Custom dumbbells, barbells, kettlebells, weight plates, and storage systems. Manufactured to commercial standards with anti-corrosion finishes.</p>
++        <button class="segment-cta">EXPLORE WEIGHTS &rarr;</button>
++      </div>
++      <div class="seg-card reveal" onclick="go('padel-pickleball')">
++        <div class="card-num">04</div>
++        <div class="card-accent"></div>
++        <h3>Padel &amp;<br>Pickleball</h3>
++        <p>Full padel court construction and pickleball court fit-outs. From steel structure to glass panels, netting, and artificial turf — turnkey delivery.</p>
++        <button class="segment-cta">EXPLORE COURTS &rarr;</button>
++      </div>
++      <div class="seg-card reveal" onclick="go('aqua')">
++        <div class="card-num">05</div>
++        <div class="card-accent"></div>
++        <h3>Aqua<br>Fitness</h3>
++        <p>Underwater treadmills, resistance bikes, and aqua therapy equipment. Corrosion-resistant builds for commercial pool environments.</p>
++        <button class="segment-cta">EXPLORE AQUA &rarr;</button>
++      </div>
++    </div>
++  </section>
++</section>`;
++    }
++
++    function ctaBand(h, sub, btn, page) {
++      return `<div class="cta-band">
++  <h2>${h}</h2>
++  ${sub ? `<p style="color:rgba(255,255,255,.7);font-size:.95rem;margin-bottom:1.5rem">${sub}</p>` : ''}
++  <button class="btn-white" onclick="go('${page || 'contact'}')">${btn}</button>
++</div>`;
++    }
++
++    function footer() {
++      return `<footer>
++  <div class="footer-in">
++    <div class="footer-grid">
++      <div class="footer-brand">
++        <div class="footer-brand-box"><img src="/assets/images/other/img-7edcc2dfb4.png" alt="TechFit" loading="lazy"></div>
++        <p>India's premier gym, wellness &amp; sports infrastructure partner. Design, supply, installation and after-sales — all under one roof.</p>
++      </div>
++      <div class="footer-col">
++        <h4>Solutions</h4>
++        <button onclick="go('for-gyms')">For Gyms &amp; Studios</button>
++        <button onclick="go('for-developers')">For Developers</button>
++        <button onclick="go('for-schools')">For Schools</button>
++        <button onclick="go('for-hotels')">For Hotels</button>
++      </div>
++      <div class="footer-col">
++        <h4>Products</h4>
++        <button onclick="go('bh-fitness')">BH Fitness</button>
++        <button onclick="go('tunturi')">Tunturi</button>
++        <button onclick="go('california-fitness')">California Fitness</button>
++        <button onclick="go('mma-cages')">MMA Cages</button>
++        <button onclick="go('crossfit-rigs')">CrossFit Rigs</button>
++        <button onclick="go('gym-flooring')">Gym Rubber Flooring</button>
++        <button onclick="go('alteon')">Alteon Wellness &amp; Recovery</button>
++      </div>
++      <div class="footer-col">
++        <h4>Get in Touch</h4>
++        <a href="tel:+919820166910" class="footer-tel">+91 98201 66910</a>
++        <a href="mailto:info@techfitactive.com" class="footer-email">info@techfitactive.com</a>
++        <a href="https://share.google/IahWbxIMm9ywKR9qp" target="_blank" rel="noopener" class="footer-addr">Plot No 309, Coal Bunder Road E,<br>Reay Road, Darukhana,<br>Mumbai, Maharashtra 400010</a>
++      </div>
++    </div>
++    <div class="footer-bottom">
++      <p>© 2026 TechFit. All Rights Reserved.</p>
++      <div style="display:flex;gap:1.5rem;margin:1rem 0;justify-content:center;flex-wrap:wrap">
++        <button onclick="go('privacy-policy')" style="background:none;border:none;color:rgba(255,255,255,.5);font-size:.85rem;cursor:pointer;padding:0;font-family:inherit" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Privacy Policy</button>
++        <button onclick="go('terms-of-service')" style="background:none;border:none;color:rgba(255,255,255,.5);font-size:.85rem;cursor:pointer;padding:0;font-family:inherit" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Terms of Service</button>
++      </div>
++      <p>MUMBAI · INDIA</p>
++    </div>
++  </div>
++</footer>`;
++    }
++
++    // ── CLIENT LOGO WALL ───────────────────────────────────────────────────────────
++    // Order: Gyms first, then Developers, then Corporate
++    const CLIENT_GROUPS = {
++      all: {
++        label: 'Our Clients',
++        clients: [
++          { name: "Gold's Gym", logo: "Gold's Gym" },
++          { name: 'Cult.fit', logo: 'Cult.fit' },
++          { name: 'MMA Matrix', logo: 'MMA Matrix' },
++          { name: 'Fit Club', logo: 'Fit Club' },
++          { name: 'Chisel Gym', logo: 'Chisel Gym' },
++          { name: 'Cloud 9 Gyms', logo: 'Cloud 9 Gyms' },
++          { name: 'Matrix Fight Night', logo: 'Matrix Fight Night' },
++          { name: 'Equinox Fitness', logo: 'Equinox Fitness' },
++          { name: 'SuperHuman Gym', logo: 'SuperHuman Gym' },
++          { name: 'Fitness 360', logo: 'Fitness 360' },
++          { name: 'Kumite 1 League', logo: 'Kumite 1 League' },
++          { name: 'Tarun Fitness', logo: null },
++          { name: 'Hiranandani', logo: 'Hiranandani' },
++          { name: 'Rustomjee', logo: 'Rustomjee' },
++          { name: 'Prestige Group', logo: 'Prestige Group' },
++          { name: 'Kalpataru', logo: 'Kalpataru' },
++          { name: 'Adani', logo: 'Adani' },
++          { name: 'Dosti', logo: 'Dosti' },
++          { name: 'Ajmera', logo: 'Ajmera' },
++          { name: 'S Raheja', logo: 'S Raheja' },
++          { name: 'Clover', logo: 'Clover' },
++          { name: 'Google', logo: 'Google' },
++          { name: 'TCS', logo: 'TCS' },
++        ]
++      },
++    };
++
++    function logoWall() {
++      const allClients = CLIENT_GROUPS.all.clients;
++      const cells = allClients.map(c => {
++        if (c.logo && CLIENT_LOGOS[c.logo]) {
++          return `<div class="logo-cell"><img src="${CLIENT_LOGOS[c.logo]}" alt="${c.name}" loading="lazy"></div>`;
++        } else {
++          return `<div class="logo-cell-noimg"><div class="logo-cell-name">${c.name}</div></div>`;
++        }
++      }).join('');
++      const amm = `<div class="logo-cell-noimg"><div class="logo-cell-name" style="font-weight:900;letter-spacing:.15em;text-align:center;font-size:0.75rem;">AND MANY<br>MORE</div></div>`;
++      return `<div class="logo-wall">${cells}${amm}</div>`;
++    }
++
++    // ── HOME ───────────────────────────────────────────────────────────────────────
++    function renderTechFit() {
++      return `
++<section class="phero" style="background:linear-gradient(135deg,#09090b 60%,#1a0a00)">
++  <section class="sec-in">
++    <div class="phero-label">Made in Mumbai</div>
++    <h1 style="color:#fff">TECHFIT<br><span style="color:var(--red)">CUSTOM</span></h1>
++    <p class="phero-sub">India's own commercial-grade fitness fabrication. MMA cages, CrossFit rigs, free weights, padel courts, and aqua fitness equipment — custom built to your specs.</p>
++    <div style="display:flex;gap:1.5rem;margin-top:2.5rem;flex-wrap:wrap;justify-content:center">
++      <button class="btn-red" onclick="go('contact')">Get a Custom Quote</button>
++      <button class="btn-outline" onclick="go('mma-cages')">Explore Products</button>
++    </div>
++  </section>
++</section>
++
++${renderProductRange()}
++
++<section class="sec">
++  <section class="sec-in">
++    <div class="sec-hdr center">
++      <span class="sec-label">The TechFit Advantage</span>
++      <h2 class="sec-title">BUILT FOR THE SPORT.<br>BUILT FOR YOUR BRAND.</h2>
++    </div>
++    <div class="pillars" style="margin-top:2.5rem">
++      <div class="pillar">
++        <h3>Made in India</h3>
++        <p>Designed and fabricated at our Byculla facility in Mumbai. No import delays, no currency risk &mdash; and full accountability from quote to installation.</p>
++      </div>
++      <div class="pillar">
++        <div class="pillar-icon">&#xFE0F;</div>
++        <h3>Custom to Spec</h3>
++        <p>Every product is built to your exact requirements &mdash; dimensions, colours, branding, load ratings. No catalogue constraints.</p>
++      </div>
++      <div class="pillar">
++        <h3>Turnkey Delivery</h3>
++        <p>We handle design, fabrication, logistics, and on-site installation. One point of contact from start to finish.</p>
++      </div>
++      <div class="pillar">
++        <h3>Post-Installation Support</h3>
++        <p>AMC and service contracts available. Our team responds quickly to any structural issues, ensuring your facility stays operational.</p>
++      </div>
++    </div>
++  </section>
++</section>
++
++${ctaBand("Ready to Build Something Custom?", "Share your space specs and requirements. Our fabrication team will design a solution and give you a detailed quote \xe2\x80\x94 no commitment needed.", "Get a Free Quote")}
++${footer()}
++`;
++    }
++
++    function renderAlteon() {
++      return `
++<section class="phero" style="position:relative;overflow:hidden;min-height:72vh;display:flex;align-items:center;background:#000">
++  <img src="/assets/images/other/img-ef2a03b968.jpg" alt="Alteon Wellness" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.55" loading="lazy">
++  <section class="sec-in" style="position:relative;z-index:2;padding:6rem 2rem">
++    <div class="phero-label" style="color:#4ade80;letter-spacing:.18em">Beauty. Wellness. Longevity.</div>
++    <h1 style="color:#fff;font-size:clamp(2.4rem,6vw,4.5rem);margin:.6rem 0 1.2rem;letter-spacing:.08em">ALTEON<br><span style="color:#4ade80;font-size:.65em;font-weight:600;letter-spacing:.12em">WELLNESS &amp; RECOVERY</span></h1>
++    <p class="phero-sub" style="max-width:560px;color:rgba(255,255,255,.82);font-size:1.05rem;line-height:1.7">An integrated beauty, wellness and longevity technology company — delivering end-to-end solutions for next-generation wellness environments.</p>
++    <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap">
++      <button class="btn-red" onclick="go('contact')">Enquire About Alteon</button>
++      <button style="background:transparent;border:1.5px solid rgba(255,255,255,.45);color:#fff;padding:.75rem 1.75rem;border-radius:.35rem;font-weight:700;cursor:pointer;letter-spacing:.04em;font-size:.9rem" onclick="document.getElementById('alteon-products').scrollIntoView({behavior:'smooth'})">VIEW PRODUCTS ↓</button>
++    </div>
++  </section>
++</section>
++
++<section class="sec" style="background:#09090b;color:#fff">
++  <section class="sec-in">
++    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center" class="rsp-1col">
++      <div>
++        <span class="sec-label" style="color:#4ade80">About Alteon</span>
++        <h2 class="sec-title" style="color:#fff;margin-top:.5rem">A MULTIDISCIPLINARY WELLNESS DESIGN &amp; INNOVATION COLLECTIVE</h2>
++        <p style="color:rgba(255,255,255,.7);line-height:1.8;margin-top:1.2rem;font-size:.95rem">From luxury wellness centers to performance clinics and longevity labs, we create integrated ecosystems where design, technology, and protocols work together to deliver recovery, optimization, and long-term health.</p>
++        <p style="color:rgba(255,255,255,.7);line-height:1.8;margin-top:.8rem;font-size:.95rem">Alteon partners with TechFit to bring world-class wellness and recovery technology to India&#x2019;s <a href="/for-gyms" onclick="event.preventDefault();go('for-gyms')" style="text-decoration:underline;color:#4ade80">premium gyms</a>, <a href="/for-hotels" onclick="event.preventDefault();go('for-hotels')" style="text-decoration:underline;color:#4ade80">hotels</a>, and wellness centres.</p>
++      </div>
++      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem" class="rsp-1col">
++        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(74,222,128,.25);border-radius:.75rem;padding:1.4rem">
++          <div style="font-size:.75rem;font-weight:700;letter-spacing:.12em;color:#4ade80;margin-bottom:.4rem">BIOSYSTEMS</div>
++          <p style="font-size:.78rem;color:rgba(255,255,255,.6);line-height:1.6">Tech focused on diagnostics, longevity and recovery.</p>
++        </div>
++        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(74,222,128,.25);border-radius:.75rem;padding:1.4rem">
++          <div style="font-size:.75rem;font-weight:700;letter-spacing:.12em;color:#4ade80;margin-bottom:.4rem">AESTHETICS</div>
++          <p style="font-size:.78rem;color:rgba(255,255,255,.6);line-height:1.6">Energy-based devices for non-invasive beauty solutions.</p>
++        </div>
++        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(74,222,128,.25);border-radius:.75rem;padding:1.4rem">
++          <div style="font-size:.75rem;font-weight:700;letter-spacing:.12em;color:#4ade80;margin-bottom:.4rem">GENETIX</div>
++          <p style="font-size:.78rem;color:rgba(255,255,255,.6);line-height:1.6">Innovations in peptides and stem cell regenerative pathways.</p>
++        </div>
++        <div style="background:rgba(255,255,255,.05);border:1px solid rgba(74,222,128,.25);border-radius:.75rem;padding:1.4rem">
++          <div style="font-size:.75rem;font-weight:700;letter-spacing:.12em;color:#4ade80;margin-bottom:.4rem">REGEN MEDICINE</div>
++          <p style="font-size:.78rem;color:rgba(255,255,255,.6);line-height:1.6">World-leading collaborations for genetic and hormonal testing.</p>
++        </div>
++      </div>
++    </div>
++  </section>
++</section>
++
++<section class="sec" style="background:#0d0d0f;color:#fff">
++  <section class="sec-in">
++    <div class="sec-hdr center">
++      <span class="sec-label" style="color:#4ade80">Why Alteon</span>
++      <h2 class="sec-title" style="color:#fff">THE ALTEON ADVANTAGE</h2>
++    </div>
++    <div class="pillars" style="margin-top:2.5rem">
++      <div class="pillar" style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.75rem;padding:1.8rem">
++        <h3 style="color:#fff">Device-First DNA</h3>
++        <p style="color:rgba(255,255,255,.65)">Technology is the foundation. Research and development is the holy grail. Every solution is built around world-leading devices.</p>
++      </div>
++      <div class="pillar" style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.75rem;padding:1.8rem">
++        <h3 style="color:#fff">Design-Integrated Thinking</h3>
++        <p style="color:rgba(255,255,255,.65)">Devices that enhance, not disrupt, spaces. Alteon builds wellness ecosystems that are as beautiful as they are functional.</p>
++      </div>
++      <div class="pillar" style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.75rem;padding:1.8rem">
++        <h3 style="color:#fff">Global Standards</h3>
++        <p style="color:rgba(255,255,255,.65)">World-leading certifications and compliance. FDA, CE, ROHS certified equipment. Clinical-grade technology for commercial environments.</p>
++      </div>
++      <div class="pillar" style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.75rem;padding:1.8rem">
++        <h3 style="color:#fff">End-to-End Turnkey</h3>
++        <p style="color:rgba(255,255,255,.65)">Idea. Execution. Operation. Alteon manages the complete journey from concept and design to installation, protocols, and ongoing support.</p>
++      </div>
++    </div>
++  </section>
++</section>
++
++<section class="sec" id="alteon-products" style="background:#09090b;color:#fff">
++  <section class="sec-in">
++    <div class="sec-hdr center">
++      <span class="sec-label" style="color:#4ade80">Product Range</span>
++      <h2 class="sec-title" style="color:#fff">LONGEVITY &amp; RECOVERY TECHNOLOGIES</h2>
++      <p class="sec-sub" style="color:rgba(255,255,255,.65)">Ten advanced technologies — from cellular recovery to cryotherapy — integrated into a single, cohesive wellness ecosystem.</p>
++    </div>
++  </section>
++</section>
++
++<section class="sec" style="background:#09090b;color:#fff">
++  <section class="sec-in">
++    
++      <div class="alteon-prod-card">
++        <div class="body">
++          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.5rem">COLD THERAPY — RECOVERY & VITALITY</div>
++          <h2 style="color:#fff;font-size:1.6rem;font-weight:900;letter-spacing:.04em;margin:0 0 1rem">CRYOTHERAPY CHAMBERS</h2>
++          <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.75;margin-bottom:1.4rem">One of the widest cryotherapy portfolios available — from nitrogen-based chambers for ultra-low temperatures to advanced electric cryotherapy systems. Delivers rapid cold exposure to support recovery, inflammation reduction, and overall vitality.</p>
++          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem">
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div style="font-size:1.3rem;flex-shrink:0;margin-top:.1rem">&#xFE0F;</div>
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Inflammation Reduction</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Reduces inflammation and swelling. Accelerates muscle recovery. Enhances circulation and oxygenation.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Mental Alertness</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Boosts energy and mental alertness. Supports pain relief and joint comfort.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Thermography Monitoring</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Real-time temperature tracking for precise and safe cryotherapy exposure.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Full-Electric Option</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Nitrogen-free electric chambers for enhanced safety and operational efficiency.</p></div>
++        </div></div>
++          
++          <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">-180°C</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">2-3 Minute Sessions</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">35% Recovery Boost</span></div>
++        </div>
++        <img src="/assets/images/other/img-9d9d8b67f8.jpg" alt="Cryotherapy Chambers" loading="lazy">
++      </div>
++  </section>
++</section>
++
++<section class="sec" style="background:#0d0d0f;color:#fff">
++  <section class="sec-in">
++    
++      <div class="alteon-prod-card">
++        <div class="body">
++          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.5rem">HBOT — CELLULAR OXYGENATION</div>
++          <h2 style="color:#fff;font-size:1.6rem;font-weight:900;letter-spacing:.04em;margin:0 0 1rem">HYPERBARIC OXYGEN CHAMBERS</h2>
++          <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.75;margin-bottom:1.4rem">A pressurized oxygen chamber delivering high-purity oxygen at elevated atmospheric pressure, allowing oxygen to dissolve deeply into blood plasma and tissues for accelerated healing and cellular regeneration.</p>
++          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem">
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Cellular Oxygenation</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Enhances oxygen delivery at the cellular level, accelerating healing and tissue repair.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Brain & Mental Clarity</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Improves brain function and mental clarity. Supports anti-aging and longevity pathways.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Recovery Acceleration</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Reduces inflammation & oxidative stress. Boosts energy, endurance, and resilience.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Certified & Safe</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Medical-grade design. FDA / CE / ROHS certified. 1.5–2.0 ATA. 1–10 user capacity.</p></div>
++        </div></div>
++          <table style="border-collapse:collapse;margin-top:1.2rem;width:100%"><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Pressure Range</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">1.5 – 2.0 ATA</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Oxygen Delivery</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">Up to 95–100% purity</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Seating</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">1–10 users (customizable)</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Session Duration</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">45–90 minutes</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Design</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">Luxury modular</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Certifications</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">FDA / CE / ROHS</td></tr></table>
++          <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">FDA / CE / ROHS Certified</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Medical-Grade</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">1-10 User Capacity</span></div>
++        </div>
++        <img src="/assets/images/other/img-b40ca800b5.jpg" alt="Hyperbaric Oxygen Chambers" loading="lazy">
++      </div>
++  </section>
++</section>
++
++<section class="sec" style="background:#09090b;color:#fff">
++  <section class="sec-in">
++    
++      <div class="alteon-prod-card">
++        <img src="/assets/images/other/img-db141a8379.jpg" alt="Red Light Therapy" loading="lazy">
++        <div class="body">
++          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.5rem">PHOTOBIOMODULATION</div>
++          <h2 style="color:#fff;font-size:1.6rem;font-weight:900;letter-spacing:.04em;margin:0 0 1rem">RED LIGHT THERAPY</h2>
++          <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.75;margin-bottom:1.4rem">Uses targeted red and near-infrared wavelengths to stimulate mitochondrial activity, increasing ATP production at the cellular level — supporting faster recovery, improved tissue health, and physiological resilience without needles, heat, or downtime.</p>
++          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem">
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">ATP Production</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Enhances cellular energy at the mitochondrial level — the foundation of recovery and performance.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Tissue Repair</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Supports tissue repair and regeneration. Reduces inflammation and oxidative stress.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Circulation</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Improves circulation and oxygen utilization. Promotes faster recovery and relaxation.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Full-Body Coverage</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Localized to full-body coverage. 680/850 nm wavelengths. 10–30 minute sessions.</p></div>
++        </div></div>
++          <table style="border-collapse:collapse;margin-top:1.2rem;width:100%"><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Wavelengths</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">Red & Near-IR (680 / 850 nm)</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Treatment Mode</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">Non-thermal, non-invasive</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Coverage</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">Localized to full-body</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Session Duration</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">10–30 minutes</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Operation</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">Touch-controlled, programmable</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Safety</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">Clinically compliant, zero downtime</td></tr></table>
++          <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Non-invasive & Pain-free</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Clinically Safe</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Zero Downtime</span></div>
++        </div>
++      </div>
++  </section>
++</section>
++
++<section class="sec" style="background:#0d0d0f;color:#fff">
++  <section class="sec-in">
++    
++      <div class="alteon-prod-card">
++        <img src="/assets/images/other/img-ab0d984233.jpg" alt="Infrared Sauna" loading="lazy">
++        <div class="body">
++          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.5rem">FULL-SPECTRUM INFRARED</div>
++          <h2 style="color:#fff;font-size:1.6rem;font-weight:900;letter-spacing:.04em;margin:0 0 1rem">INFRARED SAUNA</h2>
++          <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.75;margin-bottom:1.4rem">Infrared saunas use heat shock proteins to help the body recover. By promoting relaxation and detoxification, this therapy enhances circulation and supports overall wellness. Deep cellular detox with bioceramic-coated panels for maximum penetration.</p>
++          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem">
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Deep Cellular Detox</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Bioceramic-coated panels provide deep, uniform infrared penetration for effective detox and relaxation.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div style="font-size:1.3rem;flex-shrink:0;margin-top:.1rem">&#xFE0F;</div>
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Low-EMF Safety</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Engineered for minimal electromagnetic exposure, ensuring a calm and safe experience.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div style="font-size:1.3rem;flex-shrink:0;margin-top:.1rem">&#xFE0F;</div>
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Full-Spectrum IR</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Near, mid, and far infrared wavelengths support circulation, recovery, and cellular health.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Premium Build</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Premium Canadian Hemlock wood. Sizes from 4×4 ft. Adaptive ambient & therapeutic lighting.</p></div>
++        </div></div>
++          <table style="border-collapse:collapse;margin-top:1.2rem;width:100%"><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">IR Range</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">0.2–1 micron wavelength</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Cabin Size</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">From 4×4 ft (customizable)</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Material</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">Premium Canadian Hemlock</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Configuration</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">Fully customizable layout</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Lighting</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">Adaptive ambient & therapeutic</td></tr></table>
++          <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Full-Spectrum Infrared</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Low-EMF Design</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Premium Canadian Hemlock</span></div>
++        </div>
++      </div>
++  </section>
++</section>
++
++<section class="sec" style="background:#09090b;color:#fff">
++  <section class="sec-in">
++    
++      <div class="alteon-prod-card">
++        <div class="body">
++          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.5rem">QUANTUM HARMONICS — ZERO-LOAD RECOVERY</div>
++          <h2 style="color:#fff;font-size:1.6rem;font-weight:900;letter-spacing:.04em;margin:0 0 1rem">DRY FLOAT THERAPY</h2>
++          <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.75;margin-bottom:1.4rem">Creates a weightless, deeply calming experience without water contact, using a heated or cooled membrane that mimics natural buoyancy. Vibroacoustic sound gently guides the nervous system into deep relaxation, easing tension and mental fatigue.</p>
++          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem">
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Zero-Load Floating</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Zero-impact floating without water contact, reducing musculoskeletal load and joint stress.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div style="font-size:1.3rem;flex-shrink:0;margin-top:.1rem">&#xFE0F;</div>
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Thermoregulated Membrane</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Heated or cooled dry-float surface mimics natural buoyancy for nervous system regulation.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Vibroacoustic Neuromodulation</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Low-frequency sound resonance supports parasympathetic activation and guided relaxation.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Recovery & Stress</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Reduces inflammation, lowers stress hormones, eases muscle tension, and enhances circulation.</p></div>
++        </div></div>
++          
++          <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">No Water Contact</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Nervous System Recovery</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Mental Clarity & Calm</span></div>
++        </div>
++        <img src="/assets/images/other/img-dry-float.png" alt="Dry Float Therapy" loading="lazy">
++      </div>
++  </section>
++</section>
++
++<section class="sec" style="background:#0d0d0f;color:#fff">
++  <section class="sec-in">
++    
++      <div class="alteon-prod-card">
++        <img src="/assets/images/other/img-ihht.png" alt="IHHT" loading="lazy">
++        <div class="body">
++          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.5rem">INTERMITTENT HYPOXIC–HYPEROXIC THERAPY</div>
++          <h2 style="color:#fff;font-size:1.6rem;font-weight:900;letter-spacing:.04em;margin:0 0 1rem">IHHT</h2>
++          <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.75;margin-bottom:1.4rem">A science-backed therapy that alternates low-oxygen and high-oxygen breathing to stimulate cellular adaptation and mitochondrial efficiency. Supports improved energy metabolism, cardiovascular health, and resilience — without physical strain.</p>
++          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem">
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Mitochondrial Function</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Enhances mitochondrial function and cellular energy production. Improves cardiovascular efficiency.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Endurance & Recovery</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Boosts recovery, endurance, and overall physical resilience. Promotes anti-aging cellular regeneration.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Real-Time Monitoring</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Continuously tracks SpO₂ and heart rate for safety, precision, and individualized delivery.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Fully Seated Therapy</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Mitochondrial and cardiovascular benefits without workout fatigue. Ideal for recovery and clinical use.</p></div>
++        </div></div>
++          
++          <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">No Physical Strain</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Fully Seated</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Bio-Adaptive Smart Protocols</span></div>
++        </div>
++      </div>
++  </section>
++</section>
++
++<section class="sec" style="background:#09090b;color:#fff">
++  <section class="sec-in">
++    
++      <div class="alteon-prod-card">
++        <img src="/assets/images/other/img-biopod.png" alt="BIOPOD" loading="lazy">
++        <div class="body">
++          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.5rem">ALL-IN-ONE WELLNESS CAPSULE</div>
++          <h2 style="color:#fff;font-size:1.6rem;font-weight:900;letter-spacing:.04em;margin:0 0 1rem">BIOPOD</h2>
++          <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.75;margin-bottom:1.4rem">An all-in-one wellness capsule that seamlessly integrates salt therapy, oxygen therapy, red light therapy, and aromatherapy into a single, immersive environment — for recovery, relaxation, and long-term wellness.</p>
++          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem">
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Halotherapy</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Fine salt particles support respiratory health, skin clarity, and natural detoxification.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Oxygen Enrichment</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Increased oxygen availability enhances cellular recovery, energy, and vitality.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Red & Near-Infrared Light</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Light wavelengths stimulate cellular energy production and tissue regeneration.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Aromatic Infusion</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Therapeutic aromas promote relaxation, emotional balance, and stress reduction.</p></div>
++        </div></div>
++          
++          <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">4-in-1 Built-In Features</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Enhanced Respiratory Health</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Comprehensive Skin Rejuvenation</span></div>
++        </div>
++      </div>
++  </section>
++</section>
++
++<section class="sec" style="background:#0d0d0f;color:#fff">
++  <section class="sec-in">
++    
++      <div class="alteon-prod-card">
++        <div class="body">
++          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.5rem">MULTI-TECHNOLOGY RECOVERY</div>
++          <h2 style="color:#fff;font-size:1.6rem;font-weight:900;letter-spacing:.04em;margin:0 0 1rem">REVITALE CHAMBER</h2>
++          <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.75;margin-bottom:1.4rem">An advanced integrated therapy chamber designed for deep recovery, regeneration, and longevity. Brings multiple bioenergetic technologies into one immersive, intelligent experience.</p>
++          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem">
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">PEMF Therapy</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Multi-wave Pulsed Electromagnetic Fields support cellular renewal, pain relief, and enhanced recovery.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Vibroacoustic Sound</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Combines sound and vibration to relax the nervous system and improve mood, sleep, and overall wellbeing.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Multi-Wavelength Light</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Red & Near-IR photobiomodulation supports cellular restoration, circulation, and inflammation reduction.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Molecular Hydrogen</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">A powerful antioxidant approach that increases cellular resilience and supports systemic defense mechanisms.</p></div>
++        </div></div>
++          
++          <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Complete Full-Body Reset in One Session</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Cellular Renewal & Long-Term Vitality</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Effortless Zero-Gravity Restoration</span></div>
++        </div>
++        <img src="/assets/images/other/img-31bd74e2d0.jpg" alt="ReVITALE Chamber" loading="lazy">
++      </div>
++  </section>
++</section>
++
++<section class="sec" style="background:#09090b;color:#fff">
++  <section class="sec-in">
++    
++      <div class="alteon-prod-card">
++        <div class="body">
++          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.5rem">VACUUM CARDIO & INFRARED THERAPY</div>
++          <h2 style="color:#fff;font-size:1.6rem;font-weight:900;letter-spacing:.04em;margin:0 0 1rem">INFRASHAPE LYMPHATIC DRAINAGE</h2>
++          <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.75;margin-bottom:1.4rem">Combines vacuum technology with infrared therapy to support circulation, metabolic activation, and fat utilisation. Its low-impact, reclined cardio design offers a safe, joint-friendly way to improve mobility and overall vitality.</p>
++          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem">
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Accelerated Fat Burning</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Infrared heat increases metabolic rate and calorie expenditure, enhancing fat oxidation during sessions.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Lymphatic Drainage</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Deep-penetrating IR and vacuum pressure boost blood flow and lymph movement for detoxification.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Cellulite & Body Shaping</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Vacuum and infrared therapy helps smooth skin, reduce circumference, and target stubborn fat deposits.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Skin Rejuvenation</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Infrared and collagen light therapy improve skin elasticity and overall firmness.</p></div>
++        </div></div>
++          
++          <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Low-Impact Cardio</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Lymphatic Drainage</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Body Sculpting</span></div>
++        </div>
++        <img src="/assets/images/other/img-297328cce3.jpg" alt="Infrashape Lymphatic Drainage" loading="lazy">
++      </div>
++  </section>
++</section>
++
++<section class="sec" style="background:#0d0d0f;color:#fff">
++  <section class="sec-in">
++    
++      <div class="alteon-prod-card">
++        <img src="/assets/images/other/img-acca158d8e.jpg" alt="Water Massage & Recovery" loading="lazy">
++        <div class="body">
++          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.5rem">HYDRO-MASSAGE RECOVERY COUCHES</div>
++          <h2 style="color:#fff;font-size:1.6rem;font-weight:900;letter-spacing:.04em;margin:0 0 1rem">WATER MASSAGE & RECOVERY</h2>
++          <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.75;margin-bottom:1.4rem">Water Massage Beds & Recovery Couches offer deep relaxation and muscle relief through warm, hydro-massage and ergonomic support. Designed to accelerate recovery, reduce stress, and improve circulation — creating a calm reset zone within modern wellness spaces.</p>
++          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem">
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Dry Hydro-Massage</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Targeted massage through warm water jets without direct skin contact — hygienic and therapist-free.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Full-Body Support</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Contoured ergonomic design ensures optimal spinal alignment and comfort during recovery.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Customizable Programs</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Adjustable intensity, speed, and massage zones for personalized recovery sessions.</p></div>
++        </div>
++        <div style="display:flex;gap:.9rem;align-items:flex-start">
++          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Quiet Operation</div>
++          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Designed for seamless integration into luxury wellness and performance spaces.</p></div>
++        </div></div>
++          
++          <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Therapist-Free</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Fully Customizable</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Luxury Wellness</span></div>
++        </div>
++      </div>
++  </section>
++</section>
++
++<section class="sec" style="background:#060608;color:#fff">
++  <section class="sec-in">
++    <div class="sec-hdr center">
++      <span class="sec-label" style="color:#4ade80">Hydrothermal Circuit</span>
++      <h2 class="sec-title" style="color:#fff">HEAT, HYDRO &amp; CONTRAST THERAPY</h2>
++      <p class="sec-sub" style="color:rgba(255,255,255,.6)">Detox. Recovery. Circulation. A complete hydrothermal circuit integrates multiple contrast therapy modalities for maximum wellness impact.</p>
++    </div>
++    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem" class="rsp-1col">
++      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.15);border-radius:.9rem;padding:1.6rem;text-align:center">
++        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;color:#4ade80;margin-bottom:.5rem">STEAM ROOM</div>
++        <p style="font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.6">Deep heat and steam for respiratory cleansing, muscle relaxation, and skin detoxification.</p>
++      </div>
++      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.15);border-radius:.9rem;padding:1.6rem;text-align:center">
++        <div style="font-size:2rem;margin-bottom:.8rem">&#xFE0F;</div>
++        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;color:#4ade80;margin-bottom:.5rem">COLD PLUNGE POOL</div>
++        <p style="font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.6">Contrast hydrotherapy that reduces inflammation, boosts circulation, and accelerates recovery.</p>
++      </div>
++      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.15);border-radius:.9rem;padding:1.6rem;text-align:center">
++        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;color:#4ade80;margin-bottom:.5rem">VITALITY POOL</div>
++        <p style="font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.6">Hydrotherapy pool for relaxation, joint mobility, and overall vitality restoration.</p>
++      </div>
++      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.15);border-radius:.9rem;padding:1.6rem;text-align:center">
++        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;color:#4ade80;margin-bottom:.5rem">FLOTATION POOL</div>
++        <p style="font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.6">Sensory-reduced flotation for deep mental recovery, stress relief, and nervous system reset.</p>
++      </div>
++      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.15);border-radius:.9rem;padding:1.6rem;text-align:center">
++        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;color:#4ade80;margin-bottom:.5rem">EXPERIENCE SHOWERS</div>
++        <p style="font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.6">Multi-sensory rain, mist, and contrast shower experiences for invigorating transitions.</p>
++      </div>
++      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.15);border-radius:.9rem;padding:1.6rem;text-align:center">
++        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;color:#4ade80;margin-bottom:.5rem">HIMALAYAN SALT CAVE</div>
++        <p style="font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.6">Natural halotherapy environment supporting respiratory health, skin care, and deep relaxation.</p>
++      </div>
++    </div>
++  </section>
++</section>
++
++<section class="sec" style="background:#060608;color:#fff;border-top:1px solid rgba(74,222,128,.15)">
++  <section class="sec-in">
++    <div style="text-align:center;padding:1rem 0 2rem">
++      <span class="sec-label" style="color:#4ade80">Get In Touch</span>
++      <h2 class="sec-title" style="color:#fff;margin-top:.5rem">BRING ALTEON TO YOUR FACILITY</h2>
++      <p class="sec-sub" style="color:rgba(255,255,255,.65);margin-top:1rem">Design a complete wellness ecosystem with Alteon's integrated recovery, assessment and experience technologies. Our team handles architectural planning, installation and staff training end to end.</p>
++    </div>
++    <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
++      <button class="btn btn-primary" onclick="go('contact')" style="background:#4ade80;color:#09090b;border:none">Request Consultation</button>
++      <a class="btn btn-outline" href="https://wa.me/919820166910" target="_blank" rel="noopener" style="color:#4ade80;border-color:#4ade80">WhatsApp Us</a>
++    </div>
++  </section>
++</section>
++
++      <!-- Additional Alteon Technologies -->
++<section class="sec" style="background:#09090b;color:#fff">
++  <section class="sec-in">
++    <div class="sec-hdr center">
++      <span class="sec-label" style="color:#4ade80">Complete Portfolio</span>
++      <h2 class="sec-title" style="color:#fff">ADDITIONAL ALTEON TECHNOLOGIES</h2>
++      <p class="sec-sub" style="color:rgba(255,255,255,.65)">Beyond the flagship recovery systems, Alteon delivers a complete suite of assessment, diagnostics and hydrothermal experiences for integrated wellness facilities.</p>
++    </div>
++    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;margin-top:2.5rem">
++      
++      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.75rem;padding:1.8rem">
++        <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;color:#4ade80;margin-bottom:.5rem">ASSESSMENT &amp; DIAGNOSIS</div>
++        <h3 style="color:#fff;font-size:1.15rem;font-weight:800;margin-bottom:.6rem;letter-spacing:-.01em">VLAD Performance Testing</h3>
++        <p style="color:rgba(255,255,255,.62);font-size:.85rem;line-height:1.7">Precisely assesses strength, power, balance and neuromuscular function &mdash; delivering data-driven insights for performance tracking and personalised training or rehab.</p>
++      </div>
++
++      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.75rem;padding:1.8rem">
++        <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;color:#4ade80;margin-bottom:.5rem">PERFORMANCE DIAGNOSTICS</div>
++        <h3 style="color:#fff;font-size:1.15rem;font-weight:800;margin-bottom:.6rem;letter-spacing:-.01em">VO&#x2082; Max Testing</h3>
++        <p style="color:rgba(255,255,255,.62);font-size:.85rem;line-height:1.7">The gold standard for assessing cardiovascular fitness and endurance &mdash; measures how efficiently your body uses oxygen during exercise.</p>
++      </div>
++
++      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.75rem;padding:1.8rem">
++        <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;color:#4ade80;margin-bottom:.5rem">AI-POWERED IMAGING</div>
++        <h3 style="color:#fff;font-size:1.15rem;font-weight:800;margin-bottom:.6rem;letter-spacing:-.01em">Infrared Thermography</h3>
++        <p style="color:rgba(255,255,255,.62);font-size:.85rem;line-height:1.7">Non-invasive, contactless imaging of skin temperature distribution &mdash; used for blood-flow assessment, stress and recovery monitoring, and pain and tension mapping.</p>
++      </div>
++
++      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.75rem;padding:1.8rem">
++        <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;color:#4ade80;margin-bottom:.5rem">MUSCULOSKELETAL AI</div>
++        <h3 style="color:#fff;font-size:1.15rem;font-weight:800;margin-bottom:.6rem;letter-spacing:-.01em">Musculoskeletal Analysis</h3>
++        <p style="color:rgba(255,255,255,.62);font-size:.85rem;line-height:1.7">Advanced AI analyses musculoskeletal health, providing essential insights for individualised interventions and training protocols.</p>
++      </div>
++
++      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.75rem;padding:1.8rem">
++        <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;color:#4ade80;margin-bottom:.5rem">MULTI-THERAPY BED</div>
++        <h3 style="color:#fff;font-size:1.15rem;font-weight:800;margin-bottom:.6rem;letter-spacing:-.01em">ETERNA X Multi-Therapy Bed</h3>
++        <p style="color:rgba(255,255,255,.62);font-size:.85rem;line-height:1.7">A premium multi-modality therapy bed integrating red-light, PEMF, vibroacoustic and thermal elements into a single treatment platform for bespoke wellness protocols.</p>
++      </div>
++
++      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.75rem;padding:1.8rem">
++        <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;color:#4ade80;margin-bottom:.5rem">HAMMAM RITUAL</div>
++        <h3 style="color:#fff;font-size:1.15rem;font-weight:800;margin-bottom:.6rem;letter-spacing:-.01em">Hammam Table</h3>
++        <p style="color:rgba(255,255,255,.62);font-size:.85rem;line-height:1.7">Traditional heated-stone hammam tables for ritual cleansing, exfoliation and deep relaxation treatments &mdash; the centrepiece of a luxury spa circuit.</p>
++      </div>
++
++      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.75rem;padding:1.8rem">
++        <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;color:#4ade80;margin-bottom:.5rem">HYDROTHERMAL CIRCUIT</div>
++        <h3 style="color:#fff;font-size:1.15rem;font-weight:800;margin-bottom:.6rem;letter-spacing:-.01em">Cold Plunge Pool</h3>
++        <p style="color:rgba(255,255,255,.62);font-size:.85rem;line-height:1.7">Precision-controlled cold plunge pools for post-workout recovery, inflammation reduction and vagal activation &mdash; core to any hydrothermal circuit.</p>
++      </div>
++
++      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.75rem;padding:1.8rem">
++        <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;color:#4ade80;margin-bottom:.5rem">HEAT THERAPY</div>
++        <h3 style="color:#fff;font-size:1.15rem;font-weight:800;margin-bottom:.6rem;letter-spacing:-.01em">Traditional Sauna &amp; Steam Room</h3>
++        <p style="color:rgba(255,255,255,.62);font-size:.85rem;line-height:1.7">Finnish sauna and steam room installations with commercial-grade heaters, controls and premium wood/tile finishing, engineered for spa, hotel and wellness-centre environments.</p>
++      </div>
++
++      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.75rem;padding:1.8rem">
++        <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;color:#4ade80;margin-bottom:.5rem">RESPIRATORY WELLNESS</div>
++        <h3 style="color:#fff;font-size:1.15rem;font-weight:800;margin-bottom:.6rem;letter-spacing:-.01em">Himalayan Salt Cave</h3>
++        <p style="color:rgba(255,255,255,.62);font-size:.85rem;line-height:1.7">Immersive halotherapy salt caves for respiratory health, skin detoxification and deep relaxation &mdash; a signature experience for premium wellness destinations.</p>
++      </div>
++
++      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.75rem;padding:1.8rem">
++        <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;color:#4ade80;margin-bottom:.5rem">RELAXATION POOL</div>
++        <h3 style="color:#fff;font-size:1.15rem;font-weight:800;margin-bottom:.6rem;letter-spacing:-.01em">Flotation &amp; Vitality Pools</h3>
++        <p style="color:rgba(255,255,255,.62);font-size:.85rem;line-height:1.7">Saltwater flotation pools and energising vitality pools with hydro-massage jets. Deep relaxation, joint unloading, and nervous-system reset.</p>
++      </div>
++
++      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.75rem;padding:1.8rem">
++        <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;color:#4ade80;margin-bottom:.5rem">SENSORY RITUAL</div>
++        <h3 style="color:#fff;font-size:1.15rem;font-weight:800;margin-bottom:.6rem;letter-spacing:-.01em">Experience Showers</h3>
++        <p style="color:rgba(255,255,255,.62);font-size:.85rem;line-height:1.7">Multi-sensory shower cabins combining hot and cold jets, aromatherapy and chromotherapy for a stimulating pre- or post-spa ritual.</p>
++      </div>
++
++      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.75rem;padding:1.8rem">
++        <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;color:#4ade80;margin-bottom:.5rem">DETOX &amp; CONTOURING</div>
++        <h3 style="color:#fff;font-size:1.15rem;font-weight:800;margin-bottom:.6rem;letter-spacing:-.01em">Lymphatic Drainage Machines</h3>
++        <p style="color:rgba(255,255,255,.62);font-size:.85rem;line-height:1.7">Vacuum-assisted lymphatic drainage systems that enhance circulation, detoxification and body contouring &mdash; a proven aesthetics and recovery tool.</p>
++      </div>
++
++    </div>
++  </section>
++</section>
++
++<!-- Growing Wellness Market Callout -->
++<!-- Verticals -->
++<section class="sec" style="background:#0d0d0f;color:#fff">
++  <section class="sec-in">
++    <div class="sec-hdr center">
++      <span class="sec-label" style="color:#4ade80">Alteon Verticals</span>
++      <h2 class="sec-title" style="color:#fff">FOUR INTEGRATED WELLNESS VERTICALS</h2>
++    </div>
++    <div class="pillars" style="margin-top:2rem">
++      <div class="pillar" style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.75rem;padding:1.8rem">
++        <div style="font-size:.7rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.4rem">AESTHETICS</div>
++        <h3 style="color:#fff;font-size:1.1rem;font-weight:800;margin-bottom:.6rem">Energy-Based Aesthetics</h3>
++        <p style="color:rgba(255,255,255,.65)">Energy-based devices for non-invasive beauty solutions &mdash; skin, body and rejuvenation.</p>
++      </div>
++      <div class="pillar" style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.75rem;padding:1.8rem">
++        <div style="font-size:.7rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.4rem">BIOSYSTEMS</div>
++        <h3 style="color:#fff;font-size:1.1rem;font-weight:800;margin-bottom:.6rem">Longevity &amp; Recovery Tech</h3>
++        <p style="color:rgba(255,255,255,.65)">Device-first technology focused on diagnostics, longevity and recovery.</p>
++      </div>
++      <div class="pillar" style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.75rem;padding:1.8rem">
++        <div style="font-size:.7rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.4rem">GENETIX</div>
++        <h3 style="color:#fff;font-size:1.1rem;font-weight:800;margin-bottom:.6rem">Genetic &amp; Hormonal Testing</h3>
++        <p style="color:rgba(255,255,255,.65)">World-leading collaborations for genetic and hormonal testing solutions.</p>
++      </div>
++      <div class="pillar" style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.18);border-radius:.75rem;padding:1.8rem">
++        <div style="font-size:.7rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.4rem">REGEN MEDICINE</div>
++        <h3 style="color:#fff;font-size:1.1rem;font-weight:800;margin-bottom:.6rem">Peptides &amp; Stem Cells</h3>
++        <p style="color:rgba(255,255,255,.65)">Innovations in peptides and stem-cell regenerative pathways.</p>
++      </div>
++    </div>
++  </section>
++</section>
++
++<!-- Select Alteon Clients -->
++<section class="sec" style="background:#060608;color:#fff;border-top:1px solid rgba(74,222,128,.15)">
++  <section class="sec-in">
++    <div class="sec-hdr center">
++      <span class="sec-label" style="color:#4ade80">In Good Company</span>
++      <h2 class="sec-title" style="color:#fff">SELECT ALTEON CLIENTS</h2>
++      <p class="sec-sub" style="color:rgba(255,255,255,.65);max-width:760px;margin:1rem auto 0">
++        Wellness installations across India’s most discerning hospitality, longevity and performance brands.
++      </p>
++    </div>
++
++    <div class="client-grid">
++
++<!-- Hospitality -->
++<div class="client-card">
++  <img src="/assets/images/alteon/ritz-carlton.jpeg" alt="The Ritz-Carlton">
++</div>
++
++<!-- Real Estate -->
++<div class="client-card">
++  <img src="/assets/images/alteon/dlf.jpeg" alt="DLF">
++</div>
++
++<!-- Corporate -->
++<div class="client-card">
++  <img src="/assets/images/alteon/reliance.jpeg" alt="Reliance">
++</div>
++
++<div class="client-card">
++  <img src="/assets/images/alteon/zerodha.jpeg" alt="Zerodha">
++</div>
++
++<!-- Fitness -->
++<div class="client-card">
++  <img src="/assets/images/alteon/golds-gym.jpeg" alt="Gold's Gym">
++</div>
++
++<div class="client-card">
++  <img src="/assets/images/alteon/dy-patil.jpeg" alt="D Y Patil Healthcare">
++</div>
++
++<div class="client-card">
++  <img src="/assets/images/alteon/mma-matrix.jpeg" alt="MMA Matrix Gym">
++</div>
++
++<div class="client-card">
++  <img src="/assets/images/alteon/ultrahuman.jpeg" alt="Ultrahuman">
++</div>
++
++<div class="client-card">
++  <img src="/assets/images/alteon/biopeak.jpeg" alt="Biopeak">
++</div>
++
++<div class="client-card">
++  <img src="/assets/images/alteon/prana.jpeg" alt="Prana">
++</div>
++
++<div class="client-card">
++  <img src="/assets/images/alteon/oema.jpeg" alt="Oema">
++</div>
++
++<div class="client-card">
++  <img src="/assets/images/alteon/tulah.jpeg" alt="Tulah">
++</div>
++
++<div class="client-card">
++  <img src="/assets/images/alteon/dhun.jpeg" alt="Dhun">
++</div>
++
++<div class="client-card">
++  <img src="/assets/images/alteon/courtside.jpeg" alt="Courtside">
++</div>
++
++<div class="client-card">
++  <img src="/assets/images/alteon/potenza.jpeg" alt="Potenza">
++</div>
++
++<div class="client-card">
++  <img src="/assets/images/alteon/serve-society.jpeg" alt="Serve Society">
++</div>
++
++<div class="client-card">
++  <img src="/assets/images/alteon/aline.jpeg" alt="Aline">
++</div>
++  </section>
++</section>
++
++<section class="sec" style="background:#09090b;color:#fff">
++  <section class="sec-in" style="text-align:center">
++    <img src="${CLIENT_LOGOS['Alteon']}" alt="Alteon Wellness &amp; Recovery" style="max-height:56px;width:auto;margin:0 auto 2rem;display:block" loading="lazy">
++    <p style="color:rgba(255,255,255,.6);max-width:520px;margin:1rem auto 2rem;font-size:.92rem;line-height:1.7">TechFit is a reseller of Alteon Wellness &amp; Recovery. Speak to us about integrating Alteon&#x2019;s technology into your gym, hotel, or wellness centre.</p>
++      <button class="btn-red" style="font-size:1rem;padding:1rem 2.5rem" onclick="go('contact')">Book a Consultation</button>
++    </div>
++  </section>
++</section>
++${renderProductRange()}
++${footer()}
++`;
++    }
++
++    function renderHome() {
++      return `
++<section class="hero" style="position:relative; overflow:hidden; min-height:80vh; display:flex; align-items:center; background:#000;">
++  <!-- LCP Optimized WebP Hero Image -->
++  <picture style="position:absolute; inset:0; width:100%; height:100%; z-index:0;">
++    <source type="image/webp" srcset="/assets/images/hero-mma.webp">
++    <img src="/og/og-mma.jpg" fetchpriority="high" decoding="sync" alt="Matrix Fight Night Professional MMA Cage by TechFit India" style="width:100%; height:100%; object-fit:cover; filter:brightness(0.5) contrast(1.1);">
++  </picture>
++  
++  <div class="hero-glow" style="z-index:1; position:absolute; bottom:0; left:0; right:0; height:50%; background:linear-gradient(to top, #000, transparent);"></div>
++  
++  <div class="hero-in" style="z-index:2; position:relative; text-align:center; padding:0 2rem;">
++    <h1 class="hero-title" style="color:#fff; font-size:clamp(2.5rem, 6vw, 4.5rem); font-weight:900; line-height:1.1; margin-bottom:1.5rem; text-shadow: 0 4px 12px rgba(0,0,0,0.5);">
++      <span style="color:var(--red);">India's Premier</span><br>Gym & Combat Sports<br>Infrastructure
++    </h1>
++    <p class="hero-sub" style="color:rgba(255,255,255,0.9); font-size:1.2rem; max-width:800px; margin:0 auto 2rem;">
++      800+ installations delivered. Commercial gym setup, functional rigs, and professional MMA cages. Reseller for BH Fitness, Tunturi, and Alteon Wellness.
++    </p>
++    <div class="hero-btns" style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
++      <button class="btn-red" onclick="go('contact')">Get a Custom B2B Quote</button>
++      <button class="btn" style="background:rgba(255,255,255,0.1); color:#fff; border:1px solid rgba(255,255,255,0.2);" onclick="go('for-gyms')">Commercial Gym Setup →</button>
++    </div>
++  </div>
++</section>
++
++<section class="sec" style="background:#000; padding:2rem 0; border-bottom:1px solid rgba(255,255,255,0.05);">
++  <section class="sec-in" style="max-width:1200px; margin:0 auto;">
++    <p style="text-align:center; color:rgba(255,255,255,0.5); font-size:0.85rem; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1.5rem;">Trusted by India's Top Brands</p>
++    <div class="client-grid">POSTS = [];
++const GAW_ID = 'AW-17959203178';
++const GAW_FORM_LABEL = 'ObCTCPuJmv0bEOrizvNC';
++const GAW_PHONE_LABEL = 'ou7UCNq77bscEOrizvNC';
++const GAW_WHATSAPP_LABEL = 'bIN4CNS77bscEOrizvNC';
++const GAW_EMAIL_LABEL = 'T_tdCNe77bscEOrizvNC';
++
++// Expose constants to window so external scripts (like exit-intent.js) can read them
++window.GAW_ID = GAW_ID;
++window.GAW_FORM_LABEL = GAW_FORM_LABEL;
++window.GAW_PHONE_LABEL = GAW_PHONE_LABEL;
++window.GAW_WHATSAPP_LABEL = GAW_WHATSAPP_LABEL;
++window.GAW_EMAIL_LABEL = GAW_EMAIL_LABEL;
++
++function fireConversion(label, projectType = '') {
++  if (typeof gtag !== 'function') return;
++  const transactionId = `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
++  gtag('event', 'conversion', {
++    'send_to': `${GAW_ID}/${label}`,
++    'value': 1.0,
++    'currency': 'INR',
++    'transaction_id': transactionId,
++    'project_type': projectType
++  });
++  console.log(`[TechFit] Google Ads conversion fired for: ${label} (${projectType}) with transaction_id: ${transactionId}`);
++}
++window.fireConversion = fireConversion;
++
++function pictureTag(src, alt = '', className = '', isLazy = true, inlineStyles = '', width = '', height = '', id = '') {
++  if (!src) return '';
++  if (src.startsWith('assets/')) {
++    src = '/' + src;
++  }
++  const idAttr = id ? `id="${id}"` : '';
++  const lazyAttr = isLazy ? 'loading="lazy"' : 'loading="eager" fetchpriority="high"';
++  
++  if (src.endsWith('.svg') || src.startsWith('data:') || !src.includes('/assets/images/')) {
++    return `<img src="${src}" alt="${alt}" class="${className}" style="${inlineStyles}" ${idAttr} ${lazyAttr} decoding="async" ${width ? `width="${width}"` : ''} ${height ? `height="${height}"` : ''}>`;
++  }
++  
++  const ext = src.slice(src.lastIndexOf('.'));
++  const baseWithoutExt = src.slice(0, src.lastIndexOf('.'));
++  
++  const avifSrcset = `${baseWithoutExt}-400.avif 400w, ${baseWithoutExt}-800.avif 800w, ${baseWithoutExt}-1600.avif 1600w`;
++  const webpSrcset = `${baseWithoutExt}-400.webp 400w, ${baseWithoutExt}-800.webp 800w, ${baseWithoutExt}-1600.webp 1600w`;
++  
++  return `<picture class="${className}" style="${inlineStyles}">
++    <source type="image/avif" srcset="${avifSrcset}" sizes="(max-width: 768px) 100vw, 800px">
++    <source type="image/webp" srcset="${webpSrcset}" sizes="(max-width: 768px) 100vw, 800px">
++    <img src="${src}" alt="${alt}" class="${className}" style="${inlineStyles}" ${idAttr} ${lazyAttr} decoding="async" ${width ? `width="${width}"` : ''} ${height ? `height="${height}"` : ''}>
++  </picture>`;
++}
++
++function renderQuoteFormHtml(projectType) {
++  return `
++<section class="sec embedded-quote-sec">
++  <section class="sec-in">
++    <div class="embedded-quote-form-wrap">
++      <h3 class="eq-title">Request a Custom B2B Quote</h3>
++      <p class="eq-desc">Interested in <strong>${projectType}</strong>? Submit your details below, and our experts will contact you within one business day with a customized B2B proposal.</p>
++      <form id="embeddedQuoteForm" class="embedded-quote-form" onsubmit="event.preventDefault(); submitEmbeddedQuote('${projectType}'); return false;">
++        <div class="eq-form-grid">
++          <div class="eq-form-group">
++            <label for="eq-name">Full Name *</label>
++            <input type="text" id="eq-name" required placeholder="Enter your full name" />
++          </div>
++          <div class="eq-form-group">
++            <label for="eq-email">Email Address *</label>
++            <input type="email" id="eq-email" required placeholder="name@company.com" />
++          </div>
++          <div class="eq-form-group">
++            <label for="eq-phone">Mobile Number (10-Digit) *</label>
++            <input type="tel" id="eq-phone" required placeholder="9820166910" pattern="[0-9]{10}" title="Please enter a 10-digit mobile number" />
++          </div>
++          <div class="eq-form-group">
++            <label for="eq-location">City / Location *</label>
++            <input type="text" id="eq-location" required placeholder="e.g. Mumbai, Maharashtra" />
++          </div>
++        </div>
++        <button type="submit" class="eq-submit-btn">Get Custom B2B Quote →</button>
++      </form>
++    </div>
++  </section>
++</section>
++  `;
++}
++
++async function submitEmbeddedQuote(projectType) {
++  const btn = document.querySelector('#embeddedQuoteForm button[type="submit"]');
++  const originalText = btn.textContent;
++
++  const name = document.getElementById('eq-name').value.trim();
++  let phone = document.getElementById('eq-phone').value.trim();
++  phone = phone.replace(/\D/g, '').slice(0, 10);
++
++  const email = document.getElementById('eq-email').value.trim();
++  const city = document.getElementById('eq-location').value.trim();
++
++  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
++  if (!email || !emailRegex.test(email)) {
++    alert('Please enter a valid email address.');
++    return;
++  }
++
++  if (!name || phone.length !== 10) {
++    alert('Please enter your name and a valid 10-digit mobile number.');
++    return;
++  }
++
++  if (!city) {
++    alert('Please enter your City / Location.');
++    return;
++  }
++
++  btn.textContent = 'Sending...';
++  btn.disabled = true;
++
++  const data = {
++    name: name,
++    email: email,
++    phone: phone,
++    gymName: `B2B Embedded Form: ${projectType}`,
++    city: city,
++    requirement: projectType,
++    budget: "Not specified",
++    message: `Requested custom B2B quote for category: ${projectType}`
++  };
++
++  try {
++    const response = await fetch("https://techfit-backend.vercel.app/api/gmail-contact", {
++      method: "POST",
++      headers: { "Content-Type": "application/json" },
++      body: JSON.stringify(data)
++    });
++    const result = await response.json();
++    if (!response.ok) throw new Error(result.error || "Failed to send request.");
++    toast('✓ Quote request sent! We will call you within one business day.');
++    
++    // Fire Google Ads conversion
++    fireConversion(GAW_FORM_LABEL, projectType);
++
++    // Save lead parameters in sessionStorage for GTM
++    try {
++      sessionStorage.setItem('lead_email', email);
++      sessionStorage.setItem('lead_phone', phone);
++      sessionStorage.setItem('lead_name', name);
++
++      if (window.dataLayer) {
++        window.dataLayer.push({
++          'event': 'lead_submitted',
++          'lead_email': email,
++          'lead_phone': phone,
++          'lead_name': name
++        });
++      }
++    } catch (e) {
++      
++    }
++
++    // Redirect to thank-you page
++    history.pushState({}, '', '/thank-you');
++    page = 'thank-you';
++    render();
++    navActive();
++    updateSEO();
++  } catch (error) {
++    alert('Our factory mail server is currently experiencing issues. Please WhatsApp us on +91 98201 66910.');
++  } finally {
++    btn.textContent = originalText;
++    btn.disabled = false;
++  }
++}
++
++    const CLIENT_LOGOS = {
++      "Fitness 360": "/assets/images/other/img-7d5d25049d.png",
++      "Kumite 1 League": "/assets/images/other/img-6cbe8fa319.png",
++      "TechFit": "/assets/images/other/img-7edcc2dfb4.png",
++      "TechFit Active": "/assets/images/other/img-aea4e380c8.png",
++      "Alteon": "/assets/images/other/img-833b7c3cda.png", "Clover": "/assets/images/other/img-0295b0f7dd.png", "BH Fitness Brand": "/assets/images/other/img-c6dd7720b3.png", "Tunturi Brand": "/assets/images/other/img-ab61fa334b.png", "California Brand": "/assets/images/other/img-2bac6c9f2a.png", "Google": "/assets/images/other/img-8fed004a13.png", "TCS": "/assets/images/other/img-c4cbb16202.png", "Hiranandani": "/assets/images/other/img-47e351af32.png", "Rustomjee": "/assets/images/other/img-1928a2e1d9.svg", "Kalpataru": "/assets/images/other/img-a8f8a60482.png", "Prestige Group": "/assets/images/other/img-152846cd9e.svg", "Adani": "/assets/images/other/img-f5756ba05b.jpg", "K Raheja Corp": "/assets/images/other/img-5a1569d8be.png", "Antariksh": "/assets/images/other/img-051ba6924e.png", "Dosti": "/assets/images/other/img-e399025149.png", "Ajmera": "/assets/images/other/img-9e85e97419.png", "S Raheja": "/assets/images/other/img-eb3dc96e5f.png", "Gold's Gym": "/assets/images/other/img-594af2ad47.png", "Cult.fit": "/assets/images/other/img-10afac4755.png", "MMA Matrix": "/assets/images/other/img-5c5039980a.png", "Fit Club": "/assets/images/other/img-93f02c8c06.png", "Equinox Fitness": "/assets/images/other/img-95e6649488.png", "SuperHuman Gym": "/assets/images/other/img-65be2d720e.png", "Chisel Gym": "/assets/images/other/img-1a75915c4b.png", "Cloud 9 Gyms": "/assets/images/other/img-bca9c9fbbf.png", "Matrix Fight Night": "/assets/images/other/img-5c4e1617f3.png"
++    };
++
++    let page = 'home', brand = null, cat = 'All', pg = 1, q = '';
++
++    function showLoader() { const l = document.getElementById('global-loader'); if (l) l.classList.add('show'); }
++    function hideLoader() { const l = document.getElementById('global-loader'); if (l) l.classList.remove('show'); }
++
++    // ── SEO META TAG MANAGEMENT ───────────────────────────────────────────────────
++    const BASE = 'https://www.techfittech.com';
++    const DEFAULT_OG_IMG = BASE + '/og-image.jpg';
++
++    const SEO_MAP = {
++      'home': {
++        title: 'TechFit | Gym, Wellness & Sports Infrastructure',
++        desc: 'TechFit is a one-stop gym, wellness and sports infrastructure partner. Reseller for BH Fitness, Tunturi, California Fitness, and Alteon Wellness.',
++        img: DEFAULT_OG_IMG
++      },
++      'alteon': {
++        title: 'Alteon Wellness & Recovery | Reseller — Cryotherapy, HBOT, Red-Light',
++        desc: 'TechFit is a reseller of Alteon Wellness & Recovery. Premium recovery technology — hyperbaric oxygen chambers, cryotherapy, red-light therapy, dry-float, IHHT and more.',
++        img: DEFAULT_OG_IMG
++      },
++      'bh-fitness': {
++        title: 'BH Fitness | Reseller — Treadmills, Bikes, Ellipticals',
++        desc: 'TechFit is a reseller of BH Fitness commercial gym equipment. Treadmills, exercise bikes, ellipticals and strength machines for gyms, hotels and corporates.',
++        img: DEFAULT_OG_IMG
++      },
++      'tunturi': {
++        title: 'Tunturi | Reseller — Nordic Fitness Equipment',
++        desc: 'TechFit is a reseller of Tunturi fitness equipment. From Finland — premium cardio, strength and functional-training gear for commercial and home gyms.',
++        img: DEFAULT_OG_IMG
++      },
++      'california-fitness': {
++        title: 'California Fitness | Reseller — Commercial Gym Equipment',
++        desc: 'TechFit is a reseller of California Fitness. Professional-grade cardio and strength equipment for gyms, studios and fitness chains.',
++        img: DEFAULT_OG_IMG
++      },
++      'techfit': {
++        title: 'TechFit Active | In-House Gym & Sports Equipment Manufacturer India',
++        desc: 'TechFit Active — India\'s in-house manufacturer of MMA cages, boxing rings, CrossFit rigs, free weights, padel courts and aqua fitness equipment. Factory in Mumbai.',
++        img: DEFAULT_OG_IMG
++      },
++      'mma-cages': {
++        title: 'MMA Cages & Boxing Rings India | TechFit — Manufacturer & Supplier',
++        desc: 'Competition and training MMA octagons, floor cages, podium cages and boxing rings by TechFit. Trusted by Matrix Fight Night, Super Fight League and Kumite 1.',
++        img: DEFAULT_OG_IMG
++      },
++      'crossfit-rigs': {
++        title: 'CrossFit Rigs & Functional Training India | TechFit Manufacturer',
++        desc: 'Custom CrossFit rigs, wall-mounted pull-up systems, calisthenics structures and modular functional-training rigs. Designed and manufactured by TechFit in Mumbai.',
++        img: DEFAULT_OG_IMG
++      },
++      'free-weights': {
++        title: 'Free Weights & Strength Equipment India | TechFit Manufacturer',
++        desc: 'Olympic barbells, rubber-coated dumbbells, bumper plates, power racks, squat stands and deadlift platforms. Manufactured in India by TechFit.',
++        img: DEFAULT_OG_IMG
++      },
++      'padel-pickleball': {
++        title: 'Padel & Pickleball Courts India | TechFit — Design, Build & Install',
++        desc: 'End-to-end padel and pickleball court construction in India. Design, fabrication and installation for clubs, resorts, housing societies and corporate campuses.',
++        img: DEFAULT_OG_IMG
++      },
++      'aqua': {
++        title: 'Aqua Fitness & Underwater Treadmills India | TechFit',
++        desc: 'Underwater treadmills, aqua therapy pools and aqua fitness equipment by TechFit. Designed for physiotherapy clinics, hotels, wellness centres and rehabilitation facilities.',
++        img: DEFAULT_OG_IMG
++      },
++      'wellness-solutions': {
++        title: 'Wellness Solutions India | TechFit — Recovery, Longevity & Spa Equipment',
++        desc: 'Complete wellness solutions by TechFit — from hyperbaric chambers and cryotherapy to infrared saunas and float pods. Turnkey wellness infrastructure for hotels, clinics and gyms.',
++        img: DEFAULT_OG_IMG
++      },
++      'services': {
++        title: 'Gym & Wellness Services India | TechFit — Design, Install, AMC',
++        desc: 'TechFit services — gym design consultation, equipment supply, installation, flooring, AMC and after-sales support. Full turnkey solutions across India.',
++        img: DEFAULT_OG_IMG
++      },
++      'about': {
++        title: 'About TechFit | India\'s Premier Gym & Sports Infrastructure Company',
++        desc: 'Founded in Mumbai, TechFit is India\'s leading gym, wellness and sports infrastructure company. Learn about our story, leadership, manufacturing facility and vision.',
++        img: DEFAULT_OG_IMG
++      },
++      'contact': {
++        title: 'Contact TechFit | Get a Free Gym & Wellness Consultation',
++        desc: 'Get in touch with TechFit for a free gym setup consultation. Call +91 98201 66910 or visit us at Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India.',
++        img: DEFAULT_OG_IMG
++      },
++      'for-gyms': {
++        title: 'Gym & Studio Setup India | TechFit — Equipment, Design & Installation',
++        desc: 'Complete gym and studio setup solutions by TechFit. From equipment selection to layout design, flooring and installation — get your gym running fast.',
++        img: DEFAULT_OG_IMG
++      },
++      'for-developers': {
++        title: 'Real-Estate Developer Gym Amenities India | TechFit',
++        desc: 'Premium gym and wellness amenities for residential and commercial real-estate developers. TechFit partners with India\'s top builders for world-class fitness infrastructure.',
++        img: DEFAULT_OG_IMG
++      },
++      'for-schools': {
++        title: 'School & Institution Fitness Setup India | TechFit',
++        desc: 'Safe, age-appropriate fitness equipment and sports infrastructure for schools, colleges and institutions. Designed and supplied by TechFit across India.',
++        img: DEFAULT_OG_IMG
++      },
++      'for-hotels': {
++        title: 'Hotel Gym & Wellness Setup India | TechFit',
++        desc: 'Turnkey hotel gym and wellness solutions. Premium equipment from BH Fitness, Tunturi and California Fitness — plus spa, recovery and Alteon wellness technology.',
++        img: DEFAULT_OG_IMG
++      },
++      'blogs': {
++        title: 'TechFit Blog | Gym, Wellness & Sports Industry Insights India',
++        desc: 'Industry insights, case studies and news from TechFit — India\'s leading gym, wellness and sports infrastructure company.',
++        img: DEFAULT_OG_IMG
++      },
++      'blog-mfn': {
++        title: 'Matrix Fight Night — MMA Cage by TechFit | Case Study',
++        desc: 'How TechFit designed and built the competition-grade MMA octagon for Matrix Fight Night — India\'s premier mixed martial arts promotion.',
++        img: DEFAULT_OG_IMG
++      },
++      'blog-sfl': {
++        title: 'Super Fight League — MMA Cage by TechFit | Case Study',
++        desc: 'TechFit manufactured the professional MMA cage for Super Fight League, one of India\'s biggest combat sports events.',
++        img: DEFAULT_OG_IMG
++      },
++      'blog-kumite': {
++        title: 'Kumite 1 League — Boxing Ring by TechFit | Case Study',
++        desc: 'TechFit built the competition boxing ring for Kumite 1 League, India\'s high-profile combat sports league.',
++        img: DEFAULT_OG_IMG
++      },
++      'blog-mma-matrix': {
++        title: 'MMA Matrix — Tiger Shroff\'s Gym by TechFit | Case Study',
++        desc: 'TechFit designed and equipped MMA Matrix — Bollywood actor Tiger Shroff\'s signature mixed martial arts training gym.',
++        img: DEFAULT_OG_IMG
++      },
++      'blog-one-stop': {
++        title: 'One-Stop Gym Infrastructure — TechFit Advantage | Blog',
++        desc: 'Why TechFit is the one-stop solution for all gym infrastructure needs — from equipment and flooring to design, installation and maintenance.',
++        img: DEFAULT_OG_IMG
++      },
++      'blog-wellness-boom': {
++        title: 'India\'s Wellness Boom — Alteon & Recovery Tech | Blog',
++        desc: 'Exploring India\'s growing wellness and longevity market, and how Alteon recovery technology is leading the charge.',
++        img: DEFAULT_OG_IMG
++      },
++      'gym-flooring': {
++        title: 'Gym Flooring India | TechFit — Rubber, Turf & Interlocking Tiles',
++        desc: 'Professional gym flooring solutions — rubber rolls, interlocking tiles, artificial turf and shock-absorbent mats. Supplied and installed by TechFit across India.',
++        img: DEFAULT_OG_IMG
++      },
++      'flooring': {
++        title: 'Gym Flooring India | TechFit — Rubber, Turf & Interlocking Tiles',
++        desc: 'Professional gym flooring solutions — rubber rolls, interlocking tiles, artificial turf and shock-absorbent mats. Supplied and installed by TechFit across India.',
++        img: DEFAULT_OG_IMG
++      },
++      'thank-you': {
++        title: 'Thank You for Your Enquiry | TechFit India',
++        desc: 'Thank you for contacting TechFit. We have received your inquiry and our team will get in touch with you shortly.',
++        img: DEFAULT_OG_IMG
++      }
++    };
++
++    function updateSEO() {
++      const routeKey = page || 'home';
++      const seo = SEO_MAP[routeKey] || SEO_MAP['home'];
++      const path = routeKey === 'home' ? '/' : '/' + routeKey;
++      const fullUrl = BASE + path;
++
++      // 1. Canonical URL
++      const canonical = document.getElementById('canonical-link');
++      if (canonical) canonical.setAttribute('href', fullUrl);
++
++      // 2. Title
++      document.title = seo.title;
++
++      // 3. Meta description
++      const metaDesc = document.getElementById('meta-description');
++      if (metaDesc) metaDesc.setAttribute('content', seo.desc);
++
++      // 4. Open Graph tags
++      const ogUrl = document.getElementById('og-url');
++      if (ogUrl) ogUrl.setAttribute('content', fullUrl);
++
++      const ogTitle = document.getElementById('og-title');
++      if (ogTitle) ogTitle.setAttribute('content', seo.title);
++
++      const ogDesc = document.getElementById('og-description');
++      if (ogDesc) ogDesc.setAttribute('content', seo.desc);
++
++      const ogImg = document.getElementById('og-image');
++      if (ogImg) ogImg.setAttribute('content', seo.img || DEFAULT_OG_IMG);
++
++      // 5. Twitter Card tags
++      const twTitle = document.getElementById('tw-title');
++      if (twTitle) twTitle.setAttribute('content', seo.title);
++
++      const twDesc = document.getElementById('tw-description');
++      if (twDesc) twDesc.setAttribute('content', seo.desc);
++
++      const twImg = document.getElementById('tw-image');
++      if (twImg) twImg.setAttribute('content', seo.img || DEFAULT_OG_IMG);
++
++      // 6. Dynamic Route-Aware WhatsApp Prefill
++      const waCta = document.getElementById('dynamic-whatsapp-cta');
++      const waFloat = document.querySelector('a[aria-label="Chat on WhatsApp"]');
++      
++      let msg = "Hi TechFit, I'd like a quote for gym and wellness infrastructure.";
++      const key = page || 'home';
++      
++      if (key === 'mma-cages') {
++        msg = "Hi TechFit, I'd like a quote for an MMA Cage or Boxing Ring.";
++      } else if (key === 'padel-pickleball') {
++        msg = "Hi TechFit, I'd like a quote for a panoramic Padel Court or Pickleball Court.";
++      } else if (key === 'alteon' || key === 'wellness-solutions') {
++        msg = "Hi TechFit, I'd like a quote for Alteon Wellness & Recovery equipment.";
++      } else if (key === 'crossfit-rigs') {
++        msg = "Hi TechFit, I'd like a quote for a custom CrossFit Rig.";
++      } else if (key === 'free-weights') {
++        msg = "Hi TechFit, I'd like a quote for commercial free weights.";
++      } else if (key === 'aqua') {
++        msg = "Hi TechFit, I'd like a quote for SS316 underwater fitness equipment.";
++      } else if (key === 'gym-flooring' || key === 'flooring') {
++        msg = "Hi TechFit, I'd like a quote for commercial gym flooring.";
++      } else if (key.startsWith('blog-')) {
++        msg = `Hi TechFit, I read your case study on "${seo.title}" and would like to know more.`;
++      } else if (key.startsWith('alternatives/')) {
++        msg = `Hi TechFit, I read your sourcing guide on "${seo.title}" and would like a custom quote.`;
++      } else if (key === 'for-gyms') {
++        msg = "Hi TechFit, I'd like to consult on setting up a commercial gym or studio.";
++      } else if (key === 'for-developers') {
++        msg = "Hi TechFit, I'd like to consult on gym amenities for a real-estate development project.";
++      } else if (key === 'for-schools') {
++        msg = "Hi TechFit, I'd like to consult on safe sports and gym infrastructure for a school or college.";
++      } else if (key === 'for-hotels') {
++        msg = "Hi TechFit, I'd like to consult on hotel gym and wellness recovery amenities.";
++      }
++      
++      const encodedMsg = encodeURIComponent(msg);
++      const targetUrl = `https://wa.me/919820166910?text=${encodedMsg}`;
++      
++      if (waCta) waCta.setAttribute('href', targetUrl);
++      if (waFloat) waFloat.setAttribute('href', targetUrl);
++    }
++
++    let searchTimeout;
++    function handleSearch(val) {
++      q = val; pg = 1;
++      clearTimeout(searchTimeout);
++      searchTimeout = setTimeout(() => {
++        render();
++        const searchBox = document.querySelector('.search-box');
++        if (searchBox) {
++          searchBox.focus();
++          const len = searchBox.value.length;
++          searchBox.setSelectionRange(len, len);
++          const grid = document.getElementById('prod-grid');
++          if (grid) {
++            const topPos = grid.getBoundingClientRect().top + window.scrollY - 150;
++            window.scrollTo({ top: topPos, behavior: 'instant' });
++          }
++        }
++      }, 350);
++    }
++
++    function go(p, b, c) {
++      showLoader();
++      page = p; brand = b || null; cat = c || 'All'; pg = 1; q = '';
++      closeAllDD();
++      const mob = document.getElementById('nav-mob');
++      const btn = document.getElementById('nav-ham-btn');
++      mob.classList.remove('open');
++      if (btn) { btn.classList.remove('active'); btn.setAttribute('aria-expanded', 'false'); }
++
++      const searchParams = new URLSearchParams();
++      if (b) searchParams.set('brand', b);
++      if (c && c !== 'All') searchParams.set('cat', c);
++      let url = `/${p}`;
++      if ([...searchParams].length > 0) url += `?${searchParams.toString()}`;
++      try {
++        if (window.location.pathname !== url || window.location.search !== (searchParams.toString() ? `?${searchParams.toString()}` : '')) {
++          history.pushState({ p, b, c }, '', url);
++        }
++      } catch (e) { }
++
++      setTimeout(() => {
++        window.scrollTo({ top: 0, behavior: 'instant' });
++        render(); navActive(); updateSEO();
++      window.prerenderReady = true;
++      // Initialize scroll animations
++      const observer = new IntersectionObserver((entries) => {
++        entries.forEach(entry => {
++          if (entry.isIntersecting) {
++            entry.target.classList.add('active');
++            observer.unobserve(entry.target);
++          }
++        });
++      }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
++      
++      setTimeout(() => {
++        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
++      }, 500);
++
++        setTimeout(() => hideLoader(), 20);
++      }, 50);
++    }
++
++    
++function renderCaseStudies() {
++  const cases = [
++    { slug: 'blog-mfn', title: "Matrix Fight Night × TechFit: 15 Events, 3 Cages", client: "Matrix Fight Night", segment: "Professional MMA", img: "/og/og-mma.jpg" }
++  ];
++  let html = `<section class="phero" style="background:#09090b;padding:8rem 2rem 4rem;border-bottom:1px solid rgba(255,255,255,0.05)">
++    <section class="sec-in" style="max-width:1000px;margin:0 auto;text-align:center">
++      <div class="phero-label" style="color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:0.85rem">Our Work</div>
++      <h1 style="color:#fff;font-size:clamp(2.2rem,5vw,3.5rem);margin:0.5rem 0 1.5rem;line-height:1.15;font-weight:800">Case Studies</h1>
++      <p class="phero-sub" style="color:rgba(255,255,255,0.7);max-width:800px;margin:0 auto">Deep dives into the engineering and execution behind India's premier gym, wellness, and sports infrastructure projects.</p>
++    </section>
++  </section>
++  <section class="sec" style="background:#000;padding:4rem 2rem">
++    <section class="sec-in" style="max-width:1200px;margin:0 auto">
++      <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:2rem;">`;
++      
++  for (const c of cases) {
++    html += `
++        <div class="card" onclick="go('${c.slug}')" style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:12px;overflow:hidden;cursor:pointer;transition:transform 0.2s">
++          <img src="${c.img}" style="width:100%;height:220px;object-fit:cover;border-bottom:1px solid rgba(255,255,255,0.05)">
++          <div style="padding:1.5rem;">
++            <div style="font-size:0.8rem;color:var(--red);text-transform:uppercase;font-weight:600;margin-bottom:0.5rem">${c.segment}</div>
++            <h3 style="color:#fff;font-size:1.25rem;margin-bottom:1rem;line-height:1.4">${c.title}</h3>
++            <p style="color:rgba(255,255,255,0.6);font-size:0.95rem;margin-bottom:0"><strong>Client:</strong> ${c.client}</p>
++          </div>
++        </div>`;
++  }
++  html += `</div></section></section>${footer()}`;
++  return html;
++}
++
++function renderCaseStudy(slug) {
++  if (slug === 'blog-mfn') {
++    return `<section class="phero" style="background:linear-gradient(to bottom,rgba(9,9,11,0.8),rgba(9,9,11,1)),url('/og/og-mma.jpg');background-size:cover;background-position:center;padding:10rem 2rem 4rem;">
++      <section class="sec-in" style="max-width:1000px;margin:0 auto;text-align:center">
++        <div class="phero-label" style="color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:0.85rem">Professional MMA Infrastructure</div>
++        <h1 style="color:#fff;font-size:clamp(2rem,4vw,3rem);margin:0.5rem 0 1.5rem;line-height:1.15;font-weight:800">Matrix Fight Night × TechFit: 15 Events, 3 Cages, and the Hexagon That Built India's Pathway to the UFC</h1>
++      </section>
++    </section>
++    
++    <section class="sec" style="background:#000;padding:4rem 2rem">
++      <section class="sec-in" style="max-width:1000px;margin:0 auto">
++        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;background:rgba(255,255,255,0.03);padding:2rem;border-radius:12px;margin-bottom:4rem;border:1px solid rgba(255,255,255,0.05)">
++          <div><h4 style="color:var(--red);font-size:0.85rem;text-transform:uppercase;margin-bottom:0.5rem">Client</h4><p style="color:#fff;font-size:1.1rem;font-weight:600;margin:0">Matrix Fight Night</p></div>
++          <div><h4 style="color:var(--red);font-size:0.85rem;text-transform:uppercase;margin-bottom:0.5rem">Segment</h4><p style="color:#fff;font-size:1.1rem;font-weight:600;margin:0">Professional MMA</p></div>
++          <div><h4 style="color:var(--red);font-size:0.85rem;text-transform:uppercase;margin-bottom:0.5rem">Timeline</h4><p style="color:#fff;font-size:1.1rem;font-weight:600;margin:0">45 Days</p></div>
++          <div><h4 style="color:var(--red);font-size:0.85rem;text-transform:uppercase;margin-bottom:0.5rem">Outcome</h4><p style="color:#fff;font-size:1.1rem;font-weight:600;margin:0">3 Cages across 15 Events</p></div>
++        </div>
++        
++        <div class="prose" style="color:rgba(255,255,255,0.85);font-size:1.1rem;line-height:1.8">
++          <p>When Matrix Fight Night staged its debut event at the <strong>NSCI Dome in Mumbai on 12 March 2019</strong>, India's MMA scene had fighters, fans, and an appetite for elite competition. What it didn't yet have was a homegrown promotion with infrastructure built to international standards, or a cage manufacturer who could build one without a 90-day ocean shipment from the United States.</p>
++          <p>Seven years later, MFN has run 17 events, sealed a broadcast partnership with Disney+Hotstar, and produced two fighters — <strong>Anshul Jubli and Puja Tomar</strong> — who have gone on to sign with the UFC. TechFit was the official cage supplier for MFN 1 through MFN 15 — fifteen consecutive events, three full cage production cycles, two UFC signings, one continuous relationship.</p>
++          
++          <h2 style="color:#fff;font-size:1.8rem;margin:3rem 0 1.5rem">The brief: a broadcast-grade Indian cage, in 45 days</h2>
++          <p>The brief MFN brought to TechFit was specific:</p>
++          <ul style="margin-bottom:2rem">
++            <li>A 30-foot fighting surface, the same nominal size as cages used at top global promotions</li>
++            <li>Podium-mounted to elevate the action for both the live audience and camera operators</li>
++            <li>A hexagonal layout, not octagonal — a deliberate brand and design choice</li>
++            <li>Custom-printed canvas with MFN's logos, finished to a standard that holds up under HD broadcast cameras</li>
++            <li>Fully portable — delivered in 45 days</li>
++          </ul>
++
++          <h2 style="color:#fff;font-size:1.8rem;margin:3rem 0 1.5rem">Why a hexagon, not an octagon</h2>
++          <p>A hexagonal cage is its own visual signature on broadcast — instantly distinguishable from UFC footage. From a fight-dynamics perspective, six sides at a 30-foot diameter give fighters fewer but wider corners than an octagon at the same diameter. We engineered the hexagonal frame to the same load tolerances and impact specs as a top-level competition octagon.</p>
++
++          <h2 style="color:#fff;font-size:1.8rem;margin:3rem 0 1.5rem">The build: 45 days from steel to canvas</h2>
++          <p>Production for MFN 1 ran 45 days at our Mumbai facility. Four parallel workstreams:</p>
++          <ul style="margin-bottom:2rem">
++            <li><strong>Steel frame and podium substructure:</strong> Heavy-gauge structural steel for the six corner posts and the elevated platform.</li>
++            <li><strong>Vinyl fencing:</strong> Heavy-gauge fencing tensioned across six panels at competition-spec dimensions.</li>
++            <li><strong>High-density padding:</strong> Foam padding sleeves on every post and multi-layer floor padding.</li>
++            <li><strong>The canvas:</strong> High-resolution, multi-color brand graphics on a competition canvas that has to remain anti-slip and read crisply under sports broadcast lighting.</li>
++          </ul>
++
++          <div style="background:rgba(255,255,255,0.03);border-left:4px solid var(--red);padding:2rem;margin:3rem 0;font-style:italic;font-size:1.2rem;color:#fff">
++            "We have worked with TechFit from MFN 1 through MFN 15. Across fifteen events, the cage has done exactly what we needed it to — hold up to broadcast scrutiny, look right on camera, install on time, keep our fighters safe. They have been more than a vendor. They've been part of how MFN has grown."<br><br>
++            <span style="font-size:1rem;font-style:normal;color:rgba(255,255,255,0.6)">— Ayesha Shroff, Co-founder, Matrix Fight Night</span>
++          </div>
++          
++          <p style="margin-top:4rem;text-align:center">
++             <button class="btn-red" onclick="go('mma-cages')">Explore MMA Cages & Boxing Rings →</button>
++          </p>
++        </div>
++      </section>
++    </section>
++    ${footer()}`;
++  }
++  return render404();
++}
++
+     function render() {
+       const app = document.getElementById('app');
+       const views = {
+@@ -522,6 +2344,8 @@ async function submitEmbeddedQuote(projectType) {
+         'alternatives/mecotec-cryotherapy-india': renderMecotecAlternative,
+         'alternatives/usi-cosco-techfit-cages': renderUsiCoscoAlternative,
+         'alternatives': renderAlternativesHub,
++        'case-studies': renderCaseStudies,
++        'blog-mfn': () => renderCaseStudy('blog-mfn'),
+         '404': render404
+       };
+       const guideSlugs = ["commercial-gym-setup-cost-india","how-to-set-up-a-commercial-gym","best-commercial-treadmills-india","commercial-gym-equipment-list","hotel-gym-setup-guide","bh-fitness-vs-life-fitness","tunturi-vs-precor","best-gym-equipment-brands-india","imported-vs-indian-gym-equipment","gym-equipment-suppliers-india-compared","commercial-gym-setup-mumbai","commercial-gym-setup-pune","commercial-gym-setup-bangalore","commercial-gym-setup-hyderabad","commercial-gym-setup-delhi-ncr"];
+@@ -531,6 +2355,21 @@ async function submitEmbeddedQuote(projectType) {
+         app.innerHTML = (views[page] || render404)();
+       }
+ 
++      // INJECT FAQ IF APPLICABLE
++      if (typeof ROUTE_FAQS !== 'undefined' && ROUTE_FAQS[page]) {
++        let faqHtml = '<section class="sec faq-sec"><section class="sec-in"><h2 class="sec-title">Frequently Asked Questions</h2><div class="faq">';
++        for (const f of ROUTE_FAQS[page]) {
++           faqHtml += faqItem(f.q, f.a);
++        }
++        faqHtml += '</div></section></section>';
++        
++        if (app.innerHTML.includes('<footer')) {
++           app.innerHTML = app.innerHTML.replace('<footer', faqHtml + '<footer');
++        } else {
++           app.innerHTML += faqHtml;
++        }
++      }
++
+       const commercialPages = {
+         'for-gyms': 'Commercial Gym Setup',
+         'for-developers': 'Real Estate & Developer Gym Amenities',
+@@ -3095,7 +4934,7 @@ ${footer()}`;
+       <div>
+         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
+           <div style="background:var(--z50);border:1px solid var(--z200);padding:2rem 1rem;border-radius:1rem;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,0.03)">
+-            <h4 style="font-size:2.5rem;font-weight:900;color:var(--red);line-height:1;margin-bottom:0.5rem">2016</h4>
++            <h4 style="font-size:2.5rem;font-weight:900;color:var(--red);line-height:1;margin-bottom:0.5rem">2014</h4>
+             <p style="font-size:0.85rem;font-weight:700;color:var(--z600);text-transform:uppercase;letter-spacing:0.1em;margin:0">Year Founded</p>
+           </div>
+           <div style="background:var(--z50);border:1px solid var(--z200);padding:2rem 1rem;border-radius:1rem;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,0.03)">
+@@ -5412,7 +7251,7 @@ function render404() {
+       const path = window.location.pathname.substring(1) || 'home';
+       const urlParams = new URLSearchParams(window.location.search);
+ 
+-      const validPages = ['home', 'for-gyms', 'for-developers', 'for-schools', 'for-hotels', 'techfit', 'alteon', 'bh-fitness', 'tunturi', 'california-fitness', 'mma-cages', 'crossfit-rigs', 'free-weights', 'padel-pickleball', 'aqua', 'wellness-solutions', 'services', 'about', 'contact', 'blogs', 'gym-flooring', 'flooring', 'blog-mfn', 'blog-sfl', 'blog-kumite', 'blog-mma-matrix', 'blog-one-stop', 'blog-wellness-boom', 'privacy-policy', 'terms-of-service', 'thank-you', 'alternatives/technogym-india', 'alternatives/life-fitness-india', 'alternatives/sechrist-hyperbaric-india', 'alternatives/precor-india', 'alternatives/mecotec-cryotherapy-india', 'alternatives/usi-cosco-techfit-cages', 'commercial-gym-setup-cost-india', 'how-to-set-up-a-commercial-gym', 'best-commercial-treadmills-india', 'commercial-gym-equipment-list', 'hotel-gym-setup-guide', 'bh-fitness-vs-life-fitness', 'tunturi-vs-precor', 'best-gym-equipment-brands-india', 'imported-vs-indian-gym-equipment', 'gym-equipment-suppliers-india-compared', 'commercial-gym-setup-mumbai', 'commercial-gym-setup-pune', 'commercial-gym-setup-bangalore', 'commercial-gym-setup-hyderabad', 'commercial-gym-setup-delhi-ncr', 'commercial-gym-setup-chennai', 'commercial-gym-setup-kolkata', 'commercial-gym-setup-ahmedabad', 'commercial-gym-setup-jaipur', 'commercial-gym-setup-goa', 'commercial-gym-setup-chandigarh', 'commercial-gym-setup-surat', 'commercial-gym-setup-kochi', 'hotel-gym-setup-mumbai', 'hotel-gym-setup-pune', 'hotel-gym-setup-bangalore', 'hotel-gym-setup-delhi-ncr', 'hotel-gym-setup-hyderabad', 'society-gym-setup-mumbai', 'society-gym-setup-pune', 'society-gym-setup-bangalore', 'society-gym-setup-delhi-ncr', 'society-gym-setup-hyderabad', 'corporate-gym-setup-mumbai', 'corporate-gym-setup-pune', 'corporate-gym-setup-bangalore', 'corporate-gym-setup-delhi-ncr', 'corporate-gym-setup-hyderabad', 'matrix-fitness-alternative-india', 'cybex-alternative-india', 'hammer-strength-alternative-india', 'nautilus-alternative-india', 'cosco-vs-bh-fitness', 'viva-vs-tunturi', 'decathlon-domyos-vs-commercial-gym-equipment', 'alternatives/cybex-india', 'alternatives/hammer-strength-india', 'alternatives/nautilus-india', 'alternatives/star-trac-india', 'alternatives/body-solid-india', 'alternatives/hoist-fitness-india', 'alternatives/freemotion-india', 'alternatives/true-fitness-india', 'alternatives/american-fitness-india', 'alternatives/atlantis-strength-india', 'alternatives/fitline-india', 'alternatives/matrix-fitness-india', 'alternatives/jerai-fitness-india', 'alternatives/being-strong-india'];
++      const validPages = ['home', 'for-gyms', 'for-developers', 'for-schools', 'for-hotels', 'techfit', 'alteon', 'bh-fitness', 'tunturi', 'california-fitness', 'mma-cages', 'crossfit-rigs', 'free-weights', 'padel-pickleball', 'aqua', 'wellness-solutions', 'services', 'about', 'contact', 'blogs', 'gym-flooring', 'flooring', 'blog-mfn', 'blog-sfl', 'blog-kumite', 'blog-mma-matrix', 'blog-one-stop', 'blog-wellness-boom', 'privacy-policy', 'case-studies', 'terms-of-service', 'thank-you', 'alternatives/technogym-india', 'alternatives/life-fitness-india', 'alternatives/sechrist-hyperbaric-india', 'alternatives/precor-india', 'alternatives/mecotec-cryotherapy-india', 'alternatives/usi-cosco-techfit-cages', 'commercial-gym-setup-cost-india', 'how-to-set-up-a-commercial-gym', 'best-commercial-treadmills-india', 'commercial-gym-equipment-list', 'hotel-gym-setup-guide', 'bh-fitness-vs-life-fitness', 'tunturi-vs-precor', 'best-gym-equipment-brands-india', 'imported-vs-indian-gym-equipment', 'gym-equipment-suppliers-india-compared', 'commercial-gym-setup-mumbai', 'commercial-gym-setup-pune', 'commercial-gym-setup-bangalore', 'commercial-gym-setup-hyderabad', 'commercial-gym-setup-delhi-ncr', 'commercial-gym-setup-chennai', 'commercial-gym-setup-kolkata', 'commercial-gym-setup-ahmedabad', 'commercial-gym-setup-jaipur', 'commercial-gym-setup-goa', 'commercial-gym-setup-chandigarh', 'commercial-gym-setup-surat', 'commercial-gym-setup-kochi', 'hotel-gym-setup-mumbai', 'hotel-gym-setup-pune', 'hotel-gym-setup-bangalore', 'hotel-gym-setup-delhi-ncr', 'hotel-gym-setup-hyderabad', 'society-gym-setup-mumbai', 'society-gym-setup-pune', 'society-gym-setup-bangalore', 'society-gym-setup-delhi-ncr', 'society-gym-setup-hyderabad', 'corporate-gym-setup-mumbai', 'corporate-gym-setup-pune', 'corporate-gym-setup-bangalore', 'corporate-gym-setup-delhi-ncr', 'corporate-gym-setup-hyderabad', 'matrix-fitness-alternative-india', 'cybex-alternative-india', 'hammer-strength-alternative-india', 'nautilus-alternative-india', 'cosco-vs-bh-fitness', 'viva-vs-tunturi', 'decathlon-domyos-vs-commercial-gym-equipment', 'alternatives/cybex-india', 'alternatives/hammer-strength-india', 'alternatives/nautilus-india', 'alternatives/star-trac-india', 'alternatives/body-solid-india', 'alternatives/hoist-fitness-india', 'alternatives/freemotion-india', 'alternatives/true-fitness-india', 'alternatives/american-fitness-india', 'alternatives/atlantis-strength-india', 'alternatives/fitline-india', 'alternatives/matrix-fitness-india', 'alternatives/jerai-fitness-india', 'alternatives/being-strong-india'];
+ 
+       if (validPages.includes(path) || path === '') {
+         page = path || 'home';

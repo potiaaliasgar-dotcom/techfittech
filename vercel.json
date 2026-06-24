@@ -16,20 +16,84 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" }
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "geolocation=(), microphone=(), camera=()"
+        }
       ]
     }
   ],
   "redirects": [
-    { "source": "/about-us", "destination": "/about", "permanent": true },
-    { "source": "/about-us/", "destination": "/about", "permanent": true },
-    { "source": "/jordan-fitness", "destination": "/free-weights", "permanent": true },
-    { "source": "/jordan-fitness/", "destination": "/free-weights", "permanent": true },
-    { "source": "/bendis-pilates", "destination": "/free-weights", "permanent": true },
-    { "source": "/bendis-pilates/", "destination": "/free-weights", "permanent": true }
+    {
+      "source": "/about-us",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/about-us/",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/jordan-fitness",
+      "destination": "/free-weights",
+      "permanent": true
+    },
+    {
+      "source": "/jordan-fitness/",
+      "destination": "/free-weights",
+      "permanent": true
+    },
+    {
+      "source": "/bendis-pilates",
+      "destination": "/free-weights",
+      "permanent": true
+    },
+    {
+      "source": "/bendis-pilates/",
+      "destination": "/free-weights",
+      "permanent": true
+    },
+    {
+      "source": "/cybex-alternative-india",
+      "destination": "/alternatives/cybex-india",
+      "permanent": true
+    },
+    {
+      "source": "/hammer-strength-alternative-india",
+      "destination": "/alternatives/hammer-strength-india",
+      "permanent": true
+    },
+    {
+      "source": "/matrix-fitness-alternative-india",
+      "destination": "/alternatives/matrix-fitness-india",
+      "permanent": true
+    },
+    {
+      "source": "/nautilus-alternative-india",
+      "destination": "/alternatives/nautilus-india",
+      "permanent": true
+    },
+    {
+      "source": "/flooring",
+      "destination": "/gym-flooring",
+      "permanent": true
+    }
   ]
 }
