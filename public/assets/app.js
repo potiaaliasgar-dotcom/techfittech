@@ -1599,12 +1599,7 @@ ${footer()}
     function renderHome() {
       return `
 <section class="hero" style="position:relative; overflow:hidden; min-height:80vh; display:flex; align-items:center; background:#000;">
-  <!-- LCP Optimized WebP Hero Image -->
-  <picture style="position:absolute; inset:0; width:100%; height:100%; z-index:0;">
-    <source type="image/webp" srcset="/assets/images/hero-mma.webp">
-    <img src="/og/og-mma.jpg" fetchpriority="high" decoding="sync" alt="Matrix Fight Night Professional MMA Cage by TechFit India" style="width:100%; height:100%; object-fit:cover; filter:brightness(0.5) contrast(1.1);">
-  </picture>
-  
+  <div class="hero-bg"></div>
   <div class="hero-glow" style="z-index:1; position:absolute; bottom:0; left:0; right:0; height:50%; background:linear-gradient(to top, #000, transparent);"></div>
   
   <div class="hero-in" style="z-index:2; position:relative; text-align:center; padding:0 2rem;">
