@@ -20,7 +20,7 @@ const hashedFilename = `app.${hash}.js`;
 
 // 2. Rename the file
 const hashedFilePath = path.join(ASSETS_DIR, hashedFilename);
-fs.renameSync(APP_JS_PATH, hashedFilePath);
+fs.copyFileSync(APP_JS_PATH, hashedFilePath);
 console.log(`✅ Hashed app.js -> ${hashedFilename}`);
 
 // 3. Scan dist/**/*.html and replace src="/assets/app.js" with src="/assets/app.[hash].js"
