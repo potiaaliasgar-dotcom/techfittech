@@ -23,7 +23,7 @@ const BASE = 'https://www.techfittech.com';
 const DEFAULT_OG_IMG = BASE + '/og-image.jpg';
 
 // Future-Proofing: Flip to true when real Google reviews exist
-const ENABLE_AGGREGATE_RATING = true;
+const ENABLE_AGGREGATE_RATING = false;
 
 // Load PRODUCTS array from products.json
 const productsPath = path.join(PUBLIC, 'assets/products.json');
@@ -3966,7 +3966,23 @@ function generatePage(html, route, seo) {
   };
 
   const projectCategory = routeCategoryNames[route] || 'gym infrastructure';
-  const fallbackText = `<p style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #ddd;font-weight:bold;color:#DC2626">Ready to get started? Email <a href="mailto:info@techfitactive.com">info@techfitactive.com</a> or call/WhatsApp <a href="tel:+919820166910">+91 98201 66910</a> for a free customized B2B quote on your ${projectCategory} project.</p>`;
+  let fallbackText = `<p style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #ddd;font-weight:bold;color:#DC2626">Ready to get started? Email <a href="mailto:info@techfitactive.com">info@techfitactive.com</a> or call/WhatsApp <a href="tel:+919820166910">+91 98201 66910</a> for a free customized B2B quote on your ${projectCategory} project.</p>`;
+
+  // INJECT FAQS INTO NOSCRIPT FALLBACK
+  const schema = SCHEMAS[route];
+  if (schema && schema['@graph']) {
+    for (const entity of schema['@graph']) {
+      if (entity['@type'] === 'FAQPage' && entity.mainEntity) {
+        fallbackText += `<h2>Frequently Asked Questions</h2><ul>`;
+        for (const item of entity.mainEntity) {
+          if (item['@type'] === 'Question' && item.acceptedAnswer) {
+            fallbackText += `<li><strong>${item.name}</strong><br>${item.acceptedAnswer.text}</li>`;
+          }
+        }
+        fallbackText += `</ul>`;
+      }
+    }
+  }
   
   noscriptBlock = noscriptBlock.replace('</div>\n  </noscript>', `${fallbackText}\n    </div>\n  </noscript>`);
   noscriptBlock = noscriptBlock.replace('</div>\n</noscript>', `${fallbackText}\n</div>\n</noscript>`);
