@@ -71,8 +71,8 @@ const SEO_MAP = {
   },
 
   'alteon': {
-    title: 'Alteon Wellness & Recovery | Official Distributor — Cryotherapy, HBOT, Red-Light',
-    desc: 'TechFit is the official distributor of Alteon Wellness & Recovery. Premium recovery technology — hyperbaric oxygen chambers, cryotherapy, red-light therapy, dry-float, IHHT and more.',
+    title: 'Alteon Wellness & Recovery | Reseller — Cryotherapy, HBOT, Red-Light',
+    desc: 'TechFit is a reseller of Alteon Wellness & Recovery. Premium recovery technology — hyperbaric oxygen chambers, cryotherapy, red-light therapy, dry-float, IHHT and more.',
     h1: 'Alteon Wellness & Recovery Technology',
     lastmod: '2026-05-24',
     img: OG_WELLNESS
@@ -2734,8 +2734,8 @@ const SCHEMAS = {
 const NOSCRIPT_FALLBACKS = {
   'alteon': `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
-      <h2>Alteon Wellness &amp; Recovery Equipment | Official Distributor</h2>
-      <p>TechFit is the official distributor of <strong>Alteon Wellness (alteontech.com)</strong>. We supply professional clinical and commercial-grade longevity, recovery, and biohacking technology to health clubs, hotels, residential developments, longevity clinics, and physical therapy centers.</p>
+      <h2>Alteon Wellness &amp; Recovery Equipment | Reseller</h2>
+      <p>TechFit is a reseller of <strong>Alteon Wellness (alteontech.com)</strong>. We supply professional clinical and commercial-grade longevity, recovery, and biohacking technology to health clubs, hotels, residential developments, longevity clinics, and physical therapy centers.</p>
       
       <h3>Alteon Recovery Product Portfolio:</h3>
       <ul>
@@ -3189,7 +3189,7 @@ const NOSCRIPT_FALLBACKS = {
       </table>
 
       <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">4. The Alteon Elysion Sourcing Solution: Luxury Design, Clinical Safety</h3>
-      <p>TechFit provides clinical recovery centers, premium longevity clinics, and professional athletic academies with a highly optimized alternative. Through our exclusive partnership as the official distributor of <strong>Alteon Wellness</strong>, we supply the state-of-the-art Elysion Hard-Shell Hyperbaric Chamber, structured across three key pillars:</p>
+      <p>TechFit provides clinical recovery centers, premium longevity clinics, and professional athletic academies with a highly optimized alternative. Through our partnership as a reseller of <strong>Alteon Wellness</strong>, we supply the state-of-the-art Elysion Hard-Shell Hyperbaric Chamber, structured across three key pillars:</p>
       
       <h4>A. Premium Hard-Shell Wellness Sourcing</h4>
       <p>The Alteon Elysion represents the absolute pinnacle of premium wellness-grade hyperbaric engineering. It features a spacious, elegant hard-shell cabin with custom dark-matte finishes, premium wood-accented interiors, large viewports, and integrated multimedia setups. By sourcing Alteon through TechFit, you get clinical-grade performance up to 2.0 ATA in a luxury design that perfectly complements premium recovery clinics and private longevity suites, avoiding sterile hospital-style medical designs.</p>
@@ -3370,7 +3370,7 @@ const NOSCRIPT_FALLBACKS = {
       </table>
 
       <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">4. The Alteon Elysion Sourcing Solution: Luxury Design, Clinical Safety</h3>
-      <p>TechFit provides clinical recovery centers, premium longevity clinics, and professional athletic academies with a highly optimized alternative. Through our exclusive partnership as the official distributor of <strong>Alteon Wellness</strong>, we supply the state-of-the-art Cryoblast Pro electric cryotherapy chamber, structured across three key pillars:</p>
+      <p>TechFit provides clinical recovery centers, premium longevity clinics, and professional athletic academies with a highly optimized alternative. Through our partnership as a reseller of <strong>Alteon Wellness</strong>, we supply the state-of-the-art Cryoblast Pro electric cryotherapy chamber, structured across three key pillars:</p>
       
       <h4>A. Premium Electric Dry Cryotherapy Sourcing</h4>
       <p>The Alteon Cryoblast Pro represents the absolute pinnacle of premium wellness-grade cryotherapy engineering. It features a spacious, elegant hard-shell cabin with custom dark-matte finishes, premium thermal insulation doors, large viewports, and integrated multimedia setups. By sourcing Alteon through TechFit, you get clinical-grade performance down to -110°C to -140°C in a luxury design that perfectly complements premium recovery clinics and private longevity suites, avoiding sterile hospital-style medical designs and eliminating liquid nitrogen costs and risks.</p>
@@ -3785,7 +3785,7 @@ function generatePage(html, route, seo) {
     noscriptBlock = NOSCRIPT_FALLBACKS[route] || `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <h2>TechFit | Gym Setup, Equipment &amp; Wellness Solutions</h2>
-      <p>Gym, wellness &amp; sports infrastructure partner with 800+ installations delivered. Reseller for BH Fitness, Tunturi, and California Fitness, and Official Distributor for Alteon Wellness.</p>
+      <p>Gym, wellness &amp; sports infrastructure partner with 800+ installations delivered. Reseller for BH Fitness, Tunturi, California Fitness, and Alteon Wellness.</p>
       <p><strong>Services:</strong> Gym design &amp; layout, commercial equipment supply, custom fabrication of
         combat-sports equipment and CrossFit rigs, padel and pickleball courts, wellness and recovery technology from
         Alteon, installation, after-sales and AMC. Sister concern TechFit Active provides managed gym operations.</p>

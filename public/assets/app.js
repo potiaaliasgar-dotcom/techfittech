@@ -192,12 +192,12 @@ async function submitEmbeddedQuote(projectType) {
     const SEO_MAP = {
       'home': {
         title: 'TechFit | Gym, Wellness & Sports Infrastructure',
-        desc: 'TechFit is a one-stop gym, wellness and sports infrastructure partner. Reseller for BH Fitness, Tunturi, California Fitness, and Official Distributor for Alteon Wellness.',
+        desc: 'TechFit is a one-stop gym, wellness and sports infrastructure partner. Reseller for BH Fitness, Tunturi, California Fitness, and Alteon Wellness.',
         img: DEFAULT_OG_IMG
       },
       'alteon': {
-        title: 'Alteon Wellness & Recovery | Official Distributor — Cryotherapy, HBOT, Red-Light',
-        desc: 'TechFit is the official distributor of Alteon Wellness & Recovery. Premium recovery technology — hyperbaric oxygen chambers, cryotherapy, red-light therapy, dry-float, IHHT and more.',
+        title: 'Alteon Wellness & Recovery | Reseller — Cryotherapy, HBOT, Red-Light',
+        desc: 'TechFit is a reseller of Alteon Wellness & Recovery. Premium recovery technology — hyperbaric oxygen chambers, cryotherapy, red-light therapy, dry-float, IHHT and more.',
         img: DEFAULT_OG_IMG
       },
       'bh-fitness': {
@@ -1584,7 +1584,7 @@ ${footer()}
 <section class="sec" style="background:#09090b;color:#fff">
   <div class="sec-in" style="text-align:center">
     <img src="${CLIENT_LOGOS['Alteon']}" alt="Alteon Wellness &amp; Recovery" style="max-height:56px;width:auto;margin:0 auto 2rem;display:block" loading="lazy">
-    <p style="color:rgba(255,255,255,.6);max-width:520px;margin:1rem auto 2rem;font-size:.92rem;line-height:1.7">TechFit is the official distributor of Alteon Wellness &amp; Recovery. Speak to us about integrating Alteon&#x2019;s technology into your gym, hotel, or wellness centre.</p>
+    <p style="color:rgba(255,255,255,.6);max-width:520px;margin:1rem auto 2rem;font-size:.92rem;line-height:1.7">TechFit is a reseller of Alteon Wellness &amp; Recovery. Speak to us about integrating Alteon&#x2019;s technology into your gym, hotel, or wellness centre.</p>
       <button class="btn-red" style="font-size:1rem;padding:1rem 2.5rem" onclick="go('contact')">Book a Consultation</button>
     </div>
   </div>
@@ -1600,8 +1600,8 @@ ${footer()}
   <div class="hero-bg"></div>
   <div class="hero-glow"></div>
   <div class="hero-in">
-    <h1 id="main-title">GYM SETUP, EQUIPMENT<br><em>&amp; WELLNESS SOLUTIONS</em><br>MUMBAI</h1>
-    <p class="hero-sub">Gym, wellness &amp; sports infrastructure partner. 800+ installations delivered. Reseller for BH Fitness, Tunturi, and California Fitness, and <a href="/alteon" onclick="event.preventDefault(); go('alteon')" style="color:var(--red);text-decoration:underline;font-weight:600">Official Distributor for Alteon Wellness &amp; Recovery</a>.</p>
+    <h1 id="main-title">GYM SETUP, EQUIPMENT<br><em>&amp; WELLNESS SOLUTIONS</em></h1>
+    <p class="hero-sub">Gym, wellness &amp; sports infrastructure partner. 800+ installations delivered. Reseller for BH Fitness, Tunturi, California Fitness, and <a href="/alteon" onclick="event.preventDefault(); go('alteon')" style="text-decoration:underline;font-weight:600">Alteon Wellness &amp; Recovery</a>.</p>
     <div class="hero-btns">
       <button class="btn-red" onclick="go('contact')">Get a Free Gym Consultation</button>
       <button class="btn-ghost" onclick="go('blogs')">Read Case Studies</button>
