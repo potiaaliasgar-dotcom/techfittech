@@ -1607,7 +1607,7 @@ ${footer()}
       <span style="color:var(--red);">India\'s Premier</span><br>Fitness, Wellness and<br>Sports Infrastructure Partner
     </h1>
     <p class="hero-sub" style="color:rgba(255,255,255,0.9); font-size:1.2rem; max-width:800px; margin:0 auto 2rem;">
-      800+ installations delivered. Commercial gym setup, functional rigs, and professional MMA cages. Reseller for BH Fitness, Tunturi, and Alteon Wellness.
+      800+ installations delivered. Commercial fitness equipment setup, wellness and recovery equipment, gym and sports flooring, functional rigs, and professional MMA cages. Reseller for BH Fitness, Tunturi, and Alteon Wellness.
     </p>
     <div class="hero-btns" style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
       <button class="btn-red" onclick="go('contact')">Get a Custom B2B Quote</button>
