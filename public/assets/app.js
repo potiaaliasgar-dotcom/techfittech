@@ -914,7 +914,7 @@ ${footer()}
 <section class="phero" style="position:relative;overflow:hidden;min-height:72vh;display:flex;align-items:center;background:#000">
   <img src="/assets/images/other/img-ef2a03b968.jpg" alt="Alteon Wellness" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.55" loading="lazy">
   <section class="sec-in" style="position:relative;z-index:2;padding:6rem 2rem">
-    <div class="phero-label" style="color:#4ade80;letter-spacing:.18em">Beauty. Wellness. Longevity.</div>
+    <div class="phero-label" style="color:#4ade80;letter-spacing:.18em">Recovery. Wellness. Longevity.</div>
     <h1 style="color:#fff;font-size:clamp(2.4rem,6vw,4.5rem);margin:.6rem 0 1.2rem;letter-spacing:.08em">ALTEON<br><span style="color:#4ade80;font-size:.65em;font-weight:600;letter-spacing:.12em">WELLNESS &amp; RECOVERY</span></h1>
     <p class="phero-sub" style="max-width:560px;color:rgba(255,255,255,.82);font-size:1.05rem;line-height:1.7">An integrated beauty, wellness and longevity technology company — delivering end-to-end solutions for next-generation wellness environments.</p>
     <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap">
