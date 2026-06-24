@@ -633,7 +633,7 @@
     /* ─── SERVICE PILLARS ─── */
     .pillars {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 0;
       border: 1px solid var(--z200);
       margin-top: 0;
@@ -871,7 +871,7 @@
 
     .seg-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
       max-width: 1400px;
       margin: 4rem auto 0;
@@ -3167,7 +3167,7 @@
 
     .seg-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
       max-width: 1400px;
       margin: 4rem auto 0;
