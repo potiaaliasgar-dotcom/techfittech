@@ -55,7 +55,7 @@ function pictureTag(src, alt = '', className = '', isLazy = true, inlineStyles =
 function renderQuoteFormHtml(projectType) {
   return `
 <section class="sec embedded-quote-sec">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="embedded-quote-form-wrap">
       <h3 class="eq-title">Request a Custom B2B Quote</h3>
       <p class="eq-desc">Interested in <strong>${projectType}</strong>? Submit your details below, and our experts will contact you within one business day with a customized B2B proposal.</p>
@@ -81,7 +81,7 @@ function renderQuoteFormHtml(projectType) {
         <button type="submit" class="eq-submit-btn">Get Custom B2B Quote →</button>
       </form>
     </div>
-  </div>
+  </section>
 </section>
   `;
 }
@@ -712,7 +712,7 @@ async function submitEmbeddedQuote(projectType) {
       return `
 <section class="product-range-sec">
   <div class="range-watermark">CRAFTED</div>
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label">Product Range</span>
       <h2 class="sec-title">WHAT WE BUILD</h2>
@@ -755,7 +755,7 @@ async function submitEmbeddedQuote(projectType) {
         <button class="segment-cta">EXPLORE AQUA &rarr;</button>
       </div>
     </div>
-  </div>
+  </section>
 </section>`;
     }
 
@@ -861,7 +861,7 @@ async function submitEmbeddedQuote(projectType) {
     function renderTechFit() {
       return `
 <section class="phero" style="background:linear-gradient(135deg,#09090b 60%,#1a0a00)">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="phero-label">Made in Mumbai</div>
     <h1 style="color:#fff">TECHFIT<br><span style="color:var(--red)">CUSTOM</span></h1>
     <p class="phero-sub">India's own commercial-grade fitness fabrication. MMA cages, CrossFit rigs, free weights, padel courts, and aqua fitness equipment — custom built to your specs.</p>
@@ -869,13 +869,13 @@ async function submitEmbeddedQuote(projectType) {
       <button class="btn-red" onclick="go('contact')">Get a Custom Quote</button>
       <button class="btn-outline" onclick="go('mma-cages')">Explore Products</button>
     </div>
-  </div>
+  </section>
 </section>
 
 ${renderProductRange()}
 
 <section class="sec">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label">The TechFit Advantage</span>
       <h2 class="sec-title">BUILT FOR THE SPORT.<br>BUILT FOR YOUR BRAND.</h2>
@@ -899,7 +899,7 @@ ${renderProductRange()}
         <p>AMC and service contracts available. Our team responds quickly to any structural issues, ensuring your facility stays operational.</p>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 ${ctaBand("Ready to Build Something Custom?", "Share your space specs and requirements. Our fabrication team will design a solution and give you a detailed quote \xe2\x80\x94 no commitment needed.", "Get a Free Quote")}
@@ -911,7 +911,7 @@ ${footer()}
       return `
 <section class="phero" style="position:relative;overflow:hidden;min-height:72vh;display:flex;align-items:center;background:#000">
   <img src="/assets/images/other/img-ef2a03b968.jpg" alt="Alteon Wellness" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.55" loading="lazy">
-  <div class="sec-in" style="position:relative;z-index:2;padding:6rem 2rem">
+  <section class="sec-in" style="position:relative;z-index:2;padding:6rem 2rem">
     <div class="phero-label" style="color:#4ade80;letter-spacing:.18em">Beauty. Wellness. Longevity.</div>
     <h1 style="color:#fff;font-size:clamp(2.4rem,6vw,4.5rem);margin:.6rem 0 1.2rem;letter-spacing:.08em">ALTEON<br><span style="color:#4ade80;font-size:.65em;font-weight:600;letter-spacing:.12em">WELLNESS &amp; RECOVERY</span></h1>
     <p class="phero-sub" style="max-width:560px;color:rgba(255,255,255,.82);font-size:1.05rem;line-height:1.7">An integrated beauty, wellness and longevity technology company — delivering end-to-end solutions for next-generation wellness environments.</p>
@@ -919,17 +919,17 @@ ${footer()}
       <button class="btn-red" onclick="go('contact')">Enquire About Alteon</button>
       <button style="background:transparent;border:1.5px solid rgba(255,255,255,.45);color:#fff;padding:.75rem 1.75rem;border-radius:.35rem;font-weight:700;cursor:pointer;letter-spacing:.04em;font-size:.9rem" onclick="document.getElementById('alteon-products').scrollIntoView({behavior:'smooth'})">VIEW PRODUCTS ↓</button>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#09090b;color:#fff">
-  <div class="sec-in">
+  <section class="sec-in">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center" class="rsp-1col">
       <div>
         <span class="sec-label" style="color:#4ade80">About Alteon</span>
         <h2 class="sec-title" style="color:#fff;margin-top:.5rem">A MULTIDISCIPLINARY WELLNESS DESIGN &amp; INNOVATION COLLECTIVE</h2>
         <p style="color:rgba(255,255,255,.7);line-height:1.8;margin-top:1.2rem;font-size:.95rem">From luxury wellness centers to performance clinics and longevity labs, we create integrated ecosystems where design, technology, and protocols work together to deliver recovery, optimization, and long-term health.</p>
-        <p style="color:rgba(255,255,255,.7);line-height:1.8;margin-top:.8rem;font-size:.95rem">Alteon partners with TechFit to bring world-class wellness and recovery technology to India&#x2019;s premium gyms, hotels, and wellness centres.</p>
+        <p style="color:rgba(255,255,255,.7);line-height:1.8;margin-top:.8rem;font-size:.95rem">Alteon partners with TechFit to bring world-class wellness and recovery technology to India&#x2019;s <a href="/for-gyms" onclick="event.preventDefault();go('for-gyms')" style="text-decoration:underline;color:#4ade80">premium gyms</a>, <a href="/for-hotels" onclick="event.preventDefault();go('for-hotels')" style="text-decoration:underline;color:#4ade80">hotels</a>, and wellness centres.</p>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem" class="rsp-1col">
         <div style="background:rgba(255,255,255,.05);border:1px solid rgba(74,222,128,.25);border-radius:.75rem;padding:1.4rem">
@@ -950,11 +950,11 @@ ${footer()}
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#0d0d0f;color:#fff">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label" style="color:#4ade80">Why Alteon</span>
       <h2 class="sec-title" style="color:#fff">THE ALTEON ADVANTAGE</h2>
@@ -977,21 +977,21 @@ ${footer()}
         <p style="color:rgba(255,255,255,.65)">Idea. Execution. Operation. Alteon manages the complete journey from concept and design to installation, protocols, and ongoing support.</p>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec" id="alteon-products" style="background:#09090b;color:#fff">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label" style="color:#4ade80">Product Range</span>
       <h2 class="sec-title" style="color:#fff">LONGEVITY &amp; RECOVERY TECHNOLOGIES</h2>
       <p class="sec-sub" style="color:rgba(255,255,255,.65)">Ten advanced technologies — from cellular recovery to cryotherapy — integrated into a single, cohesive wellness ecosystem.</p>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#09090b;color:#fff">
-  <div class="sec-in">
+  <section class="sec-in">
     
       <div class="alteon-prod-card">
         <div class="body">
@@ -1021,11 +1021,11 @@ ${footer()}
         </div>
         <img src="/assets/images/other/img-9d9d8b67f8.jpg" alt="Cryotherapy Chambers" loading="lazy">
       </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#0d0d0f;color:#fff">
-  <div class="sec-in">
+  <section class="sec-in">
     
       <div class="alteon-prod-card">
         <div class="body">
@@ -1054,11 +1054,11 @@ ${footer()}
         </div>
         <img src="/assets/images/other/img-b40ca800b5.jpg" alt="Hyperbaric Oxygen Chambers" loading="lazy">
       </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#09090b;color:#fff">
-  <div class="sec-in">
+  <section class="sec-in">
     
       <div class="alteon-prod-card">
         <img src="/assets/images/other/img-db141a8379.jpg" alt="Red Light Therapy" loading="lazy">
@@ -1087,11 +1087,11 @@ ${footer()}
           <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Non-invasive & Pain-free</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Clinically Safe</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Zero Downtime</span></div>
         </div>
       </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#0d0d0f;color:#fff">
-  <div class="sec-in">
+  <section class="sec-in">
     
       <div class="alteon-prod-card">
         <img src="/assets/images/other/img-ab0d984233.jpg" alt="Infrared Sauna" loading="lazy">
@@ -1122,11 +1122,11 @@ ${footer()}
           <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Full-Spectrum Infrared</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Low-EMF Design</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Premium Canadian Hemlock</span></div>
         </div>
       </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#09090b;color:#fff">
-  <div class="sec-in">
+  <section class="sec-in">
     
       <div class="alteon-prod-card">
         <div class="body">
@@ -1156,11 +1156,11 @@ ${footer()}
         </div>
         <img src="/assets/images/other/img-dry-float.png" alt="Dry Float Therapy" loading="lazy">
       </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#0d0d0f;color:#fff">
-  <div class="sec-in">
+  <section class="sec-in">
     
       <div class="alteon-prod-card">
         <img src="/assets/images/other/img-ihht.png" alt="IHHT" loading="lazy">
@@ -1189,11 +1189,11 @@ ${footer()}
           <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">No Physical Strain</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Fully Seated</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Bio-Adaptive Smart Protocols</span></div>
         </div>
       </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#09090b;color:#fff">
-  <div class="sec-in">
+  <section class="sec-in">
     
       <div class="alteon-prod-card">
         <img src="/assets/images/other/img-biopod.png" alt="BIOPOD" loading="lazy">
@@ -1222,11 +1222,11 @@ ${footer()}
           <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">4-in-1 Built-In Features</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Enhanced Respiratory Health</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Comprehensive Skin Rejuvenation</span></div>
         </div>
       </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#0d0d0f;color:#fff">
-  <div class="sec-in">
+  <section class="sec-in">
     
       <div class="alteon-prod-card">
         <div class="body">
@@ -1255,11 +1255,11 @@ ${footer()}
         </div>
         <img src="/assets/images/other/img-31bd74e2d0.jpg" alt="ReVITALE Chamber" loading="lazy">
       </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#09090b;color:#fff">
-  <div class="sec-in">
+  <section class="sec-in">
     
       <div class="alteon-prod-card">
         <div class="body">
@@ -1288,11 +1288,11 @@ ${footer()}
         </div>
         <img src="/assets/images/other/img-297328cce3.jpg" alt="Infrashape Lymphatic Drainage" loading="lazy">
       </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#0d0d0f;color:#fff">
-  <div class="sec-in">
+  <section class="sec-in">
     
       <div class="alteon-prod-card">
         <img src="/assets/images/other/img-acca158d8e.jpg" alt="Water Massage & Recovery" loading="lazy">
@@ -1321,11 +1321,11 @@ ${footer()}
           <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Therapist-Free</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Fully Customizable</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Luxury Wellness</span></div>
         </div>
       </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#060608;color:#fff">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label" style="color:#4ade80">Hydrothermal Circuit</span>
       <h2 class="sec-title" style="color:#fff">HEAT, HYDRO &amp; CONTRAST THERAPY</h2>
@@ -1358,11 +1358,11 @@ ${footer()}
         <p style="font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.6">Natural halotherapy environment supporting respiratory health, skin care, and deep relaxation.</p>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#060608;color:#fff;border-top:1px solid rgba(74,222,128,.15)">
-  <div class="sec-in">
+  <section class="sec-in">
     <div style="text-align:center;padding:1rem 0 2rem">
       <span class="sec-label" style="color:#4ade80">Get In Touch</span>
       <h2 class="sec-title" style="color:#fff;margin-top:.5rem">BRING ALTEON TO YOUR FACILITY</h2>
@@ -1372,12 +1372,12 @@ ${footer()}
       <button class="btn btn-primary" onclick="go('contact')" style="background:#4ade80;color:#09090b;border:none">Request Consultation</button>
       <a class="btn btn-outline" href="https://wa.me/919820166910" target="_blank" rel="noopener" style="color:#4ade80;border-color:#4ade80">WhatsApp Us</a>
     </div>
-  </div>
+  </section>
 </section>
 
       <!-- Additional Alteon Technologies -->
 <section class="sec" style="background:#09090b;color:#fff">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label" style="color:#4ade80">Complete Portfolio</span>
       <h2 class="sec-title" style="color:#fff">ADDITIONAL ALTEON TECHNOLOGIES</h2>
@@ -1458,13 +1458,13 @@ ${footer()}
       </div>
 
     </div>
-  </div>
+  </section>
 </section>
 
 <!-- Growing Wellness Market Callout -->
 <!-- Verticals -->
 <section class="sec" style="background:#0d0d0f;color:#fff">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label" style="color:#4ade80">Alteon Verticals</span>
       <h2 class="sec-title" style="color:#fff">FOUR INTEGRATED WELLNESS VERTICALS</h2>
@@ -1491,12 +1491,12 @@ ${footer()}
         <p style="color:rgba(255,255,255,.65)">Innovations in peptides and stem-cell regenerative pathways.</p>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <!-- Select Alteon Clients -->
 <section class="sec" style="background:#060608;color:#fff;border-top:1px solid rgba(74,222,128,.15)">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label" style="color:#4ade80">In Good Company</span>
       <h2 class="sec-title" style="color:#fff">SELECT ALTEON CLIENTS</h2>
@@ -1578,16 +1578,16 @@ ${footer()}
 <div class="client-card">
   <img src="/assets/images/alteon/aline.jpeg" alt="Aline">
 </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#09090b;color:#fff">
-  <div class="sec-in" style="text-align:center">
+  <section class="sec-in" style="text-align:center">
     <img src="${CLIENT_LOGOS['Alteon']}" alt="Alteon Wellness &amp; Recovery" style="max-height:56px;width:auto;margin:0 auto 2rem;display:block" loading="lazy">
     <p style="color:rgba(255,255,255,.6);max-width:520px;margin:1rem auto 2rem;font-size:.92rem;line-height:1.7">TechFit is a reseller of Alteon Wellness &amp; Recovery. Speak to us about integrating Alteon&#x2019;s technology into your gym, hotel, or wellness centre.</p>
       <button class="btn-red" style="font-size:1rem;padding:1rem 2.5rem" onclick="go('contact')">Book a Consultation</button>
     </div>
-  </div>
+  </section>
 </section>
 ${renderProductRange()}
 ${footer()}
@@ -1616,7 +1616,7 @@ ${footer()}
 </div>
 
 <section class="sec">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label">What We Do</span>
       <h2 class="sec-title">ONE PARTNER.<br>COMPLETE GYM, WELLNESS &amp; SPORTS SOLUTION.</h2>
@@ -1708,11 +1708,11 @@ ${footer()}
         <p>Alteon hyperbaric chambers, cryotherapy, red-light, dry-float and IHHT &mdash; turnkey recovery suites for premium gyms, hotels and longevity clinics.</p>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <div class="brands-strip">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="brands-strip-label">Official Partners &amp; Brands We Supply</div>
     <div class="brands-logos">
       <a href="/bh-fitness" class="brand-logo-box" onclick="event.preventDefault();go('bh-fitness')">
@@ -1782,10 +1782,10 @@ ${footer()}
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 <section class="sec">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label">Our Clients</span>
       <h2 class="sec-title">TRUSTED BY INDIA'S BEST</h2>
@@ -1794,11 +1794,11 @@ ${footer()}
     <div style="margin-top:3rem">
       ${logoWall()}
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec sec-gray">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label">Client Feedback</span>
       <h2 class="sec-title">WHAT OUR CLIENTS SAY</h2>
@@ -1837,11 +1837,11 @@ ${footer()}
           </div>
         </div>
       </div>
-    </div>
+    </section>
 </section>
 
 <section class="sec sec-dark">
-  <div class="sec-in">
+  <section class="sec-in">
     <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center" class="rsp-1col">
       <div>
         <span class="sec-label" style="color:var(--red)">Sister Concern</span>
@@ -1859,7 +1859,7 @@ ${footer()}
         </ul>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 ${ctaBand("Ready to Set Up Your Facility?", "Talk to our gym consultants. We\'ll assess your space, recommend the right equipment, and give you a detailed proposal &mdash; at no cost.", "Get Your Free Consultation")}
@@ -1953,7 +1953,7 @@ ${footer()}
 
       return `
 <div class="phero">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="phero-label">${d.badge}</div>
     <h1>${titleLines.join('<br>')}</h1>
     <p class="phero-sub">${d.sub}</p>
@@ -1970,11 +1970,11 @@ ${footer()}
     <div class="pillars">
       ${d.pillars.map(p => `<div class="pillar"><div class="pillar-icon">${p.i}</div><h3>${p.t}</h3><p>${p.d}</p></div>`).join('')}
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec sec-gray">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="split-layout">
       <div>
         <div class="sec-hdr center">
@@ -1993,11 +1993,11 @@ ${footer()}
         <img src="${d.img}" alt="${d.label}" style="width:100%;height:400px;object-fit:cover;display:block" loading="lazy">
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label">Frequently Asked</span>
       <h2 class="sec-title">FAQ</h2>
@@ -2005,7 +2005,7 @@ ${footer()}
     <div class="faq">
       ${d.faqs.map(([q, a]) => faqItem(q, a)).join('')}
     </div>
-  </div>
+  </section>
 </section>
 
 ${ctaBand('Ready to Plan Your Facility?', '', 'Get a Free Consultation')}
@@ -2118,7 +2118,7 @@ ${footer()}
 
       return `
 <div class="phero">
-  <div class="sec-in">
+  <section class="sec-in">
     ${meta.logo ? `<div style="margin-bottom:1.5rem;text-align:center"><img src="${meta.logo}" alt="${brandName} logo" style="max-height:110px;max-width:380px;width:auto;height:auto;display:inline-block;object-fit:contain;filter:brightness(0) invert(1)" loading="lazy"></div>` : ''}
     <div class="phero-label" style="text-align:center">${meta.badge || brandName}</div>
     <h1 style="text-align:center">${brandName.toUpperCase()}</h1>
@@ -2131,11 +2131,11 @@ ${footer()}
     <div class="feat-grid">
       ${(meta.why || []).map(w => `<div class="feat-card"><p style="color:var(--z700);font-weight:600">${w}</p></div>`).join('')}
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label">Complete Product Range</span>
       <h2 class="sec-title">${prods.length} PRODUCTS</h2>
@@ -2170,7 +2170,7 @@ ${footer()}
     </div>
     ${total > 1 ? `<div class="pg-wrap">${Array.from({ length: total }, (_, i) => `<button class="pg-btn${pg === i + 1 ? ' active' : ''}" onclick="pg=${i + 1};render();window.scrollTo({top:0})">${i + 1}</button>`).join('')}</div>` : ''}
     ${slice.length === 0 ? '<p style="color:var(--z500);padding:2rem 0">No products found.</p>' : ''}
-  </div>
+  </section>
 </section>
 
 ${ctaBand('Interested in ' + brandName + '?', 'Get in touch for pricing, availability, and expert recommendations.', 'Enquire Now')}
@@ -2195,10 +2195,10 @@ ${footer()}
     function renderMMA() {
       return `
 <div class="phero" style="background-image:linear-gradient(to bottom,rgba(9,9,11,0.85),rgba(9,9,11,0.92)),url('/assets/images/other/seg-e74ca4429e.jpg');background-size:cover;background-position:center">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="phero-label">TechFit Custom · Fabricated in Mumbai</div>
     <h2>PROFESSIONAL GRADE<br>MMA CAGES &amp; BOXING RINGS</h2>
-    <p class="phero-sub">Floor mount, elevated &amp; competition grade. Custom sizes from 16ft to 30ft. Designed and fabricated in-house for gyms, academies, and arenas across India.</p>
+    <p class="phero-sub">Floor mount, elevated &amp; competition grade. Custom sizes from 16ft to 30ft. Designed and fabricated in-house for gyms, academies, and arenas across India. Complete your combat zone with our <a href="/gym-flooring" onclick="event.preventDefault();go('gym-flooring')" style="text-decoration:underline;color:inherit">premium sports flooring</a> and <a href="/crossfit-rigs" onclick="event.preventDefault();go('crossfit-rigs')" style="text-decoration:underline;color:inherit">functional rigs</a>.</p>
     <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center">
       <button class="btn-red" onclick="go('contact')">Request Price List</button>
       <button class="btn-outline" onclick="go('contact')">Get A Quote</button>
@@ -2217,11 +2217,11 @@ ${footer()}
       <div class="feat-card"><h4>Custom Logo Branding</h4><p>High-durability printing on canvas, corner pads, and apron panels. Your gym identity, front and centre.</p></div>
       <div class="feat-card"><h4>Factory-Direct Pricing</h4><p>No middlemen. Fabricated in Mumbai with full project support from quote to installation.</p></div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec sec-gray">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center"><span class="sec-label">Full Product Lineup</span><h2 class="sec-title">CAGE &amp; RING OPTIONS</h2></div>
     <div class="lineup-grid">
       <div class="lineup-card reveal" onclick="go('contact')">
@@ -2265,11 +2265,11 @@ ${footer()}
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center"><span class="sec-label">Construction Specs</span><h2 class="sec-title">BUILT TO LAST. BUILT TO STANDARDS.</h2></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem">
       <div class="stat-box"><div class="stat-n">4mm+</div><div class="stat-l">Steel Pole Gauge</div></div>
@@ -2277,10 +2277,10 @@ ${footer()}
       <div class="stat-box"><div class="stat-n">5 Years</div><div class="stat-l">Structural Warranty</div></div>
       <div class="stat-box"><div class="stat-n">3–4 Wks</div><div class="stat-l">Standard Lead Time</div></div>
     </div>
-  </div>
+  </section>
 </section>
 
-<section class="sec sec-gray"><div class="sec-in">
+<section class="sec sec-gray"><section class="sec-in">
   <div class="sec-hdr center"><span class="sec-label">FAQ</span><h2 class="sec-title">COMMON QUESTIONS</h2></div>
   <div class="faq">
     ${faqItem('What cage and ring types do you offer?', 'Professional-grade combat sports infrastructure including Floor-Mount Cages for gyms with height restrictions, Elevated (Podium) Cages for competition visuals, Training Rings for daily academy use, and Competition-Grade Rings meeting international standards.')}
@@ -2321,11 +2321,11 @@ ${footer()}`;
       <div class="feat-card"><h4>Custom Configuration</h4><p>Low ceilings, awkward wall layouts, massive open floors — we engineer a rig solution that fits your exact blueprints.</p></div>
       <div class="feat-card"><h4>Factory-Direct Pricing</h4><p>Fabricated in Mumbai. No middlemen. Full project support from design consultation to installation.</p></div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec sec-gray">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center"><span class="sec-label">Configuration Options</span><h2 class="sec-title">WALL MOUNTED vs ISLAND RIGS</h2></div>
     <div class="compare">
       <div class="compare-card">
@@ -2345,19 +2345,19 @@ ${footer()}`;
         <button class="lineup-cta" onclick="go('contact')">GET QUOTE →</button>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center"><span class="sec-label">Compatible Attachments</span><h2 class="sec-title">EVERY ATTACHMENT. ONE RIG.</h2></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1rem">
       ${['J-Cups', 'Spotter Arms', 'Dip Bars', 'Monkey Bars', 'Landmines', 'Pull-Up Bars', 'Storage Solutions', 'Custom Branding'].map(a => `<div style="padding:1rem;background:var(--z50);border:1px solid var(--z200);font-weight:600;font-size:.85rem;color:var(--z700)">${a}</div>`).join('')}
     </div>
-  </div>
+  </section>
 </section>
 
-<section class="sec sec-gray"><div class="sec-in">
+<section class="sec sec-gray"><section class="sec-in">
   <div class="sec-hdr center"><span class="sec-label">FAQ</span><h2 class="sec-title">COMMON QUESTIONS</h2></div>
   <div class="faq">
     ${faqItem('Are the CrossFit rigs modular?', 'Yes. TechFit rigs use a modular grid system. Start with a basic wall-mount unit and expand indefinitely — add uprights, pull-up bars, and attachments as your facility grows.')}
@@ -2501,11 +2501,11 @@ ${footer()}`;
       </div>
 
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec sec-gray">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center"><span class="sec-label">Technical Specifications</span><h2 class="sec-title">BUILT TO COMMERCIAL STANDARDS.</h2></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem">
       <div class="stat-box"><div class="stat-n">500kg+</div><div class="stat-l">Rack Load Rating</div></div>
@@ -2518,10 +2518,10 @@ ${footer()}`;
       <div class="feat-card"><h4>Drop-Safe Bumper Plates</h4><p>High-density virgin rubber with stainless steel inner hub. Fully tested for safety and long-term floor protection.</p></div>
       <div class="feat-card"><h4>Pan-India Delivery</h4><p>Factory-direct delivery across India. Bulk order discounts and wholesale pricing for gym operators.</p></div>
     </div>
-  </div>
+  </section>
 </section>
 
-<section class="sec"><div class="sec-in">
+<section class="sec"><section class="sec-in">
   <div class="sec-hdr center"><span class="sec-label">FAQ</span><h2 class="sec-title">COMMON QUESTIONS</h2></div>
   <div class="faq">
     ${faqItem('What strength equipment range is available?', 'Comprehensive range of commercial-grade strength equipment including hex rubber dumbbells (2.5–50kg), Olympic bumper plates, heavy-duty power racks, deadlift platforms, and competition-spec bars.')}
@@ -2571,11 +2571,11 @@ ${footer()}`;
         <button class="lineup-cta" onclick="go('contact')">GET QUOTE →</button>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec sec-gray">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center"><span class="sec-label">Key Features</span><h2 class="sec-title">EVERY DETAIL ENGINEERED.</h2></div>
     <div class="feat-grid">
       <div class="feat-card"><h4>Panoramic Glass Walls</h4><p>Structural integrity and maximum spectator visibility. The signature padel aesthetic, built to last.</p></div>
@@ -2587,10 +2587,10 @@ ${footer()}`;
       <div class="feat-card"><h4>Indoor &amp; Outdoor</h4><p>Engineered for India's climate — solutions for both climate-controlled indoor and open outdoor environments.</p></div>
       <div class="feat-card"><h4>Retrofit Installation</h4><p>New build or retrofit — our team handles both new constructions and fitting into existing facility spaces.</p></div>
     </div>
-  </div>
+  </section>
 </section>
 
-<section class="sec"><div class="sec-in">
+<section class="sec"><section class="sec-in">
   <div class="sec-hdr center"><span class="sec-label">Who We Serve</span><h2 class="sec-title">FACILITY APPLICATIONS</h2></div>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1rem">
     ${['Sports Clubs & Academies', 'Residential Complexes', 'Commercial Sports Facilities', 'Hotel Resorts', 'Private Clubs', 'Multi-Court Complexes', 'Educational Institutions', 'Corporate Campuses'].map(a => `<div style="padding:1.25rem;background:var(--z50);border:1px solid var(--z200);font-weight:600;font-size:.85rem;color:var(--z700)">${a}</div>`).join('')}
@@ -2676,11 +2676,11 @@ ${footer()}`;
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec sec-gray">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center"><span class="sec-label">Material Specification</span><h2 class="sec-title">SS316 MARINE GRADE STAINLESS STEEL</h2></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem">
       <div class="stat-box"><div class="stat-n">SS316</div><div class="stat-l">Marine Grade Steel</div></div>
@@ -2693,19 +2693,19 @@ ${footer()}`;
       <div class="feat-card"><h4>New Build or Retrofit</h4><p>Modular design supports both new pool construction integration and retrofitting into existing pool facilities. Our installation team handles everything.</p></div>
       <div class="feat-card"><h4>Turnkey Installation</h4><p>From structural assessment to final commissioning — our team manages the full installation process for aquatic fitness equipment.</p></div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center"><span class="sec-label">Ideal For</span><h2 class="sec-title">FACILITY APPLICATIONS</h2></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem">
       ${['Rehabilitation Centres', 'Aquatic Therapy Facilities', 'High-End Fitness Clubs', 'Sports Recovery Centres', 'Wellness Facilities', 'Medical Institutions', 'Resort & Spa Facilities', 'Hotel Aquatic Centres'].map(a => `<div style="padding:1.25rem;background:var(--z50);border:1px solid var(--z200);font-weight:600;font-size:.85rem;color:var(--z700)">${a}</div>`).join('')}
     </div>
-  </div>
+  </section>
 </section>
 
-<section class="sec sec-gray"><div class="sec-in">
+<section class="sec sec-gray"><section class="sec-in">
   <div class="sec-hdr center"><span class="sec-label">FAQ</span><h2 class="sec-title">COMMON QUESTIONS</h2></div>
   <div class="faq">
     ${faqItem('What is SS316 Marine Grade Stainless Steel?', 'SS316 is a premium stainless steel alloy with superior corrosion resistance, especially in saltwater and chlorinated pool environments. All TechFit Aqua equipment uses SS316 for maximum longevity and zero rust with continuous underwater use.')}
@@ -2759,11 +2759,11 @@ ${footer()}`;
         <div style="margin-top:1rem;font-size:.75rem;font-weight:700;color:var(--red)">EXPLORE →</div>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec sec-gray">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label">What We Do</span>
       <h2 class="sec-title">OUR SERVICES</h2>
@@ -2841,11 +2841,11 @@ ${footer()}`;
         </ul>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label">The Process</span>
       <h2 class="sec-title">FROM ENQUIRY TO OPENING DAY</h2>
@@ -2873,7 +2873,7 @@ ${footer()}`;
         <p>Warranty support, spare parts, and AMC contracts for long-term peace of mind.</p>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 ${ctaBand("Let\'s Talk About Your Facility", "", "Start a Conversation", "contact")}
@@ -2892,7 +2892,7 @@ ${footer()}`;
 
       return `
 <div class="phero">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="phero-label">Our Portfolio</div>
     <h2>COMPLETED PROJECTS</h2>
     <p class="phero-sub">800+ installations and sports facilities delivered across India. Each project is custom-configured for the client's space, brand, and budget.</p>
@@ -2915,11 +2915,11 @@ ${footer()}`;
         </div>
       </div>`).join('')}
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec sec-gray">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label">Our Clients</span>
       <h2 class="sec-title">TRUSTED BY INDIA'S BEST</h2>
@@ -2928,11 +2928,11 @@ ${footer()}`;
     <div style="margin-top:3rem">
       ${logoWall()}
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label">Installation Highlights</span>
       <h2 class="sec-title">INSIDE OUR INSTALLATIONS</h2>
@@ -2963,7 +2963,7 @@ ${footer()}`;
     <p style="text-align:center;margin-top:2rem;font-size:.8rem;color:var(--z500)">
       More installation photos coming soon. Have a project in mind?
     </p>
-  </div>
+  </section>
 </section>
 
 ${ctaBand("Want Your Gym in This List?", "We\'d love to work on your facility. Get in touch for a free consultation.", "Plan Your Project")}
@@ -2975,7 +2975,7 @@ ${footer()}`;
     function renderWellness() {
       return `
 <div class="phero">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="phero-label">Wellness Solutions</div>
     <h2>INTEGRATED WELLNESS INFRASTRUCTURE</h2>
     <p class="phero-sub">From longevity labs in luxury hotels to recovery suites in residential towers &mdash; we design, supply and install the full wellness tech stack for India&rsquo;s most ambitious spaces.</p>
@@ -3015,11 +3015,11 @@ ${footer()}`;
         <p>Executive wellness rooms, recovery pods and stress-recovery technology for high-performance workplaces.</p>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec sec-gray">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label">What We Deliver</span>
       <h2 class="sec-title">FROM SPACE PLAN TO FULL INSTALLATION</h2>
@@ -3046,11 +3046,11 @@ ${footer()}`;
         <p>Factory-trained installation, annual maintenance, parts &amp; consumables &mdash; a single accountable vendor for the life of the facility.</p>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec sec-dark">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label" style="color:var(--red)">Why Alteon + TechFit</span>
       <h2 class="sec-title white">A WELLNESS STACK BUILT IN INDIA, FOR INDIA</h2>
@@ -3060,7 +3060,7 @@ ${footer()}`;
       <div class="feat-card"><h4>One Invoice, One PM</h4><p>Design through after-sales under one roof &mdash; a single accountable vendor from brief to handover.</p></div>
       <div class="feat-card"><h4>11.3% Annual Growth</h4><p>India is the 2nd fastest-growing wellness market globally, per Global Wellness Institute. We help you capture that tailwind.</p></div>
     </div>
-  </div>
+  </section>
 </section>
 
 ${ctaBand('Planning a wellness-led facility?', 'From residential towers to luxury hotels &mdash; let\'s talk space, equipment and ROI.', 'Talk to Us')}
@@ -3072,7 +3072,7 @@ ${footer()}`;
     function renderAbout() {
       return `
 <div class="phero">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="phero-label">About TechFit</div>
     <h2>ABOUT US</h2>
     <p class="phero-sub">From a Mumbai-based custom fabrication workshop to India&#x2019;s one-stop gym, wellness and sports infrastructure partner.</p>
@@ -3113,11 +3113,11 @@ ${footer()}`;
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec sec-gray">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label">Leadership</span>
       <h2 class="sec-title">MEET THE FOUNDERS</h2>
@@ -3148,11 +3148,11 @@ ${footer()}`;
       </div>
     </div>
     <p style="text-align:center;margin-top:2.5rem;font-size:1rem;color:var(--z600);line-height:1.8;max-width:760px;margin-left:auto;margin-right:auto;font-style:italic">Together, Ali Asgar and Pranav have built TechFit around a simple idea: the Indian market deserves a single, accountable partner for gym, wellness and sports infrastructure &mdash; one that manufactures, distributes, designs, installs, and services. From a Mumbai workshop to 800+ installations delivered across India, every project ships under one invoice, one project manager, and one phone number.</p>
-  </div>
+  </section>
 </section>
 
 <section class="sec sec-gray">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label">Founders&rsquo; Conversation</span>
       <h2 class="sec-title">HEAR THE STORY, STRAIGHT FROM ALI &amp; PRANAV</h2>
@@ -3163,11 +3163,11 @@ ${footer()}`;
         <iframe src="https://www.youtube.com/embed/iepAaopPbtI" title="TechFit Founders&apos; Conversation" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"></iframe>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label">What We Do</span>
       <h2 class="sec-title">ONE STOP SHOP FOR GYM, WELLNESS &amp; SPORTS INFRASTRUCTURE</h2>
@@ -3199,11 +3199,11 @@ ${footer()}`;
         <p>Design, supply, installation, AMC and after-sales &mdash; all co-ordinated by a single TechFit project manager, on one invoice.</p>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec sec-dark">
-  <div class="sec-in">
+  <section class="sec-in">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center" class="rsp-1col">
       <div>
         <span class="sec-label" style="color:var(--red)">Sister Concern</span>
@@ -3222,11 +3222,11 @@ ${footer()}`;
         </ul>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec sec-gray">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center">
       <span class="sec-label">Who We Serve</span>
       <h2 class="sec-title">ONE PARTNER. EVERY SEGMENT.</h2>
@@ -3239,7 +3239,7 @@ ${footer()}`;
       <div class="pillar"><h3>Fight Leagues &amp; Academies</h3><p>Matrix Fight Night, Super Fight League, Kumite 1, MMA Matrix and other combat-sports organisations.</p></div>
       <div class="pillar"><h3>Wellness &amp; Longevity Centres</h3><p>Recovery clinics, hotel wellness floors, longevity labs and aesthetic studios &mdash; Alteon hyperbaric, cryo, red-light and IHHT, integrated end-to-end.</p></div>
     </div>
-  </div>
+  </section>
 </section>
 
 ${ctaBand("Let&#x2019;s Plan Your Facility", "One phone call. One walk-through. One proposal. That&#x2019;s how simple setting up your facility should be.", "Book a Free Consultation")}
@@ -3255,7 +3255,7 @@ ${footer()}
     function renderBlogs() {
       return `
 <div class="phero">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="phero-label">TechFit Insights</div>
     <h2>BLOG &amp; CASE STUDIES</h2>
     <p class="phero-sub">Stories from the workshop floor and the arena. Combat-sports installations, gym-fit-out playbooks, and what we&#x2019;ve learned building 300+ facilities across India.</p>
@@ -3281,7 +3281,7 @@ ${footer()}
         </article>
       `).join('')}
     </div>
-  </div>
+  </section>
 </section>
 
 ${ctaBand('Planning Your Own Fight-League Ready Facility?', 'Our team has delivered cages, rings and fit-outs for India\'s top combat-sports promotions.', 'Talk to Our Team')}
@@ -3311,7 +3311,7 @@ ${footer()}
       
       return `
 <div class="phero" style="padding:5rem 1.5rem">
-  <div class="sec-in" style="max-width:860px;margin:0 auto;text-align:center">
+  <section class="sec-in" style="max-width:860px;margin:0 auto;text-align:center">
     <div class="phero-label">${post.category} &middot; ${post.date} &middot; ${post.readTime}</div>
     <h1 style="font-size:clamp(1.6rem,3.8vw,2.8rem);line-height:1.2">${post.title}</h1>
   </div>
@@ -3328,7 +3328,7 @@ ${footer()}
       <button class="btn-red" onclick="go('contact')">Start Your Project</button>
       <button class="btn-outline" onclick="go('blogs')">&larr; Back to Blog</button>
     </div>
-  </div>
+  </section>
 </section>
 ${footer()}
       `;
@@ -3340,7 +3340,7 @@ ${footer()}
     function renderFlooring() {
       return `
 <div class="phero" style="background:linear-gradient(135deg,#09090b 55%,#1a0a00)">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="phero-label">TechFit Flooring &middot; Commercial Grade</div>
     <h2>GYM RUBBER FLOORING<br>&amp; SPORTS SURFACES</h2>
     <p class="phero-sub">Heavy-duty rubber floor tiles engineered for commercial gyms, CrossFit boxes, free-weight zones, functional training floors and sports facilities. 10 mm to 50 mm thickness, interlocking or seamless installation.</p>
@@ -3362,11 +3362,11 @@ ${footer()}
       <div class="feat-card"><h4>Slip-Resistant &amp; Hygienic</h4><p>Textured anti-slip surface. Closed-cell rubber does not absorb sweat, bacteria or moisture. Simple mop-and-go maintenance.</p></div>
       <div class="feat-card"><h4>Full Colour Range</h4><p>Solid black, black with grey / red / blue / green EPDM fleck, full colour solids, and custom colour matching for branded facilities.</p></div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec sec-gray">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center"><span class="sec-label">Tile Thickness Guide</span><h2 class="sec-title">CHOOSE THE RIGHT THICKNESS</h2></div>
     <div class="lineup-grid">
       <div class="lineup-card reveal" onclick="go('contact')">
@@ -3414,11 +3414,11 @@ ${footer()}
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center"><span class="sec-label">Tile Formats</span><h2 class="sec-title">INTERLOCKING OR SEAMLESS &mdash; YOU CHOOSE</h2></div>
     <div class="compare">
       <div class="compare-card">
@@ -3446,20 +3446,20 @@ ${footer()}
         <button class="lineup-cta" onclick="go('contact')">GET QUOTE &rarr;</button>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec sec-gray">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center"><span class="sec-label">Colour Range</span><h2 class="sec-title">RUBBER FLOORING SHADES</h2><p class="sec-sub">From solid commercial black to EPDM colour flecks and full-colour solids &mdash; match your facility branding.</p></div>
     <div style="margin-top:2rem">
       <img src="/assets/images/other/img-7b195b3ffd.jpg" alt="TechFit Gym Rubber Flooring colour range" style="width:100%;max-height:720px;object-fit:contain;display:block;border-radius:.4rem;background:#fff;padding:1rem" loading="lazy">
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center"><span class="sec-label">Technical Specifications</span><h2 class="sec-title">POWERFUL SERIES &mdash; COMMERCIAL RUBBER ROLLS</h2></div>
     <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:2.5rem;align-items:center" class="rsp-1col">
       <div>
@@ -3483,11 +3483,11 @@ ${footer()}
         <img src="/assets/images/other/img-c3ce8249ad.jpg" alt="Powerful Rubber Rolls" style="width:100%;height:auto;border-radius:.3rem;box-shadow:0 4px 20px rgba(0,0,0,.08)" loading="lazy">
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec sec-gray">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center"><span class="sec-label">PVC Sports Surfaces</span><h2 class="sec-title">JOYFUL PVC MULTIPURPOSE FLOORING</h2></div>
     <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:2.5rem;align-items:center" class="rsp-1col">
       <div>
@@ -3503,11 +3503,11 @@ ${footer()}
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center"><span class="sec-label">Synthetic Turf</span><h2 class="sec-title">POWERFUL HIGH-RESILIENCE TURF</h2></div>
     <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:2.5rem;align-items:center" class="rsp-1col">
       <div>
@@ -3528,11 +3528,11 @@ ${footer()}
         <img src="/assets/images/other/img-a745107373.jpg" alt="Powerful High Resilience Turf" style="width:100%;height:auto;border-radius:.3rem;box-shadow:0 4px 20px rgba(0,0,0,.08)" loading="lazy">
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="sec-hdr center"><span class="sec-label">Additional Flooring Solutions</span><h2 class="sec-title">BEYOND RUBBER TILES</h2></div>
     <div class="feat-grid">
       <div class="feat-card"><h4>Artificial Turf / Astro Turf</h4><p>Sled push and functional training strips. 40 mm&ndash;60 mm synthetic turf for indoor functional zones and sled tracks. Custom lengths and widths.</p></div>
@@ -3540,10 +3540,10 @@ ${footer()}
       <div class="feat-card"><h4>Interlocking EVA Foam</h4><p>Ultra-light EVA foam tiles for Pilates studios, yoga rooms and kids&#x2019; zones. Low-cost, comfortable, colour options.</p></div>
       <div class="feat-card"><h4>Commercial Vinyl</h4><p>Sports vinyl for courts, aerobic studios and group-exercise spaces. Excellent wear performance and smooth clean finish.</p></div>
     </div>
-  </div>
+  </section>
 </section>
 
-<section class="sec sec-gray"><div class="sec-in">
+<section class="sec sec-gray"><section class="sec-in">
   <div class="sec-hdr center"><span class="sec-label">FAQ</span><h2 class="sec-title">COMMON QUESTIONS</h2></div>
   <div class="faq">
     ${faqItem('What thickness of rubber flooring do I need?', '10 mm&ndash;12 mm is fine for cardio and functional zones. 15 mm&ndash;20 mm is the commercial standard for most strength floors. 25 mm&ndash;50 mm is required for deadlift platforms, heavy drop zones and Olympic-lifting areas.')}
@@ -3621,11 +3621,11 @@ ${footer()}
         </form>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#f8f9fa;border-top:1px solid #eee;padding:4rem 0;">
-  <div class="sec-in">
+  <section class="sec-in">
     <div style="text-align:center;margin-bottom:2.5rem;">
       <span class="sec-label" style="display:inline-block;color:var(--red);font-weight:700;font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:0.5rem;">Local Workshop &amp; Offices</span>
       <h3 style="font-size:2rem;margin-bottom:0.75rem;color:#111;font-weight:800;font-family:'Outfit',sans-serif;">VISIT OUR MUMBAI HEADQUARTERS</h3>
@@ -3634,7 +3634,7 @@ ${footer()}
     <div style="border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.06);height:420px;background:#eee;border:1px solid #eee;">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.078440788647!2d72.84196147610072!3d18.977558682121303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf46e5ca113b%3A0x6b6d2be9b6a9fe2f!2s309%2C%20Boat%20Hard%20Rd%2C%20Darukhana%2C%20Byculla%2C%20Mumbai%2C%20Maharashtra%20400010!5e0!3m2!1sen!2sin!4v1716900000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-  </div>
+  </section>
 </section>
 ${footer()}`;
     }
@@ -3872,7 +3872,7 @@ ${footer()}`;
     function renderThankYou() {
       return `
 <div class="phero">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="phero-label">Thank You</div>
     <h1>ENQUIRY RECEIVED</h1>
     <p class="phero-sub" style="font-size:1.2rem;max-width:720px;">We'll call you within one business day to understand your requirements and schedule your free consultation.</p>
@@ -3891,7 +3891,7 @@ ${footer()}`;
         <a href="https://wa.me/919820166910?text=Hi%20TechFit!%20I%20just%20submitted%20a%20form%20and%20wanted%20to%20follow%20up." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:16px 36px;background:#25D366;color:#fff;border-radius:4px;text-decoration:none;font-weight:700;font-size:1.05rem;">💬 Chat on WhatsApp</a>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 ${footer()}`;
     }
@@ -3899,15 +3899,15 @@ ${footer()}`;
     function renderPrivacyPolicy() {
       return `
 <section class="phero" style="background:#09090b;padding:8rem 2rem 4rem">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="phero-label" style="color:var(--red);letter-spacing:.12em">TechFit Compliance</div>
     <h1 style="color:#fff;font-size:2.8rem;margin:0.5rem 0">PRIVACY POLICY</h1>
     <p class="phero-sub" style="color:rgba(255,255,255,0.7)">Your privacy is critical to us. Learn how TechFit manages, stores, and protects your information.</p>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#0c0c0e;color:rgba(255,255,255,0.8);line-height:1.8">
-  <div class="sec-in" style="max-width:800px;margin:0 auto">
+  <section class="sec-in" style="max-width:800px;margin:0 auto">
     <h3 style="color:#fff;font-size:1.4rem;margin:2rem 0 1rem">1. Information Collection</h3>
     <p style="margin-bottom:1.5rem">We collect information that you directly provide to us when submitting lead or quote consultation forms, including your name, email address, phone number, location, and details regarding your commercial or home gym projects. This information is gathered solely to provide personalized B2B quotes and consultation services.</p>
 
@@ -3922,7 +3922,7 @@ ${footer()}`;
 
     <h3 style="color:#fff;font-size:1.4rem;margin:2rem 0 1rem">5. Updates & Contact</h3>
     <p style="margin-bottom:2rem">This Privacy Policy may be updated periodically to align with evolving digital practices. For inquiries regarding your personal details, contact us at <strong>info@techfitactive.com</strong> or call <strong>+91 98201 66910</strong>.</p>
-  </div>
+  </section>
 </section>
 ${footer()}
 `;
@@ -3931,15 +3931,15 @@ ${footer()}
     function renderTermsOfService() {
       return `
 <section class="phero" style="background:#09090b;padding:8rem 2rem 4rem">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="phero-label" style="color:var(--red);letter-spacing:.12em">TechFit Compliance</div>
     <h1 style="color:#fff;font-size:2.8rem;margin:0.5rem 0">TERMS OF SERVICE</h1>
     <p class="phero-sub" style="color:rgba(255,255,255,0.7)">Please read the terms governing the purchase, supply, custom fabrication, and installation of TechFit solutions.</p>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#0c0c0e;color:rgba(255,255,255,0.8);line-height:1.8">
-  <div class="sec-in" style="max-width:800px;margin:0 auto">
+  <section class="sec-in" style="max-width:800px;margin:0 auto">
     <h3 style="color:#fff;font-size:1.4rem;margin:2rem 0 1rem">1. Scope of Service</h3>
     <p style="margin-bottom:1.5rem">TechFit (Techfit Health Fitness Private Limited) provides premium turnkey gym setup services, commercial fitness equipment supply (BH Fitness, Tunturi, California Fitness), custom combat sports fabrications (MMA cages, boxing rings), CrossFit rigs, and custom racket sports infrastructure (padel and pickleball court construction) across India.</p>
 
@@ -3954,7 +3954,7 @@ ${footer()}
 
     <h3 style="color:#fff;font-size:1.4rem;margin:2rem 0 1rem">5. Governing Law</h3>
     <p style="margin-bottom:2rem">These Terms of Service and all commercial supply contracts are governed by and construed in accordance with the laws of India, subject to the jurisdiction of the courts of Mumbai, Maharashtra.</p>
-  </div>
+  </section>
 </section>
 ${footer()}
 `;
@@ -3988,15 +3988,15 @@ ${footer()}
 
   return `
 <section class="phero" style="background:#09090b;padding:8rem 2rem 4rem;border-bottom:1px solid rgba(255,255,255,0.05)">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="phero-label" style="color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:0.85rem">B2B Evaluation Guide</div>
     <h1 style="color:#fff;font-size:clamp(2.2rem,5vw,3.5rem);margin:0.5rem 0;line-height:1.15;font-weight:800">Technogym Commercial Equipment: In-Depth India Sourcing Guide</h1>
     <p class="phero-sub" style="color:rgba(255,255,255,0.7);max-width:800px">An objective analysis of premium commercial fitness equipment sourcing for luxury health clubs, hotels, and real estate developer amenities in India.</p>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#0c0c0e;color:rgba(255,255,255,0.85);line-height:1.8;padding:4rem 2rem">
-  <div class="sec-in" style="max-width:900px;margin:0 auto">
+  <section class="sec-in" style="max-width:900px;margin:0 auto">
     
     <h2 style="color:#fff;font-size:1.8rem;margin:0 0 1.5rem">Considering a Premium Global Brand? Here is What to Evaluate</h2>
     <p style="margin-bottom:1.5rem">Setting up a commercial health club, real estate residential amenity, or five-star hotel fitness center in India is a major capital investment. When developers and gym operators evaluate high-end fitness equipment, premium international brands are routinely considered. However, securing the best equipment involves analyzing more than just name recognition. Smart business owners evaluate four critical factors: initial capital expenditure (CapEx), logistical shipping import lead times, equipment customization flexibility, and the speed and availability of localized after-sales Annual Maintenance Contracts (AMC).</p>
@@ -4113,7 +4113,7 @@ ${footer()}
       <button class="btn-red" onclick="go('contact')" style="padding:16px 36px;font-size:1rem;font-weight:700">Request Turnkey B2B Consultation →</button>
     </div>
 
-  </div>
+  </section>
 </section>
 ${footer()}
 `;
@@ -4147,15 +4147,15 @@ ${footer()}
 
   return `
 <section class="phero" style="background:#09090b;padding:8rem 2rem 4rem;border-bottom:1px solid rgba(255,255,255,0.05)">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="phero-label" style="color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:0.85rem">Commercial Gym Sourcing</div>
     <h1 style="color:#fff;font-size:clamp(2.2rem,5vw,3.5rem);margin:0.5rem 0;line-height:1.15;font-weight:800">Life Fitness Sourcing Analysis: Premium India Alternatives</h1>
     <p class="phero-sub" style="color:rgba(255,255,255,0.7);max-width:800px">An industry perspective on commercial strength and cardio machine procurement, direct logistics, and servicing infrastructure in India.</p>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#0c0c0e;color:rgba(255,255,255,0.85);line-height:1.8;padding:4rem 2rem">
-  <div class="sec-in" style="max-width:900px;margin:0 auto">
+  <section class="sec-in" style="max-width:900px;margin:0 auto">
     
     <h2 style="color:#fff;font-size:1.8rem;margin:0 0 1.5rem">Evaluating Commercial Strength &amp; Cardio Procurement</h2>
     <p style="margin-bottom:1.5rem">When planning high-traffic commercial gyms or luxury fitness spaces in India, choosing the right strength and conditioning equipment is the single most important decision for overall member conversion. While traditional global brands have historically dominated corporate specifications, modern operators are increasingly recognizing the high hidden costs of shipping imports, long container delays, lack of frame customization, and highly fragmented dealer networks that delay essential AMC support.</p>
@@ -4263,7 +4263,7 @@ ${footer()}
       <button class="btn-red" onclick="go('contact')" style="padding:16px 36px;font-size:1rem;font-weight:700">Request Turnkey B2B Consultation →</button>
     </div>
 
-  </div>
+  </section>
 </section>
 ${footer()}
 `;
@@ -4297,15 +4297,15 @@ ${footer()}
 
   return `
 <section class="phero" style="background:#09090b;padding:8rem 2rem 4rem;border-bottom:1px solid rgba(255,255,255,0.05)">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="phero-label" style="color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:0.85rem">Clinical Wellness Technology</div>
     <h1 style="color:#fff;font-size:clamp(2.2rem,5vw,3.5rem);margin:0.5rem 0;line-height:1.15;font-weight:800">Hyperbaric Oxygen Chambers: Commercial India Sourcing Guide</h1>
     <p class="phero-sub" style="color:rgba(255,255,255,0.7);max-width:800px">An evaluation of premium clinical hard-shell monoplace hyperbaric chambers, localized engineering installation, and support in India.</p>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#0c0c0e;color:rgba(255,255,255,0.85);line-height:1.8;padding:4rem 2rem">
-  <div class="sec-in" style="max-width:900px;margin:0 auto">
+  <section class="sec-in" style="max-width:900px;margin:0 auto">
     
     <h2 style="color:#fff;font-size:1.8rem;margin:0 0 1.5rem">Evaluating Clinical-Grade Hyperbaric Technology (HBOT)</h2>
     <p style="margin-bottom:1.5rem">Setting up a recovery clinic, advanced biohacking suite, luxury wellness resort, or athletic center in India requires the absolute highest standard of engineering safety. When medical directors and wellness developers evaluate clinical hard-shell monoplace hyperbaric oxygen chambers (HBOT), standard global clinical brands are often analyzed. Sourcing these specialized chambers, however, requires evaluating deep parameters: gas safety controls, ATA pressure limits, electrical layout demands, direct-import shipping times, and the absolute availability of local certified engineers for emergency maintenance.</p>
@@ -4413,7 +4413,7 @@ ${footer()}
       <button class="btn-red" onclick="go('contact')" style="padding:16px 36px;font-size:1rem;font-weight:700">Request Turnkey B2B Consultation →</button>
     </div>
 
-  </div>
+  </section>
 </section>
 ${footer()}
 `;
@@ -4447,15 +4447,15 @@ ${footer()}
 
   return `
 <section class="phero" style="background:#09090b;padding:8rem 2rem 4rem;border-bottom:1px solid rgba(255,255,255,0.05)">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="phero-label" style="color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:0.85rem">B2B Evaluation Guide</div>
     <h1 style="color:#fff;font-size:clamp(2.2rem,5vw,3.5rem);margin:0.5rem 0;line-height:1.15;font-weight:800">Precor India Commercial Gym Sourcing: In-Depth B2B Sourcing Guide</h1>
     <p class="phero-sub" style="color:rgba(255,255,255,0.7);max-width:800px">An objective analysis of premium commercial fitness equipment sourcing for luxury health clubs, hotels, and real estate developer amenities in India.</p>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#0c0c0e;color:rgba(255,255,255,0.85);line-height:1.8;padding:4rem 2rem">
-  <div class="sec-in" style="max-width:900px;margin:0 auto">
+  <section class="sec-in" style="max-width:900px;margin:0 auto">
     
     <h2 style="color:#fff;font-size:1.8rem;margin:0 0 1.5rem">Considering a Premium Global Brand? Here is What to Evaluate</h2>
     <p style="margin-bottom:1.5rem">Setting up a commercial health club, real estate residential amenity, or five-star hotel fitness center in India is a major capital investment. When developers and gym operators evaluate high-end fitness equipment, premium international brands are routinely considered. However, securing the best equipment involves analyzing more than just name recognition. Smart business owners evaluate four critical factors: initial capital expenditure (CapEx), logistical shipping import lead times, equipment customization flexibility, and the speed and availability of localized after-sales Annual Maintenance Contracts (AMC).</p>
@@ -4562,7 +4562,7 @@ ${footer()}
       <button class="btn-red" onclick="go('contact')" style="padding:16px 36px;font-size:1rem;font-weight:700">Request Turnkey B2B Consultation →</button>
     </div>
 
-  </div>
+  </section>
 </section>
 ${footer()}
 `;
@@ -4596,15 +4596,15 @@ ${footer()}
 
   return `
 <section class="phero" style="background:#09090b;padding:8rem 2rem 4rem;border-bottom:1px solid rgba(255,255,255,0.05)">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="phero-label" style="color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:0.85rem">Clinical Wellness Technology</div>
     <h1 style="color:#fff;font-size:clamp(2.2rem,5vw,3.5rem);margin:0.5rem 0;line-height:1.15;font-weight:800">Electric Cryotherapy Chambers: Mecotec India B2B Sourcing Guide</h1>
     <p class="phero-sub" style="color:rgba(255,255,255,0.7);max-width:800px">An evaluation of premium clinical nitrogen-free whole-body cryotherapy chambers, localized engineering installation, and support in India.</p>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#0c0c0e;color:rgba(255,255,255,0.85);line-height:1.8;padding:4rem 2rem">
-  <div class="sec-in" style="max-width:900px;margin:0 auto">
+  <section class="sec-in" style="max-width:900px;margin:0 auto">
     
     <h2 style="color:#fff;font-size:1.8rem;margin:0 0 1.5rem">Evaluating Electric Whole-Body Cryotherapy (WBC)</h2>
     <p style="margin-bottom:1.5rem">Setting up a recovery clinic, advanced biohacking suite, luxury wellness resort, or athletic center in India requires the absolute highest standard of engineering safety. When medical directors and wellness developers evaluate electric whole-body cryotherapy chambers, standard global clinical brands are often analyzed. Sourcing these specialized chambers, however, requires evaluating deep parameters: safety configurations, electric nitrogen-free systems, operational costs, electrical layout demands, direct-import shipping times, and the absolute availability of local certified engineers for emergency maintenance.</p>
@@ -4711,7 +4711,7 @@ ${footer()}
       <button class="btn-red" onclick="go('contact')" style="padding:16px 36px;font-size:1rem;font-weight:700">Request Turnkey B2B Consultation →</button>
     </div>
 
-  </div>
+  </section>
 </section>
 ${footer()}
 `;
@@ -4745,15 +4745,15 @@ ${footer()}
 
   return `
 <section class="phero" style="background:#09090b;padding:8rem 2rem 4rem;border-bottom:1px solid rgba(255,255,255,0.05)">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="phero-label" style="color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:0.85rem">Combat Sports Sourcing</div>
     <h1 style="color:#fff;font-size:clamp(2.2rem,5vw,3.5rem);margin:0.5rem 0;line-height:1.15;font-weight:800">Commercial Combat Infrastructure: USI &amp; Cosco vs TechFit Cages India</h1>
     <p class="phero-sub" style="color:rgba(255,255,255,0.7);max-width:800px">An evaluation of professional custom MMA cages, octagons, and competition boxing rings vs stock catalog fitness products in India.</p>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#0c0c0e;color:rgba(255,255,255,0.85);line-height:1.8;padding:4rem 2rem">
-  <div class="sec-in" style="max-width:900px;margin:0 auto">
+  <section class="sec-in" style="max-width:900px;margin:0 auto">
     
     <h2 style="color:#fff;font-size:1.8rem;margin:0 0 1.5rem">Evaluating Combat Sports Infrastructure in India</h2>
     <p style="margin-bottom:1.5rem">Setting up a professional fight academy, commercial combat fitness gym, or high-performance athletic training zone in India requires heavy structural steel infrastructure. When developers and gym operators evaluate combat rings and cages, standard catalog brands are often considered. Sourcing these heavy structures, however, requires analyzing more than generic sporting catalog lines. Operators must evaluate structural steel gauges, safety padding density, vinyl wire tension, spatial customization limits, and local structural engineering certifications.</p>
@@ -4860,7 +4860,7 @@ ${footer()}
       <button class="btn-red" onclick="go('contact')" style="padding:16px 36px;font-size:1rem;font-weight:700">Request Turnkey B2B Consultation →</button>
     </div>
 
-  </div>
+  </section>
 </section>
 ${footer()}
 `;
@@ -5266,7 +5266,7 @@ function renderGuide(slug) {
 
   return `
 <section class="phero" style="background:#09090b;padding:8rem 2rem 4rem;border-bottom:1px solid rgba(255,255,255,0.05)">
-  <div class="sec-in">
+  <section class="sec-in">
     <div class="phero-label" style="color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:0.85rem">${g.badge}</div>
     <h1 style="color:#fff;font-size:clamp(2.2rem,5vw,3.5rem);margin:0.5rem 0;line-height:1.15;font-weight:800">${g.h1}</h1>
     <p class="phero-sub" style="color:rgba(255,255,255,0.7);max-width:800px">${g.desc}</p>
@@ -5274,11 +5274,11 @@ function renderGuide(slug) {
       <span>By <strong>${g.author}</strong></span>
       <span>Published <strong>${g.publishedDate}</strong></span>
     </div>
-  </div>
+  </section>
 </section>
 
 <section class="sec" style="background:#0c0c0e;color:rgba(255,255,255,0.85);line-height:1.8;padding:4rem 2rem">
-  <div class="sec-in" style="max-width:900px;margin:0 auto">
+  <section class="sec-in" style="max-width:900px;margin:0 auto">
     
     ${h2Headers.length > 0 ? `
     <div style="background:#121214;border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:1.5rem;margin-bottom:2.5rem">
@@ -5329,7 +5329,7 @@ function renderGuide(slug) {
       </div>
     </div>
 
-  </div>
+  </section>
 </section>
 
 ${footer()}
@@ -5378,16 +5378,16 @@ function renderAlternativesHub() {
 
   return `
 <section class="phero" style="background:#09090b;padding:8rem 2rem 4rem;border-bottom:1px solid rgba(255,255,255,0.05)">
-  <div class="sec-in" style="max-width:1000px;margin:0 auto;text-align:center">
+  <section class="sec-in" style="max-width:1000px;margin:0 auto;text-align:center">
     <div class="phero-label" style="color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:0.85rem">Brand Comparisons</div>
     <h1 style="color:#fff;font-size:clamp(2.2rem,5vw,3.5rem);margin:0.5rem 0 1.5rem;line-height:1.15;font-weight:800">Compare Commercial Gym Equipment Brands</h1>
     <p class="phero-sub" style="color:rgba(255,255,255,0.7);max-width:800px;margin:0 auto">Comprehensive, factual CapEx and sourcing comparisons between major global fitness brands and TechFit's direct-supply commercial infrastructure.</p>
-  </div>
+  </section>
 </section>
 <section class="sec" style="background:#000;padding:4rem 2rem">
-  <div class="sec-in" style="max-width:1200px;margin:0 auto">
+  <section class="sec-in" style="max-width:1200px;margin:0 auto">
     ${gridHtml}
-  </div>
+  </section>
 </section>
 ${footer()}
   `;
