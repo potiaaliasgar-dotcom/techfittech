@@ -3556,3 +3556,19 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+
+/* Mobile Touch Targets padding enhancement */
+@media(max-width: 700px) {
+  .nav-links a, 
+  .footer-links a, 
+  .footer-col a,
+  .footer-brand p a,
+  .nav-cta,
+  .nav-ham {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    display: inline-block;
+    min-height: 48px;
+  }
+}
