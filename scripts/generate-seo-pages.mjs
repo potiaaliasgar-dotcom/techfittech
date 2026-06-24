@@ -71,30 +71,30 @@ const SEO_MAP = {
   },
 
   'alteon': {
-    title: 'Alteon Wellness & Recovery | Hyperbaric, Cryotherapy, Red-Light Therapy India',
-    desc: 'Alteon by TechFit — premium wellness and recovery technology. Hyperbaric oxygen chambers, cryotherapy, red-light therapy, dry-float, IHHT and more for clinics, hotels and gyms.',
-    h1: 'Alteon Wellness & Recovery Technology India',
+    title: 'Alteon Wellness & Recovery | Official Distributor — Cryotherapy, HBOT, Red-Light',
+    desc: 'TechFit is the official distributor of Alteon Wellness & Recovery. Premium recovery technology — hyperbaric oxygen chambers, cryotherapy, red-light therapy, dry-float, IHHT and more.',
+    h1: 'Alteon Wellness & Recovery Technology',
     lastmod: '2026-05-24',
     img: OG_WELLNESS
   },
   'bh-fitness': {
-    title: 'BH Fitness India | Authorised Dealer — Treadmills, Bikes, Ellipticals',
-    desc: 'TechFit is the authorised dealer of BH Fitness commercial gym equipment in India. Treadmills, exercise bikes, ellipticals and strength machines for gyms, hotels and corporates.',
-    h1: 'BH Fitness India | Authorised Dealer — Treadmills, Bikes, Ellipticals',
+    title: 'BH Fitness | Reseller — Treadmills, Bikes, Ellipticals',
+    desc: 'TechFit is a reseller of BH Fitness commercial gym equipment. Treadmills, exercise bikes, ellipticals and strength machines for gyms, hotels and corporates.',
+    h1: 'BH Fitness | Reseller — Treadmills, Bikes, Ellipticals',
     lastmod: '2026-05-25',
     img: OG_CARDIO
   },
   'tunturi': {
-    title: 'Tunturi India | Authorised Dealer — Nordic Fitness Equipment',
-    desc: 'TechFit is the authorised dealer of Tunturi fitness equipment in India. From Finland — premium cardio, strength and functional-training gear for commercial and home gyms.',
-    h1: 'Tunturi India | Authorised Dealer — Nordic Fitness Equipment',
+    title: 'Tunturi | Reseller — Nordic Fitness Equipment',
+    desc: 'TechFit is a reseller of Tunturi fitness equipment. From Finland — premium cardio, strength and functional-training gear for commercial and home gyms.',
+    h1: 'Tunturi | Reseller — Nordic Fitness Equipment',
     lastmod: '2026-05-22',
     img: OG_CARDIO
   },
   'california-fitness': {
-    title: 'California Fitness India | Authorised Dealer — Commercial Gym Equipment',
-    desc: 'TechFit is the authorised dealer of California Fitness in India. Professional-grade cardio and strength equipment for gyms, studios and fitness chains.',
-    h1: 'California Fitness India | Authorised Dealer — Gym Equipment',
+    title: 'California Fitness | Reseller — Commercial Gym Equipment',
+    desc: 'TechFit is a reseller of California Fitness. Professional-grade cardio and strength equipment for gyms, studios and fitness chains.',
+    h1: 'California Fitness | Reseller — Gym Equipment',
     lastmod: '2026-05-20',
     img: OG_CARDIO
   },
@@ -2734,8 +2734,8 @@ const SCHEMAS = {
 const NOSCRIPT_FALLBACKS = {
   'alteon': `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
-      <h2>Alteon Wellness &amp; Recovery Equipment India | Authorized Partner</h2>
-      <p>TechFit is the official authorized exclusive dealer and partner for <strong>Alteon Wellness (alteontech.com)</strong> in India. We supply professional clinical and commercial-grade longevity, recovery, and biohacking technology to health clubs, hotels, residential developments, longevity clinics, and physical therapy centers.</p>
+      <h2>Alteon Wellness &amp; Recovery Equipment | Official Distributor</h2>
+      <p>TechFit is the official distributor of <strong>Alteon Wellness (alteontech.com)</strong>. We supply professional clinical and commercial-grade longevity, recovery, and biohacking technology to health clubs, hotels, residential developments, longevity clinics, and physical therapy centers.</p>
       
       <h3>Alteon Recovery Product Portfolio:</h3>
       <ul>
@@ -2749,9 +2749,9 @@ const NOSCRIPT_FALLBACKS = {
       </ul>
 
       <h3>Turnkey Sourcing &amp; Engineering:</h3>
-      <p>TechFit provides full boots-on-the-ground engineering support, certified professional installation, immediate spare parts inventory, and robust annual maintenance contracts (AMC) throughout India, including Mumbai, Pune, Bangalore, Delhi, Gurgaon, Noida, Chennai, and Hyderabad, ensuring 100% operational uptime.</p>
+      <p>TechFit provides full boots-on-the-ground engineering support, certified professional installation, immediate spare parts inventory, and robust annual maintenance contracts (AMC), ensuring 100% operational uptime.</p>
       
-      <p><strong>Contact TechFit for Alteon India Inquiries:</strong><br>
+      <p><strong>Contact TechFit for Alteon Inquiries:</strong><br>
         Email: info@techfitactive.com<br>
         Phone: +91 98201 66910<br>
         Address: Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India<br>
@@ -2761,8 +2761,8 @@ const NOSCRIPT_FALLBACKS = {
   </noscript>`,
   'bh-fitness': `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
-      <h2>BH Fitness India | Official Authorized Dealer</h2>
-      <p>TechFit is the official authorized dealer for <strong>BH Fitness</strong> commercial gym equipment in India. Headquartered in Spain, BH Fitness is a leading global commercial fitness brand, delivering world-class biomechanics, structural durability, and cloud-connected display consoles.</p>
+      <h2>BH Fitness | Reseller</h2>
+      <p>TechFit is a reseller of <strong>BH Fitness</strong> commercial gym equipment. Headquartered in Spain, BH Fitness is a leading global commercial fitness brand, delivering world-class biomechanics, structural durability, and cloud-connected display consoles.</p>
       
       <h3>Product Lines:</h3>
       <ul>
@@ -2770,10 +2770,10 @@ const NOSCRIPT_FALLBACKS = {
         <li><strong>Commercial Strength (TR &amp; PL Series):</strong> Premium plate-loaded strength stations, selectorized weight-stack machine lines, dual-pulley functional trainers, cable crossovers, and heavy-duty adjustable benches.</li>
       </ul>
 
-      <h3>Authorised Sourcing &amp; Local AMC Support:</h3>
+      <h3>Sourcing &amp; Local AMC Support:</h3>
       <p>TechFit provides the commercial fitness industry with direct-import pricing options, full spatial planning, and comprehensive Annual Maintenance Contracts (AMC) serviced by local engineers. By sourcing directly, club owners, premium real estate developers, and five-star hospitality sites can optimize capital expenditures (CapEx) while delivering an elite biomechanical experience and long-term service reliability.</p>
       
-      <p><strong>Contact TechFit for BH Fitness India:</strong><br>
+      <p><strong>Contact TechFit for BH Fitness:</strong><br>
         Email: info@techfitactive.com<br>
         Phone: +91 98201 66910<br>
         Website: <a href="https://www.techfittech.com/bh-fitness">techfittech.com/bh-fitness</a>
@@ -2782,15 +2782,15 @@ const NOSCRIPT_FALLBACKS = {
   </noscript>`,
   'tunturi': `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
-      <h2>Tunturi Fitness India | Authorized Dealer</h2>
-      <p>TechFit is the official authorized dealer of <strong>Tunturi</strong> fitness equipment in India. From Finland, Tunturi is a pioneer in Nordic fitness innovation, designing high-quality cardio, strength, and functional training gear for commercial fitness studios, corporate gyms, residential amenities, and premium home setups since 1922.</p>
+      <h2>Tunturi Fitness | Reseller</h2>
+      <p>TechFit is a reseller of <strong>Tunturi</strong> fitness equipment. From Finland, Tunturi is a pioneer in Nordic fitness innovation, designing high-quality cardio, strength, and functional training gear for commercial fitness studios, corporate gyms, residential amenities, and premium home setups since 1922.</p>
       
       <h3>Tunturi Product Highlights:</h3>
       <ul>
         <li><strong>Cardio Trainers:</strong> Professional-grade home and light-commercial treadmills, elliptical cross trainers, rowing machines, and indoor cycling bikes with clean Scandinavian design.</li>
         <li><strong>Strength &amp; Functional:</strong> Premium power towers, multi-gym stations, utility benches, dumbbells, kettlebells, and functional training accessories.</li>
       </ul>
-      <p><strong>Contact TechFit for Tunturi India:</strong><br>
+      <p><strong>Contact TechFit for Tunturi:</strong><br>
         Email: info@techfitactive.com<br>
         Phone: +91 98201 66910<br>
         Website: <a href="https://www.techfittech.com/tunturi">techfittech.com/tunturi</a>
@@ -2799,10 +2799,10 @@ const NOSCRIPT_FALLBACKS = {
   </noscript>`,
   'california-fitness': `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
-      <h2>California Fitness India | Commercial Strength &amp; Cardio Sourcing</h2>
-      <p>TechFit is the official authorized dealer of <strong>California Fitness</strong> equipment in India, delivering heavy-duty commercial cardio, selectorized strength stacks, plate-loaded machines, and free-weight benches designed specifically for commercial health clubs, high-traffic corporate fitness facilities, and personal training studios.</p>
-      <p>California Fitness is built for high durability, smooth movement paths, and ease of serviceability. It provides gym owners with a highly reliable, heavy-use alternative for commercial fitness facilities, backed by TechFit\'s direct installation, layout planning, and pan-India AMC service framework.</p>
-      <p><strong>Contact TechFit for California Fitness India:</strong><br>
+      <h2>California Fitness | Commercial Strength &amp; Cardio Sourcing</h2>
+      <p>TechFit is a reseller of <strong>California Fitness</strong> equipment, delivering heavy-duty commercial cardio, selectorized strength stacks, plate-loaded machines, and free-weight benches designed specifically for commercial health clubs, high-traffic corporate fitness facilities, and personal training studios.</p>
+      <p>California Fitness is built for high durability, smooth movement paths, and ease of serviceability. It provides gym owners with a highly reliable, heavy-use alternative for commercial fitness facilities, backed by TechFit\'s direct installation, layout planning, and AMC service framework.</p>
+      <p><strong>Contact TechFit for California Fitness:</strong><br>
         Email: info@techfitactive.com<br>
         Phone: +91 98201 66910<br>
         Website: <a href="https://www.techfittech.com/california-fitness">techfittech.com/california-fitness</a>
@@ -2940,11 +2940,11 @@ const NOSCRIPT_FALLBACKS = {
       <h3>Our Services Include:</h3>
       <ul>
         <li><strong>Gym Setup Consulting &amp; Layout Design:</strong> Custom 2D layouts, 3D space renders, architectural equipment allocation, floor load engineering, and member movement planning.</li>
-        <li><strong>Premium Equipment Supply:</strong> Direct factory authorized supply of world-class European cardio (BH Fitness, Tunturi), commercial strength lines (California Fitness), and custom structural fitness fabrications.</li>
+        <li><strong>Premium Equipment Sourcing:</strong> Supply of world-class European cardio (BH Fitness, Tunturi), commercial strength lines (California Fitness), and custom structural fitness fabrications.</li>
         <li><strong>Custom Combat &amp; Rig Fabrication:</strong> Heavy industrial manufacturing of competition MMA octagons, floor cages, dynamic boxing rings, CrossFit functional rigs, and steel free weights.</li>
         <li><strong>Professional Gym Flooring &amp; Sports Infrastructure:</strong> Premium sound-insulating rubber flooring rolls, interlocking tiles, custom turf tracks, and complete ITF-compliant padel and pickleball court builds.</li>
       </ul>
-      <p>Backed by over 800 successful turnkeys across India, TechFit represents the premier single-contract partner for premium commercial amenities, coordinating the entire planning, delivery, and pan-India AMC after-sales service from our Mumbai center.</p>
+      <p>Backed by over 800 successful turnkeys, TechFit represents the premier single-contract partner for premium commercial amenities, coordinating the entire planning, delivery, and AMC after-sales service from our Mumbai center.</p>
       <p><strong>Contact TechFit Gym Services:</strong><br>
         Email: info@techfitactive.com<br>
         Phone: +91 98201 66910<br>
@@ -3102,8 +3102,8 @@ const NOSCRIPT_FALLBACKS = {
       <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">4. The TechFit Turnkey Advantage: Direct Integration, Heavy-Duty Quality</h3>
       <p>TechFit active health fitness solutions provides commercial gym developers with a highly optimized turnkey solution. We combine the best of European design and engineering with heavy-duty Indian steel manufacturing and centralized engineering accountability, structured across three core areas:</p>
       
-      <h4>A. Authorized European Cardio and Strength Lines</h4>
-      <p>TechFit is the official authorized dealer of world-class European cardio and strength brands, including <strong>Tunturi Finland</strong> (renowned for premium Scandinavian cardio design) and <strong>California Fitness</strong> (famous for durable, biomechanically sound strength equipment). By sourcing these premium brands through TechFit, you get the high-end movement paths and digital console integrations expected in luxury facilities, while completely avoiding third-party importing markups and dealer fees.</p>
+      <h4>A. European Cardio and Strength Sourcing</h4>
+      <p>TechFit is a reseller of world-class European cardio and strength brands, including <strong>Tunturi Finland</strong> (renowned for premium Scandinavian cardio design) and <strong>California Fitness</strong> (famous for durable, biomechanically sound strength equipment). By sourcing these premium brands through TechFit, you get the high-end movement paths and digital console integrations expected in luxury facilities, while completely avoiding third-party importing markups.</p>
       
       <h4>B. Heavy-Duty Local Manufacturing and Lifetime Frame Warranty</h4>
       <p>Importing massive iron weights, heavy power racks, and thick metal platforms from overseas is highly inefficient. TechFit operates its own advanced steel fabrication and powder coating workshop in Byculla, Mumbai. We construct custom rigs, cages, racks, and plates using high-strength 11-gauge (3mm+) structural steel. Because we control the entire manufacturing process, we offer a lifetime warranty on all custom-fabricated structural steel frames, providing gym owners with absolute peace of mind.</p>
@@ -3189,7 +3189,7 @@ const NOSCRIPT_FALLBACKS = {
       </table>
 
       <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">4. The Alteon Elysion Sourcing Solution: Luxury Design, Clinical Safety</h3>
-      <p>TechFit provides clinical recovery centers, premium longevity clinics, and professional athletic academies in India with a highly optimized alternative. Through our exclusive partnership as the official authorized dealer of <strong>Alteon Wellness</strong>, we supply the state-of-the-art Elysion Hard-Shell Hyperbaric Chamber, structured across three key pillars:</p>
+      <p>TechFit provides clinical recovery centers, premium longevity clinics, and professional athletic academies with a highly optimized alternative. Through our exclusive partnership as the official distributor of <strong>Alteon Wellness</strong>, we supply the state-of-the-art Elysion Hard-Shell Hyperbaric Chamber, structured across three key pillars:</p>
       
       <h4>A. Premium Hard-Shell Wellness Sourcing</h4>
       <p>The Alteon Elysion represents the absolute pinnacle of premium wellness-grade hyperbaric engineering. It features a spacious, elegant hard-shell cabin with custom dark-matte finishes, premium wood-accented interiors, large viewports, and integrated multimedia setups. By sourcing Alteon through TechFit, you get clinical-grade performance up to 2.0 ATA in a luxury design that perfectly complements premium recovery clinics and private longevity suites, avoiding sterile hospital-style medical designs.</p>
@@ -3285,7 +3285,7 @@ const NOSCRIPT_FALLBACKS = {
       <p>TechFit active health fitness solutions provides a highly optimized, high-impact alternative for premium B2B buyers. We bridge the gap between world-class European engineering and boots-on-the-ground Indian manufacturing and engineering accountability. Our unique approach consists of three distinct pillars:</p>
       
       <h4>A. Premium European Cardio Distribution</h4>
-      <p>Rather than using unproven brands, TechFit partners as the official authorized dealer for premium commercial gym manufacturers like <strong>BH Fitness Spain</strong> and <strong>Tunturi Finland</strong>. These brands represent Europe's oldest and most prestigious fitness equipment manufacturers, offering incredible mechanical durability, high-end console displays, and beautiful aesthetics. By sourcing these brands through TechFit, you get the exact same elite biomechanical validation and commercial cardio performance as any tier-1 import, but at factory-direct pricing, completely avoiding third-party importing markups.</p>
+      <p>Rather than using unproven brands, TechFit partners as a reseller for premium commercial gym manufacturers like <strong>BH Fitness Spain</strong> and <strong>Tunturi Finland</strong>. These brands represent Europe's oldest and most prestigious fitness equipment manufacturers, offering incredible mechanical durability, high-end console displays, and beautiful aesthetics. By sourcing these brands through TechFit, you get the exact same elite biomechanical validation and commercial cardio performance as any tier-1 import, but at factory-direct pricing, completely avoiding third-party importing markups.</p>
       
       <h4>B. Bespoke Local Steel Fabrication</h4>
       <p>For strength equipment, CrossFit cages, free-weight racks, and combat sports elements, importing standard steel boxes from overseas is financially inefficient and limits customization. TechFit operates its own heavy-duty manufacturing and custom-fabrication workshop in Byculla, Mumbai. We construct custom rigs, cages, and platforms using heavy 11-gauge (3mm+) structural steel. We can custom powder coat frames to match your facility's branding, embroider custom logos into leather upholstery, and build cages to precise dimensions. This allows your gym to have a unique, custom-branded identity that catalog imports can never match.</p>
@@ -3370,7 +3370,7 @@ const NOSCRIPT_FALLBACKS = {
       </table>
 
       <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">4. The Alteon Elysion Sourcing Solution: Luxury Design, Clinical Safety</h3>
-      <p>TechFit provides clinical recovery centers, premium longevity clinics, and professional athletic academies in India with a highly optimized alternative. Through our exclusive partnership as the official authorized dealer of <strong>Alteon Wellness</strong>, we supply the state-of-the-art Cryoblast Pro electric cryotherapy chamber, structured across three key pillars:</p>
+      <p>TechFit provides clinical recovery centers, premium longevity clinics, and professional athletic academies with a highly optimized alternative. Through our exclusive partnership as the official distributor of <strong>Alteon Wellness</strong>, we supply the state-of-the-art Cryoblast Pro electric cryotherapy chamber, structured across three key pillars:</p>
       
       <h4>A. Premium Electric Dry Cryotherapy Sourcing</h4>
       <p>The Alteon Cryoblast Pro represents the absolute pinnacle of premium wellness-grade cryotherapy engineering. It features a spacious, elegant hard-shell cabin with custom dark-matte finishes, premium thermal insulation doors, large viewports, and integrated multimedia setups. By sourcing Alteon through TechFit, you get clinical-grade performance down to -110°C to -140°C in a luxury design that perfectly complements premium recovery clinics and private longevity suites, avoiding sterile hospital-style medical designs and eliminating liquid nitrogen costs and risks.</p>
@@ -3784,9 +3784,8 @@ function generatePage(html, route, seo) {
   } else {
     noscriptBlock = NOSCRIPT_FALLBACKS[route] || `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
-      <h2>TechFit | Gym Setup, Equipment &amp; Wellness Solutions Mumbai</h2>
-      <p>India's gym, wellness &amp; sports infrastructure partner with 800+ installations delivered. Authorised Dealer for BH Fitness,
-        Tunturi, California, and Alteon Wellness. Based in Mumbai.</p>
+      <h2>TechFit | Gym Setup, Equipment &amp; Wellness Solutions</h2>
+      <p>Gym, wellness &amp; sports infrastructure partner with 800+ installations delivered. Reseller for BH Fitness, Tunturi, and California Fitness, and Official Distributor for Alteon Wellness.</p>
       <p><strong>Services:</strong> Gym design &amp; layout, commercial equipment supply, custom fabrication of
         combat-sports equipment and CrossFit rigs, padel and pickleball courts, wellness and recovery technology from
         Alteon, installation, after-sales and AMC. Sister concern TechFit Active provides managed gym operations.</p>
@@ -3809,9 +3808,9 @@ function generatePage(html, route, seo) {
     'for-developers': 'Real Estate/Developer Gym Setup',
     'for-schools': 'Educational Institute Gym Setup',
     'for-hotels': 'Hotel/Corporate Gym Setup',
-    'bh-fitness': 'BH Fitness Equipment',
-    'tunturi': 'Tunturi Wellness Equipment',
-    'california-fitness': 'California Fitness Strength Equipment',
+    'bh-fitness': 'BH Fitness Reselling',
+    'tunturi': 'Tunturi Wellness Sourcing',
+    'california-fitness': 'California Fitness Strength Sourcing',
     'mma-cages': 'MMA Cage Fabrication',
     'crossfit-rigs': 'CrossFit/Functional Rig Fabrication',
     'free-weights': 'Free Weights/Strength Setup',
@@ -3820,7 +3819,7 @@ function generatePage(html, route, seo) {
     'wellness-solutions': 'Commercial Wellness Solutions',
     'gym-flooring': 'Gym/Sports Flooring',
     'flooring': 'Gym/Sports Flooring',
-    'alteon': 'Alteon Hyperbaric/Cryotherapy Setup',
+    'alteon': 'Alteon Longevity & Recovery',
     'techfit': 'TechFit Custom Gym Rigs & Combat Systems',
     'alternatives/technogym-india': 'Technogym India Alternative',
     'alternatives/life-fitness-india': 'Life Fitness India Alternative',

@@ -65,7 +65,7 @@ async function generatePDF() {
   doc.fillColor(colors.gray)
      .fontSize(13)
      .font('Helvetica')
-     .text('AN AUTHORITATIVE SOURCE SOURCING BLUEPRINT FOR B2B DEVELOPERS, HOTELIERS, AND GYM OWNERS IN INDIA', 60, 310, { width: 450, lineGap: 4 });
+     .text('AN AUTHORITATIVE SOURCING BLUEPRINT FOR B2B DEVELOPERS, HOTELIERS, AND GYM OWNERS', 60, 310, { width: 450, lineGap: 4 });
 
   doc.rect(60, 360, 200, 2).fill(colors.red);
 
@@ -313,30 +313,30 @@ async function generatePDF() {
   doc.fillColor(colors.charcoal)
      .font('Helvetica-Bold')
      .fontSize(14)
-     .text('Authorized Global Sourcing & Distribution', 50, y);
+     .text('Global Brands Sourcing & Reselling', 50, y);
 
   y += 25;
   doc.font('Helvetica')
      .fontSize(10.5)
-     .text('TechFit is the authorized commercial partner and dealer in India for world-class, premium strength, recovery, and cardio brands.', 50, y, { width: 495, lineGap: 4 });
+     .text('TechFit is a commercial partner and reseller for world-class, premium strength, recovery, and cardio brands.', 50, y, { width: 495, lineGap: 4 });
 
   y += 50;
   const brands = [
     {
       title: 'BH Fitness — Commercial Gym Equipment (Spain)',
-      desc: 'A world-leading commercial fitness brand with over 100 years of engineering heritage. Sourced directly from Spain, featuring unmatched ergonomics, biomechanics, and premium touchscreen displays (Movemia and Inertia lines).'
+      desc: 'A world-leading commercial fitness brand with over 100 years of engineering heritage. Supplied by TechFit as reseller, featuring unmatched ergonomics, biomechanics, and premium touchscreen displays (Movemia and Inertia lines).'
     },
     {
       title: 'Tunturi — Premium Strength & Wellness (Netherlands)',
-      desc: 'Pioneers of European fitness and wellness. Tunturi cardio and commercial strength stations represent absolute precision engineering, clean Scandinavian aesthetics, and commercial-grade durability.'
+      desc: 'Pioneers of European fitness and wellness. TechFit acts as reseller for Tunturi cardio and commercial strength stations representing absolute precision engineering, clean Scandinavian aesthetics, and commercial-grade durability.'
     },
     {
       title: 'Alteon — Clinical Biohacking & Recovery Suites',
-      desc: 'Premium longevity and recovery equipment, including monoplace hyperbaric oxygen chambers (HBOT), pure electric electric whole-body cryotherapy cabins, waterless dry float beds, and high-performance red light panels.'
+      desc: 'Premium longevity and recovery equipment, supplied by TechFit as the Official Distributor. Includes monoplace hyperbaric oxygen chambers (HBOT), pure electric whole-body cryotherapy cabins, waterless dry float beds, and high-performance red light panels.'
     },
     {
       title: 'California Fitness — Heavy Selectorized Strength',
-      desc: 'Maximum strength selectorized machines and plate-loaded stations. Engineered using thick-wall structural steel, heavy-duty pulleys, and precise biomechanical pivot angles for commercial power gyms.'
+      desc: 'Maximum strength selectorized machines and plate-loaded stations, supplied by TechFit as reseller. Engineered using thick-wall structural steel, heavy-duty pulleys, and precise biomechanical pivot angles for commercial power gyms.'
     }
   ];
 
