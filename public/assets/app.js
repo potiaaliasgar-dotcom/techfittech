@@ -1720,7 +1720,7 @@ ${footer()}
 
 <div class="brands-strip">
   <section class="sec-in">
-    <div class="brands-strip-label">Official Partners &amp; Brands We Supply</div>
+    <div class="brands-strip-label">Brands available with us</div>
     <div class="brands-logos">
       <a href="/bh-fitness" class="brand-logo-box" onclick="event.preventDefault();go('bh-fitness')">
         <img src="${CLIENT_LOGOS['BH Fitness Brand']}" alt="BH Fitness" style="max-height:44px;max-width:130px;object-fit:contain;filter:brightness(0) invert(1)" loading="lazy">
