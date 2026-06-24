@@ -1604,7 +1604,7 @@ ${footer()}
   
   <div class="hero-in" style="z-index:2; position:relative; text-align:center; padding:0 2rem;">
     <h1 class="hero-title" style="color:#fff; font-size:clamp(2.5rem, 6vw, 4.5rem); font-weight:900; line-height:1.1; margin-bottom:1.5rem; text-shadow: 0 4px 12px rgba(0,0,0,0.5);">
-      <span style="color:var(--red);">India\'s Premier</span><br>Gym & Combat Sports<br>Infrastructure
+      <span style="color:var(--red);">India\'s Premier</span><br>Fitness, Wellness and<br>Sports Infrastructure Partner
     </h1>
     <p class="hero-sub" style="color:rgba(255,255,255,0.9); font-size:1.2rem; max-width:800px; margin:0 auto 2rem;">
       800+ installations delivered. Commercial gym setup, functional rigs, and professional MMA cages. Reseller for BH Fitness, Tunturi, and Alteon Wellness.
