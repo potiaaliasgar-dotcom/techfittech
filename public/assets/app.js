@@ -128,13 +128,16 @@ async function submitEmbeddedQuote(projectType) {
   };
 
   try {
-    const response = await fetch("https://techfit-backend.vercel.app/api/gmail-contact", {
+    const response = await fetch("https://formsubmit.co/ajax/techfitpa@gmail.com", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { 
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
       body: JSON.stringify(data)
     });
     const result = await response.json();
-    if (!response.ok) throw new Error(result.error || "Failed to send request.");
+    if (!response.ok || result.success === "false") throw new Error(result.message || result.error || "Failed to send request.");
     toast('✓ Quote request sent! We will call you within one business day.');
     
     // Fire Google Ads conversion
@@ -165,7 +168,7 @@ async function submitEmbeddedQuote(projectType) {
     navActive();
     updateSEO();
   } catch (error) {
-    alert('Our factory mail server is currently experiencing issues. Please WhatsApp us on +91 98201 66910.');
+    alert(error.message || 'Our factory mail server is currently experiencing issues. Please WhatsApp us on +91 98201 66910.');
   } finally {
     btn.textContent = originalText;
     btn.disabled = false;
@@ -3825,13 +3828,16 @@ ${footer()}`;
       };
 
       try {
-        const response = await fetch("https://techfit-backend.vercel.app/api/gmail-contact", {
+        const response = await fetch("https://formsubmit.co/ajax/techfitpa@gmail.com", {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: { 
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
           body: JSON.stringify(data)
         });
         const result = await response.json();
-        if (!response.ok) throw new Error(result.error || "Failed to send request.");
+        if (!response.ok || result.success === "false") throw new Error(result.message || result.error || "Failed to send request.");
         toast('\u2713 Enquiry sent! We will call you within one business day.');
         // Fire Google Ads "Submit Lead Form" conversion
         fireConversion(GAW_FORM_LABEL, 'Contact Form');
@@ -3864,7 +3870,7 @@ ${footer()}`;
         navActive();
         updateSEO();
       } catch (error) {
-        alert('Our factory mail server is currently experiencing issues. Please WhatsApp us on +91 98201 66910.');
+        alert(error.message || 'Our factory mail server is currently experiencing issues. Please WhatsApp us on +91 98201 66910.');
       } finally {
         btn.textContent = originalText;
         btn.disabled = false;

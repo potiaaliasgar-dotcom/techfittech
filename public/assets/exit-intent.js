@@ -88,13 +88,16 @@
     };
 
     try {
-      const response = await fetch("https://techfit-backend.vercel.app/api/gmail-contact", {
+      const response = await fetch("https://formsubmit.co/ajax/techfitpa@gmail.com", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
         body: JSON.stringify(data)
       });
       const result = await response.json();
-      if (!response.ok) throw new Error(result.error || "Failed to send lead.");
+      if (!response.ok || result.success === "false") throw new Error(result.message || result.error || "Failed to send lead.");
 
       // Fire Google Ads conversion (using global function defined in app.js if available)
       if (typeof window.fireConversion === 'function') {
@@ -137,7 +140,7 @@
 
       closeModal();
     } catch (error) {
-      alert('Our factory mail server is currently experiencing issues. Please WhatsApp us on +91 98201 66910.');
+      alert(error.message || 'Our factory mail server is currently experiencing issues. Please WhatsApp us on +91 98201 66910.');
     } finally {
       btn.textContent = originalText;
       btn.disabled = false;
