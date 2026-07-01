@@ -985,882 +985,687 @@ ${footer()}
   </section>
 </section>
 
-<section class="sec" id="alteon-products" style="background:#09090b;color:#fff">
-  <section class="sec-in">
-    <div class="sec-hdr center">
-      <span class="sec-label" style="color:#4ade80">Product Range</span>
-      <h2 class="sec-title" style="color:#fff">LONGEVITY &amp; RECOVERY TECHNOLOGIES</h2>
-      <p class="sec-sub" style="color:rgba(255,255,255,.65)">Ten advanced technologies — from cellular recovery to cryotherapy — integrated into a single, cohesive wellness ecosystem.</p>
+
+<style>
+  .alteon-accordion > summary::-webkit-details-marker { display: none; }
+  .alteon-accordion[open] > summary .icon { transform: rotate(45deg); }
+  .alteon-accordion > summary .icon { transition: transform 0.2s ease; display:inline-block; }
+</style>
+<section class="sec" style="background:#0d0d0d; color:#f4f0e9; padding:6rem 2rem;">
+  <div style="max-width:1400px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:4rem;">
+      <h2 style="color:#b89968; font-family:'Playfair Display', serif; font-size:2.5rem; letter-spacing:0.04em;">THE ALTEON COLLECTION</h2>
+      <p style="color:rgba(255,255,255,0.7); font-size:1.1rem; max-width:600px; margin:1rem auto 0;">Next-generation recovery and longevity technology for premium wellness ecosystems.</p>
     </div>
-  </section>
-</section>
-
-<section class="sec" style="background:#09090b;color:#fff">
-  <section class="sec-in">
-    
-      <div class="alteon-prod-card">
-        <div class="body">
-          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.5rem">COLD THERAPY — RECOVERY & VITALITY</div>
-          <h2 style="color:#fff;font-size:1.6rem;font-weight:900;letter-spacing:.04em;margin:0 0 1rem">CRYOTHERAPY CHAMBERS</h2>
-          <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.75;margin-bottom:1.4rem">One of the widest cryotherapy portfolios available — from nitrogen-based chambers for ultra-low temperatures to advanced electric cryotherapy systems. Delivers rapid cold exposure to support recovery, inflammation reduction, and overall vitality.</p>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem">
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div style="font-size:1.3rem;flex-shrink:0;margin-top:.1rem">&#xFE0F;</div>
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Inflammation Reduction</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Reduces inflammation and swelling. Accelerates muscle recovery. Enhances circulation and oxygenation.</p></div>
+    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2.5rem;">
+      
+      <div class="alteon-prod-card" style="background:#111; border:1px solid rgba(255,255,255,0.1); border-radius:12px; overflow:hidden; display:flex; flex-direction:column;">
+        <div style="height:250px; background:#000; display:flex; align-items:center; justify-content:center; overflow:hidden; border-bottom:1px solid rgba(255,255,255,0.1);">
+          <img src="/assets/images/alteon/cryoblast-pro.jpg" alt="Whole-Body Cryotherapy" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
         </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Mental Alertness</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Boosts energy and mental alertness. Supports pain relief and joint comfort.</p></div>
-        </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Thermography Monitoring</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Real-time temperature tracking for precise and safe cryotherapy exposure.</p></div>
-        </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Full-Electric Option</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Nitrogen-free electric chambers for enhanced safety and operational efficiency.</p></div>
-        </div></div>
+        <div class="body" style="padding:2rem; display:flex; flex-direction:column; flex:1;">
+          <h2 style="color:#b89968; font-size:1.5rem; font-family:'Playfair Display', serif; margin:0 0 1rem;">Whole-Body Cryotherapy</h2>
+          <p style="color:rgba(255,255,255,0.8); font-size:0.9rem; line-height:1.6; margin-bottom:1.5rem;">Ultra-cold recovery — from electric nitrogen-free chambers to medical-grade liquid-nitrogen systems. Delivers rapid cold exposure to support recovery, inflammation reduction, and overall vitality.</p>
+          <div style="margin-bottom:2rem;">
+            <div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Reduced inflammation & soreness</span></div><div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Faster post-training recovery</span></div><div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Boosted metabolism</span></div>
+          </div>
           
-          <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">-180°C</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">2-3 Minute Sessions</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">35% Recovery Boost</span></div>
-        </div>
-
-          <details style="margin-top:2rem; background:rgba(255,255,255,0.03); border:1px solid rgba(74,222,128,0.2); border-radius:8px;">
-            <summary style="padding:1rem 1.2rem; cursor:pointer; color:#4ade80; font-weight:bold; letter-spacing:0.05em; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem;">
+          <details class="alteon-accordion" style="margin-top:auto; background:rgba(255,255,255,0.03); border:1px solid rgba(184,153,104,0.3); border-radius:8px; width:100%;">
+            <summary style="padding:1rem 1.2rem; cursor:pointer; color:#b89968; font-weight:bold; letter-spacing:0.05em; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem;">
               <span>KNOW MORE / VIEW MODELS</span>
-              <span style="font-size:1.2rem; line-height:1;">+</span>
+              <span class="icon" style="font-size:1.2rem; line-height:1;">+</span>
             </summary>
-            <div style="padding:2rem 1.2rem 0.5rem; border-top:1px solid rgba(74,222,128,0.2);">
+            <div style="padding:2rem 1.2rem 0.5rem; border-top:1px solid rgba(184,153,104,0.3);">
               
-        <div style="margin-bottom:2.5rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
-          <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
-            <img src="/assets/images/alteon/cryoblast-pro.avif" alt="Model 1 — CryoBlast Pro" style="max-height:180px; max-width:100%; object-fit:contain;">
-          </div>
-          <div style="flex:2; min-width:250px;">
-            <h4 style="color:#fff; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 1 — CryoBlast Pro</h4>
-            <div>
-              <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
-              <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Size 1850 × 1700 × 2550 mm · electric / nitrogen-free · down to −150°C · 2–3 min sessions</p>
-            </div>
-            
-              <div style="margin-top:0.8rem;">
-                <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Recommended Room Size</p>
-                <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; margin:0;">100–150 sq ft</p>
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/cryoblast-pro.jpg" alt="Model 1 — CryoBlast Pro" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
               </div>
-            <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-              <span style="color:#fff; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
-              <button class="btn-red" style="background:#4ade80; color:#09090b; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="go('contact')">Request a Quote</button>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 1 — CryoBlast Pro</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Size 1850 × 1700 × 2550 mm · electric / nitrogen-free · down to −150°C · 2–3 min sessions</p>
+                </div>
+                
+                  <div style="margin-top:0.8rem;">
+                    <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Recommended Room Size</p>
+                    <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; margin:0;">100–150 sq ft</p>
+                  </div>
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 1 — CryoBlast Pro';">Request a Quote</button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
         
-        <div style="margin-bottom:2.5rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
-          <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
-            <img src="/assets/images/alteon/cryo-q-one.avif" alt="Model 2 — Cryo Q One" style="max-height:180px; max-width:100%; object-fit:contain;">
-          </div>
-          <div style="flex:2; min-width:250px;">
-            <h4 style="color:#fff; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 2 — Cryo Q One</h4>
-            <div>
-              <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
-              <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Fully electric / nitrogen-free · true −110°C · 15.6-inch touch display · Cryo Shield glass</p>
-            </div>
-            
-              <div style="margin-top:0.8rem;">
-                <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Recommended Room Size</p>
-                <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; margin:0;">100–120 sq ft</p>
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/cryo-q-one.jpg" alt="Model 2 — Cryo Q One" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
               </div>
-            <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-              <span style="color:#fff; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
-              <button class="btn-red" style="background:#4ade80; color:#09090b; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="go('contact')">Request a Quote</button>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 2 — Cryo Q One</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Fully electric / nitrogen-free · true −110°C · 15.6-inch touch display · Cryo Shield glass</p>
+                </div>
+                
+                  <div style="margin-top:0.8rem;">
+                    <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Recommended Room Size</p>
+                    <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; margin:0;">100–120 sq ft</p>
+                  </div>
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 2 — Cryo Q One';">Request a Quote</button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
         
-        <div style="margin-bottom:2.5rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
-          <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
-            <img src="/assets/images/alteon/cryo-nitrogen.avif" alt="Model 3 — Cryoblast Nitrogen" style="max-height:180px; max-width:100%; object-fit:contain;">
-          </div>
-          <div style="flex:2; min-width:250px;">
-            <h4 style="color:#fff; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 3 — Cryoblast Nitrogen</h4>
-            <div>
-              <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
-              <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Chamber 1450 × 780 × 1950 mm · down to −196°C · 3000 W · medical-grade build</p>
-            </div>
-            
-              <div style="margin-top:0.8rem;">
-                <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Recommended Room Size</p>
-                <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; margin:0;">80–100 sq ft</p>
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/cryo-nitrogen.jpg" alt="Model 3 — Cryoblast Nitrogen" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
               </div>
-            <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-              <span style="color:#fff; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
-              <button class="btn-red" style="background:#4ade80; color:#09090b; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="go('contact')">Request a Quote</button>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 3 — Cryoblast Nitrogen</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Chamber 1450 × 780 × 1950 mm · down to −196°C · 3000 W · medical-grade build</p>
+                </div>
+                
+                  <div style="margin-top:0.8rem;">
+                    <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Recommended Room Size</p>
+                    <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; margin:0;">80–100 sq ft</p>
+                  </div>
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 3 — Cryoblast Nitrogen';">Request a Quote</button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
         
-        <div style="margin-bottom:2.5rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
-          <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
-            <img src="/assets/images/alteon/cryo-cryosauna.avif" alt="Model 4 — Cryo Blast Cryosauna" style="max-height:180px; max-width:100%; object-fit:contain;">
-          </div>
-          <div style="flex:2; min-width:250px;">
-            <h4 style="color:#fff; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 4 — Cryo Blast Cryosauna</h4>
-            <div>
-              <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
-              <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Size 1188 × 1700 × 2040 mm · 300 kg · −120°C to −180°C · open-top</p>
-            </div>
-            
-              <div style="margin-top:0.8rem;">
-                <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Recommended Room Size</p>
-                <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; margin:0;">60–80 sq ft</p>
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/cryo-cryosauna.jpg" alt="Model 4 — Cryo Blast Cryosauna" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
               </div>
-            <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-              <span style="color:#fff; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
-              <button class="btn-red" style="background:#4ade80; color:#09090b; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="go('contact')">Request a Quote</button>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 4 — Cryo Blast Cryosauna</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Size 1188 × 1700 × 2040 mm · 300 kg · −120°C to −180°C · open-top</p>
+                </div>
+                
+                  <div style="margin-top:0.8rem;">
+                    <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Recommended Room Size</p>
+                    <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; margin:0;">60–80 sq ft</p>
+                  </div>
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 4 — Cryo Blast Cryosauna';">Request a Quote</button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
         
             </div>
           </details>
-          <style>
-            details > summary::-webkit-details-marker { display: none; }
-            details[open] > summary span:last-child { transform: rotate(45deg); }
-            details > summary span:last-child { transition: transform 0.2s ease; display:inline-block; }
-          </style>
-
-        <img src="/assets/images/other/img-9d9d8b67f8.jpg" alt="Cryotherapy Chambers" loading="lazy">
-      </div>
-  </section>
-</section>
-
-<section class="sec" style="background:#0d0d0f;color:#fff">
-  <section class="sec-in">
     
-      <div class="alteon-prod-card">
-        <div class="body">
-          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.5rem">HBOT — CELLULAR OXYGENATION</div>
-          <h2 style="color:#fff;font-size:1.6rem;font-weight:900;letter-spacing:.04em;margin:0 0 1rem">HYPERBARIC OXYGEN CHAMBERS</h2>
-          <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.75;margin-bottom:1.4rem">A pressurized oxygen chamber delivering high-purity oxygen at elevated atmospheric pressure, allowing oxygen to dissolve deeply into blood plasma and tissues for accelerated healing and cellular regeneration.</p>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem">
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Cellular Oxygenation</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Enhances oxygen delivery at the cellular level, accelerating healing and tissue repair.</p></div>
         </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Brain & Mental Clarity</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Improves brain function and mental clarity. Supports anti-aging and longevity pathways.</p></div>
-        </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Recovery Acceleration</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Reduces inflammation & oxidative stress. Boosts energy, endurance, and resilience.</p></div>
-        </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Certified & Safe</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Medical-grade design. FDA / CE / ROHS certified. 1.5–2.0 ATA. 1–10 user capacity.</p></div>
-        </div></div>
-          <table style="border-collapse:collapse;margin-top:1.2rem;width:100%"><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Pressure Range</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">1.5 – 2.0 ATA</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Oxygen Delivery</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">Up to 95–100% purity</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Seating</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">1–10 users (customizable)</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Session Duration</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">45–90 minutes</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Design</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">Luxury modular</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Certifications</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">FDA / CE / ROHS</td></tr></table>
-          <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">FDA / CE / ROHS Certified</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Medical-Grade</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">1-10 User Capacity</span></div>
-        </div>
-
-          <details style="margin-top:2rem; background:rgba(255,255,255,0.03); border:1px solid rgba(74,222,128,0.2); border-radius:8px;">
-            <summary style="padding:1rem 1.2rem; cursor:pointer; color:#4ade80; font-weight:bold; letter-spacing:0.05em; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem;">
-              <span>KNOW MORE / VIEW MODELS</span>
-              <span style="font-size:1.2rem; line-height:1;">+</span>
-            </summary>
-            <div style="padding:2rem 1.2rem 0.5rem; border-top:1px solid rgba(74,222,128,0.2);">
-              
-        <div style="margin-bottom:2.5rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
-          <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
-            <img src="/assets/images/alteon/hbot-seated-chamber.avif" alt="Model 1 — Seated HBOT · 1-Seater" style="max-height:180px; max-width:100%; object-fit:contain;">
-          </div>
-          <div style="flex:2; min-width:250px;">
-            <h4 style="color:#fff; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 1 — Seated HBOT · 1-Seater</h4>
-            <div>
-              <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
-              <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">1.5–2.0 ATA · 95–100% O₂ · seats 1 · 45–90 min</p>
-            </div>
-            
-              <div style="margin-top:0.8rem;">
-                <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Recommended Room Size</p>
-                <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; margin:0;">100–150 sq ft</p>
-              </div>
-            <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-              <span style="color:#fff; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
-              <button class="btn-red" style="background:#4ade80; color:#09090b; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="go('contact')">Request a Quote</button>
-            </div>
-          </div>
-        </div>
-        
-        <div style="margin-bottom:2.5rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
-          <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
-            <img src="/assets/images/alteon/hbot-seated-chamber.avif" alt="Model 2 — Seated HBOT · 2-Seater" style="max-height:180px; max-width:100%; object-fit:contain;">
-          </div>
-          <div style="flex:2; min-width:250px;">
-            <h4 style="color:#fff; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 2 — Seated HBOT · 2-Seater</h4>
-            <div>
-              <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
-              <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">1.5–2.0 ATA · 95–100% O₂ · luxury twin cabin</p>
-            </div>
-            
-              <div style="margin-top:0.8rem;">
-                <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Recommended Room Size</p>
-                <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; margin:0;">100–150 sq ft</p>
-              </div>
-            <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-              <span style="color:#fff; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
-              <button class="btn-red" style="background:#4ade80; color:#09090b; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="go('contact')">Request a Quote</button>
-            </div>
-          </div>
-        </div>
-        
-        <div style="margin-bottom:2.5rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
-          <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
-            <img src="/assets/images/alteon/hbot-lying-al3v36.avif" alt="Model 3 — Single-Person Lying-Down HBOT" style="max-height:180px; max-width:100%; object-fit:contain;">
-          </div>
-          <div style="flex:2; min-width:250px;">
-            <h4 style="color:#fff; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 3 — Single-Person Lying-Down HBOT</h4>
-            <div>
-              <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
-              <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">2.0 ATA / 109 kPa · Ø 900 × 2200 mm · aluminium-alloy hull</p>
-            </div>
-            
-              <div style="margin-top:0.8rem;">
-                <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Recommended Room Size</p>
-                <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; margin:0;">60–80 sq ft</p>
-              </div>
-            <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-              <span style="color:#fff; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
-              <button class="btn-red" style="background:#4ade80; color:#09090b; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="go('contact')">Request a Quote</button>
-            </div>
-          </div>
-        </div>
-        
-            </div>
-          </details>
-          <style>
-            details > summary::-webkit-details-marker { display: none; }
-            details[open] > summary span:last-child { transform: rotate(45deg); }
-            details > summary span:last-child { transition: transform 0.2s ease; display:inline-block; }
-          </style>
-
-        <img src="/assets/images/other/img-b40ca800b5.jpg" alt="Hyperbaric Oxygen Chambers" loading="lazy">
       </div>
-  </section>
-</section>
-
-<section class="sec" style="background:#09090b;color:#fff">
-  <section class="sec-in">
     
-      <div class="alteon-prod-card">
-        <img src="/assets/images/other/img-db141a8379.jpg" alt="Red Light Therapy" loading="lazy">
-        <div class="body">
-          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.5rem">PHOTOBIOMODULATION</div>
-          <h2 style="color:#fff;font-size:1.6rem;font-weight:900;letter-spacing:.04em;margin:0 0 1rem">RED LIGHT THERAPY</h2>
-          <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.75;margin-bottom:1.4rem">Uses targeted red and near-infrared wavelengths to stimulate mitochondrial activity, increasing ATP production at the cellular level — supporting faster recovery, improved tissue health, and physiological resilience without needles, heat, or downtime.</p>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem">
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">ATP Production</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Enhances cellular energy at the mitochondrial level — the foundation of recovery and performance.</p></div>
+      <div class="alteon-prod-card" style="background:#111; border:1px solid rgba(255,255,255,0.1); border-radius:12px; overflow:hidden; display:flex; flex-direction:column;">
+        <div style="height:250px; background:#000; display:flex; align-items:center; justify-content:center; overflow:hidden; border-bottom:1px solid rgba(255,255,255,0.1);">
+          <img src="/assets/images/alteon/hbot-seated-chamber.jpg" alt="Hyperbaric Oxygen Chambers" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
         </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Tissue Repair</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Supports tissue repair and regeneration. Reduces inflammation and oxidative stress.</p></div>
-        </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Circulation</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Improves circulation and oxygen utilization. Promotes faster recovery and relaxation.</p></div>
-        </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Full-Body Coverage</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Localized to full-body coverage. 680/850 nm wavelengths. 10–30 minute sessions.</p></div>
-        </div></div>
-          <table style="border-collapse:collapse;margin-top:1.2rem;width:100%"><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Wavelengths</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">Red & Near-IR (680 / 850 nm)</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Treatment Mode</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">Non-thermal, non-invasive</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Coverage</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">Localized to full-body</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Session Duration</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">10–30 minutes</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Operation</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">Touch-controlled, programmable</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Safety</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">Clinically compliant, zero downtime</td></tr></table>
-          <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Non-invasive & Pain-free</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Clinically Safe</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Zero Downtime</span></div>
-        </div>
-
-          <details style="margin-top:2rem; background:rgba(255,255,255,0.03); border:1px solid rgba(74,222,128,0.2); border-radius:8px;">
-            <summary style="padding:1rem 1.2rem; cursor:pointer; color:#4ade80; font-weight:bold; letter-spacing:0.05em; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem;">
-              <span>KNOW MORE / VIEW MODELS</span>
-              <span style="font-size:1.2rem; line-height:1;">+</span>
-            </summary>
-            <div style="padding:2rem 1.2rem 0.5rem; border-top:1px solid rgba(74,222,128,0.2);">
-              
-        <div style="margin-bottom:2.5rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
-          <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
-            <img src="/assets/images/alteon/redlight-healray.avif" alt="Model 1 — Healray HRT 1" style="max-height:180px; max-width:100%; object-fit:contain;">
+        <div class="body" style="padding:2rem; display:flex; flex-direction:column; flex:1;">
+          <h2 style="color:#b89968; font-size:1.5rem; font-family:'Playfair Display', serif; margin:0 0 1rem;">Hyperbaric Oxygen Chambers</h2>
+          <p style="color:rgba(255,255,255,0.8); font-size:0.9rem; line-height:1.6; margin-bottom:1.5rem;">Sealed chambers that push the body far beyond what breathing at normal pressure allows. Enhances oxygen delivery at the cellular level, accelerating healing and tissue repair.</p>
+          <div style="margin-bottom:2rem;">
+            <div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Accelerated tissue repair</span></div><div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Brain & mental clarity</span></div><div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Medical-grade 1.5–2.0 ATA</span></div>
           </div>
-          <div style="flex:2; min-width:250px;">
-            <h4 style="color:#fff; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 1 — Healray HRT 1</h4>
-            <div>
-              <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
-              <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Wavelengths 633, 660, 850, 940 nm · 12,312 LEDs · 1000 W</p>
-            </div>
-            
-            <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-              <span style="color:#fff; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
-              <button class="btn-red" style="background:#4ade80; color:#09090b; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="go('contact')">Request a Quote</button>
-            </div>
-          </div>
-        </div>
-        
-        <div style="margin-bottom:2.5rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
-          <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
-            <img src="/assets/images/alteon/redlight-models-chart.avif" alt="Model 2 — Healray HRT 2" style="max-height:180px; max-width:100%; object-fit:contain;">
-          </div>
-          <div style="flex:2; min-width:250px;">
-            <h4 style="color:#fff; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 2 — Healray HRT 2</h4>
-            <div>
-              <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
-              <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Wavelengths 633, 660, 850, 940 nm · 9,600 LEDs · 1500 W</p>
-            </div>
-            
-            <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-              <span style="color:#fff; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
-              <button class="btn-red" style="background:#4ade80; color:#09090b; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="go('contact')">Request a Quote</button>
-            </div>
-          </div>
-        </div>
-        
-        <div style="margin-bottom:2.5rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
-          <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
-            <img src="/assets/images/alteon/redlight-models-chart.avif" alt="Model 3 — PBM1" style="max-height:180px; max-width:100%; object-fit:contain;">
-          </div>
-          <div style="flex:2; min-width:250px;">
-            <h4 style="color:#fff; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 3 — PBM1</h4>
-            <div>
-              <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
-              <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">21,600 LEDs · 3000 W · 633–940 nm</p>
-            </div>
-            
-            <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-              <span style="color:#fff; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
-              <button class="btn-red" style="background:#4ade80; color:#09090b; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="go('contact')">Request a Quote</button>
-            </div>
-          </div>
-        </div>
-        
-        <div style="margin-bottom:2.5rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
-          <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
-            <img src="/assets/images/alteon/redlight-models-chart.avif" alt="Model 4 — PBM2" style="max-height:180px; max-width:100%; object-fit:contain;">
-          </div>
-          <div style="flex:2; min-width:250px;">
-            <h4 style="color:#fff; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 4 — PBM2</h4>
-            <div>
-              <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
-              <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">32,000 LEDs · 4200 W · 633–940 nm</p>
-            </div>
-            
-            <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-              <span style="color:#fff; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
-              <button class="btn-red" style="background:#4ade80; color:#09090b; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="go('contact')">Request a Quote</button>
-            </div>
-          </div>
-        </div>
-        
-            </div>
-          </details>
-          <style>
-            details > summary::-webkit-details-marker { display: none; }
-            details[open] > summary span:last-child { transform: rotate(45deg); }
-            details > summary span:last-child { transition: transform 0.2s ease; display:inline-block; }
-          </style>
-
-      </div>
-  </section>
-</section>
-
-<section class="sec" style="background:#0d0d0f;color:#fff">
-  <section class="sec-in">
-    
-      <div class="alteon-prod-card">
-        <img src="/assets/images/other/img-ab0d984233.jpg" alt="Infrared Sauna" loading="lazy">
-        <div class="body">
-          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.5rem">FULL-SPECTRUM INFRARED</div>
-          <h2 style="color:#fff;font-size:1.6rem;font-weight:900;letter-spacing:.04em;margin:0 0 1rem">INFRARED SAUNA</h2>
-          <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.75;margin-bottom:1.4rem">Infrared saunas use heat shock proteins to help the body recover. By promoting relaxation and detoxification, this therapy enhances circulation and supports overall wellness. Deep cellular detox with bioceramic-coated panels for maximum penetration.</p>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem">
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Deep Cellular Detox</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Bioceramic-coated panels provide deep, uniform infrared penetration for effective detox and relaxation.</p></div>
-        </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div style="font-size:1.3rem;flex-shrink:0;margin-top:.1rem">&#xFE0F;</div>
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Low-EMF Safety</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Engineered for minimal electromagnetic exposure, ensuring a calm and safe experience.</p></div>
-        </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div style="font-size:1.3rem;flex-shrink:0;margin-top:.1rem">&#xFE0F;</div>
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Full-Spectrum IR</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Near, mid, and far infrared wavelengths support circulation, recovery, and cellular health.</p></div>
-        </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Premium Build</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Premium Canadian Hemlock wood. Sizes from 4×4 ft. Adaptive ambient & therapeutic lighting.</p></div>
-        </div></div>
-          <table style="border-collapse:collapse;margin-top:1.2rem;width:100%"><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">IR Range</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">0.2–1 micron wavelength</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Cabin Size</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">From 4×4 ft (customizable)</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Material</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">Premium Canadian Hemlock</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Configuration</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">Fully customizable layout</td></tr><tr><td style="padding:.4rem .8rem .4rem 0;font-size:.75rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;white-space:nowrap">Lighting</td><td style="padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.8)">Adaptive ambient & therapeutic</td></tr></table>
-          <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Full-Spectrum Infrared</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Low-EMF Design</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Premium Canadian Hemlock</span></div>
-        </div>
-
-          <details style="margin-top:2rem; background:rgba(255,255,255,0.03); border:1px solid rgba(74,222,128,0.2); border-radius:8px;">
-            <summary style="padding:1rem 1.2rem; cursor:pointer; color:#4ade80; font-weight:bold; letter-spacing:0.05em; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem;">
-              <span>KNOW MORE / VIEW MODELS</span>
-              <span style="font-size:1.2rem; line-height:1;">+</span>
-            </summary>
-            <div style="padding:2rem 1.2rem 0.5rem; border-top:1px solid rgba(74,222,128,0.2);">
-              
-        <div style="margin-bottom:2.5rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
-          <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
-            <img src="/assets/images/alteon/infrared-sauna.avif" alt="Model 1 — 6′ × 6′" style="max-height:180px; max-width:100%; object-fit:contain;">
-          </div>
-          <div style="flex:2; min-width:250px;">
-            <h4 style="color:#fff; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 1 — 6′ × 6′</h4>
-            <div>
-              <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
-              <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Size 1830 × 1830 × 2135 mm · full-spectrum · Canadian Hemlock · ultra-low EMF · up to 90°C</p>
-            </div>
-            
-            <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-              <span style="color:#fff; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
-              <button class="btn-red" style="background:#4ade80; color:#09090b; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="go('contact')">Request a Quote</button>
-            </div>
-          </div>
-        </div>
-        
-        <div style="margin-bottom:2.5rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
-          <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
-            <img src="/assets/images/alteon/infrared-sauna.avif" alt="Model 2 — 6′ × 4′" style="max-height:180px; max-width:100%; object-fit:contain;">
-          </div>
-          <div style="flex:2; min-width:250px;">
-            <h4 style="color:#fff; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 2 — 6′ × 4′</h4>
-            <div>
-              <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
-              <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Size 1830 × 1220 × 2135 mm · full-spectrum near/mid/far · Canadian Hemlock</p>
-            </div>
-            
-            <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-              <span style="color:#fff; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
-              <button class="btn-red" style="background:#4ade80; color:#09090b; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="go('contact')">Request a Quote</button>
-            </div>
-          </div>
-        </div>
-        
-        <div style="margin-bottom:2.5rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
-          <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
-            <img src="/assets/images/alteon/infrared-sauna.avif" alt="Model 3 — Heal Nova · 4′ × 4′" style="max-height:180px; max-width:100%; object-fit:contain;">
-          </div>
-          <div style="flex:2; min-width:250px;">
-            <h4 style="color:#fff; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 3 — Heal Nova · 4′ × 4′</h4>
-            <div>
-              <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
-              <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Dimensions 48 × 48 × 84 in · Canadian Hemlock · far-infrared panel heating</p>
-            </div>
-            
-            <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-              <span style="color:#fff; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
-              <button class="btn-red" style="background:#4ade80; color:#09090b; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="go('contact')">Request a Quote</button>
-            </div>
-          </div>
-        </div>
-        
-            </div>
-          </details>
-          <style>
-            details > summary::-webkit-details-marker { display: none; }
-            details[open] > summary span:last-child { transform: rotate(45deg); }
-            details > summary span:last-child { transition: transform 0.2s ease; display:inline-block; }
-          </style>
-
-      </div>
-  </section>
-</section>
-
-<section class="sec" style="background:#09090b;color:#fff">
-  <section class="sec-in">
-    
-      <div class="alteon-prod-card">
-        <div class="body">
-          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.5rem">QUANTUM HARMONICS — ZERO-LOAD RECOVERY</div>
-          <h2 style="color:#fff;font-size:1.6rem;font-weight:900;letter-spacing:.04em;margin:0 0 1rem">DRY FLOAT THERAPY</h2>
-          <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.75;margin-bottom:1.4rem">Creates a weightless, deeply calming experience without water contact, using a heated or cooled membrane that mimics natural buoyancy. Vibroacoustic sound gently guides the nervous system into deep relaxation, easing tension and mental fatigue.</p>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem">
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Zero-Load Floating</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Zero-impact floating without water contact, reducing musculoskeletal load and joint stress.</p></div>
-        </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div style="font-size:1.3rem;flex-shrink:0;margin-top:.1rem">&#xFE0F;</div>
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Thermoregulated Membrane</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Heated or cooled dry-float surface mimics natural buoyancy for nervous system regulation.</p></div>
-        </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Vibroacoustic Neuromodulation</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Low-frequency sound resonance supports parasympathetic activation and guided relaxation.</p></div>
-        </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Recovery & Stress</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Reduces inflammation, lowers stress hormones, eases muscle tension, and enhances circulation.</p></div>
-        </div></div>
           
-          <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">No Water Contact</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Nervous System Recovery</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Mental Clarity & Calm</span></div>
-        </div>
-
-          <details style="margin-top:2rem; background:rgba(255,255,255,0.03); border:1px solid rgba(74,222,128,0.2); border-radius:8px;">
-            <summary style="padding:1rem 1.2rem; cursor:pointer; color:#4ade80; font-weight:bold; letter-spacing:0.05em; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem;">
+          <details class="alteon-accordion" style="margin-top:auto; background:rgba(255,255,255,0.03); border:1px solid rgba(184,153,104,0.3); border-radius:8px; width:100%;">
+            <summary style="padding:1rem 1.2rem; cursor:pointer; color:#b89968; font-weight:bold; letter-spacing:0.05em; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem;">
               <span>KNOW MORE / VIEW MODELS</span>
-              <span style="font-size:1.2rem; line-height:1;">+</span>
+              <span class="icon" style="font-size:1.2rem; line-height:1;">+</span>
             </summary>
-            <div style="padding:2rem 1.2rem 0.5rem; border-top:1px solid rgba(74,222,128,0.2);">
+            <div style="padding:2rem 1.2rem 0.5rem; border-top:1px solid rgba(184,153,104,0.3);">
               
-        <div style="margin-bottom:2.5rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
-          <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
-            <img src="/assets/images/alteon/dry-float.avif" alt="Model 1 — Alteon Dry Float" style="max-height:180px; max-width:100%; object-fit:contain;">
-          </div>
-          <div style="flex:2; min-width:250px;">
-            <h4 style="color:#fff; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 1 — Alteon Dry Float</h4>
-            <div>
-              <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
-              <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Bed 2520 × 1224 × 620 mm · platform load 330 kg · water capacity up to 500 L</p>
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/hbot-seated-chamber.jpg" alt="Model 1 — Seated HBOT · 1-Seater" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
+              </div>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 1 — Seated HBOT · 1-Seater</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">1.5–2.0 ATA · 95–100% O₂ · seats 1 · 45–90 min</p>
+                </div>
+                
+                  <div style="margin-top:0.8rem;">
+                    <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Recommended Room Size</p>
+                    <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; margin:0;">100–150 sq ft</p>
+                  </div>
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 1 — Seated HBOT · 1-Seater';">Request a Quote</button>
+                </div>
+              </div>
             </div>
-            
-            <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-              <span style="color:#fff; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
-              <button class="btn-red" style="background:#4ade80; color:#09090b; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="go('contact')">Request a Quote</button>
+        
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/hbot-seated-chamber.jpg" alt="Model 2 — Seated HBOT · 2-Seater" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
+              </div>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 2 — Seated HBOT · 2-Seater</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">1.5–2.0 ATA · 95–100% O₂ · luxury twin cabin</p>
+                </div>
+                
+                  <div style="margin-top:0.8rem;">
+                    <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Recommended Room Size</p>
+                    <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; margin:0;">100–150 sq ft</p>
+                  </div>
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 2 — Seated HBOT · 2-Seater';">Request a Quote</button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+        
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/hbot-lying-al3v36.jpg" alt="Model 3 — Single-Person Lying-Down HBOT" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
+              </div>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 3 — Single-Person Lying-Down HBOT</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">2.0 ATA / 109 kPa · Ø 900 × 2200 mm · aluminium-alloy hull</p>
+                </div>
+                
+                  <div style="margin-top:0.8rem;">
+                    <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Recommended Room Size</p>
+                    <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; margin:0;">60–80 sq ft</p>
+                  </div>
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 3 — Single-Person Lying-Down HBOT';">Request a Quote</button>
+                </div>
+              </div>
+            </div>
         
             </div>
           </details>
-          <style>
-            details > summary::-webkit-details-marker { display: none; }
-            details[open] > summary span:last-child { transform: rotate(45deg); }
-            details > summary span:last-child { transition: transform 0.2s ease; display:inline-block; }
-          </style>
-
-        <img src="/assets/images/other/img-dry-float.png" alt="Dry Float Therapy" loading="lazy">
-      </div>
-  </section>
-</section>
-
-<section class="sec" style="background:#0d0d0f;color:#fff">
-  <section class="sec-in">
     
-      <div class="alteon-prod-card">
-        <img src="/assets/images/other/img-ihht.png" alt="IHHT" loading="lazy">
-        <div class="body">
-          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.5rem">INTERMITTENT HYPOXIC–HYPEROXIC THERAPY</div>
-          <h2 style="color:#fff;font-size:1.6rem;font-weight:900;letter-spacing:.04em;margin:0 0 1rem">IHHT</h2>
-          <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.75;margin-bottom:1.4rem">A science-backed therapy that alternates low-oxygen and high-oxygen breathing to stimulate cellular adaptation and mitochondrial efficiency. Supports improved energy metabolism, cardiovascular health, and resilience — without physical strain.</p>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem">
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Mitochondrial Function</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Enhances mitochondrial function and cellular energy production. Improves cardiovascular efficiency.</p></div>
         </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Endurance & Recovery</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Boosts recovery, endurance, and overall physical resilience. Promotes anti-aging cellular regeneration.</p></div>
+      </div>
+    
+      <div class="alteon-prod-card" style="background:#111; border:1px solid rgba(255,255,255,0.1); border-radius:12px; overflow:hidden; display:flex; flex-direction:column;">
+        <div style="height:250px; background:#000; display:flex; align-items:center; justify-content:center; overflow:hidden; border-bottom:1px solid rgba(255,255,255,0.1);">
+          <img src="/assets/images/alteon/infrared-sauna.jpg" alt="Full-Spectrum Infrared Sauna" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
         </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Real-Time Monitoring</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Continuously tracks SpO₂ and heart rate for safety, precision, and individualized delivery.</p></div>
-        </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Fully Seated Therapy</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Mitochondrial and cardiovascular benefits without workout fatigue. Ideal for recovery and clinical use.</p></div>
-        </div></div>
+        <div class="body" style="padding:2rem; display:flex; flex-direction:column; flex:1;">
+          <h2 style="color:#b89968; font-size:1.5rem; font-family:'Playfair Display', serif; margin:0 0 1rem;">Full-Spectrum Infrared Sauna</h2>
+          <p style="color:rgba(255,255,255,0.8); font-size:0.9rem; line-height:1.6; margin-bottom:1.5rem;">Full-spectrum infrared heat that works the body directly — deep detox sweat at gentler temperatures than a traditional sauna.</p>
+          <div style="margin-bottom:2rem;">
+            <div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Deep cellular detox</span></div><div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Low-EMF safety</span></div><div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Premium Canadian Hemlock</span></div>
+          </div>
           
-          <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">No Physical Strain</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Fully Seated</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Bio-Adaptive Smart Protocols</span></div>
-        </div>
-
-          <details style="margin-top:2rem; background:rgba(255,255,255,0.03); border:1px solid rgba(74,222,128,0.2); border-radius:8px;">
-            <summary style="padding:1rem 1.2rem; cursor:pointer; color:#4ade80; font-weight:bold; letter-spacing:0.05em; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem;">
+          <details class="alteon-accordion" style="margin-top:auto; background:rgba(255,255,255,0.03); border:1px solid rgba(184,153,104,0.3); border-radius:8px; width:100%;">
+            <summary style="padding:1rem 1.2rem; cursor:pointer; color:#b89968; font-weight:bold; letter-spacing:0.05em; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem;">
               <span>KNOW MORE / VIEW MODELS</span>
-              <span style="font-size:1.2rem; line-height:1;">+</span>
+              <span class="icon" style="font-size:1.2rem; line-height:1;">+</span>
             </summary>
-            <div style="padding:2rem 1.2rem 0.5rem; border-top:1px solid rgba(74,222,128,0.2);">
+            <div style="padding:2rem 1.2rem 0.5rem; border-top:1px solid rgba(184,153,104,0.3);">
               
-        <div style="margin-bottom:2.5rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
-          <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
-            <img src="/assets/images/alteon/ihht-machine.avif" alt="Model 1 — IHH-M0934" style="max-height:180px; max-width:100%; object-fit:contain;">
-          </div>
-          <div style="flex:2; min-width:250px;">
-            <h4 style="color:#fff; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 1 — IHH-M0934</h4>
-            <div>
-              <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
-              <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Model IHH-M0934 · 9–34% O₂ · simulates 0–6500 m altitude · 800 W</p>
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/infrared-sauna.jpg" alt="Model 1 — 6′ × 6′" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
+              </div>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 1 — 6′ × 6′</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Size 1830 × 1830 × 2135 mm · full-spectrum · Canadian Hemlock · ultra-low EMF · up to 90°C</p>
+                </div>
+                
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 1 — 6′ × 6′';">Request a Quote</button>
+                </div>
+              </div>
             </div>
-            
-            <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-              <span style="color:#fff; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
-              <button class="btn-red" style="background:#4ade80; color:#09090b; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="go('contact')">Request a Quote</button>
+        
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/infrared-sauna.jpg" alt="Model 2 — 6′ × 4′" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
+              </div>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 2 — 6′ × 4′</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Size 1830 × 1220 × 2135 mm · full-spectrum near/mid/far · Canadian Hemlock</p>
+                </div>
+                
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 2 — 6′ × 4′';">Request a Quote</button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+        
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/infrared-sauna-healspectra.jpg" alt="Model 3 — Heal Nova · 4′ × 4′" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
+              </div>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 3 — Heal Nova · 4′ × 4′</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Dimensions 48 × 48 × 84 in · Canadian Hemlock · far-infrared panel heating</p>
+                </div>
+                
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 3 — Heal Nova · 4′ × 4′';">Request a Quote</button>
+                </div>
+              </div>
+            </div>
         
             </div>
           </details>
-          <style>
-            details > summary::-webkit-details-marker { display: none; }
-            details[open] > summary span:last-child { transform: rotate(45deg); }
-            details > summary span:last-child { transition: transform 0.2s ease; display:inline-block; }
-          </style>
-
-      </div>
-  </section>
-</section>
-
-<section class="sec" style="background:#09090b;color:#fff">
-  <section class="sec-in">
     
-      <div class="alteon-prod-card">
-        <img src="/assets/images/other/img-biopod.png" alt="BIOPOD" loading="lazy">
-        <div class="body">
-          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.5rem">ALL-IN-ONE WELLNESS CAPSULE</div>
-          <h2 style="color:#fff;font-size:1.6rem;font-weight:900;letter-spacing:.04em;margin:0 0 1rem">BIOPOD</h2>
-          <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.75;margin-bottom:1.4rem">An all-in-one wellness capsule that seamlessly integrates salt therapy, oxygen therapy, red light therapy, and aromatherapy into a single, immersive environment — for recovery, relaxation, and long-term wellness.</p>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem">
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Halotherapy</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Fine salt particles support respiratory health, skin clarity, and natural detoxification.</p></div>
         </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Oxygen Enrichment</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Increased oxygen availability enhances cellular recovery, energy, and vitality.</p></div>
+      </div>
+    
+      <div class="alteon-prod-card" style="background:#111; border:1px solid rgba(255,255,255,0.1); border-radius:12px; overflow:hidden; display:flex; flex-direction:column;">
+        <div style="height:250px; background:#000; display:flex; align-items:center; justify-content:center; overflow:hidden; border-bottom:1px solid rgba(255,255,255,0.1);">
+          <img src="/assets/images/alteon/redlight-healray.jpg" alt="Red Light / Photobiomodulation" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
         </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Red & Near-Infrared Light</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Light wavelengths stimulate cellular energy production and tissue regeneration.</p></div>
-        </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Aromatic Infusion</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Therapeutic aromas promote relaxation, emotional balance, and stress reduction.</p></div>
-        </div></div>
+        <div class="body" style="padding:2rem; display:flex; flex-direction:column; flex:1;">
+          <h2 style="color:#b89968; font-size:1.5rem; font-family:'Playfair Display', serif; margin:0 0 1rem;">Red Light / Photobiomodulation</h2>
+          <p style="color:rgba(255,255,255,0.8); font-size:0.9rem; line-height:1.6; margin-bottom:1.5rem;">Uses targeted red and near-infrared wavelengths to stimulate mitochondrial activity, increasing ATP production at the cellular level.</p>
+          <div style="margin-bottom:2rem;">
+            <div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Enhanced ATP production</span></div><div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Accelerated tissue repair</span></div><div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Clinically safe, zero downtime</span></div>
+          </div>
           
-          <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">4-in-1 Built-In Features</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Enhanced Respiratory Health</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Comprehensive Skin Rejuvenation</span></div>
-        </div>
-
-          <details style="margin-top:2rem; background:rgba(255,255,255,0.03); border:1px solid rgba(74,222,128,0.2); border-radius:8px;">
-            <summary style="padding:1rem 1.2rem; cursor:pointer; color:#4ade80; font-weight:bold; letter-spacing:0.05em; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem;">
+          <details class="alteon-accordion" style="margin-top:auto; background:rgba(255,255,255,0.03); border:1px solid rgba(184,153,104,0.3); border-radius:8px; width:100%;">
+            <summary style="padding:1rem 1.2rem; cursor:pointer; color:#b89968; font-weight:bold; letter-spacing:0.05em; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem;">
               <span>KNOW MORE / VIEW MODELS</span>
-              <span style="font-size:1.2rem; line-height:1;">+</span>
+              <span class="icon" style="font-size:1.2rem; line-height:1;">+</span>
             </summary>
-            <div style="padding:2rem 1.2rem 0.5rem; border-top:1px solid rgba(74,222,128,0.2);">
+            <div style="padding:2rem 1.2rem 0.5rem; border-top:1px solid rgba(184,153,104,0.3);">
               
-        <div style="margin-bottom:2.5rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
-          <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
-            <img src="/assets/images/alteon/biopod-capsule.avif" alt="Model 1 — BIOPOD Capsule" style="max-height:180px; max-width:100%; object-fit:contain;">
-          </div>
-          <div style="flex:2; min-width:250px;">
-            <h4 style="color:#fff; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 1 — BIOPOD Capsule</h4>
-            <div>
-              <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
-              <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Enclosed 7-in-1 therapy capsule (light, heat, PEMF, aromatherapy, vibration and more)</p>
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/redlight-healray.jpg" alt="Model 1 — Healray HRT 1" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
+              </div>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 1 — Healray HRT 1</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Wavelengths 633, 660, 850, 940 nm · 12,312 LEDs · 1000 W</p>
+                </div>
+                
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 1 — Healray HRT 1';">Request a Quote</button>
+                </div>
+              </div>
             </div>
-            
-            <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-              <span style="color:#fff; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
-              <button class="btn-red" style="background:#4ade80; color:#09090b; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="go('contact')">Request a Quote</button>
+        
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/redlight-models-chart.jpg" alt="Model 2 — Healray HRT 2" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
+              </div>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 2 — Healray HRT 2</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Wavelengths 633, 660, 850, 940 nm · 9,600 LEDs · 1500 W</p>
+                </div>
+                
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 2 — Healray HRT 2';">Request a Quote</button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+        
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/redlight-models-chart.jpg" alt="Model 3 — PBM1" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
+              </div>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 3 — PBM1</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">21,600 LEDs · 3000 W · 633–940 nm</p>
+                </div>
+                
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 3 — PBM1';">Request a Quote</button>
+                </div>
+              </div>
+            </div>
+        
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/redlight-models-chart.jpg" alt="Model 4 — PBM2" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
+              </div>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 4 — PBM2</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">32,000 LEDs · 4200 W · 633–940 nm</p>
+                </div>
+                
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 4 — PBM2';">Request a Quote</button>
+                </div>
+              </div>
+            </div>
         
             </div>
           </details>
-          <style>
-            details > summary::-webkit-details-marker { display: none; }
-            details[open] > summary span:last-child { transform: rotate(45deg); }
-            details > summary span:last-child { transition: transform 0.2s ease; display:inline-block; }
-          </style>
-
-      </div>
-  </section>
-</section>
-
-<section class="sec" style="background:#0d0d0f;color:#fff">
-  <section class="sec-in">
     
-      <div class="alteon-prod-card">
-        <div class="body">
-          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.5rem">MULTI-TECHNOLOGY RECOVERY</div>
-          <h2 style="color:#fff;font-size:1.6rem;font-weight:900;letter-spacing:.04em;margin:0 0 1rem">REVITALE CHAMBER</h2>
-          <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.75;margin-bottom:1.4rem">An advanced integrated therapy chamber designed for deep recovery, regeneration, and longevity. Brings multiple bioenergetic technologies into one immersive, intelligent experience.</p>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem">
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">PEMF Therapy</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Multi-wave Pulsed Electromagnetic Fields support cellular renewal, pain relief, and enhanced recovery.</p></div>
         </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Vibroacoustic Sound</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Combines sound and vibration to relax the nervous system and improve mood, sleep, and overall wellbeing.</p></div>
+      </div>
+    
+      <div class="alteon-prod-card" style="background:#111; border:1px solid rgba(255,255,255,0.1); border-radius:12px; overflow:hidden; display:flex; flex-direction:column;">
+        <div style="height:250px; background:#000; display:flex; align-items:center; justify-content:center; overflow:hidden; border-bottom:1px solid rgba(255,255,255,0.1);">
+          <img src="/assets/images/alteon/coldplunge-polardip-pro.jpg" alt="Cold Plunge & Ice Tubs" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
         </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Multi-Wavelength Light</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Red & Near-IR photobiomodulation supports cellular restoration, circulation, and inflammation reduction.</p></div>
-        </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Molecular Hydrogen</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">A powerful antioxidant approach that increases cellular resilience and supports systemic defense mechanisms.</p></div>
-        </div></div>
+        <div class="body" style="padding:2rem; display:flex; flex-direction:column; flex:1;">
+          <h2 style="color:#b89968; font-size:1.5rem; font-family:'Playfair Display', serif; margin:0 0 1rem;">Cold Plunge & Ice Tubs</h2>
+          <p style="color:rgba(255,255,255,0.8); font-size:0.9rem; line-height:1.6; margin-bottom:1.5rem;">Precision-chilled ice baths in 304 stainless steel — spa-grade cold immersion, plug-and-plunge, no plant room.</p>
+          <div style="margin-bottom:2rem;">
+            <div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Reduced inflammation</span></div><div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Faster recovery & endorphin lift</span></div><div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Integrated 2HP chiller (5–42°C)</span></div>
+          </div>
           
-          <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Complete Full-Body Reset in One Session</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Cellular Renewal & Long-Term Vitality</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Effortless Zero-Gravity Restoration</span></div>
-        </div>
-
-          <details style="margin-top:2rem; background:rgba(255,255,255,0.03); border:1px solid rgba(74,222,128,0.2); border-radius:8px;">
-            <summary style="padding:1rem 1.2rem; cursor:pointer; color:#4ade80; font-weight:bold; letter-spacing:0.05em; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem;">
+          <details class="alteon-accordion" style="margin-top:auto; background:rgba(255,255,255,0.03); border:1px solid rgba(184,153,104,0.3); border-radius:8px; width:100%;">
+            <summary style="padding:1rem 1.2rem; cursor:pointer; color:#b89968; font-weight:bold; letter-spacing:0.05em; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem;">
               <span>KNOW MORE / VIEW MODELS</span>
-              <span style="font-size:1.2rem; line-height:1;">+</span>
+              <span class="icon" style="font-size:1.2rem; line-height:1;">+</span>
             </summary>
-            <div style="padding:2rem 1.2rem 0.5rem; border-top:1px solid rgba(74,222,128,0.2);">
+            <div style="padding:2rem 1.2rem 0.5rem; border-top:1px solid rgba(184,153,104,0.3);">
               
-        <div style="margin-bottom:2.5rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
-          <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
-            <img src="/assets/images/alteon/revital-bed.avif" alt="Model 1 — ReVITAL Bed" style="max-height:180px; max-width:100%; object-fit:contain;">
-          </div>
-          <div style="flex:2; min-width:250px;">
-            <h4 style="color:#fff; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 1 — ReVITAL Bed</h4>
-            <div>
-              <p style="font-size:0.65rem; color:#4ade80; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
-              <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Multi-therapy longevity bed · PEMF 0.5–50 Hz · red/NIR light · molecular hydrogen</p>
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/coldplunge-polardip-pro.jpg" alt="Model 1 — PolarDip Pro FC-10" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
+              </div>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 1 — PolarDip Pro FC-10</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Capacity 1 · size 6.5′ × 2.6′ × 2.5′ · 304 stainless steel · 2HP chiller · UV + Ozone</p>
+                </div>
+                
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 1 — PolarDip Pro FC-10';">Request a Quote</button>
+                </div>
+              </div>
             </div>
-            
-            <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-              <span style="color:#fff; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
-              <button class="btn-red" style="background:#4ade80; color:#09090b; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="go('contact')">Request a Quote</button>
+        
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/coldplunge-polar-plunge-pro.jpg" alt="Model 2 — Polar Plunge Pro · Steel" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
+              </div>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 2 — Polar Plunge Pro · Steel</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Capacity 1 · round, 2.7′ Ø × 3.6′ H · 304 stainless steel · 2HP chiller</p>
+                </div>
+                
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 2 — Polar Plunge Pro · Steel';">Request a Quote</button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+        
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/coldplunge-polar-plunge-pro.jpg" alt="Model 3 — Polar Plunge Pro · Wooden" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
+              </div>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 3 — Polar Plunge Pro · Wooden</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Capacity 1 · round · 304 SS basin + hardwood cladding</p>
+                </div>
+                
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 3 — Polar Plunge Pro · Wooden';">Request a Quote</button>
+                </div>
+              </div>
+            </div>
+        
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/coldplunge-polar-oval-pro.jpg" alt="Model 4 — Polar Oval Pro · Wooden" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
+              </div>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 4 — Polar Oval Pro · Wooden</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Capacity 1 · oval, 4.9′ × 2.3′ × 2.1′ · 304 SS basin + hardwood cladding</p>
+                </div>
+                
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 4 — Polar Oval Pro · Wooden';">Request a Quote</button>
+                </div>
+              </div>
+            </div>
         
             </div>
           </details>
-          <style>
-            details > summary::-webkit-details-marker { display: none; }
-            details[open] > summary span:last-child { transform: rotate(45deg); }
-            details > summary span:last-child { transition: transform 0.2s ease; display:inline-block; }
-          </style>
-
-        <img src="/assets/images/other/img-31bd74e2d0.jpg" alt="ReVITALE Chamber" loading="lazy">
-      </div>
-  </section>
-</section>
-
-<section class="sec" style="background:#09090b;color:#fff">
-  <section class="sec-in">
     
-      <div class="alteon-prod-card">
-        <div class="body">
-          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.5rem">VACUUM CARDIO & INFRARED THERAPY</div>
-          <h2 style="color:#fff;font-size:1.6rem;font-weight:900;letter-spacing:.04em;margin:0 0 1rem">INFRASHAPE LYMPHATIC DRAINAGE</h2>
-          <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.75;margin-bottom:1.4rem">Combines vacuum technology with infrared therapy to support circulation, metabolic activation, and fat utilisation. Its low-impact, reclined cardio design offers a safe, joint-friendly way to improve mobility and overall vitality.</p>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem">
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Accelerated Fat Burning</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Infrared heat increases metabolic rate and calorie expenditure, enhancing fat oxidation during sessions.</p></div>
         </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Lymphatic Drainage</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Deep-penetrating IR and vacuum pressure boost blood flow and lymph movement for detoxification.</p></div>
-        </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Cellulite & Body Shaping</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Vacuum and infrared therapy helps smooth skin, reduce circumference, and target stubborn fat deposits.</p></div>
-        </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Skin Rejuvenation</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Infrared and collagen light therapy improve skin elasticity and overall firmness.</p></div>
-        </div></div>
-          
-          <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Low-Impact Cardio</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Lymphatic Drainage</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Body Sculpting</span></div>
-        </div>
-        <img src="/assets/images/other/img-297328cce3.jpg" alt="Infrashape Lymphatic Drainage" loading="lazy">
       </div>
-  </section>
-</section>
-
-<section class="sec" style="background:#0d0d0f;color:#fff">
-  <section class="sec-in">
     
-      <div class="alteon-prod-card">
-        <img src="/assets/images/other/img-acca158d8e.jpg" alt="Water Massage & Recovery" loading="lazy">
-        <div class="body">
-          <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;color:#4ade80;margin-bottom:.5rem">HYDRO-MASSAGE RECOVERY COUCHES</div>
-          <h2 style="color:#fff;font-size:1.6rem;font-weight:900;letter-spacing:.04em;margin:0 0 1rem">WATER MASSAGE & RECOVERY</h2>
-          <p style="color:rgba(255,255,255,.7);font-size:.88rem;line-height:1.75;margin-bottom:1.4rem">Water Massage Beds & Recovery Couches offer deep relaxation and muscle relief through warm, hydro-massage and ergonomic support. Designed to accelerate recovery, reduce stress, and improve circulation — creating a calm reset zone within modern wellness spaces.</p>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem">
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Dry Hydro-Massage</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Targeted massage through warm water jets without direct skin contact — hygienic and therapist-free.</p></div>
+      <div class="alteon-prod-card" style="background:#111; border:1px solid rgba(255,255,255,0.1); border-radius:12px; overflow:hidden; display:flex; flex-direction:column;">
+        <div style="height:250px; background:#000; display:flex; align-items:center; justify-content:center; overflow:hidden; border-bottom:1px solid rgba(255,255,255,0.1);">
+          <img src="/assets/images/alteon/revital-bed.jpg" alt="Multi-Therapy Recovery Beds" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
         </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Full-Body Support</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Contoured ergonomic design ensures optimal spinal alignment and comfort during recovery.</p></div>
-        </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Customizable Programs</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Adjustable intensity, speed, and massage zones for personalized recovery sessions.</p></div>
-        </div>
-        <div style="display:flex;gap:.9rem;align-items:flex-start">
-          <div><div style="font-size:.82rem;font-weight:700;color:#4ade80;letter-spacing:.06em;margin-bottom:.2rem">Quiet Operation</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.6;margin:0">Designed for seamless integration into luxury wellness and performance spaces.</p></div>
-        </div></div>
+        <div class="body" style="padding:2rem; display:flex; flex-direction:column; flex:1;">
+          <h2 style="color:#b89968; font-size:1.5rem; font-family:'Playfair Display', serif; margin:0 0 1rem;">Multi-Therapy Recovery Beds</h2>
+          <p style="color:rgba(255,255,255,0.8); font-size:0.9rem; line-height:1.6; margin-bottom:1.5rem;">All-in-one longevity beds and capsules that stack multiple recovery therapies (PEMF, light, hydrogen, vibration) into one session.</p>
+          <div style="margin-bottom:2rem;">
+            <div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Stacked therapeutic modalities</span></div><div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Deep nervous-system relaxation</span></div><div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Convenient, automated recovery</span></div>
+          </div>
           
-          <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem"><span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Therapist-Free</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Fully Customizable</span> <span style="background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ade80;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:.35rem .8rem;border-radius:2rem">Luxury Wellness</span></div>
+          <details class="alteon-accordion" style="margin-top:auto; background:rgba(255,255,255,0.03); border:1px solid rgba(184,153,104,0.3); border-radius:8px; width:100%;">
+            <summary style="padding:1rem 1.2rem; cursor:pointer; color:#b89968; font-weight:bold; letter-spacing:0.05em; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem;">
+              <span>KNOW MORE / VIEW MODELS</span>
+              <span class="icon" style="font-size:1.2rem; line-height:1;">+</span>
+            </summary>
+            <div style="padding:2rem 1.2rem 0.5rem; border-top:1px solid rgba(184,153,104,0.3);">
+              
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/revital-bed.jpg" alt="Model 1 — ReVITAL Bed" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
+              </div>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 1 — ReVITAL Bed</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Multi-therapy longevity bed · PEMF 0.5–50 Hz · red/NIR light · molecular hydrogen</p>
+                </div>
+                
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 1 — ReVITAL Bed';">Request a Quote</button>
+                </div>
+              </div>
+            </div>
+        
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/biopod-capsule.jpg" alt="Model 2 — BIOPOD Capsule" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
+              </div>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 2 — BIOPOD Capsule</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Enclosed 7-in-1 therapy capsule (light, heat, PEMF, aromatherapy, vibration and more)</p>
+                </div>
+                
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 2 — BIOPOD Capsule';">Request a Quote</button>
+                </div>
+              </div>
+            </div>
+        
+            </div>
+          </details>
+    
         </div>
       </div>
-  </section>
-</section>
-
-<section class="sec" style="background:#060608;color:#fff">
-  <section class="sec-in">
-    <div class="sec-hdr center">
-      <span class="sec-label" style="color:#4ade80">Hydrothermal Circuit</span>
-      <h2 class="sec-title" style="color:#fff">HEAT, HYDRO &amp; CONTRAST THERAPY</h2>
-      <p class="sec-sub" style="color:rgba(255,255,255,.6)">Detox. Recovery. Circulation. A complete hydrothermal circuit integrates multiple contrast therapy modalities for maximum wellness impact.</p>
+    
+      <div class="alteon-prod-card" style="background:#111; border:1px solid rgba(255,255,255,0.1); border-radius:12px; overflow:hidden; display:flex; flex-direction:column;">
+        <div style="height:250px; background:#000; display:flex; align-items:center; justify-content:center; overflow:hidden; border-bottom:1px solid rgba(255,255,255,0.1);">
+          <img src="/assets/images/alteon/dry-float.jpg" alt="Dry Float Therapy" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div class="body" style="padding:2rem; display:flex; flex-direction:column; flex:1;">
+          <h2 style="color:#b89968; font-size:1.5rem; font-family:'Playfair Display', serif; margin:0 0 1rem;">Dry Float Therapy</h2>
+          <p style="color:rgba(255,255,255,0.8); font-size:0.9rem; line-height:1.6; margin-bottom:1.5rem;">Creates a weightless, deeply calming experience without water contact, using a heated or cooled membrane that mimics natural buoyancy.</p>
+          <div style="margin-bottom:2rem;">
+            <div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Zero-load floating without water</span></div><div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Thermoregulated membrane</span></div><div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Vibroacoustic neuromodulation</span></div>
+          </div>
+          
+          <details class="alteon-accordion" style="margin-top:auto; background:rgba(255,255,255,0.03); border:1px solid rgba(184,153,104,0.3); border-radius:8px; width:100%;">
+            <summary style="padding:1rem 1.2rem; cursor:pointer; color:#b89968; font-weight:bold; letter-spacing:0.05em; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem;">
+              <span>KNOW MORE / VIEW MODELS</span>
+              <span class="icon" style="font-size:1.2rem; line-height:1;">+</span>
+            </summary>
+            <div style="padding:2rem 1.2rem 0.5rem; border-top:1px solid rgba(184,153,104,0.3);">
+              
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/dry-float.jpg" alt="Model 1 — Alteon Dry Float" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
+              </div>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 1 — Alteon Dry Float</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Bed 2520 × 1224 × 620 mm · platform load 330 kg · water capacity up to 500 L</p>
+                </div>
+                
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 1 — Alteon Dry Float';">Request a Quote</button>
+                </div>
+              </div>
+            </div>
+        
+            </div>
+          </details>
+    
+        </div>
+      </div>
+    
+      <div class="alteon-prod-card" style="background:#111; border:1px solid rgba(255,255,255,0.1); border-radius:12px; overflow:hidden; display:flex; flex-direction:column;">
+        <div style="height:250px; background:#000; display:flex; align-items:center; justify-content:center; overflow:hidden; border-bottom:1px solid rgba(255,255,255,0.1);">
+          <img src="/assets/images/alteon/ihht.jpg" alt="IHHT Altitude Training" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div class="body" style="padding:2rem; display:flex; flex-direction:column; flex:1;">
+          <h2 style="color:#b89968; font-size:1.5rem; font-family:'Playfair Display', serif; margin:0 0 1rem;">IHHT Altitude Training</h2>
+          <p style="color:rgba(255,255,255,0.8); font-size:0.9rem; line-height:1.6; margin-bottom:1.5rem;">Intermittent Hypoxic–Hyperoxic Therapy alternates low-oxygen and high-oxygen breathing to stimulate cellular adaptation and mitochondrial efficiency.</p>
+          <div style="margin-bottom:2rem;">
+            <div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Improved mitochondrial function</span></div><div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Endurance & recovery boost</span></div><div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Fully seated, zero strain</span></div>
+          </div>
+          
+          <details class="alteon-accordion" style="margin-top:auto; background:rgba(255,255,255,0.03); border:1px solid rgba(184,153,104,0.3); border-radius:8px; width:100%;">
+            <summary style="padding:1rem 1.2rem; cursor:pointer; color:#b89968; font-weight:bold; letter-spacing:0.05em; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem;">
+              <span>KNOW MORE / VIEW MODELS</span>
+              <span class="icon" style="font-size:1.2rem; line-height:1;">+</span>
+            </summary>
+            <div style="padding:2rem 1.2rem 0.5rem; border-top:1px solid rgba(184,153,104,0.3);">
+              
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/ihht-machine.jpg" alt="Model 1 — IHH-M0934" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
+              </div>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 1 — IHH-M0934</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">Model IHH-M0934 · 9–34% O₂ · simulates 0–6500 m altitude · 800 W</p>
+                </div>
+                
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 1 — IHH-M0934';">Request a Quote</button>
+                </div>
+              </div>
+            </div>
+        
+            </div>
+          </details>
+    
+        </div>
+      </div>
+    
+      <div class="alteon-prod-card" style="background:#111; border:1px solid rgba(255,255,255,0.1); border-radius:12px; overflow:hidden; display:flex; flex-direction:column;">
+        <div style="height:250px; background:#000; display:flex; align-items:center; justify-content:center; overflow:hidden; border-bottom:1px solid rgba(255,255,255,0.1);">
+          <img src="/assets/images/alteon/bodymap360.jpg" alt="Body Composition Scan" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div class="body" style="padding:2rem; display:flex; flex-direction:column; flex:1;">
+          <h2 style="color:#b89968; font-size:1.5rem; font-family:'Playfair Display', serif; margin:0 0 1rem;">Body Composition Scan</h2>
+          <p style="color:rgba(255,255,255,0.8); font-size:0.9rem; line-height:1.6; margin-bottom:1.5rem;">Clinical-grade body analysis to baseline and track every recovery journey using multi-frequency bio-impedance.</p>
+          <div style="margin-bottom:2rem;">
+            <div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Precise muscle/fat/water breakdown</span></div><div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">Segmental analysis</span></div><div style="display:flex; align-items:flex-start; gap:0.5rem; margin-bottom:0.5rem;"><span style="color:#b89968;">✓</span><span style="color:rgba(255,255,255,0.7); font-size:0.85rem;">3D body imaging</span></div>
+          </div>
+          
+          <details class="alteon-accordion" style="margin-top:auto; background:rgba(255,255,255,0.03); border:1px solid rgba(184,153,104,0.3); border-radius:8px; width:100%;">
+            <summary style="padding:1rem 1.2rem; cursor:pointer; color:#b89968; font-weight:bold; letter-spacing:0.05em; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem;">
+              <span>KNOW MORE / VIEW MODELS</span>
+              <span class="icon" style="font-size:1.2rem; line-height:1;">+</span>
+            </summary>
+            <div style="padding:2rem 1.2rem 0.5rem; border-top:1px solid rgba(184,153,104,0.3);">
+              
+            <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+              <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
+                <img src="/assets/images/alteon/bodymap360.jpg" alt="Model 1 — BODYMAP 360" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
+              </div>
+              <div style="flex:2; min-width:250px;">
+                <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 1 — BODYMAP 360</h4>
+                <div>
+                  <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Specifications</p>
+                  <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; line-height:1.6; margin:0;">DSM-BIA 5 / 50 / 250 kHz · 3D body imaging · full segmental report.</p>
+                </div>
+                
+                  <div style="margin-top:0.8rem;">
+                    <p style="font-size:0.65rem; color:#b89968; letter-spacing:1px; text-transform:uppercase; font-weight:bold; margin-bottom:0.2rem;">Recommended Room Size</p>
+                    <p style="color:rgba(255,255,255,0.7); font-size:0.85rem; margin:0;">On request</p>
+                  </div>
+                <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+                  <span style="color:#f4f0e9; font-weight:600; font-size:0.85rem; letter-spacing:0.05em;">Price on request</span>
+                  <button class="btn-red" style="background:#b89968; color:#0d0d0d; border:none; padding:0.6rem 1.2rem; font-size:0.8rem; font-weight:700; border-radius:4px; cursor:pointer;" onclick="document.getElementById('eq-name').scrollIntoView({behavior:'smooth'}); document.getElementById('eq-location').value = 'Model 1 — BODYMAP 360';">Request a Quote</button>
+                </div>
+              </div>
+            </div>
+        
+            </div>
+          </details>
+    
+        </div>
+      </div>
+    
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem" class="rsp-1col">
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.15);border-radius:.9rem;padding:1.6rem;text-align:center">
-        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;color:#4ade80;margin-bottom:.5rem">STEAM ROOM</div>
-        <p style="font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.6">Deep heat and steam for respiratory cleansing, muscle relaxation, and skin detoxification.</p>
-      </div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.15);border-radius:.9rem;padding:1.6rem;text-align:center">
-        <div style="font-size:2rem;margin-bottom:.8rem">&#xFE0F;</div>
-        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;color:#4ade80;margin-bottom:.5rem">COLD PLUNGE POOL</div>
-        <p style="font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.6">Contrast hydrotherapy that reduces inflammation, boosts circulation, and accelerates recovery.</p>
-      </div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.15);border-radius:.9rem;padding:1.6rem;text-align:center">
-        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;color:#4ade80;margin-bottom:.5rem">VITALITY POOL</div>
-        <p style="font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.6">Hydrotherapy pool for relaxation, joint mobility, and overall vitality restoration.</p>
-      </div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.15);border-radius:.9rem;padding:1.6rem;text-align:center">
-        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;color:#4ade80;margin-bottom:.5rem">FLOTATION POOL</div>
-        <p style="font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.6">Sensory-reduced flotation for deep mental recovery, stress relief, and nervous system reset.</p>
-      </div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.15);border-radius:.9rem;padding:1.6rem;text-align:center">
-        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;color:#4ade80;margin-bottom:.5rem">EXPERIENCE SHOWERS</div>
-        <p style="font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.6">Multi-sensory rain, mist, and contrast shower experiences for invigorating transitions.</p>
-      </div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(74,222,128,.15);border-radius:.9rem;padding:1.6rem;text-align:center">
-        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;color:#4ade80;margin-bottom:.5rem">HIMALAYAN SALT CAVE</div>
-        <p style="font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.6">Natural halotherapy environment supporting respiratory health, skin care, and deep relaxation.</p>
-      </div>
-    </div>
-  </section>
+  </div>
 </section>
 
-<section class="sec" style="background:#060608;color:#fff;border-top:1px solid rgba(74,222,128,.15)">
-  <section class="sec-in">
-    <div style="text-align:center;padding:1rem 0 2rem">
-      <span class="sec-label" style="color:#4ade80">Get In Touch</span>
-      <h2 class="sec-title" style="color:#fff;margin-top:.5rem">BRING ALTEON TO YOUR FACILITY</h2>
-      <p class="sec-sub" style="color:rgba(255,255,255,.65);margin-top:1rem">Design a complete wellness ecosystem with Alteon's integrated recovery, assessment and experience technologies. Our team handles architectural planning, installation and staff training end to end.</p>
-    </div>
-    <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
-      <button class="btn btn-primary" onclick="go('contact')" style="background:#4ade80;color:#09090b;border:none">Request Consultation</button>
-      <a class="btn btn-outline" href="https://wa.me/919820166910" target="_blank" rel="noopener" style="color:#4ade80;border-color:#4ade80">WhatsApp Us</a>
-    </div>
-  </section>
-</section>
-
-      <!-- Additional Alteon Technologies -->
+<!-- Additional Alteon Technologies -->
 <section class="sec" style="background:#09090b;color:#fff">
   <section class="sec-in">
     <div class="sec-hdr center">
