@@ -1019,7 +1019,7 @@ ${footer()}
               
             <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
               <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
-                <img src="/assets/images/alteon/cryoblast-pro.jpg" alt="Model 1 — CryoBlast Pro" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
+                <img src="/assets/images/alteon/cryoblast-pro-lifestyle.jpg" alt="Model 1 — CryoBlast Pro" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
               </div>
               <div style="flex:2; min-width:250px;">
                 <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 1 — CryoBlast Pro</h4>
@@ -1041,7 +1041,7 @@ ${footer()}
         
             <div style="margin-bottom:2rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
               <div style="flex:1; min-width:200px; background:#000; padding:1rem; border-radius:8px; text-align:center;">
-                <img src="/assets/images/alteon/cryo-q-one.jpg" alt="Model 2 — Cryo Q One" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
+                <img src="/assets/images/alteon/cryo-q-one-insitu.jpg" alt="Model 2 — Cryo Q One" loading="lazy" style="max-height:180px; max-width:100%; object-fit:contain; border-radius:4px;">
               </div>
               <div style="flex:2; min-width:250px;">
                 <h4 style="color:#f4f0e9; font-size:1.15rem; margin-bottom:0.5rem; letter-spacing:0.02em;">Model 2 — Cryo Q One</h4>
@@ -1281,7 +1281,7 @@ ${footer()}
     
       <div class="alteon-prod-card" style="background:#111; border:1px solid rgba(255,255,255,0.1); border-radius:12px; overflow:hidden; display:flex; flex-direction:column;">
         <div style="height:250px; background:#000; display:flex; align-items:center; justify-content:center; overflow:hidden; border-bottom:1px solid rgba(255,255,255,0.1);">
-          <img src="/assets/images/alteon/redlight-healray.jpg" alt="Red Light / Photobiomodulation" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+          <img src="/assets/images/alteon/redlight-hrt2.jpg" alt="Red Light / Photobiomodulation" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
         </div>
         <div class="body" style="padding:2rem; display:flex; flex-direction:column; flex:1;">
           <h2 style="color:#b89968; font-size:1.5rem; font-family:'Playfair Display', serif; margin:0 0 1rem;">Red Light / Photobiomodulation</h2>
@@ -1377,7 +1377,7 @@ ${footer()}
     
       <div class="alteon-prod-card" style="background:#111; border:1px solid rgba(255,255,255,0.1); border-radius:12px; overflow:hidden; display:flex; flex-direction:column;">
         <div style="height:250px; background:#000; display:flex; align-items:center; justify-content:center; overflow:hidden; border-bottom:1px solid rgba(255,255,255,0.1);">
-          <img src="/assets/images/alteon/coldplunge-polardip-pro.jpg" alt="Cold Plunge & Ice Tubs" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+          <img src="/assets/images/alteon/coldplunge-lifestyle.jpg" alt="Cold Plunge & Ice Tubs" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
         </div>
         <div class="body" style="padding:2rem; display:flex; flex-direction:column; flex:1;">
           <h2 style="color:#b89968; font-size:1.5rem; font-family:'Playfair Display', serif; margin:0 0 1rem;">Cold Plunge & Ice Tubs</h2>
@@ -1473,7 +1473,7 @@ ${footer()}
     
       <div class="alteon-prod-card" style="background:#111; border:1px solid rgba(255,255,255,0.1); border-radius:12px; overflow:hidden; display:flex; flex-direction:column;">
         <div style="height:250px; background:#000; display:flex; align-items:center; justify-content:center; overflow:hidden; border-bottom:1px solid rgba(255,255,255,0.1);">
-          <img src="/assets/images/alteon/revital-bed.jpg" alt="Multi-Therapy Recovery Beds" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+          <img src="/assets/images/alteon/revital-clean.jpg" alt="Multi-Therapy Recovery Beds" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
         </div>
         <div class="body" style="padding:2rem; display:flex; flex-direction:column; flex:1;">
           <h2 style="color:#b89968; font-size:1.5rem; font-family:'Playfair Display', serif; margin:0 0 1rem;">Multi-Therapy Recovery Beds</h2>
@@ -1575,7 +1575,7 @@ ${footer()}
     
       <div class="alteon-prod-card" style="background:#111; border:1px solid rgba(255,255,255,0.1); border-radius:12px; overflow:hidden; display:flex; flex-direction:column;">
         <div style="height:250px; background:#000; display:flex; align-items:center; justify-content:center; overflow:hidden; border-bottom:1px solid rgba(255,255,255,0.1);">
-          <img src="/assets/images/alteon/ihht.jpg" alt="IHHT Altitude Training" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+          <img src="/assets/images/alteon/ihht-clean.jpg" alt="IHHT Altitude Training" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
         </div>
         <div class="body" style="padding:2rem; display:flex; flex-direction:column; flex:1;">
           <h2 style="color:#b89968; font-size:1.5rem; font-family:'Playfair Display', serif; margin:0 0 1rem;">IHHT Altitude Training</h2>
@@ -1617,7 +1617,7 @@ ${footer()}
     
       <div class="alteon-prod-card" style="background:#111; border:1px solid rgba(255,255,255,0.1); border-radius:12px; overflow:hidden; display:flex; flex-direction:column;">
         <div style="height:250px; background:#000; display:flex; align-items:center; justify-content:center; overflow:hidden; border-bottom:1px solid rgba(255,255,255,0.1);">
-          <img src="/assets/images/alteon/bodymap360.jpg" alt="Body Composition Scan" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+          <img src="/assets/images/alteon/bodymap-clean.jpg" alt="Body Composition Scan" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
         </div>
         <div class="body" style="padding:2rem; display:flex; flex-direction:column; flex:1;">
           <h2 style="color:#b89968; font-size:1.5rem; font-family:'Playfair Display', serif; margin:0 0 1rem;">Body Composition Scan</h2>
