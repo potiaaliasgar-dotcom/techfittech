@@ -603,6 +603,22 @@ function renderAlteonStyle() {
 .alteon-page .wa svg{width:30px;height:30px;fill:#fff}
 .alteon-page .fade{animation:fade .4s ease}
 @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+@media(max-width: 768px) {
+  .alteon-page .wrap { padding: 0 16px; }
+  .alteon-page section { padding: 48px 0; }
+  .alteon-page .hero-grid { padding: 32px 0; gap: 24px; }
+  .alteon-page .hero h1 { font-size: clamp(38px, 10vw, 46px); }
+  .alteon-page .cat-hero h1 { font-size: clamp(32px, 8vw, 40px); }
+  .alteon-page .pdp h1 { font-size: clamp(28px, 8vw, 36px); }
+  .alteon-page .cta-band { padding: 32px 16px; margin: 20px 0; border-radius: 16px; }
+  .alteon-page .cta-band h2 { font-size: 26px; }
+  .alteon-page .m-img { padding: 12px; }
+  .alteon-page .pdp-img { padding: 16px; position: static; }
+  .alteon-page .spectbl td { font-size: 12px; }
+  .alteon-page .hero p, .alteon-page .cat-hero p, .alteon-page .pdp .lead { font-size: 15px; margin: 14px 0 20px; }
+}
+
         `;
         document.head.appendChild(style);
     }
