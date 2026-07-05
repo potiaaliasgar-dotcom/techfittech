@@ -4131,6 +4131,33 @@ function generateSitemaps(seoMap) {
     
     pagesXml += `    <url><loc>https://www.techfittech.com/${route}</loc><lastmod>${lastmod}</lastmod><changefreq>${changefreq}</changefreq><priority>${priority}</priority></url>\n`;
   }
+  
+  // Dynamic Alteon Paths
+  try {
+    const alteonDataPath = './public/assets/alteon-data.js';
+    if (fs.existsSync(alteonDataPath)) {
+      let code = fs.readFileSync(alteonDataPath, 'utf8');
+      code = code.replace('window.ALTEON_DATA = ', 'const ALTEON_DATA = ');
+      code += '\nmodule.exports = ALTEON_DATA;';
+      fs.writeFileSync('./scripts/temp-alteon.cjs', code);
+      const ALTEON_DATA = require('./temp-alteon.cjs');
+      
+      ALTEON_DATA.categories.forEach(c => {
+        pagesXml += `    <url><loc>https://www.techfittech.com/alteon/${c.id}</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n`;
+      });
+      
+      ALTEON_DATA.products.forEach(p => {
+        const cat = ALTEON_DATA.categories.find(c => c.id === p.categoryId);
+        if (cat) {
+            pagesXml += `    <url><loc>https://www.techfittech.com/alteon/${cat.id}/${p.id}</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`;
+        }
+      });
+      fs.unlinkSync('./scripts/temp-alteon.cjs');
+    }
+  } catch (e) {
+    console.warn("Failed to inject Alteon sitemap paths", e);
+  }
+
   pagesXml += '</urlset>\n';
   
   fs.writeFileSync(path.join(DIST, 'sitemap-pages.xml'), pagesXml, 'utf8');

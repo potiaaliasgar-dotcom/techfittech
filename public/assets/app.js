@@ -738,14 +738,7 @@ function renderAlteonCategory(catId) {
         </div>`;
     }).join('');
 
-    setSchema({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Alteon" },
-            { "@type": "ListItem", "position": 2, "name": c.name }
-        ]
-    });
+    
 
     const comps = c.competitors && c.competitors.length > 0 
         ? `A commercial grade alternative to ${c.competitors.slice(0,3).map(esc).join(', ')}, supplied and serviced in India.` 
@@ -802,15 +795,39 @@ function renderAlteonProduct(catId, prodId) {
             </div>
         </div>`).join('');
 
-    setSchema({
+    
+    const faqSchema = {
         "@context": "https://schema.org",
-        "@type": "Product",
-        "name": p.name,
-        "category": c.name,
-        "brand": { "@type": "Brand", "name": "Alteon" },
-        "description": lead,
-        "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR", "seller": { "@type": "Organization", "name": "TechFit Health Fitness Pvt Ltd" } }
-    });
+        "@type": "FAQPage",
+        "mainEntity": (p.faqs||[]).map(f => ({
+            "@type": "Question",
+            "name": f.q,
+            "acceptedAnswer": { "@type": "Answer", "text": f.a }
+        }))
+    };
+    
+    setSchema([
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Alteon", "item": "https://www.techfittech.com/alteon" },
+                { "@type": "ListItem", "position": 2, "name": c.name, "item": "https://www.techfittech.com/alteon/" + c.id },
+                { "@type": "ListItem", "position": 3, "name": p.name }
+            ]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": p.name,
+            "category": c.name,
+            "brand": { "@type": "Brand", "name": "Alteon" },
+            "image": "https://www.techfittech.com/" + p.image,
+            "description": p.overview
+        },
+        faqSchema
+    ]);
+
 
     return `
     <div class="alteon-page">
