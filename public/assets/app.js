@@ -614,7 +614,7 @@ function renderAlteonStyle() {
 @media(max-width: 768px) {
   .alteon-page .wrap { padding: 0 16px; }
   .alteon-page section { padding: 48px 0; }
-  .alteon-page .hero-grid { padding: 32px 0; gap: 24px; }
+  .alteon-page .hero-grid { padding: 32px 16px; gap: 24px; }
   .alteon-page .hero h1 { font-size: clamp(38px, 10vw, 46px); }
   .alteon-page .cat-hero h1 { font-size: clamp(32px, 8vw, 40px); }
   .alteon-page .pdp h1 { font-size: clamp(28px, 8vw, 36px); }
@@ -674,12 +674,9 @@ function renderAlteonHub() {
                     <span class="eyebrow">Recovery . Wellness . Longevity</span>
                     <h1>ALTEON<span class="g">Wellness and Recovery</span></h1>
                     <p>TechFit is the authorised India distributor of Alteon, clinical and commercial grade recovery and longevity technology for gyms, hotels, residences and wellness clinics.</p>
-                    <div class="cta-row">
+                    <div class="cta-row" style="margin-top:40px">
                         <a class="btn btn-green" onclick="go('alteon/${DB.categories[0].id}')">Explore the range →</a>
                         <a class="btn btn-ghost" href="${wa('Hi TechFit, I would like a consultation on Alteon wellness and recovery equipment.')}" target="_blank">Talk to a specialist</a>
-                    </div>
-                    <div class="stats" style="grid-template-columns: 1fr">
-                        <div class="s"><b>Delivery, Installation and AMC across India</b></div>
                     </div>
                 </div>
                 <div class="hero-media">
@@ -870,7 +867,7 @@ function alteonClientBand() {
     const L = DB.clientLogos || [];
     if (!L.length && !DB.clientsImage) return '';
     const wall = L.length ? `<div style="background:#f5f4f1;border-radius:20px;padding:34px 30px;max-width:980px;margin:28px auto 0"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(115px,1fr));gap:30px 34px;align-items:center;justify-items:center">${L.map(u=>`<img src="${u}" alt="Alteon client" style="max-height:44px;max-width:128px;width:auto;height:auto;object-fit:contain">`).join('')}</div></div>` : `<div class="card-w"><img src="${DB.clientsImage}" alt="TechFit and Alteon clients and partners"></div>`;
-    return `<section class="clients"><div class="wrap" style="text-align:center;padding:60px 0"><span class="eyebrow">Trusted By</span><h2 style="font-size:clamp(28px,4vw,44px);margin:14px 0 6px">Chosen by leading names</h2><p style="color:var(--muted);max-width:560px;margin:0 auto">Luxury wellness hospitality, medical longevity clinics and elite performance centres.</p>${wall}</div></section>`;
+    return `<section class="clients" style="padding:60px 0"><div class="wrap" style="text-align:center"><span class="eyebrow">Trusted By</span><h2 style="font-size:clamp(28px,4vw,44px);margin:14px 0 6px">Chosen by leading names</h2><p style="color:var(--muted);max-width:560px;margin:0 auto">Luxury wellness hospitality, medical longevity clinics and elite performance centres.</p>${wall}</div></section>`;
 }
 
 function alteonCtaBand() {
