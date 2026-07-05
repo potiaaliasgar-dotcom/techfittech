@@ -603,6 +603,13 @@ function renderAlteonStyle() {
 .alteon-page .wa svg{width:30px;height:30px;fill:#fff}
 .alteon-page .fade{animation:fade .4s ease}
 @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.alteon-page .gallery-section { margin-top: 50px; }
+.alteon-page .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 24px; }
+.alteon-page .gallery-grid img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px; border: 1px solid rgba(255,255,255,.09); aspect-ratio: 4/3; }
+@media(max-width: 860px) { .alteon-page .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; } }
+@media(max-width: 620px) { .alteon-page .gallery-grid { grid-template-columns: 1fr; } }
+
+
 
 @media(max-width: 768px) {
   .alteon-page .wrap { padding: 0 16px; }
@@ -841,6 +848,14 @@ function renderAlteonProduct(catId, prodId) {
                     <div class="seo-note">Looking for a ${c.competitors && c.competitors.length > 0 ? esc(c.competitors[0]) : 'recovery'} alternative in India? The ${esc(p.name)} is a commercial grade option supplied, installed and serviced by TechFit, the authorised Alteon distributor.</div>
                 </div>
             </div>
+            ${p.gallery && p.gallery.length ? `
+            <div class="blk gallery-section">
+                <h4>Product Gallery</h4>
+                <div class="gallery-grid">
+                    ${p.gallery.map((img, i) => `<img src="/${img}" loading="lazy" class="fade gallery-img" style="animation-delay:${(i%10) * 0.05}s">`).join('')}
+                </div>
+            </div>
+            ` : ''}
             <div class="blk" style="margin-top:50px">
                 <h4>More in ${esc(c.name)}</h4>
                 <div class="rel">${rel}</div>
