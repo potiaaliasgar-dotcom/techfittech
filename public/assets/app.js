@@ -829,7 +829,6 @@ function renderAlteonProduct(catId, prodId) {
                     <p class="lead">${lead}</p>
                     <div class="cta-row" style="display:flex;gap:12px;flex-wrap:wrap">
                         <a class="btn btn-green" href="${wa('Hi TechFit, I would like a quote and brochure for the ' + p.name + ' (Alteon).')}" target="_blank">Request quote</a>
-                        ${p.brochureUrl && p.brochureUrl.startsWith('http') ? `<a class="btn btn-ghost" href="${esc(p.brochureUrl)}" target="_blank">Download brochure</a>` : ''}
                     </div>
                     ${specs ? `<div class="blk"><h4>Technical Specifications</h4><table class="spectbl">${specs}</table></div>` : ''}
                     ${benefits}
