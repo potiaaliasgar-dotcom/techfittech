@@ -678,11 +678,8 @@ function renderAlteonHub() {
                         <a class="btn btn-green" onclick="go('alteon/${DB.categories[0].id}')">Explore the range →</a>
                         <a class="btn btn-ghost" href="${wa('Hi TechFit, I would like a consultation on Alteon wellness and recovery equipment.')}" target="_blank">Talk to a specialist</a>
                     </div>
-                    <div class="stats">
-                        <div class="s"><b>${DB.products.length}</b><span>Models</span></div>
-                        <div class="s"><b>${DB.categories.length}</b><span>Categories</span></div>
-                        <div class="s"><b>800+</b><span>Installations</span></div>
-                        <div class="s"><b>India</b><span>Sales . Install . AMC</span></div>
+                    <div class="stats" style="grid-template-columns: 1fr">
+                        <div class="s"><b>Delivery, Installation and AMC across India</b></div>
                     </div>
                 </div>
                 <div class="hero-media">

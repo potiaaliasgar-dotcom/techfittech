@@ -95,5 +95,11 @@
       "destination": "/gym-flooring",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/alteon/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
