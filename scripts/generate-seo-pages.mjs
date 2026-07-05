@@ -71,7 +71,7 @@ const SEO_MAP = {
   },
 
   'alteon': {
-    title: 'Alteon Wellness & Recovery | Reseller — Cryotherapy, HBOT...',
+    title: 'Alteon Wellness & Recovery | Authorised Distributor — Cryotherapy, HBOT...',
     desc: 'TechFit is a reseller of Alteon Wellness & Recovery. Premium recovery technology — hyperbaric oxygen chambers, cryotherapy, red-light therapy, dry-float, IHHT and more.',
     h1: 'Alteon Wellness & Recovery Technology',
     lastmod: '2026-05-24',
@@ -2743,7 +2743,7 @@ const NOSCRIPT_FALLBACKS = {
     <main style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <article>
         <header>
-          <h1>Alteon Wellness &amp; Recovery Equipment | Reseller</h1>
+          <h1>Alteon Wellness &amp; Recovery Equipment | Authorised Distributor</h1>
         </header>
         <section>
           <header>
@@ -3921,7 +3921,7 @@ function generatePage(html, route, seo) {
     noscriptBlock = NOSCRIPT_FALLBACKS[route] || `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <h2>TechFit | Gym Setup, Equipment &amp; Wellness Solutions</h2>
-      <p>Gym, wellness &amp; sports infrastructure partner with 800+ installations delivered. Reseller for BH Fitness, Tunturi, California Fitness, and Alteon Wellness.</p>
+      <p>Gym, wellness &amp; sports infrastructure partner with 800+ installations delivered. Reseller for BH Fitness, Tunturi, and California Fitness. Authorised Distributor for Alteon Wellness.</p>
       <p><strong>Services:</strong> Gym design &amp; layout, commercial equipment supply, custom fabrication of
         combat-sports equipment and CrossFit rigs, padel and pickleball courts, wellness and recovery technology from
         Alteon, installation, after-sales and AMC. Sister concern TechFit Active provides managed gym operations.</p>
@@ -4095,7 +4095,67 @@ fs.writeFileSync(compiledIndexHtmlPath, sourceHtml, 'utf8');
 
 let count = 0;
 
+
 // 3. Generate SEO sub-pages
+// --- NEW CORE SSG ENGINE (ALTEON & HYROX) ---
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const vm = require('vm');
+
+const alteonDataCode = fs.readFileSync(path.join(PUBLIC, 'assets/alteon-data.js'), 'utf8');
+const jsonStr = alteonDataCode.match(/window\.ALTEON_DATA\s*=\s*({[\s\S]*?});/)[1];
+const ALTEON_DATA = JSON.parse(jsonStr);
+
+const appJsCode = fs.readFileSync(path.join(PUBLIC, 'assets/app.js'), 'utf8');
+
+const ssgContext = {
+    console,
+    URL,
+    URLSearchParams,
+    setTimeout: (cb) => {
+        // execute immediately for sync SSG
+        if (typeof cb === 'function') cb();
+    },
+    window: { scrollTo: () => {}, addEventListener: () => {} },
+    document: {
+        getElementById: () => ({ innerHTML: '' }),
+        createElement: () => ({ innerHTML: '' }),
+        head: { appendChild: () => {} },
+        body: { classList: { add: () => {}, remove: () => {} } },
+        addEventListener: () => {}
+    },
+    navigator: { userAgent: 'node' },
+    history: { pushState: () => {} },
+    console: console,
+    Math: Math,
+    Date: Date,
+    setTimeout: setTimeout,
+    module: { exports: {} }
+};
+vm.createContext(ssgContext);
+
+vm.runInContext('var window = this; window.addEventListener = function(){}; window.scrollTo = function(){};', ssgContext);
+vm.runInContext('var document = window.document;', ssgContext);
+vm.runInContext('var navigator = window.navigator;', ssgContext);
+vm.runInContext('var history = window.history;', ssgContext);
+vm.runInContext('var location = { pathname: "/" }; window.location = location;', ssgContext);
+vm.runInContext('function getAlteonData() { return window.ALTEON_DATA; }', ssgContext);
+
+vm.runInContext('window.ALTEON_DATA = ' + JSON.stringify(ALTEON_DATA) + ';', ssgContext);
+vm.runInContext(appJsCode, ssgContext);
+
+const app = ssgContext.module.exports;
+
+function injectAppHtml(baseHtml, appHtml, schemas) {
+    let out = baseHtml;
+    out = out.replace('<main id="app" class="pw"></main>', `<main id="app" class="pw" data-static-rendered="true">${appHtml}</main>`);
+    if (schemas && schemas.length > 0) {
+        const schemaBlock = `\n  <script type="application/ld+json">\n${JSON.stringify(schemas, null, 2)}\n  </script>`;
+        out = out.replace(/<\/head>/i, `${schemaBlock}\n</head>`);
+    }
+    return out;
+}
+
 for (const [route, seo] of Object.entries(SEO_MAP)) {
   const outDir = path.join(DIST, route);
   const outFile = path.join(outDir, 'index.html');
@@ -4103,16 +4163,68 @@ for (const [route, seo] of Object.entries(SEO_MAP)) {
   if (!fs.existsSync(outDir)) {
     fs.mkdirSync(outDir, { recursive: true });
   }
-
+  
   const html = generatePage(sourceHtml, route, seo);
   fs.writeFileSync(outFile, html, 'utf8');
   count++;
 }
 
-console.log(`\n🎉 SEO Prerendering complete! Generated ${count} route-specific pages in 'dist/'.`);
+console.log("\n🚀 Building Alteon & Hyrox Server-Rendered Pages...");
+
+function buildSSGRoute(route, renderFunc, title, desc, img) {
+    let appHtml = renderFunc();
+    const schemas = app.getServerSchemas ? app.getServerSchemas() : [];
+    
+    // Add to SEO MAP for sitemaps!
+    SEO_MAP[route] = { title, desc, h1: title, img };
+    
+    let baseHtml = generatePage(sourceHtml, route, SEO_MAP[route]);
+    baseHtml = injectAppHtml(baseHtml, appHtml, schemas);
+    
+    const outDir = path.join(DIST, route);
+    if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+    fs.writeFileSync(path.join(outDir, 'index.html'), baseHtml, 'utf8');
+    count++;
+}
+
+// 1. HYROX
+buildSSGRoute('hyrox', () => app.renderHyrox(), 'Official HYROX Equipment India | TechFit', 'TechFit is the authorised reseller of official Centr x HYROX equipment in India. Buy HYROX equipment, rigs, and turnkey setups. Compare with Rogue Fitness.', 'assets/images/hyrox/perform-tread-1.jpg');
+
+// 2. ALTEON HUB
+buildSSGRoute('alteon', () => app.renderAlteonHub(), 'Alteon Wellness & Recovery India', 'TechFit is the authorised distributor for Alteon Wellness in India.', 'og-image.jpg');
+
+// 3. ALTEON CATEGORIES
+ALTEON_DATA.categories.forEach(c => {
+    buildSSGRoute(`alteon/${c.id}`, () => app.renderAlteonCategory(c.id), `${c.name} India | Alteon Recovery`, c.desc || `Alteon ${c.name} supplied and installed by TechFit.`, 'og-image.jpg');
+});
+
+// 4. ALTEON PRODUCTS
+ALTEON_DATA.products.forEach(p => {
+    buildSSGRoute(`alteon/${p.categoryId}/${p.id}`, () => app.renderAlteonProduct(p.categoryId, p.id), `${p.name} India | Alteon`, p.overview ? p.overview.substring(0, 150) : `${p.name} supplied by TechFit.`, p.image);
+});
+
+// 5. ALTEON ADDONS (Alternatives)
+// buildSSGRoute('alteon/alternatives', () => app.renderAlteonAlternativeHub(), 'Alteon Alternatives in India', 'Compare Alteon wellness and recovery options against competitors.', 'og-image.jpg');
+// if (ALTEON_DATA.alternatives) {
+//     ALTEON_DATA.alternatives.forEach(a => {
+//         buildSSGRoute(`alteon/alternatives/${a.slug}`, () => app.renderAlteonAlternative(a.slug), `${a.name} Alternative India`, `Comparing ${a.name}? Discover the Alteon alternative supplied by TechFit.`, 'og-image.jpg');
+//     });
+// }
+
+// 6. ALTEON ADDONS (Guides)
+// buildSSGRoute('alteon/guides', () => app.renderAlteonGuideHub(), 'Alteon Guides & Knowledge Base', 'Guides and information on building wellness and recovery suites.', 'og-image.jpg');
+// if (ALTEON_DATA.guides) {
+//     ALTEON_DATA.guides.forEach(g => {
+//         buildSSGRoute(`alteon/guides/${g.slug}`, () => app.renderAlteonGuide(g.slug), g.title, g.meta || g.title, 'og-image.jpg');
+//     });
+// }
+
+// 7. ALTEON ADDONS (Comparisons)
+// ALTEON_DATA.categories.forEach(c => {
+//     buildSSGRoute(`alteon/compare/${c.id}`, () => app.renderAlteonCompare(c.id), `Compare Alteon ${c.name}`, `Compare specifications for all Alteon ${c.name} models.`, 'og-image.jpg');
+// });
 
 const escapeXml = escapeHtml;
-
 // 4. Generate dynamic sitemaps (Pages, Images, and Sitemap Index)
 function generateSitemaps(seoMap) {
   // A. Pages Sitemap
@@ -4286,3 +4398,9 @@ function runCanonicalAudit(seoMap) {
 }
 
 runCanonicalAudit(SEO_MAP);
+
+// Copy assets to dist
+const fsSync = require('fs');
+const cpSync = fsSync.cpSync || function(src, dest) { require('child_process').execSync('cp -r ' + src + ' ' + dest); };
+cpSync(path.join(PUBLIC, 'assets'), path.join(DIST, 'assets'), { recursive: true });
+console.log('✔ Copied public/assets to dist/assets');

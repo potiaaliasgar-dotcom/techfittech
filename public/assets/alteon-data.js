@@ -1,5 +1,5 @@
 window.ALTEON_DATA = {
- "brand": "TechFit — Authorised Alteon Distributor India",
+ "brand": "TechFit \u2014 Authorised Alteon Distributor India",
  "currency_note": "No pricing",
  "clientsImage": "assets/images/clients-partners.webp",
  "categories": [
@@ -14,7 +14,7 @@ window.ALTEON_DATA = {
     "Hyperbaric Chamber India"
    ],
    "count": 6,
-   "heroImage": "assets/images/hbot-1-seater-39.webp",
+   "heroImage": "assets/images/alteon/hbot-1-seater-39.webp",
    "heroTileColor": "#9a9a97"
   },
   {
@@ -29,7 +29,7 @@ window.ALTEON_DATA = {
     "US Cryotherapy"
    ],
    "count": 11,
-   "heroImage": "assets/images/alteon-icyonyx-110-c-cryo-chamber-21.webp",
+   "heroImage": "assets/images/alteon/alteon-icyonyx-110-c-cryo-chamber-21.webp",
    "heroTileColor": "#fefefe"
   },
   {
@@ -44,7 +44,7 @@ window.ALTEON_DATA = {
     "PlatinumLED"
    ],
    "count": 4,
-   "heroImage": "assets/images/red-revive-curve-healray-hrt-1-4.webp",
+   "heroImage": "assets/images/alteon/red-revive-curve-healray-hrt-1-4.webp",
    "heroTileColor": "#ffffff"
   },
   {
@@ -59,7 +59,7 @@ window.ALTEON_DATA = {
     "BlueCube"
    ],
    "count": 5,
-   "heroImage": "assets/images/polar-oval-pro-15.webp",
+   "heroImage": "assets/images/alteon/polar-oval-pro-15.webp",
    "heroTileColor": "#fdfdfd"
   },
   {
@@ -73,7 +73,7 @@ window.ALTEON_DATA = {
     "HigherDOSE"
    ],
    "count": 5,
-   "heroImage": "assets/images/heal-spectra-6-4-9.webp",
+   "heroImage": "assets/images/alteon/heal-spectra-6-4-9.webp",
    "heroTileColor": "#000000"
   },
   {
@@ -86,7 +86,7 @@ window.ALTEON_DATA = {
     "dry float pod India"
    ],
    "count": 2,
-   "heroImage": "assets/images/dry-float-flat-bed-25.webp",
+   "heroImage": "assets/images/alteon/dry-float-flat-bed-25.webp",
    "heroTileColor": "#000000"
   },
   {
@@ -100,7 +100,7 @@ window.ALTEON_DATA = {
     "IHHT machine India"
    ],
    "count": 2,
-   "heroImage": "assets/images/ihht-model-a-30.webp",
+   "heroImage": "assets/images/alteon/ihht-model-a-30.webp",
    "heroTileColor": "#fdfdfd"
   },
   {
@@ -113,7 +113,7 @@ window.ALTEON_DATA = {
     "recovery lounger"
    ],
    "count": 6,
-   "heroImage": "assets/images/pemf-bed-50.webp",
+   "heroImage": "assets/images/alteon/pemf-bed-50.webp",
    "heroTileColor": "#f3f4f7"
   },
   {
@@ -125,7 +125,7 @@ window.ALTEON_DATA = {
     "PEMF hydrogen therapy"
    ],
    "count": 1,
-   "heroImage": "assets/images/revital-multitherapy-35.webp",
+   "heroImage": "assets/images/alteon/revital-multitherapy-35.webp",
    "heroTileColor": "#000000"
   },
   {
@@ -138,7 +138,7 @@ window.ALTEON_DATA = {
     "salt therapy capsule"
    ],
    "count": 1,
-   "heroImage": "assets/images/biopod-33.webp",
+   "heroImage": "assets/images/alteon/biopod-33.webp",
    "heroTileColor": "#ffffff"
   },
   {
@@ -153,7 +153,7 @@ window.ALTEON_DATA = {
     "aqua bike"
    ],
    "count": 14,
-   "heroImage": "assets/images/bodyshape-v2-47.webp",
+   "heroImage": "assets/images/alteon/bodyshape-v2-47.webp",
    "heroTileColor": "#151515"
   },
   {
@@ -166,7 +166,7 @@ window.ALTEON_DATA = {
     "water massage table"
    ],
    "count": 1,
-   "heroImage": "assets/images/activ-aqua-bed-59.webp",
+   "heroImage": "assets/images/alteon/activ-aqua-bed-59.webp",
    "heroTileColor": "#151515"
   },
   {
@@ -179,7 +179,7 @@ window.ALTEON_DATA = {
     "electro muscle stimulation"
    ],
    "count": 1,
-   "heroImage": "assets/images/ems-suit-37.webp",
+   "heroImage": "assets/images/alteon/ems-suit-37.webp",
    "heroTileColor": "#f0eef1"
   },
   {
@@ -192,7 +192,7 @@ window.ALTEON_DATA = {
     "pelvic floor chair"
    ],
    "count": 1,
-   "heroImage": "assets/images/pellvilift-45.webp",
+   "heroImage": "assets/images/alteon/pellvilift-45.webp",
    "heroTileColor": "#b5b4bb"
   },
   {
@@ -205,7 +205,7 @@ window.ALTEON_DATA = {
     "body composition analyser"
    ],
    "count": 1,
-   "heroImage": "assets/images/body-scan-pro-28.webp",
+   "heroImage": "assets/images/alteon/body-scan-pro-28.webp",
    "heroTileColor": "#000000"
   }
  ],
@@ -315,7 +315,7 @@ window.ALTEON_DATA = {
      "1890 x 720 x 300 mm"
     ]
    ],
-   "image": "assets/images/red-revive-curve-healray-hrt-1-4.webp",
+   "image": "assets/images/alteon/red-revive-curve-healray-hrt-1-4.webp",
    "tileColor": "#ffffff",
    "gallery": [
     "assets/images/alteon/gallery/Red Revive Curve  HEALRAY HRT 1__0_4391x2311_p0.jpeg",
@@ -428,7 +428,7 @@ window.ALTEON_DATA = {
      "1842 x 715 x 822 mm"
     ]
    ],
-   "image": "assets/images/red-revive-axis-healray-hrt-2-5.webp",
+   "image": "assets/images/alteon/red-revive-axis-healray-hrt-2-5.webp",
    "tileColor": "#ffffff",
    "gallery": [
     "assets/images/alteon/gallery/Red Revive Axis HEALRAY HRT 2__0_1920x1281_p4.jpeg",
@@ -580,7 +580,7 @@ window.ALTEON_DATA = {
      "Bluetooth surround audio system"
     ]
    ],
-   "image": "assets/images/red-lumen-healray-pbm-1-6.webp",
+   "image": "assets/images/alteon/red-lumen-healray-pbm-1-6.webp",
    "tileColor": "#ffffff",
    "gallery": [
     "assets/images/alteon/gallery/Red Lumen HEALRAY PBM 1__0_2481x2605_p2.png",
@@ -736,7 +736,7 @@ window.ALTEON_DATA = {
      "Yes"
     ]
    ],
-   "image": "assets/images/red-lumen-pro-healray-pbm-2-7.webp",
+   "image": "assets/images/alteon/red-lumen-pro-healray-pbm-2-7.webp",
    "tileColor": "#ffffff",
    "gallery": [
     "assets/images/alteon/gallery/Red Lumen Pro HEALRAY PBM 2__0_2481x2605_p2.png",
@@ -746,7 +746,7 @@ window.ALTEON_DATA = {
   },
   {
    "id": "heal-spectra-6-4-9",
-   "name": "Heal Spectra (6*4)",
+   "name": "Heal Spectra",
    "category": "Sauna",
    "categoryId": "full-spectrum-infrared-saunas",
    "model": "Heal Spectra (6*4 ft)",
@@ -801,7 +801,7 @@ window.ALTEON_DATA = {
     ],
     [
      "Working Temperature",
-     "50°C to 90°C"
+     "50\u00b0C to 90\u00b0C"
     ],
     [
      "Construction Material",
@@ -841,7 +841,7 @@ window.ALTEON_DATA = {
     ],
     [
      "Rapid Activation",
-     "Reaches 40°C in 15 to 20 minutes"
+     "Reaches 40\u00b0C in 15 to 20 minutes"
     ],
     [
      "Warranty",
@@ -852,128 +852,364 @@ window.ALTEON_DATA = {
      "ISO 9001:2015, Make in India, WHO"
     ]
    ],
-   "image": "assets/images/heal-spectra-6-4-9.webp",
+   "image": "assets/images/alteon/heal-spectra-6-4-9.webp",
    "tileColor": "#ffffff",
    "gallery": [
     "assets/images/alteon/gallery/Heal Spectra (64)__0_1240x1754_p1.jpeg",
     "assets/images/alteon/gallery/Heal Spectra (64)__1_1240x1754_p2.jpeg",
     "assets/images/alteon/gallery/Heal Spectra (64)__2_1240x1754_p3.jpeg"
+   ],
+   "variants": [
+    {
+     "id": "heal-spectra-6-4-9",
+     "name": "Heal Spectra",
+     "category": "Sauna",
+     "categoryId": "full-spectrum-infrared-saunas",
+     "model": "Heal Spectra (6*4 ft)",
+     "overview": "The Alteon Heal Spectra is a full spectrum infrared sauna that fuses architectural design, full spectrum infrared technology and clinical grade purity into one refined dual thermal recovery experience. This 6 by 4 foot cabin comfortably seats up to four people and delivers near, mid and far infrared waves for deep cellular restoration. Crafted from premium Canadian Hemlock with an adhesive free locking system, it is engineered for the most discerning luxury wellness environments.",
+     "howItWorks": "Full spectrum infrared heaters emit near, mid and far infrared waves, with peak 9.6 micron far infrared that penetrates deep into tissues to raise core temperature and support cellular level detoxification. Exclusive imported ceramic clay coating, reinforced with stainless steel wire mesh, radiates smooth, even infrared warmth at comfortable surface temperatures. German ceramic heaters keep electromagnetic radiation ultra low, staying under 10mG.",
+     "benefits": [
+      "Promotes deep cellular detoxification through intense sweating",
+      "Flushes heavy metals and toxins from the body",
+      "Increases blood flow to accelerate muscle repair",
+      "Reduces muscle soreness and stiffness",
+      "Stimulates collagen production for radiant, youthful skin",
+      "Clears pores and enhances skin radiance",
+      "Lowers cortisol and triggers deep nervous system relaxation",
+      "Supports cardiovascular health and circulation",
+      "Improves recovery and overall resilience to stress",
+      "Encourages restful sleep and mental calm"
+     ],
+     "features": [
+      "Full spectrum near, mid and far infrared heating",
+      "Peak 9.6 micron far infrared for deep tissue penetration",
+      "Ultra low EMF German ceramic heaters staying under 10mG",
+      "Exclusive imported ceramic clay coating reinforced with stainless steel mesh",
+      "Premium Canadian Hemlock construction with adhesive free locking system",
+      "Zero toxic off gassing using organic beeswax finish",
+      "Rapid activation reaching 40 degrees Celsius in 15 to 20 minutes",
+      "Central integrated control panel for all sauna functions",
+      "Bluetooth music system",
+      "Chromotherapy lighting",
+      "Energy efficient operation for high output environments",
+      "Seamless installation across indoor and sheltered outdoor spaces"
+     ],
+     "applications": [
+      "Luxury residential spaces",
+      "Executive wellness suites",
+      "Elite performance centres",
+      "High end hospitality spas",
+      "Boutique longevity clinics",
+      "Sheltered outdoor retreats"
+     ],
+     "specs": [
+      [
+       "Model",
+       "HEALSPECTRA"
+      ],
+      [
+       "Capacity",
+       "4 Person"
+      ],
+      [
+       "Size",
+       "6 x 4 x 7 ft"
+      ],
+      [
+       "Working Temperature",
+       "50\u00b0C to 90\u00b0C"
+      ],
+      [
+       "Construction Material",
+       "Canadian Hemlock"
+      ],
+      [
+       "Control",
+       "Central Control Panel"
+      ],
+      [
+       "Heating Mechanism",
+       "Infrared & Traditional stove"
+      ],
+      [
+       "Bluetooth Music System",
+       "Yes"
+      ],
+      [
+       "Dimensions",
+       "72 x 48 x 84 in"
+      ],
+      [
+       "Customization",
+       "As per request"
+      ],
+      [
+       "EMF Radiation",
+       "Under 10mG (German ceramic heaters)"
+      ],
+      [
+       "Far Infrared Wavelength",
+       "Peak 9.6 micron"
+      ],
+      [
+       "Wall Construction",
+       "Aust. Ceramic Clay coating, Stainless-Steel Mesh Support, Wood Substrate"
+      ],
+      [
+       "Rapid Activation",
+       "Reaches 40\u00b0C in 15 to 20 minutes"
+      ],
+      [
+       "Warranty",
+       "1-Year parts warranty"
+      ],
+      [
+       "Certifications",
+       "ISO 9001:2015, Make in India, WHO"
+      ]
+     ],
+     "image": "assets/images/alteon/heal-spectra-6-4-9.webp",
+     "tileColor": "#ffffff",
+     "gallery": [
+      "assets/images/alteon/gallery/Heal Spectra (64)__0_1240x1754_p1.jpeg",
+      "assets/images/alteon/gallery/Heal Spectra (64)__1_1240x1754_p2.jpeg",
+      "assets/images/alteon/gallery/Heal Spectra (64)__2_1240x1754_p3.jpeg"
+     ],
+     "variants": [
+      {
+       "id": "heal-spectra-6-4-9",
+       "name": "Heal Spectra (6*4)",
+       "category": "Sauna",
+       "categoryId": "full-spectrum-infrared-saunas",
+       "model": "Heal Spectra (6*4 ft)",
+       "overview": "The Alteon Heal Spectra is a full spectrum infrared sauna that fuses architectural design, full spectrum infrared technology and clinical grade purity into one refined dual thermal recovery experience. This 6 by 4 foot cabin comfortably seats up to four people and delivers near, mid and far infrared waves for deep cellular restoration. Crafted from premium Canadian Hemlock with an adhesive free locking system, it is engineered for the most discerning luxury wellness environments.",
+       "howItWorks": "Full spectrum infrared heaters emit near, mid and far infrared waves, with peak 9.6 micron far infrared that penetrates deep into tissues to raise core temperature and support cellular level detoxification. Exclusive imported ceramic clay coating, reinforced with stainless steel wire mesh, radiates smooth, even infrared warmth at comfortable surface temperatures. German ceramic heaters keep electromagnetic radiation ultra low, staying under 10mG.",
+       "benefits": [
+        "Promotes deep cellular detoxification through intense sweating",
+        "Flushes heavy metals and toxins from the body",
+        "Increases blood flow to accelerate muscle repair",
+        "Reduces muscle soreness and stiffness",
+        "Stimulates collagen production for radiant, youthful skin",
+        "Clears pores and enhances skin radiance",
+        "Lowers cortisol and triggers deep nervous system relaxation",
+        "Supports cardiovascular health and circulation",
+        "Improves recovery and overall resilience to stress",
+        "Encourages restful sleep and mental calm"
+       ],
+       "features": [
+        "Full spectrum near, mid and far infrared heating",
+        "Peak 9.6 micron far infrared for deep tissue penetration",
+        "Ultra low EMF German ceramic heaters staying under 10mG",
+        "Exclusive imported ceramic clay coating reinforced with stainless steel mesh",
+        "Premium Canadian Hemlock construction with adhesive free locking system",
+        "Zero toxic off gassing using organic beeswax finish",
+        "Rapid activation reaching 40 degrees Celsius in 15 to 20 minutes",
+        "Central integrated control panel for all sauna functions",
+        "Bluetooth music system",
+        "Chromotherapy lighting",
+        "Energy efficient operation for high output environments",
+        "Seamless installation across indoor and sheltered outdoor spaces"
+       ],
+       "applications": [
+        "Luxury residential spaces",
+        "Executive wellness suites",
+        "Elite performance centres",
+        "High end hospitality spas",
+        "Boutique longevity clinics",
+        "Sheltered outdoor retreats"
+       ],
+       "specs": [
+        [
+         "Model",
+         "HEALSPECTRA"
+        ],
+        [
+         "Capacity",
+         "4 Person"
+        ],
+        [
+         "Size",
+         "6 x 4 x 7 ft"
+        ],
+        [
+         "Working Temperature",
+         "50\u00b0C to 90\u00b0C"
+        ],
+        [
+         "Construction Material",
+         "Canadian Hemlock"
+        ],
+        [
+         "Control",
+         "Central Control Panel"
+        ],
+        [
+         "Heating Mechanism",
+         "Infrared & Traditional stove"
+        ],
+        [
+         "Bluetooth Music System",
+         "Yes"
+        ],
+        [
+         "Dimensions",
+         "72 x 48 x 84 in"
+        ],
+        [
+         "Customization",
+         "As per request"
+        ],
+        [
+         "EMF Radiation",
+         "Under 10mG (German ceramic heaters)"
+        ],
+        [
+         "Far Infrared Wavelength",
+         "Peak 9.6 micron"
+        ],
+        [
+         "Wall Construction",
+         "Aust. Ceramic Clay coating, Stainless-Steel Mesh Support, Wood Substrate"
+        ],
+        [
+         "Rapid Activation",
+         "Reaches 40\u00b0C in 15 to 20 minutes"
+        ],
+        [
+         "Warranty",
+         "1-Year parts warranty"
+        ],
+        [
+         "Certifications",
+         "ISO 9001:2015, Make in India, WHO"
+        ]
+       ],
+       "image": "assets/images/alteon/heal-spectra-6-4-9.webp",
+       "tileColor": "#ffffff",
+       "gallery": [
+        "assets/images/alteon/gallery/Heal Spectra (64)__0_1240x1754_p1.jpeg",
+        "assets/images/alteon/gallery/Heal Spectra (64)__1_1240x1754_p2.jpeg",
+        "assets/images/alteon/gallery/Heal Spectra (64)__2_1240x1754_p3.jpeg"
+       ]
+      },
+      {
+       "id": "heal-spectra-6-6-10",
+       "name": "Heal Spectra (6*6)",
+       "category": "Sauna",
+       "categoryId": "full-spectrum-infrared-saunas",
+       "model": "Heal Spectra (6*6ft)",
+       "overview": "The Alteon Heal Spectra 6 by 6 is a full spectrum infrared sauna that combines architectural design, full spectrum infrared technology and clinical grade purity in a spacious four person cabin. It delivers near, mid and far infrared waves for deep cellular restoration and a refined dual thermal recovery experience. Crafted from premium Canadian Hemlock with an adhesive free locking system, it suits the most discerning luxury wellness environments.",
+       "howItWorks": "Full spectrum infrared heaters emit near, mid and far infrared waves, with peak 9.6 micron far infrared penetrating deep into tissues to raise core temperature and support cellular level detoxification. Exclusive imported ceramic clay coating, reinforced with stainless steel wire mesh, radiates smooth, even infrared warmth at comfortable surface temperatures. German ceramic heaters keep electromagnetic radiation ultra low, staying under 10mG.",
+       "benefits": [
+        "Promotes deep cellular detoxification through intense sweating",
+        "Flushes heavy metals and toxins from the body",
+        "Increases blood flow to accelerate muscle repair",
+        "Reduces muscle soreness and stiffness",
+        "Stimulates collagen production for radiant, youthful skin",
+        "Clears pores and enhances skin radiance",
+        "Lowers cortisol and triggers deep nervous system relaxation",
+        "Supports cardiovascular health and circulation",
+        "Improves recovery and overall resilience to stress",
+        "Encourages restful sleep and mental calm"
+       ],
+       "features": [
+        "Full spectrum near, mid and far infrared heating",
+        "Peak 9.6 micron far infrared for deep tissue penetration",
+        "Ultra low EMF German ceramic heaters staying under 10mG",
+        "Exclusive imported ceramic clay coating reinforced with stainless steel mesh",
+        "Premium Canadian Hemlock construction with adhesive free locking system",
+        "Zero toxic off gassing using organic beeswax finish",
+        "Rapid activation reaching 40 degrees Celsius in 15 to 20 minutes",
+        "Central integrated control panel for all sauna functions",
+        "Bluetooth music system",
+        "Chromotherapy lighting",
+        "Energy efficient operation for high output environments",
+        "Seamless installation across indoor and sheltered outdoor spaces"
+       ],
+       "applications": [
+        "Luxury residential spaces",
+        "Executive wellness suites",
+        "Elite performance centres",
+        "High end hospitality spas",
+        "Boutique longevity clinics",
+        "Sheltered outdoor retreats"
+       ],
+       "specs": [
+        [
+         "Model",
+         "HEALSPECTRA"
+        ],
+        [
+         "Capacity",
+         "4 Person"
+        ],
+        [
+         "Size",
+         "6 x 4 x 7 ft"
+        ],
+        [
+         "Working Temperature",
+         "50\u00b0C to 90\u00b0C"
+        ],
+        [
+         "Construction Material",
+         "Canadian Hemlock"
+        ],
+        [
+         "Control",
+         "Central Control Panel"
+        ],
+        [
+         "Heating Mechanism",
+         "Infrared & Traditional stove"
+        ],
+        [
+         "Bluetooth Music System",
+         "Yes"
+        ],
+        [
+         "Dimensions",
+         "72 x 72 x 84 in"
+        ],
+        [
+         "Customization",
+         "As per request"
+        ],
+        [
+         "EMF Radiation",
+         "Under 10mG (German ceramic heaters)"
+        ],
+        [
+         "Far Infrared Wavelength",
+         "Peak 9.6 micron"
+        ],
+        [
+         "Wall Construction",
+         "Aust. Ceramic Clay coating, Stainless-Steel Mesh Support, Wood Substrate"
+        ],
+        [
+         "Rapid Activation",
+         "Reaches 40\u00b0C in 15 to 20 minutes"
+        ],
+        [
+         "Warranty",
+         "1-Year parts warranty"
+        ],
+        [
+         "Certifications",
+         "ISO 9001:2015, Make in India, WHO"
+        ]
+       ],
+       "image": "assets/images/alteon/heal-spectra-6-6-10.webp",
+       "tileColor": "#ffffff"
+      }
+     ]
+    }
    ]
   },
   {
-   "id": "heal-spectra-6-6-10",
-   "name": "Heal Spectra (6*6)",
-   "category": "Sauna",
-   "categoryId": "full-spectrum-infrared-saunas",
-   "model": "Heal Spectra (6*6ft)",
-   "overview": "The Alteon Heal Spectra 6 by 6 is a full spectrum infrared sauna that combines architectural design, full spectrum infrared technology and clinical grade purity in a spacious four person cabin. It delivers near, mid and far infrared waves for deep cellular restoration and a refined dual thermal recovery experience. Crafted from premium Canadian Hemlock with an adhesive free locking system, it suits the most discerning luxury wellness environments.",
-   "howItWorks": "Full spectrum infrared heaters emit near, mid and far infrared waves, with peak 9.6 micron far infrared penetrating deep into tissues to raise core temperature and support cellular level detoxification. Exclusive imported ceramic clay coating, reinforced with stainless steel wire mesh, radiates smooth, even infrared warmth at comfortable surface temperatures. German ceramic heaters keep electromagnetic radiation ultra low, staying under 10mG.",
-   "benefits": [
-    "Promotes deep cellular detoxification through intense sweating",
-    "Flushes heavy metals and toxins from the body",
-    "Increases blood flow to accelerate muscle repair",
-    "Reduces muscle soreness and stiffness",
-    "Stimulates collagen production for radiant, youthful skin",
-    "Clears pores and enhances skin radiance",
-    "Lowers cortisol and triggers deep nervous system relaxation",
-    "Supports cardiovascular health and circulation",
-    "Improves recovery and overall resilience to stress",
-    "Encourages restful sleep and mental calm"
-   ],
-   "features": [
-    "Full spectrum near, mid and far infrared heating",
-    "Peak 9.6 micron far infrared for deep tissue penetration",
-    "Ultra low EMF German ceramic heaters staying under 10mG",
-    "Exclusive imported ceramic clay coating reinforced with stainless steel mesh",
-    "Premium Canadian Hemlock construction with adhesive free locking system",
-    "Zero toxic off gassing using organic beeswax finish",
-    "Rapid activation reaching 40 degrees Celsius in 15 to 20 minutes",
-    "Central integrated control panel for all sauna functions",
-    "Bluetooth music system",
-    "Chromotherapy lighting",
-    "Energy efficient operation for high output environments",
-    "Seamless installation across indoor and sheltered outdoor spaces"
-   ],
-   "applications": [
-    "Luxury residential spaces",
-    "Executive wellness suites",
-    "Elite performance centres",
-    "High end hospitality spas",
-    "Boutique longevity clinics",
-    "Sheltered outdoor retreats"
-   ],
-   "specs": [
-    [
-     "Model",
-     "HEALSPECTRA"
-    ],
-    [
-     "Capacity",
-     "4 Person"
-    ],
-    [
-     "Size",
-     "6 x 4 x 7 ft"
-    ],
-    [
-     "Working Temperature",
-     "50°C to 90°C"
-    ],
-    [
-     "Construction Material",
-     "Canadian Hemlock"
-    ],
-    [
-     "Control",
-     "Central Control Panel"
-    ],
-    [
-     "Heating Mechanism",
-     "Infrared & Traditional stove"
-    ],
-    [
-     "Bluetooth Music System",
-     "Yes"
-    ],
-    [
-     "Dimensions",
-     "72 x 72 x 84 in"
-    ],
-    [
-     "Customization",
-     "As per request"
-    ],
-    [
-     "EMF Radiation",
-     "Under 10mG (German ceramic heaters)"
-    ],
-    [
-     "Far Infrared Wavelength",
-     "Peak 9.6 micron"
-    ],
-    [
-     "Wall Construction",
-     "Aust. Ceramic Clay coating, Stainless-Steel Mesh Support, Wood Substrate"
-    ],
-    [
-     "Rapid Activation",
-     "Reaches 40°C in 15 to 20 minutes"
-    ],
-    [
-     "Warranty",
-     "1-Year parts warranty"
-    ],
-    [
-     "Certifications",
-     "ISO 9001:2015, Make in India, WHO"
-    ]
-   ],
-   "image": "assets/images/heal-spectra-6-6-10.webp",
-   "tileColor": "#ffffff"
-  },
-  {
    "id": "heal-nova-4-4-11",
-   "name": "Heal Nova (4*4)",
+   "name": "Heal Nova",
    "category": "Sauna",
    "categoryId": "full-spectrum-infrared-saunas",
    "model": "Heal Nova (4*4ft)",
@@ -1028,7 +1264,7 @@ window.ALTEON_DATA = {
     ],
     [
      "Working Temperature",
-     "50°C to 90°C"
+     "50\u00b0C to 90\u00b0C"
     ],
     [
      "Construction Material",
@@ -1068,7 +1304,7 @@ window.ALTEON_DATA = {
     ],
     [
      "Rapid Activation",
-     "Reaches 40°C in 15 to 20 minutes"
+     "Reaches 40\u00b0C in 15 to 20 minutes"
     ],
     [
      "Warranty",
@@ -1079,230 +1315,456 @@ window.ALTEON_DATA = {
      "ISO 9001:2015, Make in India, WHO"
     ]
    ],
-   "image": "assets/images/heal-nova-4-4-11.webp",
-   "tileColor": "#000000"
-  },
-  {
-   "id": "heal-nova-6-4-12",
-   "name": "Heal Nova (6*4)",
-   "category": "Sauna",
-   "categoryId": "full-spectrum-infrared-saunas",
-   "model": "Heal Nova (6*4ft)",
-   "overview": "The Alteon Heal Nova 6 by 4 is a full spectrum infrared sauna that delivers clinical grade purity and refined dual thermal recovery in a four person cabin. It emits near, mid and far infrared waves for deep cellular restoration, crafted from premium Canadian Hemlock with an adhesive free locking system. Ultra low EMF heaters and zero toxic off gassing make it suited to discerning luxury wellness environments.",
-   "howItWorks": "Full spectrum infrared heaters emit near, mid and far infrared waves, with peak 9.6 micron far infrared penetrating deep into tissues to raise core temperature and support cellular level detoxification. Exclusive imported ceramic clay coating, reinforced with stainless steel wire mesh, radiates smooth, even infrared warmth at comfortable surface temperatures. German ceramic heaters keep electromagnetic radiation ultra low, staying under 10mG.",
-   "benefits": [
-    "Promotes deep cellular detoxification through intense sweating",
-    "Flushes heavy metals and toxins from the body",
-    "Increases blood flow to accelerate muscle repair",
-    "Reduces muscle soreness and stiffness",
-    "Stimulates collagen production for radiant, youthful skin",
-    "Clears pores and enhances skin radiance",
-    "Lowers cortisol and triggers deep nervous system relaxation",
-    "Supports cardiovascular health and circulation",
-    "Improves recovery and overall resilience to stress",
-    "Encourages restful sleep and mental calm"
-   ],
-   "features": [
-    "Full spectrum near, mid and far infrared heating",
-    "Peak 9.6 micron far infrared for deep tissue penetration",
-    "Ultra low EMF German ceramic heaters staying under 10mG",
-    "Exclusive imported ceramic clay coating reinforced with stainless steel mesh",
-    "Premium Canadian Hemlock construction with adhesive free locking system",
-    "Zero toxic off gassing using organic beeswax finish",
-    "Rapid activation reaching 40 degrees Celsius in 15 to 20 minutes",
-    "Central integrated control panel for all sauna functions",
-    "Bluetooth music system",
-    "Chromotherapy lighting",
-    "Energy efficient operation for high output environments",
-    "Seamless installation across indoor and sheltered outdoor spaces"
-   ],
-   "applications": [
-    "Luxury residential spaces",
-    "Executive wellness suites",
-    "Elite performance centres",
-    "High end hospitality spas",
-    "Boutique longevity clinics",
-    "Sheltered outdoor retreats"
-   ],
-   "specs": [
-    [
-     "Model",
-     "HEALNOVA"
-    ],
-    [
-     "Capacity",
-     "4 Person"
-    ],
-    [
-     "Size",
-     "6 x 4 x 7 ft"
-    ],
-    [
-     "Working Temperature",
-     "50°C to 90°C"
-    ],
-    [
-     "Construction Material",
-     "Canadian Hemlock"
-    ],
-    [
-     "Control",
-     "Central Control Panel"
-    ],
-    [
-     "Heating Mechanism",
-     "Infrared & Traditional stove"
-    ],
-    [
-     "Bluetooth Music System",
-     "Yes"
-    ],
-    [
-     "Dimensions",
-     "72 x 48 x 84 in"
-    ],
-    [
-     "Customization",
-     "As per request"
-    ],
-    [
-     "EMF Radiation",
-     "Under 10mG (German ceramic heaters)"
-    ],
-    [
-     "Far Infrared Wavelength",
-     "Peak 9.6 micron"
-    ],
-    [
-     "Wall Construction",
-     "Aust. Ceramic Clay coating, Stainless-Steel Mesh Support, Wood Substrate"
-    ],
-    [
-     "Rapid Activation",
-     "Reaches 40°C in 15 to 20 minutes"
-    ],
-    [
-     "Warranty",
-     "1-Year parts warranty"
-    ],
-    [
-     "Certifications",
-     "ISO 9001:2015, Make in India, WHO"
-    ]
-   ],
-   "image": "assets/images/heal-nova-6-4-12.webp",
-   "tileColor": "#000000"
-  },
-  {
-   "id": "heal-nova-6-6-13",
-   "name": "Heal Nova (6*6)",
-   "category": "Sauna",
-   "categoryId": "full-spectrum-infrared-saunas",
-   "model": "Heal Nova (6*6ft)",
-   "overview": "The Alteon Heal Nova 6 by 6 is a spacious full spectrum infrared sauna that combines clinical grade purity with a refined dual thermal recovery experience for up to four people. It delivers near, mid and far infrared waves for deep cellular restoration, crafted from premium Canadian Hemlock using an adhesive free locking system. Ultra low EMF heaters and zero toxic off gassing make it ideal for the most discerning luxury wellness environments.",
-   "howItWorks": "Full spectrum infrared heaters emit near, mid and far infrared waves, with peak 9.6 micron far infrared penetrating deep into tissues to raise core temperature and support cellular level detoxification. Exclusive imported ceramic clay coating, reinforced with stainless steel wire mesh, radiates smooth, even infrared warmth at comfortable surface temperatures. German ceramic heaters keep electromagnetic radiation ultra low, staying under 10mG.",
-   "benefits": [
-    "Promotes deep cellular detoxification through intense sweating",
-    "Flushes heavy metals and toxins from the body",
-    "Increases blood flow to accelerate muscle repair",
-    "Reduces muscle soreness and stiffness",
-    "Stimulates collagen production for radiant, youthful skin",
-    "Clears pores and enhances skin radiance",
-    "Lowers cortisol and triggers deep nervous system relaxation",
-    "Supports cardiovascular health and circulation",
-    "Improves recovery and overall resilience to stress",
-    "Encourages restful sleep and mental calm"
-   ],
-   "features": [
-    "Full spectrum near, mid and far infrared heating",
-    "Peak 9.6 micron far infrared for deep tissue penetration",
-    "Ultra low EMF German ceramic heaters staying under 10mG",
-    "Exclusive imported ceramic clay coating reinforced with stainless steel mesh",
-    "Premium Canadian Hemlock construction with adhesive free locking system",
-    "Zero toxic off gassing using organic beeswax finish",
-    "Rapid activation reaching 40 degrees Celsius in 15 to 20 minutes",
-    "Central integrated control panel for all sauna functions",
-    "Bluetooth music system",
-    "Chromotherapy lighting",
-    "Energy efficient operation for high output environments",
-    "Seamless installation across indoor and sheltered outdoor spaces"
-   ],
-   "applications": [
-    "Luxury residential spaces",
-    "Executive wellness suites",
-    "Elite performance centres",
-    "High end hospitality spas",
-    "Boutique longevity clinics",
-    "Sheltered outdoor retreats"
-   ],
-   "specs": [
-    [
-     "Model",
-     "HEALNOVA"
-    ],
-    [
-     "Capacity",
-     "4 Person"
-    ],
-    [
-     "Size",
-     "6 x 4 x 7 ft"
-    ],
-    [
-     "Working Temperature",
-     "50°C to 90°C"
-    ],
-    [
-     "Construction Material",
-     "Canadian Hemlock"
-    ],
-    [
-     "Control",
-     "Central Control Panel"
-    ],
-    [
-     "Heating Mechanism",
-     "Infrared & Traditional stove"
-    ],
-    [
-     "Bluetooth Music System",
-     "Yes"
-    ],
-    [
-     "Dimensions",
-     "72 x 72 x 84 in"
-    ],
-    [
-     "Customization",
-     "As per request"
-    ],
-    [
-     "EMF Radiation",
-     "Under 10mG (German ceramic heaters)"
-    ],
-    [
-     "Far Infrared Wavelength",
-     "Peak 9.6 micron"
-    ],
-    [
-     "Wall Construction",
-     "Aust. Ceramic Clay coating, Stainless-Steel Mesh Support, Wood Substrate"
-    ],
-    [
-     "Rapid Activation",
-     "Reaches 40°C in 15 to 20 minutes"
-    ],
-    [
-     "Warranty",
-     "1-Year parts warranty"
-    ],
-    [
-     "Certifications",
-     "ISO 9001:2015, Make in India, WHO"
-    ]
-   ],
-   "image": "assets/images/heal-nova-6-6-13.webp",
-   "tileColor": "#000000"
+   "image": "assets/images/alteon/heal-nova-4-4-11.webp",
+   "tileColor": "#000000",
+   "variants": [
+    {
+     "id": "heal-nova-4-4-11",
+     "name": "Heal Nova",
+     "category": "Sauna",
+     "categoryId": "full-spectrum-infrared-saunas",
+     "model": "Heal Nova (4*4ft)",
+     "overview": "The Alteon Heal Nova 4 by 4 is a compact full spectrum infrared sauna that brings clinical grade purity and refined dual thermal recovery to smaller footprints. It delivers near, mid and far infrared waves for deep cellular restoration, seating up to four people in a beautifully finished Canadian Hemlock cabin. Its adhesive free construction and ultra low EMF heaters make it ideal for luxury residences and boutique wellness spaces.",
+     "howItWorks": "Full spectrum infrared heaters emit near, mid and far infrared waves, with peak 9.6 micron far infrared penetrating deep into tissues to raise core temperature and support cellular level detoxification. Exclusive imported ceramic clay coating, reinforced with stainless steel wire mesh, radiates smooth, even infrared warmth at comfortable surface temperatures. German ceramic heaters keep electromagnetic radiation ultra low, staying under 10mG.",
+     "benefits": [
+      "Promotes deep cellular detoxification through intense sweating",
+      "Flushes heavy metals and toxins from the body",
+      "Increases blood flow to accelerate muscle repair",
+      "Reduces muscle soreness and stiffness",
+      "Stimulates collagen production for radiant, youthful skin",
+      "Clears pores and enhances skin radiance",
+      "Lowers cortisol and triggers deep nervous system relaxation",
+      "Supports cardiovascular health and circulation",
+      "Improves recovery and overall resilience to stress",
+      "Encourages restful sleep and mental calm"
+     ],
+     "features": [
+      "Full spectrum near, mid and far infrared heating",
+      "Peak 9.6 micron far infrared for deep tissue penetration",
+      "Ultra low EMF German ceramic heaters staying under 10mG",
+      "Exclusive imported ceramic clay coating reinforced with stainless steel mesh",
+      "Premium Canadian Hemlock construction with adhesive free locking system",
+      "Zero toxic off gassing using organic beeswax finish",
+      "Rapid activation reaching 40 degrees Celsius in 15 to 20 minutes",
+      "Central integrated control panel for all sauna functions",
+      "Bluetooth music system",
+      "Chromotherapy lighting",
+      "Energy efficient operation",
+      "Compact footprint for space conscious installations"
+     ],
+     "applications": [
+      "Luxury residential spaces",
+      "Executive wellness suites",
+      "Elite performance centres",
+      "High end hospitality spas",
+      "Boutique longevity clinics",
+      "Sheltered outdoor retreats"
+     ],
+     "specs": [
+      [
+       "Model",
+       "HEALNOVA"
+      ],
+      [
+       "Capacity",
+       "4 Person"
+      ],
+      [
+       "Size",
+       "4 x 4 x 7 ft"
+      ],
+      [
+       "Working Temperature",
+       "50\u00b0C to 90\u00b0C"
+      ],
+      [
+       "Construction Material",
+       "Canadian Hemlock"
+      ],
+      [
+       "Control",
+       "Central Control Panel"
+      ],
+      [
+       "Heating Mechanism",
+       "Infrared & Traditional stove"
+      ],
+      [
+       "Bluetooth Music System",
+       "Yes"
+      ],
+      [
+       "Dimensions",
+       "48 x 48 x 84 in"
+      ],
+      [
+       "Customization",
+       "As per request"
+      ],
+      [
+       "EMF Radiation",
+       "Under 10mG (German ceramic heaters)"
+      ],
+      [
+       "Far Infrared Wavelength",
+       "Peak 9.6 micron"
+      ],
+      [
+       "Wall Construction",
+       "Aust. Ceramic Clay coating, Stainless-Steel Mesh Support, Wood Substrate"
+      ],
+      [
+       "Rapid Activation",
+       "Reaches 40\u00b0C in 15 to 20 minutes"
+      ],
+      [
+       "Warranty",
+       "1-Year parts warranty"
+      ],
+      [
+       "Certifications",
+       "ISO 9001:2015, Make in India, WHO"
+      ]
+     ],
+     "image": "assets/images/alteon/heal-nova-4-4-11.webp",
+     "tileColor": "#000000",
+     "variants": [
+      {
+       "id": "heal-nova-4-4-11",
+       "name": "Heal Nova (4*4)",
+       "category": "Sauna",
+       "categoryId": "full-spectrum-infrared-saunas",
+       "model": "Heal Nova (4*4ft)",
+       "overview": "The Alteon Heal Nova 4 by 4 is a compact full spectrum infrared sauna that brings clinical grade purity and refined dual thermal recovery to smaller footprints. It delivers near, mid and far infrared waves for deep cellular restoration, seating up to four people in a beautifully finished Canadian Hemlock cabin. Its adhesive free construction and ultra low EMF heaters make it ideal for luxury residences and boutique wellness spaces.",
+       "howItWorks": "Full spectrum infrared heaters emit near, mid and far infrared waves, with peak 9.6 micron far infrared penetrating deep into tissues to raise core temperature and support cellular level detoxification. Exclusive imported ceramic clay coating, reinforced with stainless steel wire mesh, radiates smooth, even infrared warmth at comfortable surface temperatures. German ceramic heaters keep electromagnetic radiation ultra low, staying under 10mG.",
+       "benefits": [
+        "Promotes deep cellular detoxification through intense sweating",
+        "Flushes heavy metals and toxins from the body",
+        "Increases blood flow to accelerate muscle repair",
+        "Reduces muscle soreness and stiffness",
+        "Stimulates collagen production for radiant, youthful skin",
+        "Clears pores and enhances skin radiance",
+        "Lowers cortisol and triggers deep nervous system relaxation",
+        "Supports cardiovascular health and circulation",
+        "Improves recovery and overall resilience to stress",
+        "Encourages restful sleep and mental calm"
+       ],
+       "features": [
+        "Full spectrum near, mid and far infrared heating",
+        "Peak 9.6 micron far infrared for deep tissue penetration",
+        "Ultra low EMF German ceramic heaters staying under 10mG",
+        "Exclusive imported ceramic clay coating reinforced with stainless steel mesh",
+        "Premium Canadian Hemlock construction with adhesive free locking system",
+        "Zero toxic off gassing using organic beeswax finish",
+        "Rapid activation reaching 40 degrees Celsius in 15 to 20 minutes",
+        "Central integrated control panel for all sauna functions",
+        "Bluetooth music system",
+        "Chromotherapy lighting",
+        "Energy efficient operation",
+        "Compact footprint for space conscious installations"
+       ],
+       "applications": [
+        "Luxury residential spaces",
+        "Executive wellness suites",
+        "Elite performance centres",
+        "High end hospitality spas",
+        "Boutique longevity clinics",
+        "Sheltered outdoor retreats"
+       ],
+       "specs": [
+        [
+         "Model",
+         "HEALNOVA"
+        ],
+        [
+         "Capacity",
+         "4 Person"
+        ],
+        [
+         "Size",
+         "4 x 4 x 7 ft"
+        ],
+        [
+         "Working Temperature",
+         "50\u00b0C to 90\u00b0C"
+        ],
+        [
+         "Construction Material",
+         "Canadian Hemlock"
+        ],
+        [
+         "Control",
+         "Central Control Panel"
+        ],
+        [
+         "Heating Mechanism",
+         "Infrared & Traditional stove"
+        ],
+        [
+         "Bluetooth Music System",
+         "Yes"
+        ],
+        [
+         "Dimensions",
+         "48 x 48 x 84 in"
+        ],
+        [
+         "Customization",
+         "As per request"
+        ],
+        [
+         "EMF Radiation",
+         "Under 10mG (German ceramic heaters)"
+        ],
+        [
+         "Far Infrared Wavelength",
+         "Peak 9.6 micron"
+        ],
+        [
+         "Wall Construction",
+         "Aust. Ceramic Clay coating, Stainless-Steel Mesh Support, Wood Substrate"
+        ],
+        [
+         "Rapid Activation",
+         "Reaches 40\u00b0C in 15 to 20 minutes"
+        ],
+        [
+         "Warranty",
+         "1-Year parts warranty"
+        ],
+        [
+         "Certifications",
+         "ISO 9001:2015, Make in India, WHO"
+        ]
+       ],
+       "image": "assets/images/alteon/heal-nova-4-4-11.webp",
+       "tileColor": "#000000"
+      },
+      {
+       "id": "heal-nova-6-4-12",
+       "name": "Heal Nova (6*4)",
+       "category": "Sauna",
+       "categoryId": "full-spectrum-infrared-saunas",
+       "model": "Heal Nova (6*4ft)",
+       "overview": "The Alteon Heal Nova 6 by 4 is a full spectrum infrared sauna that delivers clinical grade purity and refined dual thermal recovery in a four person cabin. It emits near, mid and far infrared waves for deep cellular restoration, crafted from premium Canadian Hemlock with an adhesive free locking system. Ultra low EMF heaters and zero toxic off gassing make it suited to discerning luxury wellness environments.",
+       "howItWorks": "Full spectrum infrared heaters emit near, mid and far infrared waves, with peak 9.6 micron far infrared penetrating deep into tissues to raise core temperature and support cellular level detoxification. Exclusive imported ceramic clay coating, reinforced with stainless steel wire mesh, radiates smooth, even infrared warmth at comfortable surface temperatures. German ceramic heaters keep electromagnetic radiation ultra low, staying under 10mG.",
+       "benefits": [
+        "Promotes deep cellular detoxification through intense sweating",
+        "Flushes heavy metals and toxins from the body",
+        "Increases blood flow to accelerate muscle repair",
+        "Reduces muscle soreness and stiffness",
+        "Stimulates collagen production for radiant, youthful skin",
+        "Clears pores and enhances skin radiance",
+        "Lowers cortisol and triggers deep nervous system relaxation",
+        "Supports cardiovascular health and circulation",
+        "Improves recovery and overall resilience to stress",
+        "Encourages restful sleep and mental calm"
+       ],
+       "features": [
+        "Full spectrum near, mid and far infrared heating",
+        "Peak 9.6 micron far infrared for deep tissue penetration",
+        "Ultra low EMF German ceramic heaters staying under 10mG",
+        "Exclusive imported ceramic clay coating reinforced with stainless steel mesh",
+        "Premium Canadian Hemlock construction with adhesive free locking system",
+        "Zero toxic off gassing using organic beeswax finish",
+        "Rapid activation reaching 40 degrees Celsius in 15 to 20 minutes",
+        "Central integrated control panel for all sauna functions",
+        "Bluetooth music system",
+        "Chromotherapy lighting",
+        "Energy efficient operation for high output environments",
+        "Seamless installation across indoor and sheltered outdoor spaces"
+       ],
+       "applications": [
+        "Luxury residential spaces",
+        "Executive wellness suites",
+        "Elite performance centres",
+        "High end hospitality spas",
+        "Boutique longevity clinics",
+        "Sheltered outdoor retreats"
+       ],
+       "specs": [
+        [
+         "Model",
+         "HEALNOVA"
+        ],
+        [
+         "Capacity",
+         "4 Person"
+        ],
+        [
+         "Size",
+         "6 x 4 x 7 ft"
+        ],
+        [
+         "Working Temperature",
+         "50\u00b0C to 90\u00b0C"
+        ],
+        [
+         "Construction Material",
+         "Canadian Hemlock"
+        ],
+        [
+         "Control",
+         "Central Control Panel"
+        ],
+        [
+         "Heating Mechanism",
+         "Infrared & Traditional stove"
+        ],
+        [
+         "Bluetooth Music System",
+         "Yes"
+        ],
+        [
+         "Dimensions",
+         "72 x 48 x 84 in"
+        ],
+        [
+         "Customization",
+         "As per request"
+        ],
+        [
+         "EMF Radiation",
+         "Under 10mG (German ceramic heaters)"
+        ],
+        [
+         "Far Infrared Wavelength",
+         "Peak 9.6 micron"
+        ],
+        [
+         "Wall Construction",
+         "Aust. Ceramic Clay coating, Stainless-Steel Mesh Support, Wood Substrate"
+        ],
+        [
+         "Rapid Activation",
+         "Reaches 40\u00b0C in 15 to 20 minutes"
+        ],
+        [
+         "Warranty",
+         "1-Year parts warranty"
+        ],
+        [
+         "Certifications",
+         "ISO 9001:2015, Make in India, WHO"
+        ]
+       ],
+       "image": "assets/images/alteon/heal-nova-6-4-12.webp",
+       "tileColor": "#000000"
+      },
+      {
+       "id": "heal-nova-6-6-13",
+       "name": "Heal Nova (6*6)",
+       "category": "Sauna",
+       "categoryId": "full-spectrum-infrared-saunas",
+       "model": "Heal Nova (6*6ft)",
+       "overview": "The Alteon Heal Nova 6 by 6 is a spacious full spectrum infrared sauna that combines clinical grade purity with a refined dual thermal recovery experience for up to four people. It delivers near, mid and far infrared waves for deep cellular restoration, crafted from premium Canadian Hemlock using an adhesive free locking system. Ultra low EMF heaters and zero toxic off gassing make it ideal for the most discerning luxury wellness environments.",
+       "howItWorks": "Full spectrum infrared heaters emit near, mid and far infrared waves, with peak 9.6 micron far infrared penetrating deep into tissues to raise core temperature and support cellular level detoxification. Exclusive imported ceramic clay coating, reinforced with stainless steel wire mesh, radiates smooth, even infrared warmth at comfortable surface temperatures. German ceramic heaters keep electromagnetic radiation ultra low, staying under 10mG.",
+       "benefits": [
+        "Promotes deep cellular detoxification through intense sweating",
+        "Flushes heavy metals and toxins from the body",
+        "Increases blood flow to accelerate muscle repair",
+        "Reduces muscle soreness and stiffness",
+        "Stimulates collagen production for radiant, youthful skin",
+        "Clears pores and enhances skin radiance",
+        "Lowers cortisol and triggers deep nervous system relaxation",
+        "Supports cardiovascular health and circulation",
+        "Improves recovery and overall resilience to stress",
+        "Encourages restful sleep and mental calm"
+       ],
+       "features": [
+        "Full spectrum near, mid and far infrared heating",
+        "Peak 9.6 micron far infrared for deep tissue penetration",
+        "Ultra low EMF German ceramic heaters staying under 10mG",
+        "Exclusive imported ceramic clay coating reinforced with stainless steel mesh",
+        "Premium Canadian Hemlock construction with adhesive free locking system",
+        "Zero toxic off gassing using organic beeswax finish",
+        "Rapid activation reaching 40 degrees Celsius in 15 to 20 minutes",
+        "Central integrated control panel for all sauna functions",
+        "Bluetooth music system",
+        "Chromotherapy lighting",
+        "Energy efficient operation for high output environments",
+        "Seamless installation across indoor and sheltered outdoor spaces"
+       ],
+       "applications": [
+        "Luxury residential spaces",
+        "Executive wellness suites",
+        "Elite performance centres",
+        "High end hospitality spas",
+        "Boutique longevity clinics",
+        "Sheltered outdoor retreats"
+       ],
+       "specs": [
+        [
+         "Model",
+         "HEALNOVA"
+        ],
+        [
+         "Capacity",
+         "4 Person"
+        ],
+        [
+         "Size",
+         "6 x 4 x 7 ft"
+        ],
+        [
+         "Working Temperature",
+         "50\u00b0C to 90\u00b0C"
+        ],
+        [
+         "Construction Material",
+         "Canadian Hemlock"
+        ],
+        [
+         "Control",
+         "Central Control Panel"
+        ],
+        [
+         "Heating Mechanism",
+         "Infrared & Traditional stove"
+        ],
+        [
+         "Bluetooth Music System",
+         "Yes"
+        ],
+        [
+         "Dimensions",
+         "72 x 72 x 84 in"
+        ],
+        [
+         "Customization",
+         "As per request"
+        ],
+        [
+         "EMF Radiation",
+         "Under 10mG (German ceramic heaters)"
+        ],
+        [
+         "Far Infrared Wavelength",
+         "Peak 9.6 micron"
+        ],
+        [
+         "Wall Construction",
+         "Aust. Ceramic Clay coating, Stainless-Steel Mesh Support, Wood Substrate"
+        ],
+        [
+         "Rapid Activation",
+         "Reaches 40\u00b0C in 15 to 20 minutes"
+        ],
+        [
+         "Warranty",
+         "1-Year parts warranty"
+        ],
+        [
+         "Certifications",
+         "ISO 9001:2015, Make in India, WHO"
+        ]
+       ],
+       "image": "assets/images/alteon/heal-nova-6-6-13.webp",
+       "tileColor": "#000000"
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "polar-oval-pro-15",
@@ -1364,7 +1826,7 @@ window.ALTEON_DATA = {
     ],
     [
      "Working Temperature",
-     "5°C to 42°C"
+     "5\u00b0C to 42\u00b0C"
     ],
     [
      "Construction Material",
@@ -1415,127 +1877,369 @@ window.ALTEON_DATA = {
      "CE"
     ]
    ],
-   "image": "assets/images/polar-oval-pro-15.webp",
+   "image": "assets/images/alteon/polar-oval-pro-15.webp",
    "tileColor": "#fdfdfd",
    "gallery": [
     "assets/images/alteon/gallery/Polar Oval Pro__0_1240x1754_p1.jpeg",
     "assets/images/alteon/gallery/Polar Oval Pro__1_1240x1754_p2.jpeg",
     "assets/images/alteon/gallery/Polar Oval Pro__2_1240x1754_p3.jpeg"
+   ],
+   "variants": [
+    {
+     "id": "polar-oval-pro-15",
+     "name": "Polar Oval Pro",
+     "category": "Cold Plunge",
+     "categoryId": "cold-plunge-and-ice-baths",
+     "model": "Polar Oval Pro",
+     "overview": "The Polar Oval Pro is a premium 304 stainless steel cold plunge tub designed to fit seamlessly into compact spaces. Engineered for one person immersion, it pairs an integrated fibreglass coating with rapid temperature control to deliver a consistent, invigorating cold water recovery experience. Its refined oval form and industrial grade cooling and purification systems make it an elegant centrepiece for luxury wellness settings.",
+     "howItWorks": "An integrated 2HP industrial grade chiller rapidly regulates water temperature down to 5 degrees Celsius for controlled cold water immersion. A dual stage UV and ozone sterilization system works with multi stage filtration to keep the water crystal clear and clinically pure between users. Cold exposure triggers vasoconstriction followed by vasodilation, stimulating circulation and the body's natural recovery response.",
+     "benefits": [
+      "Reduces muscle soreness and accelerates recovery after exercise",
+      "Lowers inflammation and swelling",
+      "Boosts circulation through vasoconstriction and vasodilation",
+      "Elevates mood and mental alertness",
+      "Builds stress resilience and supports the nervous system",
+      "Supports metabolism and energy",
+      "Strengthens immune response with regular exposure",
+      "Improves sleep quality",
+      "Reduces perceived fatigue",
+      "Promotes overall physical and mental wellbeing"
+     ],
+     "features": [
+      "Premium 304 stainless steel construction",
+      "Integrated fibreglass coating",
+      "Compact single person oval design",
+      "Integrated 2HP high performance chiller",
+      "Rapid temperature control",
+      "Dual stage UV and ozone sterilization system",
+      "Multi stage advanced water filtration",
+      "Digital temperature control panel",
+      "Efficient power management at 1060W",
+      "Plug and play, easy installation",
+      "CE certified with one year warranty"
+     ],
+     "applications": [
+      "Premium gyms and recovery studios",
+      "Five star hotel and destination spas",
+      "Sports and physiotherapy centres",
+      "Longevity and wellness clinics",
+      "Wellness resorts",
+      "Luxury residences"
+     ],
+     "specs": [
+      [
+       "Model",
+       "POLAR OVAL PRO"
+      ],
+      [
+       "Capacity",
+       "1 Person"
+      ],
+      [
+       "Size",
+       "4.9 x 2.3 x 2.1 ft"
+      ],
+      [
+       "Integrated Fibre Glass",
+       "Yes"
+      ],
+      [
+       "Working Temperature",
+       "5\u00b0C to 42\u00b0C"
+      ],
+      [
+       "Construction Material",
+       "304 Stainless Steel"
+      ],
+      [
+       "Control",
+       "Digital Temperature Control Panel"
+      ],
+      [
+       "Cooling Mechanism",
+       "2 HP Chiller"
+      ],
+      [
+       "Chiller",
+       "2HP with UV+Ozone Filter"
+      ],
+      [
+       "UV + Ozone Sterilization System",
+       "Yes"
+      ],
+      [
+       "Dimensions",
+       "58.8 x 27.6 x 25.2 in"
+      ],
+      [
+       "Power",
+       "1060W / 220V"
+      ],
+      [
+       "Chiller Capacity",
+       "865W"
+      ],
+      [
+       "Sterilization",
+       "Dual-Stage UV and Ozone"
+      ],
+      [
+       "Filtration",
+       "Multi-stage filtration"
+      ],
+      [
+       "Warranty",
+       "1-Year parts warranty"
+      ],
+      [
+       "Certifications",
+       "CE"
+      ]
+     ],
+     "image": "assets/images/alteon/polar-oval-pro-15.webp",
+     "tileColor": "#fdfdfd",
+     "gallery": [
+      "assets/images/alteon/gallery/Polar Oval Pro__0_1240x1754_p1.jpeg",
+      "assets/images/alteon/gallery/Polar Oval Pro__1_1240x1754_p2.jpeg",
+      "assets/images/alteon/gallery/Polar Oval Pro__2_1240x1754_p3.jpeg"
+     ],
+     "variants": [
+      {
+       "id": "polar-oval-pro-15",
+       "name": "Polar Oval Pro",
+       "category": "Cold Plunge",
+       "categoryId": "cold-plunge-and-ice-baths",
+       "model": "Polar Oval Pro",
+       "overview": "The Polar Oval Pro is a premium 304 stainless steel cold plunge tub designed to fit seamlessly into compact spaces. Engineered for one person immersion, it pairs an integrated fibreglass coating with rapid temperature control to deliver a consistent, invigorating cold water recovery experience. Its refined oval form and industrial grade cooling and purification systems make it an elegant centrepiece for luxury wellness settings.",
+       "howItWorks": "An integrated 2HP industrial grade chiller rapidly regulates water temperature down to 5 degrees Celsius for controlled cold water immersion. A dual stage UV and ozone sterilization system works with multi stage filtration to keep the water crystal clear and clinically pure between users. Cold exposure triggers vasoconstriction followed by vasodilation, stimulating circulation and the body's natural recovery response.",
+       "benefits": [
+        "Reduces muscle soreness and accelerates recovery after exercise",
+        "Lowers inflammation and swelling",
+        "Boosts circulation through vasoconstriction and vasodilation",
+        "Elevates mood and mental alertness",
+        "Builds stress resilience and supports the nervous system",
+        "Supports metabolism and energy",
+        "Strengthens immune response with regular exposure",
+        "Improves sleep quality",
+        "Reduces perceived fatigue",
+        "Promotes overall physical and mental wellbeing"
+       ],
+       "features": [
+        "Premium 304 stainless steel construction",
+        "Integrated fibreglass coating",
+        "Compact single person oval design",
+        "Integrated 2HP high performance chiller",
+        "Rapid temperature control",
+        "Dual stage UV and ozone sterilization system",
+        "Multi stage advanced water filtration",
+        "Digital temperature control panel",
+        "Efficient power management at 1060W",
+        "Plug and play, easy installation",
+        "CE certified with one year warranty"
+       ],
+       "applications": [
+        "Premium gyms and recovery studios",
+        "Five star hotel and destination spas",
+        "Sports and physiotherapy centres",
+        "Longevity and wellness clinics",
+        "Wellness resorts",
+        "Luxury residences"
+       ],
+       "specs": [
+        [
+         "Model",
+         "POLAR OVAL PRO"
+        ],
+        [
+         "Capacity",
+         "1 Person"
+        ],
+        [
+         "Size",
+         "4.9 x 2.3 x 2.1 ft"
+        ],
+        [
+         "Integrated Fibre Glass",
+         "Yes"
+        ],
+        [
+         "Working Temperature",
+         "5\u00b0C to 42\u00b0C"
+        ],
+        [
+         "Construction Material",
+         "304 Stainless Steel"
+        ],
+        [
+         "Control",
+         "Digital Temperature Control Panel"
+        ],
+        [
+         "Cooling Mechanism",
+         "2 HP Chiller"
+        ],
+        [
+         "Chiller",
+         "2HP with UV+Ozone Filter"
+        ],
+        [
+         "UV + Ozone Sterilization System",
+         "Yes"
+        ],
+        [
+         "Dimensions",
+         "58.8 x 27.6 x 25.2 in"
+        ],
+        [
+         "Power",
+         "1060W / 220V"
+        ],
+        [
+         "Chiller Capacity",
+         "865W"
+        ],
+        [
+         "Sterilization",
+         "Dual-Stage UV and Ozone"
+        ],
+        [
+         "Filtration",
+         "Multi-stage filtration"
+        ],
+        [
+         "Warranty",
+         "1-Year parts warranty"
+        ],
+        [
+         "Certifications",
+         "CE"
+        ]
+       ],
+       "image": "assets/images/alteon/polar-oval-pro-15.webp",
+       "tileColor": "#fdfdfd",
+       "gallery": [
+        "assets/images/alteon/gallery/Polar Oval Pro__0_1240x1754_p1.jpeg",
+        "assets/images/alteon/gallery/Polar Oval Pro__1_1240x1754_p2.jpeg",
+        "assets/images/alteon/gallery/Polar Oval Pro__2_1240x1754_p3.jpeg"
+       ]
+      },
+      {
+       "id": "polar-oval-pro-16",
+       "name": "Polar Oval Pro",
+       "category": "Cold Plunge",
+       "categoryId": "cold-plunge-and-ice-baths",
+       "model": "Polar Oval Pro",
+       "overview": "The Polar Oval Pro in this configuration is a premium 304 stainless steel cold plunge tub with a warm wooden finish, designed to fit seamlessly into compact luxury spaces. Built for one person immersion, it combines an integrated fibreglass coating with rapid temperature control for a consistent, invigorating cold water recovery experience. Its refined oval form and industrial grade cooling and purification systems make it an elegant centrepiece for high end wellness environments.",
+       "howItWorks": "An integrated 2HP industrial grade chiller rapidly regulates water temperature down to 5 degrees Celsius for controlled cold water immersion. A dual stage UV and ozone sterilization system works with multi stage filtration to keep the water crystal clear and clinically pure between users. Cold exposure triggers vasoconstriction followed by vasodilation, stimulating circulation and the body's natural recovery response.",
+       "benefits": [
+        "Reduces muscle soreness and accelerates recovery after exercise",
+        "Lowers inflammation and swelling",
+        "Boosts circulation through vasoconstriction and vasodilation",
+        "Elevates mood and mental alertness",
+        "Builds stress resilience and supports the nervous system",
+        "Supports metabolism and energy",
+        "Strengthens immune response with regular exposure",
+        "Improves sleep quality",
+        "Reduces perceived fatigue",
+        "Promotes overall physical and mental wellbeing"
+       ],
+       "features": [
+        "Premium 304 stainless steel construction with wooden finish",
+        "Integrated fibreglass coating",
+        "Compact single person oval design",
+        "Integrated 2HP high performance chiller",
+        "Rapid temperature control",
+        "Dual stage UV and ozone sterilization system",
+        "Multi stage advanced water filtration",
+        "Digital temperature control panel",
+        "Efficient power management at 1060W",
+        "Plug and play, easy installation",
+        "CE certified with one year warranty"
+       ],
+       "applications": [
+        "Premium gyms and recovery studios",
+        "Five star hotel and destination spas",
+        "Sports and physiotherapy centres",
+        "Longevity and wellness clinics",
+        "Wellness resorts",
+        "Luxury residences"
+       ],
+       "specs": [
+        [
+         "Model",
+         "POLAR OVAL PRO"
+        ],
+        [
+         "Capacity",
+         "1 Person"
+        ],
+        [
+         "Size",
+         "4.9 x 2.3 x 2.1 ft"
+        ],
+        [
+         "Integrated Fibre Glass",
+         "Yes"
+        ],
+        [
+         "Working Temperature",
+         "5\u00b0C to 42\u00b0C"
+        ],
+        [
+         "Construction Material",
+         "304 Stainless Steel with wooden finish"
+        ],
+        [
+         "Control",
+         "Digital Temperature Control Panel"
+        ],
+        [
+         "Cooling Mechanism",
+         "2 HP Chiller"
+        ],
+        [
+         "Chiller",
+         "2HP with UV+Ozone Filter"
+        ],
+        [
+         "UV + Ozone Sterilization System",
+         "Yes"
+        ],
+        [
+         "Dimensions",
+         "58.8 x 27.6 x 25.2 in"
+        ],
+        [
+         "Power",
+         "1060W / 220V"
+        ],
+        [
+         "Chiller Capacity",
+         "865W"
+        ],
+        [
+         "Sterilization",
+         "Dual-Stage UV and Ozone"
+        ],
+        [
+         "Filtration",
+         "Multi-stage filtration"
+        ],
+        [
+         "Warranty",
+         "1-Year parts warranty"
+        ],
+        [
+         "Certifications",
+         "CE"
+        ]
+       ],
+       "image": "assets/images/alteon/polar-oval-pro-16.webp",
+       "tileColor": "#fefefe"
+      }
+     ]
+    }
    ]
-  },
-  {
-   "id": "polar-oval-pro-16",
-   "name": "Polar Oval Pro",
-   "category": "Cold Plunge",
-   "categoryId": "cold-plunge-and-ice-baths",
-   "model": "Polar Oval Pro",
-   "overview": "The Polar Oval Pro in this configuration is a premium 304 stainless steel cold plunge tub with a warm wooden finish, designed to fit seamlessly into compact luxury spaces. Built for one person immersion, it combines an integrated fibreglass coating with rapid temperature control for a consistent, invigorating cold water recovery experience. Its refined oval form and industrial grade cooling and purification systems make it an elegant centrepiece for high end wellness environments.",
-   "howItWorks": "An integrated 2HP industrial grade chiller rapidly regulates water temperature down to 5 degrees Celsius for controlled cold water immersion. A dual stage UV and ozone sterilization system works with multi stage filtration to keep the water crystal clear and clinically pure between users. Cold exposure triggers vasoconstriction followed by vasodilation, stimulating circulation and the body's natural recovery response.",
-   "benefits": [
-    "Reduces muscle soreness and accelerates recovery after exercise",
-    "Lowers inflammation and swelling",
-    "Boosts circulation through vasoconstriction and vasodilation",
-    "Elevates mood and mental alertness",
-    "Builds stress resilience and supports the nervous system",
-    "Supports metabolism and energy",
-    "Strengthens immune response with regular exposure",
-    "Improves sleep quality",
-    "Reduces perceived fatigue",
-    "Promotes overall physical and mental wellbeing"
-   ],
-   "features": [
-    "Premium 304 stainless steel construction with wooden finish",
-    "Integrated fibreglass coating",
-    "Compact single person oval design",
-    "Integrated 2HP high performance chiller",
-    "Rapid temperature control",
-    "Dual stage UV and ozone sterilization system",
-    "Multi stage advanced water filtration",
-    "Digital temperature control panel",
-    "Efficient power management at 1060W",
-    "Plug and play, easy installation",
-    "CE certified with one year warranty"
-   ],
-   "applications": [
-    "Premium gyms and recovery studios",
-    "Five star hotel and destination spas",
-    "Sports and physiotherapy centres",
-    "Longevity and wellness clinics",
-    "Wellness resorts",
-    "Luxury residences"
-   ],
-   "specs": [
-    [
-     "Model",
-     "POLAR OVAL PRO"
-    ],
-    [
-     "Capacity",
-     "1 Person"
-    ],
-    [
-     "Size",
-     "4.9 x 2.3 x 2.1 ft"
-    ],
-    [
-     "Integrated Fibre Glass",
-     "Yes"
-    ],
-    [
-     "Working Temperature",
-     "5°C to 42°C"
-    ],
-    [
-     "Construction Material",
-     "304 Stainless Steel with wooden finish"
-    ],
-    [
-     "Control",
-     "Digital Temperature Control Panel"
-    ],
-    [
-     "Cooling Mechanism",
-     "2 HP Chiller"
-    ],
-    [
-     "Chiller",
-     "2HP with UV+Ozone Filter"
-    ],
-    [
-     "UV + Ozone Sterilization System",
-     "Yes"
-    ],
-    [
-     "Dimensions",
-     "58.8 x 27.6 x 25.2 in"
-    ],
-    [
-     "Power",
-     "1060W / 220V"
-    ],
-    [
-     "Chiller Capacity",
-     "865W"
-    ],
-    [
-     "Sterilization",
-     "Dual-Stage UV and Ozone"
-    ],
-    [
-     "Filtration",
-     "Multi-stage filtration"
-    ],
-    [
-     "Warranty",
-     "1-Year parts warranty"
-    ],
-    [
-     "Certifications",
-     "CE"
-    ]
-   ],
-   "image": "assets/images/polar-oval-pro-16.webp",
-   "tileColor": "#fefefe"
   },
   {
    "id": "polar-plunge-pro-17",
@@ -1597,7 +2301,7 @@ window.ALTEON_DATA = {
     ],
     [
      "Working Temperature",
-     "5°C to 42°C"
+     "5\u00b0C to 42\u00b0C"
     ],
     [
      "Construction Material",
@@ -1648,122 +2352,354 @@ window.ALTEON_DATA = {
      "CE"
     ]
    ],
-   "image": "assets/images/polar-plunge-pro-17.webp",
-   "tileColor": "#fdfdfd"
-  },
-  {
-   "id": "polar-plunge-pro-18",
-   "name": "Polar Plunge Pro",
-   "category": "Cold Plunge",
-   "categoryId": "cold-plunge-and-ice-baths",
-   "model": "Polar Plunge Pro",
-   "overview": "The Polar Plunge Pro in this configuration is an elegant, tall 304 stainless steel cold plunge tub with a warm wooden finish, designed to convert any room into a recovery space. Its upright cylindrical form allows deep, full immersion for one person while occupying a minimal floor footprint. Combining an integrated fibreglass coating with rapid temperature control, it delivers a consistent, invigorating cold water experience for premium wellness environments.",
-   "howItWorks": "An integrated 2HP industrial grade chiller rapidly regulates water temperature down to 5 degrees Celsius for controlled cold water immersion. A dual stage UV and ozone sterilization system works with multi stage filtration to keep the water crystal clear and clinically pure between users. Cold exposure triggers vasoconstriction followed by vasodilation, stimulating circulation and the body's natural recovery response.",
-   "benefits": [
-    "Reduces muscle soreness and accelerates recovery after exercise",
-    "Lowers inflammation and swelling",
-    "Boosts circulation through vasoconstriction and vasodilation",
-    "Elevates mood and mental alertness",
-    "Builds stress resilience and supports the nervous system",
-    "Supports metabolism and energy",
-    "Strengthens immune response with regular exposure",
-    "Improves sleep quality",
-    "Reduces perceived fatigue",
-    "Promotes overall physical and mental wellbeing"
-   ],
-   "features": [
-    "Premium 304 stainless steel construction with wooden finish",
-    "Integrated fibreglass coating",
-    "Tall cylindrical design for deep full immersion",
-    "Compact floor footprint",
-    "Integrated 2HP high performance chiller",
-    "Rapid temperature control",
-    "Dual stage UV and ozone sterilization system",
-    "Multi stage advanced water filtration",
-    "Digital temperature control panel",
-    "Efficient power management at 1060W",
-    "CE certified with one year warranty"
-   ],
-   "applications": [
-    "Premium gyms and recovery studios",
-    "Five star hotel and destination spas",
-    "Sports and physiotherapy centres",
-    "Longevity and wellness clinics",
-    "Wellness resorts",
-    "Luxury residences"
-   ],
-   "specs": [
-    [
-     "Model",
-     "POLAR PLUNGE PRO"
-    ],
-    [
-     "Capacity",
-     "1 Person"
-    ],
-    [
-     "Size",
-     "2.7 x 3.6 ft"
-    ],
-    [
-     "Integrated Fibre Glass",
-     "Yes"
-    ],
-    [
-     "Working Temperature",
-     "5°C to 42°C"
-    ],
-    [
-     "Construction Material",
-     "304 Stainless Steel with wooden finish"
-    ],
-    [
-     "Control",
-     "Digital Temperature Control Panel"
-    ],
-    [
-     "Cooling Mechanism",
-     "2 HP Chiller"
-    ],
-    [
-     "Chiller",
-     "2HP with UV+Ozone Filter"
-    ],
-    [
-     "UV + Ozone Sterilization System",
-     "Yes"
-    ],
-    [
-     "Dimensions",
-     "32.4 x 43.2 in"
-    ],
-    [
-     "Power",
-     "1060W / 220V"
-    ],
-    [
-     "Chiller Capacity",
-     "865W"
-    ],
-    [
-     "Sterilization",
-     "Dual-Stage UV and Ozone"
-    ],
-    [
-     "Filtration",
-     "Multi-stage filtration"
-    ],
-    [
-     "Warranty",
-     "1-Year parts warranty"
-    ],
-    [
-     "Certifications",
-     "CE"
-    ]
-   ],
-   "image": "assets/images/polar-plunge-pro-18.webp",
-   "tileColor": "#fefefe"
+   "image": "assets/images/alteon/polar-plunge-pro-17.webp",
+   "tileColor": "#fdfdfd",
+   "variants": [
+    {
+     "id": "polar-plunge-pro-17",
+     "name": "Polar Plunge Pro",
+     "category": "Cold Plunge",
+     "categoryId": "cold-plunge-and-ice-baths",
+     "model": "Polar Plunge Pro",
+     "overview": "The Polar Plunge Pro is an elegant, tall 304 stainless steel cold plunge tub designed to convert any room into a recovery space. Its upright cylindrical form allows deep, full immersion for one person while occupying a minimal floor footprint. Combining an integrated fibreglass coating with rapid temperature control, it delivers a consistent, invigorating cold water experience for premium wellness environments.",
+     "howItWorks": "An integrated 2HP industrial grade chiller rapidly regulates water temperature down to 5 degrees Celsius for controlled cold water immersion. A dual stage UV and ozone sterilization system works with multi stage filtration to keep the water crystal clear and clinically pure between users. Cold exposure triggers vasoconstriction followed by vasodilation, stimulating circulation and the body's natural recovery response.",
+     "benefits": [
+      "Reduces muscle soreness and accelerates recovery after exercise",
+      "Lowers inflammation and swelling",
+      "Boosts circulation through vasoconstriction and vasodilation",
+      "Elevates mood and mental alertness",
+      "Builds stress resilience and supports the nervous system",
+      "Supports metabolism and energy",
+      "Strengthens immune response with regular exposure",
+      "Improves sleep quality",
+      "Reduces perceived fatigue",
+      "Promotes overall physical and mental wellbeing"
+     ],
+     "features": [
+      "Premium 304 stainless steel construction",
+      "Integrated fibreglass coating",
+      "Tall cylindrical design for deep full immersion",
+      "Compact floor footprint",
+      "Integrated 2HP high performance chiller",
+      "Rapid temperature control",
+      "Dual stage UV and ozone sterilization system",
+      "Multi stage advanced water filtration",
+      "Digital temperature control panel",
+      "Efficient power management at 1060W",
+      "CE certified with one year warranty"
+     ],
+     "applications": [
+      "Premium gyms and recovery studios",
+      "Five star hotel and destination spas",
+      "Sports and physiotherapy centres",
+      "Longevity and wellness clinics",
+      "Wellness resorts",
+      "Luxury residences"
+     ],
+     "specs": [
+      [
+       "Model",
+       "POLAR PLUNGE PRO"
+      ],
+      [
+       "Capacity",
+       "1 Person"
+      ],
+      [
+       "Size",
+       "2.7 x 3.6 ft"
+      ],
+      [
+       "Integrated Fibre Glass",
+       "Yes"
+      ],
+      [
+       "Working Temperature",
+       "5\u00b0C to 42\u00b0C"
+      ],
+      [
+       "Construction Material",
+       "304 Stainless Steel"
+      ],
+      [
+       "Control",
+       "Digital Temperature Control Panel"
+      ],
+      [
+       "Cooling Mechanism",
+       "2 HP Chiller"
+      ],
+      [
+       "Chiller",
+       "2HP with UV+Ozone Filter"
+      ],
+      [
+       "UV + Ozone Sterilization System",
+       "Yes"
+      ],
+      [
+       "Dimensions",
+       "32.4 x 43.2 in"
+      ],
+      [
+       "Power",
+       "1060W / 220V"
+      ],
+      [
+       "Chiller Capacity",
+       "865W"
+      ],
+      [
+       "Sterilization",
+       "Dual-Stage UV and Ozone"
+      ],
+      [
+       "Filtration",
+       "Multi-stage filtration"
+      ],
+      [
+       "Warranty",
+       "1-Year parts warranty"
+      ],
+      [
+       "Certifications",
+       "CE"
+      ]
+     ],
+     "image": "assets/images/alteon/polar-plunge-pro-17.webp",
+     "tileColor": "#fdfdfd",
+     "variants": [
+      {
+       "id": "polar-plunge-pro-17",
+       "name": "Polar Plunge Pro",
+       "category": "Cold Plunge",
+       "categoryId": "cold-plunge-and-ice-baths",
+       "model": "Polar Plunge Pro",
+       "overview": "The Polar Plunge Pro is an elegant, tall 304 stainless steel cold plunge tub designed to convert any room into a recovery space. Its upright cylindrical form allows deep, full immersion for one person while occupying a minimal floor footprint. Combining an integrated fibreglass coating with rapid temperature control, it delivers a consistent, invigorating cold water experience for premium wellness environments.",
+       "howItWorks": "An integrated 2HP industrial grade chiller rapidly regulates water temperature down to 5 degrees Celsius for controlled cold water immersion. A dual stage UV and ozone sterilization system works with multi stage filtration to keep the water crystal clear and clinically pure between users. Cold exposure triggers vasoconstriction followed by vasodilation, stimulating circulation and the body's natural recovery response.",
+       "benefits": [
+        "Reduces muscle soreness and accelerates recovery after exercise",
+        "Lowers inflammation and swelling",
+        "Boosts circulation through vasoconstriction and vasodilation",
+        "Elevates mood and mental alertness",
+        "Builds stress resilience and supports the nervous system",
+        "Supports metabolism and energy",
+        "Strengthens immune response with regular exposure",
+        "Improves sleep quality",
+        "Reduces perceived fatigue",
+        "Promotes overall physical and mental wellbeing"
+       ],
+       "features": [
+        "Premium 304 stainless steel construction",
+        "Integrated fibreglass coating",
+        "Tall cylindrical design for deep full immersion",
+        "Compact floor footprint",
+        "Integrated 2HP high performance chiller",
+        "Rapid temperature control",
+        "Dual stage UV and ozone sterilization system",
+        "Multi stage advanced water filtration",
+        "Digital temperature control panel",
+        "Efficient power management at 1060W",
+        "CE certified with one year warranty"
+       ],
+       "applications": [
+        "Premium gyms and recovery studios",
+        "Five star hotel and destination spas",
+        "Sports and physiotherapy centres",
+        "Longevity and wellness clinics",
+        "Wellness resorts",
+        "Luxury residences"
+       ],
+       "specs": [
+        [
+         "Model",
+         "POLAR PLUNGE PRO"
+        ],
+        [
+         "Capacity",
+         "1 Person"
+        ],
+        [
+         "Size",
+         "2.7 x 3.6 ft"
+        ],
+        [
+         "Integrated Fibre Glass",
+         "Yes"
+        ],
+        [
+         "Working Temperature",
+         "5\u00b0C to 42\u00b0C"
+        ],
+        [
+         "Construction Material",
+         "304 Stainless Steel"
+        ],
+        [
+         "Control",
+         "Digital Temperature Control Panel"
+        ],
+        [
+         "Cooling Mechanism",
+         "2 HP Chiller"
+        ],
+        [
+         "Chiller",
+         "2HP with UV+Ozone Filter"
+        ],
+        [
+         "UV + Ozone Sterilization System",
+         "Yes"
+        ],
+        [
+         "Dimensions",
+         "32.4 x 43.2 in"
+        ],
+        [
+         "Power",
+         "1060W / 220V"
+        ],
+        [
+         "Chiller Capacity",
+         "865W"
+        ],
+        [
+         "Sterilization",
+         "Dual-Stage UV and Ozone"
+        ],
+        [
+         "Filtration",
+         "Multi-stage filtration"
+        ],
+        [
+         "Warranty",
+         "1-Year parts warranty"
+        ],
+        [
+         "Certifications",
+         "CE"
+        ]
+       ],
+       "image": "assets/images/alteon/polar-plunge-pro-17.webp",
+       "tileColor": "#fdfdfd"
+      },
+      {
+       "id": "polar-plunge-pro-18",
+       "name": "Polar Plunge Pro",
+       "category": "Cold Plunge",
+       "categoryId": "cold-plunge-and-ice-baths",
+       "model": "Polar Plunge Pro",
+       "overview": "The Polar Plunge Pro in this configuration is an elegant, tall 304 stainless steel cold plunge tub with a warm wooden finish, designed to convert any room into a recovery space. Its upright cylindrical form allows deep, full immersion for one person while occupying a minimal floor footprint. Combining an integrated fibreglass coating with rapid temperature control, it delivers a consistent, invigorating cold water experience for premium wellness environments.",
+       "howItWorks": "An integrated 2HP industrial grade chiller rapidly regulates water temperature down to 5 degrees Celsius for controlled cold water immersion. A dual stage UV and ozone sterilization system works with multi stage filtration to keep the water crystal clear and clinically pure between users. Cold exposure triggers vasoconstriction followed by vasodilation, stimulating circulation and the body's natural recovery response.",
+       "benefits": [
+        "Reduces muscle soreness and accelerates recovery after exercise",
+        "Lowers inflammation and swelling",
+        "Boosts circulation through vasoconstriction and vasodilation",
+        "Elevates mood and mental alertness",
+        "Builds stress resilience and supports the nervous system",
+        "Supports metabolism and energy",
+        "Strengthens immune response with regular exposure",
+        "Improves sleep quality",
+        "Reduces perceived fatigue",
+        "Promotes overall physical and mental wellbeing"
+       ],
+       "features": [
+        "Premium 304 stainless steel construction with wooden finish",
+        "Integrated fibreglass coating",
+        "Tall cylindrical design for deep full immersion",
+        "Compact floor footprint",
+        "Integrated 2HP high performance chiller",
+        "Rapid temperature control",
+        "Dual stage UV and ozone sterilization system",
+        "Multi stage advanced water filtration",
+        "Digital temperature control panel",
+        "Efficient power management at 1060W",
+        "CE certified with one year warranty"
+       ],
+       "applications": [
+        "Premium gyms and recovery studios",
+        "Five star hotel and destination spas",
+        "Sports and physiotherapy centres",
+        "Longevity and wellness clinics",
+        "Wellness resorts",
+        "Luxury residences"
+       ],
+       "specs": [
+        [
+         "Model",
+         "POLAR PLUNGE PRO"
+        ],
+        [
+         "Capacity",
+         "1 Person"
+        ],
+        [
+         "Size",
+         "2.7 x 3.6 ft"
+        ],
+        [
+         "Integrated Fibre Glass",
+         "Yes"
+        ],
+        [
+         "Working Temperature",
+         "5\u00b0C to 42\u00b0C"
+        ],
+        [
+         "Construction Material",
+         "304 Stainless Steel with wooden finish"
+        ],
+        [
+         "Control",
+         "Digital Temperature Control Panel"
+        ],
+        [
+         "Cooling Mechanism",
+         "2 HP Chiller"
+        ],
+        [
+         "Chiller",
+         "2HP with UV+Ozone Filter"
+        ],
+        [
+         "UV + Ozone Sterilization System",
+         "Yes"
+        ],
+        [
+         "Dimensions",
+         "32.4 x 43.2 in"
+        ],
+        [
+         "Power",
+         "1060W / 220V"
+        ],
+        [
+         "Chiller Capacity",
+         "865W"
+        ],
+        [
+         "Sterilization",
+         "Dual-Stage UV and Ozone"
+        ],
+        [
+         "Filtration",
+         "Multi-stage filtration"
+        ],
+        [
+         "Warranty",
+         "1-Year parts warranty"
+        ],
+        [
+         "Certifications",
+         "CE"
+        ]
+       ],
+       "image": "assets/images/alteon/polar-plunge-pro-18.webp",
+       "tileColor": "#fefefe"
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "polar-dip-pro-19",
@@ -1823,7 +2759,7 @@ window.ALTEON_DATA = {
     ],
     [
      "Working Temperature",
-     "5°C to 42°C"
+     "5\u00b0C to 42\u00b0C"
     ],
     [
      "Construction Material",
@@ -1874,16 +2810,16 @@ window.ALTEON_DATA = {
      "CE"
     ]
    ],
-   "image": "assets/images/polar-dip-pro-19.webp",
+   "image": "assets/images/alteon/polar-dip-pro-19.webp",
    "tileColor": "#ffffff"
   },
   {
    "id": "alteon-icyonyx-110-c-cryo-chamber-21",
-   "name": "ALTEON ICYONYX 110°C Cryo Chamber",
+   "name": "ALTEON ICYONYX 110\u00b0C Cryo Chamber",
    "category": "Cryotherapy",
    "categoryId": "whole-body-cryotherapy",
    "model": null,
-   "overview": "The ICYONYX 110°C Cryo Chamber is a fully electric whole body cryotherapy chamber that delivers a stable, wraparound cold environment for premium recovery. Engineered as the professional standard for high volume wellness centres, it maintains precise sub zero temperatures without the need for liquid nitrogen. The result is a repeatable, supervised cold exposure experience built for consistent throughput and clinical grade safety.",
+   "overview": "The ICYONYX 110\u00b0C Cryo Chamber is a fully electric whole body cryotherapy chamber that delivers a stable, wraparound cold environment for premium recovery. Engineered as the professional standard for high volume wellness centres, it maintains precise sub zero temperatures without the need for liquid nitrogen. The result is a repeatable, supervised cold exposure experience built for consistent throughput and clinical grade safety.",
    "howItWorks": "An industrial grade built in electric compressor and condenser architecture cools the cabin rapidly and holds a stable low temperature equilibrium with uniform wraparound airflow. Because the system is fully electric, it eliminates liquid nitrogen entirely, delivering pollution free operation and maximised user safety. Integrated environmental drying reduces internal moisture between sessions for reliable continuous use.",
    "benefits": [
     "Improves sleep quality by supporting circadian regulation, parasympathetic activation, and deeper sleep cycles",
@@ -1897,7 +2833,7 @@ window.ALTEON_DATA = {
    ],
    "features": [
     "Fully electric operation with no liquid nitrogen required",
-    "Target temperature control down to -110°C with uniform wraparound airflow",
+    "Target temperature control down to -110\u00b0C with uniform wraparound airflow",
     "Premium heated glass chamber door that prevents internal frost buildup",
     "Intuitive tablet based touchscreen interface for precise session management",
     "Integrated ambient LED cross light strip indicating operational status",
@@ -2065,7 +3001,7 @@ window.ALTEON_DATA = {
      "Proper grounding mandatory"
     ]
    ],
-   "image": "assets/images/alteon-icyonyx-110-c-cryo-chamber-21.webp",
+   "image": "assets/images/alteon/alteon-icyonyx-110-c-cryo-chamber-21.webp",
    "tileColor": "#fefefe",
    "gallery": [
     "assets/images/alteon/gallery/ALTEON ICYONYX 110C Cryo Chamber__0_1024x1536_p1.jpeg",
@@ -2096,7 +3032,7 @@ window.ALTEON_DATA = {
    ],
    "features": [
     "Available in fully electric or nitrogen cooled configuration",
-    "Ultra low temperatures down to -150°C (electric) or -190°C (nitrogen)",
+    "Ultra low temperatures down to -150\u00b0C (electric) or -190\u00b0C (nitrogen)",
     "Compact footprint with a 6 by 3 ft nitrogen chamber option",
     "Preset time based protocols of 1 to 3 minutes with adjustable parameters",
     "Digital touch interface for documented, repeatable session control",
@@ -2279,7 +3215,7 @@ window.ALTEON_DATA = {
      "only 6 month"
     ]
    ],
-   "image": "assets/images/cryoonyx-pro-22.webp",
+   "image": "assets/images/alteon/cryoonyx-pro-22.webp",
    "tileColor": "#fefefe"
   },
   {
@@ -2306,7 +3242,7 @@ window.ALTEON_DATA = {
     "Advanced YOVO compressor for consistent cooling during extended sessions",
     "High grade engineered housing for efficient thermal management",
     "Customisable airspeed across levels 1 to 7",
-    "Adjustable target temperatures from -5°C to -20°C",
+    "Adjustable target temperatures from -5\u00b0C to -20\u00b0C",
     "Flexible long hose for easy maneuverability during treatment",
     "Zero consumables for cost effective, mobile operation",
     "Automatic self defrosting system",
@@ -2405,7 +3341,7 @@ window.ALTEON_DATA = {
      "Zero consumables required"
     ]
    ],
-   "image": "assets/images/local-cryotherapy-23.webp",
+   "image": "assets/images/alteon/local-cryotherapy-23.webp",
    "tileColor": "#000000",
    "gallery": [
     "assets/images/alteon/gallery/Local Cryotherapy__0_3714x2476_p0.jpeg",
@@ -2441,7 +3377,7 @@ window.ALTEON_DATA = {
     "Adjustable session timer from 0 to 99 minutes",
     "Integrated control panel with headset audio",
     "High frequency circulation pump",
-    "Minimum water temperature down to 5°C"
+    "Minimum water temperature down to 5\u00b0C"
    ],
    "applications": [
     "Luxury wellness and spa centres",
@@ -2512,7 +3448,7 @@ window.ALTEON_DATA = {
      "Blue, Orange, Grey"
     ]
    ],
-   "image": "assets/images/dry-float-flat-bed-25.webp",
+   "image": "assets/images/alteon/dry-float-flat-bed-25.webp",
    "tileColor": "#000000",
    "gallery": [
     "assets/images/alteon/gallery/Dry Float Flat Bed__0_4038x2291_p1.png",
@@ -2612,7 +3548,7 @@ window.ALTEON_DATA = {
      "60 x 70 x 90 cms"
     ]
    ],
-   "image": "assets/images/dry-float-eclipse-pod-26.webp",
+   "image": "assets/images/alteon/dry-float-eclipse-pod-26.webp",
    "tileColor": "#000000"
   },
   {
@@ -2679,11 +3615,11 @@ window.ALTEON_DATA = {
     ],
     [
      "Equipment Size",
-     "1700 × 440 × 1700 mm"
+     "1700 \u00d7 440 \u00d7 1700 mm"
     ],
     [
      "Turntable Size",
-     "550 × 550 mm"
+     "550 \u00d7 550 mm"
     ],
     [
      "Equipment Net Weight",
@@ -2691,7 +3627,7 @@ window.ALTEON_DATA = {
     ],
     [
      "External Interface",
-     "Network Cable Interface ×1, USB 2.0 ×3, Power Interface ×1"
+     "Network Cable Interface \u00d71, USB 2.0 \u00d73, Power Interface \u00d71"
     ],
     [
      "Compatible Peripherals",
@@ -2726,7 +3662,7 @@ window.ALTEON_DATA = {
      "72 x 72 in"
     ]
    ],
-   "image": "assets/images/body-scan-pro-28.webp",
+   "image": "assets/images/alteon/body-scan-pro-28.webp",
    "tileColor": "#000000",
    "gallery": [
     "assets/images/alteon/gallery/Body Scan Pro__0_1240x1754_p1.jpeg",
@@ -2865,7 +3801,7 @@ window.ALTEON_DATA = {
      "Stable Wi-Fi required for smart calibration, updates, reporting"
     ]
    ],
-   "image": "assets/images/ihht-model-a-30.webp",
+   "image": "assets/images/alteon/ihht-model-a-30.webp",
    "tileColor": "#fdfdfd",
    "gallery": [
     "assets/images/alteon/gallery/IHHT Model A__0_1558x1375_p6.png",
@@ -3002,7 +3938,7 @@ window.ALTEON_DATA = {
      "Stable Wi-Fi required for smart calibration, updates, reporting"
     ]
    ],
-   "image": "assets/images/ihht-model-b-31.webp",
+   "image": "assets/images/alteon/ihht-model-b-31.webp",
    "tileColor": "#fdfdfd"
   },
   {
@@ -3053,14 +3989,14 @@ window.ALTEON_DATA = {
     ],
     [
      "Radiant Heat Temperature Range",
-     "25°C to 40°C"
+     "25\u00b0C to 40\u00b0C"
     ],
     [
      "Salt Therapy",
      "Dual Salt Therapy (Himalayan dry micro-fine salt aerosol plus nebulized brine mist)"
     ]
    ],
-   "image": "assets/images/biopod-33.webp",
+   "image": "assets/images/alteon/biopod-33.webp",
    "tileColor": "#ffffff",
    "gallery": [
     "assets/images/alteon/gallery/BIOPOD__0_5008x3555_p0.jpeg",
@@ -3109,11 +4045,11 @@ window.ALTEON_DATA = {
     ],
     [
      "Chamber Size (Max)",
-     "1945 × 962 × 1954 mm"
+     "1945 \u00d7 962 \u00d7 1954 mm"
     ],
     [
      "Chamber Size (Min)",
-     "1945 × 962 × 1354 mm"
+     "1945 \u00d7 962 \u00d7 1354 mm"
     ],
     [
      "Wavelength",
@@ -3129,7 +4065,7 @@ window.ALTEON_DATA = {
     ],
     [
      "VAT Energy Intensity",
-     "4 units of 80 × 40 W"
+     "4 units of 80 \u00d7 40 W"
     ],
     [
      "Power",
@@ -3144,7 +4080,7 @@ window.ALTEON_DATA = {
      "76.57 x 37.87 x 76.93 in"
     ]
    ],
-   "image": "assets/images/revital-multitherapy-35.webp",
+   "image": "assets/images/alteon/revital-multitherapy-35.webp",
    "tileColor": "#000000",
    "gallery": [
     "assets/images/alteon/gallery/Revital Multitherapy__0_3333x1999_p0.jpeg",
@@ -3231,7 +4167,7 @@ window.ALTEON_DATA = {
      "CE marked; TUV SUD"
     ]
    ],
-   "image": "assets/images/ems-suit-37.webp",
+   "image": "assets/images/alteon/ems-suit-37.webp",
    "tileColor": "#f0eef1",
    "gallery": [
     "assets/images/alteon/gallery/EMS Suit__0_3840x2160_p10.jpeg",
@@ -3248,7 +4184,7 @@ window.ALTEON_DATA = {
    "categoryId": "hyperbaric-oxygen-chambers",
    "model": null,
    "overview": "The HBOT 1 Seater is a commercial grade single seat hyperbaric oxygen therapy chamber engineered for advanced cellular repair, longevity programming, and accelerated recovery. Built around a high strength Q345R carbon steel and acrylic cabin, it operates at a therapeutic working pressure of up to 1.9 ATA with a first class lounge seat for a luxury suite experience. An integrated air conditioning unit, soft padded upholstery, and headset oxygen delivery make it a seamless fit for premium clinics, recovery studios, and longevity centres.",
-   "howItWorks": "Hyperbaric oxygen therapy involves breathing high concentration oxygen inside a pressurised chamber, where the elevated pressure dissolves oxygen directly into the blood plasma. This plasma driven oxygen reaches hypoxic or damaged tissues even when blood flow is restricted, reducing inflammation, improving microcirculation, and supporting faster cellular repair. The chamber delivers 95±3% oxygen via headset while an integrated climate control system and multi tier safety relief valves maintain a safe, comfortable environment.",
+   "howItWorks": "Hyperbaric oxygen therapy involves breathing high concentration oxygen inside a pressurised chamber, where the elevated pressure dissolves oxygen directly into the blood plasma. This plasma driven oxygen reaches hypoxic or damaged tissues even when blood flow is restricted, reducing inflammation, improving microcirculation, and supporting faster cellular repair. The chamber delivers 95\u00b13% oxygen via headset while an integrated climate control system and multi tier safety relief valves maintain a safe, comfortable environment.",
    "benefits": [
     "Saturates blood plasma with oxygen for supra oxygenation at the cellular level",
     "Accelerates recovery and tissue repair after exercise, surgery, or injury",
@@ -3264,7 +4200,7 @@ window.ALTEON_DATA = {
     "Maximum working pressure up to 1.9 ATA (customisable)",
     "Q345R carbon steel and acrylic cabin construction",
     "First class lounge sofa seating with soft padded upholstery",
-    "Oxygen supply concentration of 95±3% via headset delivery",
+    "Oxygen supply concentration of 95\u00b13% via headset delivery",
     "Integrated air conditioning unit for climate control",
     "Premium spray painted exterior finish",
     "Built in overpressure release valve",
@@ -3369,7 +4305,7 @@ window.ALTEON_DATA = {
      "CE; ISO 13485"
     ]
    ],
-   "image": "assets/images/hbot-1-seater-39.webp",
+   "image": "assets/images/alteon/hbot-1-seater-39.webp",
    "tileColor": "#ffffff",
    "gallery": [
     "assets/images/alteon/gallery/HBOT 1 Seater (A)__0_4959x7016_p0.png",
@@ -3377,119 +4313,399 @@ window.ALTEON_DATA = {
     "assets/images/alteon/gallery/HBOT 1 Seater (A)__1_4959x7016_p7.png",
     "assets/images/alteon/gallery/HBOT 1 Seater (A)__2_4959x7016_p2.png",
     "assets/images/alteon/gallery/HBOT 1 Seater (A)__2_4959x7016_p6.png"
+   ],
+   "variants": [
+    {
+     "id": "hbot-1-seater-39",
+     "name": "HBOT 1 Seater",
+     "category": "HBOT",
+     "categoryId": "hyperbaric-oxygen-chambers",
+     "model": null,
+     "overview": "The HBOT 1 Seater is a commercial grade single seat hyperbaric oxygen therapy chamber engineered for advanced cellular repair, longevity programming, and accelerated recovery. Built around a high strength Q345R carbon steel and acrylic cabin, it operates at a therapeutic working pressure of up to 1.9 ATA with a first class lounge seat for a luxury suite experience. An integrated air conditioning unit, soft padded upholstery, and headset oxygen delivery make it a seamless fit for premium clinics, recovery studios, and longevity centres.",
+     "howItWorks": "Hyperbaric oxygen therapy involves breathing high concentration oxygen inside a pressurised chamber, where the elevated pressure dissolves oxygen directly into the blood plasma. This plasma driven oxygen reaches hypoxic or damaged tissues even when blood flow is restricted, reducing inflammation, improving microcirculation, and supporting faster cellular repair. The chamber delivers 95\u00b13% oxygen via headset while an integrated climate control system and multi tier safety relief valves maintain a safe, comfortable environment.",
+     "benefits": [
+      "Saturates blood plasma with oxygen for supra oxygenation at the cellular level",
+      "Accelerates recovery and tissue repair after exercise, surgery, or injury",
+      "Reduces systemic inflammation and oxidative stress",
+      "Supports anti aging and longevity by stimulating telomerase and telomere maintenance",
+      "Boosts energy, endurance, stamina, and physical performance",
+      "Improves brain function, memory, focus, and mental clarity",
+      "Triggers collagen and elastin production for healthier, more supple skin",
+      "Supports detoxification and the body's natural elimination pathways",
+      "Improves sleep quality, mood, and post surgery quality of life"
+     ],
+     "features": [
+      "Maximum working pressure up to 1.9 ATA (customisable)",
+      "Q345R carbon steel and acrylic cabin construction",
+      "First class lounge sofa seating with soft padded upholstery",
+      "Oxygen supply concentration of 95\u00b13% via headset delivery",
+      "Integrated air conditioning unit for climate control",
+      "Premium spray painted exterior finish",
+      "Built in overpressure release valve",
+      "Ambient lighting for a calming therapy environment",
+      "Dedicated equipment cabinet and external chamber unit",
+      "CE and ISO 13485 aligned build quality"
+     ],
+     "applications": [
+      "Premium wellness and recovery clinics",
+      "Longevity and biohacking centres",
+      "Sports recovery and performance studios",
+      "Medical spas and aesthetic centres",
+      "High end residences"
+     ],
+     "specs": [
+      [
+       "Dimensions",
+       "Main Chamber to 64.96 x 57.09 x 65.35 in\nExternal Chamber to 39.4 x 27.6 x 60.5 in HBOT Air Conditioning to 16.4 x 15.9 x 34.3 in"
+      ],
+      [
+       "Maximum Working Pressure",
+       "1.9 ATA (Customizable)"
+      ],
+      [
+       "Chamber External Dimensions (L x W x H)",
+       "1650 x 1450 x 1660 mm"
+      ],
+      [
+       "Equipment Cabinet Dimensions (L x W x H)",
+       "730 x 700 x 1440 mm"
+      ],
+      [
+       "Equipment Cabinet Weight",
+       "190 kg"
+      ],
+      [
+       "Air Conditioning Unit Dimensions (L x W x H)",
+       "470 x 380 x 585 mm"
+      ],
+      [
+       "Air Conditioning Unit Weight",
+       "37.5 kg"
+      ],
+      [
+       "Oxygen Supply Concentration",
+       "95 plus or minus 3%"
+      ],
+      [
+       "Oxygen Delivery Method",
+       "Headset"
+      ],
+      [
+       "Seat Configuration",
+       "First Class Lounge Sofa"
+      ],
+      [
+       "Electrical Supply",
+       "AC 220 V, 50 Hz"
+      ],
+      [
+       "Host Power Consumption",
+       "3500 W"
+      ],
+      [
+       "Air Conditioner Power Consumption",
+       "less than 2000 W"
+      ],
+      [
+       "Exterior Finish",
+       "Spray Painted"
+      ],
+      [
+       "Interior Finish",
+       "Soft Padded Upholstery"
+      ],
+      [
+       "Cabin Material",
+       "Q345R Carbon Steel / Acrylic"
+      ],
+      [
+       "Main Cabin Weight",
+       "720 kg"
+      ],
+      [
+       "Overpressure Release",
+       "Available"
+      ],
+      [
+       "Ambient Lighting",
+       "Available"
+      ],
+      [
+       "Air Conditioning Unit Max Power",
+       "1.5 KW"
+      ],
+      [
+       "Air Conditioning Unit Safety Factor",
+       "1.4"
+      ],
+      [
+       "Certifications",
+       "CE; ISO 13485"
+      ]
+     ],
+     "image": "assets/images/alteon/hbot-1-seater-39.webp",
+     "tileColor": "#ffffff",
+     "gallery": [
+      "assets/images/alteon/gallery/HBOT 1 Seater (A)__0_4959x7016_p0.png",
+      "assets/images/alteon/gallery/HBOT 1 Seater (A)__1_4959x7016_p1.png",
+      "assets/images/alteon/gallery/HBOT 1 Seater (A)__1_4959x7016_p7.png",
+      "assets/images/alteon/gallery/HBOT 1 Seater (A)__2_4959x7016_p2.png",
+      "assets/images/alteon/gallery/HBOT 1 Seater (A)__2_4959x7016_p6.png"
+     ],
+     "variants": [
+      {
+       "id": "hbot-1-seater-39",
+       "name": "HBOT 1 Seater",
+       "category": "HBOT",
+       "categoryId": "hyperbaric-oxygen-chambers",
+       "model": null,
+       "overview": "The HBOT 1 Seater is a commercial grade single seat hyperbaric oxygen therapy chamber engineered for advanced cellular repair, longevity programming, and accelerated recovery. Built around a high strength Q345R carbon steel and acrylic cabin, it operates at a therapeutic working pressure of up to 1.9 ATA with a first class lounge seat for a luxury suite experience. An integrated air conditioning unit, soft padded upholstery, and headset oxygen delivery make it a seamless fit for premium clinics, recovery studios, and longevity centres.",
+       "howItWorks": "Hyperbaric oxygen therapy involves breathing high concentration oxygen inside a pressurised chamber, where the elevated pressure dissolves oxygen directly into the blood plasma. This plasma driven oxygen reaches hypoxic or damaged tissues even when blood flow is restricted, reducing inflammation, improving microcirculation, and supporting faster cellular repair. The chamber delivers 95\u00b13% oxygen via headset while an integrated climate control system and multi tier safety relief valves maintain a safe, comfortable environment.",
+       "benefits": [
+        "Saturates blood plasma with oxygen for supra oxygenation at the cellular level",
+        "Accelerates recovery and tissue repair after exercise, surgery, or injury",
+        "Reduces systemic inflammation and oxidative stress",
+        "Supports anti aging and longevity by stimulating telomerase and telomere maintenance",
+        "Boosts energy, endurance, stamina, and physical performance",
+        "Improves brain function, memory, focus, and mental clarity",
+        "Triggers collagen and elastin production for healthier, more supple skin",
+        "Supports detoxification and the body's natural elimination pathways",
+        "Improves sleep quality, mood, and post surgery quality of life"
+       ],
+       "features": [
+        "Maximum working pressure up to 1.9 ATA (customisable)",
+        "Q345R carbon steel and acrylic cabin construction",
+        "First class lounge sofa seating with soft padded upholstery",
+        "Oxygen supply concentration of 95\u00b13% via headset delivery",
+        "Integrated air conditioning unit for climate control",
+        "Premium spray painted exterior finish",
+        "Built in overpressure release valve",
+        "Ambient lighting for a calming therapy environment",
+        "Dedicated equipment cabinet and external chamber unit",
+        "CE and ISO 13485 aligned build quality"
+       ],
+       "applications": [
+        "Premium wellness and recovery clinics",
+        "Longevity and biohacking centres",
+        "Sports recovery and performance studios",
+        "Medical spas and aesthetic centres",
+        "High end residences"
+       ],
+       "specs": [
+        [
+         "Dimensions",
+         "Main Chamber to 64.96 x 57.09 x 65.35 in\nExternal Chamber to 39.4 x 27.6 x 60.5 in HBOT Air Conditioning to 16.4 x 15.9 x 34.3 in"
+        ],
+        [
+         "Maximum Working Pressure",
+         "1.9 ATA (Customizable)"
+        ],
+        [
+         "Chamber External Dimensions (L x W x H)",
+         "1650 x 1450 x 1660 mm"
+        ],
+        [
+         "Equipment Cabinet Dimensions (L x W x H)",
+         "730 x 700 x 1440 mm"
+        ],
+        [
+         "Equipment Cabinet Weight",
+         "190 kg"
+        ],
+        [
+         "Air Conditioning Unit Dimensions (L x W x H)",
+         "470 x 380 x 585 mm"
+        ],
+        [
+         "Air Conditioning Unit Weight",
+         "37.5 kg"
+        ],
+        [
+         "Oxygen Supply Concentration",
+         "95 plus or minus 3%"
+        ],
+        [
+         "Oxygen Delivery Method",
+         "Headset"
+        ],
+        [
+         "Seat Configuration",
+         "First Class Lounge Sofa"
+        ],
+        [
+         "Electrical Supply",
+         "AC 220 V, 50 Hz"
+        ],
+        [
+         "Host Power Consumption",
+         "3500 W"
+        ],
+        [
+         "Air Conditioner Power Consumption",
+         "less than 2000 W"
+        ],
+        [
+         "Exterior Finish",
+         "Spray Painted"
+        ],
+        [
+         "Interior Finish",
+         "Soft Padded Upholstery"
+        ],
+        [
+         "Cabin Material",
+         "Q345R Carbon Steel / Acrylic"
+        ],
+        [
+         "Main Cabin Weight",
+         "720 kg"
+        ],
+        [
+         "Overpressure Release",
+         "Available"
+        ],
+        [
+         "Ambient Lighting",
+         "Available"
+        ],
+        [
+         "Air Conditioning Unit Max Power",
+         "1.5 KW"
+        ],
+        [
+         "Air Conditioning Unit Safety Factor",
+         "1.4"
+        ],
+        [
+         "Certifications",
+         "CE; ISO 13485"
+        ]
+       ],
+       "image": "assets/images/alteon/hbot-1-seater-39.webp",
+       "tileColor": "#ffffff",
+       "gallery": [
+        "assets/images/alteon/gallery/HBOT 1 Seater (A)__0_4959x7016_p0.png",
+        "assets/images/alteon/gallery/HBOT 1 Seater (A)__1_4959x7016_p1.png",
+        "assets/images/alteon/gallery/HBOT 1 Seater (A)__1_4959x7016_p7.png",
+        "assets/images/alteon/gallery/HBOT 1 Seater (A)__2_4959x7016_p2.png",
+        "assets/images/alteon/gallery/HBOT 1 Seater (A)__2_4959x7016_p6.png"
+       ]
+      },
+      {
+       "id": "hbot-1-seater-40",
+       "name": "HBOT 1 Seater",
+       "category": "HBOT",
+       "categoryId": "hyperbaric-oxygen-chambers",
+       "model": null,
+       "overview": "This HBOT 1 Seater is a commercial grade single seat hyperbaric oxygen chamber designed for advanced cellular repair, longevity programming, and accelerated recovery. It features a high strength carbon steel shell operating at a potent 1.9 ATA therapeutic pressure, paired with an integrated medical grade supply system delivering medical grade pure oxygen. Automated climate control, multi tier safety relief valves, and dual communication channels make it ideal for premium clinics, recovery studios, and longevity centres.",
+       "howItWorks": "Hyperbaric oxygen therapy involves breathing high concentration oxygen inside a pressurised chamber, where the elevated pressure dissolves oxygen directly into the blood plasma. This plasma driven oxygen reaches hypoxic or damaged tissues even when blood flow is restricted, reducing inflammation, improving microcirculation, and supporting faster cellular repair. The chamber pressurises to 1.9 ATA with continuous medical grade oxygen supply while automated climate control and multi tier relief valves maintain a safe, comfortable environment.",
+       "benefits": [
+        "Saturates blood plasma with oxygen for supra oxygenation at the cellular level",
+        "Accelerates recovery and tissue repair after exercise, surgery, or injury",
+        "Reduces systemic inflammation and oxidative stress",
+        "Supports anti aging and longevity by stimulating telomerase and telomere maintenance",
+        "Boosts energy, endurance, and physical performance",
+        "Improves brain function, memory, focus, and mental clarity",
+        "Triggers collagen and elastin production for healthier skin",
+        "Supports detoxification and the body's natural elimination pathways",
+        "Improves sleep quality, mood, and overall vitality"
+       ],
+       "features": [
+        "Therapeutic working pressure of 1.9 ATA",
+        "High strength carbon steel chamber shell",
+        "Integrated medical grade oxygen supply system at 93% purity",
+        "Continuous oxygen output flow of at least 10 L/min",
+        "Luxury reclining hyperbaric chair with plush cushioning",
+        "SmartBreath oxygen delivery system for higher saturation efficiency",
+        "Automated pressurisation and depressurisation with real time monitoring",
+        "Multi tier safety relief valves, manual safety valve, and emergency stop",
+        "Integrated telephone and Bluetooth intercom communication",
+        "Silent airflow and ventilation with automatic climate control",
+        "Optional integrated red light therapy panels and premium audio"
+       ],
+       "applications": [
+        "Premium wellness and recovery clinics",
+        "Longevity and biohacking centres",
+        "Elite sports and performance studios",
+        "Medical spas and aesthetic centres",
+        "High end residences"
+       ],
+       "specs": [
+        [
+         "Dimensions",
+         "Main Chamber to 86.61 x 70.87 x 74.80 in\nExternal Chamber to 16.54 x 15.75 x 30.24 in"
+        ],
+        [
+         "Therapeutic Pressure",
+         "1.9 ATA operating pressure"
+        ],
+        [
+         "External Dimensions",
+         "L 2200 mm x W 1800 mm x H 1900 mm"
+        ],
+        [
+         "Total System Weight",
+         "1200 kg"
+        ],
+        [
+         "Structural Body",
+         "High strength carbon steel chamber shell"
+        ],
+        [
+         "Entry Door",
+         "High durability transparent PC endurance panel"
+        ],
+        [
+         "Safety Systems",
+         "Automatic pressure relief valve, manual safety valve, emergency stop control"
+        ],
+        [
+         "Communication",
+         "Integrated telephone and Bluetooth intercom system for operator"
+        ],
+        [
+         "Oxygen Output Flow",
+         "greater than or equal to 10 L/min continuous oxygen delivery"
+        ],
+        [
+         "Oxygen Purity",
+         "greater than or equal to 93% (v/v) plus or minus 3% medical grade concentration"
+        ],
+        [
+         "Oxygen Supply Power Consumption",
+         "Approx. 850 W"
+        ],
+        [
+         "Oxygen Supply Electrical Requirement",
+         "110V / 60Hz or 220V / 50Hz"
+        ],
+        [
+         "Oxygen Supply Unit Dimensions",
+         "L 420 mm x W 400 mm x H 768 mm"
+        ],
+        [
+         "Climate Control Operating Voltage",
+         "220V / 50Hz"
+        ],
+        [
+         "Climate Control Refrigerant Type",
+         "R410A refrigerant"
+        ],
+        [
+         "Climate Control Refrigerant Capacity",
+         "260 g charge volume"
+        ],
+        [
+         "Climate Control Power Rating",
+         "660 W cooling system"
+        ]
+       ],
+       "image": "assets/images/alteon/hbot-1-seater-40.webp",
+       "tileColor": "#000000"
+      }
+     ]
+    }
    ]
-  },
-  {
-   "id": "hbot-1-seater-40",
-   "name": "HBOT 1 Seater",
-   "category": "HBOT",
-   "categoryId": "hyperbaric-oxygen-chambers",
-   "model": null,
-   "overview": "This HBOT 1 Seater is a commercial grade single seat hyperbaric oxygen chamber designed for advanced cellular repair, longevity programming, and accelerated recovery. It features a high strength carbon steel shell operating at a potent 1.9 ATA therapeutic pressure, paired with an integrated medical grade supply system delivering medical grade pure oxygen. Automated climate control, multi tier safety relief valves, and dual communication channels make it ideal for premium clinics, recovery studios, and longevity centres.",
-   "howItWorks": "Hyperbaric oxygen therapy involves breathing high concentration oxygen inside a pressurised chamber, where the elevated pressure dissolves oxygen directly into the blood plasma. This plasma driven oxygen reaches hypoxic or damaged tissues even when blood flow is restricted, reducing inflammation, improving microcirculation, and supporting faster cellular repair. The chamber pressurises to 1.9 ATA with continuous medical grade oxygen supply while automated climate control and multi tier relief valves maintain a safe, comfortable environment.",
-   "benefits": [
-    "Saturates blood plasma with oxygen for supra oxygenation at the cellular level",
-    "Accelerates recovery and tissue repair after exercise, surgery, or injury",
-    "Reduces systemic inflammation and oxidative stress",
-    "Supports anti aging and longevity by stimulating telomerase and telomere maintenance",
-    "Boosts energy, endurance, and physical performance",
-    "Improves brain function, memory, focus, and mental clarity",
-    "Triggers collagen and elastin production for healthier skin",
-    "Supports detoxification and the body's natural elimination pathways",
-    "Improves sleep quality, mood, and overall vitality"
-   ],
-   "features": [
-    "Therapeutic working pressure of 1.9 ATA",
-    "High strength carbon steel chamber shell",
-    "Integrated medical grade oxygen supply system at 93% purity",
-    "Continuous oxygen output flow of at least 10 L/min",
-    "Luxury reclining hyperbaric chair with plush cushioning",
-    "SmartBreath oxygen delivery system for higher saturation efficiency",
-    "Automated pressurisation and depressurisation with real time monitoring",
-    "Multi tier safety relief valves, manual safety valve, and emergency stop",
-    "Integrated telephone and Bluetooth intercom communication",
-    "Silent airflow and ventilation with automatic climate control",
-    "Optional integrated red light therapy panels and premium audio"
-   ],
-   "applications": [
-    "Premium wellness and recovery clinics",
-    "Longevity and biohacking centres",
-    "Elite sports and performance studios",
-    "Medical spas and aesthetic centres",
-    "High end residences"
-   ],
-   "specs": [
-    [
-     "Dimensions",
-     "Main Chamber to 86.61 x 70.87 x 74.80 in\nExternal Chamber to 16.54 x 15.75 x 30.24 in"
-    ],
-    [
-     "Therapeutic Pressure",
-     "1.9 ATA operating pressure"
-    ],
-    [
-     "External Dimensions",
-     "L 2200 mm x W 1800 mm x H 1900 mm"
-    ],
-    [
-     "Total System Weight",
-     "1200 kg"
-    ],
-    [
-     "Structural Body",
-     "High strength carbon steel chamber shell"
-    ],
-    [
-     "Entry Door",
-     "High durability transparent PC endurance panel"
-    ],
-    [
-     "Safety Systems",
-     "Automatic pressure relief valve, manual safety valve, emergency stop control"
-    ],
-    [
-     "Communication",
-     "Integrated telephone and Bluetooth intercom system for operator"
-    ],
-    [
-     "Oxygen Output Flow",
-     "greater than or equal to 10 L/min continuous oxygen delivery"
-    ],
-    [
-     "Oxygen Purity",
-     "greater than or equal to 93% (v/v) plus or minus 3% medical grade concentration"
-    ],
-    [
-     "Oxygen Supply Power Consumption",
-     "Approx. 850 W"
-    ],
-    [
-     "Oxygen Supply Electrical Requirement",
-     "110V / 60Hz or 220V / 50Hz"
-    ],
-    [
-     "Oxygen Supply Unit Dimensions",
-     "L 420 mm x W 400 mm x H 768 mm"
-    ],
-    [
-     "Climate Control Operating Voltage",
-     "220V / 50Hz"
-    ],
-    [
-     "Climate Control Refrigerant Type",
-     "R410A refrigerant"
-    ],
-    [
-     "Climate Control Refrigerant Capacity",
-     "260 g charge volume"
-    ],
-    [
-     "Climate Control Power Rating",
-     "660 W cooling system"
-    ]
-   ],
-   "image": "assets/images/hbot-1-seater-40.webp",
-   "tileColor": "#000000"
   },
   {
    "id": "hbot-2-seater-41",
@@ -3498,7 +4714,7 @@ window.ALTEON_DATA = {
    "categoryId": "hyperbaric-oxygen-chambers",
    "model": null,
    "overview": "The HBOT 2 Seater is a commercial grade two seat hyperbaric oxygen therapy chamber engineered for advanced cellular repair, longevity programming, and accelerated recovery for two guests at once. Built around a Q345R carbon steel and acrylic cabin, it operates at a therapeutic working pressure of up to 1.9 ATA with first class lounge seating and soft padded upholstery for a shared luxury suite experience. An integrated air conditioning unit, headset oxygen delivery, and built in overpressure release make it a seamless fit for premium clinics, spas, and longevity centres.",
-   "howItWorks": "Hyperbaric oxygen therapy involves breathing high concentration oxygen inside a pressurised chamber, where the elevated pressure dissolves oxygen directly into the blood plasma. This plasma driven oxygen reaches hypoxic or damaged tissues even when blood flow is restricted, reducing inflammation, improving microcirculation, and supporting faster cellular repair. The chamber delivers 95±3% oxygen via headset while an integrated climate control system and built in overpressure release maintain a safe, comfortable environment for two occupants.",
+   "howItWorks": "Hyperbaric oxygen therapy involves breathing high concentration oxygen inside a pressurised chamber, where the elevated pressure dissolves oxygen directly into the blood plasma. This plasma driven oxygen reaches hypoxic or damaged tissues even when blood flow is restricted, reducing inflammation, improving microcirculation, and supporting faster cellular repair. The chamber delivers 95\u00b13% oxygen via headset while an integrated climate control system and built in overpressure release maintain a safe, comfortable environment for two occupants.",
    "benefits": [
     "Saturates blood plasma with oxygen for supra oxygenation at the cellular level",
     "Accelerates recovery and tissue repair after exercise, surgery, or injury",
@@ -3515,7 +4731,7 @@ window.ALTEON_DATA = {
     "Maximum working pressure up to 1.9 ATA (customisable)",
     "Q345R carbon steel and acrylic cabin construction",
     "First class lounge seating with soft padded upholstery",
-    "Oxygen supply concentration of 95±3% via headset delivery",
+    "Oxygen supply concentration of 95\u00b13% via headset delivery",
     "Integrated air conditioning unit for climate control",
     "Premium spray painted exterior finish",
     "Built in overpressure release valve",
@@ -3591,7 +4807,7 @@ window.ALTEON_DATA = {
      "Q345R Carbon Steel / Acrylic"
     ]
    ],
-   "image": "assets/images/hbot-2-seater-41.webp",
+   "image": "assets/images/alteon/hbot-2-seater-41.webp",
    "tileColor": "#9a9a97"
   },
   {
@@ -3701,7 +4917,7 @@ window.ALTEON_DATA = {
      "UL Listed"
     ]
    ],
-   "image": "assets/images/aero-pulse-32-42.webp",
+   "image": "assets/images/alteon/aero-pulse-32-42.webp",
    "tileColor": "#ffffff",
    "gallery": [
     "assets/images/alteon/gallery/Aero Pulse__0_3001x1688_p0.jpeg",
@@ -3816,7 +5032,7 @@ window.ALTEON_DATA = {
      "UL Listed"
     ]
    ],
-   "image": "assets/images/aero-pulse-40-43.webp",
+   "image": "assets/images/alteon/aero-pulse-40-43.webp",
    "tileColor": "#ffffff"
   },
   {
@@ -3910,7 +5126,7 @@ window.ALTEON_DATA = {
      "21.65 x 31.50 x 36.61 in"
     ]
    ],
-   "image": "assets/images/pellvilift-45.webp",
+   "image": "assets/images/alteon/pellvilift-45.webp",
    "tileColor": "#b5b4bb",
    "gallery": [
     "assets/images/alteon/gallery/Pellvilift__0_1525x1823_p1.png",
@@ -3979,7 +5195,7 @@ window.ALTEON_DATA = {
     ],
     [
      "Infrared temperature range",
-     "25 to 50°C"
+     "25 to 50\u00b0C"
     ],
     [
      "Infrared Lamp Power",
@@ -4003,7 +5219,7 @@ window.ALTEON_DATA = {
     ],
     [
      "Treadmill incline range",
-     "0 to 10°"
+     "0 to 10\u00b0"
     ],
     [
      "Maximum load",
@@ -4018,7 +5234,7 @@ window.ALTEON_DATA = {
      "1400 nm"
     ]
    ],
-   "image": "assets/images/bodyshape-v2-47.webp",
+   "image": "assets/images/alteon/bodyshape-v2-47.webp",
    "tileColor": "#ffffff",
    "gallery": [
     "assets/images/alteon/gallery/Bodyshape V2__0_1920x1200_p0.jpeg",
@@ -4088,7 +5304,7 @@ window.ALTEON_DATA = {
     ],
     [
      "Infrared temperature",
-     "25 to 50°C"
+     "25 to 50\u00b0C"
     ],
     [
      "Electric adjustable backrest angle",
@@ -4108,7 +5324,7 @@ window.ALTEON_DATA = {
     ],
     [
      "Maximum backrest incline",
-     "20°"
+     "20\u00b0"
     ],
     [
      "Touch display size",
@@ -4119,7 +5335,7 @@ window.ALTEON_DATA = {
      "1400 nm"
     ]
    ],
-   "image": "assets/images/infrashape-horizontal-v2-48.webp",
+   "image": "assets/images/alteon/infrashape-horizontal-v2-48.webp",
    "tileColor": "#151515",
    "gallery": [
     "assets/images/alteon/gallery/Infrashape Horizontal V2__0_2527x1579_p3.jpeg",
@@ -4206,7 +5422,7 @@ window.ALTEON_DATA = {
      "45 cm (17.7 in)"
     ]
    ],
-   "image": "assets/images/rollshape-49.webp",
+   "image": "assets/images/alteon/rollshape-49.webp",
    "tileColor": "#151515",
    "gallery": [
     "assets/images/alteon/gallery/Rollshape__0_1913x1196_p3.jpeg",
@@ -4307,10 +5523,10 @@ window.ALTEON_DATA = {
     ],
     [
      "Temperature Control",
-     "10°C to 70°C (50°F to 158°F)"
+     "10\u00b0C to 70\u00b0C (50\u00b0F to 158\u00b0F)"
     ]
    ],
-   "image": "assets/images/pemf-bed-50.webp",
+   "image": "assets/images/alteon/pemf-bed-50.webp",
    "tileColor": "#000000",
    "gallery": [
     "assets/images/alteon/gallery/PEMF Bed__0_1698x2161_p1.jpeg",
@@ -4394,10 +5610,10 @@ window.ALTEON_DATA = {
     ],
     [
      "Max temperature",
-     "36.6°C"
+     "36.6\u00b0C"
     ]
    ],
-   "image": "assets/images/activ-couch-51.webp",
+   "image": "assets/images/alteon/activ-couch-51.webp",
    "tileColor": "#8b8c8e",
    "gallery": [
     "assets/images/alteon/gallery/Activ Couch V2__0_1920x1200_p0.jpeg",
@@ -4487,10 +5703,10 @@ window.ALTEON_DATA = {
     ],
     [
      "Max temperature",
-     "36.6°C"
+     "36.6\u00b0C"
     ]
    ],
-   "image": "assets/images/activ-couch-v2-52.webp",
+   "image": "assets/images/alteon/activ-couch-v2-52.webp",
    "tileColor": "#f3f4f7"
   },
   {
@@ -4499,8 +5715,8 @@ window.ALTEON_DATA = {
    "category": "Cryotherapy",
    "categoryId": "whole-body-cryotherapy",
    "model": null,
-   "overview": "The Cryo Q One is a fully electric, nitrogen free whole body cryotherapy chamber that delivers a thermal recovery sensation equivalent to -110°C. Built for longevity clinics and premium gyms, it uses a fully electric cascade refrigeration system to provide clean, repeatable cold exposure without liquid nitrogen. Panoramic dual pane glass, smart voice prompts, customisable ambient lighting, and high definition audio elevate the cold exposure into a premium wellness experience.",
-   "howItWorks": "A fully electric cascade refrigeration system, paired with a water cooled condenser, drives the cabin to a thermal intensity equivalent to -110°C without any liquid nitrogen. The design eliminates nitrogen handling entirely for a safe, breathable environment, and an automated drying cycle prepares the cabin between sessions. A 15.6 inch touchscreen manages protocols while voice prompts and ambient lighting guide the user through each session.",
+   "overview": "The Cryo Q One is a fully electric, nitrogen free whole body cryotherapy chamber that delivers a thermal recovery sensation equivalent to -110\u00b0C. Built for longevity clinics and premium gyms, it uses a fully electric cascade refrigeration system to provide clean, repeatable cold exposure without liquid nitrogen. Panoramic dual pane glass, smart voice prompts, customisable ambient lighting, and high definition audio elevate the cold exposure into a premium wellness experience.",
+   "howItWorks": "A fully electric cascade refrigeration system, paired with a water cooled condenser, drives the cabin to a thermal intensity equivalent to -110\u00b0C without any liquid nitrogen. The design eliminates nitrogen handling entirely for a safe, breathable environment, and an automated drying cycle prepares the cabin between sessions. A 15.6 inch touchscreen manages protocols while voice prompts and ambient lighting guide the user through each session.",
    "benefits": [
     "Improves sleep quality through circadian regulation and parasympathetic activation",
     "Stimulates collagen synthesis to improve skin tone and elasticity",
@@ -4513,7 +5729,7 @@ window.ALTEON_DATA = {
    ],
    "features": [
     "Fully electric cascade refrigeration with no liquid nitrogen",
-    "Thermal intensity equivalent to -110°C",
+    "Thermal intensity equivalent to -110\u00b0C",
     "Water cooled condenser heat rejection system",
     "Panoramic dual pane glass for visibility",
     "Smart voice prompts to guide sessions",
@@ -4612,7 +5828,7 @@ window.ALTEON_DATA = {
      "Fully automatic 2 hour"
     ]
    ],
-   "image": "assets/images/cryo-q-one-53.webp",
+   "image": "assets/images/alteon/cryo-q-one-53.webp",
    "tileColor": "#000000"
   },
   {
@@ -4621,8 +5837,8 @@ window.ALTEON_DATA = {
    "category": "Cryotherapy",
    "categoryId": "whole-body-cryotherapy",
    "model": null,
-   "overview": "The Cryo Hybrid is a high performance, fully electric whole body cryotherapy chamber engineered to deliver a thermal intensity equivalent to -110°C without the use of liquid nitrogen. Designed for high volume operation and maximum return on investment, it features a massive 21 inch touchscreen, low daily energy costs, and an open, spacious cabin. Smart voice notifications, premium audio, and ambient LED lighting create a refined recovery experience for demanding wellness environments.",
-   "howItWorks": "A fully electric refrigeration system drives the cabin to a thermal intensity equivalent to -110°C without any liquid nitrogen, delivering clean, repeatable cold exposure. The open cabin design and high throughput engineering support back to back sessions at low daily energy cost. A 21 inch touchscreen manages protocols while an automated drying cycle prepares the cabin between users.",
+   "overview": "The Cryo Hybrid is a high performance, fully electric whole body cryotherapy chamber engineered to deliver a thermal intensity equivalent to -110\u00b0C without the use of liquid nitrogen. Designed for high volume operation and maximum return on investment, it features a massive 21 inch touchscreen, low daily energy costs, and an open, spacious cabin. Smart voice notifications, premium audio, and ambient LED lighting create a refined recovery experience for demanding wellness environments.",
+   "howItWorks": "A fully electric refrigeration system drives the cabin to a thermal intensity equivalent to -110\u00b0C without any liquid nitrogen, delivering clean, repeatable cold exposure. The open cabin design and high throughput engineering support back to back sessions at low daily energy cost. A 21 inch touchscreen manages protocols while an automated drying cycle prepares the cabin between users.",
    "benefits": [
     "Improves sleep quality through circadian regulation and parasympathetic activation",
     "Stimulates collagen synthesis to improve skin tone and elasticity",
@@ -4635,7 +5851,7 @@ window.ALTEON_DATA = {
    ],
    "features": [
     "Fully electric operation with no liquid nitrogen",
-    "Perceived temperature up to -110°C",
+    "Perceived temperature up to -110\u00b0C",
     "Open, spacious cabin for comfort and high throughput",
     "Massive 21 inch touchscreen interface",
     "Low daily energy cost for maximum return on investment",
@@ -4714,7 +5930,7 @@ window.ALTEON_DATA = {
      "Six categories: atmospheric, dreamy, powerful, happy, inspiring, relaxing"
     ]
    ],
-   "image": "assets/images/cryo-hybrid-54.webp",
+   "image": "assets/images/alteon/cryo-hybrid-54.webp",
    "tileColor": "#3a3a3a",
    "gallery": [
     "assets/images/alteon/gallery/Cryo Hybrid__0_1489x930_p0.jpeg",
@@ -4728,8 +5944,8 @@ window.ALTEON_DATA = {
    "category": "Cryotherapy",
    "categoryId": "whole-body-cryotherapy",
    "model": null,
-   "overview": "The Cryo Total is an advanced cryotherapy chamber that reaches subzero temperatures down to -140°C for both Whole Body (WBC) and Partial Body (PBC) treatments. It features an electric window that adjusts to keep the client's head inside or outside the cold air flow, with an innovative system that ensures a completely breathable environment and no direct nitrogen vapour contact. An auto drying system and a bezel free 21 inch touchscreen interface deliver a premium, flexible recovery experience.",
-   "howItWorks": "The chamber distributes extreme cold down to -140°C for both whole body and partial body protocols, cooling to temperature in just 3 to 5 minutes. An innovative air management system ensures a fully breathable environment with no direct nitrogen vapour contact for the user, while an electric window positions the head inside or outside the cold air flow as needed. An auto drying system prepares the cabin between sessions, all managed from a bezel free 21 inch touchscreen.",
+   "overview": "The Cryo Total is an advanced cryotherapy chamber that reaches subzero temperatures down to -140\u00b0C for both Whole Body (WBC) and Partial Body (PBC) treatments. It features an electric window that adjusts to keep the client's head inside or outside the cold air flow, with an innovative system that ensures a completely breathable environment and no direct nitrogen vapour contact. An auto drying system and a bezel free 21 inch touchscreen interface deliver a premium, flexible recovery experience.",
+   "howItWorks": "The chamber distributes extreme cold down to -140\u00b0C for both whole body and partial body protocols, cooling to temperature in just 3 to 5 minutes. An innovative air management system ensures a fully breathable environment with no direct nitrogen vapour contact for the user, while an electric window positions the head inside or outside the cold air flow as needed. An auto drying system prepares the cabin between sessions, all managed from a bezel free 21 inch touchscreen.",
    "benefits": [
     "Improves sleep quality through circadian regulation and parasympathetic activation",
     "Stimulates collagen synthesis to improve skin tone and elasticity",
@@ -4741,7 +5957,7 @@ window.ALTEON_DATA = {
     "Lowers injury risk and maintains tissue health under repetitive load"
    ],
    "features": [
-    "Reaches temperatures down to -140°C",
+    "Reaches temperatures down to -140\u00b0C",
     "Supports both Whole Body (WBC) and Partial Body (PBC) treatments",
     "Electric window to keep the head inside or outside the cold air flow",
     "Completely breathable environment with no direct nitrogen vapour contact",
@@ -4832,7 +6048,7 @@ window.ALTEON_DATA = {
      "Yes"
     ]
    ],
-   "image": "assets/images/cryo-total-55.webp",
+   "image": "assets/images/alteon/cryo-total-55.webp",
    "tileColor": "#000000",
    "gallery": [
     "assets/images/alteon/gallery/Cryo Total__0_2055x1284_p0.jpeg",
@@ -4846,8 +6062,8 @@ window.ALTEON_DATA = {
    "category": "Cryotherapy",
    "categoryId": "whole-body-cryotherapy",
    "model": null,
-   "overview": "The Cryo V2 is an open roof, nitrogen based cryosauna that evenly distributes extreme temperatures down to -180°C for localised partial body treatments. It features dual touchscreens, a thermovision safety camera, and an auto lifting platform to deliver fast muscle recovery and metabolic boosts. Engineered for high performance recovery, it combines rapid cold exposure with intelligent safety monitoring.",
-   "howItWorks": "The open roof cryosauna uses nitrogen cooling to evenly distribute temperatures between -120°C and -180°C around the body for localised partial body treatment, keeping the head above the cold vapour. An auto lifting platform positions each user correctly while a thermovision safety camera monitors the session in real time. Dual touchscreens, one external and one in cabin, manage protocols and provide user feedback throughout.",
+   "overview": "The Cryo V2 is an open roof, nitrogen based cryosauna that evenly distributes extreme temperatures down to -180\u00b0C for localised partial body treatments. It features dual touchscreens, a thermovision safety camera, and an auto lifting platform to deliver fast muscle recovery and metabolic boosts. Engineered for high performance recovery, it combines rapid cold exposure with intelligent safety monitoring.",
+   "howItWorks": "The open roof cryosauna uses nitrogen cooling to evenly distribute temperatures between -120\u00b0C and -180\u00b0C around the body for localised partial body treatment, keeping the head above the cold vapour. An auto lifting platform positions each user correctly while a thermovision safety camera monitors the session in real time. Dual touchscreens, one external and one in cabin, manage protocols and provide user feedback throughout.",
    "benefits": [
     "Delivers fast muscle recovery after training",
     "Boosts metabolism and thermogenic energy expenditure",
@@ -4860,12 +6076,12 @@ window.ALTEON_DATA = {
    ],
    "features": [
     "Open roof cryosauna for localised partial body treatment",
-    "Even distribution of extreme cold down to -180°C",
+    "Even distribution of extreme cold down to -180\u00b0C",
     "Nitrogen based cooling",
     "Dual touchscreens (10.1 inch external and 13.3 inch in cabin)",
     "Thermovision safety camera for real time monitoring",
     "Auto lifting platform for correct positioning",
-    "Temperature range from -120°C to -180°C",
+    "Temperature range from -120\u00b0C to -180\u00b0C",
     "Efficient energy consumption of 1.5 to 2 kW",
     "Low nitrogen use per session"
    ],
@@ -4946,7 +6162,7 @@ window.ALTEON_DATA = {
      "only 6 month"
     ]
    ],
-   "image": "assets/images/cryo-v2-56.webp",
+   "image": "assets/images/alteon/cryo-v2-56.webp",
    "tileColor": "#000000",
    "gallery": [
     "assets/images/alteon/gallery/Cryo V2__0_1551x2122_p1.jpeg",
@@ -5042,7 +6258,7 @@ window.ALTEON_DATA = {
      "Marine quality 316L stainless steel"
     ]
    ],
-   "image": "assets/images/hydro-shape-57.webp",
+   "image": "assets/images/alteon/hydro-shape-57.webp",
    "tileColor": "#151517",
    "gallery": [
     "assets/images/alteon/gallery/Hydro Shape__0_2643x1652_p0.jpeg",
@@ -5138,7 +6354,7 @@ window.ALTEON_DATA = {
      "Marine quality 316L stainless steel"
     ]
    ],
-   "image": "assets/images/hydrobike-ii-58.webp",
+   "image": "assets/images/alteon/hydrobike-ii-58.webp",
    "tileColor": "#15161b",
    "gallery": [
     "assets/images/alteon/gallery/Hydrobike II__0_2114x1321_p3.jpeg",
@@ -5211,7 +6427,7 @@ window.ALTEON_DATA = {
     ],
     [
      "Water temperature range",
-     "20 to 40°C"
+     "20 to 40\u00b0C"
     ],
     [
      "Number of jets",
@@ -5230,7 +6446,7 @@ window.ALTEON_DATA = {
      "Red 650 to 730 NM, Blue 430 to 450 NM, Green, Purple, Yellow 580 NM, White 380 to 730 NM"
     ]
    ],
-   "image": "assets/images/activ-aqua-bed-59.webp",
+   "image": "assets/images/alteon/activ-aqua-bed-59.webp",
    "tileColor": "#151515",
    "gallery": [
     "assets/images/alteon/gallery/Activ Aqua Bed__0_1920x1200_p0.jpeg",
@@ -5318,7 +6534,7 @@ window.ALTEON_DATA = {
      "60 to 80 sq ft"
     ]
    ],
-   "image": "assets/images/single-person-hbot-al3v36-100.webp",
+   "image": "assets/images/alteon/single-person-hbot-al3v36-100.webp",
    "tileColor": "#080605"
   },
   {
@@ -5406,7 +6622,7 @@ window.ALTEON_DATA = {
      "Exclusive edition"
     ]
    ],
-   "image": "assets/images/bodyshape-200.webp",
+   "image": "assets/images/alteon/bodyshape-200.webp",
    "tileColor": "#000000"
   },
   {
@@ -5488,7 +6704,7 @@ window.ALTEON_DATA = {
      "Exclusive edition"
     ]
    ],
-   "image": "assets/images/infrashape-horizontal-201.webp",
+   "image": "assets/images/alteon/infrashape-horizontal-201.webp",
    "tileColor": "#000000"
   },
   {
@@ -5554,7 +6770,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/infrastep-202.webp",
+   "image": "assets/images/alteon/infrastep-202.webp",
    "tileColor": "#000000"
   },
   {
@@ -5600,7 +6816,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/roll-slimmer-203.webp",
+   "image": "assets/images/alteon/roll-slimmer-203.webp",
    "tileColor": "#000000"
   },
   {
@@ -5651,7 +6867,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/roll-slimmer-xs-204.webp",
+   "image": "assets/images/alteon/roll-slimmer-xs-204.webp",
    "tileColor": "#000000"
   },
   {
@@ -5712,7 +6928,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/vibrashape-205.webp",
+   "image": "assets/images/alteon/vibrashape-205.webp",
    "tileColor": "#000000"
   },
   {
@@ -5788,7 +7004,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/halo-renew-longevity-capsule-206.webp",
+   "image": "assets/images/alteon/halo-renew-longevity-capsule-206.webp",
    "tileColor": "#000000"
   },
   {
@@ -5859,7 +7075,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/activshape-pilates-207.webp",
+   "image": "assets/images/alteon/activshape-pilates-207.webp",
    "tileColor": "#000000"
   },
   {
@@ -5924,7 +7140,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/red-couch-oxy-208.webp",
+   "image": "assets/images/alteon/red-couch-oxy-208.webp",
    "tileColor": "#000000"
   },
   {
@@ -5979,7 +7195,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/red-couch-360-209.webp",
+   "image": "assets/images/alteon/red-couch-360-209.webp",
    "tileColor": "#000000"
   },
   {
@@ -6049,7 +7265,7 @@ window.ALTEON_DATA = {
      "2x"
     ]
    ],
-   "image": "assets/images/va-body-sculpt-210.webp",
+   "image": "assets/images/alteon/va-body-sculpt-210.webp",
    "tileColor": "#000000"
   },
   {
@@ -6143,7 +7359,7 @@ window.ALTEON_DATA = {
      "Option"
     ]
    ],
-   "image": "assets/images/va-endoactiv-211.webp",
+   "image": "assets/images/alteon/va-endoactiv-211.webp",
    "tileColor": "#000000"
   },
   {
@@ -6236,7 +7452,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/cryo-local-polar-bear-212.webp",
+   "image": "assets/images/alteon/cryo-local-polar-bear-212.webp",
    "tileColor": "#000000"
   },
   {
@@ -6333,7 +7549,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/cryo-flow-213.webp",
+   "image": "assets/images/alteon/cryo-flow-213.webp",
    "tileColor": "#000000"
   },
   {
@@ -6404,7 +7620,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/cryo-flow-mini-214.webp",
+   "image": "assets/images/alteon/cryo-flow-mini-214.webp",
    "tileColor": "#000000"
   },
   {
@@ -6470,7 +7686,7 @@ window.ALTEON_DATA = {
      "50mm / 30mm"
     ]
    ],
-   "image": "assets/images/cryo-touch-215.webp",
+   "image": "assets/images/alteon/cryo-touch-215.webp",
    "tileColor": "#000000"
   }
  ],
@@ -6488,5 +7704,320 @@ window.ALTEON_DATA = {
   "https://alteontech.com/assets/logo/logo11.svg",
   "https://alteontech.com/assets/logo/logo12.svg",
   "https://alteontech.com/assets/logo/logo13.svg"
+ ],
+ "guides": [
+  {
+   "slug": "what-is-hyperbaric-oxygen-therapy",
+   "title": "What is Hyperbaric Oxygen Therapy (HBOT)? Benefits and Uses | TechFit",
+   "meta": "Hyperbaric oxygen therapy (HBOT) delivers oxygen under pressure to support recovery, healing and cellular energy. Learn how it works, its benefits, and chamber options in India.",
+   "body": "**Hyperbaric oxygen therapy (HBOT) is a treatment in which a person breathes oxygen inside a sealed chamber pressurised above normal atmospheric pressure, usually between 1.5 and 2.0 ATA. The raised pressure dissolves far more oxygen into the blood plasma than breathing normally, which the body uses to support tissue repair, recovery and cellular energy.**\n\n### How HBOT works\nInside a pressurised chamber the lungs can take in close to 100% oxygen. Because the environment is pressurised, that oxygen dissolves directly into plasma and reaches tissue that ordinary circulation supplies slowly. Sessions typically last 45 to 90 minutes.\n\n### Reported benefits\nHBOT is widely used to support accelerated tissue repair and wound healing, faster recovery from training and injury, reduced inflammation, sharper cognition and clarity, and general cellular vitality. Outcomes vary by individual and protocol.\n\n### Who uses it and where\nHBOT chambers are installed in longevity and recovery clinics, premium gyms and studios, hotel and resort spas, sports and physiotherapy centres, and high end residences.\n\n### FAQ\n- **How long is a session?** Most protocols run 45 to 90 minutes.\n- **What pressure do these chambers reach?** Commonly 1.5 to 2.0 ATA depending on the model.\n- **Is HBOT available in India?** Yes. TechFit is the authorised distributor of Alteon in India and handles supply, installation and AMC."
+  },
+  {
+   "slug": "whole-body-cryotherapy-electric-vs-nitrogen",
+   "title": "Whole Body Cryotherapy: Electric vs Liquid Nitrogen Explained | TechFit",
+   "meta": "Understand whole body cryotherapy and the difference between electric (nitrogen free) and liquid nitrogen chambers, their benefits, safety and running cost.",
+   "body": "**Whole body cryotherapy exposes the body to very cold air for about 2 to 3 minutes to support recovery, reduce inflammation and boost circulation. There are two main technologies: electric chambers that chill air with refrigeration and use no nitrogen, and nitrogen chambers that cool using liquid nitrogen vapour.**\n\n### Electric vs liquid nitrogen\nElectric cryo chambers are nitrogen free, deliver a breathable full body environment, and generally have lower running cost and simpler operation because there is no nitrogen to refill. Nitrogen based systems reach very low temperatures quickly and are well established, but require nitrogen supply and careful ventilation. Many commercial operators now prefer electric systems for ease of daily use.\n\n### Benefits\nUsers turn to cryotherapy for faster muscle recovery, reduced soreness and inflammation, a metabolic and energy boost, and improved resilience.\n\n### Choosing a system\nConsider technology (electric or nitrogen), lowest achievable temperature, cooling time between sessions, footprint, and daily running cost.\n\n### FAQ\n- **How cold does it get?** Depending on the model, from around -110C up to -180C.\n- **Is electric or nitrogen better for a gym?** Electric is popular for commercial use due to low running cost and no nitrogen handling.\n- **How long is a session?** Typically 2 to 3 minutes."
+  },
+  {
+   "slug": "red-light-therapy-photobiomodulation-guide",
+   "title": "Red Light Therapy and Photobiomodulation: A Practical Guide | TechFit",
+   "meta": "How red light therapy (photobiomodulation) works, the wavelengths that matter, its benefits, and how to choose panels or full body beds.",
+   "body": "**Red light therapy, also called photobiomodulation (PBM), uses red and near infrared light, typically in the 630 to 940 nm range, to stimulate activity in the cell's mitochondria. This is used to support skin health, recovery, circulation and cellular energy.**\n\n### How photobiomodulation works\nSpecific wavelengths are absorbed by the mitochondria, which can increase cellular energy production. Red wavelengths tend to act on skin and surface tissue, while near infrared penetrates deeper to muscle and joints. Flagship systems allow independent control of each wavelength and adjustable frequency.\n\n### Benefits\nPBM is used to support skin tone and collagen activity, muscle recovery, circulation, and general cellular vitality.\n\n### Panels vs full body beds\nAngled and vertical panels suit targeted use and smaller spaces. Full body beds and canopies deliver even, hands free exposure and are favoured in clinics and premium studios.\n\n### FAQ\n- **Which wavelengths are used?** Commonly 633, 660, 810, 850 and 940 nm across the range.\n- **How long is a session?** Often 10 to 20 minutes.\n- **Panel or bed?** Beds suit high traffic commercial use; panels suit targeted or space limited setups."
+  },
+  {
+   "slug": "cold-plunge-ice-bath-benefits-guide",
+   "title": "Cold Plunge and Ice Bath Benefits and How to Choose One | TechFit",
+   "meta": "The benefits of cold plunge and ice bath immersion and how to choose a commercial unit on chiller, filtration, capacity and material.",
+   "body": "**A cold plunge or ice bath is a short immersion in cold water, usually around 5 to 15C, used to support recovery, circulation, alertness and resilience. Commercial units add a chiller, filtration and sterilisation so the water stays cold and clean for repeat use.**\n\n### Benefits\nCold immersion is used for reduced muscle soreness, faster recovery, improved circulation, a mood and alertness lift, and building stress resilience.\n\n### How to choose a commercial cold plunge\nLook at chiller power (for stable temperature under repeated use), dual filtration and UV or ozone sterilisation (for hygiene at volume), capacity, and construction material such as stainless steel or a wood finish.\n\n### Commercial considerations\nFor gyms, hotels and clinics, prioritise fast temperature recovery, low maintenance filtration and a finish that suits the space.\n\n### FAQ\n- **How cold should it be?** Many protocols use 5 to 15C.\n- **Do commercial units filter the water?** Yes, quality units include dual filtration plus UV or ozone sterilisation.\n- **How long do people stay in?** Typically 2 to 5 minutes."
+  },
+  {
+   "slug": "infrared-sauna-benefits-buyer-guide",
+   "title": "Infrared Sauna Benefits and Buyer Guide | TechFit",
+   "meta": "How infrared saunas differ from traditional saunas, their benefits, and what to look for when buying a commercial cabin.",
+   "body": "**An infrared sauna uses infrared panels to warm the body directly rather than heating the air around it, so it operates at a gentler air temperature than a traditional sauna while still promoting a deep sweat. It is used to support relaxation, circulation and detoxification.**\n\n### Infrared vs traditional\nTraditional saunas heat the air to high temperatures. Infrared cabins warm the body directly at lower air temperatures, which many people find more comfortable for longer sessions.\n\n### Benefits\nInfrared sauna use is associated with relaxation and stress relief, improved circulation, a detox supporting sweat, and post exercise recovery.\n\n### Buyer guide\nConsider construction material such as Canadian Hemlock, capacity, central control and chromotherapy features, and low EMF panels for comfort.\n\n### FAQ\n- **How hot does an infrared sauna get?** Typically 50 to 90C air temperature, lower than a traditional sauna.\n- **How many people fit?** Cabins range from single up to four person depending on size.\n- **What wood is used?** Premium cabins commonly use Canadian Hemlock."
+  },
+  {
+   "slug": "what-is-ihht-intermittent-hypoxic-hyperoxic-training",
+   "title": "What is IHHT (Intermittent Hypoxic Hyperoxic Training)? | TechFit",
+   "meta": "IHHT alternates low and high oxygen air to stimulate cellular adaptation. Learn how it works, its benefits and who it is for.",
+   "body": "**Intermittent Hypoxic Hyperoxic Training (IHHT) alternates periods of low oxygen (hypoxic) air with periods of high oxygen (hyperoxic) air. This controlled cycling is used to stimulate cellular adaptation, support mitochondrial health and improve conditioning.**\n\n### How IHHT works\nA precision gas system shifts the air a person breathes between a hypoxic challenge and a hyperoxic recovery phase. The brief altitude like stress prompts the body to adapt, while the oxygen rich phase supports recovery.\n\n### Benefits\nIHHT is used to support metabolic optimisation, cardiovascular stamina, cellular rejuvenation and athletic performance.\n\n### Who it is for\nLongevity clinics, performance labs, premium gyms and rehabilitation centres use IHHT as a low impact conditioning and recovery protocol.\n\n### FAQ\n- **Is IHHT strenuous?** No, the person rests while the system varies the oxygen level.\n- **What oxygen levels are used?** Systems cycle roughly between 9 to 11% hypoxic and 30 to 34% hyperoxic depending on the model.\n- **How long is a session?** Often 30 to 40 minutes."
+  },
+  {
+   "slug": "dry-float-therapy-explained",
+   "title": "Dry Float Therapy: What It Is and Who It Is For | TechFit",
+   "meta": "Dry float therapy gives a weightless, sensory reduced experience for deep relaxation and recovery. Learn how it works and its benefits.",
+   "body": "**Dry float therapy suspends the body on a warm, waterproof membrane above water, so the person feels weightless without getting wet. Combined with warmth and reduced sensory input, it is used for deep relaxation, spinal decompression and recovery.**\n\n### How it works\nThe body rests on a flexible membrane over temperature controlled water. Support is even across the body, taking pressure off the spine and joints, often paired with sound therapy and a calm, low stimulation environment.\n\n### Benefits\nDry float is used to support stress reduction, muscle and joint relief, improved sleep, and nervous system recovery.\n\n### Who it is for\nSpas, wellness centres, longevity clinics and recovery lounges use dry float as a passive, deeply relaxing recovery modality.\n\n### FAQ\n- **Do you get wet?** No, the body rests on a membrane above the water.\n- **How long is a session?** Commonly 30 to 60 minutes.\n- **Who is it suited to?** Anyone seeking relaxation, decompression and recovery."
+  },
+  {
+   "slug": "design-a-recovery-and-longevity-suite",
+   "title": "How to Design a Recovery and Longevity Suite for a Gym, Hotel or Clinic | TechFit",
+   "meta": "A practical guide to planning a recovery and longevity suite, choosing complementary modalities, and matching them to space, footfall and budget.",
+   "body": "**A recovery and longevity suite combines complementary modalities such as heat, cold, oxygen, light and compression, chosen to match the venue's space, footfall and goals. The strongest setups pair a heating modality, a cooling modality and at least one cellular therapy so guests can follow a contrast and recovery circuit.**\n\n### Choose modalities by goal\nFor performance and sports recovery, pair cold plunge or cryotherapy with HBOT and red light. For wellness and relaxation, pair an infrared sauna with dry float and red light. For longevity and clinical positioning, add HBOT, IHHT and body composition scanning.\n\n### Plan the space\nEach modality has a recommended footprint and services. Cryo chambers and HBOT need dedicated room, ventilation and power; saunas and plunges need drainage and moisture management. Plan circulation so guests can move logically from heat to cold to recovery.\n\n### Match to venue\nGyms benefit from a compact recovery zone; hotels and resorts suit a premium spa journey; clinics and longevity centres favour diagnostic plus therapy stacks; residences suit a curated one or two modality room.\n\n### Installation and support\nAs the authorised Alteon distributor in India, TechFit provides site assessment, layout design, installation, staff training and AMC end to end.\n\n### FAQ\n- **What is the minimum to start?** A pairing of one heat, one cold and one recovery modality works well.\n- **Do you help with layout?** Yes, TechFit provides space planning and installation.\n- **Which venues is this for?** Gyms, hotels, clinics, longevity centres and residences."
+  }
+ ],
+ "alternatives": [
+  {
+   "name": "OxyHealth",
+   "slug": "oxyhealth-alternative-india",
+   "category_singular": "hyperbaric oxygen chamber",
+   "recommended": [
+    "HBOT 1 Seater",
+    "HBOT 2 Seater",
+    "Single Person HBOT AL3V36",
+    "Aero Pulse 32\"",
+    "Aero Pulse 40\""
+   ],
+   "choose_note": "compare working pressure (ATA), capacity, oxygen concentration, chamber size and recommended room size."
+  },
+  {
+   "name": "Summit to Sea",
+   "slug": "summit-to-sea-alternative-india",
+   "category_singular": "hyperbaric oxygen chamber",
+   "recommended": [
+    "HBOT 1 Seater",
+    "HBOT 2 Seater",
+    "Single Person HBOT AL3V36",
+    "Aero Pulse 32\"",
+    "Aero Pulse 40\""
+   ],
+   "choose_note": "compare working pressure (ATA), capacity, oxygen concentration, chamber size and recommended room size."
+  },
+  {
+   "name": "CryoBuilt",
+   "slug": "cryobuilt-alternative-india",
+   "category_singular": "whole body cryotherapy chamber",
+   "recommended": [
+    "Cryo Q One",
+    "Cryo Hybrid",
+    "Cryo Total",
+    "Cryo V2",
+    "CryoOnyx Pro",
+    "ALTEON ICYONYX"
+   ],
+   "choose_note": "compare technology (electric nitrogen free vs liquid nitrogen), lowest temperature, cooling time and running cost."
+  },
+  {
+   "name": "Impact Cryotherapy",
+   "slug": "impact-cryotherapy-alternative-india",
+   "category_singular": "whole body cryotherapy chamber",
+   "recommended": [
+    "Cryo Q One",
+    "Cryo Hybrid",
+    "Cryo Total",
+    "Cryo V2",
+    "CryoOnyx Pro",
+    "ALTEON ICYONYX"
+   ],
+   "choose_note": "compare technology (electric nitrogen free vs liquid nitrogen), lowest temperature, cooling time and running cost."
+  },
+  {
+   "name": "Mecotec",
+   "slug": "mecotec-alternative-india",
+   "category_singular": "whole body cryotherapy chamber",
+   "recommended": [
+    "Cryo Q One",
+    "Cryo Hybrid",
+    "Cryo Total",
+    "Cryo V2",
+    "CryoOnyx Pro",
+    "ALTEON ICYONYX"
+   ],
+   "choose_note": "compare technology (electric nitrogen free vs liquid nitrogen), lowest temperature, cooling time and running cost."
+  },
+  {
+   "name": "US Cryotherapy",
+   "slug": "us-cryotherapy-alternative-india",
+   "category_singular": "whole body cryotherapy chamber",
+   "recommended": [
+    "Cryo Q One",
+    "Cryo Hybrid",
+    "Cryo Total",
+    "Cryo V2",
+    "CryoOnyx Pro",
+    "ALTEON ICYONYX"
+   ],
+   "choose_note": "compare technology (electric nitrogen free vs liquid nitrogen), lowest temperature, cooling time and running cost."
+  },
+  {
+   "name": "CRYO (\u00b0CRYO)",
+   "slug": "cryo-brand-alternative-india",
+   "category_singular": "whole body cryotherapy chamber",
+   "recommended": [
+    "Cryo Q One",
+    "Cryo Hybrid",
+    "Cryo Total",
+    "Cryo V2",
+    "CryoOnyx Pro",
+    "ALTEON ICYONYX"
+   ],
+   "choose_note": "compare technology (electric nitrogen free vs liquid nitrogen), lowest temperature, cooling time and running cost."
+  },
+  {
+   "name": "Joovv",
+   "slug": "joovv-alternative-india",
+   "category_singular": "red light therapy system",
+   "recommended": [
+    "Red Lumen Pro",
+    "Red Lumen",
+    "Red Revive Axis",
+    "Red Revive Curve"
+   ],
+   "choose_note": "compare wavelengths, LED count, total power and independent wavelength control."
+  },
+  {
+   "name": "NovoTHOR",
+   "slug": "novothor-alternative-india",
+   "category_singular": "red light therapy system",
+   "recommended": [
+    "Red Lumen Pro",
+    "Red Lumen",
+    "Red Revive Axis",
+    "Red Revive Curve"
+   ],
+   "choose_note": "compare wavelengths, LED count, total power and independent wavelength control."
+  },
+  {
+   "name": "Mito Red Light",
+   "slug": "mito-red-light-alternative-india",
+   "category_singular": "red light therapy system",
+   "recommended": [
+    "Red Lumen Pro",
+    "Red Lumen",
+    "Red Revive Axis",
+    "Red Revive Curve"
+   ],
+   "choose_note": "compare wavelengths, LED count, total power and independent wavelength control."
+  },
+  {
+   "name": "PlatinumLED",
+   "slug": "platinumled-alternative-india",
+   "category_singular": "red light therapy system",
+   "recommended": [
+    "Red Lumen Pro",
+    "Red Lumen",
+    "Red Revive Axis",
+    "Red Revive Curve"
+   ],
+   "choose_note": "compare wavelengths, LED count, total power and independent wavelength control."
+  },
+  {
+   "name": "Plunge",
+   "slug": "plunge-alternative-india",
+   "category_singular": "cold plunge",
+   "recommended": [
+    "Polar Plunge Pro",
+    "Polar Oval Pro",
+    "Polar Dip Pro"
+   ],
+   "choose_note": "compare chiller power, filtration, sterilisation, capacity and material."
+  },
+  {
+   "name": "Ice Barrel",
+   "slug": "ice-barrel-alternative-india",
+   "category_singular": "cold plunge",
+   "recommended": [
+    "Polar Plunge Pro",
+    "Polar Oval Pro",
+    "Polar Dip Pro"
+   ],
+   "choose_note": "compare chiller power, filtration, sterilisation, capacity and material."
+  },
+  {
+   "name": "Renu Therapy",
+   "slug": "renu-therapy-alternative-india",
+   "category_singular": "cold plunge",
+   "recommended": [
+    "Polar Plunge Pro",
+    "Polar Oval Pro",
+    "Polar Dip Pro"
+   ],
+   "choose_note": "compare chiller power, filtration, sterilisation, capacity and material."
+  },
+  {
+   "name": "BlueCube",
+   "slug": "bluecube-alternative-india",
+   "category_singular": "cold plunge",
+   "recommended": [
+    "Polar Plunge Pro",
+    "Polar Oval Pro",
+    "Polar Dip Pro"
+   ],
+   "choose_note": "compare chiller power, filtration, sterilisation, capacity and material."
+  },
+  {
+   "name": "Sunlighten",
+   "slug": "sunlighten-alternative-india",
+   "category_singular": "infrared sauna",
+   "recommended": [
+    "Heal Spectra",
+    "Heal Nova"
+   ],
+   "choose_note": "compare capacity, dimensions, wood material, controls and EMF."
+  },
+  {
+   "name": "Clearlight",
+   "slug": "clearlight-alternative-india",
+   "category_singular": "infrared sauna",
+   "recommended": [
+    "Heal Spectra",
+    "Heal Nova"
+   ],
+   "choose_note": "compare capacity, dimensions, wood material, controls and EMF."
+  },
+  {
+   "name": "HigherDOSE",
+   "slug": "higherdose-alternative-india",
+   "category_singular": "infrared sauna",
+   "recommended": [
+    "Heal Spectra",
+    "Heal Nova"
+   ],
+   "choose_note": "compare capacity, dimensions, wood material, controls and EMF."
+  },
+  {
+   "name": "CellGym",
+   "slug": "cellgym-alternative-india",
+   "category_singular": "IHHT system",
+   "recommended": [
+    "IHHT Model A",
+    "IHHT Model B"
+   ],
+   "choose_note": "compare oxygen range, session control and integration."
+  },
+  {
+   "name": "Cellair",
+   "slug": "cellair-alternative-india",
+   "category_singular": "IHHT system",
+   "recommended": [
+    "IHHT Model A",
+    "IHHT Model B"
+   ],
+   "choose_note": "compare oxygen range, session control and integration."
+  },
+  {
+   "name": "Emsella",
+   "slug": "emsella-alternative-india",
+   "category_singular": "pelvic floor chair",
+   "recommended": [
+    "PelviLift"
+   ],
+   "choose_note": "compare session contractions, preset programs and non invasive design."
+  },
+  {
+   "name": "Vacu Activ",
+   "slug": "vacu-activ-alternative-india",
+   "category_singular": "recovery and body shaping device",
+   "recommended": [
+    "Bodyshape V2",
+    "Infrashape Horizontal V2",
+    "Hydro Shape",
+    "Hydrobike II"
+   ],
+   "choose_note": "compare vacuum and infrared features, treadmill or bike specs and touchscreen."
+  }
  ]
 };
+
+
+
+
