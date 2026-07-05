@@ -484,6 +484,384 @@ async function submitEmbeddedQuote(projectType) {
       }, 50);
     }
 
+
+// ALTEON LOGIC
+const ALTEON_PHONE = '919820166910';
+const wa = t => `https://wa.me/${ALTEON_PHONE}?text=${encodeURIComponent(t)}`;
+const esc = s => (s || '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+function getAlteonData() {
+    return window.ALTEON_DATA;
+}
+
+function renderAlteonStyle() {
+    if (!document.getElementById('alteon-styles')) {
+        const style = document.createElement('style');
+        style.id = 'alteon-styles';
+        style.textContent = `
+
+:root{--bg:#0d0d0e;--bg2:#111113;--panel:#161618;--tile:#1a1a1d;--line:rgba(255,255,255,.09);--text:#ecece9;--muted:#a3a39c;--dim:#77776f;--green:#8fd0a6;--green2:#6bbe8a;--gold:#cbab6d;--red:#e2372f;--r:16px;--maxw:1240px}
+.alteon-page {background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.alteon-page a{color:inherit;text-decoration:none}
+.alteon-page img{max-width:100%;display:block}
+.alteon-page .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.alteon-page .eyebrow{color:var(--green);font-family:'Archivo';font-weight:700;font-size:12px;letter-spacing:.28em;text-transform:uppercase}
+.alteon-page h1, .alteon-page h2, .alteon-page h3{font-family:'Archivo';font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:.98}
+.alteon-page .serif{font-family:'Playfair Display',serif;font-weight:600;text-transform:none;letter-spacing:0;color:var(--gold)}
+.alteon-page .btn{display:inline-flex;align-items:center;gap:9px;font-family:'Archivo';font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:14px 26px;border-radius:100px;transition:.2s;cursor:pointer;border:0}
+.alteon-page .btn-green{background:var(--green);color:#0c1a11}
+.alteon-page .btn-green:hover{background:var(--green2)}
+.alteon-page .btn-ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+.alteon-page .btn-ghost:hover{border-color:var(--green);color:var(--green)}
+.alteon-page .btn-red{background:var(--red);color:#fff}
+.alteon-page .hero{position:relative;overflow:hidden;background:radial-gradient(130% 130% at 100% 15%,#1d1613,#0b0b0c 60%)}
+.alteon-page .hero-grid{display:grid;grid-template-columns:1.05fr .82fr;gap:54px;align-items:center;padding:76px 0}
+.alteon-page .hero-copy{position:relative;z-index:2}
+.alteon-page .hero-media{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/5;border:1px solid var(--line);box-shadow:0 34px 80px rgba(0,0,0,.6)}
+.alteon-page .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 45%}
+.alteon-page .hero-media::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,rgba(11,11,12,.4))}
+@media(max-width:860px){.alteon-page .hero-grid{grid-template-columns:1fr;gap:28px;padding:44px 0}.alteon-page .hero-media{aspect-ratio:16/11}}
+.alteon-page .hero h1{font-size:clamp(46px,6.4vw,92px);margin:16px 0 8px}
+.alteon-page .hero h1 .g{color:var(--green);display:block}
+.alteon-page .hero p{max-width:520px;color:#cfcfca;font-size:18px;margin:22px 0 30px}
+.alteon-page .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.alteon-page .stats{display:flex;gap:40px;margin-top:52px;flex-wrap:wrap}
+.alteon-page .stats .s b{font-family:'Archivo';font-weight:900;font-size:34px;color:#fff;display:block;line-height:1}
+.alteon-page .stats .s span{color:#b7b7b0;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.alteon-page .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.alteon-page .strip .wrap{display:flex;gap:44px;justify-content:center;flex-wrap:wrap;padding:22px 28px;color:var(--muted);font-size:13px;letter-spacing:.06em}
+.alteon-page .strip b{color:var(--green);font-family:'Archivo'}
+.alteon-page section{padding:88px 0}
+.alteon-page .sec-head{max-width:720px;margin-bottom:44px}
+.alteon-page .sec-head h2{font-size:clamp(34px,5vw,58px);margin:14px 0}
+.alteon-page .sec-head p{color:var(--muted);font-size:17px}
+.alteon-page .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:980px){.alteon-page .grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.alteon-page .grid{grid-template-columns:1fr}}
+.alteon-page .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;cursor:pointer;transition:.25s;display:flex;flex-direction:column}
+.alteon-page .card:hover{transform:translateY(-5px);border-color:rgba(143,208,166,.4);box-shadow:0 24px 50px rgba(0,0,0,.5)}
+.alteon-page .tile{aspect-ratio:4/3;background:radial-gradient(120% 120% at 50% 20%,#202024,#0e0e10);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:16px}
+.alteon-page .tile img{width:100%;height:100%;object-fit:contain}
+.alteon-page .card-body{padding:22px 22px 24px;flex:1;display:flex;flex-direction:column}
+.alteon-page .card .kicker{color:var(--green);font-family:'Archivo';font-weight:700;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase}
+.alteon-page .card .ctitle{font-family:'Playfair Display',serif;color:var(--gold);font-size:25px;font-weight:600;margin:9px 0 10px;line-height:1.15}
+.alteon-page .card p{color:var(--muted);font-size:14px;flex:1}
+.alteon-page .card .more{margin-top:16px;color:var(--text);font-family:'Archivo';font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.alteon-page .card .count{color:var(--dim)}
+.alteon-page .card:hover .more{color:var(--green)}
+.alteon-page .crumb{padding:26px 0 0;color:var(--dim);font-size:13px;letter-spacing:.04em}
+.alteon-page .crumb a:hover{color:var(--green)}
+.alteon-page .crumb span{color:var(--muted)}
+.alteon-page .cat-hero{padding:40px 0 20px}
+.alteon-page .cat-hero .eyebrow{margin-bottom:14px;display:block}
+.alteon-page .cat-hero h1{font-size:clamp(40px,6vw,74px)}
+.alteon-page .cat-hero p{color:var(--muted);font-size:18px;max-width:680px;margin-top:20px}
+.alteon-page .model{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center;padding:48px 0;border-top:1px solid var(--line)}
+.alteon-page .model:nth-child(even) .m-img{order:2}
+@media(max-width:860px){.alteon-page .model{grid-template-columns:1fr;gap:24px}.alteon-page .model:nth-child(even) .m-img{order:0}}
+.alteon-page .m-img{background:radial-gradient(120% 120% at 50% 15%,#202024,#0d0d0f);border:1px solid var(--line);border-radius:var(--r);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:22px}
+.alteon-page .m-img img{width:100%;height:100%;object-fit:contain}
+.alteon-page .m-info h2{font-size:13px;color:var(--green);font-family:'Archivo';letter-spacing:.18em}
+.alteon-page .m-info .mtitle{font-family:'Playfair Display',serif;color:var(--gold);font-size:34px;font-weight:600;margin:6px 0 4px;line-height:1.1}
+.alteon-page .m-info .msub{color:var(--dim);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-family:'Archivo';font-weight:600}
+.alteon-page .m-info .mov{color:var(--muted);font-size:15px;margin:16px 0}
+.alteon-page .spectbl{width:100%;border-collapse:collapse;margin-top:6px}
+.alteon-page .spectbl tr{border-bottom:1px solid var(--line)}
+.alteon-page .spectbl td{padding:9px 0;font-size:13.5px;vertical-align:top}
+.alteon-page .spectbl td:first-child{color:var(--dim);width:42%;padding-right:14px;text-transform:uppercase;letter-spacing:.05em;font-size:11.5px;font-family:'Archivo';font-weight:600}
+.alteon-page .spectbl td:last-child{color:var(--text)}
+.alteon-page .m-cta{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+.alteon-page .badge{display:inline-block;background:rgba(143,208,166,.12);color:var(--green);border:1px solid rgba(143,208,166,.3);font-family:'Archivo';font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:14px}
+.alteon-page .pdp{display:grid;grid-template-columns:1.1fr 1fr;gap:52px;padding:30px 0 20px;align-items:start}
+@media(max-width:860px){.alteon-page .pdp{grid-template-columns:1fr;gap:28px}}
+.alteon-page .pdp-img{background:radial-gradient(120% 120% at 50% 12%,#212125,#0d0d0f);border:1px solid var(--line);border-radius:var(--r);aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden;position:sticky;top:96px;padding:30px}
+.alteon-page .pdp-img img{width:100%;height:100%;object-fit:contain}
+.alteon-page .pdp h1{font-family:'Playfair Display',serif;color:var(--gold);font-size:clamp(34px,5vw,52px);font-weight:700;text-transform:none;letter-spacing:0;line-height:1.05;margin:10px 0}
+.alteon-page .pdp .lead{color:var(--muted);font-size:17px;margin:18px 0 24px}
+.alteon-page .blk{margin:30px 0}
+.alteon-page .blk h4{font-family:'Archivo';font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--text);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.alteon-page .benefits{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:520px){.alteon-page .benefits{grid-template-columns:1fr}}
+.alteon-page .benefit{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+.alteon-page .benefit b{display:block;font-family:'Archivo';font-size:13px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:5px}
+.alteon-page .benefit span{color:var(--muted);font-size:13.5px}
+.alteon-page .faq details{border-bottom:1px solid var(--line);padding:14px 0}
+.alteon-page .faq summary{cursor:pointer;font-family:'Archivo';font-weight:700;font-size:15px;list-style:none}
+.alteon-page .faq summary::-webkit-details-marker{display:none}
+.alteon-page .faq summary::before{content:'+';color:var(--green);margin-right:12px;font-weight:800}
+.alteon-page .faq details[open] summary::before{content:'\\2013'}
+.alteon-page .faq p{color:var(--muted);font-size:14.5px;margin-top:10px;padding-left:24px}
+.alteon-page .seo-note{color:var(--dim);font-size:13px;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-top:20px}
+.alteon-page .rel{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:860px){.alteon-page .rel{grid-template-columns:repeat(2,1fr)}}
+.alteon-page .rel .card .tile{aspect-ratio:1/1}
+.alteon-page .cta-band{background:linear-gradient(120deg,#12241a,#0e0e0f 70%);border:1px solid var(--line);border-radius:24px;padding:56px;text-align:center;margin:30px 0}
+.alteon-page .cta-band h2{font-size:clamp(30px,4vw,46px)}
+.alteon-page .cta-band p{color:var(--muted);max-width:560px;margin:16px auto 26px}
+.alteon-page .cta-band .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.alteon-page .wa{position:fixed;right:26px;bottom:26px;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(37,211,102,.4);z-index:50}
+.alteon-page .wa svg{width:30px;height:30px;fill:#fff}
+.alteon-page .fade{animation:fade .4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+        `;
+        document.head.appendChild(style);
+    }
+}
+
+function setSchema(o) {
+    let s = document.getElementById('ldjson');
+    if (!s) {
+        s = document.createElement('script');
+        s.id = 'ldjson';
+        s.type = 'application/ld+json';
+        document.head.appendChild(s);
+    }
+    s.textContent = JSON.stringify(o);
+}
+
+function renderAlteonHub() {
+    renderAlteonStyle();
+    const DB = getAlteonData();
+    const cards = DB.categories.map(c => `
+        <div class="card fade" onclick="go('alteon/${c.id}')">
+            <div class="tile" style="background:${c.heroTileColor}">
+                <img src="/${c.heroImage}" alt="${esc(c.name)}" loading="lazy">
+            </div>
+            <div class="card-body">
+                <div class="kicker">${esc(c.eyebrow)}</div>
+                <div class="ctitle">${esc(c.name)}</div>
+                <p>${esc(c.blurb)}</p>
+                <div class="more">View range <span class="count">, ${c.count} model${c.count > 1 ? 's' : ''}</span> →</div>
+            </div>
+        </div>
+    `).join('');
+
+    setSchema({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Alteon Wellness and Recovery Catalogue",
+        "itemListElement": DB.categories.map((c, i) => ({ "@type": "ListItem", "position": i + 1, "name": c.name }))
+    });
+
+    return `
+    <div class="alteon-page">
+        <section class="hero">
+            <div class="wrap hero-grid">
+                <div class="hero-copy">
+                    <span class="eyebrow">Recovery . Wellness . Longevity</span>
+                    <h1>ALTEON<span class="g">Wellness and Recovery</span></h1>
+                    <p>TechFit is the authorised India distributor of Alteon, clinical and commercial grade recovery and longevity technology for gyms, hotels, residences and wellness clinics.</p>
+                    <div class="cta-row">
+                        <a class="btn btn-green" onclick="go('alteon/${DB.categories[0].id}')">Explore the range →</a>
+                        <a class="btn btn-ghost" href="${wa('Hi TechFit, I would like a consultation on Alteon wellness and recovery equipment.')}" target="_blank">Talk to a specialist</a>
+                    </div>
+                    <div class="stats">
+                        <div class="s"><b>${DB.products.length}</b><span>Models</span></div>
+                        <div class="s"><b>${DB.categories.length}</b><span>Categories</span></div>
+                        <div class="s"><b>800+</b><span>Installations</span></div>
+                        <div class="s"><b>India</b><span>Sales . Install . AMC</span></div>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <img src="/assets/images/alteon/hero-revital.webp" alt="Person relaxing on the Alteon ReVITAL recovery lounger">
+                </div>
+            </div>
+        </section>
+        <div class="strip">
+            <div class="wrap">
+                <span><b>✓</b> Authorised Alteon Distributor</span>
+                <span><b>✓</b> Turnkey Install and AMC</span>
+                <span><b>✓</b> Clinical and Commercial Grade</span>
+                <span><b>✓</b> Pan India Delivery</span>
+            </div>
+        </div>
+        <section>
+            <div class="wrap">
+                <div class="sec-head">
+                    <span class="eyebrow">The Portfolio</span>
+                    <h2>Recovery technology, engineered for results</h2>
+                    <p>Every category below is stocked, installed and serviced by TechFit across India. Explore the range, then request a tailored quote. Pricing on request.</p>
+                </div>
+                <div class="grid">${cards}</div>
+            </div>
+        </section>
+        ${alteonCtaBand()}
+        ${alteonFloatingWA()}
+    </div>
+    `;
+}
+
+function renderAlteonCategory(catId) {
+    renderAlteonStyle();
+    const DB = getAlteonData();
+    const c = DB.categories.find(x => x.id === catId);
+    if (!c) return renderAlteonHub();
+    const items = DB.products.filter(p => p.categoryId === catId);
+    
+    const blocks = items.map(p => {
+        const specs = (p.specs || []).map(s => `<tr><td>${esc(s[0])}</td><td>${esc(s[1])}</td></tr>`).join('');
+        const ov = p.overview ? `<p class="mov">${esc(p.overview)}</p>` : '';
+        return `
+        <div class="model" id="${p.id}">
+            <div class="m-img" style="background:${p.tileColor}">
+                <img src="/${p.image}" alt="${esc(p.name)}" loading="lazy">
+            </div>
+            <div class="m-info">
+                <h2>${esc(c.eyebrow)}</h2>
+                <div class="mtitle">${esc(p.name)}</div>
+                ${p.model ? `<div class="msub">Model . ${esc(p.model)}</div>` : ''}
+                ${ov}
+                ${specs ? `<table class="spectbl">${specs}</table>` : ''}
+                <div class="m-cta">
+                    <a class="btn btn-green" onclick="go('alteon/${catId}/${p.id}')">Full specs →</a>
+                    <a class="btn btn-ghost" href="${wa('Hi TechFit, I would like a quote for the ' + p.name + ' (Alteon).')}" target="_blank">Request quote</a>
+                </div>
+            </div>
+        </div>`;
+    }).join('');
+
+    setSchema({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Alteon" },
+            { "@type": "ListItem", "position": 2, "name": c.name }
+        ]
+    });
+
+    const comps = c.competitors && c.competitors.length > 0 
+        ? `A commercial grade alternative to ${c.competitors.slice(0,3).map(esc).join(', ')}, supplied and serviced in India.` 
+        : '';
+
+    return `
+    <div class="alteon-page">
+        <div class="wrap fade">
+            <div class="crumb">
+                <a onclick="go('alteon')" style="cursor:pointer">Alteon</a> / <span>${esc(c.name)}</span>
+            </div>
+            <div class="cat-hero">
+                <span class="eyebrow">${esc(c.eyebrow)}</span>
+                <h1>${esc(c.name)}</h1>
+                <p>${esc(c.blurb)}</p>
+                <div style="margin-top:22px;color:var(--dim);font-size:13px;letter-spacing:.06em">${comps}</div>
+            </div>
+            ${blocks}
+        </div>
+        ${alteonCtaBand()}
+        ${alteonFloatingWA()}
+    </div>
+    `;
+}
+
+function renderAlteonProduct(catId, prodId) {
+    renderAlteonStyle();
+    const DB = getAlteonData();
+    const p = DB.products.find(x => x.id === prodId);
+    if (!p) return renderAlteonCategory(catId);
+    const c = DB.categories.find(x => x.id === catId);
+
+    const specs = (p.specs || []).map(s => `<tr><td>${esc(s[0])}</td><td>${esc(s[1])}</td></tr>`).join('');
+    const lead = p.overview ? esc(p.overview.slice(0, 300)) + (p.overview.length > 300 ? '…' : '') : `Commercial grade ${esc(c.name.toLowerCase())} from Alteon, supplied and serviced across India by TechFit.`;
+    
+    const benefits = `
+    <div class="blk">
+        <h4>Why TechFit and Alteon</h4>
+        <div class="benefits">
+            <div class="benefit"><b>Authorised Distributor</b><span>Genuine Alteon units with warranty, spares and AMC in India.</span></div>
+            <div class="benefit"><b>Turnkey Install</b><span>Site assessment, delivery, installation and staff training included.</span></div>
+            <div class="benefit"><b>Commercial Grade</b><span>Built for gyms, hotels, clinics and high traffic recovery suites.</span></div>
+            <div class="benefit"><b>Pan India Service</b><span>Boots on ground engineering support and rapid spare parts.</span></div>
+        </div>
+    </div>`;
+
+    const rel = DB.products.filter(x => x.categoryId === catId && x.id !== p.id).slice(0, 4).map(x => `
+        <div class="card" onclick="go('alteon/${catId}/${x.id}')">
+            <div class="tile" style="background:${x.tileColor}">
+                <img src="/${x.image}" alt="${esc(x.name)}" loading="lazy">
+            </div>
+            <div class="card-body">
+                <div class="ctitle" style="font-size:18px">${esc(x.name)}</div>
+            </div>
+        </div>`).join('');
+
+    setSchema({
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": p.name,
+        "category": c.name,
+        "brand": { "@type": "Brand", "name": "Alteon" },
+        "description": lead,
+        "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR", "seller": { "@type": "Organization", "name": "TechFit Health Fitness Pvt Ltd" } }
+    });
+
+    return `
+    <div class="alteon-page">
+        <div class="wrap fade">
+            <div class="crumb">
+                <a onclick="go('alteon')" style="cursor:pointer">Alteon</a> / 
+                <a onclick="go('alteon/${c.id}')" style="cursor:pointer">${esc(c.name)}</a> / 
+                <span>${esc(p.name)}</span>
+            </div>
+            <div class="pdp">
+                <div class="pdp-img" style="background:${p.tileColor}">
+                    <img src="/${p.image}" alt="${esc(p.name)}" loading="lazy">
+                </div>
+                <div>
+                    <span class="badge">${esc(c.eyebrow)}</span>
+                    <h1>${esc(p.name)}</h1>
+                    ${p.model ? `<div class="msub" style="color:var(--dim);font-family:Archivo;letter-spacing:.14em;text-transform:uppercase;font-size:12px">Model . ${esc(p.model)}</div>` : ''}
+                    <p class="lead">${lead}</p>
+                    <div class="cta-row" style="display:flex;gap:12px;flex-wrap:wrap">
+                        <a class="btn btn-green" href="${wa('Hi TechFit, I would like a quote and brochure for the ' + p.name + ' (Alteon).')}" target="_blank">Request quote</a>
+                        ${p.brochureUrl && p.brochureUrl.startsWith('http') ? `<a class="btn btn-ghost" href="${esc(p.brochureUrl)}" target="_blank">Download brochure</a>` : ''}
+                    </div>
+                    ${specs ? `<div class="blk"><h4>Technical Specifications</h4><table class="spectbl">${specs}</table></div>` : ''}
+                    ${benefits}
+                    <div class="blk faq">
+                        <h4>Frequently Asked</h4>
+                        <details open><summary>Is the ${esc(p.name)} available in India?</summary><p>Yes. TechFit is the authorised distributor of Alteon in India and supplies the ${esc(p.name)} with installation, training and AMC nationwide.</p></details>
+                        <details><summary>What is the price of the ${esc(p.name)}?</summary><p>Pricing is shared on request and depends on configuration and site. Request a quote via WhatsApp or the enquiry button and our team will respond with a tailored proposal.</p></details>
+                        <details><summary>Is it suitable for commercial use?</summary><p>Yes. It is commercial and clinical grade, engineered for gyms, hotels, longevity clinics and high traffic recovery centres.</p></details>
+                    </div>
+                    <div class="seo-note">Looking for a ${c.competitors && c.competitors.length > 0 ? esc(c.competitors[0]) : 'recovery'} alternative in India? The ${esc(p.name)} is a commercial grade option supplied, installed and serviced by TechFit, the authorised Alteon distributor.</div>
+                </div>
+            </div>
+            <div class="blk" style="margin-top:50px">
+                <h4>More in ${esc(c.name)}</h4>
+                <div class="rel">${rel}</div>
+            </div>
+        </div>
+        ${alteonCtaBand()}
+        ${alteonFloatingWA()}
+    </div>
+    `;
+}
+
+function alteonCtaBand() {
+    return `
+    <section id="contact">
+        <div class="wrap">
+            <div class="cta-band">
+                <span class="eyebrow">Build your recovery suite</span>
+                <h2>Let us design your wellness space</h2>
+                <p>Tell us your space, footfall and goals. We will recommend the right Alteon line up and send a tailored quote. Sales, installation and AMC, pan India.</p>
+                <div class="cta-row">
+                    <a class="btn btn-green" href="${wa('Hi TechFit, I would like to plan an Alteon wellness and recovery setup.')}" target="_blank">WhatsApp us</a>
+                    <a class="btn btn-ghost" href="tel:+919820166910">Call +91 98201 66910</a>
+                </div>
+            </div>
+        </div>
+    </section>`;
+}
+
+function alteonFloatingWA() {
+    return `
+    <a class="wa" href="https://wa.me/919820166910" target="_blank" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.13A11.9 11.9 0 010 12 12 12 0 1112 24a11.9 11.9 0 01-5.75-1.47L.06 24zM6.6 20.13l.37.22a9.86 9.86 0 005 1.38A9.9 9.9 0 102.1 12a9.8 9.8 0 001.52 5.26l.24.38-1 3.65 3.74-1.16zM17.9 14.3c-.15-.25-.55-.4-1.15-.7s-1.35-.68-1.55-.75-.35-.11-.5.12-.57.72-.7.87-.26.17-.5.06a8.1 8.1 0 01-2.38-1.47 8.9 8.9 0 01-1.64-2.05c-.17-.29 0-.44.12-.59s.25-.29.37-.44a1.7 1.7 0 00.25-.41.45.45 0 00-.02-.44c-.06-.11-.5-1.22-.69-1.67s-.37-.38-.5-.38l-.44-.01a.85.85 0 00-.61.28 2.58 2.58 0 00-.8 1.92 4.48 4.48 0 00.93 2.37 10.24 10.24 0 003.92 3.47 13.13 13.13 0 001.31.48 3.15 3.15 0 001.45.09 2.37 2.37 0 001.55-1.1 1.92 1.92 0 00.14-1.09z"/></svg>
+    </a>`;
+}
+// END ALTEON LOGIC
+
     function render() {
       const app = document.getElementById('app');
       const views = {
@@ -493,7 +871,7 @@ async function submitEmbeddedQuote(projectType) {
         'for-schools': () => renderSegment('schools'),
         'for-hotels': () => renderSegment('hotels'),
         'techfit': renderTechFit,
-        'alteon': renderAlteon,
+        
         'bh-fitness': () => renderBrand('BH Fitness'),
         'tunturi': () => renderBrand('Tunturi'),
         'california-fitness': () => renderBrand('California Fitness'),
@@ -533,7 +911,20 @@ async function submitEmbeddedQuote(projectType) {
       if (guideSlugs.includes(page) || (typeof GUIDES_DATA !== 'undefined' && GUIDES_DATA[page])) {
         app.innerHTML = renderGuide(page);
       } else {
-        app.innerHTML = (views[page] || render404)();
+        
+        if (page === 'alteon' || page.startsWith('alteon/')) {
+            const parts = page.split('/');
+            if (parts.length === 3) {
+                app.innerHTML = renderAlteonProduct(parts[1], parts[2]);
+            } else if (parts.length === 2) {
+                app.innerHTML = renderAlteonCategory(parts[1]);
+            } else {
+                app.innerHTML = renderAlteonHub();
+            }
+        } else {
+            app.innerHTML = (views[page] || render404)();
+        }
+    
       }
 
       const commercialPages = {
@@ -5803,7 +6194,7 @@ function render404() {
 
       const validPages = ['home', 'for-gyms', 'for-developers', 'for-schools', 'for-hotels', 'techfit', 'alteon', 'bh-fitness', 'tunturi', 'california-fitness', 'mma-cages', 'crossfit-rigs', 'free-weights', 'padel-pickleball', 'aqua', 'wellness-solutions', 'services', 'about', 'contact', 'blogs', 'gym-flooring', 'flooring', 'blog-mfn', 'blog-sfl', 'blog-kumite', 'blog-mma-matrix', 'blog-one-stop', 'blog-wellness-boom', 'privacy-policy', 'case-studies', 'terms-of-service', 'thank-you', 'alternatives/technogym-india', 'alternatives/life-fitness-india', 'alternatives/sechrist-hyperbaric-india', 'alternatives/precor-india', 'alternatives/mecotec-cryotherapy-india', 'alternatives/usi-cosco-techfit-cages', 'commercial-gym-setup-cost-india', 'how-to-set-up-a-commercial-gym', 'best-commercial-treadmills-india', 'commercial-gym-equipment-list', 'hotel-gym-setup-guide', 'bh-fitness-vs-life-fitness', 'tunturi-vs-precor', 'best-gym-equipment-brands-india', 'imported-vs-indian-gym-equipment', 'gym-equipment-suppliers-india-compared', 'commercial-gym-setup-mumbai', 'commercial-gym-setup-pune', 'commercial-gym-setup-bangalore', 'commercial-gym-setup-hyderabad', 'commercial-gym-setup-delhi-ncr', 'commercial-gym-setup-chennai', 'commercial-gym-setup-kolkata', 'commercial-gym-setup-ahmedabad', 'commercial-gym-setup-jaipur', 'commercial-gym-setup-goa', 'commercial-gym-setup-chandigarh', 'commercial-gym-setup-surat', 'commercial-gym-setup-kochi', 'hotel-gym-setup-mumbai', 'hotel-gym-setup-pune', 'hotel-gym-setup-bangalore', 'hotel-gym-setup-delhi-ncr', 'hotel-gym-setup-hyderabad', 'society-gym-setup-mumbai', 'society-gym-setup-pune', 'society-gym-setup-bangalore', 'society-gym-setup-delhi-ncr', 'society-gym-setup-hyderabad', 'corporate-gym-setup-mumbai', 'corporate-gym-setup-pune', 'corporate-gym-setup-bangalore', 'corporate-gym-setup-delhi-ncr', 'corporate-gym-setup-hyderabad', 'matrix-fitness-alternative-india', 'cybex-alternative-india', 'hammer-strength-alternative-india', 'nautilus-alternative-india', 'cosco-vs-bh-fitness', 'viva-vs-tunturi', 'decathlon-domyos-vs-commercial-gym-equipment', 'alternatives/cybex-india', 'alternatives/hammer-strength-india', 'alternatives/nautilus-india', 'alternatives/star-trac-india', 'alternatives/body-solid-india', 'alternatives/hoist-fitness-india', 'alternatives/freemotion-india', 'alternatives/true-fitness-india', 'alternatives/american-fitness-india', 'alternatives/atlantis-strength-india', 'alternatives/fitline-india', 'alternatives/matrix-fitness-india', 'alternatives/jerai-fitness-india', 'alternatives/being-strong-india'];
 
-      if (validPages.includes(path) || path === '') {
+      if (validPages.includes(path) || path === '' || path.startsWith('alteon/')) {
         page = path || 'home';
       } else {
         page = '404';
