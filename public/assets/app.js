@@ -515,12 +515,12 @@ function renderAlteonStyle() {
 .alteon-page .btn-ghost:hover{border-color:var(--green);color:var(--green)}
 .alteon-page .btn-red{background:var(--red);color:#fff}
 .alteon-page .hero{position:relative;overflow:hidden;background:radial-gradient(130% 130% at 100% 15%,#1d1613,#0b0b0c 60%)}
-.alteon-page .hero-grid{display:grid;grid-template-columns:1.05fr .82fr;gap:54px;align-items:center;padding:76px 0}
+.alteon-page .hero-grid{display:grid;grid-template-columns:1.05fr .82fr;gap:54px;align-items:center;padding:76px 28px}
 .alteon-page .hero-copy{position:relative;z-index:2}
 .alteon-page .hero-media{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/5;border:1px solid var(--line);box-shadow:0 34px 80px rgba(0,0,0,.6)}
 .alteon-page .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 45%}
 .alteon-page .hero-media::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,rgba(11,11,12,.4))}
-@media(max-width:860px){.alteon-page .hero-grid{grid-template-columns:1fr;gap:28px;padding:44px 0}.alteon-page .hero-media{aspect-ratio:16/11}}
+@media(max-width:860px){.alteon-page .hero-grid{grid-template-columns:1fr;gap:28px;padding:44px 28px}.alteon-page .hero-media{aspect-ratio:16/11}}
 .alteon-page .hero h1{font-size:clamp(46px,6.4vw,92px);margin:16px 0 8px}
 .alteon-page .hero h1 .g{color:var(--green);display:block}
 .alteon-page .hero p{max-width:520px;color:#cfcfca;font-size:18px;margin:22px 0 30px}
