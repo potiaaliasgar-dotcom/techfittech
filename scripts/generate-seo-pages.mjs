@@ -4118,8 +4118,10 @@ const ssgContext = {
     },
     window: { scrollTo: () => {}, addEventListener: () => {} },
     document: {
-        getElementById: () => ({ innerHTML: '' }),
-        createElement: () => ({ innerHTML: '' }),
+        getElementById: (id) => ({ innerHTML: '', value: '', classList: { add: () => {}, remove: () => {}, toggle: () => {}, contains: () => false }, style: {}, setAttribute: () => {}, getAttribute: () => null, appendChild: () => {}, closest: () => null, scrollIntoView: () => {} }),
+        createElement: (tag) => ({ innerHTML: '', textContent: '', id: '', type: '', src: '', appendChild: () => {}, setAttribute: () => {}, classList: { add: () => {}, remove: () => {} }, style: {} }),
+        querySelector: () => null,
+        querySelectorAll: () => [],
         head: { appendChild: () => {} },
         body: { classList: { add: () => {}, remove: () => {} } },
         addEventListener: () => {}
@@ -4130,7 +4132,11 @@ const ssgContext = {
     Math: Math,
     Date: Date,
     setTimeout: setTimeout,
-    module: { exports: {} }
+    module: { exports: {} },
+    IntersectionObserver: class { constructor() {} observe() {} unobserve() {} disconnect() {} },
+    MutationObserver: class { constructor() {} observe() {} disconnect() {} },
+    fetch: () => Promise.resolve({ json: () => Promise.resolve([]), text: () => Promise.resolve('') }),
+    XMLHttpRequest: class { open() {} send() {} setRequestHeader() {} }
 };
 vm.createContext(ssgContext);
 

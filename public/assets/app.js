@@ -1065,10 +1065,12 @@ function alteonFloatingWA() {
         app.innerHTML += renderQuoteFormHtml(commercialPages[page]);
       }
 
-      document.querySelectorAll('.faq-q').forEach(btn => {
-        btn.addEventListener('click', () => btn.closest('.faq-item').classList.toggle('open'));
-      });
-      initCarousels();
+      if (typeof window !== 'undefined' && document.querySelectorAll) {
+        document.querySelectorAll('.faq-q').forEach(btn => {
+          btn.addEventListener('click', () => btn.closest('.faq-item').classList.toggle('open'));
+        });
+        initCarousels();
+      }
     }
 
     /* ── CAROUSEL WITH < > ARROWS ── */
@@ -6322,22 +6324,25 @@ function render404() {
       render(); navActive(); updateSEO();
       window.prerenderReady = true;
       // Initialize scroll animations
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
-      
-      setTimeout(() => {
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-      }, 500);
+      if (typeof window !== 'undefined') {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+        
+        setTimeout(() => {
+          document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        }, 500);
+      }
 
     }
     initApp();
 
+    if (typeof window !== 'undefined') {
     // Global conversion tracking for WhatsApp, Phone Call, and Email link clicks
     document.addEventListener('click', function (e) {
       var waLink = e.target.closest('a[href*="wa.me"]');
@@ -6351,6 +6356,7 @@ function render404() {
         fireConversion(GAW_EMAIL_LABEL, 'Global Email Click');
       }
     });
+    } // end if (typeof window !== 'undefined')
 
 // --- HYROX ---
 function renderHyroxStyle(isServer = typeof window === 'undefined') {
