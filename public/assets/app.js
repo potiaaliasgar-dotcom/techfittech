@@ -705,6 +705,7 @@ function renderAlteonHub() {
                 <div class="grid">${cards}</div>
             </div>
         </section>
+        ${alteonClientBand()}
         ${alteonCtaBand()}
         ${alteonFloatingWA()}
     </div>
@@ -862,6 +863,14 @@ function renderAlteonProduct(catId, prodId) {
         ${alteonFloatingWA()}
     </div>
     `;
+}
+
+function alteonClientBand() {
+    const DB = getAlteonData();
+    const L = DB.clientLogos || [];
+    if (!L.length && !DB.clientsImage) return '';
+    const wall = L.length ? `<div style="background:#f5f4f1;border-radius:20px;padding:34px 30px;max-width:980px;margin:28px auto 0"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(115px,1fr));gap:30px 34px;align-items:center;justify-items:center">${L.map(u=>`<img src="${u}" alt="Alteon client" style="max-height:44px;max-width:128px;width:auto;height:auto;object-fit:contain">`).join('')}</div></div>` : `<div class="card-w"><img src="${DB.clientsImage}" alt="TechFit and Alteon clients and partners"></div>`;
+    return `<section class="clients"><div class="wrap" style="text-align:center;padding:60px 0"><span class="eyebrow">Trusted By</span><h2 style="font-size:clamp(28px,4vw,44px);margin:14px 0 6px">Chosen by leading names</h2><p style="color:var(--muted);max-width:560px;margin:0 auto">Luxury wellness hospitality, medical longevity clinics and elite performance centres.</p>${wall}</div></section>`;
 }
 
 function alteonCtaBand() {
