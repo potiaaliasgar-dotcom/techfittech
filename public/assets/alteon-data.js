@@ -1106,8 +1106,7 @@ window.ALTEON_DATA = {
    "specs": [
     [
      "Dimensions",
-     "Main Chamber to 64.96 x 57.09 x 65.35 in
-External Chamber to 39.4 × 27.6 × 60.5 in HBOT Air Conditioning to 16.4 × 15.9 × 34.3 in"
+     "Main Chamber to 64.96 x 57.09 x 65.35 in \n External Chamber to 39.4 × 27.6 × 60.5 in HBOT Air Conditioning to 16.4 × 15.9 × 34.3 in"
     ]
    ],
    "brochureUrl": "https://drive.google.com/file/d/13NBRe3PYMOiRdyYtUHvNVvgXm1VOZSZw/view?usp=drive_link",
@@ -1124,8 +1123,7 @@ External Chamber to 39.4 × 27.6 × 60.5 in HBOT Air Conditioning to 16.4 × 15.
    "specs": [
     [
      "Dimensions",
-     "Main Chamber to 86.61 x 70.87 x 74.80 in
-External Chamber to 16.54 x 15.75 x 30.24 in"
+     "Main Chamber to 86.61 x 70.87 x 74.80 in External Chamber to 16.54 x 15.75 x 30.24 in"
     ]
    ],
    "brochureUrl": "https://drive.google.com/file/d/1EnS0iK8dVdXObxLZW4sMm_8JkTFSV289/view?usp=drive_link",
@@ -1142,8 +1140,7 @@ External Chamber to 16.54 x 15.75 x 30.24 in"
    "specs": [
     [
      "Dimensions",
-     "Main Chamber to 90.6 × 65.0 × 68.9 in
-External Chamber to 39.4 × 27.6 × 60.5 in HBOT Air Conditioning to 16.4 × 15.9 × 34.3 in"
+     "Main Chamber to 90.6 × 65.0 × 68.9 in External Chamber to 39.4 × 27.6 × 60.5 in HBOT Air Conditioning to 16.4 × 15.9 × 34.3 in"
     ]
    ],
    "brochureUrl": "https://drive.google.com/file/d/1EnS0iK8dVdXObxLZW4sMm_8JkTFSV289/view?usp=drive_link",
