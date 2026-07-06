@@ -792,6 +792,9 @@ function renderAlteonProduct(catId, prodId, variantIdx = 0) {
     const p = baseP.variants ? baseP.variants[variantIdx] : baseP;
     const c = DB.categories.find(x => x.id === catId);
 
+    const mainGallery = (p.gallery || []).slice(0, 1);
+    const specGallery = (p.gallery || []).slice(1);
+
     const specs = (p.specs || []).map(s => `<tr><td>${esc(s[0])}</td><td>${esc(s[1])}</td></tr>`).join('');
     const lead = p.overview ? esc(p.overview.slice(0, 300)) + (p.overview.length > 300 ? '…' : '') : `Commercial grade ${esc(c.name.toLowerCase())} from Alteon, supplied and serviced across India by TechFit.`;
     
@@ -864,7 +867,7 @@ function renderAlteonProduct(catId, prodId, variantIdx = 0) {
                     <div class="pdp-img" style="background:${p.tileColor}">
                         <img src="/${p.image}" alt="${esc(p.name)}" loading="lazy">
                     </div>
-                    ${p.gallery && p.gallery.length ? p.gallery.map((img, i) => `
+                    ${mainGallery.length ? mainGallery.map((img, i) => `
                     <div class="pdp-img fade" style="background:${p.tileColor || 'radial-gradient(120% 120% at 50% 12%,#212125,#0d0d0f)'};animation-delay:${(i%10)*0.05}s">
                         <img src="/${img}" loading="lazy" alt="${esc(p.name)} Gallery ${i+1}">
                     </div>`).join('') : ''}
@@ -881,7 +884,6 @@ function renderAlteonProduct(catId, prodId, variantIdx = 0) {
                     <div class="cta-row" style="display:flex;gap:12px;flex-wrap:wrap">
                         <a class="btn btn-green" href="${wa('Hi TechFit, I would like a quote and brochure for the ' + p.name + ' (Alteon).')}" target="_blank">Request quote</a>
                     </div>
-                    ${specs ? `<div class="blk"><h4>Technical Specifications</h4><table class="spectbl">${specs}</table></div>` : ''}
                     ${benefits}
                     <div class="blk faq">
                         <h4>Frequently Asked</h4>
@@ -892,6 +894,24 @@ function renderAlteonProduct(catId, prodId, variantIdx = 0) {
                     <div class="seo-note">Looking for a ${c.competitors && c.competitors.length > 0 ? esc(c.competitors[0]) : 'recovery'} alternative in India? The ${esc(p.name)} is a commercial grade option supplied, installed and serviced by TechFit, the authorised Alteon distributor.</div>
                 </div>
             </div>
+
+            ${specs ? `
+            <div class="blk" style="margin-top:50px">
+                <h4>Technical Specifications</h4>
+                <div class="specs-grid">
+                    <table class="spectbl">${specs}</table>
+                    ${specGallery.length ? `
+                    <div class="specs-media">
+                        ${specGallery.map((img, i) => `
+                        <div class="spec-img-wrap" style="margin-bottom:20px; border:1px solid var(--line); border-radius:var(--r); overflow:hidden; background:${p.tileColor || 'radial-gradient(120% 120% at 50% 12%,#212125,#0d0d0f)'}">
+                            <img src="/${img}" loading="lazy" alt="${esc(p.name)} Technical Detail ${i+1}" style="width:100%; display:block;">
+                        </div>
+                        `).join('')}
+                    </div>
+                    ` : ''}
+                </div>
+            </div>
+            ` : ''}
 
             <div class="blk" style="margin-top:50px">
                 <h4>More in ${esc(c.name)}</h4>
