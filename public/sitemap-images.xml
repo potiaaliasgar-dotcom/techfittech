@@ -9,6 +9,14 @@
     </image:image>
   </url>
   <url>
+    <loc>https://www.techfittech.com/hyrox</loc>
+    <image:image>
+      <image:loc>https://www.techfittech.com/assets/images/hyrox/perform-tread-1.jpg</image:loc>
+      <image:title>Official HYROX Equipment India | TechFit</image:title>
+      <image:caption>TechFit is the authorised reseller of official Centr x HYROX equipment in India. Buy HYROX equipment, rigs, and turnkey setups. Compare with Rogue Fitness.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.techfittech.com/alternatives</loc>
     <image:image>
       <image:loc>https://www.techfittech.com/og/og-cardio.jpg</image:loc>
@@ -761,14 +769,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.techfittech.com/hyrox</loc>
-    <image:image>
-      <image:loc>https://www.techfittech.com/assets/images/hyrox/perform-tread-1.jpg</image:loc>
-      <image:title>Official HYROX Equipment India | TechFit</image:title>
-      <image:caption>TechFit is the authorised reseller of official Centr x HYROX equipment in India. Buy HYROX equipment, rigs, and turnkey setups. Compare with Rogue Fitness.</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.techfittech.com/alteon/hyperbaric-oxygen-chambers</loc>
     <image:image>
       <image:loc>https://www.techfittech.com/og-image.jpg</image:loc>
@@ -1195,7 +1195,7 @@
   <url>
     <loc>https://www.techfittech.com/alteon/hyperbaric-oxygen-chambers/single-person-hbot-al3v36-100</loc>
     <image:image>
-      <image:loc>https://www.techfittech.com/assets/images/alteon/single-person-hbot-al3v36-100.webp</image:loc>
+      <image:loc>https://www.techfittech.com/assets/images/alteon/hbot-lying-al3v36-1600.webp</image:loc>
       <image:title>Single Person HBOT (AL3V36) India | Alteon</image:title>
       <image:caption>A lying down single person hyperbaric oxygen chamber that raises pressure to 2.0 ATA, dissolving up to 100% oxygen deep into blood plasma and tissue t</image:caption>
     </image:image>
@@ -1203,7 +1203,7 @@
   <url>
     <loc>https://www.techfittech.com/alteon/fitness-and-aqua/bodyshape-200</loc>
     <image:image>
-      <image:loc>https://www.techfittech.com/assets/images/alteon/bodyshape-200.webp</image:loc>
+      <image:loc>https://www.techfittech.com/assets/images/alteon/fit-bodyshape-1600.webp</image:loc>
       <image:title>Bodyshape India | Alteon</image:title>
       <image:caption>Bodyshape is an enclosed active fitness capsule that pairs cardio training with a suite of wellness therapies. Users exercise on an integrated treadmi</image:caption>
     </image:image>
@@ -1211,7 +1211,7 @@
   <url>
     <loc>https://www.techfittech.com/alteon/fitness-and-aqua/infrashape-horizontal-201</loc>
     <image:image>
-      <image:loc>https://www.techfittech.com/assets/images/alteon/infrashape-horizontal-201.webp</image:loc>
+      <image:loc>https://www.techfittech.com/assets/images/alteon/fit-infrashape-1600.webp</image:loc>
       <image:title>Infrashape Horizontal India | Alteon</image:title>
       <image:caption>Infrashape Horizontal is a reclined training and therapy capsule that lets users exercise in a comfortable horizontal position. Infrared heat, vacuum </image:caption>
     </image:image>
@@ -1219,7 +1219,7 @@
   <url>
     <loc>https://www.techfittech.com/alteon/fitness-and-aqua/infrastep-202</loc>
     <image:image>
-      <image:loc>https://www.techfittech.com/assets/images/alteon/infrastep-202.webp</image:loc>
+      <image:loc>https://www.techfittech.com/assets/images/alteon/fit-infrastep-1600.webp</image:loc>
       <image:title>Infrastep India | Alteon</image:title>
       <image:caption>Infrastep is an infrared stair climbing trainer that blends cardio conditioning with red light and infrared therapy. Its motor free, electromagnetic r</image:caption>
     </image:image>
@@ -1227,7 +1227,7 @@
   <url>
     <loc>https://www.techfittech.com/alteon/fitness-and-aqua/roll-slimmer-203</loc>
     <image:image>
-      <image:loc>https://www.techfittech.com/assets/images/alteon/roll-slimmer-203.webp</image:loc>
+      <image:loc>https://www.techfittech.com/assets/images/alteon/fit-roll-slimmer-1600.webp</image:loc>
       <image:title>Roll Slimmer India | Alteon</image:title>
       <image:caption>Roll Slimmer is a wooden roller massage device that combines mechanical rolling with infrared and colourtherapy. The user rests over a contoured rolle</image:caption>
     </image:image>
@@ -1235,7 +1235,7 @@
   <url>
     <loc>https://www.techfittech.com/alteon/fitness-and-aqua/roll-slimmer-xs-204</loc>
     <image:image>
-      <image:loc>https://www.techfittech.com/assets/images/alteon/roll-slimmer-xs-204.webp</image:loc>
+      <image:loc>https://www.techfittech.com/assets/images/alteon/fit-roll-slimmer-xs-1600.webp</image:loc>
       <image:title>Roll Slimmer XS India | Alteon</image:title>
       <image:caption>Roll Slimmer XS is a compact upholstered roller massage capsule that pairs mechanical rolling with infrared, colourtherapy and a collagen lamp. Its en</image:caption>
     </image:image>
@@ -1243,7 +1243,7 @@
   <url>
     <loc>https://www.techfittech.com/alteon/fitness-and-aqua/vibrashape-205</loc>
     <image:image>
-      <image:loc>https://www.techfittech.com/assets/images/alteon/vibrashape-205.webp</image:loc>
+      <image:loc>https://www.techfittech.com/assets/images/alteon/fit-vibrashape-1600.webp</image:loc>
       <image:title>Vibrashape India | Alteon</image:title>
       <image:caption>Vibrashape is a whole body vibration platform enhanced with infrared and red light therapy. Users stand on a dual vibration plate that stimulates musc</image:caption>
     </image:image>
@@ -1251,7 +1251,7 @@
   <url>
     <loc>https://www.techfittech.com/alteon/recovery-loungers-and-beds/halo-renew-longevity-capsule-206</loc>
     <image:image>
-      <image:loc>https://www.techfittech.com/assets/images/alteon/halo-renew-longevity-capsule-206.webp</image:loc>
+      <image:loc>https://www.techfittech.com/assets/images/alteon/fit-halo-renew-1600.webp</image:loc>
       <image:title>Halo ReNew Longevity Capsule India | Alteon</image:title>
       <image:caption>Halo ReNew is a longevity capsule that brings several restorative therapies together in one enclosed pod. It combines dry and wet salt therapy, red li</image:caption>
     </image:image>
@@ -1259,7 +1259,7 @@
   <url>
     <loc>https://www.techfittech.com/alteon/fitness-and-aqua/activshape-pilates-207</loc>
     <image:image>
-      <image:loc>https://www.techfittech.com/assets/images/alteon/activshape-pilates-207.webp</image:loc>
+      <image:loc>https://www.techfittech.com/assets/images/alteon/fit-activshape-pilates-1600.webp</image:loc>
       <image:title>Activshape Pilates India | Alteon</image:title>
       <image:caption>Activshape Pilates is an enclosed reformer style capsule that blends guided Pilates movement with infrared and red light therapy. A heated red light m</image:caption>
     </image:image>
@@ -1267,7 +1267,7 @@
   <url>
     <loc>https://www.techfittech.com/alteon/recovery-loungers-and-beds/red-couch-oxy-208</loc>
     <image:image>
-      <image:loc>https://www.techfittech.com/assets/images/alteon/red-couch-oxy-208.webp</image:loc>
+      <image:loc>https://www.techfittech.com/assets/images/alteon/fit-red-couch-oxy-1600.webp</image:loc>
       <image:title>Red Couch Oxy India | Alteon</image:title>
       <image:caption>Red Couch Oxy is an ergonomic recovery lounger that pairs a full red light therapy mattress with an oxygen stream and LED face mask. The user reclines</image:caption>
     </image:image>
@@ -1275,7 +1275,7 @@
   <url>
     <loc>https://www.techfittech.com/alteon/recovery-loungers-and-beds/red-couch-360-209</loc>
     <image:image>
-      <image:loc>https://www.techfittech.com/assets/images/alteon/red-couch-360-209.webp</image:loc>
+      <image:loc>https://www.techfittech.com/assets/images/alteon/redlight-glow-1600.webp</image:loc>
       <image:title>Red Couch 360 India | Alteon</image:title>
       <image:caption>Red Couch 360 is a recovery lounger that surrounds the body with red light therapy from both a heated mattress and an overhead lamp. The user reclines</image:caption>
     </image:image>
@@ -1283,7 +1283,7 @@
   <url>
     <loc>https://www.techfittech.com/alteon/fitness-and-aqua/va-body-sculpt-210</loc>
     <image:image>
-      <image:loc>https://www.techfittech.com/assets/images/alteon/va-body-sculpt-210.webp</image:loc>
+      <image:loc>https://www.techfittech.com/assets/images/alteon/fit-bodyshape-v2-1600.webp</image:loc>
       <image:title>VA Body Sculpt India | Alteon</image:title>
       <image:caption>VA Body Sculpt is a non invasive body sculpting system that combines HIFEM, radiofrequency and EMS technologies. Its applicators trigger intense muscl</image:caption>
     </image:image>
@@ -1291,7 +1291,7 @@
   <url>
     <loc>https://www.techfittech.com/alteon/fitness-and-aqua/va-endoactiv-211</loc>
     <image:image>
-      <image:loc>https://www.techfittech.com/assets/images/alteon/va-endoactiv-211.webp</image:loc>
+      <image:loc>https://www.techfittech.com/assets/images/alteon/fit-bodyshape-1600.webp</image:loc>
       <image:title>VA Endoactiv India | Alteon</image:title>
       <image:caption>VA Endoactiv is a microvibration cellulite removal system that uses rotating bead handles to massage and stimulate the skin. Body and facial handpiece</image:caption>
     </image:image>
@@ -1299,7 +1299,7 @@
   <url>
     <loc>https://www.techfittech.com/alteon/whole-body-cryotherapy/cryo-local-polar-bear-212</loc>
     <image:image>
-      <image:loc>https://www.techfittech.com/assets/images/alteon/cryo-local-polar-bear-212.webp</image:loc>
+      <image:loc>https://www.techfittech.com/assets/images/alteon/local-cryotherapy-23.webp</image:loc>
       <image:title>Cryo Local Polar Bear India | Alteon</image:title>
       <image:caption>Cryo Local Polar Bear is a nitrogen based localised cryotherapy device for targeted cold treatment of the body and face. A large built in nitrogen tan</image:caption>
     </image:image>
@@ -1307,7 +1307,7 @@
   <url>
     <loc>https://www.techfittech.com/alteon/whole-body-cryotherapy/cryo-flow-213</loc>
     <image:image>
-      <image:loc>https://www.techfittech.com/assets/images/alteon/cryo-flow-213.webp</image:loc>
+      <image:loc>https://www.techfittech.com/assets/images/alteon/local-cryotherapy-23.webp</image:loc>
       <image:title>Cryo Flow India | Alteon</image:title>
       <image:caption>Cryo Flow is an electric localised cryotherapy device that delivers targeted cold air through an adjustable arm and hose. Cold air between minus 4 and</image:caption>
     </image:image>
@@ -1315,7 +1315,7 @@
   <url>
     <loc>https://www.techfittech.com/alteon/whole-body-cryotherapy/cryo-flow-mini-214</loc>
     <image:image>
-      <image:loc>https://www.techfittech.com/assets/images/alteon/cryo-flow-mini-214.webp</image:loc>
+      <image:loc>https://www.techfittech.com/assets/images/alteon/local-cryotherapy-23.webp</image:loc>
       <image:title>Cryo Flow Mini India | Alteon</image:title>
       <image:caption>Cryo Flow Mini is a compact electric localised cryotherapy device for portable targeted cold treatment. It delivers cold air down to minus 20 degrees </image:caption>
     </image:image>
@@ -1323,7 +1323,7 @@
   <url>
     <loc>https://www.techfittech.com/alteon/whole-body-cryotherapy/cryo-touch-215</loc>
     <image:image>
-      <image:loc>https://www.techfittech.com/assets/images/alteon/cryo-touch-215.webp</image:loc>
+      <image:loc>https://www.techfittech.com/assets/images/alteon/local-cryotherapy-23.webp</image:loc>
       <image:title>Cryo Touch India | Alteon</image:title>
       <image:caption>Cryo Touch is a contact based thermal therapy device that delivers both cold and heat through handheld wands. Its wands reach temperatures from minus </image:caption>
     </image:image>

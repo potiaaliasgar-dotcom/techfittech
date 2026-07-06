@@ -1,7 +1,7 @@
 window.ALTEON_DATA = {
  "brand": "TechFit \u2014 Authorised Alteon Distributor India",
  "currency_note": "No pricing",
- "clientsImage": "assets/images/clients-partners.webp",
+ "clientsImage": "",
  "categories": [
   {
    "id": "hyperbaric-oxygen-chambers",
@@ -6534,7 +6534,7 @@ window.ALTEON_DATA = {
      "60 to 80 sq ft"
     ]
    ],
-   "image": "assets/images/alteon/single-person-hbot-al3v36-100.webp",
+   "image": "assets/images/alteon/hbot-lying-al3v36-1600.webp",
    "tileColor": "#080605"
   },
   {
@@ -6622,7 +6622,7 @@ window.ALTEON_DATA = {
      "Exclusive edition"
     ]
    ],
-   "image": "assets/images/alteon/bodyshape-200.webp",
+   "image": "assets/images/alteon/fit-bodyshape-1600.webp",
    "tileColor": "#000000"
   },
   {
@@ -6704,7 +6704,7 @@ window.ALTEON_DATA = {
      "Exclusive edition"
     ]
    ],
-   "image": "assets/images/alteon/infrashape-horizontal-201.webp",
+   "image": "assets/images/alteon/fit-infrashape-1600.webp",
    "tileColor": "#000000"
   },
   {
@@ -6770,7 +6770,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/alteon/infrastep-202.webp",
+   "image": "assets/images/alteon/fit-infrastep-1600.webp",
    "tileColor": "#000000"
   },
   {
@@ -6816,7 +6816,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/alteon/roll-slimmer-203.webp",
+   "image": "assets/images/alteon/fit-roll-slimmer-1600.webp",
    "tileColor": "#000000"
   },
   {
@@ -6867,7 +6867,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/alteon/roll-slimmer-xs-204.webp",
+   "image": "assets/images/alteon/fit-roll-slimmer-xs-1600.webp",
    "tileColor": "#000000"
   },
   {
@@ -6928,7 +6928,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/alteon/vibrashape-205.webp",
+   "image": "assets/images/alteon/fit-vibrashape-1600.webp",
    "tileColor": "#000000"
   },
   {
@@ -7004,7 +7004,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/alteon/halo-renew-longevity-capsule-206.webp",
+   "image": "assets/images/alteon/fit-halo-renew-1600.webp",
    "tileColor": "#000000"
   },
   {
@@ -7075,7 +7075,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/alteon/activshape-pilates-207.webp",
+   "image": "assets/images/alteon/fit-activshape-pilates-1600.webp",
    "tileColor": "#000000"
   },
   {
@@ -7140,7 +7140,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/alteon/red-couch-oxy-208.webp",
+   "image": "assets/images/alteon/fit-red-couch-oxy-1600.webp",
    "tileColor": "#000000"
   },
   {
@@ -7195,7 +7195,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/alteon/red-couch-360-209.webp",
+   "image": "assets/images/alteon/redlight-glow-1600.webp",
    "tileColor": "#000000"
   },
   {
@@ -7265,7 +7265,7 @@ window.ALTEON_DATA = {
      "2x"
     ]
    ],
-   "image": "assets/images/alteon/va-body-sculpt-210.webp",
+   "image": "assets/images/alteon/fit-bodyshape-v2-1600.webp",
    "tileColor": "#000000"
   },
   {
@@ -7359,7 +7359,7 @@ window.ALTEON_DATA = {
      "Option"
     ]
    ],
-   "image": "assets/images/alteon/va-endoactiv-211.webp",
+   "image": "assets/images/alteon/fit-bodyshape-1600.webp",
    "tileColor": "#000000"
   },
   {
@@ -7452,7 +7452,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/alteon/cryo-local-polar-bear-212.webp",
+   "image": "assets/images/alteon/local-cryotherapy-23.webp",
    "tileColor": "#000000"
   },
   {
@@ -7549,7 +7549,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/alteon/cryo-flow-213.webp",
+   "image": "assets/images/alteon/local-cryotherapy-23.webp",
    "tileColor": "#000000"
   },
   {
@@ -7620,7 +7620,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/alteon/cryo-flow-mini-214.webp",
+   "image": "assets/images/alteon/local-cryotherapy-23.webp",
    "tileColor": "#000000"
   },
   {
@@ -7686,7 +7686,7 @@ window.ALTEON_DATA = {
      "50mm / 30mm"
     ]
    ],
-   "image": "assets/images/alteon/cryo-touch-215.webp",
+   "image": "assets/images/alteon/local-cryotherapy-23.webp",
    "tileColor": "#000000"
   }
  ],
@@ -7700,7 +7700,7 @@ window.ALTEON_DATA = {
   "https://alteontech.com/assets/logo/logo7.svg",
   "https://alteontech.com/assets/logo/logo8.svg",
   "https://alteontech.com/assets/logo/logo9.svg",
-  "https://alteontech.com/assets/logo/logo10.png",
+  "",
   "https://alteontech.com/assets/logo/logo11.svg",
   "https://alteontech.com/assets/logo/logo12.svg",
   "https://alteontech.com/assets/logo/logo13.svg"

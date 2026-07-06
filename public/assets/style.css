@@ -185,6 +185,8 @@
       border-top: 3px solid var(--red);
       box-shadow: 0 8px 32px rgba(0, 0, 0, .15);
       z-index: 400;
+      max-height: calc(100vh - 90px);
+      overflow-y: auto;
     }
 
     .nd-menu.open {

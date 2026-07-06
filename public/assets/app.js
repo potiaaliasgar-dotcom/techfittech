@@ -572,7 +572,7 @@ function renderAlteonStyle(isServer = typeof window === 'undefined') {
 .alteon-page .badge{display:inline-block;background:rgba(143,208,166,.12);color:var(--green);border:1px solid rgba(143,208,166,.3);font-family:'Archivo';font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:14px}
 .alteon-page .pdp{display:grid;grid-template-columns:1.1fr 1fr;gap:52px;padding:30px 0 20px;align-items:start}
 @media(max-width:860px){.alteon-page .pdp{grid-template-columns:1fr;gap:28px}}
-.alteon-page .pdp-img{background:radial-gradient(120% 120% at 50% 12%,#212125,#0d0d0f);border:1px solid var(--line);border-radius:var(--r);aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden;position:sticky;top:96px;padding:30px}
+.alteon-page .pdp-img{background:radial-gradient(120% 120% at 50% 12%,#212125,#0d0d0f);border:1px solid var(--line);border-radius:var(--r);aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:30px}
 .alteon-page .pdp-img img{width:100%;height:100%;object-fit:contain}
 .alteon-page .pdp h1{font-family:'Playfair Display',serif;color:var(--gold);font-size:clamp(34px,5vw,52px);font-weight:700;text-transform:none;letter-spacing:0;line-height:1.05;margin:10px 0}
 .alteon-page .pdp .lead{color:var(--muted);font-size:17px;margin:18px 0 24px}
@@ -860,8 +860,14 @@ function renderAlteonProduct(catId, prodId, variantIdx = 0) {
                 <span>${esc(p.name)}</span>
             </div>
             <div class="pdp">
-                <div class="pdp-img" style="background:${p.tileColor}">
-                    <img src="/${p.image}" alt="${esc(p.name)}" loading="lazy">
+                <div class="pdp-left" style="display:flex;flex-direction:column;gap:30px">
+                    <div class="pdp-img" style="background:${p.tileColor}">
+                        <img src="/${p.image}" alt="${esc(p.name)}" loading="lazy">
+                    </div>
+                    ${p.gallery && p.gallery.length ? p.gallery.map((img, i) => `
+                    <div class="pdp-img fade" style="background:${p.tileColor || 'radial-gradient(120% 120% at 50% 12%,#212125,#0d0d0f)'};animation-delay:${(i%10)*0.05}s">
+                        <img src="/${img}" loading="lazy" alt="${esc(p.name)} Gallery ${i+1}">
+                    </div>`).join('') : ''}
                 </div>
                 <div>
                     <span class="badge">${esc(c.eyebrow)}</span>
@@ -886,14 +892,7 @@ function renderAlteonProduct(catId, prodId, variantIdx = 0) {
                     <div class="seo-note">Looking for a ${c.competitors && c.competitors.length > 0 ? esc(c.competitors[0]) : 'recovery'} alternative in India? The ${esc(p.name)} is a commercial grade option supplied, installed and serviced by TechFit, the authorised Alteon distributor.</div>
                 </div>
             </div>
-            ${p.gallery && p.gallery.length ? `
-            <div class="blk gallery-section">
-                <h4>Product Gallery</h4>
-                <div class="gallery-grid">
-                    ${p.gallery.map((img, i) => `<img src="/${img}" loading="lazy" class="fade gallery-img" style="animation-delay:${(i%10) * 0.05}s">`).join('')}
-                </div>
-            </div>
-            ` : ''}
+
             <div class="blk" style="margin-top:50px">
                 <h4>More in ${esc(c.name)}</h4>
                 <div class="rel">${rel}</div>
@@ -6359,286 +6358,233 @@ function render404() {
     } // end if (typeof window !== 'undefined')
 
 // --- HYROX ---
-function renderHyroxStyle(isServer = typeof window === 'undefined') {
-    const css = `
+function renderHyrox() {
+    let html = `
+<style>
 
-.hyrox-page{--maxw:1400px;font-family:var(--font);background:var(--black);color:var(--z100);line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:4rem}
-.hyrox-page *{box-sizing:border-box}
-.hyrox-page a{color:inherit;text-decoration:none}
-.hyrox-page img{display:block;max-width:100%}
-.hyrox-page a{color:inherit;text-decoration:none}
-.hyrox-page .cnt{max-width:var(--maxw);margin:0 auto;padding:0 1.5rem}
-.hyrox-page .btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.95rem;padding:.85rem 1.6rem;border-radius:.6rem;border:1px solid transparent;cursor:pointer;transition:all .18s ease;letter-spacing:.01em}
-.hyrox-page .btn-red{background:var(--red);color:#fff}
-.hyrox-page .btn-red:hover{background:var(--red-h);transform:translateY(-1px)}
-.hyrox-page .btn-outline{background:transparent;color:var(--white);border-color:var(--z700)}
-.hyrox-page .btn-outline:hover{border-color:var(--red);color:#fff}
-.hyrox-page .btn-white{background:#fff;color:var(--black)}
-.hyrox-page .btn-white:hover{background:var(--z100)}
-.hyrox-page .eyebrow{display:inline-flex;align-items:center;gap:.55rem;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red);background:var(--red-10);border:1px solid var(--red-20);padding:.45rem .9rem;border-radius:2rem}
-.hyrox-page .sec-title{font-size:clamp(1.7rem,3.6vw,2.7rem);font-weight:800;letter-spacing:-.02em;line-height:1.08;color:#fff}
-.hyrox-page .sec-sub{color:var(--z300);font-size:1.05rem;max-width:64ch;margin-top:1rem}
-.hyrox-page .pad{padding:5.5rem 0}
-.hyrox-page .dot{width:5px;height:5px;border-radius:50%;background:var(--red);display:inline-block}
+.hx-page{
+  --hx-red:#DC2626; --hx-red-h:#b91c1c; --hx-red-10:rgba(220,38,38,.10); --hx-red-20:rgba(220,38,38,.20);
+  --hx-black:#09090B; --hx-z950:#0f0f11; --hx-z900:#18181B; --hx-z800:#27272A; --hx-z700:#3F3F46;
+  --hx-z600:#4B4B52; --hx-z500:#5F5F66; --hx-z400:#71717A; --hx-z300:#A1A1AA; --hx-z200:#D4D4D8;
+  --hx-z100:#F4F4F5; --hx-z50:#FAFAFA; --hx-white:#FFFFFF;
+  --hx-font:'Outfit',system-ui,sans-serif; --hx-maxw:1200px;
+} .hx-page *{margin:0;padding:0;box-sizing:border-box} .hx-page{scroll-behavior:smooth} .hx-page{font-family:var(--hx-font);background:var(--hx-black);color:var(--hx-z100);line-height:1.6;-webkit-font-smoothing:antialiased} .hx-page img{display:block;max-width:100%} .hx-page a{color:inherit;text-decoration:none}
+.hx-cnt{max-width:var(--hx-maxw);margin:0 auto;padding:0 1.5rem}
+.hx-btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.95rem;padding:.85rem 1.6rem;border-radius:.6rem;border:1px solid transparent;cursor:pointer;transition:all .18s ease;letter-spacing:.01em}
+.hx-btn-red{background:var(--hx-red);color:#fff}
+.hx-btn-red:hover{background:var(--hx-red-h);transform:translateY(-1px)}
+.hx-btn-outline{background:transparent;color:var(--hx-white);border-color:var(--hx-z700)}
+.hx-btn-outline:hover{border-color:var(--hx-red);color:#fff}
+.hx-btn-white{background:#fff;color:var(--hx-black)}
+.hx-btn-white:hover{background:var(--hx-z100)}
+.hx-eyebrow{display:inline-flex;align-items:center;gap:.55rem;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--hx-red);background:var(--hx-red-10);border:1px solid var(--hx-red-20);padding:.45rem .9rem;border-radius:2rem}
+.hx-sec-title{font-size:clamp(1.7rem,3.6vw,2.7rem);font-weight:800;letter-spacing:-.02em;line-height:1.08;color:#fff}
+.hx-sec-sub{color:var(--hx-z300);font-size:1.05rem;max-width:64ch;margin-top:1rem}
+.hx-pad{padding:5.5rem 0}
+.hx-dot{width:5px;height:5px;border-radius:50%;background:var(--hx-red);display:inline-block}
 
 /* HERO */
-.hyrox-page .hero{min-height:86vh;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid var(--z900);
-  background:radial-gradient(1200px 600px at 78% -10%,rgba(220,38,38,.22),transparent 60%),linear-gradient(180deg,var(--z950),var(--black))}
-.hyrox-page .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;width:100%}
-.hyrox-page .hero h1{font-size:clamp(2.4rem,6vw,4.4rem);font-weight:900;line-height:.98;letter-spacing:-.03em;color:#fff;margin:1.4rem 0 1.2rem}
-.hyrox-page .hero h1 span{color:var(--red)}
-.hyrox-page .hero p{color:var(--z300);font-size:1.18rem;max-width:52ch}
-.hyrox-page .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
-.hero-medi.hyrox-page a{position:relative;border-radius:1.2rem;overflow:hidden;border:1px solid var(--z800);aspect-ratio:4/5;background:#fff}
-.hero-media .hyrox-page img{width:100%;height:100%;object-fit:contain;padding:1.5rem}
-.hyrox-page .hero-tag{position:absolute;left:1rem;bottom:1rem;background:rgba(9,9,11,.82);backdrop-filter:blur(6px);border:1px solid var(--z700);color:#fff;font-size:.78rem;font-weight:600;padding:.5rem .85rem;border-radius:.5rem}
+.hx-hero{min-height:86vh;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid var(--hx-z900);
+  background:radial-gradient(1200px 600px at 78% -10%,rgba(220,38,38,.22),transparent 60%),linear-gradient(180deg,var(--hx-z950),var(--hx-black))}
+.hx-hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;width:100%}
+.hx-hero h1{font-size:clamp(2.4rem,6vw,4.4rem);font-weight:900;line-height:.98;letter-spacing:-.03em;color:#fff;margin:1.4rem 0 1.2rem}
+.hx-hero h1 span{color:var(--hx-red)}
+.hx-hero p{color:var(--hx-z300);font-size:1.18rem;max-width:52ch}
+.hx-hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+.hx-hero-media{position:relative;border-radius:1.2rem;overflow:hidden;border:1px solid var(--hx-z800);aspect-ratio:4/5;background:#fff}
+.hx-hero-media img{width:100%;height:100%;object-fit:contain;padding:1.5rem}
+.hx-hero-tag{position:absolute;left:1rem;bottom:1rem;background:rgba(9,9,11,.82);backdrop-filter:blur(6px);border:1px solid var(--hx-z700);color:#fff;font-size:.78rem;font-weight:600;padding:.5rem .85rem;border-radius:.5rem}
 
 /* strip */
-.hyrox-page .strip{background:var(--z950);border-bottom:1px solid var(--z900)}
-.hyrox-page .strip-in{display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap;padding:1.4rem 0;color:var(--z400);font-size:.9rem;font-weight:500}
-.hyrox-page .strip-in b{color:var(--z100);font-weight:700}
+.hx-strip{background:var(--hx-z950);border-bottom:1px solid var(--hx-z900)}
+.hx-strip-in{display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap;padding:1.4rem 0;color:var(--hx-z400);font-size:.9rem;font-weight:500}
+.hx-strip-in b{color:var(--hx-z100);font-weight:700}
 
 /* intro */
-.hyrox-page .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
-.hyrox-page .intro p{color:var(--z300);font-size:1.06rem;margin-top:1.1rem}
-.hyrox-page .pill-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.8rem}
-.hyrox-page .pill{font-size:.82rem;font-weight:600;color:var(--z200);background:var(--z900);border:1px solid var(--z800);padding:.5rem .9rem;border-radius:2rem}
-.hyrox-page .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.hyrox-page .stat{background:linear-gradient(180deg,var(--z900),var(--z950));border:1px solid var(--z800);border-radius:1rem;padding:1.5rem}
-.stat .n{font-size:2.1rem;font-weight:800;color:#fff;letter-spacing:-.02em}
-.stat .n span{color:var(--red)}
-.stat .l{color:var(--z400);font-size:.85rem;margin-top:.25rem}
+.hx-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+.hx-intro p{color:var(--hx-z300);font-size:1.06rem;margin-top:1.1rem}
+.hx-pill-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.8rem}
+.hx-pill{font-size:.82rem;font-weight:600;color:var(--hx-z200);background:var(--hx-z900);border:1px solid var(--hx-z800);padding:.5rem .9rem;border-radius:2rem}
+.hx-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.hx-stat{background:linear-gradient(180deg,var(--hx-z900),var(--hx-z950));border:1px solid var(--hx-z800);border-radius:1rem;padding:1.5rem}
+.hx-stat .hx-n{font-size:2.1rem;font-weight:800;color:#fff;letter-spacing:-.02em}
+.hx-stat .hx-n span{color:var(--hx-red)}
+.hx-stat .hx-l{color:var(--hx-z400);font-size:.85rem;margin-top:.25rem}
 
 /* race stations */
-.race{background:var(--z950);border-top:1px solid var(--z900);border-bottom:1px solid var(--z900)}
-.race-head{text-align:center;max-width:70ch;margin:0 auto 3rem}
-.race-head .hyrox-page .sec-sub{margin-left:auto;margin-right:auto}
-.st-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-.st{background:var(--z900);border:1px solid var(--z800);border-radius:1rem;padding:1.4rem;transition:border-color .18s}
-.st:hover{border-color:var(--red)}
-.st-n{font-size:.72rem;font-weight:800;letter-spacing:.1em;color:var(--red)}
-.st-name{font-size:1.05rem;font-weight:700;color:#fff;margin:.35rem 0 .5rem}
-.st-eq{font-size:.85rem;color:var(--z300)}
-.st-eq b{color:var(--z100);font-weight:600}
-.run-note{text-align:center;margin-top:2rem;color:var(--z400);font-size:.95rem}
-.run-note b{color:var(--red)}
+.hx-race{background:var(--hx-z950);border-top:1px solid var(--hx-z900);border-bottom:1px solid var(--hx-z900)}
+.hx-race-head{text-align:center;max-width:70ch;margin:0 auto 3rem}
+.hx-race-head .hx-sec-sub{margin-left:auto;margin-right:auto}
+.hx-st-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.hx-st{background:var(--hx-z900);border:1px solid var(--hx-z800);border-radius:1rem;padding:1.4rem;transition:border-color .18s}
+.hx-st:hover{border-color:var(--hx-red)}
+.hx-st-n{font-size:.72rem;font-weight:800;letter-spacing:.1em;color:var(--hx-red)}
+.hx-st-name{font-size:1.05rem;font-weight:700;color:#fff;margin:.35rem 0 .5rem}
+.hx-st-eq{font-size:.85rem;color:var(--hx-z300)}
+.hx-st-eq b{color:var(--hx-z100);font-weight:600}
+.hx-run-note{text-align:center;margin-top:2rem;color:var(--hx-z400);font-size:.95rem}
+.hx-run-note b{color:var(--hx-red)}
 
 /* catalogue */
-.cat-block{margin-top:3rem}
-.cat-label{display:flex;align-items:center;gap:.9rem;margin:3.5rem 0 .5rem}
-.cat-label h3{font-size:1.4rem;font-weight:800;color:#fff;letter-spacing:-.01em;white-space:nowrap}
-.cat-label .ln{height:1px;background:var(--z800);flex:1}
-.cat-label .chip{font-size:.72rem;font-weight:700;color:var(--z400);border:1px solid var(--z800);border-radius:2rem;padding:.25rem .7rem}
+.hx-cat-block{margin-top:3rem}
+.hx-cat-label{display:flex;align-items:center;gap:.9rem;margin:3.5rem 0 .5rem}
+.hx-cat-label h3{font-size:1.4rem;font-weight:800;color:#fff;letter-spacing:-.01em;white-space:nowrap}
+.hx-cat-label .hx-ln{height:1px;background:var(--hx-z800);flex:1}
+.hx-cat-label .hx-chip{font-size:.72rem;font-weight:700;color:var(--hx-z400);border:1px solid var(--hx-z800);border-radius:2rem;padding:.25rem .7rem}
 
 /* product block */
-.hyrox-page .product{display:grid;grid-template-columns:.95fr 1.05fr;gap:2.5rem;padding:2.6rem 0;border-top:1px solid var(--z900);align-items:start}
-.gallery{position:sticky;top:1.5rem}
-.hyrox-page .gal-main{aspect-ratio:1/1;background:#fff;border-radius:1rem;overflow:hidden;border:1px solid var(--z800)}
-.gal-main .hyrox-page img{width:100%;height:100%;object-fit:contain;padding:1.6rem}
-.hyrox-page .gal-thumbs{display:flex;gap:.6rem;margin-top:.7rem;flex-wrap:wrap}
-.gal-thumbs .hyrox-page img{width:62px;height:62px;object-fit:contain;background:#fff;border:1px solid var(--z800);border-radius:.5rem;padding:.3rem;cursor:pointer;opacity:.65;transition:opacity .15s,border-color .15s}
-.gal-thumbs img:hover,.hyrox-page .gal-thumbs img.active{opacity:1;border-color:var(--red)}
-.p-event{display:inline-flex;align-items:center;gap:.45rem;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--red);background:var(--red-10);border:1px solid var(--red-20);padding:.35rem .7rem;border-radius:.4rem}
-.p-name{font-size:1.7rem;font-weight:800;color:#fff;letter-spacing:-.02em;margin:.8rem 0 .1rem}
-.p-code{font-size:.78rem;color:var(--z500);font-weight:600;letter-spacing:.04em}
-.p-desc{color:var(--z300);font-size:.98rem;margin:1rem 0 1.4rem}
-.variants{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 1.4rem}
-.variants .vlab{font-size:.72rem;font-weight:700;color:var(--z500);align-self:center;margin-right:.2rem;text-transform:uppercase;letter-spacing:.05em}
-.variants span.v{font-size:.78rem;font-weight:700;color:var(--z100);background:var(--z800);border-radius:.4rem;padding:.32rem .55rem}
-.spec-title{font-size:.74rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--z400);margin-bottom:.7rem}
-.hyrox-page .spec-table{display:grid;grid-template-columns:1fr 1fr;gap:.1rem;border:1px solid var(--z800);border-radius:.8rem;overflow:hidden}
-.hyrox-page .spec-row{display:flex;flex-direction:column;gap:.15rem;padding:.7rem .85rem;background:var(--z950);border-top:1px solid var(--z900)}
-.hyrox-page .spec-row .k{font-size:.72rem;color:var(--z500);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
-.hyrox-page .spec-row .v{font-size:.9rem;color:var(--z100);font-weight:600}
-.hyrox-page .spec-row.full{grid-column:1/-1}
-.warranty{margin-top:1rem;font-size:.82rem;color:var(--z400)}
-.warranty b{color:var(--z200)}
+.hx-product{display:grid;grid-template-columns:.95fr 1.05fr;gap:2.5rem;padding:2.6rem 0;border-top:1px solid var(--hx-z900);align-items:start}
+.hx-gallery{position:sticky;top:1.5rem}
+.hx-gal-main{aspect-ratio:1/1;background:#fff;border-radius:1rem;overflow:hidden;border:1px solid var(--hx-z800)}
+.hx-gal-main img{width:100%;height:100%;object-fit:contain;padding:1.6rem}
+.hx-gal-thumbs{display:flex;gap:.6rem;margin-top:.7rem;flex-wrap:wrap}
+.hx-gal-thumbs img{width:62px;height:62px;object-fit:contain;background:#fff;border:1px solid var(--hx-z800);border-radius:.5rem;padding:.3rem;cursor:pointer;opacity:.65;transition:opacity .15s,border-color .15s}
+.hx-gal-thumbs img:hover,.hx-gal-thumbs img.hx-active{opacity:1;border-color:var(--hx-red)}
+.hx-p-event{display:inline-flex;align-items:center;gap:.45rem;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--hx-red);background:var(--hx-red-10);border:1px solid var(--hx-red-20);padding:.35rem .7rem;border-radius:.4rem}
+.hx-p-name{font-size:1.7rem;font-weight:800;color:#fff;letter-spacing:-.02em;margin:.8rem 0 .1rem}
+.hx-p-code{font-size:.78rem;color:var(--hx-z500);font-weight:600;letter-spacing:.04em}
+.hx-p-desc{color:var(--hx-z300);font-size:.98rem;margin:1rem 0 1.4rem}
+.hx-variants{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 1.4rem}
+.hx-variants .hx-vlab{font-size:.72rem;font-weight:700;color:var(--hx-z500);align-self:center;margin-right:.2rem;text-transform:uppercase;letter-spacing:.05em}
+.hx-variants span.hx-v{font-size:.78rem;font-weight:700;color:var(--hx-z100);background:var(--hx-z800);border-radius:.4rem;padding:.32rem .55rem}
+.hx-spec-title{font-size:.74rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--hx-z400);margin-bottom:.7rem}
+.hx-spec-table{display:grid;grid-template-columns:1fr 1fr;gap:.1rem;border:1px solid var(--hx-z800);border-radius:.8rem;overflow:hidden}
+.hx-spec-row{display:flex;flex-direction:column;gap:.15rem;padding:.7rem .85rem;background:var(--hx-z950);border-top:1px solid var(--hx-z900)}
+.hx-spec-row .hx-k{font-size:.72rem;color:var(--hx-z500);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.hx-spec-row .hx-v{font-size:.9rem;color:var(--hx-z100);font-weight:600}
+.hx-spec-row.hx-full{grid-column:1/-1}
 
 /* setup */
-.setup-inc{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem}
-.inc{background:var(--z900);border:1px solid var(--z800);border-radius:1rem;padding:1.5rem}
-.inc .ic{color:var(--red);font-weight:800;font-size:.72rem;letter-spacing:.1em;margin-bottom:.6rem}
-.inc h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:.35rem}
-.inc p{color:var(--z400);font-size:.88rem}
-.tier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
-.tier{background:linear-gradient(180deg,var(--z900),var(--z950));border:1px solid var(--z800);border-radius:1.1rem;padding:1.8rem}
-.tier.feat{border-color:var(--red);box-shadow:0 0 0 1px var(--red-20)}
-.tier .cap{color:var(--red);font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem}
-.tier h4{color:#fff;font-size:1.3rem;font-weight:800;margin-bottom:.3rem;letter-spacing:-.01em}
-.tier .who-for{color:var(--z400);font-size:.85rem;margin-bottom:1.1rem}
-.tier ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
-.tier li{color:var(--z300);font-size:.9rem;padding-left:1.3rem;position:relative}
-.tier li:before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%;background:var(--red)}
-.steps{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.5rem}
-.step{flex:1;min-width:150px;background:var(--z950);border:1px solid var(--z800);border-radius:.9rem;padding:1.2rem}
-.step .num{width:30px;height:30px;border-radius:.5rem;background:var(--red-10);border:1px solid var(--red-20);color:var(--red);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:.85rem;margin-bottom:.7rem}
-.step h5{color:#fff;font-size:.95rem;font-weight:700}
+.hx-setup-inc{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem}
+.hx-inc{background:var(--hx-z900);border:1px solid var(--hx-z800);border-radius:1rem;padding:1.5rem}
+.hx-inc .hx-ic{color:var(--hx-red);font-weight:800;font-size:.72rem;letter-spacing:.1em;margin-bottom:.6rem}
+.hx-inc h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:.35rem}
+.hx-inc p{color:var(--hx-z400);font-size:.88rem}
+.hx-tier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.hx-tier{background:linear-gradient(180deg,var(--hx-z900),var(--hx-z950));border:1px solid var(--hx-z800);border-radius:1.1rem;padding:1.8rem}
+.hx-tier.hx-feat{border-color:var(--hx-red);box-shadow:0 0 0 1px var(--hx-red-20)}
+.hx-tier .hx-cap{color:var(--hx-red);font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem}
+.hx-tier h4{color:#fff;font-size:1.3rem;font-weight:800;margin-bottom:.3rem;letter-spacing:-.01em}
+.hx-tier .hx-who-for{color:var(--hx-z400);font-size:.85rem;margin-bottom:1.1rem}
+.hx-tier ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.hx-tier li{color:var(--hx-z300);font-size:.9rem;padding-left:1.3rem;position:relative}
+.hx-tier li:before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%;background:var(--hx-red)}
+.hx-steps{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.5rem}
+.hx-step{flex:1;min-width:150px;background:var(--hx-z950);border:1px solid var(--hx-z800);border-radius:.9rem;padding:1.2rem}
+.hx-step .hx-num{width:30px;height:30px;border-radius:.5rem;background:var(--hx-red-10);border:1px solid var(--hx-red-20);color:var(--hx-red);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:.85rem;margin-bottom:.7rem}
+.hx-step h5{color:#fff;font-size:.95rem;font-weight:700}
 
 /* who / vp */
-.who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.5rem}
-.who-card{background:var(--z900);border:1px solid var(--z800);border-radius:1rem;padding:1.6rem}
-.who-card .ic{width:44px;height:44px;border-radius:.7rem;background:var(--red-10);border:1px solid var(--red-20);display:flex;align-items:center;justify-content:center;color:var(--red);font-weight:800;font-size:1.1rem;margin-bottom:1rem}
-.who-card h4{color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:.4rem}
-.who-card p{color:var(--z400);font-size:.9rem}
-.vp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
-.vp{padding:1.6rem;border-left:2px solid var(--red);background:linear-gradient(90deg,var(--red-10),transparent)}
-.vp h4{color:#fff;font-size:1.08rem;font-weight:700;margin-bottom:.4rem}
-.vp p{color:var(--z300);font-size:.92rem}
+.hx-who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.5rem}
+.hx-who-card{background:var(--hx-z900);border:1px solid var(--hx-z800);border-radius:1rem;padding:1.6rem}
+.hx-who-card .hx-ic{width:44px;height:44px;border-radius:.7rem;background:var(--hx-red-10);border:1px solid var(--hx-red-20);display:flex;align-items:center;justify-content:center;color:var(--hx-red);font-weight:800;font-size:1.1rem;margin-bottom:1rem}
+.hx-who-card h4{color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:.4rem}
+.hx-who-card p{color:var(--hx-z400);font-size:.9rem}
+.hx-vp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.hx-vp{padding:1.6rem;border-left:2px solid var(--hx-red);background:linear-gradient(90deg,var(--hx-red-10),transparent)}
+.hx-vp h4{color:#fff;font-size:1.08rem;font-weight:700;margin-bottom:.4rem}
+.hx-vp p{color:var(--hx-z300);font-size:.92rem}
 
 /* CTA */
-.ct.hyrox-page a{background:linear-gradient(135deg,var(--red),#7f1d1d);border-radius:1.4rem;padding:3.5rem;text-align:center;overflow:hidden}
-.cta h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;letter-spacing:-.02em;line-height:1.05}
-.cta p{color:rgba(255,255,255,.9);font-size:1.1rem;margin:1rem auto 2rem;max-width:56ch}
-.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.disc{background:var(--z950);border-top:1px solid var(--z900);padding:2.2rem 0;color:var(--z500);font-size:.82rem;text-align:center}
-.disc .hyrox-page a{color:var(--z300);text-decoration:underline}
+.hx-cta{background:linear-gradient(135deg,var(--hx-red),#7f1d1d);border-radius:1.4rem;padding:3.5rem;text-align:center;overflow:hidden}
+.hx-cta h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;letter-spacing:-.02em;line-height:1.05}
+.hx-cta p{color:rgba(255,255,255,.9);font-size:1.1rem;margin:1rem auto 2rem;max-width:56ch}
+.hx-cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.hx-disc{background:var(--hx-z950);border-top:1px solid var(--hx-z900);padding:2.2rem 0;color:var(--hx-z500);font-size:.82rem;text-align:center}
+.hx-disc a{color:var(--hx-z300);text-decoration:underline}
 
 @media(max-width:900px){
-  .hyrox-page .hero-grid{grid-template-columns:1fr;gap:2rem}
-  .hero-medi.hyrox-page a{max-width:360px;order:-1}
-  .hyrox-page .intro-grid{grid-template-columns:1fr;gap:2.5rem}
-  .st-grid{grid-template-columns:repeat(2,1fr)}
-  .hyrox-page .product{grid-template-columns:1fr;gap:1.5rem}
-  .gallery{position:static}
-  .who-grid{grid-template-columns:repeat(2,1fr)}
-  .setup-inc,.tier-grid{grid-template-columns:1fr}
-  .vp-grid{grid-template-columns:1fr}
-  .hyrox-page .pad{padding:4rem 0}
-  .ct.hyrox-page a{padding:2.5rem 1.5rem}
+  .hx-hero-grid{grid-template-columns:1fr;gap:2rem}
+  .hx-hero-media{max-width:360px;order:-1}
+  .hx-intro-grid{grid-template-columns:1fr;gap:2.5rem}
+  .hx-st-grid{grid-template-columns:repeat(2,1fr)}
+  .hx-product{grid-template-columns:1fr;gap:1.5rem}
+  .hx-gallery{position:static}
+  .hx-who-grid{grid-template-columns:repeat(2,1fr)}
+  .hx-setup-inc,.hx-tier-grid{grid-template-columns:1fr}
+  .hx-vp-grid{grid-template-columns:1fr}
+  .hx-pad{padding:4rem 0}
+  .hx-cta{padding:2.5rem 1.5rem}
 }
 @media(max-width:560px){
-  .st-grid,.who-grid,.stat-grid,.hyrox-page .spec-table{grid-template-columns:1fr}
-  .hyrox-page .strip-in{gap:1rem}
-}
-`;
-    if (isServer) return `<style id="hyrox-style">${css}</style>`;
-    if (document.getElementById('hyrox-style')) return '';
-    const style = document.createElement('style');
-    style.id = 'hyrox-style';
-    style.innerHTML = css;
-    document.head.appendChild(style);
-    return '';
+  .hx-st-grid,.hx-who-grid,.hx-stat-grid,.hx-spec-table{grid-template-columns:1fr}
+  .hx-strip-in{gap:1rem}
 }
 
-function renderHyrox() {
-    const _style = renderHyroxStyle();
-    
-    setSchema([
-        {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "HYROX", "item": "https://www.techfittech.com/hyrox" }
-            ]
-        }
-    ]);
+</style>
 
-    // Attach global pick function for gallery if not exists
-    if (!window.hyroxPick) {
-        window.hyroxPick = function(el, src) {
-            const productDiv = el.closest('.product');
-            const mainImg = productDiv.querySelector('.gal-main img');
-            mainImg.src = src;
-            productDiv.querySelectorAll('.gal-thumbs img').forEach(i => i.classList.remove('active'));
-            el.classList.add('active');
-        };
-    }
-
-    // Replace inline onclicks to use window.hyroxPick
-    let html = `
+<div class="hx-page">
 
 <!-- HERO -->
-<section class="hero">
-  <div class="cnt hero-grid">
+<section class="hx-hero">
+  <div class="hx-cnt hx-hero-grid">
     <div>
-      <span class="eyebrow"><span class="dot"></span> Authorised Centr&nbsp;x&nbsp;HYROX Reseller</span>
+      <span class="hx-eyebrow"><span class="hx-dot"></span> Authorised Centr&nbsp;x&nbsp;HYROX Reseller</span>
       <h1>Official <span>HYROX</span> Equipment.<br>Now available across India.</h1>
-      <p>TechFit is an authorised reseller of Centr — the official equipment partner for HYROX. This is the exact official competition-grade HYROX equipment used on race day, supplied and installed for gyms, studios and performance centres nationwide.</p>
-      <div class="hero-btns">
-        <a class="btn btn-red" href="#quote">Request a Quote</a>
-        <a class="btn btn-outline" href="#catalogue">View Full Range</a>
+      <p>TechFit is an authorised reseller of Centr&nbsp;x&nbsp;HYROX — the official equipment provider of HYROX, the World Series of Fitness Racing. The exact competition-grade gear used on race day, supplied and installed for gyms, studios and performance centres nationwide.</p>
+      <div class="hx-hero-btns">
+        <a class="hx-btn hx-btn-red" href="#quote">Request a Quote</a>
+        <a class="hx-btn hx-btn-outline" href="#catalogue">View Full Range</a>
       </div>
     </div>
-    <div class="hero-media">
+    <div class="hx-hero-media">
       <img src="/assets/images/hyrox/perform-tread-1.jpg" alt="Centr x HYROX Perform Tread — official motorless curved treadmill">
-      <span class="hero-tag">Centr&nbsp;x&nbsp;HYROX Perform Tread</span>
+      <span class="hx-hero-tag">Centr&nbsp;x&nbsp;HYROX Perform Tread</span>
     </div>
   </div>
 </section>
 
 <!-- STRIP -->
-<div class="strip">
-  <div class="cnt strip-in">
-    <span><b>Official</b> HYROX equipment provider</span><span class="dot"></span>
-    <span><b>Competition-grade</b> — the same gear used at HYROX races</span><span class="dot"></span>
+<div class="hx-strip">
+  <div class="hx-cnt hx-strip-in">
+    <span><b>Official</b> HYROX equipment provider</span><span class="hx-dot"></span>
+    <span><b>Competition-grade</b> — the same gear used at HYROX races</span><span class="hx-dot"></span>
     <span><b>Pan-India</b> supply, delivery &amp; installation</span>
   </div>
 </div>
 
 <!-- INTRO -->
-<section class="pad">
-  <div class="cnt intro-grid">
+<section class="hx-pad">
+  <div class="hx-cnt hx-intro-grid">
     <div>
-      <span class="eyebrow">Why TechFit</span>
-      <h2 class="sec-title" style="margin-top:1.1rem">Race-day equipment, sourced and set up in India.</h2>
-      <p>HYROX is the fastest-growing fitness race in the world — a standardised format of eight 1&nbsp;km runs paired with eight functional workout stations. Every station uses specific, purpose-built equipment, and Centr is the <b style="color:var(--z100)">official equipment provider of HYROX</b> worldwide.</p>
+      <span class="hx-eyebrow">Why TechFit</span>
+      <h2 class="hx-sec-title" style="margin-top:1.1rem">Race-day equipment, sourced and set up in India.</h2>
+      <p>HYROX is the fastest-growing fitness race in the world — a standardised format of eight 1&nbsp;km runs paired with eight functional workout stations. Every station uses specific, purpose-built equipment, and Centr is the <b style="color:var(--hx-z100)">official equipment provider of HYROX</b> worldwide.</p>
       <p>As a TechFit reseller, you get access to the complete Centr&nbsp;x&nbsp;HYROX range — from the motorless Perform Tread and Power Sled to Octo Kettlebells, Wall Balls, Sandbags, rigs and competition turf — with local sourcing, professional installation and after-sales support handled end to end.</p>
-      <div class="pill-row">
-        <span class="pill">Commercial gyms &amp; studios</span>
-        <span class="pill">HYROX-style training zones</span>
-        <span class="pill">Hotels &amp; residential amenities</span>
-        <span class="pill">Performance &amp; S&amp;C facilities</span>
+      <div class="hx-pill-row">
+        <span class="hx-pill">Commercial gyms &amp; studios</span>
+        <span class="hx-pill">HYROX-style training zones</span>
+        <span class="hx-pill">Hotels &amp; residential amenities</span>
+        <span class="hx-pill">Performance &amp; S&amp;C facilities</span>
       </div>
     </div>
-    <div class="stat-grid">
-      <div class="stat"><div class="n">1<span>#</span></div><div class="l">Official equipment provider of HYROX — Centr</div></div>
-      <div class="stat"><div class="n">8<span>+8</span></div><div class="l">Race stations &amp; 1 km runs the gear is built for</div></div>
-      <div class="stat"><div class="n">15+</div><div class="l">Product lines available to order</div></div>
-      <div class="stat"><div class="n">800<span>+</span></div><div class="l">Installations delivered by TechFit across India</div></div>
+    <div class="hx-stat-grid">
+      <div class="hx-stat"><div class="hx-n">1<span>#</span></div><div class="hx-l">Official equipment provider of HYROX — Centr</div></div>
+      <div class="hx-stat"><div class="hx-n">8<span>+8</span></div><div class="hx-l">Race stations &amp; 1 km runs the gear is built for</div></div>
+      <div class="hx-stat"><div class="hx-n">15+</div><div class="hx-l">Product lines available to order</div></div>
+      <div class="hx-stat"><div class="hx-n">800<span>+</span></div><div class="hx-l">Installations delivered by TechFit across India</div></div>
     </div>
-  </div>
-</section>
-
-<!-- RACE STATIONS -->
-<section class="race pad" id="race">
-  <div class="cnt">
-    <div class="race-head">
-      <span class="eyebrow">The Fitness Race</span>
-      <h2 class="sec-title" style="margin-top:1.1rem">What a HYROX race needs</h2>
-      <p class="sec-sub">A HYROX race is the same everywhere in the world: 8&nbsp;km of running broken into eight 1&nbsp;km laps, each followed by a functional station. Here's every station and the official equipment it calls for.</p>
-    </div>
-    <div class="st-grid">
-      <div class="st"><div class="st-n">STATION 01</div><div class="st-name">1000 m SkiErg</div><div class="st-eq"><b>Ski Machine</b> — air-resistance upper-body ergometer</div></div>
-      <div class="st"><div class="st-n">STATION 02</div><div class="st-name">50 m Sled Push</div><div class="st-eq"><b>Power Sled</b> + <b>Bumper Plates</b> on competition turf</div></div>
-      <div class="st"><div class="st-n">STATION 03</div><div class="st-name">50 m Sled Pull</div><div class="st-eq"><b>Power Sled</b> + <b>Power Rope</b> + <b>Bumper Plates</b></div></div>
-      <div class="st"><div class="st-n">STATION 04</div><div class="st-name">80 m Burpee Broad Jumps</div><div class="st-eq"><b>Competition Turf</b> — bodyweight, no load</div></div>
-      <div class="st"><div class="st-n">STATION 05</div><div class="st-name">1000 m Row</div><div class="st-eq"><b>Rower</b> — air-resistance full-body ergometer</div></div>
-      <div class="st"><div class="st-n">STATION 06</div><div class="st-name">200 m Farmers Carry</div><div class="st-eq"><b>Octo Kettlebells</b> — a pair, carried the full distance</div></div>
-      <div class="st"><div class="st-n">STATION 07</div><div class="st-name">100 m Sandbag Lunges</div><div class="st-eq"><b>Competition Sandbag</b> — shouldered walking lunges</div></div>
-      <div class="st"><div class="st-n">STATION 08</div><div class="st-name">75–100 Wall Balls</div><div class="st-eq"><b>Wall Ball</b> + <b>Rig Target</b> at competition height</div></div>
-    </div>
-    <p class="run-note">Between every station: a <b>1 km run</b> — eight in total. The Perform Tread lets athletes train those runs indoors on the same curved, motorless surface built for the race.</p>
   </div>
 </section>
 
 <!-- CATALOGUE -->
-<section class="pad" id="catalogue">
-  <div class="cnt">
+<section class="hx-pad" id="catalogue">
+  <div class="hx-cnt">
     <div style="text-align:center;max-width:64ch;margin:0 auto">
-      <span class="eyebrow">The Range</span>
-      <h2 class="sec-title" style="margin-top:1.1rem">The complete Centr x HYROX line-up</h2>
-      <p class="sec-sub" style="margin:1rem auto 0">Every product below is official Centr&nbsp;x&nbsp;HYROX equipment, available to order through TechFit. Full manufacturer specifications are listed for each. Contact us for configurations, package builds and quotes.</p>
+      <span class="hx-eyebrow">The Range</span>
+      <h2 class="hx-sec-title" style="margin-top:1.1rem">The complete Centr x HYROX line-up</h2>
+      <p class="hx-sec-sub" style="margin:1rem auto 0">Every product below is official Centr&nbsp;x&nbsp;HYROX equipment, available to order through TechFit. Full manufacturer specifications are listed for each. Contact us for configurations, package builds and quotes.</p>
     </div>
 
     <!-- ===== PERFORMANCE CARDIO & RIGS ===== -->
-    <div class="cat-label"><h3>Performance Cardio &amp; Rigs</h3><div class="ln"></div><span class="chip">5 products</span></div>
+    <div class="hx-cat-label"><h3>Performance Cardio &amp; Rigs</h3><div class="hx-ln"></div><span class="hx-chip">5 products</span></div>
 
     <!-- PERFORM TREAD -->
-    <div class="product">
-      <div class="gallery">
-        <div class="gal-main"><img src="/assets/images/hyrox/perform-tread-1.jpg" alt="Centr x HYROX Perform Tread"></div>
-        <div class="gal-thumbs">
-          <img class="active" src="/assets/images/hyrox/perform-tread-1.jpg" onclick="pick(this)" alt="">
+    <div class="hx-product">
+      <div class="hx-gallery">
+        <div class="hx-gal-main"><img src="/assets/images/hyrox/perform-tread-1.jpg" alt="Centr x HYROX Perform Tread"></div>
+        <div class="hx-gal-thumbs">
+          <img class="hx-active" src="/assets/images/hyrox/perform-tread-1.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/perform-tread-2.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/perform-tread-3.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/perform-tread-4.jpg" onclick="pick(this)" alt="">
@@ -6651,34 +6597,34 @@ function renderHyrox() {
           <img src="/assets/images/hyrox/perform-tread-11.jpg" onclick="pick(this)" alt="">
         </div>
       </div>
-      <div class="details">
-        <span class="p-event"><span class="dot"></span> Run training · SkiErg · Row prep</span>
-        <div class="p-name">Perform Tread</div>
-        <div class="p-code">Model NMT · Motorless curved treadmill</div>
-        <p class="p-desc">Designed for peak performance, this powerless, curved tread encourages proper running form while the cushioned surface maximises endurance. Eight magnetic resistance levels and multi-position handlebars let athletes transition from a free run to a simulated sled push or pull — the machine that prepares you for the eight 1&nbsp;km HYROX runs.</p>
-        <div class="spec-title">Specifications</div>
-        <div class="spec-table">
-          <div class="spec-row"><span class="k">Type</span><span class="v">Motorless, self-powered curved</span></div>
-          <div class="spec-row"><span class="k">Resistance</span><span class="v">8 magnetic settings</span></div>
-          <div class="spec-row"><span class="k">Running area</span><span class="v">1500 × 480 mm (59 × 19")</span></div>
-          <div class="spec-row"><span class="k">Slat material</span><span class="v">6061 extruded aluminium, rubber top</span></div>
-          <div class="spec-row"><span class="k">Shock absorption</span><span class="v">Rubber moulded over aluminium slat</span></div>
-          <div class="spec-row"><span class="k">Uprights</span><span class="v">Curved tubular steel</span></div>
-          <div class="spec-row"><span class="k">Max user weight</span><span class="v">180 kg (396.8 lb)</span></div>
-          <div class="spec-row"><span class="k">Display</span><span class="v">4.8" LCD — resistance, time, distance, HR, watts, calories, speed</span></div>
-          <div class="spec-row"><span class="k">Heart rate</span><span class="v">Built-in Bluetooth receiver</span></div>
-          <div class="spec-row"><span class="k">Water bottle holder</span><span class="v">One, side-mounted</span></div>
-          <div class="spec-row full"><span class="k">Assembled dimensions</span><span class="v">234.3 L × 96.4 W × 152.5 H cm (92.2 × 38 × 60") · 181.6 kg (400 lb)</span></div>
+      <div class="hx-details">
+        <span class="hx-p-event"><span class="hx-dot"></span> Run training · SkiErg · Row prep</span>
+        <div class="hx-p-name">Perform Tread</div>
+        <div class="hx-p-code">Model NMT · Motorless curved treadmill</div>
+        <p class="hx-p-desc">Designed for peak performance, this powerless, curved tread encourages proper running form while the cushioned surface maximises endurance. Eight magnetic resistance levels and multi-position handlebars let athletes transition from a free run to a simulated sled push or pull — the machine that prepares you for the eight 1&nbsp;km HYROX runs.</p>
+        <div class="hx-spec-title">Specifications</div>
+        <div class="hx-spec-table">
+          <div class="hx-spec-row"><span class="hx-k">Type</span><span class="hx-v">Motorless, self-powered curved</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Resistance</span><span class="hx-v">8 magnetic settings</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Running area</span><span class="hx-v">1500 × 480 mm (59 × 19")</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Slat material</span><span class="hx-v">6061 extruded aluminium, rubber top</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Shock absorption</span><span class="hx-v">Rubber moulded over aluminium slat</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Uprights</span><span class="hx-v">Curved tubular steel</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Max user weight</span><span class="hx-v">180 kg (396.8 lb)</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Display</span><span class="hx-v">4.8" LCD — resistance, time, distance, HR, watts, calories, speed</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Heart rate</span><span class="hx-v">Built-in Bluetooth receiver</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Water bottle holder</span><span class="hx-v">One, side-mounted</span></div>
+          <div class="hx-spec-row hx-full"><span class="hx-k">Assembled dimensions</span><span class="hx-v">234.3 L × 96.4 W × 152.5 H cm (92.2 × 38 × 60") · 181.6 kg (400 lb)</span></div>
         </div>
       </div>
     </div>
 
     <!-- ROWER -->
-    <div class="product">
-      <div class="gallery">
-        <div class="gal-main"><img src="/assets/images/hyrox/rower-1.jpg" alt="Centr Perform Series Rower"></div>
-        <div class="gal-thumbs">
-          <img class="active" src="/assets/images/hyrox/rower-1.jpg" onclick="pick(this)" alt="">
+    <div class="hx-product">
+      <div class="hx-gallery">
+        <div class="hx-gal-main"><img src="/assets/images/hyrox/rower-1.jpg" alt="Centr Perform Series Rower"></div>
+        <div class="hx-gal-thumbs">
+          <img class="hx-active" src="/assets/images/hyrox/rower-1.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/rower-2.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/rower-3.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/rower-4.jpg" onclick="pick(this)" alt="">
@@ -6687,30 +6633,30 @@ function renderHyrox() {
           <img src="/assets/images/hyrox/rower-7.jpg" onclick="pick(this)" alt="">
         </div>
       </div>
-      <div class="details">
-        <span class="p-event"><span class="dot"></span> Station 05 · 1000 m Row</span>
-        <div class="p-name">Perform Series Rower</div>
-        <div class="p-code">Model RW1 · Air-resistance rower</div>
-        <p class="p-desc">The full-body endurance anchor of the Perform Series. An air-resistance fan gives a natural, responsive feel — the harder you pull, the harder it pulls back — across ten levels from steady-state cardio to intervals. A one-piece drive system delivers a smooth stroke, with a moulded padded seat for longer sessions.</p>
-        <div class="spec-title">Specifications</div>
-        <div class="spec-table">
-          <div class="spec-row"><span class="k">Resistance</span><span class="v">Air fan — 10 levels</span></div>
-          <div class="spec-row"><span class="k">Drive</span><span class="v">1-piece drive system</span></div>
-          <div class="spec-row"><span class="k">Console</span><span class="v">Backlit LCD — SPM, time, watts, calories, distance</span></div>
-          <div class="spec-row"><span class="k">Heart rate</span><span class="v">Bluetooth monitoring</span></div>
-          <div class="spec-row"><span class="k">Frame</span><span class="v">Commercial-grade</span></div>
-          <div class="spec-row"><span class="k">Max user weight</span><span class="v">160 kg (352.7 lb)</span></div>
-          <div class="spec-row full"><span class="k">Seat</span><span class="v">Moulded, thick-padded for extended sessions</span></div>
+      <div class="hx-details">
+        <span class="hx-p-event"><span class="hx-dot"></span> Station 05 · 1000 m Row</span>
+        <div class="hx-p-name">Perform Series Rower</div>
+        <div class="hx-p-code">Model RW1 · Air-resistance rower</div>
+        <p class="hx-p-desc">The full-body endurance anchor of the Perform Series. An air-resistance fan gives a natural, responsive feel — the harder you pull, the harder it pulls back — across ten levels from steady-state cardio to intervals. A one-piece drive system delivers a smooth stroke, with a moulded padded seat for longer sessions.</p>
+        <div class="hx-spec-title">Specifications</div>
+        <div class="hx-spec-table">
+          <div class="hx-spec-row"><span class="hx-k">Resistance</span><span class="hx-v">Air fan — 10 levels</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Drive</span><span class="hx-v">1-piece drive system</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Console</span><span class="hx-v">Backlit LCD — SPM, time, watts, calories, distance</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Heart rate</span><span class="hx-v">Bluetooth monitoring</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Frame</span><span class="hx-v">Commercial-grade</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Max user weight</span><span class="hx-v">160 kg (352.7 lb)</span></div>
+          <div class="hx-spec-row hx-full"><span class="hx-k">Seat</span><span class="hx-v">Moulded, thick-padded for extended sessions</span></div>
         </div>
       </div>
     </div>
 
     <!-- SKI MACHINE -->
-    <div class="product">
-      <div class="gallery">
-        <div class="gal-main"><img src="/assets/images/hyrox/ski-machine-1.jpg" alt="Centr Perform Series Ski Machine"></div>
-        <div class="gal-thumbs">
-          <img class="active" src="/assets/images/hyrox/ski-machine-1.jpg" onclick="pick(this)" alt="">
+    <div class="hx-product">
+      <div class="hx-gallery">
+        <div class="hx-gal-main"><img src="/assets/images/hyrox/ski-machine-1.jpg" alt="Centr Perform Series Ski Machine"></div>
+        <div class="hx-gal-thumbs">
+          <img class="hx-active" src="/assets/images/hyrox/ski-machine-1.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/ski-machine-2.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/ski-machine-3.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/ski-machine-4.jpg" onclick="pick(this)" alt="">
@@ -6719,28 +6665,28 @@ function renderHyrox() {
           <img src="/assets/images/hyrox/ski-machine-7.jpg" onclick="pick(this)" alt="">
         </div>
       </div>
-      <div class="details">
-        <span class="p-event"><span class="dot"></span> Station 01 · 1000 m SkiErg</span>
-        <div class="p-name">Perform Series Ski Machine</div>
-        <div class="p-code">Model SKI1 · Air-resistance ski ergometer</div>
-        <p class="p-desc">The upper-body endurance anchor of the Perform Series. An integrated air-resistance fan with ten levels lets athletes find their working zone and push past it, while ergonomic pull cords are designed for natural upper-body movement that protects the shoulders and maximises pulling power.</p>
-        <div class="spec-title">Specifications</div>
-        <div class="spec-table">
-          <div class="spec-row"><span class="k">Resistance</span><span class="v">Air fan — 10 levels</span></div>
-          <div class="spec-row"><span class="k">Grips</span><span class="v">Ergonomic pull cords</span></div>
-          <div class="spec-row"><span class="k">Console</span><span class="v">Backlit LCD — pace, SPM, calories, distance</span></div>
-          <div class="spec-row"><span class="k">Frame</span><span class="v">Reinforced steel, commercial standard</span></div>
-          <div class="spec-row full"><span class="k">Best for</span><span class="v">Conditioning to all-out hybrid training</span></div>
+      <div class="hx-details">
+        <span class="hx-p-event"><span class="hx-dot"></span> Station 01 · 1000 m SkiErg</span>
+        <div class="hx-p-name">Perform Series Ski Machine</div>
+        <div class="hx-p-code">Model SKI1 · Air-resistance ski ergometer</div>
+        <p class="hx-p-desc">The upper-body endurance anchor of the Perform Series. An integrated air-resistance fan with ten levels lets athletes find their working zone and push past it, while ergonomic pull cords are designed for natural upper-body movement that protects the shoulders and maximises pulling power.</p>
+        <div class="hx-spec-title">Specifications</div>
+        <div class="hx-spec-table">
+          <div class="hx-spec-row"><span class="hx-k">Resistance</span><span class="hx-v">Air fan — 10 levels</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Grips</span><span class="hx-v">Ergonomic pull cords</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Console</span><span class="hx-v">Backlit LCD — pace, SPM, calories, distance</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Frame</span><span class="hx-v">Reinforced steel, commercial standard</span></div>
+          <div class="hx-spec-row hx-full"><span class="hx-k">Best for</span><span class="hx-v">Conditioning to all-out hybrid training</span></div>
         </div>
       </div>
     </div>
 
     <!-- AIR BIKE -->
-    <div class="product">
-      <div class="gallery">
-        <div class="gal-main"><img src="/assets/images/hyrox/air-bike-1.jpg" alt="Centr x HYROX Perform Series Air Bike"></div>
-        <div class="gal-thumbs">
-          <img class="active" src="/assets/images/hyrox/air-bike-1.jpg" onclick="pick(this)" alt="">
+    <div class="hx-product">
+      <div class="hx-gallery">
+        <div class="hx-gal-main"><img src="/assets/images/hyrox/air-bike-1.jpg" alt="Centr x HYROX Perform Series Air Bike"></div>
+        <div class="hx-gal-thumbs">
+          <img class="hx-active" src="/assets/images/hyrox/air-bike-1.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/air-bike-2.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/air-bike-3.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/air-bike-4.jpg" onclick="pick(this)" alt="">
@@ -6749,28 +6695,28 @@ function renderHyrox() {
           <img src="/assets/images/hyrox/air-bike-7.jpg" onclick="pick(this)" alt="">
         </div>
       </div>
-      <div class="details">
-        <span class="p-event"><span class="dot"></span> HIIT · Conditioning</span>
-        <div class="p-name">Perform Series Air Bike</div>
-        <div class="p-code">Model HAB1 · Belt-driven fan air bike</div>
-        <p class="p-desc">Engineered for high-intensity, full-body cardio. A belt-driven fan scales infinitely with effort — no presets, no limits. Fully adjustable seating and front foot pegs let every athlete find the right position to access maximum effort, tracked by an advanced performance console.</p>
-        <div class="spec-title">Specifications</div>
-        <div class="spec-table">
-          <div class="spec-row"><span class="k">Resistance</span><span class="v">Belt-driven fan — unlimited, no presets</span></div>
-          <div class="spec-row"><span class="k">Drive</span><span class="v">Single-stage belt, high-capacity fan</span></div>
-          <div class="spec-row"><span class="k">Console</span><span class="v">Watts, calories, RPM, heart rate, distance</span></div>
-          <div class="spec-row"><span class="k">Adjustment</span><span class="v">Vertical + horizontal seat, front foot pegs</span></div>
-          <div class="spec-row full"><span class="k">Frame</span><span class="v">Commercial-grade, rated to 159 kg (350 lb)</span></div>
+      <div class="hx-details">
+        <span class="hx-p-event"><span class="hx-dot"></span> HIIT · Conditioning</span>
+        <div class="hx-p-name">Perform Series Air Bike</div>
+        <div class="hx-p-code">Model HAB1 · Belt-driven fan air bike</div>
+        <p class="hx-p-desc">Engineered for high-intensity, full-body cardio. A belt-driven fan scales infinitely with effort — no presets, no limits. Fully adjustable seating and front foot pegs let every athlete find the right position to access maximum effort, tracked by an advanced performance console.</p>
+        <div class="hx-spec-title">Specifications</div>
+        <div class="hx-spec-table">
+          <div class="hx-spec-row"><span class="hx-k">Resistance</span><span class="hx-v">Belt-driven fan — unlimited, no presets</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Drive</span><span class="hx-v">Single-stage belt, high-capacity fan</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Console</span><span class="hx-v">Watts, calories, RPM, heart rate, distance</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Adjustment</span><span class="hx-v">Vertical + horizontal seat, front foot pegs</span></div>
+          <div class="hx-spec-row hx-full"><span class="hx-k">Frame</span><span class="hx-v">Commercial-grade, rated to 159 kg (350 lb)</span></div>
         </div>
       </div>
     </div>
 
     <!-- HALF RACK -->
-    <div class="product">
-      <div class="gallery">
-        <div class="gal-main"><img src="/assets/images/hyrox/half-rack-1.jpg" alt="Centr x HYROX Perform Series HR2 Half Rack"></div>
-        <div class="gal-thumbs">
-          <img class="active" src="/assets/images/hyrox/half-rack-1.jpg" onclick="pick(this)" alt="">
+    <div class="hx-product">
+      <div class="hx-gallery">
+        <div class="hx-gal-main"><img src="/assets/images/hyrox/half-rack-1.jpg" alt="Centr x HYROX Perform Series HR2 Half Rack"></div>
+        <div class="hx-gal-thumbs">
+          <img class="hx-active" src="/assets/images/hyrox/half-rack-1.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/half-rack-2.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/half-rack-3.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/half-rack-4.jpg" onclick="pick(this)" alt="">
@@ -6781,32 +6727,32 @@ function renderHyrox() {
           <img src="/assets/images/hyrox/half-rack-9.jpg" onclick="pick(this)" alt="">
         </div>
       </div>
-      <div class="details">
-        <span class="p-event"><span class="dot"></span> Strength · Storage · Rig Target ready</span>
-        <div class="p-name">Perform Series HR2 Half Rack</div>
-        <div class="p-code">Model HR2C · Half rack, complete</div>
-        <p class="p-desc">A compact-footprint half rack built as the foundation of any HYROX training space. Fully equipped for free-weight training with a pull-up station, dip handles, landmine, J-hooks and safeties, plus storage designed specifically for the Centr x HYROX range — and a frame compatible with the Official Competition Rig Target.</p>
-        <div class="spec-title">Specifications</div>
-        <div class="spec-table">
-          <div class="spec-row"><span class="k">J-hook positions</span><span class="v">18 vertical</span></div>
-          <div class="spec-row"><span class="k">Attachments</span><span class="v">Pull-up · dip handles · landmine · J-hooks · safeties</span></div>
-          <div class="spec-row"><span class="k">Rig Target</span><span class="v">Compatible (+ target extension)</span></div>
-          <div class="spec-row"><span class="k">Storage</span><span class="v">Designed for Centr x HYROX equipment</span></div>
-          <div class="spec-row"><span class="k">Frame</span><span class="v">Heavy-duty steel</span></div>
-          <div class="spec-row"><span class="k">Footprint</span><span class="v">Compact — small to medium spaces</span></div>
+      <div class="hx-details">
+        <span class="hx-p-event"><span class="hx-dot"></span> Strength · Storage · Rig Target ready</span>
+        <div class="hx-p-name">Perform Series HR2 Half Rack</div>
+        <div class="hx-p-code">Model HR2C · Half rack, complete</div>
+        <p class="hx-p-desc">A compact-footprint half rack built as the foundation of any HYROX training space. Fully equipped for free-weight training with a pull-up station, dip handles, landmine, J-hooks and safeties, plus storage designed specifically for the Centr x HYROX range — and a frame compatible with the Official Competition Rig Target.</p>
+        <div class="hx-spec-title">Specifications</div>
+        <div class="hx-spec-table">
+          <div class="hx-spec-row"><span class="hx-k">J-hook positions</span><span class="hx-v">18 vertical</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Attachments</span><span class="hx-v">Pull-up · dip handles · landmine · J-hooks · safeties</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Rig Target</span><span class="hx-v">Compatible (+ target extension)</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Storage</span><span class="hx-v">Designed for Centr x HYROX equipment</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Frame</span><span class="hx-v">Heavy-duty steel</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Footprint</span><span class="hx-v">Compact — small to medium spaces</span></div>
         </div>
       </div>
     </div>
 
     <!-- ===== STRENGTH & CONDITIONING ===== -->
-    <div class="cat-label"><h3>Competition Strength &amp; Conditioning</h3><div class="ln"></div><span class="chip">7 products</span></div>
+    <div class="hx-cat-label"><h3>Competition Strength &amp; Conditioning</h3><div class="hx-ln"></div><span class="hx-chip">7 products</span></div>
 
     <!-- OCTO KETTLEBELL -->
-    <div class="product">
-      <div class="gallery">
-        <div class="gal-main"><img src="/assets/images/hyrox/octo-kettlebell-1.jpg" alt="Centr x HYROX Octo Kettlebell"></div>
-        <div class="gal-thumbs">
-          <img class="active" src="/assets/images/hyrox/octo-kettlebell-1.jpg" onclick="pick(this)" alt="">
+    <div class="hx-product">
+      <div class="hx-gallery">
+        <div class="hx-gal-main"><img src="/assets/images/hyrox/octo-kettlebell-1.jpg" alt="Centr x HYROX Octo Kettlebell"></div>
+        <div class="hx-gal-thumbs">
+          <img class="hx-active" src="/assets/images/hyrox/octo-kettlebell-1.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/octo-kettlebell-2.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/octo-kettlebell-3.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/octo-kettlebell-4.jpg" onclick="pick(this)" alt="">
@@ -6819,29 +6765,29 @@ function renderHyrox() {
           <img src="/assets/images/hyrox/octo-kettlebell-11.jpg" onclick="pick(this)" alt="">
         </div>
       </div>
-      <div class="details">
-        <span class="p-event"><span class="dot"></span> Station 06 · 200 m Farmers Carry</span>
-        <div class="p-name">Octo Kettlebell</div>
-        <div class="p-code">Model HUOKB · Competition kettlebell</div>
-        <p class="p-desc">A re-engineered competition kettlebell. Its one-of-a-kind eight-sided 'octo' shape maximises versatility and ensures even weight distribution for the HYROX Farmer's Carry. Forged from cast iron with a damage-resistant CPU coating and a hard-chrome plated steel handle for a secure grip.</p>
-        <div class="variants"><span class="vlab">Weights</span><span class="v">8 kg</span><span class="v">12 kg</span><span class="v">16 kg</span><span class="v">20 kg</span><span class="v">24 kg</span><span class="v">28 kg</span><span class="v">32 kg</span></div>
-        <div class="spec-title">Specifications</div>
-        <div class="spec-table">
-          <div class="spec-row"><span class="k">Core</span><span class="v">Cast iron</span></div>
-          <div class="spec-row"><span class="k">Coating</span><span class="v">Clean Performance Urethane (CPU)</span></div>
-          <div class="spec-row"><span class="k">Handle</span><span class="v">Hard-chrome plated steel</span></div>
-          <div class="spec-row"><span class="k">Handle circumference</span><span class="v">3.5 cm (1.4")</span></div>
-          <div class="spec-row full"><span class="k">Race loads</span><span class="v">Open 2 × 16 kg · Women's Pro / Men's Open 2 × 24 kg · Men's Pro 2 × 32 kg</span></div>
+      <div class="hx-details">
+        <span class="hx-p-event"><span class="hx-dot"></span> Station 06 · 200 m Farmers Carry</span>
+        <div class="hx-p-name">Octo Kettlebell</div>
+        <div class="hx-p-code">Model HUOKB · Competition kettlebell</div>
+        <p class="hx-p-desc">A re-engineered competition kettlebell. Its one-of-a-kind eight-sided 'octo' shape maximises versatility and ensures even weight distribution for the HYROX Farmer's Carry. Forged from cast iron with a damage-resistant CPU coating and a hard-chrome plated steel handle for a secure grip.</p>
+        <div class="hx-variants"><span class="hx-vlab">Weights</span><span class="hx-v">8 kg</span><span class="hx-v">12 kg</span><span class="hx-v">16 kg</span><span class="hx-v">20 kg</span><span class="hx-v">24 kg</span><span class="hx-v">28 kg</span><span class="hx-v">32 kg</span></div>
+        <div class="hx-spec-title">Specifications</div>
+        <div class="hx-spec-table">
+          <div class="hx-spec-row"><span class="hx-k">Core</span><span class="hx-v">Cast iron</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Coating</span><span class="hx-v">Clean Performance Urethane (CPU)</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Handle</span><span class="hx-v">Hard-chrome plated steel</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Handle circumference</span><span class="hx-v">3.5 cm (1.4")</span></div>
+          <div class="hx-spec-row hx-full"><span class="hx-k">Race loads</span><span class="hx-v">Open 2 × 16 kg · Women's Pro / Men's Open 2 × 24 kg · Men's Pro 2 × 32 kg</span></div>
         </div>
       </div>
     </div>
 
     <!-- WALL BALL -->
-    <div class="product">
-      <div class="gallery">
-        <div class="gal-main"><img src="/assets/images/hyrox/wall-ball-1.jpg" alt="Centr x HYROX Competition Wall Ball"></div>
-        <div class="gal-thumbs">
-          <img class="active" src="/assets/images/hyrox/wall-ball-1.jpg" onclick="pick(this)" alt="">
+    <div class="hx-product">
+      <div class="hx-gallery">
+        <div class="hx-gal-main"><img src="/assets/images/hyrox/wall-ball-1.jpg" alt="Centr x HYROX Competition Wall Ball"></div>
+        <div class="hx-gal-thumbs">
+          <img class="hx-active" src="/assets/images/hyrox/wall-ball-1.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/wall-ball-2.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/wall-ball-3.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/wall-ball-4.jpg" onclick="pick(this)" alt="">
@@ -6852,27 +6798,27 @@ function renderHyrox() {
           <img src="/assets/images/hyrox/wall-ball-9.jpg" onclick="pick(this)" alt="">
         </div>
       </div>
-      <div class="details">
-        <span class="p-event"><span class="dot"></span> Station 08 · 75–100 Wall Balls</span>
-        <div class="p-name">Competition Wall Ball</div>
-        <div class="p-code">Model HWB · Competition wall ball</div>
-        <p class="p-desc">Each ball is individually crafted, stitched and tested to maximise grip and hold its shape through 75–100 race-day reps. A non-slip, scuff-resistant PVC outer shell is double-stitched at the seams and built for even weight distribution.</p>
-        <div class="variants"><span class="vlab">Weights</span><span class="v">2 kg</span><span class="v">4 kg</span><span class="v">6 kg</span><span class="v">9 kg</span><span class="v">12 kg</span></div>
-        <div class="spec-title">Specifications</div>
-        <div class="spec-table">
-          <div class="spec-row"><span class="k">Shell</span><span class="v">Double-stitched PVC</span></div>
-          <div class="spec-row"><span class="k">Feel</span><span class="v">Non-slip, scuff-resistant vinyl</span></div>
-          <div class="spec-row full"><span class="k">Race loads</span><span class="v">Open — Men 6 kg / Women 4 kg · Pro — Men 9 kg / Women 6 kg</span></div>
+      <div class="hx-details">
+        <span class="hx-p-event"><span class="hx-dot"></span> Station 08 · 75–100 Wall Balls</span>
+        <div class="hx-p-name">Competition Wall Ball</div>
+        <div class="hx-p-code">Model HWB · Competition wall ball</div>
+        <p class="hx-p-desc">Each ball is individually crafted, stitched and tested to maximise grip and hold its shape through 75–100 race-day reps. A non-slip, scuff-resistant PVC outer shell is double-stitched at the seams and built for even weight distribution.</p>
+        <div class="hx-variants"><span class="hx-vlab">Weights</span><span class="hx-v">2 kg</span><span class="hx-v">4 kg</span><span class="hx-v">6 kg</span><span class="hx-v">9 kg</span><span class="hx-v">12 kg</span></div>
+        <div class="hx-spec-title">Specifications</div>
+        <div class="hx-spec-table">
+          <div class="hx-spec-row"><span class="hx-k">Shell</span><span class="hx-v">Double-stitched PVC</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Feel</span><span class="hx-v">Non-slip, scuff-resistant vinyl</span></div>
+          <div class="hx-spec-row hx-full"><span class="hx-k">Race loads</span><span class="hx-v">Open — Men 6 kg / Women 4 kg · Pro — Men 9 kg / Women 6 kg</span></div>
         </div>
       </div>
     </div>
 
     <!-- SANDBAG -->
-    <div class="product">
-      <div class="gallery">
-        <div class="gal-main"><img src="/assets/images/hyrox/sandbag-1.jpg" alt="Centr x HYROX Competition Sandbag"></div>
-        <div class="gal-thumbs">
-          <img class="active" src="/assets/images/hyrox/sandbag-1.jpg" onclick="pick(this)" alt="">
+    <div class="hx-product">
+      <div class="hx-gallery">
+        <div class="hx-gal-main"><img src="/assets/images/hyrox/sandbag-1.jpg" alt="Centr x HYROX Competition Sandbag"></div>
+        <div class="hx-gal-thumbs">
+          <img class="hx-active" src="/assets/images/hyrox/sandbag-1.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/sandbag-2.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/sandbag-3.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/sandbag-4.jpg" onclick="pick(this)" alt="">
@@ -6882,29 +6828,29 @@ function renderHyrox() {
           <img src="/assets/images/hyrox/sandbag-8.jpg" onclick="pick(this)" alt="">
         </div>
       </div>
-      <div class="details">
-        <span class="p-event"><span class="dot"></span> Station 07 · 100 m Sandbag Lunges</span>
-        <div class="p-name">Competition Sandbag</div>
-        <div class="p-code">Model HSB · Competition sandbag</div>
-        <p class="p-desc">Engineered for the athlete: Cordura® nylon construction with reinforced double-stitched seams, seven non-slip nylon handles and a dual heavy-duty Velcro® enclosure. Inner filler bags with a double-Velcro locking system ensure no sand escapes and no moisture gets in.</p>
-        <div class="variants"><span class="vlab">Weights</span><span class="v">10 kg</span><span class="v">20 kg</span><span class="v">30 kg</span></div>
-        <div class="spec-title">Specifications</div>
-        <div class="spec-table">
-          <div class="spec-row"><span class="k">Outer</span><span class="v">Cordura® nylon, double-stitched</span></div>
-          <div class="spec-row"><span class="k">Handles</span><span class="v">7 non-slip nylon</span></div>
-          <div class="spec-row"><span class="k">Closure</span><span class="v">Dual heavy-duty Velcro®</span></div>
-          <div class="spec-row"><span class="k">Filler bags</span><span class="v">5 kg inner bags (10→2, 20→4, 30→6); sand not incl.</span></div>
-          <div class="spec-row full"><span class="k">Race loads</span><span class="v">Open — Men 20 kg / Women 10 kg · Pro — Men 30 kg / Women 20 kg</span></div>
+      <div class="hx-details">
+        <span class="hx-p-event"><span class="hx-dot"></span> Station 07 · 100 m Sandbag Lunges</span>
+        <div class="hx-p-name">Competition Sandbag</div>
+        <div class="hx-p-code">Model HSB · Competition sandbag</div>
+        <p class="hx-p-desc">Engineered for the athlete: Cordura® nylon construction with reinforced double-stitched seams, seven non-slip nylon handles and a dual heavy-duty Velcro® enclosure. Inner filler bags with a double-Velcro locking system ensure no sand escapes and no moisture gets in.</p>
+        <div class="hx-variants"><span class="hx-vlab">Weights</span><span class="hx-v">10 kg</span><span class="hx-v">20 kg</span><span class="hx-v">30 kg</span></div>
+        <div class="hx-spec-title">Specifications</div>
+        <div class="hx-spec-table">
+          <div class="hx-spec-row"><span class="hx-k">Outer</span><span class="hx-v">Cordura® nylon, double-stitched</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Handles</span><span class="hx-v">7 non-slip nylon</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Closure</span><span class="hx-v">Dual heavy-duty Velcro®</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Filler bags</span><span class="hx-v">5 kg inner bags (10→2, 20→4, 30→6); sand not incl.</span></div>
+          <div class="hx-spec-row hx-full"><span class="hx-k">Race loads</span><span class="hx-v">Open — Men 20 kg / Women 10 kg · Pro — Men 30 kg / Women 20 kg</span></div>
         </div>
       </div>
     </div>
 
     <!-- POWER SLED -->
-    <div class="product">
-      <div class="gallery">
-        <div class="gal-main"><img src="/assets/images/hyrox/power-sled-1.jpg" alt="Centr x HYROX Competition Power Sled"></div>
-        <div class="gal-thumbs">
-          <img class="active" src="/assets/images/hyrox/power-sled-1.jpg" onclick="pick(this)" alt="">
+    <div class="hx-product">
+      <div class="hx-gallery">
+        <div class="hx-gal-main"><img src="/assets/images/hyrox/power-sled-1.jpg" alt="Centr x HYROX Competition Power Sled"></div>
+        <div class="hx-gal-thumbs">
+          <img class="hx-active" src="/assets/images/hyrox/power-sled-1.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/power-sled-2.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/power-sled-3.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/power-sled-4.jpg" onclick="pick(this)" alt="">
@@ -6915,29 +6861,29 @@ function renderHyrox() {
           <img src="/assets/images/hyrox/power-sled-9.jpg" onclick="pick(this)" alt="">
         </div>
       </div>
-      <div class="details">
-        <span class="p-event"><span class="dot"></span> Stations 02 &amp; 03 · Sled Push &amp; Pull</span>
-        <div class="p-name">Competition Power Sled</div>
-        <div class="p-code">Model HPS · Competition power sled</div>
-        <p class="p-desc">Built from commercial-grade steel with five poles featuring textured grips and hand-placement markings that mirror competition standards. Its aerodynamic build is tuned for HYROX turf, and a central pole holds over 150 kg of bumper plates. Add or remove corner poles to vary the circuit.</p>
-        <div class="spec-title">Specifications</div>
-        <div class="spec-table">
-          <div class="spec-row"><span class="k">Frame &amp; handles</span><span class="v">Powder-coated steel</span></div>
-          <div class="spec-row"><span class="k">Weight horn</span><span class="v">Chrome plated</span></div>
-          <div class="spec-row"><span class="k">Dimensions</span><span class="v">102 L × 60 W × 99.7 H cm</span></div>
-          <div class="spec-row"><span class="k">Sled weight</span><span class="v">50 kg (110.2 lb)</span></div>
-          <div class="spec-row"><span class="k">Plate capacity</span><span class="v">150 kg+ on centre horn</span></div>
-          <div class="spec-row"><span class="k">Poles</span><span class="v">5, textured &amp; marked; removable corners</span></div>
+      <div class="hx-details">
+        <span class="hx-p-event"><span class="hx-dot"></span> Stations 02 &amp; 03 · Sled Push &amp; Pull</span>
+        <div class="hx-p-name">Competition Power Sled</div>
+        <div class="hx-p-code">Model HPS · Competition power sled</div>
+        <p class="hx-p-desc">Built from commercial-grade steel with five poles featuring textured grips and hand-placement markings that mirror competition standards. Its aerodynamic build is tuned for HYROX turf, and a central pole holds over 150 kg of bumper plates. Add or remove corner poles to vary the circuit.</p>
+        <div class="hx-spec-title">Specifications</div>
+        <div class="hx-spec-table">
+          <div class="hx-spec-row"><span class="hx-k">Frame &amp; handles</span><span class="hx-v">Powder-coated steel</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Weight horn</span><span class="hx-v">Chrome plated</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Dimensions</span><span class="hx-v">102 L × 60 W × 99.7 H cm</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Sled weight</span><span class="hx-v">50 kg (110.2 lb)</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Plate capacity</span><span class="hx-v">150 kg+ on centre horn</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Poles</span><span class="hx-v">5, textured &amp; marked; removable corners</span></div>
         </div>
       </div>
     </div>
 
     <!-- POWER ROPE -->
-    <div class="product">
-      <div class="gallery">
-        <div class="gal-main"><img src="/assets/images/hyrox/power-rope-1.jpg" alt="Centr x HYROX Competition Power Rope"></div>
-        <div class="gal-thumbs">
-          <img class="active" src="/assets/images/hyrox/power-rope-1.jpg" onclick="pick(this)" alt="">
+    <div class="hx-product">
+      <div class="hx-gallery">
+        <div class="hx-gal-main"><img src="/assets/images/hyrox/power-rope-1.jpg" alt="Centr x HYROX Competition Power Rope"></div>
+        <div class="hx-gal-thumbs">
+          <img class="hx-active" src="/assets/images/hyrox/power-rope-1.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/power-rope-2.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/power-rope-3.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/power-rope-4.jpg" onclick="pick(this)" alt="">
@@ -6946,28 +6892,28 @@ function renderHyrox() {
           <img src="/assets/images/hyrox/power-rope-7.jpg" onclick="pick(this)" alt="">
         </div>
       </div>
-      <div class="details">
-        <span class="p-event"><span class="dot"></span> Station 03 · 50 m Sled Pull</span>
-        <div class="p-name">Competition Power Rope</div>
-        <div class="p-code">Model HBR · Competition power rope</div>
-        <p class="p-desc">A training essential with a twist — yellow markings every three metres along its 15&nbsp;m length let athletes track sled-pull progress at a glance. Tightly-woven, fray-proof Dacron® polyester and no-slip heat-shrunk handles make it a durable tool built for the long haul.</p>
-        <div class="spec-title">Specifications</div>
-        <div class="spec-table">
-          <div class="spec-row"><span class="k">Rope material</span><span class="v">Dacron® polyester (fray-proof)</span></div>
-          <div class="spec-row"><span class="k">Handle</span><span class="v">Heat-shrunk polyethylene, no-slip</span></div>
-          <div class="spec-row"><span class="k">Dimensions</span><span class="v">38 mm D × 15 m L (1.5" × 49.2 ft)</span></div>
-          <div class="spec-row"><span class="k">Markings</span><span class="v">Yellow every 3 m</span></div>
-          <div class="spec-row full"><span class="k">Hook</span><span class="v">Solid steel — attaches to the Power Sled</span></div>
+      <div class="hx-details">
+        <span class="hx-p-event"><span class="hx-dot"></span> Station 03 · 50 m Sled Pull</span>
+        <div class="hx-p-name">Competition Power Rope</div>
+        <div class="hx-p-code">Model HBR · Competition power rope</div>
+        <p class="hx-p-desc">A training essential with a twist — yellow markings every three metres along its 15&nbsp;m length let athletes track sled-pull progress at a glance. Tightly-woven, fray-proof Dacron® polyester and no-slip heat-shrunk handles make it a durable tool built for the long haul.</p>
+        <div class="hx-spec-title">Specifications</div>
+        <div class="hx-spec-table">
+          <div class="hx-spec-row"><span class="hx-k">Rope material</span><span class="hx-v">Dacron® polyester (fray-proof)</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Handle</span><span class="hx-v">Heat-shrunk polyethylene, no-slip</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Dimensions</span><span class="hx-v">38 mm D × 15 m L (1.5" × 49.2 ft)</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Markings</span><span class="hx-v">Yellow every 3 m</span></div>
+          <div class="hx-spec-row hx-full"><span class="hx-k">Hook</span><span class="hx-v">Solid steel — attaches to the Power Sled</span></div>
         </div>
       </div>
     </div>
 
     <!-- BUMPER PLATE -->
-    <div class="product">
-      <div class="gallery">
-        <div class="gal-main"><img src="/assets/images/hyrox/bumper-plate-1.jpg" alt="Centr x HYROX Edge Interlocking Bumper Plate"></div>
-        <div class="gal-thumbs">
-          <img class="active" src="/assets/images/hyrox/bumper-plate-1.jpg" onclick="pick(this)" alt="">
+    <div class="hx-product">
+      <div class="hx-gallery">
+        <div class="hx-gal-main"><img src="/assets/images/hyrox/bumper-plate-1.jpg" alt="Centr x HYROX Edge Interlocking Bumper Plate"></div>
+        <div class="hx-gal-thumbs">
+          <img class="hx-active" src="/assets/images/hyrox/bumper-plate-1.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/bumper-plate-2.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/bumper-plate-3.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/bumper-plate-4.jpg" onclick="pick(this)" alt="">
@@ -6982,29 +6928,29 @@ function renderHyrox() {
           <img src="/assets/images/hyrox/bumper-plate-13.jpg" onclick="pick(this)" alt="">
         </div>
       </div>
-      <div class="details">
-        <span class="p-event"><span class="dot"></span> Sled loading · Olympic lifts</span>
-        <div class="p-name">Edge Interlocking Bumper Plate</div>
-        <div class="p-code">Model HUBP · Competition edge bumper plate</div>
-        <p class="p-desc">Intelligently built to interlock with each other, making it faster to load plates on and off the Power Sled or bar. A premium soft-touch, damage-resistant, DMF-free coating mitigates noise and vibration, and the weight is written on the edge so you know your load at a glance.</p>
-        <div class="variants"><span class="vlab">Weights</span><span class="v">2.5 kg</span><span class="v">5 kg</span><span class="v">10 kg</span><span class="v">15 kg</span><span class="v">20 kg</span><span class="v">25 kg</span></div>
-        <div class="spec-title">Specifications</div>
-        <div class="spec-table">
-          <div class="spec-row"><span class="k">Coating</span><span class="v">Clean Performance Urethane (CPU), DMF-free</span></div>
-          <div class="spec-row"><span class="k">Core</span><span class="v">Cast iron</span></div>
-          <div class="spec-row"><span class="k">Sleeve</span><span class="v">Stainless steel</span></div>
-          <div class="spec-row"><span class="k">Diameter</span><span class="v">450 mm / 17.72" (IWF standard)</span></div>
-          <div class="spec-row full"><span class="k">Design</span><span class="v">Interlocking; top plates (2 kg / 3 kg) also available</span></div>
+      <div class="hx-details">
+        <span class="hx-p-event"><span class="hx-dot"></span> Sled loading · Olympic lifts</span>
+        <div class="hx-p-name">Edge Interlocking Bumper Plate</div>
+        <div class="hx-p-code">Model HUBP · Competition edge bumper plate</div>
+        <p class="hx-p-desc">Intelligently built to interlock with each other, making it faster to load plates on and off the Power Sled or bar. A premium soft-touch, damage-resistant, DMF-free coating mitigates noise and vibration, and the weight is written on the edge so you know your load at a glance.</p>
+        <div class="hx-variants"><span class="hx-vlab">Weights</span><span class="hx-v">2.5 kg</span><span class="hx-v">5 kg</span><span class="hx-v">10 kg</span><span class="hx-v">15 kg</span><span class="hx-v">20 kg</span><span class="hx-v">25 kg</span></div>
+        <div class="hx-spec-title">Specifications</div>
+        <div class="hx-spec-table">
+          <div class="hx-spec-row"><span class="hx-k">Coating</span><span class="hx-v">Clean Performance Urethane (CPU), DMF-free</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Core</span><span class="hx-v">Cast iron</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Sleeve</span><span class="hx-v">Stainless steel</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Diameter</span><span class="hx-v">450 mm / 17.72" (IWF standard)</span></div>
+          <div class="hx-spec-row hx-full"><span class="hx-k">Design</span><span class="hx-v">Interlocking; top plates (2 kg / 3 kg) also available</span></div>
         </div>
       </div>
     </div>
 
     <!-- DUMBBELLS -->
-    <div class="product">
-      <div class="gallery">
-        <div class="gal-main"><img src="/assets/images/hyrox/dumbbells-1.jpg" alt="Centr x HYROX Commercial Urethane Dumbbells"></div>
-        <div class="gal-thumbs">
-          <img class="active" src="/assets/images/hyrox/dumbbells-1.jpg" onclick="pick(this)" alt="">
+    <div class="hx-product">
+      <div class="hx-gallery">
+        <div class="hx-gal-main"><img src="/assets/images/hyrox/dumbbells-1.jpg" alt="Centr x HYROX Commercial Urethane Dumbbells"></div>
+        <div class="hx-gal-thumbs">
+          <img class="hx-active" src="/assets/images/hyrox/dumbbells-1.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/dumbbells-2.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/dumbbells-3.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/dumbbells-4.jpg" onclick="pick(this)" alt="">
@@ -7032,32 +6978,32 @@ function renderHyrox() {
           <img src="/assets/images/hyrox/dumbbells-26.jpg" onclick="pick(this)" alt="">
         </div>
       </div>
-      <div class="details">
-        <span class="p-event"><span class="dot"></span> Strength circuits · HIIT · Functional</span>
-        <div class="p-name">Commercial Urethane Dumbbells</div>
-        <div class="p-code">Model HUDB · Commercial dumbbells</div>
-        <p class="p-desc">Superior durability and stability for any athlete. A UV-resistant urethane coating over precision double-welded steel, with hex-shaped heads that prevent rolling and protect floors, and knurled straight handles for a secure, comfortable grip.</p>
-        <div class="variants"><span class="vlab">Weights</span><span class="v">5</span><span class="v">7.5</span><span class="v">10</span><span class="v">12.5</span><span class="v">15</span><span class="v">17.5</span><span class="v">20</span><span class="v">22.5</span><span class="v">25 kg</span></div>
-        <div class="spec-title">Specifications</div>
-        <div class="spec-table">
-          <div class="spec-row"><span class="k">Coating</span><span class="v">UV-resistant urethane</span></div>
-          <div class="spec-row"><span class="k">Construction</span><span class="v">Precision double-welded steel</span></div>
-          <div class="spec-row"><span class="k">Heads</span><span class="v">Hex — anti-roll, floor-protecting</span></div>
-          <div class="spec-row"><span class="k">Handle</span><span class="v">Knurled straight steel</span></div>
-          <div class="spec-row full"><span class="k">Range</span><span class="v">5–25 kg in 2.5 kg increments, labelled on head &amp; edge</span></div>
+      <div class="hx-details">
+        <span class="hx-p-event"><span class="hx-dot"></span> Strength circuits · HIIT · Functional</span>
+        <div class="hx-p-name">Commercial Urethane Dumbbells</div>
+        <div class="hx-p-code">Model HUDB · Commercial dumbbells</div>
+        <p class="hx-p-desc">Superior durability and stability for any athlete. A UV-resistant urethane coating over precision double-welded steel, with hex-shaped heads that prevent rolling and protect floors, and knurled straight handles for a secure, comfortable grip.</p>
+        <div class="hx-variants"><span class="hx-vlab">Weights</span><span class="hx-v">5</span><span class="hx-v">7.5</span><span class="hx-v">10</span><span class="hx-v">12.5</span><span class="hx-v">15</span><span class="hx-v">17.5</span><span class="hx-v">20</span><span class="hx-v">22.5</span><span class="hx-v">25 kg</span></div>
+        <div class="hx-spec-title">Specifications</div>
+        <div class="hx-spec-table">
+          <div class="hx-spec-row"><span class="hx-k">Coating</span><span class="hx-v">UV-resistant urethane</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Construction</span><span class="hx-v">Precision double-welded steel</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Heads</span><span class="hx-v">Hex — anti-roll, floor-protecting</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Handle</span><span class="hx-v">Knurled straight steel</span></div>
+          <div class="hx-spec-row hx-full"><span class="hx-k">Range</span><span class="hx-v">5–25 kg in 2.5 kg increments, labelled on head &amp; edge</span></div>
         </div>
       </div>
     </div>
 
     <!-- ===== TURF, RIGS & TARGETS ===== -->
-    <div class="cat-label"><h3>Turf, Rigs &amp; Targets</h3><div class="ln"></div><span class="chip">3 products</span></div>
+    <div class="hx-cat-label"><h3>Turf, Rigs &amp; Targets</h3><div class="hx-ln"></div><span class="hx-chip">3 products</span></div>
 
     <!-- PERFORM TURF -->
-    <div class="product">
-      <div class="gallery">
-        <div class="gal-main"><img src="/assets/images/hyrox/perform-turf-1.jpg" alt="Centr x HYROX Perform Turf"></div>
-        <div class="gal-thumbs">
-          <img class="active" src="/assets/images/hyrox/perform-turf-1.jpg" onclick="pick(this)" alt="">
+    <div class="hx-product">
+      <div class="hx-gallery">
+        <div class="hx-gal-main"><img src="/assets/images/hyrox/perform-turf-1.jpg" alt="Centr x HYROX Perform Turf"></div>
+        <div class="hx-gal-thumbs">
+          <img class="hx-active" src="/assets/images/hyrox/perform-turf-1.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/perform-turf-2.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/perform-turf-3.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/perform-turf-4.jpg" onclick="pick(this)" alt="">
@@ -7071,29 +7017,29 @@ function renderHyrox() {
           <img src="/assets/images/hyrox/perform-turf-12.jpg" onclick="pick(this)" alt="">
         </div>
       </div>
-      <div class="details">
-        <span class="p-event"><span class="dot"></span> Sled zones · Burpee broad jumps</span>
-        <div class="p-name">Perform Turf</div>
-        <div class="p-code">Model HTURF · Official competition turf</div>
-        <p class="p-desc">The official turf used at HYROX races worldwide, engineered for the exact movements and intensity of race day. Patent-pending and tested over 200,000 cycles for elite traction and durability. A 16&nbsp;mm non-abrasive pile gives the grip needed for clean sled pushes, pulls and fast transitions.</p>
-        <div class="spec-title">Specifications</div>
-        <div class="spec-table">
-          <div class="spec-row"><span class="k">Pile</span><span class="v">16 mm non-abrasive</span></div>
-          <div class="spec-row"><span class="k">Durability</span><span class="v">Tested 200,000+ cycles</span></div>
-          <div class="spec-row"><span class="k">Layout</span><span class="v">Modular lanes + end zones</span></div>
-          <div class="spec-row"><span class="k">2-lane kit</span><span class="v">16.2 × 2 m — 348.75 ft²</span></div>
-          <div class="spec-row"><span class="k">4-lane kit</span><span class="v">16.2 × 4 m — 697.24 ft²</span></div>
-          <div class="spec-row"><span class="k">Certification</span><span class="v">Flame &amp; wear-certified (commercial)</span></div>
+      <div class="hx-details">
+        <span class="hx-p-event"><span class="hx-dot"></span> Sled zones · Burpee broad jumps</span>
+        <div class="hx-p-name">Perform Turf</div>
+        <div class="hx-p-code">Model HTURF · Official competition turf</div>
+        <p class="hx-p-desc">The official turf used at HYROX races worldwide, engineered for the exact movements and intensity of race day. Patent-pending and tested over 200,000 cycles for elite traction and durability. A 16&nbsp;mm non-abrasive pile gives the grip needed for clean sled pushes, pulls and fast transitions.</p>
+        <div class="hx-spec-title">Specifications</div>
+        <div class="hx-spec-table">
+          <div class="hx-spec-row"><span class="hx-k">Pile</span><span class="hx-v">16 mm non-abrasive</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Durability</span><span class="hx-v">Tested 200,000+ cycles</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Layout</span><span class="hx-v">Modular lanes + end zones</span></div>
+          <div class="hx-spec-row"><span class="hx-k">2-lane kit</span><span class="hx-v">16.2 × 2 m — 348.75 ft²</span></div>
+          <div class="hx-spec-row"><span class="hx-k">4-lane kit</span><span class="hx-v">16.2 × 4 m — 697.24 ft²</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Certification</span><span class="hx-v">Flame &amp; wear-certified (commercial)</span></div>
         </div>
       </div>
     </div>
 
     <!-- PERFORM RIG -->
-    <div class="product">
-      <div class="gallery">
-        <div class="gal-main"><img src="/assets/images/hyrox/perform-rig-1.jpg" alt="Centr x HYROX Perform Rig"></div>
-        <div class="gal-thumbs">
-          <img class="active" src="/assets/images/hyrox/perform-rig-1.jpg" onclick="pick(this)" alt="">
+    <div class="hx-product">
+      <div class="hx-gallery">
+        <div class="hx-gal-main"><img src="/assets/images/hyrox/perform-rig-1.jpg" alt="Centr x HYROX Perform Rig"></div>
+        <div class="hx-gal-thumbs">
+          <img class="hx-active" src="/assets/images/hyrox/perform-rig-1.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/perform-rig-2.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/perform-rig-3.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/perform-rig-4.jpg" onclick="pick(this)" alt="">
@@ -7104,79 +7050,101 @@ function renderHyrox() {
           <img src="/assets/images/hyrox/perform-rig-9.jpg" onclick="pick(this)" alt="">
         </div>
       </div>
-      <div class="details">
-        <span class="p-event"><span class="dot"></span> Wall balls · Storage · Full setup</span>
-        <div class="p-name">Perform Rig</div>
-        <div class="p-code">Model HPR · Official training rig</div>
-        <p class="p-desc">The official rig of HYROX Performance Centres. Built with commercial-grade materials and meticulously-designed storage, it brings the full race-day setup — including Rig Targets for wall-ball training — into your gym, and holds the entire Centr x HYROX range on tiltable 4' shelves and vertical storage.</p>
-        <div class="spec-title">Specifications</div>
-        <div class="spec-table">
-          <div class="spec-row"><span class="k">Steel</span><span class="v">Heavy-duty 11-gauge</span></div>
-          <div class="spec-row"><span class="k">Frame</span><span class="v">3" × 3", full-plate welds</span></div>
-          <div class="spec-row"><span class="k">Base</span><span class="v">Bolt-down</span></div>
-          <div class="spec-row"><span class="k">Configurations</span><span class="v">4 / 6 / 8 Rig Target designs</span></div>
-          <div class="spec-row"><span class="k">Storage</span><span class="v">Tiltable 4' shelves + vertical</span></div>
-          <div class="spec-row"><span class="k">Capacity</span><span class="v">Class sizes up to 32</span></div>
-          <div class="spec-row full"><span class="k">Attachments</span><span class="v">J-hooks, safeties, landmine, dip step anchor, double play, lower band peg, suspension-ready pull-up bars</span></div>
+      <div class="hx-details">
+        <span class="hx-p-event"><span class="hx-dot"></span> Wall balls · Storage · Full setup</span>
+        <div class="hx-p-name">Perform Rig</div>
+        <div class="hx-p-code">Model HPR · Official training rig</div>
+        <p class="hx-p-desc">The official rig of HYROX Performance Centres. Built with commercial-grade materials and meticulously-designed storage, it brings the full race-day setup — including Rig Targets for wall-ball training — into your gym, and holds the entire Centr x HYROX range on tiltable 4' shelves and vertical storage.</p>
+        <div class="hx-spec-title">Specifications</div>
+        <div class="hx-spec-table">
+          <div class="hx-spec-row"><span class="hx-k">Steel</span><span class="hx-v">Heavy-duty 11-gauge</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Frame</span><span class="hx-v">3" × 3", full-plate welds</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Base</span><span class="hx-v">Bolt-down</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Configurations</span><span class="hx-v">4 / 6 / 8 Rig Target designs</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Storage</span><span class="hx-v">Tiltable 4' shelves + vertical</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Capacity</span><span class="hx-v">Class sizes up to 32</span></div>
+          <div class="hx-spec-row hx-full"><span class="hx-k">Attachments</span><span class="hx-v">J-hooks, safeties, landmine, dip step anchor, double play, lower band peg, suspension-ready pull-up bars</span></div>
         </div>
       </div>
     </div>
 
     <!-- RIG TARGET -->
-    <div class="product">
-      <div class="gallery">
-        <div class="gal-main"><img src="/assets/images/hyrox/rig-target-1.jpg" alt="Centr x HYROX Competition Rig Target"></div>
-        <div class="gal-thumbs">
-          <img class="active" src="/assets/images/hyrox/rig-target-1.jpg" onclick="pick(this)" alt="">
+    <div class="hx-product">
+      <div class="hx-gallery">
+        <div class="hx-gal-main"><img src="/assets/images/hyrox/rig-target-1.jpg" alt="Centr x HYROX Competition Rig Target"></div>
+        <div class="hx-gal-thumbs">
+          <img class="hx-active" src="/assets/images/hyrox/rig-target-1.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/rig-target-2.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/rig-target-3.jpg" onclick="pick(this)" alt="">
           <img src="/assets/images/hyrox/rig-target-4.jpg" onclick="pick(this)" alt="">
         </div>
       </div>
-      <div class="details">
-        <span class="p-event"><span class="dot"></span> Station 08 · Wall Balls</span>
-        <div class="p-name">Competition Rig Target</div>
-        <div class="p-code">Model HBT · Competition rig target</div>
-        <p class="p-desc">Forged from commercial-grade steel, the wall-ball rig target provides a sturdy, race-accurate point to challenge strength and stamina. A fully-welded solid steel bracket ensures stability and longevity, with a dual target in one attachment — easy to assemble and install.</p>
-        <div class="spec-title">Specifications</div>
-        <div class="spec-table">
-          <div class="spec-row"><span class="k">Material</span><span class="v">Commercial-grade steel</span></div>
-          <div class="spec-row"><span class="k">Width</span><span class="v">290 mm (11.4")</span></div>
-          <div class="spec-row"><span class="k">Height</span><span class="v">628 mm (24.7")</span></div>
-          <div class="spec-row"><span class="k">Bracket</span><span class="v">Fully welded, 245 mm depth</span></div>
-          <div class="spec-row full"><span class="k">Design</span><span class="v">Dual target in one attachment</span></div>
+      <div class="hx-details">
+        <span class="hx-p-event"><span class="hx-dot"></span> Station 08 · Wall Balls</span>
+        <div class="hx-p-name">Competition Rig Target</div>
+        <div class="hx-p-code">Model HBT · Competition rig target</div>
+        <p class="hx-p-desc">Forged from commercial-grade steel, the wall-ball rig target provides a sturdy, race-accurate point to challenge strength and stamina. A fully-welded solid steel bracket ensures stability and longevity, with a dual target in one attachment — easy to assemble and install.</p>
+        <div class="hx-spec-title">Specifications</div>
+        <div class="hx-spec-table">
+          <div class="hx-spec-row"><span class="hx-k">Material</span><span class="hx-v">Commercial-grade steel</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Width</span><span class="hx-v">290 mm (11.4")</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Height</span><span class="hx-v">628 mm (24.7")</span></div>
+          <div class="hx-spec-row"><span class="hx-k">Bracket</span><span class="hx-v">Fully welded, 245 mm depth</span></div>
+          <div class="hx-spec-row hx-full"><span class="hx-k">Design</span><span class="hx-v">Dual target in one attachment</span></div>
         </div>
       </div>
     </div>
 
-    <p style="text-align:center;color:var(--z400);font-size:.92rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--z900)">Also available — <b style="color:var(--z200)">Perform Rig accessories:</b> Bar Supports, Bar Catches, Vertical Ground Rotational Trainer (Landmine), Double Play, Dip Step Anchors and Lower Band Peg Attachments. <a href="#quote" style="color:var(--red);font-weight:600">Ask us for the full accessory list →</a></p>
+    <p style="text-align:center;color:var(--hx-z400);font-size:.92rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--hx-z900)">Also available — <b style="color:var(--hx-z200)">Perform Rig accessories:</b> Bar Supports, Bar Catches, Vertical Ground Rotational Trainer (Landmine), Double Play, Dip Step Anchors and Lower Band Peg Attachments. <a href="#quote" style="color:var(--hx-red);font-weight:600">Ask us for the full accessory list →</a></p>
+  </div>
+</section>
+
+<!-- RACE STATIONS -->
+<section class="hx-race hx-pad" id="race">
+  <div class="hx-cnt">
+    <div class="hx-race-head">
+      <span class="hx-eyebrow">The Fitness Race</span>
+      <h2 class="hx-sec-title" style="margin-top:1.1rem">What you need for HYROX</h2>
+      <p class="hx-sec-sub">A HYROX race is the same everywhere in the world: 8&nbsp;km of running broken into eight 1&nbsp;km laps, each followed by a functional station. Here's every station and the official equipment it calls for.</p>
+    </div>
+    <div class="hx-st-grid">
+      <div class="hx-st"><div class="hx-st-n">STATION 01</div><div class="hx-st-name">1000 m SkiErg</div><div class="hx-st-eq"><b>Ski Machine</b> — air-resistance upper-body ergometer</div></div>
+      <div class="hx-st"><div class="hx-st-n">STATION 02</div><div class="hx-st-name">50 m Sled Push</div><div class="hx-st-eq"><b>Power Sled</b> + <b>Bumper Plates</b> on competition turf</div></div>
+      <div class="hx-st"><div class="hx-st-n">STATION 03</div><div class="hx-st-name">50 m Sled Pull</div><div class="hx-st-eq"><b>Power Sled</b> + <b>Power Rope</b> + <b>Bumper Plates</b></div></div>
+      <div class="hx-st"><div class="hx-st-n">STATION 04</div><div class="hx-st-name">80 m Burpee Broad Jumps</div><div class="hx-st-eq"><b>Competition Turf</b> — bodyweight, no load</div></div>
+      <div class="hx-st"><div class="hx-st-n">STATION 05</div><div class="hx-st-name">1000 m Row</div><div class="hx-st-eq"><b>Rower</b> — air-resistance full-body ergometer</div></div>
+      <div class="hx-st"><div class="hx-st-n">STATION 06</div><div class="hx-st-name">200 m Farmers Carry</div><div class="hx-st-eq"><b>Octo Kettlebells</b> — a pair, carried the full distance</div></div>
+      <div class="hx-st"><div class="hx-st-n">STATION 07</div><div class="hx-st-name">100 m Sandbag Lunges</div><div class="hx-st-eq"><b>Competition Sandbag</b> — shouldered walking lunges</div></div>
+      <div class="hx-st"><div class="hx-st-n">STATION 08</div><div class="hx-st-name">75–100 Wall Balls</div><div class="hx-st-eq"><b>Wall Ball</b> + <b>Rig Target</b> at competition height</div></div>
+    </div>
+    <p class="hx-run-note">Between every station: a <b>1 km run</b> — eight in total. The Perform Tread lets athletes train those runs indoors on the same curved, motorless surface built for the race.</p>
   </div>
 </section>
 
 <!-- TURNKEY SETUP -->
-<section class="pad" id="setup" style="background:var(--z950);border-top:1px solid var(--z900);border-bottom:1px solid var(--z900)">
-  <div class="cnt">
+<section class="hx-pad" id="setup" style="background:var(--hx-z950);border-top:1px solid var(--hx-z900);border-bottom:1px solid var(--hx-z900)">
+  <div class="hx-cnt">
     <div style="text-align:center;max-width:66ch;margin:0 auto">
-      <span class="eyebrow">Turnkey HYROX Setups</span>
-      <h2 class="sec-title" style="margin-top:1.1rem">We don't just supply — we build the whole zone.</h2>
-      <p class="sec-sub" style="margin:1rem auto 0">Beyond individual equipment, TechFit designs, supplies and installs complete HYROX training zones end to end — from floor plan to final handover — for gyms, studios, hotels and performance centres across India.</p>
+      <span class="hx-eyebrow">Turnkey HYROX Setups</span>
+      <h2 class="hx-sec-title" style="margin-top:1.1rem">We don't just supply — we build the whole zone.</h2>
+      <p class="hx-sec-sub" style="margin:1rem auto 0">Beyond individual equipment, TechFit designs, supplies and installs complete HYROX training zones end to end — from floor plan to final handover — for gyms, studios, hotels and performance centres across India.</p>
     </div>
 
-    <div class="setup-inc">
-      <div class="inc"><div class="ic">01</div><h4>Space Planning &amp; Layout</h4><p>Zone design mapped to your floor area, run lanes, station flow and class capacity.</p></div>
-      <div class="inc"><div class="ic">02</div><h4>Official Equipment Supply</h4><p>The complete Centr x HYROX range — sourced, imported and delivered as one package.</p></div>
-      <div class="inc"><div class="ic">03</div><h4>Turf &amp; Rig Installation</h4><p>Competition turf lanes, rigs and rig targets installed to race-day configuration.</p></div>
-      <div class="inc"><div class="ic">04</div><h4>Flooring &amp; Fit-Out</h4><p>Shock-absorbing rubber flooring and surrounding fit-out to finish the space.</p></div>
-      <div class="inc"><div class="ic">05</div><h4>Delivery &amp; Logistics</h4><p>Pan-India transport, site coordination and assembly handled by our team.</p></div>
-      <div class="inc"><div class="ic">06</div><h4>After-Sales &amp; AMC</h4><p>Warranty support, spares and annual maintenance so the zone stays race-ready.</p></div>
+    <div class="hx-setup-inc">
+      <div class="hx-inc"><div class="hx-ic">01</div><h4>Space Planning &amp; Layout</h4><p>Zone design mapped to your floor area, run lanes, station flow and class capacity.</p></div>
+      <div class="hx-inc"><div class="hx-ic">02</div><h4>Official Equipment Supply</h4><p>The complete Centr x HYROX range — sourced, imported and delivered as one package.</p></div>
+      <div class="hx-inc"><div class="hx-ic">03</div><h4>Turf &amp; Rig Installation</h4><p>Competition turf lanes, rigs and rig targets installed to race-day configuration.</p></div>
+      <div class="hx-inc"><div class="hx-ic">04</div><h4>Flooring &amp; Fit-Out</h4><p>Shock-absorbing rubber flooring and surrounding fit-out to finish the space.</p></div>
+      <div class="hx-inc"><div class="hx-ic">05</div><h4>Delivery &amp; Logistics</h4><p>Pan-India transport, site coordination and assembly handled by our team.</p></div>
+      <div class="hx-inc"><div class="hx-ic">06</div><h4>After-Sales &amp; AMC</h4><p>Spares, servicing and annual maintenance so the zone stays race-ready.</p></div>
     </div>
 
     <h3 style="text-align:center;color:#fff;font-size:1.3rem;font-weight:800;margin-top:4rem">Setup configurations</h3>
-    <div class="tier-grid">
-      <div class="tier">
-        <div class="cap">Compact</div>
+    <div class="hx-tier-grid">
+      <div class="hx-tier">
+        <div class="hx-cap">Compact</div>
         <h4>Studio Zone</h4>
-        <p class="who-for">Boutique studios &amp; small functional areas</p>
+        <p class="hx-who-for">Boutique studios &amp; small functional areas</p>
         <ul>
           <li>Core HYROX stations in a compact footprint</li>
           <li>Sled, kettlebells, wall balls, sandbags &amp; plates</li>
@@ -7184,10 +7152,10 @@ function renderHyrox() {
           <li>Turf strip for sled push/pull</li>
         </ul>
       </div>
-      <div class="tier feat">
-        <div class="cap">Most popular</div>
+      <div class="hx-tier hx-feat">
+        <div class="hx-cap">Most popular</div>
         <h4>Training Zone</h4>
-        <p class="who-for">Commercial gyms &amp; group classes (up to ~16–24)</p>
+        <p class="hx-who-for">Commercial gyms &amp; group classes (up to ~16–24)</p>
         <ul>
           <li>Full 8-station HYROX setup</li>
           <li>Multiple sleds, ergs &amp; complete weight ranges</li>
@@ -7195,10 +7163,10 @@ function renderHyrox() {
           <li>Turf lanes with end zones</li>
         </ul>
       </div>
-      <div class="tier">
-        <div class="cap">Full scale</div>
+      <div class="hx-tier">
+        <div class="hx-cap">Full scale</div>
         <h4>Performance Centre</h4>
-        <p class="who-for">Performance centres &amp; race prep (up to 32)</p>
+        <p class="hx-who-for">Performance centres &amp; race prep (up to 32)</p>
         <ul>
           <li>Full race-day configuration</li>
           <li>Perform Treads, Rowers &amp; Ski Machines</li>
@@ -7209,79 +7177,108 @@ function renderHyrox() {
     </div>
 
     <h3 style="text-align:center;color:#fff;font-size:1.3rem;font-weight:800;margin-top:4rem">How it works</h3>
-    <div class="steps">
-      <div class="step"><div class="num">1</div><h5>Consult</h5></div>
-      <div class="step"><div class="num">2</div><h5>Design &amp; layout</h5></div>
-      <div class="step"><div class="num">3</div><h5>Quote &amp; config</h5></div>
-      <div class="step"><div class="num">4</div><h5>Supply</h5></div>
-      <div class="step"><div class="num">5</div><h5>Install</h5></div>
-      <div class="step"><div class="num">6</div><h5>Handover &amp; support</h5></div>
+    <div class="hx-steps">
+      <div class="hx-step"><div class="hx-num">1</div><h5>Consult</h5></div>
+      <div class="hx-step"><div class="hx-num">2</div><h5>Design &amp; layout</h5></div>
+      <div class="hx-step"><div class="hx-num">3</div><h5>Quote &amp; config</h5></div>
+      <div class="hx-step"><div class="hx-num">4</div><h5>Supply</h5></div>
+      <div class="hx-step"><div class="hx-num">5</div><h5>Install</h5></div>
+      <div class="hx-step"><div class="hx-num">6</div><h5>Handover &amp; support</h5></div>
     </div>
     <div style="text-align:center;margin-top:2.5rem">
-      <a class="btn btn-red" href="#quote">Plan my HYROX setup</a>
+      <a class="hx-btn hx-btn-red" href="#quote">Plan my HYROX setup</a>
     </div>
   </div>
 </section>
 
 <!-- WHO -->
-<section class="pad" style="background:var(--black)">
-  <div class="cnt">
+<section class="hx-pad" style="background:var(--hx-black)">
+  <div class="hx-cnt">
     <div style="text-align:center;max-width:60ch;margin:0 auto">
-      <span class="eyebrow">Who it's for</span>
-      <h2 class="sec-title" style="margin-top:1.1rem">Built for every kind of HYROX space</h2>
+      <span class="hx-eyebrow">Who it's for</span>
+      <h2 class="hx-sec-title" style="margin-top:1.1rem">Built for every kind of HYROX space</h2>
     </div>
-    <div class="who-grid">
-      <div class="who-card"><div class="ic">01</div><h4>Commercial Gyms</h4><p>Add a genuine HYROX training zone that members recognise from race day and keep coming back for.</p></div>
-      <div class="who-card"><div class="ic">02</div><h4>Studios &amp; S&amp;C</h4><p>Purpose-built functional kit for hybrid, conditioning and small-group performance classes.</p></div>
-      <div class="who-card"><div class="ic">03</div><h4>Hotels &amp; Residences</h4><p>A premium, differentiated amenity for developers and hospitality wellness offerings.</p></div>
-      <div class="who-card"><div class="ic">04</div><h4>Performance Centres</h4><p>Full race-day configurations — turf, rigs, sleds and ergs — for serious athlete preparation.</p></div>
+    <div class="hx-who-grid">
+      <div class="hx-who-card"><div class="hx-ic">01</div><h4>Commercial Gyms</h4><p>Add a genuine HYROX training zone that members recognise from race day and keep coming back for.</p></div>
+      <div class="hx-who-card"><div class="hx-ic">02</div><h4>Studios &amp; S&amp;C</h4><p>Purpose-built functional kit for hybrid, conditioning and small-group performance classes.</p></div>
+      <div class="hx-who-card"><div class="hx-ic">03</div><h4>Hotels &amp; Residences</h4><p>A premium, differentiated amenity for developers and hospitality wellness offerings.</p></div>
+      <div class="hx-who-card"><div class="hx-ic">04</div><h4>Performance Centres</h4><p>Full race-day configurations — turf, rigs, sleds and ergs — for serious athlete preparation.</p></div>
     </div>
   </div>
 </section>
 
 <!-- VALUE PROPS -->
-<section class="pad">
-  <div class="cnt">
+<section class="hx-pad">
+  <div class="hx-cnt">
     <div style="text-align:center;max-width:60ch;margin:0 auto">
-      <span class="eyebrow">The TechFit advantage</span>
-      <h2 class="sec-title" style="margin-top:1.1rem">Why source your HYROX gear through us</h2>
+      <span class="hx-eyebrow">The TechFit advantage</span>
+      <h2 class="hx-sec-title" style="margin-top:1.1rem">Why source your HYROX gear through us</h2>
     </div>
-    <div class="vp-grid">
-      <div class="vp"><h4>Authentic &amp; official</h4><p>Genuine Centr x HYROX equipment — the exact competition-grade gear used at races worldwide, not lookalikes.</p></div>
-      <div class="vp"><h4>Local supply &amp; install</h4><p>Sourcing, logistics, delivery and professional installation handled in India, with after-sales support you can reach.</p></div>
-      <div class="vp"><h4>Turnkey packages</h4><p>From a single sled to a complete competition setup — we spec, quote and build the configuration your space needs.</p></div>
+    <div class="hx-vp-grid">
+      <div class="hx-vp"><h4>Authentic &amp; official</h4><p>Genuine Centr x HYROX equipment — the exact competition-grade gear used at races worldwide, not lookalikes.</p></div>
+      <div class="hx-vp"><h4>Local supply &amp; install</h4><p>Sourcing, logistics, delivery and professional installation handled in India, with after-sales support you can reach.</p></div>
+      <div class="hx-vp"><h4>Turnkey packages</h4><p>From a single sled to a complete competition setup — we spec, quote and build the configuration your space needs.</p></div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="pad" id="quote">
-  <div class="cnt">
-    <div class="cta">
+<section class="hx-pad" id="quote">
+  <div class="hx-cnt">
+    <div class="hx-cta">
       <h2>Bring official HYROX equipment to your space</h2>
       <p>Tell us what you're building — a training zone, a full competition setup, or a single piece — and we'll put together a configuration and quote.</p>
-      <div class="cta-btns">
-        <a class="btn btn-white" href="https://wa.me/919820166910?text=Hi%20TechFit!%20I%27d%20like%20a%20quote%20for%20official%20Centr%20x%20HYROX%20equipment." target="_blank" rel="noopener">WhatsApp Us</a>
-        <a class="btn btn-outline" style="border-color:rgba(255,255,255,.5);color:#fff" href="tel:+919820166910">Call +91 98201 66910</a>
+      <div class="hx-cta-btns">
+        <a class="hx-btn hx-btn-white" href="https://wa.me/919820166910?text=Hi%20TechFit!%20I%27d%20like%20a%20quote%20for%20official%20Centr%20x%20HYROX%20equipment." target="_blank" rel="noopener">WhatsApp Us</a>
+        <a class="hx-btn hx-btn-outline" style="border-color:rgba(255,255,255,.5);color:#fff" href="tel:+919820166910">Call +91 98201 66910</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- DISCLAIMER -->
-<div class="disc">
-  <div class="cnt">
+<div class="hx-disc">
+  <div class="hx-cnt">
     TechFit is an authorised reseller of Centr x HYROX equipment in India. HYROX® and Centr® are trademarks of their respective owners; product names, specifications and images are used to identify the official equipment we supply. Specifications are manufacturer-stated and may change without notice. &nbsp;·&nbsp; <a href="https://www.techfittech.com">techfittech.com</a>
   </div>
 </div>
 
+<script>
+function pick(el){
+  var g=el.closest('.hx-gallery');
+  g.querySelector('.hx-gal-main img').src=el.src;
+  g.querySelectorAll('.hx-gal-thumbs img').forEach(function(t){t.classList.remove('hx-active');});
+  el.classList.add('hx-active');
+}
+</script>
+</div><!-- /.hx-page -->
 
-`;
-    html = html.replace(/onclick="pick\(this,\s*'([^']+)'\)"/g, "onclick=\"window.hyroxPick(this, '$1')\"");
+    `;
     
-    // Convert anchor links to JS scrolling or regular # since it's the same page
-    // Actually, regular # works if we don't intercept it, but our SPA intercepts ALL a hrefs!
-    // So we need to use onclick="scrollToId('...')" 
+    setSchema([
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "HYROX", "item": "https://www.techfittech.com/hyrox" }
+            ]
+        }
+    ]);
+
+    // Attach global pick function for gallery if not exists
+    if (typeof window !== 'undefined' && !window.hyroxPick) {
+        window.hyroxPick = function(el, src) {
+            const productDiv = el.closest('.hx-product');
+            if(productDiv) {
+                const mainImg = productDiv.querySelector('.hx-gal-main img');
+                if(mainImg) mainImg.src = src;
+                productDiv.querySelectorAll('.hx-gal-thumbs img').forEach(i => i.classList.remove('active'));
+                el.classList.add('active');
+            }
+        };
+    }
+
+    // Convert anchor links to JS scrolling
     html = html.replace(/href="#([^"]+)"/g, "onclick=\"document.getElementById('$1').scrollIntoView({behavior:'smooth'})\" style=\"cursor:pointer\"");
 
     return html;

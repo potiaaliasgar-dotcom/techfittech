@@ -62,6 +62,13 @@ const OG_CARDIO = BASE + '/og/og-cardio.jpg';
 const OG_FLOORING = BASE + '/og/og-flooring.jpg';
 
 const SEO_MAP = {
+  'hyrox': {
+    title: 'Official HYROX Equipment India | Centr x HYROX Reseller — TechFit',
+    desc: 'TechFit is an authorised reseller of official Centr x HYROX competition and performance equipment in India — Perform Tread, Power Sled, Octo Kettlebells, Wall Balls, Sandbags, rigs, turf and more.',
+    h1: 'Official HYROX Equipment India',
+    lastmod: '2026-07-06',
+    img: OG_CARDIO
+  },
   'alternatives': {
     title: 'Compare Commercial Gym Equipment Brands in India',
     desc: 'Comprehensive, factual CapEx and sourcing comparisons between major global fitness brands and TechFit\'s direct-supply commercial infrastructure.',
