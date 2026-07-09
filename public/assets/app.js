@@ -2982,7 +2982,7 @@ ${footer()}
 <div class="phero" style="background-image:linear-gradient(to bottom,rgba(9,9,11,0.85),rgba(9,9,11,0.92)),url('/assets/images/other/seg-e74ca4429e.jpg');background-size:cover;background-position:center">
   <section class="sec-in">
     <div class="phero-label">TechFit Custom · Fabricated in Mumbai</div>
-    <h2>PROFESSIONAL GRADE<br>MMA CAGES &amp; BOXING RINGS</h2>
+    <h1>PROFESSIONAL GRADE<br>MMA CAGES &amp; BOXING RINGS</h1>
     <p class="phero-sub">Floor mount, elevated &amp; competition grade. Custom sizes from 16ft to 30ft. Designed and fabricated in-house for gyms, academies, and arenas across India. Complete your combat zone with our <a href="/gym-flooring" onclick="event.preventDefault();go('gym-flooring')" style="text-decoration:underline;color:inherit">premium sports flooring</a> and <a href="/crossfit-rigs" onclick="event.preventDefault();go('crossfit-rigs')" style="text-decoration:underline;color:inherit">functional rigs</a>.</p>
     <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center">
       <button class="btn-red" onclick="go('contact')">Request Price List</button>
@@ -3086,7 +3086,7 @@ ${footer()}`;
 <div class="phero" style="background-image:linear-gradient(to bottom,rgba(9,9,11,0.85),rgba(9,9,11,0.92)),url('/assets/images/other/seg-d37a340a28.jpg');background-size:cover;background-position:center">
   <div class="sec-in">
     <div class="phero-label">TechFit Custom · Fabricated in Mumbai</div>
-    <h2>HEAVY DUTY<br>FUNCTIONAL TRAINING RIGS</h2>
+    <h1>HEAVY DUTY<br>FUNCTIONAL TRAINING RIGS</h1>
     <p class="phero-sub">Modular designs that grow with your gym. Wall-mounted or freestanding. Premium 11-gauge structural steel, engineered for the hardest use in commercial environments.</p>
     <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center">
       <button class="btn-red" onclick="go('contact')">Get Design Consultation</button>
@@ -3162,7 +3162,7 @@ ${footer()}`;
 <div class="phero" style="background:linear-gradient(135deg,#18181B 0%,#27272A 40%,#DC2626 120%)">
   <div class="sec-in" style="text-align:center">
     <div class="phero-label">TechFit Commercial · Wholesale Pricing</div>
-    <h2>COMMERCIAL FREE WEIGHTS<br>&amp; STRENGTH EQUIPMENT</h2>
+    <h1>COMMERCIAL FREE WEIGHTS<br>&amp; STRENGTH EQUIPMENT</h1>
     <p class="phero-sub" style="margin-left:auto;margin-right:auto">Factory-direct pricing for gym owners and facility operators. Hex dumbbells, Olympic plates, power racks, deadlift platforms, and competition bars. Bulk order discounts available.</p>
     <div style="display:flex;gap:1.5rem;margin-top:2.5rem;flex-wrap:wrap;justify-content:center">
       <button class="btn-red" onclick="go('contact')">Get A Quote</button>
@@ -3326,7 +3326,7 @@ ${footer()}`;
 <div class="phero">
   <div class="sec-in" style="text-align:center">
     <div class="phero-label">TechFit Sports Infrastructure</div>
-    <h2>PROFESSIONAL GRADE<br>PADEL &amp; PICKLEBALL COURTS</h2>
+    <h1>PROFESSIONAL GRADE<br>PADEL &amp; PICKLEBALL COURTS</h1>
     <p class="phero-sub" style="margin-left:auto;margin-right:auto">Engineered for performance, durability, and playability. Turnkey indoor and outdoor court solutions for clubs, academies, residential projects, and commercial sports facilities.</p>
     <div style="display:flex;gap:1.5rem;margin-top:2.5rem;flex-wrap:wrap;justify-content:center">
       <button class="btn-red" onclick="go('contact')">Request Price List</button>
@@ -3402,7 +3402,7 @@ ${footer()}`;
 <div class="phero" style="background:linear-gradient(135deg,#09090B 0%,#0369a1 50%,#06b6d4 110%)">
   <div class="sec-in" style="text-align:center">
     <div class="phero-label">TechFit Aqua · SS316 Marine Grade</div>
-    <h2>TECHFIT AQUA<br>FITNESS EQUIPMENT</h2>
+    <h1>TECHFIT AQUA<br>FITNESS EQUIPMENT</h1>
     <p class="phero-sub" style="margin-left:auto;margin-right:auto">Premium SS316 marine-grade underwater stainless steel fitness equipment. Treadmills, bikes, and ellipticals engineered for aquatic training, rehabilitation, and luxury wellness facilities.</p>
     <div style="display:flex;gap:1.5rem;margin-top:2.5rem;flex-wrap:wrap;justify-content:center">
       <button class="btn-red" onclick="go('contact')">Request Price List</button>
@@ -3511,7 +3511,7 @@ ${footer()}`;
 <div class="phero">
   <div class="sec-in">
     <div class="phero-label">Who We Help &amp; What We Do</div>
-    <h2>SOLUTIONS &amp; SERVICES</h2>
+    <h1>SOLUTIONS &amp; SERVICES</h1>
     <p class="phero-sub">We serve gyms, real estate developers, schools, hotels, corporates and wellness operators. For every client type we offer the same thing — a complete, end-to-end gym, wellness &amp; sports setup under one roof.</p>
   </div>
 </div>
@@ -3679,7 +3679,7 @@ ${footer()}`;
 <div class="phero">
   <section class="sec-in">
     <div class="phero-label">Our Portfolio</div>
-    <h2>COMPLETED PROJECTS</h2>
+    <h1>COMPLETED PROJECTS</h1>
     <p class="phero-sub">800+ installations and sports facilities delivered across India. Each project is custom-configured for the client's space, brand, and budget.</p>
   </div>
 </div>
@@ -3762,7 +3762,7 @@ ${footer()}`;
 <div class="phero">
   <section class="sec-in">
     <div class="phero-label">Wellness Solutions</div>
-    <h2>INTEGRATED WELLNESS INFRASTRUCTURE</h2>
+    <h1>INTEGRATED WELLNESS INFRASTRUCTURE</h1>
     <p class="phero-sub">From longevity labs in luxury hotels to recovery suites in residential towers &mdash; we design, supply and install the full wellness tech stack for India&rsquo;s most ambitious spaces.</p>
   </div>
 </div>
@@ -3859,7 +3859,7 @@ ${footer()}`;
 <div class="phero">
   <section class="sec-in">
     <div class="phero-label">About TechFit</div>
-    <h2>ABOUT US</h2>
+    <h1>ABOUT US</h1>
     <p class="phero-sub">From a Mumbai-based custom fabrication workshop to India&#x2019;s one-stop gym, wellness and sports infrastructure partner.</p>
   </div>
 </div>
@@ -4042,7 +4042,7 @@ ${footer()}
 <div class="phero">
   <section class="sec-in">
     <div class="phero-label">TechFit Insights</div>
-    <h2>BLOG &amp; CASE STUDIES</h2>
+    <h1>BLOG &amp; CASE STUDIES</h1>
     <p class="phero-sub">Stories from the workshop floor and the arena. Combat-sports installations, gym-fit-out playbooks, and what we&#x2019;ve learned building 800+ installations across India.</p>
   </div>
 </div>
@@ -4127,7 +4127,7 @@ ${footer()}
 <div class="phero" style="background:linear-gradient(135deg,#09090b 55%,#1a0a00)">
   <section class="sec-in">
     <div class="phero-label">TechFit Flooring &middot; Commercial Grade</div>
-    <h2>GYM RUBBER FLOORING<br>&amp; SPORTS SURFACES</h2>
+    <h1>GYM RUBBER FLOORING<br>&amp; SPORTS SURFACES</h1>
     <p class="phero-sub">Heavy-duty rubber floor tiles engineered for commercial gyms, CrossFit boxes, free-weight zones, functional training floors and sports facilities. 10 mm to 50 mm thickness, interlocking or seamless installation.</p>
     <div style="display:flex;gap:1rem;flex-wrap:wrap">
       <button class="btn-red" onclick="go('contact')">Request Flooring Quote</button>
@@ -4351,7 +4351,7 @@ ${footer()}
 <div class="phero">
   <div class="sec-in">
     <div class="phero-label">Free Consultation</div>
-    <h2>PLAN YOUR FACILITY</h2>
+    <h1>PLAN YOUR FACILITY</h1>
     <p class="phero-sub">Tell us about your project. We'll assess your space, recommend the right equipment and layout, and give you a detailed proposal — at no cost.</p>
   </div>
 </div>
