@@ -449,7 +449,7 @@ async function submitEmbeddedQuote(projectType) {
       const mob = document.getElementById('nav-mob');
       const btn = document.getElementById('nav-ham-btn');
       mob.classList.remove('open');
-      if (btn) { btn.classList.remove('active'); btn.setAttribute('aria-expanded', 'false'); }
+      if (btn) { btn.classList.remove('hx-active'); btn.setAttribute('aria-expanded', 'false'); }
 
       const searchParams = new URLSearchParams();
       if (b) searchParams.set('brand', b);
@@ -470,7 +470,7 @@ async function submitEmbeddedQuote(projectType) {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('active');
+            entry.target.classList.add('hx-active');
             observer.unobserve(entry.target);
           }
         });
@@ -1172,9 +1172,9 @@ function alteonFloatingWA() {
       'services': 'nl-services', 'about': 'nl-about', 'contact': 'nl-contact', 'blogs': 'nl-blogs', 'gym-flooring': 'nl-products', 'flooring': 'nl-products', 'blog-mfn': 'nl-blogs', 'blog-sfl': 'nl-blogs', 'blog-kumite': 'nl-blogs', 'blog-mma-matrix': 'nl-blogs', 'blog-one-stop': 'nl-blogs', 'blog-wellness-boom': 'nl-blogs', 'alteon': 'nl-products'
     };
     function navActive() {
-      document.querySelectorAll('.nl,.nd-btn').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.nl,.nd-btn').forEach(el => el.classList.remove('hx-active'));
       const id = navMap[page];
-      if (id) document.getElementById(id)?.classList.add('active');
+      if (id) document.getElementById(id)?.classList.add('hx-active');
     }
 
     function toggleDD(id) {
@@ -4449,8 +4449,8 @@ ${footer()}`;
             t.innerHTML = `<img src="${src}" alt="${p.n}" loading="lazy">`;
             t.onclick = () => {
               img.src = src;
-              galWrap.querySelectorAll('.m-thumb').forEach(el => el.classList.remove('active'));
-              t.classList.add('active');
+              galWrap.querySelectorAll('.m-thumb').forEach(el => el.classList.remove('hx-active'));
+              t.classList.add('hx-active');
             };
             galWrap.appendChild(t);
           });
@@ -6316,7 +6316,7 @@ function render404() {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('active');
+            entry.target.classList.add('hx-active');
             observer.unobserve(entry.target);
           }
         });
@@ -6347,7 +6347,7 @@ function render404() {
         const observer = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
-              entry.target.classList.add('active');
+              entry.target.classList.add('hx-active');
               observer.unobserve(entry.target);
             }
           });
@@ -6602,19 +6602,19 @@ function renderHyrox() {
     <!-- PERFORM TREAD -->
     <div class="hx-product">
       <div class="hx-gallery">
-        <div class="hx-gal-main"><img src="/assets/images/hyrox/perform-tread-1.jpg" alt="Centr x HYROX Perform Tread"></div>
+        <div class="hx-gal-main" style="position:relative;"><button onclick="window.hyroxNav(this, -1)" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-right:2px;">&#10094;</button><img src="/assets/images/hyrox/perform-tread-1.jpg" alt="Centr x HYROX Perform Tread"><button onclick="window.hyroxNav(this, 1)" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-left:2px;">&#10095;</button></div>
         <div class="hx-gal-thumbs">
-          <img class="hx-active" src="/assets/images/hyrox/perform-tread-1.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-tread-2.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-tread-3.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-tread-4.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-tread-5.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-tread-6.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-tread-7.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-tread-8.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-tread-9.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-tread-10.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-tread-11.jpg" onclick="pick(this)" alt="">
+          <img class="hx-active" src="/assets/images/hyrox/perform-tread-1.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-tread-2.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-tread-3.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-tread-4.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-tread-5.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-tread-6.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-tread-7.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-tread-8.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-tread-9.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-tread-10.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-tread-11.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
         </div>
       </div>
       <div class="hx-details">
@@ -6642,15 +6642,15 @@ function renderHyrox() {
     <!-- ROWER -->
     <div class="hx-product">
       <div class="hx-gallery">
-        <div class="hx-gal-main"><img src="/assets/images/hyrox/rower-1.jpg" alt="Centr Perform Series Rower"></div>
+        <div class="hx-gal-main" style="position:relative;"><button onclick="window.hyroxNav(this, -1)" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-right:2px;">&#10094;</button><img src="/assets/images/hyrox/rower-1.jpg" alt="Centr Perform Series Rower"><button onclick="window.hyroxNav(this, 1)" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-left:2px;">&#10095;</button></div>
         <div class="hx-gal-thumbs">
-          <img class="hx-active" src="/assets/images/hyrox/rower-1.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/rower-2.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/rower-3.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/rower-4.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/rower-5.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/rower-6.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/rower-7.jpg" onclick="pick(this)" alt="">
+          <img class="hx-active" src="/assets/images/hyrox/rower-1.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/rower-2.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/rower-3.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/rower-4.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/rower-5.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/rower-6.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/rower-7.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
         </div>
       </div>
       <div class="hx-details">
@@ -6674,15 +6674,15 @@ function renderHyrox() {
     <!-- SKI MACHINE -->
     <div class="hx-product">
       <div class="hx-gallery">
-        <div class="hx-gal-main"><img src="/assets/images/hyrox/ski-machine-1.jpg" alt="Centr Perform Series Ski Machine"></div>
+        <div class="hx-gal-main" style="position:relative;"><button onclick="window.hyroxNav(this, -1)" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-right:2px;">&#10094;</button><img src="/assets/images/hyrox/ski-machine-1.jpg" alt="Centr Perform Series Ski Machine"><button onclick="window.hyroxNav(this, 1)" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-left:2px;">&#10095;</button></div>
         <div class="hx-gal-thumbs">
-          <img class="hx-active" src="/assets/images/hyrox/ski-machine-1.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/ski-machine-2.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/ski-machine-3.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/ski-machine-4.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/ski-machine-5.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/ski-machine-6.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/ski-machine-7.jpg" onclick="pick(this)" alt="">
+          <img class="hx-active" src="/assets/images/hyrox/ski-machine-1.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/ski-machine-2.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/ski-machine-3.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/ski-machine-4.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/ski-machine-5.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/ski-machine-6.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/ski-machine-7.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
         </div>
       </div>
       <div class="hx-details">
@@ -6704,15 +6704,15 @@ function renderHyrox() {
     <!-- AIR BIKE -->
     <div class="hx-product">
       <div class="hx-gallery">
-        <div class="hx-gal-main"><img src="/assets/images/hyrox/air-bike-1.jpg" alt="Centr x HYROX Perform Series Air Bike"></div>
+        <div class="hx-gal-main" style="position:relative;"><button onclick="window.hyroxNav(this, -1)" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-right:2px;">&#10094;</button><img src="/assets/images/hyrox/air-bike-1.jpg" alt="Centr x HYROX Perform Series Air Bike"><button onclick="window.hyroxNav(this, 1)" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-left:2px;">&#10095;</button></div>
         <div class="hx-gal-thumbs">
-          <img class="hx-active" src="/assets/images/hyrox/air-bike-1.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/air-bike-2.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/air-bike-3.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/air-bike-4.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/air-bike-5.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/air-bike-6.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/air-bike-7.jpg" onclick="pick(this)" alt="">
+          <img class="hx-active" src="/assets/images/hyrox/air-bike-1.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/air-bike-2.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/air-bike-3.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/air-bike-4.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/air-bike-5.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/air-bike-6.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/air-bike-7.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
         </div>
       </div>
       <div class="hx-details">
@@ -6734,17 +6734,17 @@ function renderHyrox() {
     <!-- HALF RACK -->
     <div class="hx-product">
       <div class="hx-gallery">
-        <div class="hx-gal-main"><img src="/assets/images/hyrox/half-rack-1.jpg" alt="Centr x HYROX Perform Series HR2 Half Rack"></div>
+        <div class="hx-gal-main" style="position:relative;"><button onclick="window.hyroxNav(this, -1)" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-right:2px;">&#10094;</button><img src="/assets/images/hyrox/half-rack-1.jpg" alt="Centr x HYROX Perform Series HR2 Half Rack"><button onclick="window.hyroxNav(this, 1)" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-left:2px;">&#10095;</button></div>
         <div class="hx-gal-thumbs">
-          <img class="hx-active" src="/assets/images/hyrox/half-rack-1.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/half-rack-2.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/half-rack-3.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/half-rack-4.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/half-rack-5.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/half-rack-6.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/half-rack-7.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/half-rack-8.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/half-rack-9.jpg" onclick="pick(this)" alt="">
+          <img class="hx-active" src="/assets/images/hyrox/half-rack-1.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/half-rack-2.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/half-rack-3.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/half-rack-4.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/half-rack-5.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/half-rack-6.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/half-rack-7.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/half-rack-8.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/half-rack-9.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
         </div>
       </div>
       <div class="hx-details">
@@ -6770,19 +6770,19 @@ function renderHyrox() {
     <!-- OCTO KETTLEBELL -->
     <div class="hx-product">
       <div class="hx-gallery">
-        <div class="hx-gal-main"><img src="/assets/images/hyrox/octo-kettlebell-1.jpg" alt="Centr x HYROX Octo Kettlebell"></div>
+        <div class="hx-gal-main" style="position:relative;"><button onclick="window.hyroxNav(this, -1)" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-right:2px;">&#10094;</button><img src="/assets/images/hyrox/octo-kettlebell-1.jpg" alt="Centr x HYROX Octo Kettlebell"><button onclick="window.hyroxNav(this, 1)" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-left:2px;">&#10095;</button></div>
         <div class="hx-gal-thumbs">
-          <img class="hx-active" src="/assets/images/hyrox/octo-kettlebell-1.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/octo-kettlebell-2.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/octo-kettlebell-3.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/octo-kettlebell-4.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/octo-kettlebell-5.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/octo-kettlebell-6.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/octo-kettlebell-7.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/octo-kettlebell-8.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/octo-kettlebell-9.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/octo-kettlebell-10.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/octo-kettlebell-11.jpg" onclick="pick(this)" alt="">
+          <img class="hx-active" src="/assets/images/hyrox/octo-kettlebell-1.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/octo-kettlebell-2.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/octo-kettlebell-3.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/octo-kettlebell-4.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/octo-kettlebell-5.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/octo-kettlebell-6.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/octo-kettlebell-7.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/octo-kettlebell-8.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/octo-kettlebell-9.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/octo-kettlebell-10.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/octo-kettlebell-11.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
         </div>
       </div>
       <div class="hx-details">
@@ -6805,17 +6805,17 @@ function renderHyrox() {
     <!-- WALL BALL -->
     <div class="hx-product">
       <div class="hx-gallery">
-        <div class="hx-gal-main"><img src="/assets/images/hyrox/wall-ball-1.jpg" alt="Centr x HYROX Competition Wall Ball"></div>
+        <div class="hx-gal-main" style="position:relative;"><button onclick="window.hyroxNav(this, -1)" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-right:2px;">&#10094;</button><img src="/assets/images/hyrox/wall-ball-1.jpg" alt="Centr x HYROX Competition Wall Ball"><button onclick="window.hyroxNav(this, 1)" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-left:2px;">&#10095;</button></div>
         <div class="hx-gal-thumbs">
-          <img class="hx-active" src="/assets/images/hyrox/wall-ball-1.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/wall-ball-2.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/wall-ball-3.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/wall-ball-4.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/wall-ball-5.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/wall-ball-6.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/wall-ball-7.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/wall-ball-8.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/wall-ball-9.jpg" onclick="pick(this)" alt="">
+          <img class="hx-active" src="/assets/images/hyrox/wall-ball-1.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/wall-ball-2.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/wall-ball-3.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/wall-ball-4.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/wall-ball-5.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/wall-ball-6.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/wall-ball-7.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/wall-ball-8.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/wall-ball-9.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
         </div>
       </div>
       <div class="hx-details">
@@ -6836,16 +6836,16 @@ function renderHyrox() {
     <!-- SANDBAG -->
     <div class="hx-product">
       <div class="hx-gallery">
-        <div class="hx-gal-main"><img src="/assets/images/hyrox/sandbag-1.jpg" alt="Centr x HYROX Competition Sandbag"></div>
+        <div class="hx-gal-main" style="position:relative;"><button onclick="window.hyroxNav(this, -1)" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-right:2px;">&#10094;</button><img src="/assets/images/hyrox/sandbag-1.jpg" alt="Centr x HYROX Competition Sandbag"><button onclick="window.hyroxNav(this, 1)" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-left:2px;">&#10095;</button></div>
         <div class="hx-gal-thumbs">
-          <img class="hx-active" src="/assets/images/hyrox/sandbag-1.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/sandbag-2.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/sandbag-3.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/sandbag-4.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/sandbag-5.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/sandbag-6.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/sandbag-7.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/sandbag-8.jpg" onclick="pick(this)" alt="">
+          <img class="hx-active" src="/assets/images/hyrox/sandbag-1.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/sandbag-2.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/sandbag-3.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/sandbag-4.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/sandbag-5.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/sandbag-6.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/sandbag-7.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/sandbag-8.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
         </div>
       </div>
       <div class="hx-details">
@@ -6868,17 +6868,17 @@ function renderHyrox() {
     <!-- POWER SLED -->
     <div class="hx-product">
       <div class="hx-gallery">
-        <div class="hx-gal-main"><img src="/assets/images/hyrox/power-sled-1.jpg" alt="Centr x HYROX Competition Power Sled"></div>
+        <div class="hx-gal-main" style="position:relative;"><button onclick="window.hyroxNav(this, -1)" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-right:2px;">&#10094;</button><img src="/assets/images/hyrox/power-sled-1.jpg" alt="Centr x HYROX Competition Power Sled"><button onclick="window.hyroxNav(this, 1)" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-left:2px;">&#10095;</button></div>
         <div class="hx-gal-thumbs">
-          <img class="hx-active" src="/assets/images/hyrox/power-sled-1.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/power-sled-2.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/power-sled-3.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/power-sled-4.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/power-sled-5.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/power-sled-6.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/power-sled-7.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/power-sled-8.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/power-sled-9.jpg" onclick="pick(this)" alt="">
+          <img class="hx-active" src="/assets/images/hyrox/power-sled-1.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/power-sled-2.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/power-sled-3.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/power-sled-4.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/power-sled-5.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/power-sled-6.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/power-sled-7.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/power-sled-8.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/power-sled-9.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
         </div>
       </div>
       <div class="hx-details">
@@ -6901,15 +6901,15 @@ function renderHyrox() {
     <!-- POWER ROPE -->
     <div class="hx-product">
       <div class="hx-gallery">
-        <div class="hx-gal-main"><img src="/assets/images/hyrox/power-rope-1.jpg" alt="Centr x HYROX Competition Power Rope"></div>
+        <div class="hx-gal-main" style="position:relative;"><button onclick="window.hyroxNav(this, -1)" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-right:2px;">&#10094;</button><img src="/assets/images/hyrox/power-rope-1.jpg" alt="Centr x HYROX Competition Power Rope"><button onclick="window.hyroxNav(this, 1)" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-left:2px;">&#10095;</button></div>
         <div class="hx-gal-thumbs">
-          <img class="hx-active" src="/assets/images/hyrox/power-rope-1.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/power-rope-2.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/power-rope-3.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/power-rope-4.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/power-rope-5.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/power-rope-6.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/power-rope-7.jpg" onclick="pick(this)" alt="">
+          <img class="hx-active" src="/assets/images/hyrox/power-rope-1.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/power-rope-2.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/power-rope-3.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/power-rope-4.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/power-rope-5.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/power-rope-6.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/power-rope-7.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
         </div>
       </div>
       <div class="hx-details">
@@ -6931,21 +6931,21 @@ function renderHyrox() {
     <!-- BUMPER PLATE -->
     <div class="hx-product">
       <div class="hx-gallery">
-        <div class="hx-gal-main"><img src="/assets/images/hyrox/bumper-plate-1.jpg" alt="Centr x HYROX Edge Interlocking Bumper Plate"></div>
+        <div class="hx-gal-main" style="position:relative;"><button onclick="window.hyroxNav(this, -1)" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-right:2px;">&#10094;</button><img src="/assets/images/hyrox/bumper-plate-1.jpg" alt="Centr x HYROX Edge Interlocking Bumper Plate"><button onclick="window.hyroxNav(this, 1)" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-left:2px;">&#10095;</button></div>
         <div class="hx-gal-thumbs">
-          <img class="hx-active" src="/assets/images/hyrox/bumper-plate-1.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/bumper-plate-2.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/bumper-plate-3.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/bumper-plate-4.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/bumper-plate-5.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/bumper-plate-6.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/bumper-plate-7.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/bumper-plate-8.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/bumper-plate-9.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/bumper-plate-10.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/bumper-plate-11.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/bumper-plate-12.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/bumper-plate-13.jpg" onclick="pick(this)" alt="">
+          <img class="hx-active" src="/assets/images/hyrox/bumper-plate-1.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/bumper-plate-2.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/bumper-plate-3.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/bumper-plate-4.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/bumper-plate-5.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/bumper-plate-6.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/bumper-plate-7.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/bumper-plate-8.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/bumper-plate-9.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/bumper-plate-10.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/bumper-plate-11.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/bumper-plate-12.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/bumper-plate-13.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
         </div>
       </div>
       <div class="hx-details">
@@ -6968,34 +6968,34 @@ function renderHyrox() {
     <!-- DUMBBELLS -->
     <div class="hx-product">
       <div class="hx-gallery">
-        <div class="hx-gal-main"><img src="/assets/images/hyrox/dumbbells-1.jpg" alt="Centr x HYROX Commercial Urethane Dumbbells"></div>
+        <div class="hx-gal-main" style="position:relative;"><button onclick="window.hyroxNav(this, -1)" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-right:2px;">&#10094;</button><img src="/assets/images/hyrox/dumbbells-1.jpg" alt="Centr x HYROX Commercial Urethane Dumbbells"><button onclick="window.hyroxNav(this, 1)" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-left:2px;">&#10095;</button></div>
         <div class="hx-gal-thumbs">
-          <img class="hx-active" src="/assets/images/hyrox/dumbbells-1.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-2.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-3.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-4.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-5.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-6.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-7.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-8.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-9.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-10.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-11.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-12.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-13.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-14.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-15.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-16.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-17.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-18.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-19.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-20.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-21.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-22.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-23.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-24.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-25.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/dumbbells-26.jpg" onclick="pick(this)" alt="">
+          <img class="hx-active" src="/assets/images/hyrox/dumbbells-1.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-2.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-3.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-4.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-5.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-6.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-7.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-8.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-9.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-10.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-11.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-12.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-13.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-14.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-15.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-16.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-17.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-18.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-19.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-20.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-21.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-22.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-23.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-24.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-25.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/dumbbells-26.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
         </div>
       </div>
       <div class="hx-details">
@@ -7021,20 +7021,20 @@ function renderHyrox() {
     <!-- PERFORM TURF -->
     <div class="hx-product">
       <div class="hx-gallery">
-        <div class="hx-gal-main"><img src="/assets/images/hyrox/perform-turf-1.jpg" alt="Centr x HYROX Perform Turf"></div>
+        <div class="hx-gal-main" style="position:relative;"><button onclick="window.hyroxNav(this, -1)" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-right:2px;">&#10094;</button><img src="/assets/images/hyrox/perform-turf-1.jpg" alt="Centr x HYROX Perform Turf"><button onclick="window.hyroxNav(this, 1)" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-left:2px;">&#10095;</button></div>
         <div class="hx-gal-thumbs">
-          <img class="hx-active" src="/assets/images/hyrox/perform-turf-1.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-turf-2.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-turf-3.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-turf-4.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-turf-5.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-turf-6.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-turf-7.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-turf-8.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-turf-9.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-turf-10.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-turf-11.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-turf-12.jpg" onclick="pick(this)" alt="">
+          <img class="hx-active" src="/assets/images/hyrox/perform-turf-1.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-turf-2.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-turf-3.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-turf-4.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-turf-5.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-turf-6.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-turf-7.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-turf-8.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-turf-9.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-turf-10.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-turf-11.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-turf-12.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
         </div>
       </div>
       <div class="hx-details">
@@ -7057,17 +7057,17 @@ function renderHyrox() {
     <!-- PERFORM RIG -->
     <div class="hx-product">
       <div class="hx-gallery">
-        <div class="hx-gal-main"><img src="/assets/images/hyrox/perform-rig-1.jpg" alt="Centr x HYROX Perform Rig"></div>
+        <div class="hx-gal-main" style="position:relative;"><button onclick="window.hyroxNav(this, -1)" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-right:2px;">&#10094;</button><img src="/assets/images/hyrox/perform-rig-1.jpg" alt="Centr x HYROX Perform Rig"><button onclick="window.hyroxNav(this, 1)" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-left:2px;">&#10095;</button></div>
         <div class="hx-gal-thumbs">
-          <img class="hx-active" src="/assets/images/hyrox/perform-rig-1.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-rig-2.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-rig-3.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-rig-4.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-rig-5.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-rig-6.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-rig-7.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-rig-8.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/perform-rig-9.jpg" onclick="pick(this)" alt="">
+          <img class="hx-active" src="/assets/images/hyrox/perform-rig-1.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-rig-2.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-rig-3.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-rig-4.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-rig-5.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-rig-6.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-rig-7.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-rig-8.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/perform-rig-9.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
         </div>
       </div>
       <div class="hx-details">
@@ -7091,12 +7091,12 @@ function renderHyrox() {
     <!-- RIG TARGET -->
     <div class="hx-product">
       <div class="hx-gallery">
-        <div class="hx-gal-main"><img src="/assets/images/hyrox/rig-target-1.jpg" alt="Centr x HYROX Competition Rig Target"></div>
+        <div class="hx-gal-main" style="position:relative;"><button onclick="window.hyroxNav(this, -1)" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-right:2px;">&#10094;</button><img src="/assets/images/hyrox/rig-target-1.jpg" alt="Centr x HYROX Competition Rig Target"><button onclick="window.hyroxNav(this, 1)" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;font-size:14px;padding-left:2px;">&#10095;</button></div>
         <div class="hx-gal-thumbs">
-          <img class="hx-active" src="/assets/images/hyrox/rig-target-1.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/rig-target-2.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/rig-target-3.jpg" onclick="pick(this)" alt="">
-          <img src="/assets/images/hyrox/rig-target-4.jpg" onclick="pick(this)" alt="">
+          <img class="hx-active" src="/assets/images/hyrox/rig-target-1.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/rig-target-2.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/rig-target-3.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
+          <img src="/assets/images/hyrox/rig-target-4.jpg" onclick="window.hyroxPick(this, this.src)" alt="">
         </div>
       </div>
       <div class="hx-details">
@@ -7285,6 +7285,7 @@ function pick(el){
         }
     ]);
 
+
     // Attach global pick function for gallery if not exists
     if (typeof window !== 'undefined' && !window.hyroxPick) {
         window.hyroxPick = function(el, src) {
@@ -7292,11 +7293,25 @@ function pick(el){
             if(productDiv) {
                 const mainImg = productDiv.querySelector('.hx-gal-main img');
                 if(mainImg) mainImg.src = src;
-                productDiv.querySelectorAll('.hx-gal-thumbs img').forEach(i => i.classList.remove('active'));
-                el.classList.add('active');
+                productDiv.querySelectorAll('.hx-gal-thumbs img').forEach(i => i.classList.remove('hx-active'));
+                el.classList.add('hx-active');
+            }
+        };
+        window.hyroxNav = function(btn, dir) {
+            const productDiv = btn.closest('.hx-product');
+            if(productDiv) {
+                const thumbs = Array.from(productDiv.querySelectorAll('.hx-gal-thumbs img'));
+                const activeIdx = thumbs.findIndex(t => t.classList.contains('hx-active'));
+                if (activeIdx !== -1) {
+                    let nextIdx = activeIdx + dir;
+                    if (nextIdx < 0) nextIdx = thumbs.length - 1;
+                    if (nextIdx >= thumbs.length) nextIdx = 0;
+                    window.hyroxPick(thumbs[nextIdx], thumbs[nextIdx].src);
+                }
             }
         };
     }
+
 
     // Convert anchor links to JS scrolling
     html = html.replace(/href="#([^"]+)"/g, "onclick=\"document.getElementById('$1').scrollIntoView({behavior:'smooth'})\" style=\"cursor:pointer\"");
