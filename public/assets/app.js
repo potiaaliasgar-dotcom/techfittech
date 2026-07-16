@@ -238,11 +238,6 @@ async function submitEmbeddedQuote(projectType) {
         desc: 'Olympic barbells, rubber-coated dumbbells, bumper plates, power racks, squat stands and deadlift platforms. Manufactured in India by TechFit.',
         img: DEFAULT_OG_IMG
       },
-      'padel-pickleball': {
-        title: 'Padel & Pickleball Courts India | TechFit — Design, Build & Install',
-        desc: 'End-to-end padel and pickleball court construction in India. Design, fabrication and installation for clubs, resorts, housing societies and corporate campuses.',
-        img: DEFAULT_OG_IMG
-      },
       'aqua': {
         title: 'Aqua Fitness & Underwater Treadmills India | TechFit',
         desc: 'Underwater treadmills, aqua therapy pools and aqua fitness equipment by TechFit. Designed for physiotherapy clinics, hotels, wellness centres and rehabilitation facilities.',
@@ -388,10 +383,7 @@ async function submitEmbeddedQuote(projectType) {
       const key = page || 'home';
       
       if (key === 'mma-cages') {
-        msg = "Hi TechFit, I'd like a quote for an MMA Cage or Boxing Ring.";
-      } else if (key === 'padel-pickleball') {
-        msg = "Hi TechFit, I'd like a quote for a panoramic Padel Court or Pickleball Court.";
-      } else if (key === 'alteon' || key === 'wellness-solutions') {
+        msg = "Hi TechFit, I'd like a quote for an MMA Cage or Boxing Ring.";} else if (key === 'alteon' || key === 'wellness-solutions') {
         msg = "Hi TechFit, I'd like a quote for Alteon Wellness & Recovery equipment.";
       } else if (key === 'crossfit-rigs') {
         msg = "Hi TechFit, I'd like a quote for a custom CrossFit Rig.";
@@ -973,7 +965,6 @@ function alteonFloatingWA() {
         'mma-cages': renderMMA,
         'crossfit-rigs': renderCrossFit,
         'free-weights': renderFreeWeights,
-        'padel-pickleball': renderPadel,
         'aqua': renderAqua,
         'wellness-solutions': renderWellness,
         'services': renderServices,
@@ -1035,7 +1026,6 @@ function alteonFloatingWA() {
         'mma-cages': 'Custom MMA Cage & Boxing Ring Fabrication',
         'crossfit-rigs': 'Custom CrossFit & Functional Training Rigs',
         'free-weights': 'Commercial Free Weights & Plate Setup',
-        'padel-pickleball': 'Padel & Pickleball Court Infrastructure',
         'aqua': 'Aqua Fitness & Underwater Rehabilitation Systems',
         'wellness-solutions': 'Wellness, Cryotherapy & Longevity Suites',
         'gym-flooring': 'Commercial Gym & Sports Flooring',
@@ -1167,8 +1157,7 @@ function alteonFloatingWA() {
       'home': 'nl-home',
       'for-gyms': 'nl-solutions', 'for-developers': 'nl-solutions', 'for-schools': 'nl-solutions', 'for-hotels': 'nl-solutions', 'wellness-solutions': 'nl-solutions',
       'bh-fitness': 'nl-products', 'tunturi': 'nl-products', 'california-fitness': 'nl-products',
-      'mma-cages': 'nl-products', 'crossfit-rigs': 'nl-products', 'free-weights': 'nl-products',
-      'padel-pickleball': 'nl-products', 'aqua': 'nl-products',
+      'mma-cages': 'nl-products', 'crossfit-rigs': 'nl-products', 'free-weights': 'nl-products', 'aqua': 'nl-products',
       'services': 'nl-services', 'about': 'nl-about', 'contact': 'nl-contact', 'blogs': 'nl-blogs', 'gym-flooring': 'nl-products', 'flooring': 'nl-products', 'blog-mfn': 'nl-blogs', 'blog-sfl': 'nl-blogs', 'blog-kumite': 'nl-blogs', 'blog-mma-matrix': 'nl-blogs', 'blog-one-stop': 'nl-blogs', 'blog-wellness-boom': 'nl-blogs', 'alteon': 'nl-products'
     };
     function navActive() {
@@ -1234,13 +1223,6 @@ function alteonFloatingWA() {
         <h3>Free<br>Weights</h3>
         <p>Custom dumbbells, barbells, kettlebells, weight plates, and storage systems. Manufactured to commercial standards with anti-corrosion finishes.</p>
         <button class="segment-cta">EXPLORE WEIGHTS &rarr;</button>
-      </div>
-      <div class="seg-card reveal" onclick="go('padel-pickleball')">
-        <div class="card-num">04</div>
-        <div class="card-accent"></div>
-        <h3>Padel &amp;<br>Pickleball</h3>
-        <p>Full padel court construction and pickleball court fit-outs. From steel structure to glass panels, netting, and artificial turf — turnkey delivery.</p>
-        <button class="segment-cta">EXPLORE COURTS &rarr;</button>
       </div>
       <div class="seg-card reveal" onclick="go('aqua')">
         <div class="card-num">05</div>
@@ -3326,82 +3308,6 @@ ${footer()}`;
 </div></section>
 
 ${renderProductRange()}
-${footer()}`;
-    }
-
-    function renderPadel() {
-      return `
-<div class="phero">
-  <div class="sec-in" style="text-align:center">
-    <div class="phero-label">TechFit Sports Infrastructure</div>
-    <h1>PROFESSIONAL GRADE<br>PADEL &amp; PICKLEBALL COURTS</h1>
-    <p class="phero-sub" style="margin-left:auto;margin-right:auto">Engineered for performance, durability, and playability. Turnkey indoor and outdoor court solutions for clubs, academies, residential projects, and commercial sports facilities.</p>
-    <div style="display:flex;gap:1.5rem;margin-top:2.5rem;flex-wrap:wrap;justify-content:center">
-      <button class="btn-red" onclick="go('contact')">Request Price List</button>
-      <button class="btn-outline" onclick="go('contact')">Get Design Consultation</button>
-    </div>
-  </div>
-</div>
-
-<section class="sec">
-  <div class="sec-in">
-    <div class="sec-hdr center"><span class="sec-label">Court Types</span><h2 class="sec-title">PADEL OR PICKLEBALL?</h2></div>
-    <div class="compare">
-      <div class="compare-card">
-        <img src="/assets/images/other/img-853fb9b8b4.jpg" alt="Padel Court" onerror="this.style.background='#eee'" loading="lazy">
-        <div class="compare-chip">Doubles Sport</div>
-        <h3>Padel Courts</h3>
-        <p>A padel court measures 10m × 20m (32.8ft × 65.6ft) and is fully enclosed by panoramic tempered glass and galvanised mesh walls — the walls are part of the game. Always played in doubles. Glass walls provide structural integrity and exceptional spectator visibility.</p>
-        <ul class="spec-list" style="margin-top:1rem"><li>Court size: 10m × 20m (32.8ft × 65.6ft)</li><li>Net height: 0.88m (2.88ft) at centre, 0.92m (3.02ft) at posts</li><li>Playing height: min 6m (19.7ft) clear</li><li>Panoramic tempered glass walls &amp; mesh boundary</li><li>Professional artificial turf playing surface</li><li>LED floodlighting &amp; custom club branding</li></ul>
-        <button class="lineup-cta" onclick="go('contact')">GET QUOTE →</button>
-      </div>
-      <div class="compare-card">
-        <img src="/assets/images/other/img-2ce0bc3719.jpg" alt="Pickleball Court" onerror="this.style.background='#eee'" loading="lazy">
-        <div class="compare-chip">Singles &amp; Doubles</div>
-        <h3>Pickleball Courts</h3>
-        <p>A pickleball court measures 6.1m × 13.41m (20ft × 44ft) — similar footprint to a doubles badminton court. Can be played singles or doubles. Multiple pickleball courts fit in the space of a single padel court, making them ideal for high-throughput clubs.</p>
-        <ul class="spec-list" style="margin-top:1rem"><li>Court size: 6.1m × 13.41m (20ft × 44ft)</li><li>Net height: 0.914m (36 in) at sidelines, 0.864m (34 in) at centre</li><li>Non-volley zone: 2.13m (7ft) from net each side</li><li>Playing height: minimum 6m (19.7ft) clear for indoor</li><li>Acrylic or cushioned PU sports flooring</li><li>LED lighting, indoor or outdoor configurations</li></ul>
-        <button class="lineup-cta" onclick="go('contact')">GET QUOTE →</button>
-      </div>
-    </div>
-  </section>
-</section>
-
-<section class="sec sec-gray">
-  <section class="sec-in">
-    <div class="sec-hdr center"><span class="sec-label">Key Features</span><h2 class="sec-title">EVERY DETAIL ENGINEERED.</h2></div>
-    <div class="feat-grid">
-      <div class="feat-card"><h4>Panoramic Glass Walls</h4><p>Structural integrity and maximum spectator visibility. The signature padel aesthetic, built to last.</p></div>
-      <div class="feat-card"><h4>LED Lighting System</h4><p>Professional-grade LED systems for night play capability and broadcast-quality visibility.</p></div>
-      <div class="feat-card"><h4>Custom Branding</h4><p>Club identity integration — custom branding and signage for a professional, cohesive facility look.</p></div>
-      <div class="feat-card"><h4>Turnkey Installation</h4><p>End-to-end project management: design consultation, structural engineering, installation, and commissioning.</p></div>
-    </div>
-    <div class="feat-grid" style="margin-top:2rem">
-      <div class="feat-card"><h4>Indoor &amp; Outdoor</h4><p>Engineered for India's climate — solutions for both climate-controlled indoor and open outdoor environments.</p></div>
-      <div class="feat-card"><h4>Retrofit Installation</h4><p>New build or retrofit — our team handles both new constructions and fitting into existing facility spaces.</p></div>
-    </div>
-  </section>
-</section>
-
-<section class="sec"><section class="sec-in">
-  <div class="sec-hdr center"><span class="sec-label">Who We Serve</span><h2 class="sec-title">FACILITY APPLICATIONS</h2></div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1rem">
-    ${['Sports Clubs & Academies', 'Residential Complexes', 'Commercial Sports Facilities', 'Hotel Resorts', 'Private Clubs', 'Multi-Court Complexes', 'Educational Institutions', 'Corporate Campuses'].map(a => `<div style="padding:1.25rem;background:var(--z50);border:1px solid var(--z200);font-weight:600;font-size:.85rem;color:var(--z700)">${a}</div>`).join('')}
-  </div>
-</div></section>
-
-
-<section class="sec sec-gray"><div class="sec-in">
-  <div class="sec-hdr center"><span class="sec-label">FAQ</span><h2 class="sec-title">COMMON QUESTIONS</h2></div>
-  <div class="faq">
-    ${faqItem('What is the difference between Padel and Pickleball courts?', 'A Pickleball court measures 6.1m × 13.41m (20ft × 44ft) — similar to a doubles badminton court — and can be played singles or doubles. Padel courts are larger at 10m × 20m (32.8ft × 65.6ft) and enclosed by tempered glass and mesh walls which are part of the game — padel is always played in doubles.')}
-    ${faqItem('Do you offer turnkey installation?', 'Yes. We provide end-to-end turnkey solutions from initial design consultation and structural engineering to professional installation and final court commissioning.')}
-    ${faqItem('Can courts be installed outdoors in India?', 'Yes. Our court structures are engineered for India climate conditions — both indoor (climate-controlled) and outdoor configurations are available.')}
-    ${faqItem('Can I fit multiple courts in my facility?', 'Yes. Multiple pickleball courts can fit in the space of a single padel court, making them ideal for high-throughput facilities. We design multi-court configurations for maximum usage.')}
-  </div>
-</div></section>
-
-${ctaBand('Build Your Court', 'Design consultation included. Turnkey delivery across India.', 'Request Pricing', 'contact')}
 ${footer()}`;
     }
 
@@ -6299,7 +6205,7 @@ function render404() {
       const path = window.location.pathname.substring(1) || 'home';
       const urlParams = new URLSearchParams(window.location.search);
 
-      const validPages = ['home', 'for-gyms', 'for-developers', 'for-schools', 'for-hotels', 'techfit', 'alteon', 'bh-fitness', 'tunturi', 'california-fitness', 'mma-cages', 'crossfit-rigs', 'free-weights', 'padel-pickleball', 'aqua', 'wellness-solutions', 'services', 'about', 'contact', 'blogs', 'gym-flooring', 'flooring', 'blog-mfn', 'blog-sfl', 'blog-kumite', 'blog-mma-matrix', 'blog-one-stop', 'blog-wellness-boom', 'privacy-policy', 'case-studies', 'terms-of-service', 'thank-you', 'alternatives/technogym-india', 'alternatives/life-fitness-india', 'alternatives/sechrist-hyperbaric-india', 'alternatives/precor-india', 'alternatives/mecotec-cryotherapy-india', 'alternatives/usi-cosco-techfit-cages', 'commercial-gym-setup-cost-india', 'how-to-set-up-a-commercial-gym', 'best-commercial-treadmills-india', 'commercial-gym-equipment-list', 'hotel-gym-setup-guide', 'bh-fitness-vs-life-fitness', 'tunturi-vs-precor', 'best-gym-equipment-brands-india', 'imported-vs-indian-gym-equipment', 'gym-equipment-suppliers-india-compared', 'commercial-gym-setup-mumbai', 'commercial-gym-setup-pune', 'commercial-gym-setup-bangalore', 'commercial-gym-setup-hyderabad', 'commercial-gym-setup-delhi-ncr', 'commercial-gym-setup-chennai', 'commercial-gym-setup-kolkata', 'commercial-gym-setup-ahmedabad', 'commercial-gym-setup-jaipur', 'commercial-gym-setup-goa', 'commercial-gym-setup-chandigarh', 'commercial-gym-setup-surat', 'commercial-gym-setup-kochi', 'hotel-gym-setup-mumbai', 'hotel-gym-setup-pune', 'hotel-gym-setup-bangalore', 'hotel-gym-setup-delhi-ncr', 'hotel-gym-setup-hyderabad', 'society-gym-setup-mumbai', 'society-gym-setup-pune', 'society-gym-setup-bangalore', 'society-gym-setup-delhi-ncr', 'society-gym-setup-hyderabad', 'corporate-gym-setup-mumbai', 'corporate-gym-setup-pune', 'corporate-gym-setup-bangalore', 'corporate-gym-setup-delhi-ncr', 'corporate-gym-setup-hyderabad', 'matrix-fitness-alternative-india', 'cybex-alternative-india', 'hammer-strength-alternative-india', 'nautilus-alternative-india', 'cosco-vs-bh-fitness', 'viva-vs-tunturi', 'decathlon-domyos-vs-commercial-gym-equipment', 'alternatives/cybex-india', 'alternatives/hammer-strength-india', 'alternatives/nautilus-india', 'alternatives/star-trac-india', 'alternatives/body-solid-india', 'alternatives/hoist-fitness-india', 'alternatives/freemotion-india', 'alternatives/true-fitness-india', 'alternatives/american-fitness-india', 'alternatives/atlantis-strength-india', 'alternatives/fitline-india', 'alternatives/matrix-fitness-india', 'alternatives/jerai-fitness-india', 'alternatives/being-strong-india'];
+      const validPages = ['home', 'for-gyms', 'for-developers', 'for-schools', 'for-hotels', 'techfit', 'alteon', 'bh-fitness', 'tunturi', 'california-fitness', 'mma-cages', 'crossfit-rigs', 'free-weights', 'aqua', 'wellness-solutions', 'services', 'about', 'contact', 'blogs', 'gym-flooring', 'flooring', 'blog-mfn', 'blog-sfl', 'blog-kumite', 'blog-mma-matrix', 'blog-one-stop', 'blog-wellness-boom', 'privacy-policy', 'case-studies', 'terms-of-service', 'thank-you', 'alternatives/technogym-india', 'alternatives/life-fitness-india', 'alternatives/sechrist-hyperbaric-india', 'alternatives/precor-india', 'alternatives/mecotec-cryotherapy-india', 'alternatives/usi-cosco-techfit-cages', 'commercial-gym-setup-cost-india', 'how-to-set-up-a-commercial-gym', 'best-commercial-treadmills-india', 'commercial-gym-equipment-list', 'hotel-gym-setup-guide', 'bh-fitness-vs-life-fitness', 'tunturi-vs-precor', 'best-gym-equipment-brands-india', 'imported-vs-indian-gym-equipment', 'gym-equipment-suppliers-india-compared', 'commercial-gym-setup-mumbai', 'commercial-gym-setup-pune', 'commercial-gym-setup-bangalore', 'commercial-gym-setup-hyderabad', 'commercial-gym-setup-delhi-ncr', 'commercial-gym-setup-chennai', 'commercial-gym-setup-kolkata', 'commercial-gym-setup-ahmedabad', 'commercial-gym-setup-jaipur', 'commercial-gym-setup-goa', 'commercial-gym-setup-chandigarh', 'commercial-gym-setup-surat', 'commercial-gym-setup-kochi', 'hotel-gym-setup-mumbai', 'hotel-gym-setup-pune', 'hotel-gym-setup-bangalore', 'hotel-gym-setup-delhi-ncr', 'hotel-gym-setup-hyderabad', 'society-gym-setup-mumbai', 'society-gym-setup-pune', 'society-gym-setup-bangalore', 'society-gym-setup-delhi-ncr', 'society-gym-setup-hyderabad', 'corporate-gym-setup-mumbai', 'corporate-gym-setup-pune', 'corporate-gym-setup-bangalore', 'corporate-gym-setup-delhi-ncr', 'corporate-gym-setup-hyderabad', 'matrix-fitness-alternative-india', 'cybex-alternative-india', 'hammer-strength-alternative-india', 'nautilus-alternative-india', 'cosco-vs-bh-fitness', 'viva-vs-tunturi', 'decathlon-domyos-vs-commercial-gym-equipment', 'alternatives/cybex-india', 'alternatives/hammer-strength-india', 'alternatives/nautilus-india', 'alternatives/star-trac-india', 'alternatives/body-solid-india', 'alternatives/hoist-fitness-india', 'alternatives/freemotion-india', 'alternatives/true-fitness-india', 'alternatives/american-fitness-india', 'alternatives/atlantis-strength-india', 'alternatives/fitline-india', 'alternatives/matrix-fitness-india', 'alternatives/jerai-fitness-india', 'alternatives/being-strong-india'];
 
       if (validPages.includes(path) || path === '' || path.startsWith('alteon/')) {
         page = path || 'home';

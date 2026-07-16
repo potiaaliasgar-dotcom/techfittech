@@ -133,13 +133,6 @@ const SEO_MAP = {
     lastmod: '2026-05-25',
     img: OG_WEIGHTS
   },
-  'padel-pickleball': {
-    title: 'Padel & Pickleball Courts India | TechFit — Design, Build & Install',
-    desc: 'End-to-end padel and pickleball court construction in India. Design, fabrication and installation for clubs, resorts, housing societies and corporate campuses.',
-    h1: 'Padel & Pickleball Court Construction India | TechFit',
-    lastmod: '2026-05-24',
-    img: OG_PADEL
-  },
   'aqua': {
     title: 'Aqua Fitness & Underwater Treadmills India | TechFit',
     desc: 'Underwater treadmills, aqua therapy pools and aqua fitness equipment by TechFit. Designed for physiotherapy clinics, hotels, wellness centres and rehabilitation facilities.',
@@ -917,59 +910,6 @@ const SCHEMAS = {
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.techfittech.com/" },
           { "@type": "ListItem", "position": 2, "name": "Free Weights", "item": "https://www.techfittech.com/free-weights" }
-        ]
-      }
-    ]
-  },
-  'padel-pickleball': {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://www.techfittech.com/padel-pickleball#webpage",
-        "url": "https://www.techfittech.com/padel-pickleball",
-        "name": "Turnkey Padel Court Builder & Construction India — TechFit",
-        "description": "TechFit designs and constructs professional, ITF-compliant panoramic padel courts and pickleball courts across India. High-wind structural framing, panoramic glass, and turf."
-      },
-      {
-        "@type": "Service",
-        "@id": "https://www.techfittech.com/padel-pickleball#service",
-        "name": "Padel and Pickleball Court Design, Construction and Installation in India",
-        "serviceType": "Sports Court Construction",
-        "areaServed": [
-          { "@type": "Country", "name": "India" },
-          { "@type": "AdministrativeArea", "name": "Maharashtra" },
-          { "@type": "City", "name": "Mumbai" }
-        ],
-        "provider": { "@id": "https://www.techfittech.com/#organization" },
-        "description": "Turnkey ITF-compliant panoramic padel court construction and professional pickleball court installation. Structural steel framing, tempered safety glass, monofilament turf, LED lighting. Full sub-base civil works and project management across India.",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "INR",
-          "availability": "https://schema.org/InStock",
-          "url": "https://www.techfittech.com/get-a-quote"
-        },
-        "inLanguage": "en-IN"
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          { "@type": "Question", "name": "Best padel court builder India", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is India's leading padel court builder, providing complete turnkey construction from site assessment, civil works, steel framing, panoramic glass installation, turf, and LED lighting." } },
-          { "@type": "Question", "name": "Pickleball court construction India", "acceptedAnswer": { "@type": "Answer", "text": "TechFit builds indoor and outdoor pickleball courts in India, including surface coating, net installation, and fencing." } }
-        ]
-      },
-      {
-        "@type": "Product",
-        "name": "TechFit Turnkey Padel Court Installation",
-        "description": "ITF-compliant panoramic padel court construction featuring structural high-gauge steel columns, tempered safety glass, monofilament padel turf, and LED lighting.",
-        "brand": { "@type": "Brand", "name": "TechFit" },
-        "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/get-a-quote", "seller": { "@type": "Organization", "name": "TechFit" } }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.techfittech.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Padel & Pickleball", "item": "https://www.techfittech.com/padel-pickleball" }
         ]
       }
     ]
@@ -2966,33 +2906,6 @@ const NOSCRIPT_FALLBACKS = {
       </article>
     </main>
   </noscript>`,
-  'padel-pickleball': `  <noscript>
-    <main style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
-      <article>
-      <header>
-        <h1>Padel Court Builders &amp; Pickleball Court Builders India | TechFit</h1>
-      </header>
-      <section>
-      <p>TechFit is India's premier turnkey sports infrastructure company, specializing in the complete design, structural engineering, custom fabrication, and professional installation of ITF-compliant <strong>Padel Courts</strong> and <strong>Pickleball Courts</strong>.</p>
-      
-      </section>
-      <section>
-        <h2>Padel &amp; Pickleball Turnkey Services:</h2>
-      <ul>
-        <li><strong>Complete Padel Courts:</strong> Structural steel panorama frame profiles, heavy-duty 12mm tempered safety glass panels, premium textured monofilament artificial turf, and professional-grade LED lighting fixtures.</li>
-        <li><strong>Pickleball Courts:</strong> Professional multi-layer acrylic sports surfacing, line marking, net systems, and perimeter fencing.</li>
-        <li><strong>Turnkey Sub-Base Construction:</strong> Land grading, concrete slab pouring, drainage system installation, and custom club amenities.</li>
-      </ul>
-      <p>We serve real estate developers, luxury residential towers, corporate parks, resorts, and premium sports clubs across India, including Mumbai, Pune, Bangalore, Hyderabad, Chennai, and Delhi. TechFit offers full local structural fabrication, structural engineering certs, and boots-on-the-ground support, bypassing high ocean freight shipping costs and imported logistics.</p>
-      <p><strong>Contact TechFit for Sports Courts Setup:</strong><br>
-        Email: info@techfitactive.com<br>
-        Phone: +91 98201 66910<br>
-        Website: <a href="https://www.techfittech.com/padel-pickleball">techfittech.com/padel-pickleball</a>
-      </p>
-    </section>
-      </article>
-    </main>
-  </noscript>`,
   'aqua': `  <noscript>
     <main style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <article>
@@ -3675,7 +3588,7 @@ function enrichSchema(route, schema) {
 
   // 2. Speakable Specification on key product/brand pages
   const speakableRoutes = [
-    'mma-cages', 'crossfit-rigs', 'free-weights', 'padel-pickleball', 'aqua', 
+    'mma-cages', 'crossfit-rigs', 'free-weights', 'aqua', 
     'gym-flooring', 'wellness-solutions', 'alteon', 'bh-fitness', 
     'tunturi', 'california-fitness', 'techfit'
   ];
@@ -3733,14 +3646,6 @@ function enrichSchema(route, schema) {
       ],
       brand: 'TechFit',
       name: 'TechFit Commercial Free Weights'
-    },
-    'padel-pickleball': {
-      staticProds: [
-        { name: 'TechFit Panoramic Padel Court', desc: 'Panoramic B2B padel tennis court with structural framing, safety glass and monofilament turf.' },
-        { name: 'TechFit Professional Pickleball Court', desc: 'Turnkey ITF-compliant pickleball court construction and acrylic surface setup.' }
-      ],
-      brand: 'TechFit',
-      name: 'TechFit Padel & Pickleball Court Infrastructure'
     },
     'aqua': {
       staticProds: [
@@ -3853,7 +3758,6 @@ function generatePage(html, route, seo) {
     'mma-cages': "Custom fabricated fight octagons and competition boxing rings",
     'crossfit-rigs': "Modular structural steel CrossFit functional training rig",
     'free-weights': "Olympic bumper plates, knurled barbells, and dumbbell setups",
-    'padel-pickleball': "Bespoke padel tennis and pickleball court construction",
     'aqua': "SS316 marine-grade underwater treadmill pool therapy systems",
     'wellness-solutions': "Alteon recovery suite: monoplace HBOT and cryotherapy chambers",
     'gym-flooring': "Heavy-duty sound-insulated commercial gym rubber floor tiles",
@@ -3957,7 +3861,6 @@ function generatePage(html, route, seo) {
     'mma-cages': 'MMA Cage Fabrication',
     'crossfit-rigs': 'CrossFit/Functional Rig Fabrication',
     'free-weights': 'Free Weights/Strength Setup',
-    'padel-pickleball': 'Padel/Pickleball Court Setup',
     'aqua': 'Aqua Fitness/Underwater Rehabilitation',
     'wellness-solutions': 'Commercial Wellness Solutions',
     'gym-flooring': 'Gym/Sports Flooring',
@@ -4308,7 +4211,6 @@ function generateSitemaps(seoMap) {
     'mma-cages': "Custom fabricated fight octagons and competition boxing rings",
     'crossfit-rigs': "Modular structural steel CrossFit functional training rig",
     'free-weights': "Olympic bumper plates, knurled barbells, and dumbbell setups",
-    'padel-pickleball': "Bespoke padel tennis and pickleball court construction",
     'aqua': "SS316 marine-grade underwater treadmill pool therapy systems",
     'wellness-solutions': "Alteon recovery suite: monoplace HBOT and cryotherapy chambers",
     'gym-flooring': "Heavy-duty sound-insulated commercial gym rubber floor tiles",
