@@ -1264,8 +1264,12 @@ function alteonFloatingWA() {
         <button onclick="go('bh-fitness')">BH Fitness</button>
         <button onclick="go('tunturi')">Tunturi</button>
         <button onclick="go('california-fitness')">California Fitness</button>
-        <button onclick="go('mma-cages')">MMA Cages</button>
+        <button onclick="window.location.href='/pilates'">Pilates</button>
+        <button onclick="go('hyrox')">CENTR - Official HYROX Equipment</button>
+        <button onclick="go('mma-cages')">MMA Cages &amp; Rings</button>
         <button onclick="go('crossfit-rigs')">CrossFit Rigs</button>
+        <button onclick="go('free-weights')">Free Weights</button>
+        <button onclick="go('aqua')">Aqua Equipment</button>
         <button onclick="go('gym-flooring')">Gym Rubber Flooring</button>
         <button onclick="go('alteon')">Alteon Wellness &amp; Recovery</button>
       </div>
@@ -2498,14 +2502,22 @@ ${footer()}
         <div class="brand-logo-name" style="margin-top:.4rem">TechFit Custom · Made in Mumbai</div>
       </a>
       <a href="/pilates" class="brand-logo-box">
-        <div style="background:#fff;padding:.5rem .8rem;border-radius:.2rem;display:inline-block"><img src="/pilates-assets/merrithew/merrithew-logo.png" onerror="this.src='https://www.techfittech.com/pilates-assets/hero-pilates.jpg'" alt="Merrithew STOTT PILATES" style="max-height:34px;max-width:120px;object-fit:contain;display:block" loading="lazy"></div>
-        <div class="brand-logo-name" style="margin-top:.4rem">STOTT PILATES®</div>
+        <div style="background:#fff;padding:.5rem .8rem;border-radius:.2rem;display:inline-flex;width:120px;height:44px;align-items:center;justify-content:center;box-sizing:border-box;">
+          <svg viewBox="0 0 200 40" style="height:100%; width:100%;">
+            <text x="100" y="26" font-family="'Times New Roman', Times, serif" font-size="34" font-weight="400" text-anchor="middle" fill="#000" letter-spacing="1">merrithew&reg;</text>
+          </svg>
+        </div>
+        <div class="brand-logo-name" style="margin-top:.4rem">STOTT PILATES&reg;</div>
       </a>
       <a href="/alteon" class="brand-logo-box" onclick="event.preventDefault();go('alteon')"><div style="background:#fff;padding:.5rem .8rem;border-radius:.2rem;display:inline-block"><img src="${CLIENT_LOGOS['Alteon']}" alt="Alteon" style="max-height:34px;max-width:120px;object-fit:contain;display:block" loading="lazy"></div>
         <div class="brand-logo-name" style="margin-top:.4rem">Wellness &amp; Recovery</div>
       </a>
       <a href="/hyrox" class="brand-logo-box" onclick="event.preventDefault();go('hyrox')">
-        <div style="background:#000;padding:.5rem .8rem;border-radius:.2rem;display:flex;align-items:center;justify-content:center;height:50px;color:#fff;font-weight:900;font-style:italic;font-size:1.1rem;letter-spacing:1px;border:1px solid #333;width:136px;box-sizing:border-box">CENTR</div>
+        <div style="background:#000;padding:.5rem .8rem;border-radius:.2rem;display:flex;align-items:center;justify-content:center;height:50px;width:136px;border:1px solid #333;box-sizing:border-box;">
+          <svg viewBox="0 0 100 30" style="height:100%; width:100%;">
+            <text x="50" y="24" font-family="'Arial Black', Impact, sans-serif" font-size="28" font-weight="900" font-style="italic" text-anchor="middle" fill="#fff" letter-spacing="-0.5">Centr</text>
+          </svg>
+        </div>
         <div class="brand-logo-name" style="margin-top:.4rem">Official HYROX Equipment</div>
       </a>
     </div>
