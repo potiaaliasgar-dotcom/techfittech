@@ -2686,6 +2686,24 @@
       .logo-cell img {
         max-height: 45px
       }
+
+/* Floating Action Buttons */
+.float-wa, .float-inq { position: fixed; width: 54px; height: 54px; right: 30px; border-radius: 50px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); z-index: 9998; display: flex; align-items: center; justify-content: center; transition: transform .2s, background-color .2s; }
+.float-wa { bottom: 30px; background-color: #25d366; color: #FFF; }
+.float-wa:hover { transform: scale(1.1); background-color: #20BA56; color: #FFF; }
+.float-wa svg { fill: currentColor; width: 32px; height: 32px; }
+
+.float-inq { bottom: 94px; background-color: var(--z900); color: #FFF; border: 2px solid var(--z800); }
+.float-inq:hover { transform: scale(1.1); background-color: var(--red); color: #FFF; border-color: var(--red); }
+.float-inq svg { fill: currentColor; width: 26px; height: 26px; }
+
+@media(max-width:600px) {
+  .float-wa, .float-inq { width: 48px; height: 48px; right: 20px; }
+  .float-wa { bottom: 75px; } /* above sticky bar */
+  .float-wa svg { width: 28px; height: 28px; }
+  .float-inq { bottom: 133px; } /* above wa */
+  .float-inq svg { width: 22px; height: 22px; }
+}
     }
 
     @media(max-width:400px) {
