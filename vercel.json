@@ -104,6 +104,10 @@
     {
       "source": "/hyrox",
       "destination": "/index.html"
+    },
+    {
+      "source": "/pilates",
+      "destination": "/pilates.html"
     }
   ]
 }
