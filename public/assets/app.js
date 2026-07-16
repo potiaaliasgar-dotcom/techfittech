@@ -254,7 +254,7 @@ async function submitEmbeddedQuote(projectType) {
         img: DEFAULT_OG_IMG
       },
       'about': {
-        title: 'About TechFit | India\'s Premier Gym & Sports Infrastructure Company',
+        title: 'About TechFit | India\'s Premier Fitness & Wellness Infrastructure Partner',
         desc: 'Founded in Mumbai, TechFit is India\'s leading gym, wellness and sports infrastructure company. Learn about our story, leadership, manufacturing facility and vision.',
         img: DEFAULT_OG_IMG
       },
@@ -1250,7 +1250,7 @@ function alteonFloatingWA() {
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-brand-box"><img src="/assets/images/other/img-7edcc2dfb4.png" alt="TechFit" loading="lazy"></div>
-        <p>India's premier gym, wellness &amp; sports infrastructure partner. Design, supply, installation and after-sales — all under one roof.</p>
+        <p>India's premier fitness &amp; wellness infrastructure partner. Design, supply, installation and after-sales — all under one roof.</p>
       </div>
       <div class="footer-col">
         <h4>Solutions</h4>
@@ -2364,7 +2364,7 @@ ${footer()}
   
   <div class="hero-in" style="z-index:2; position:relative; text-align:center; padding:0 2rem;">
     <h1 class="hero-title" style="color:#fff; font-size:clamp(2.5rem, 6vw, 4.5rem); font-weight:900; line-height:1.1; margin-bottom:1.5rem; text-shadow: 0 4px 12px rgba(0,0,0,0.5);">
-      <span style="color:var(--red);">India\'s Premier</span><br>Fitness, Wellness and<br>Sports Infrastructure Partner
+      <span style="color:var(--red);">India\'s Premier</span><br>Fitness &amp; Wellness<br>Infrastructure Partner
     </h1>
     <p class="hero-sub" style="color:rgba(255,255,255,0.9); font-size:1.2rem; max-width:800px; margin:0 auto 2rem;">
       800+ installations delivered. Commercial fitness equipment setup, wellness and recovery equipment, gym and sports flooring, functional rigs, and professional MMA cages. Reseller for BH Fitness and Tunturi. Authorised Distributor for Alteon Wellness.
@@ -6103,7 +6103,7 @@ function renderCaseStudies() {
     <section class="sec-in" style="max-width:1000px;margin:0 auto;text-align:center">
       <div class="phero-label" style="color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:0.85rem">Our Work</div>
       <h1 style="color:#fff;font-size:clamp(2.2rem,5vw,3.5rem);margin:0.5rem 0 1.5rem;line-height:1.15;font-weight:800">Case Studies</h1>
-      <p class="phero-sub" style="color:rgba(255,255,255,0.7);max-width:800px;margin:0 auto">Deep dives into the engineering and execution behind India's premier gym, wellness, and sports infrastructure projects.</p>
+      <p class="phero-sub" style="color:rgba(255,255,255,0.7);max-width:800px;margin:0 auto">Deep dives into the engineering and execution behind India's premier fitness and wellness infrastructure projects.</p>
     </section>
   </section>
   <section class="sec" style="background:#000;padding:4rem 2rem">

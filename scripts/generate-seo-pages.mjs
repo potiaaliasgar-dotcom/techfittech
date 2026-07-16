@@ -155,9 +155,9 @@ const SEO_MAP = {
     img: OG_CARDIO
   },
   'about': {
-    title: "About TechFit | India's Premier Gym & Sports Infrastructure Company",
+    title: "About TechFit | India's Premier Fitness & Wellness Infrastructure Partner",
     desc: "Founded in Mumbai, TechFit is India's leading gym, wellness and sports infrastructure company. Learn about our story, leadership, manufacturing facility and vision.",
-    h1: "About TechFit | India's Premier Gym & Sports Infrastructure Company",
+    h1: "About TechFit | India's Premier Fitness & Wellness Infrastructure Partner",
     lastmod: '2026-05-20',
     img: OG_RIGS
   },
@@ -1879,7 +1879,7 @@ const SCHEMAS = {
         "@type": "WebPage",
         "@id": "https://www.techfittech.com/about#webpage",
         "url": "https://www.techfittech.com/about",
-        "name": "About TechFit | India's Premier Gym & Sports Infrastructure Company",
+        "name": "About TechFit | India's Premier Fitness & Wellness Infrastructure Partner",
         "description": "Founded in Mumbai, TechFit is India's leading gym, wellness and sports infrastructure company. Learn about our story, leadership, manufacturing facility and vision."
       },
       {
