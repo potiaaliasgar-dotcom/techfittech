@@ -388,7 +388,7 @@ async function generatePDF() {
      .text('Factory & HQ: Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India', 70, y + 45)
      .text('Sales Hotline: +91 98201 66910', 70, y + 65)
      .text('WhatsApp: +91 98201 66910 (Click Link on Website for Instant Chat)', 70, y + 85)
-     .text('Email: info@techfitactive.com | Website: www.techfittech.com', 70, y + 105);
+     .text('Email: info@techfittech.com | Website: www.techfittech.com', 70, y + 105);
 
   y += 200;
   doc.fillColor(colors.red)

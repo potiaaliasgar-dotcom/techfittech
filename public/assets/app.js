@@ -1276,7 +1276,7 @@ function alteonFloatingWA() {
       <div class="footer-col">
         <h4>Get in Touch</h4>
         <a href="tel:+919820166910" class="footer-tel">+91 98201 66910</a>
-        <a href="mailto:info@techfitactive.com" class="footer-email">info@techfitactive.com</a>
+        <a href="mailto:info@techfittech.com" class="footer-email">info@techfittech.com</a>
         <a href="https://share.google/IahWbxIMm9ywKR9qp" target="_blank" rel="noopener" class="footer-addr">Plot No 309, Coal Bunder Road E,<br>Reay Road, Darukhana,<br>Mumbai, Maharashtra 400010</a>
       </div>
     </div>
@@ -4295,9 +4295,9 @@ ${footer()}
           <span class="ci-icon">💬</span>
           <div class="ci-text"><strong>WhatsApp</strong><br>Quick response on +91 98201 66910</div>
         </a>
-        <a href="mailto:info@techfitactive.com" class="ci-link">
+        <a href="mailto:info@techfittech.com" class="ci-link">
           <span class="ci-icon">✉️</span>
-          <div class="ci-text"><strong>info@techfitactive.com</strong><br>We respond within 24 hours</div>
+          <div class="ci-text"><strong>info@techfittech.com</strong><br>We respond within 24 hours</div>
         </a>
         <a href="https://share.google/IahWbxIMm9ywKR9qp" target="_blank" rel="noopener" class="ci-link">
           <span class="ci-icon">📍</span>
@@ -4635,7 +4635,7 @@ ${footer()}`;
     <p style="margin-bottom:1.5rem">Our website uses tracking tags (including Google Analytics and Google Ads conversion tags) to measure site interactions and optimize landing page experiences. You can modify your browser settings to decline tracking cookies if preferred.</p>
 
     <h3 style="color:#fff;font-size:1.4rem;margin:2rem 0 1rem">5. Updates & Contact</h3>
-    <p style="margin-bottom:2rem">This Privacy Policy may be updated periodically to align with evolving digital practices. For inquiries regarding your personal details, contact us at <strong>info@techfitactive.com</strong> or call <strong>+91 98201 66910</strong>.</p>
+    <p style="margin-bottom:2rem">This Privacy Policy may be updated periodically to align with evolving digital practices. For inquiries regarding your personal details, contact us at <strong>info@techfittech.com</strong> or call <strong>+91 98201 66910</strong>.</p>
   </section>
 </section>
 ${footer()}

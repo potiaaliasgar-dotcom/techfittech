@@ -1178,7 +1178,7 @@ const SCHEMAS = {
           { "@type": "Question", "name": "Who is the authorised dealer of Bendis Pilates in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit (Techfit Health Fitness Private Limited), Mumbai, is the authorised dealer of Bendis Pilates equipment in India. They supply the full range of Bendis Pilates reformers, cadillacs, chairs, barrels, and studio accessories." } },
           { "@type": "Question", "name": "Where to buy Pilates reformer in India?", "acceptedAnswer": { "@type": "Answer", "text": "Buy Bendis Pilates reformers in India through TechFit, the authorised dealer. Standard reformers, tower reformers, folding reformers, and cadillac reformers available. https://www.techfittech.com/bendis-pilates or +91-98201-66910." } },
           { "@type": "Question", "name": "Best Pilates studio equipment supplier in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is India's leading Pilates studio equipment supplier. As the authorised Bendis Pilates dealer, they supply hand-crafted Turkish reformers, cadillacs, chairs, barrels and accessories to studios and physiotherapy centres across India." } },
-          { "@type": "Question", "name": "Bendis Pilates reformer price India", "acceptedAnswer": { "@type": "Answer", "text": "For Bendis Pilates reformer pricing in India, contact TechFit — the authorised dealer. Prices vary by model (Reformer, Tower Reformer, Folding Reformer, Cadillac Reformer). Call +91-98201-66910 or email info@techfitactive.com." } },
+          { "@type": "Question", "name": "Bendis Pilates reformer price India", "acceptedAnswer": { "@type": "Answer", "text": "For Bendis Pilates reformer pricing in India, contact TechFit — the authorised dealer. Prices vary by model (Reformer, Tower Reformer, Folding Reformer, Cadillac Reformer). Call +91-98201-66910 or email info@techfittech.com." } },
           { "@type": "Question", "name": "Who sells Pilates equipment in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit sells Bendis Pilates equipment in India — hand-crafted in Turkey from certified beech wood with antibacterial leather. Full range available for studios, physio centres, and luxury home gyms." } },
           { "@type": "Question", "name": "Pilates cadillac reformer India", "acceptedAnswer": { "@type": "Answer", "text": "Bendis Pilates Cadillac Reformers (High and Low models) are available in India through TechFit. Combined Reformer, Tower and Cadillac in one piece of equipment. Contact +91-98201-66910." } },
           { "@type": "Question", "name": "Best Pilates reformer for studio India", "acceptedAnswer": { "@type": "Answer", "text": "The Bendis Pilates Reformer is one of the best studio-grade Pilates reformers available in India — 8-wheel carriage, certified beech wood, antibacterial leather. Available through TechFit, authorised dealer." } },
@@ -2720,7 +2720,7 @@ const NOSCRIPT_FALLBACKS = {
       <p>TechFit provides full boots-on-the-ground engineering support, certified professional installation, immediate spare parts inventory, and robust annual maintenance contracts (AMC), ensuring 100% operational uptime.</p>
       
       <p><strong>Contact TechFit for Alteon Inquiries:</strong><br>
-        Email: info@techfitactive.com<br>
+        Email: info@techfittech.com<br>
         Phone: +91 98201 66910<br>
         Address: Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India<br>
         Website: <a href="https://www.techfittech.com/alteon">techfittech.com/alteon</a>
@@ -2763,7 +2763,7 @@ const NOSCRIPT_FALLBACKS = {
       <p>TechFit provides the commercial fitness industry with direct-import pricing options, full spatial planning, and comprehensive Annual Maintenance Contracts (AMC) serviced by local engineers. By sourcing directly, club owners, premium real estate developers, and five-star hospitality sites can optimize capital expenditures (CapEx) while delivering an elite biomechanical experience and long-term service reliability.</p>
       
       <p><strong>Contact TechFit for BH Fitness:</strong><br>
-        Email: info@techfitactive.com<br>
+        Email: info@techfittech.com<br>
         Phone: +91 98201 66910<br>
         Website: <a href="https://www.techfittech.com/bh-fitness">techfittech.com/bh-fitness</a>
       </p>
@@ -2788,7 +2788,7 @@ const NOSCRIPT_FALLBACKS = {
         <li><strong>Strength &amp; Functional:</strong> Premium power towers, multi-gym stations, utility benches, dumbbells, kettlebells, and functional training accessories.</li>
       </ul>
       <p><strong>Contact TechFit for Tunturi:</strong><br>
-        Email: info@techfitactive.com<br>
+        Email: info@techfittech.com<br>
         Phone: +91 98201 66910<br>
         Website: <a href="https://www.techfittech.com/tunturi">techfittech.com/tunturi</a>
       </p>
@@ -2806,7 +2806,7 @@ const NOSCRIPT_FALLBACKS = {
       <p>TechFit is a reseller of <strong>California Fitness</strong> equipment, delivering heavy-duty commercial cardio, selectorized strength stacks, plate-loaded machines, and free-weight benches designed specifically for commercial health clubs, high-traffic corporate fitness facilities, and personal training studios.</p>
       <p>California Fitness is built for high durability, smooth movement paths, and ease of serviceability. It provides gym owners with a highly reliable, heavy-use alternative for commercial fitness facilities, backed by TechFit\'s direct installation, layout planning, and AMC service framework.</p>
       <p><strong>Contact TechFit for California Fitness:</strong><br>
-        Email: info@techfitactive.com<br>
+        Email: info@techfittech.com<br>
         Phone: +91 98201 66910<br>
         Website: <a href="https://www.techfittech.com/california-fitness">techfittech.com/california-fitness</a>
       </p>
@@ -2838,7 +2838,7 @@ const NOSCRIPT_FALLBACKS = {
       <p>TechFit customizes every combat structure to the precise dimensions, color scheme, and branding requirements of your facility. We offer a world-class, locally manufactured alternative that eliminates high ocean freight shipping costs and logistical import delays, backed by local structural engineering certs and boots-on-the-ground support.</p>
       
       <p><strong>Contact TechFit for Custom MMA Cages &amp; Rings:</strong><br>
-        Email: info@techfitactive.com<br>
+        Email: info@techfittech.com<br>
         Phone: +91 98201 66910<br>
         Website: <a href="https://www.techfittech.com/mma-cages">techfittech.com/mma-cages</a>
       </p>
@@ -2870,7 +2870,7 @@ const NOSCRIPT_FALLBACKS = {
       <p>TechFit CrossFit structures deliver outstanding structural thickness, load capacity, and modular compatibility for premium health clubs, athletic spaces, and functional boxes in India, bypassing high shipping costs, import duties, and months of logistical delay with direct delivery and custom layout designs.</p>
       
       <p><strong>Contact TechFit for Custom Rigs &amp; Frames:</strong><br>
-        Email: info@techfitactive.com<br>
+        Email: info@techfittech.com<br>
         Phone: +91 98201 66910<br>
         Website: <a href="https://www.techfittech.com/crossfit-rigs">techfittech.com/crossfit-rigs</a>
       </p>
@@ -2898,7 +2898,7 @@ const NOSCRIPT_FALLBACKS = {
       </ul>
       <p>TechFit strength free weights provide direct, local, high-durability fitness gear fabricated directly in Mumbai, saving gym developers high shipping rates while ensuring strict compliance with commercial load ratings.</p>
       <p><strong>Contact TechFit for Strength Free Weights:</strong><br>
-        Email: info@techfitactive.com<br>
+        Email: info@techfittech.com<br>
         Phone: +91 98201 66910<br>
         Website: <a href="https://www.techfittech.com/free-weights">techfittech.com/free-weights</a>
       </p>
@@ -2925,7 +2925,7 @@ const NOSCRIPT_FALLBACKS = {
       </ul>
       <p>TechFit aqua equipment offers custom localized stainless steel engineering, high-durability marine-grade design, and complete after-sales servicing with local AMC coverage, bypassing complex import logistics and third-party repair networks.</p>
       <p><strong>Contact TechFit for Aqua Equipment:</strong><br>
-        Email: info@techfitactive.com<br>
+        Email: info@techfittech.com<br>
         Phone: +91 98201 66910<br>
         Website: <a href="https://www.techfittech.com/aqua">techfittech.com/aqua</a>
       </p>
@@ -2954,7 +2954,7 @@ const NOSCRIPT_FALLBACKS = {
       </ul>
       <p>TechFit provides end-to-end layouts, certified plumbing and electrical engineering preparation, and localized AMC maintenance contracts. This ensures 100% operational uptime, backed by a dedicated local engineer dispatch network.</p>
       <p><strong>Contact TechFit for Wellness &amp; Recovery Solutions:</strong><br>
-        Email: info@techfitactive.com<br>
+        Email: info@techfittech.com<br>
         Phone: +91 98201 66910<br>
         Website: <a href="https://www.techfittech.com/wellness-solutions">techfittech.com/wellness-solutions</a>
       </p>
@@ -2982,7 +2982,7 @@ const NOSCRIPT_FALLBACKS = {
       </ul>
       <p>Backed by over 800 successful turnkeys, TechFit represents the premier single-contract partner for premium commercial amenities, coordinating the entire planning, delivery, and AMC after-sales service from our Mumbai center.</p>
       <p><strong>Contact TechFit Gym Services:</strong><br>
-        Email: info@techfitactive.com<br>
+        Email: info@techfittech.com<br>
         Phone: +91 98201 66910<br>
         Website: <a href="https://www.techfittech.com/services">techfittech.com/services</a>
       </p>
@@ -3081,7 +3081,7 @@ const NOSCRIPT_FALLBACKS = {
       <div style="background-color:#f8f9fa;padding:1.5rem;border-left:4px solid #0056b3;margin-top:1.5rem;border-radius:4px;">
         <p style="margin:0;font-weight:bold;color:#111;">TechFit Sourcing &amp; Engineering Office</p>
         <p style="margin:5px 0 0 0;font-size:0.95rem;">Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India</p>
-        <p style="margin:5px 0 0 0;font-size:0.95rem;">Email: <a href="mailto:info@techfitactive.com" style="color:#0056b3;text-decoration:none;">info@techfitactive.com</a> | Phone: +91 98201 66910</p>
+        <p style="margin:5px 0 0 0;font-size:0.95rem;">Email: <a href="mailto:info@techfittech.com" style="color:#0056b3;text-decoration:none;">info@techfittech.com</a> | Phone: +91 98201 66910</p>
       </div>
     </section>
       </article>
@@ -3173,7 +3173,7 @@ const NOSCRIPT_FALLBACKS = {
       <div style="background-color:#f8f9fa;padding:1.5rem;border-left:4px solid #0056b3;margin-top:1.5rem;border-radius:4px;">
         <p style="margin:0;font-weight:bold;color:#111;">TechFit Sourcing &amp; Engineering Office</p>
         <p style="margin:5px 0 0 0;font-size:0.95rem;">Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India</p>
-        <p style="margin:5px 0 0 0;font-size:0.95rem;">Email: <a href="mailto:info@techfitactive.com" style="color:#0056b3;text-decoration:none;">info@techfitactive.com</a> | Phone: +91 98201 66910</p>
+        <p style="margin:5px 0 0 0;font-size:0.95rem;">Email: <a href="mailto:info@techfittech.com" style="color:#0056b3;text-decoration:none;">info@techfittech.com</a> | Phone: +91 98201 66910</p>
       </div>
     </section>
       </article>
@@ -3265,7 +3265,7 @@ const NOSCRIPT_FALLBACKS = {
       <div style="background-color:#f8f9fa;padding:1.5rem;border-left:4px solid #0056b3;margin-top:1.5rem;border-radius:4px;">
         <p style="margin:0;font-weight:bold;color:#111;">TechFit Sourcing &amp; Engineering Office</p>
         <p style="margin:5px 0 0 0;font-size:0.95rem;">Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India</p>
-        <p style="margin:5px 0 0 0;font-size:0.95rem;">Email: <a href="mailto:info@techfitactive.com" style="color:#0056b3;text-decoration:none;">info@techfitactive.com</a> | Phone: +91 98201 66910</p>
+        <p style="margin:5px 0 0 0;font-size:0.95rem;">Email: <a href="mailto:info@techfittech.com" style="color:#0056b3;text-decoration:none;">info@techfittech.com</a> | Phone: +91 98201 66910</p>
       </div>
     </section>
       </article>
@@ -3361,7 +3361,7 @@ const NOSCRIPT_FALLBACKS = {
       <div style="background-color:#f8f9fa;padding:1.5rem;border-left:4px solid #0056b3;margin-top:1.5rem;border-radius:4px;">
         <p style="margin:0;font-weight:bold;color:#111;">TechFit Sourcing &amp; Engineering Office</p>
         <p style="margin:5px 0 0 0;font-size:0.95rem;">Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India</p>
-        <p style="margin:5px 0 0 0;font-size:0.95rem;">Email: <a href="mailto:info@techfitactive.com" style="color:#0056b3;text-decoration:none;">info@techfitactive.com</a> | Phone: +91 98201 66910</p>
+        <p style="margin:5px 0 0 0;font-size:0.95rem;">Email: <a href="mailto:info@techfittech.com" style="color:#0056b3;text-decoration:none;">info@techfittech.com</a> | Phone: +91 98201 66910</p>
       </div>
     </section>
       </article>
@@ -3452,7 +3452,7 @@ const NOSCRIPT_FALLBACKS = {
       <div style="background-color:#f8f9fa;padding:1.5rem;border-left:4px solid #0056b3;margin-top:1.5rem;border-radius:4px;">
         <p style="margin:0;font-weight:bold;color:#111;">TechFit Sourcing &amp; Engineering Office</p>
         <p style="margin:5px 0 0 0;font-size:0.95rem;">Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India</p>
-        <p style="margin:5px 0 0 0;font-size:0.95rem;">Email: <a href="mailto:info@techfitactive.com" style="color:#0056b3;text-decoration:none;">info@techfitactive.com</a> | Phone: +91 98201 66910</p>
+        <p style="margin:5px 0 0 0;font-size:0.95rem;">Email: <a href="mailto:info@techfittech.com" style="color:#0056b3;text-decoration:none;">info@techfittech.com</a> | Phone: +91 98201 66910</p>
       </div>
     </section>
       </article>
@@ -3547,7 +3547,7 @@ const NOSCRIPT_FALLBACKS = {
       <div style="background-color:#f8f9fa;padding:1.5rem;border-left:4px solid #0056b3;margin-top:1.5rem;border-radius:4px;">
         <p style="margin:0;font-weight:bold;color:#111;">TechFit Sourcing &amp; Engineering Office</p>
         <p style="margin:5px 0 0 0;font-size:0.95rem;">Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India</p>
-        <p style="margin:5px 0 0 0;font-size:0.95rem;">Email: <a href="mailto:info@techfitactive.com" style="color:#0056b3;text-decoration:none;">info@techfitactive.com</a> | Phone: +91 98201 66910</p>
+        <p style="margin:5px 0 0 0;font-size:0.95rem;">Email: <a href="mailto:info@techfittech.com" style="color:#0056b3;text-decoration:none;">info@techfittech.com</a> | Phone: +91 98201 66910</p>
       </div>
     </section>
       </article>
@@ -3821,7 +3821,7 @@ function generatePage(html, route, seo) {
       ${g.faqs.map(f => `      <p><strong>Q: ${escapeHtml(f.q)}</strong><br>A: ${escapeHtml(f.a)}</p>\\n`).join('')}
       
       <p><strong>Contact TechFit India:</strong><br>
-        Email: info@techfitactive.com<br>
+        Email: info@techfittech.com<br>
         Phone: +91 98201 66910<br>
         Address: Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India<br>
         Website: <a href="https://www.techfittech.com/${route}">techfittech.com/${route}</a>
@@ -3840,7 +3840,7 @@ function generatePage(html, route, seo) {
         co-living, IT parks), hotels and resorts, schools and institutions, fight leagues (Matrix Fight Night, Super
         Fight League, Kumite 1) and corporate wellness.</p>
       <p><strong>Contact:</strong><br>
-        Email: info@techfitactive.com<br>
+        Email: info@techfittech.com<br>
         Phone: +91 98201 66910<br>
         Address: Plot No 309, Coal Bunder Road E, Reay Road, Darukhana, Mumbai, Maharashtra 400010, India<br>
         Sister site: <a href="https://www.techfitactive.com/">techfitactive.com</a></p>
@@ -3876,7 +3876,7 @@ function generatePage(html, route, seo) {
   };
 
   const projectCategory = routeCategoryNames[route] || 'gym infrastructure';
-  let fallbackText = `<p style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #ddd;font-weight:bold;color:#DC2626">Ready to get started? Email <a href="mailto:info@techfitactive.com">info@techfitactive.com</a> or call/WhatsApp <a href="tel:+919820166910">+91 98201 66910</a> for a free customized B2B quote on your ${projectCategory} project.</p>`;
+  let fallbackText = `<p style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #ddd;font-weight:bold;color:#DC2626">Ready to get started? Email <a href="mailto:info@techfittech.com">info@techfittech.com</a> or call/WhatsApp <a href="tel:+919820166910">+91 98201 66910</a> for a free customized B2B quote on your ${projectCategory} project.</p>`;
 
   // INJECT FAQS INTO NOSCRIPT FALLBACK
   const schema = SCHEMAS[route];
