@@ -2396,7 +2396,7 @@ ${footer()}
 
 <div class="ticker-wrap">
   <div class="ticker-in">
-    ${['GYM DESIGN & LAYOUT', 'EQUIPMENT SUPPLY', 'GYM & SPORTS FLOORING', 'CUSTOM FABRICATION', 'WELLNESS & RECOVERY', 'INSTALLATION & AFTER-SALES', '800+ INSTALLATIONS COMPLETED', 'BH FITNESS · TUNTURI · CALIFORNIA FITNESS · ALTEON'].map(t => `<span class="ticker-item">${t}</span>`).join('').repeat(2)}
+    ${['GYM DESIGN & LAYOUT', 'EQUIPMENT SUPPLY', 'PILATES EQUIPMENT', 'GYM & SPORTS FLOORING', 'CUSTOM FABRICATION', 'WELLNESS & RECOVERY', 'INSTALLATION & AFTER-SALES', '800+ INSTALLATIONS COMPLETED', 'BH FITNESS · TUNTURI · MERRITHEW STOTT PILATES'].map(t => `<span class="ticker-item">${t}</span>`).join('').repeat(2)}
   </div>
 </div>
 
@@ -2438,7 +2438,7 @@ ${footer()}
         </div>
         <div class="pillar-num">02</div>
         <h3>Commercial Equipment Supply</h3>
-        <p>Reseller of BH Fitness, Tunturi and California Fitness, plus TechFit's own fabricated range.</p>
+        <p>Reseller of BH Fitness, Tunturi and California Fitness. Authorised Reseller for Merrithew STOTT PILATES. Plus TechFit's own fabricated range.</p>
       </div>
       <div class="pillar" role="button" tabindex="0" onclick="go('services')">
         <div class="pillar-icon">
@@ -2515,8 +2515,16 @@ ${footer()}
       <a href="/techfit" class="brand-logo-box" onclick="event.preventDefault();go('techfit')"><img src="/assets/images/other/img-7edcc2dfb4.png" alt="TechFit" style="max-height:52px;max-width:160px;object-fit:contain;background:#fff;padding:.35rem .6rem;border-radius:.25rem" loading="lazy">
         <div class="brand-logo-name" style="margin-top:.4rem">TechFit Custom · Made in Mumbai</div>
       </a>
+      <a href="/pilates" class="brand-logo-box">
+        <div style="background:#fff;padding:.5rem .8rem;border-radius:.2rem;display:inline-block"><img src="/pilates-assets/merrithew/merrithew-logo.png" onerror="this.src='https://www.techfittech.com/pilates-assets/hero-pilates.jpg'" alt="Merrithew STOTT PILATES" style="max-height:34px;max-width:120px;object-fit:contain;display:block" loading="lazy"></div>
+        <div class="brand-logo-name" style="margin-top:.4rem">STOTT PILATES®</div>
+      </a>
       <a href="/alteon" class="brand-logo-box" onclick="event.preventDefault();go('alteon')"><div style="background:#fff;padding:.5rem .8rem;border-radius:.2rem;display:inline-block"><img src="${CLIENT_LOGOS['Alteon']}" alt="Alteon" style="max-height:34px;max-width:120px;object-fit:contain;display:block" loading="lazy"></div>
         <div class="brand-logo-name" style="margin-top:.4rem">Wellness &amp; Recovery</div>
+      </a>
+      <a href="/hyrox" class="brand-logo-box" onclick="event.preventDefault();go('hyrox')">
+        <div style="background:#000;padding:.5rem .8rem;border-radius:.2rem;display:flex;align-items:center;justify-content:center;height:50px;color:#fff;font-weight:900;font-style:italic;font-size:1.1rem;letter-spacing:1px;border:1px solid #333;width:136px;box-sizing:border-box">CENTR</div>
+        <div class="brand-logo-name" style="margin-top:.4rem">Official HYROX Equipment</div>
       </a>
     </div>
   </div>
@@ -2591,7 +2599,7 @@ ${footer()}
     <div class="testi-grid">
       <div class="testi-card">
         <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"TechFit handled everything — design, equipment supply and installation. The BH Fitness range along with the TechFit customised products such as MMA Cage, CrossFit Rig and Free Weights we got has been durable, outstanding and aesthetically pleasing. Our members love it."</p>
+        <p class="testi-text">"TechFit handled everything — design, equipment supply and installation. The TechFit customised products such as MMA Cage, CrossFit Rig and Free Weights we got has been durable, outstanding and aesthetically pleasing. Our members love it."</p>
         <div class="testi-byline">
           <img class="testi-photo" src="/assets/images/other/img-baf798fbd9.png" alt="Ayesha Shroff" loading="lazy">
           <div>
