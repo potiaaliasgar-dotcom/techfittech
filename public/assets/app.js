@@ -3806,7 +3806,7 @@ ${footer()}`;
       <div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
           <div style="background:var(--z50);border:1px solid var(--z200);padding:2rem 1rem;border-radius:1rem;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,0.03)">
-            <h4 style="font-size:2.5rem;font-weight:900;color:var(--red);line-height:1;margin-bottom:0.5rem">2016</h4>
+            <h4 style="font-size:2.5rem;font-weight:900;color:var(--red);line-height:1;margin-bottom:0.5rem">2014</h4>
             <p style="font-size:0.85rem;font-weight:700;color:var(--z600);text-transform:uppercase;letter-spacing:0.1em;margin:0">Year Founded</p>
           </div>
           <div style="background:var(--z50);border:1px solid var(--z200);padding:2rem 1rem;border-radius:1rem;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,0.03)">

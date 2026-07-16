@@ -773,7 +773,9 @@
       }
 
       .brand-logo-box:nth-child(4),
-      .brand-logo-box:nth-child(5) {
+      .brand-logo-box:nth-child(5),
+      .brand-logo-box:nth-child(6),
+      .brand-logo-box:nth-child(7) {
         grid-column: span 3;
       }
     }
@@ -3406,6 +3408,13 @@
         color: var(--red) !important;
         font-weight: 700;
         text-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
+      }
+      
+      .cta-whatsapp {
+        background: #25D366;
+        color: #fff !important;
+        text-shadow: none;
+        border-radius: 8px;
       }
     }
 
