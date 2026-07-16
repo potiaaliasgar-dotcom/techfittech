@@ -279,10 +279,76 @@ background:radial-gradient(1100px 560px at 82% -12%,rgba(220,38,38,.16),transpar
 .accsec h3{font-size:1.15rem}
 .accsec span{display:none}
 .bplate .num{font-size:2rem}
-.cmeta a,.cmeta span{font-size:.88rem}
-.disc{font-size:.72rem}
+  .cmeta a,.cmeta span{font-size:.88rem}
+  .disc{font-size:.72rem}
 }
+/* FLOATING BUTTONS */
+.float-wa, .float-inq {
+  position: fixed !important;
+  width: auto !important;
+  height: 48px !important;
+  border-radius: 50px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4) !important;
+  z-index: 9998 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: transform .2s, background-color .2s !important;
+  padding: 0 24px !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  font-family: inherit;
+  bottom: 30px !important;
+  top: auto !important;
+}
+.float-inq {
+  left: 30px !important;
+  right: auto !important;
+  background-color: #dc2626 !important;
+  color: #FFF !important;
+  border: none !important;
+  text-transform: uppercase !important;
+  font-size: 14px !important;
+}
+.float-inq:hover {
+  transform: scale(1.05) !important;
+  background-color: #b91c1c !important;
+  color: #FFF !important;
+}
+.float-inq svg { display: none !important; }
 
+.float-wa {
+  right: 30px !important;
+  left: auto !important;
+  background-color: #25d366 !important;
+  color: #FFF !important;
+  border: none !important;
+  text-transform: none !important;
+  font-size: 16px !important;
+}
+.float-wa:hover {
+  transform: scale(1.05) !important;
+  background-color: #20BA56 !important;
+  color: #FFF !important;
+}
+.float-wa svg {
+  fill: currentColor !important;
+  width: 24px !important;
+  height: 24px !important;
+  margin-right: 8px !important;
+  display: block !important;
+}
+@media (max-width: 600px) {
+  .float-wa, .float-inq {
+    bottom: 80px !important;
+    height: 40px !important;
+    padding: 0 16px !important;
+    min-height: 40px !important;
+  }
+  .float-inq { left: 16px !important; font-size: 13px !important; }
+  .float-wa { right: 16px !important; font-size: 14px !important; }
+  .float-wa svg { width: 20px !important; height: 20px !important; margin-right: 6px !important; }
+}
 </style>
 </head>
 <body>
