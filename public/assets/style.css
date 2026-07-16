@@ -3618,16 +3618,16 @@
 .float-inq {
   left: 30px !important;
   right: auto !important;
-  background-color: #FFD13B !important;
-  color: #000 !important;
+  background-color: var(--red) !important;
+  color: #FFF !important;
   border: none !important;
   text-transform: uppercase !important;
   font-size: 14px !important;
 }
 .float-inq:hover {
   transform: scale(1.05) !important;
-  background-color: #E6B82E !important;
-  color: #000 !important;
+  background-color: #b91c1c !important;
+  color: #FFF !important;
 }
 .float-inq svg { display: none !important; }
 
