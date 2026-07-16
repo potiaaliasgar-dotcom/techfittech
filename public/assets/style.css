@@ -3595,3 +3595,70 @@
     min-height: 48px;
   }
 }
+
+/* NEW FLOATING BUTTON STYLES OVERRIDE */
+.float-wa, .float-inq {
+  position: fixed !important;
+  width: auto !important;
+  height: 48px !important;
+  border-radius: 50px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4) !important;
+  z-index: 9998 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: transform .2s, background-color .2s !important;
+  padding: 0 24px !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  font-family: inherit;
+  bottom: 30px !important;
+  top: auto !important;
+}
+.float-inq {
+  left: 30px !important;
+  right: auto !important;
+  background-color: #FFD13B !important;
+  color: #000 !important;
+  border: none !important;
+  text-transform: uppercase !important;
+  font-size: 14px !important;
+}
+.float-inq:hover {
+  transform: scale(1.05) !important;
+  background-color: #E6B82E !important;
+  color: #000 !important;
+}
+.float-inq svg { display: none !important; }
+
+.float-wa {
+  right: 30px !important;
+  left: auto !important;
+  background-color: #25d366 !important;
+  color: #FFF !important;
+  text-transform: none !important;
+  font-size: 15px !important;
+}
+.float-wa:hover {
+  transform: scale(1.05) !important;
+  background-color: #20BA56 !important;
+  color: #FFF !important;
+}
+.float-wa svg {
+  fill: currentColor !important;
+  width: 24px !important;
+  height: 24px !important;
+  margin-right: 8px !important;
+  display: block !important;
+}
+
+@media (max-width: 900px) {
+  .float-wa, .float-inq {
+    height: 44px !important;
+    padding: 0 18px !important;
+    bottom: 85px !important; 
+  }
+  .float-inq { left: 16px !important; font-size: 13px !important; }
+  .float-wa { right: 16px !important; font-size: 14px !important; }
+  .float-wa svg { width: 20px !important; height: 20px !important; margin-right: 6px !important; }
+}
