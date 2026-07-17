@@ -4,7 +4,7 @@
         <li><strong>Distribution:</strong> Authorised partner for BH Fitness, Tunturi and California Fitness &mdash; across every commercial and residential budget tier.</li>
         <li><strong>Manufacturing:</strong> Combat sports equipment, CrossFit &amp; calisthenics rigs, free weights, and aqua-fitness gear, fabricated in Mumbai.</li>
         <li><strong>Wellness &amp; Recovery:</strong> Alteon Wellness partnership for hyperbaric, cryotherapy, red-light, dry-float and more.</li>
-        <li><strong>Sports Infrastructure:</strong> Padel courts, pickleball courts, boxing rings and custom combat zones.</li>
+        <li><strong>Sports Infrastructure:</strong> boxing rings and custom combat zones.</li>
         <li><strong>Operations:</strong> TechFit Active, our sister concern, can run the gym on your behalf &mdash; for hotels, residential towers and corporates that don&#x2019;t want to become gym operators.</li>
       </ul>
       <h2>What It Means for You</h2>

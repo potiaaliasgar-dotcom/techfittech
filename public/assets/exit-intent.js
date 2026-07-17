@@ -11,7 +11,7 @@
         <div style="max-width:480px; width:100%; background:#09090B; border:1px solid #27272A; border-radius:8px; padding:35px; box-shadow:0 20px 50px rgba(0,0,0,0.6); position:relative;">
           <h3 style="color:#DC2626; font-size:1.6rem; margin:0 0 8px 0; text-transform:uppercase; text-align:center; font-weight:800; letter-spacing:0.02em;">Wait! Before you leave...</h3>
           <h4 style="color:#fff; font-size:1.15rem; margin:0 0 12px 0; text-align:center; font-weight:700;">Get the 2026 Commercial Gym Setup Cost Guide</h4>
-          <p style="color:#A1A1AA; font-size:0.92rem; text-align:center; margin:0 0 24px 0; line-height:1.5;">Get the authoritative sourcing blueprint: pricing bands, timeline roadmaps, and vendor matrices for India's cardio, strength, padel, and longevity setups.</p>
+          <p style="color:#A1A1AA; font-size:0.92rem; text-align:center; margin:0 0 24px 0; line-height:1.5;">Get the authoritative sourcing blueprint: pricing bands, timeline roadmaps, and vendor matrices for India's cardio, strength, , and longevity setups.</p>
           <form id="exitIntentForm">
             <div style="margin-bottom:15px;">
               <label for="ei-name" style="display:block; color:#E4E4E7; margin-bottom:6px; font-weight:600; font-size:0.8rem; text-transform:uppercase;">Full Name *</label>

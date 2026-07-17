@@ -11,7 +11,7 @@ const PUBLIC_OG = path.join(ROOT, 'public', 'og');
 // Source image maps pointing to real photos in the codebase
 const SOURCES = {
   'og-mma.jpg': 'public/assets/images/other/seg-e74ca4429e.jpg',        // Real MMA Cage installation hero
-  'og-padel.jpg': 'public/assets/images/other/img-853fb9b8b4.jpg',      // Real Panoramic Padel Court installation
+
   'og-rigs.jpg': 'public/assets/images/other/seg-d37a340a28.jpg',       // Real modular CrossFit Rig installation
   'og-wellness.jpg': 'public/assets/images/other/img-biopod.png',       // Real Alteon Biopod dry floatation chamber
   'og-weights.jpg': 'public/assets/images/other/img-23f50c3f30.jpg',     // Real commercial strength dumbbell range

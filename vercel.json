@@ -94,6 +94,16 @@
       "source": "/flooring",
       "destination": "/gym-flooring",
       "permanent": true
+    },
+    {
+      "source": "/padel-pickleball",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/padel-pickleball/",
+      "destination": "/",
+      "permanent": true
     }
   ],
   "rewrites": [

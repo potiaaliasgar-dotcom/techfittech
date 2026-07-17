@@ -159,7 +159,7 @@ async function generatePDF() {
     ['Selectorized & Strength Stations', '15,00,000 - 55,00,000', '20-60 Days / Lifetime Frame'],
     ['Custom Custom-fabricated Rigs', '3,50,000 - 15,00,000', '15-25 Days / Lifetime Warranty'],
     ['MMA Cages & Competition Rings', '2,50,000 - 9,50,000', '10-20 Days / Lifetime Warranty'],
-    ['Sports Infrastructure (Padel Courts)', '18,00,000 - 32,00,000', '30-45 Days / 5-Yr Turf & Glass'],
+
     ['Alteon Wellness & Longevity Suites', '25,00,000 - 95,00,000', '45-90 Days / 2-Yr Clinical'],
     ['Gym Flooring & Underlayments', '2,00,000 - 12,00,000', '10-15 Days / 2-Yr Warranty']
   ];
@@ -190,7 +190,7 @@ async function generatePDF() {
   doc.fillColor(colors.gray)
      .font('Helvetica-Oblique')
      .fontSize(8.5)
-     .text('* Note: Pricing ranges represent standard premium commercial setups. Padel court pricing includes high-strength tempered glass, structural-steel support frames, and ITF-certified artificial turf systems. Wellness suite covers Elysion Hard-Shell HBOT, Cryoblast Electric Chambers, and Photobiomodulation (PBM) red-light setups.', 50, y, { width: 495, lineGap: 3 });
+     .text('* Note: Pricing ranges represent standard premium commercial setups. Wellness suite covers Elysion Hard-Shell HBOT, Cryoblast Electric Chambers, and Photobiomodulation (PBM) red-light setups.', 50, y, { width: 495, lineGap: 3 });
 
   // ----------------------------------------------------
   // PAGE 4: COMMERCIAL SETUP PHASES & ROADMAP

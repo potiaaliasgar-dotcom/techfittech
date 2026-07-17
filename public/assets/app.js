@@ -220,7 +220,7 @@ async function submitEmbeddedQuote(projectType) {
       },
       'techfit': {
         title: 'TechFit Active | In-House Gym & Sports Equipment Manufacturer India',
-        desc: 'TechFit Active — India\'s in-house manufacturer of MMA cages, boxing rings, CrossFit rigs, free weights, padel courts and aqua fitness equipment. Factory in Mumbai.',
+        desc: 'TechFit Active — India\'s in-house manufacturer of MMA cages, boxing rings, CrossFit rigs, free weights and aqua fitness equipment. Factory in Mumbai.',
         img: DEFAULT_OG_IMG
       },
       'mma-cages': {
@@ -1346,7 +1346,7 @@ function alteonFloatingWA() {
   <section class="sec-in">
     <div class="phero-label">Made in Mumbai</div>
     <h1 style="color:#fff">TECHFIT<br><span style="color:var(--red)">CUSTOM</span></h1>
-    <p class="phero-sub">India's own commercial-grade fitness fabrication. MMA cages, CrossFit rigs, free weights, padel courts, and aqua fitness equipment — custom built to your specs.</p>
+    <p class="phero-sub">India's own commercial-grade fitness fabrication. MMA cages, CrossFit rigs, free weights, and aqua fitness equipment — custom built to your specs.</p>
     <div style="display:flex;gap:1.5rem;margin-top:2.5rem;flex-wrap:wrap;justify-content:center">
       <button class="btn-red" onclick="go('contact')">Get a Custom Quote</button>
       <button class="btn-outline" onclick="go('mma-cages')">Explore Products</button>
@@ -3853,7 +3853,7 @@ ${footer()}`;
           <h3 style="font-size:1.25rem;font-weight:900;margin:0 0 .3rem;letter-spacing:-.01em">Mr. Pranav Bagga</h3>
           <div style="font-size:.8rem;color:var(--red);font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1.5rem">Co-Founder &middot; Operations &amp; Delivery</div>
           <div style="text-align:left;position:relative;flex:1">
-            <p class="founder-bio" style="font-size:.92rem;color:var(--z600);line-height:1.75;margin:0;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden">Pranav has lived and breathed sports, health and fitness his whole life. What started as a personal passion became a professional calling &mdash; and eventually, a business case. Too often, he saw Indian facilities commissioned with beautiful renders and then handed over half-finished, with no one to call when something broke. A Bachelor of Business Administration (BBA) from Kingston University London gave him the commercial lens; a decade of hands-on project work gave him the craft. Today, Pranav runs operations at TechFit &mdash; translating every brief into a space-planned, revenue-ready facility, managing delivery from concept through commissioning, and owning the relationship long after the last crate is unboxed. Gyms, wellness suites, padel courts, boxing rings &mdash; if it's been installed on a TechFit invoice, Pranav's team has a check-in schedule for it.</p>
+            <p class="founder-bio" style="font-size:.92rem;color:var(--z600);line-height:1.75;margin:0;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden">Pranav has lived and breathed sports, health and fitness his whole life. What started as a personal passion became a professional calling &mdash; and eventually, a business case. Too often, he saw Indian facilities commissioned with beautiful renders and then handed over half-finished, with no one to call when something broke. A Bachelor of Business Administration (BBA) from Kingston University London gave him the commercial lens; a decade of hands-on project work gave him the craft. Today, Pranav runs operations at TechFit &mdash; translating every brief into a space-planned, revenue-ready facility, managing delivery from concept through commissioning, and owning the relationship long after the last crate is unboxed. Gyms, wellness suites, boxing rings &mdash; if it's been installed on a TechFit invoice, Pranav's team has a check-in schedule for it.</p>
             <button onclick="this.previousElementSibling.style.display='block';this.style.display='none'" style="background:none;border:none;color:var(--red);font-size:.85rem;font-weight:800;padding:0;margin-top:1rem;cursor:pointer;text-transform:uppercase;letter-spacing:.05em">Read Full Bio &rarr;</button>
           </div>
         </div>
@@ -3903,7 +3903,7 @@ ${footer()}`;
       <div class="pillar">
         <div class="pillar-num">04</div>
         <h3>Sports Infrastructure</h3>
-        <p>Padel courts, pickleball courts, boxing rings and custom combat-sports environments for fight leagues, academies and luxury clubs.</p>
+        <p>Boxing rings and custom combat-sports environments for fight leagues, academies and luxury clubs.</p>
       </div>
       <div class="pillar">
         <div class="pillar-num">05</div>
@@ -4656,7 +4656,7 @@ ${footer()}
 <section class="sec" style="background:#0c0c0e;color:rgba(255,255,255,0.8);line-height:1.8">
   <section class="sec-in" style="max-width:800px;margin:0 auto">
     <h3 style="color:#fff;font-size:1.4rem;margin:2rem 0 1rem">1. Scope of Service</h3>
-    <p style="margin-bottom:1.5rem">TechFit (Techfit Health Fitness Private Limited) provides premium turnkey gym setup services, commercial fitness equipment supply (BH Fitness, Tunturi, California Fitness), custom combat sports fabrications (MMA cages, boxing rings), CrossFit rigs, and custom racket sports infrastructure (padel and pickleball court construction) across India.</p>
+    <p style="margin-bottom:1.5rem">TechFit (Techfit Health Fitness Private Limited) provides premium turnkey gym setup services, commercial fitness equipment supply (BH Fitness, Tunturi, California Fitness), custom combat sports fabrications (MMA cages, boxing rings), and CrossFit rigs across India.</p>
 
     <h3 style="color:#fff;font-size:1.4rem;margin:2rem 0 1rem">2. Orders & Specifications</h3>
     <p style="margin-bottom:1.5rem">All custom fabricated rigs, combat structures, and free weights are built to specific dimensions, brand requirements, and raw material tolerances agreed upon in writing. Order modifications submitted after structural steel cutting or painting has commenced are subject to separate revision costs.</p>
@@ -5882,14 +5882,14 @@ ${footer()}
   'commercial-gym-setup-hyderabad': {
     title: `Commercial Gym Setup in Hyderabad | Equipment & Court Setup`,
     badge: `Hyderabad Local Setup`,
-    desc: `Turnkey commercial gym setups, hotel fitness amenities, and sports court (padel/pickleball) installations in Hyderabad, Gachibowli, and Jubilee Hills.`,
+    desc: `Turnkey commercial gym setups, hotel fitness amenities, and sports court installations in Hyderabad, Gachibowli, and Jubilee Hills.`,
     h1: `Commercial Gym Setup in Hyderabad: Turnkey Fitness & Sports Court Construction`,
     author: `Ali Asgar Potia`,
     publishedDate: `2026-05-30`,
     category: `City Setup`,
     related: [{"slug":"commercial-gym-setup-cost-india","name":"Commercial Gym Setup Cost Guide"},{"slug":"how-to-set-up-a-commercial-gym","name":"How to Set Up a Gym Step-by-Step"}],
-    faqs: [{"q":"Does TechFit construct padel and pickleball courts in Hyderabad?","a":"Yes. TechFit provides turnkey panoramic padel court and professional pickleball court construction, steel structural framing, tempered safety glass, monofilament turf, and local engineering management in Hyderabad."}],
-    htmlContent: `<h2>Premium Turnkey Gym & Sports Infrastructure for Hyderabad</h2> <p>Hyderabad's rapid commercial growth in Gachibowli, HITEC City, and Jubilee Hills has triggered a massive demand for high-end B2B gym setups, hospitality clubhouses, and professional sports court infrastructure. TechFit is Hyderabad's premier turnkey partner, integrating world-class imported cardio (BH Fitness) and strength stack lines with panoramic padel courts, pickleball courts, and custom functional steel rigs.</p>`
+    faqs: [],
+    htmlContent: `<h2>Premium Turnkey Gym & Sports Infrastructure for Hyderabad</h2> <p>Hyderabad's rapid commercial growth in Gachibowli, HITEC City, and Jubilee Hills has triggered a massive demand for high-end B2B gym setups, hospitality clubhouses, and professional sports court infrastructure. TechFit is Hyderabad's premier turnkey partner, integrating world-class imported cardio (BH Fitness) and strength stack lines with custom functional steel rigs.</p>`
   },
   'commercial-gym-setup-delhi-ncr': {
     title: `Commercial Gym Setup in Delhi NCR | Turnkey B2B Equipment`,

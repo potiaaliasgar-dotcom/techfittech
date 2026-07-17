@@ -53,7 +53,7 @@ if (fs.existsSync(appJsPath)) {
 
 // Category-specific high-resolution Open Graph image paths
 const OG_MMA = BASE + '/og/og-mma.jpg';
-const OG_PADEL = BASE + '/og/og-padel.jpg';
+
 const OG_RIGS = BASE + '/og/og-rigs.jpg';
 const OG_WELLNESS = BASE + '/og/og-wellness.jpg';
 const OG_WEIGHTS = BASE + '/og/og-weights.jpg';
@@ -107,7 +107,7 @@ const SEO_MAP = {
   },
   'techfit': {
     title: 'TechFit Active | In-House Gym & Sports Equipment Manufacturer India',
-    desc: "TechFit Active — India's in-house manufacturer of MMA cages, boxing rings, CrossFit rigs, free weights, padel courts and aqua fitness equipment. Factory in Mumbai.",
+    desc: "TechFit Active — India's in-house manufacturer of MMA cages, boxing rings, CrossFit rigs, free weights and aqua fitness equipment. Factory in Mumbai.",
     h1: 'TechFit Active | Gym & Sports Equipment Manufacturer India',
     lastmod: '2026-05-26',
     img: OG_RIGS
@@ -425,7 +425,7 @@ const SEO_MAP = {
   },
   'commercial-gym-setup-hyderabad': {
     title: "Commercial Gym Setup in Hyderabad | Equipment & Court Setup",
-    desc: "Turnkey commercial gym setups, hotel fitness amenities, and sports court (padel/pickleball) installations in Hyderabad, Gachibowli, and Jubilee Hills.",
+    desc: "Turnkey commercial gym setups, hotel fitness amenities, and sports court installations in Hyderabad, Gachibowli, and Jubilee Hills.",
     h1: "Commercial Gym Setup in Hyderabad: Turnkey Fitness & Sports Court Construction",
     lastmod: "2026-05-30",
     img: OG_RIGS
@@ -2602,7 +2602,7 @@ const SCHEMAS = {
         "@id": "https://www.techfittech.com/commercial-gym-setup-hyderabad#article",
         "isPartOf": { "@id": "https://www.techfittech.com/commercial-gym-setup-hyderabad#webpage" },
         "headline": "Commercial Gym Setup in Hyderabad: Turnkey Fitness & Sports Court Construction",
-        "description": "Turnkey commercial gym setups, hotel fitness amenities, and sports court (padel/pickleball) installations in Hyderabad, Gachibowli, and Jubilee Hills.",
+        "description": "Turnkey commercial gym setups, hotel fitness amenities, and sports court installations in Hyderabad, Gachibowli, and Jubilee Hills.",
         "inLanguage": "en-IN",
         "author": [{ "@id": "https://www.techfittech.com/about#aliasgarpotia" }, { "@id": "https://www.techfittech.com/#organization" }],
         "publisher": { "@id": "https://www.techfittech.com/#organization" },
@@ -2614,7 +2614,7 @@ const SCHEMAS = {
         "@id": "https://www.techfittech.com/commercial-gym-setup-hyderabad#webpage",
         "url": "https://www.techfittech.com/commercial-gym-setup-hyderabad",
         "name": "Commercial Gym Setup in Hyderabad | Equipment & Court Setup",
-        "description": "Turnkey commercial gym setups, hotel fitness amenities, and sports court (padel/pickleball) installations in Hyderabad, Gachibowli, and Jubilee Hills.",
+        "description": "Turnkey commercial gym setups, hotel fitness amenities, and sports court installations in Hyderabad, Gachibowli, and Jubilee Hills.",
         "inLanguage": "en-IN"
       },
       {
@@ -2625,7 +2625,7 @@ const SCHEMAS = {
         "@type": "FAQPage",
         "inLanguage": "en-IN",
         "mainEntity": [
-          { "@type": "Question", "name": "Does TechFit construct padel and pickleball courts in Hyderabad?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. TechFit provides turnkey panoramic padel court and professional pickleball court construction, steel structural framing, tempered safety glass, monofilament turf, and local engineering management in Hyderabad." } }
+
         ]
       },
       {
@@ -2978,7 +2978,7 @@ const NOSCRIPT_FALLBACKS = {
         <li><strong>Gym Setup Consulting &amp; Layout Design:</strong> Custom 2D layouts, 3D space renders, architectural equipment allocation, floor load engineering, and member movement planning.</li>
         <li><strong>Premium Equipment Sourcing:</strong> Supply of world-class European cardio (BH Fitness, Tunturi), commercial strength lines (California Fitness), and custom structural fitness fabrications.</li>
         <li><strong>Custom Combat &amp; Rig Fabrication:</strong> Heavy industrial manufacturing of competition MMA octagons, floor cages, dynamic boxing rings, CrossFit functional rigs, and steel free weights.</li>
-        <li><strong>Professional Gym Flooring &amp; Sports Infrastructure:</strong> Premium sound-insulating rubber flooring rolls, interlocking tiles, custom turf tracks, and complete ITF-compliant padel and pickleball court builds.</li>
+        <li><strong>Professional Gym Flooring &amp; Sports Infrastructure:</strong> Premium sound-insulating rubber flooring rolls, interlocking tiles, and custom turf tracks.</li>
       </ul>
       <p>Backed by over 800 successful turnkeys, TechFit represents the premier single-contract partner for premium commercial amenities, coordinating the entire planning, delivery, and AMC after-sales service from our Mumbai center.</p>
       <p><strong>Contact TechFit Gym Services:</strong><br>
@@ -3834,7 +3834,7 @@ function generatePage(html, route, seo) {
       <h2>TechFit | Gym Setup, Equipment &amp; Wellness Solutions</h2>
       <p>Gym, wellness &amp; sports infrastructure partner with 800+ installations delivered. Reseller for BH Fitness, Tunturi, and California Fitness. Authorised Distributor for Alteon Wellness.</p>
       <p><strong>Services:</strong> Gym design &amp; layout, commercial equipment supply, custom fabrication of
-        combat-sports equipment and CrossFit rigs, padel and pickleball courts, wellness and recovery technology from
+        combat-sports equipment and CrossFit rigs, wellness and recovery technology from
         Alteon, installation, after-sales and AMC. Sister concern TechFit Active provides managed gym operations.</p>
       <p><strong>Segments served:</strong> Commercial gyms and studios, real estate developers (residential towers,
         co-living, IT parks), hotels and resorts, schools and institutions, fight leagues (Matrix Fight Night, Super
