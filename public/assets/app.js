@@ -7176,7 +7176,7 @@ function renderHyrox() {
       <h2>Bring official HYROX equipment to your space</h2>
       <p>Tell us what you're building — a training zone, a full competition setup, or a single piece — and we'll put together a configuration and quote.</p>
       <div class="hx-cta-btns">
-        <a class="hx-btn hx-btn-white" href="https://wa.me/919820166910?text=Hi%20TechFit!%20I%27d%20like%20a%20quote%20for%20official%20Centr%20x%20HYROX%20equipment." target="_blank" rel="noopener">WhatsApp Us</a>
+        <a class="hx-btn" style="background:#25D366;color:#fff;border-color:#25D366" href="https://wa.me/919820166910?text=Hi%20TechFit!%20I%27d%20like%20a%20quote%20for%20official%20Centr%20x%20HYROX%20equipment." target="_blank" rel="noopener">WhatsApp Us</a>
         <a class="hx-btn hx-btn-outline" style="border-color:rgba(255,255,255,.5);color:#fff" href="tel:+919820166910">Call +91 98201 66910</a>
       </div>
     </div>
