@@ -3596,8 +3596,7 @@
   .footer-links a, 
   .footer-col a,
   .footer-brand p a,
-  .nav-cta,
-  .nav-ham {
+  .nav-cta {
     padding-top: 12px !important;
     padding-bottom: 12px !important;
     display: inline-block;
