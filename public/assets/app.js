@@ -462,6 +462,7 @@ async function submitEmbeddedQuote(projectType) {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
+            entry.target.classList.add('active');
             entry.target.classList.add('hx-active');
             observer.unobserve(entry.target);
           }
