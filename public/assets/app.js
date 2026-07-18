@@ -756,7 +756,7 @@ function renderAlteonCategory(catId) {
         <div class="wrap fade">
             <div class="crumb">
                 <a onclick="go('alteon')" style="cursor:pointer">Alteon</a>
-                <a onclick="go('hyrox')" style="cursor:pointer">HYROX</a> / <span>${esc(c.name)}</span>
+                / <span>${esc(c.name)}</span>
             </div>
             <div class="cat-hero">
                 <span class="eyebrow">${esc(c.eyebrow)}</span>
@@ -851,7 +851,7 @@ function renderAlteonProduct(catId, prodId, variantIdx = 0) {
         <div class="wrap fade">
             <div class="crumb">
                 <a onclick="go('alteon')" style="cursor:pointer">Alteon</a>
-                <a onclick="go('hyrox')" style="cursor:pointer">HYROX</a> / 
+                / 
                 <a onclick="go('alteon/${c.id}')" style="cursor:pointer">${esc(c.name)}</a> / 
                 <span>${esc(p.name)}</span>
             </div>
