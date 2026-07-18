@@ -108,14 +108,6 @@
   ],
   "rewrites": [
     {
-      "source": "/alteon/(.*)",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/hyrox",
-      "destination": "/index.html"
-    },
-    {
       "source": "/pilates",
       "destination": "/pilates.html"
     }
