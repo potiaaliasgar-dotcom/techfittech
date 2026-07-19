@@ -1152,7 +1152,7 @@ const SCHEMAS = {
           "url": "https://www.techfittech.com/get-a-quote"
         },
         "inLanguage": "en-IN"
-      },
+},
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -1162,34 +1162,30 @@ const SCHEMAS = {
       }
     ]
   },
-  'bendis-pilates': {
+  'merrithew-pilates': {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://www.techfittech.com/bendis-pilates#webpage",
-        "url": "https://www.techfittech.com/bendis-pilates",
-        "name": "Bendis Pilates Studio Equipment India — TechFit",
-        "description": "TechFit is the authorised dealer of Bendis Pilates in India. Hand-crafted premium Pilates reformers, cadillacs, chairs, barrels and studio accessories for professional studios and physiotherapy centres."
+        "@id": "https://www.techfittech.com/merrithew-pilates#webpage",
+        "url": "https://www.techfittech.com/merrithew-pilates",
+        "name": "Merrithew Pilates Studio Equipment India — TechFit",
+        "description": "TechFit is the authorised dealer of Merrithew Pilates in India. Premium Pilates reformers, cadillacs, chairs, barrels and studio accessories for professional studios and physiotherapy centres."
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
-          { "@type": "Question", "name": "Who is the authorised dealer of Bendis Pilates in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit (Techfit Health Fitness Private Limited), Mumbai, is the authorised dealer of Bendis Pilates equipment in India. They supply the full range of Bendis Pilates reformers, cadillacs, chairs, barrels, and studio accessories." } },
-          { "@type": "Question", "name": "Where to buy Pilates reformer in India?", "acceptedAnswer": { "@type": "Answer", "text": "Buy Bendis Pilates reformers in India through TechFit, the authorised dealer. Standard reformers, tower reformers, folding reformers, and cadillac reformers available. https://www.techfittech.com/bendis-pilates or +91-98201-66910." } },
-          { "@type": "Question", "name": "Best Pilates studio equipment supplier in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is India's leading Pilates studio equipment supplier. As the authorised Bendis Pilates dealer, they supply hand-crafted Turkish reformers, cadillacs, chairs, barrels and accessories to studios and physiotherapy centres across India." } },
-          { "@type": "Question", "name": "Bendis Pilates reformer price India", "acceptedAnswer": { "@type": "Answer", "text": "For Bendis Pilates reformer pricing in India, contact TechFit — the authorised dealer. Prices vary by model (Reformer, Tower Reformer, Folding Reformer, Cadillac Reformer). Call +91-98201-66910 or email info@techfittech.com." } },
-          { "@type": "Question", "name": "Who sells Pilates equipment in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit sells Bendis Pilates equipment in India — hand-crafted in Turkey from certified beech wood with antibacterial leather. Full range available for studios, physio centres, and luxury home gyms." } },
-          { "@type": "Question", "name": "Pilates cadillac reformer India", "acceptedAnswer": { "@type": "Answer", "text": "Bendis Pilates Cadillac Reformers (High and Low models) are available in India through TechFit. Combined Reformer, Tower and Cadillac in one piece of equipment. Contact +91-98201-66910." } },
-          { "@type": "Question", "name": "Best Pilates reformer for studio India", "acceptedAnswer": { "@type": "Answer", "text": "The Bendis Pilates Reformer is one of the best studio-grade Pilates reformers available in India — 8-wheel carriage, certified beech wood, antibacterial leather. Available through TechFit, authorised dealer." } },
-          { "@type": "Question", "name": "Pilates equipment for physiotherapy centre India", "acceptedAnswer": { "@type": "Answer", "text": "Bendis Pilates equipment is ideal for physiotherapy centres in India. Reformers, cadillacs, chairs, ladder barrels and spine correctors designed for clinical and therapeutic use. Available through TechFit." } }
+          { "@type": "Question", "name": "Who is the authorised dealer of Merrithew Pilates in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit (Techfit Health Fitness Private Limited), Mumbai, is an authorised dealer of Merrithew Pilates equipment in India." } },
+          { "@type": "Question", "name": "Where to buy Pilates reformer in India?", "acceptedAnswer": { "@type": "Answer", "text": "Buy Merrithew, Jetz Pilates, and TechFit Pilates reformers in India through TechFit, the authorised dealer. https://www.techfittech.com/merrithew-pilates or +91-98201-66910." } },
+          { "@type": "Question", "name": "Best Pilates studio equipment supplier in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is India's leading Pilates studio equipment supplier, supplying Merrithew, Jetz Pilates, and TechFit Pilates equipment." } },
+          { "@type": "Question", "name": "Merrithew Pilates reformer price India", "acceptedAnswer": { "@type": "Answer", "text": "For Merrithew Pilates reformer pricing in India, contact TechFit — the authorised dealer. Call +91-98201-66910 or email info@techfittech.com." } }
         ]
       },
-      { "@type": "Product", "name": "Bendis Pilates Studio Equipment — India", "description": "Bendis Pilates hand-crafted premium Pilates equipment including reformers, cadillac reformers, tower reformers, folding reformers, chairs, ladder barrels, wall units, spring walls, and accessories. Available through TechFit, authorised dealer in India.", "brand": { "@type": "Brand", "name": "Bendis Pilates" }, "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/bendis-pilates", "seller": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" } } },
+      { "@type": "Product", "name": "Merrithew Pilates Studio Equipment — India", "description": "Merrithew premium Pilates equipment including V2 Max reformers, cadillac reformers, stability chairs, barrels, and accessories. Available through TechFit in India.", "brand": { "@type": "Brand", "name": "Merrithew" }, "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/merrithew-pilates", "seller": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" } } },
       {
         "@type": "Service",
-        "@id": "https://www.techfittech.com/bendis-pilates#service",
-        "name": "Authorised Distribution, Installation, and Support for Bendis Pilates in India",
+        "@id": "https://www.techfittech.com/merrithew-pilates#service",
+        "name": "Authorised Distribution, Installation, and Support for Merrithew Pilates in India",
         "serviceType": "Premium Pilates Studio Equipment Distribution",
         "inLanguage": "en-IN",
         "areaServed": [
@@ -1198,12 +1194,12 @@ const SCHEMAS = {
           { "@type": "City", "name": "Mumbai" }
         ],
         "provider": { "@id": "https://www.techfittech.com/#organization" },
-        "description": "Authorized India dealer of Bendis Pilates. Hand-crafted Turkish Pilates reformers, cadillacs, chairs, barrels and studio accessories for professional studios and physiotherapy centres.",
+        "description": "Authorized India dealer of Merrithew Pilates. Premium Pilates reformers, cadillacs, chairs, and studio accessories.",
         "offers": {
           "@type": "Offer",
           "priceCurrency": "INR",
           "availability": "https://schema.org/InStock",
-          "url": "https://www.techfittech.com/get-a-quote"
+          "url": "https://www.techfittech.com/merrithew-pilates"
         }
       }
     ]

@@ -44,3 +44,4 @@ public/assets/images/extracted/
 # Exceptions to allow built/regenerated PDF lead magnets if needed
 !public/lead-magnets/TechFit-Commercial-Gym-Setup-Cost-Guide-India-2026.pdf
 
+.vercel
