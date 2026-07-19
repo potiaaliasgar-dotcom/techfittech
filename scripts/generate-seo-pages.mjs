@@ -3690,7 +3690,14 @@ function enrichSchema(route, schema) {
         "description": sp.desc,
         "brand": { "@type": "Brand", "name": config.brand },
         "category": config.name,
-        "image": `${BASE}/assets/images/other/img-7edcc2dfb4.png`
+        "image": `${BASE}/assets/images/other/img-7edcc2dfb4.png`,
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "url": `${BASE}/${route}`,
+          "seller": { "@type": "Organization", "name": "TechFit", "url": BASE }
+        }
       }));
     } else if (PRODUCTS.length > 0) {
       catalogItems = PRODUCTS
@@ -3702,7 +3709,14 @@ function enrichSchema(route, schema) {
           "description": p.d,
           "brand": { "@type": "Brand", "name": p.b },
           "category": p.c,
-          "image": p.img.startsWith('http') ? p.img : `${BASE}/${p.img}`
+          "image": p.img.startsWith('http') ? p.img : `${BASE}/${p.img}`,
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock",
+            "url": `${BASE}/${route}`,
+            "seller": { "@type": "Organization", "name": "TechFit", "url": BASE }
+          }
         }));
     }
 

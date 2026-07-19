@@ -72,7 +72,14 @@ if (jsonLdMatch) {
         "name": p.name,
         "sku": p.sku,
         "brand": { "@type": "Brand", "name": "Merrithew STOTT PILATES" },
-        "image": `https://www.techfittech.com${p.img}`
+        "image": `https://www.techfittech.com${p.img}`,
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.techfittech.com/pilates",
+          "seller": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" }
+        }
       }
     });
   });
