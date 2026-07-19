@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-IN">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5PQVLK3D');</script>
+<!-- End Google Tag Manager -->
+<!-- Google Ads gtag.js -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17959203178"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', 'AW-17959203178');
+</script>
+<!-- End Google Ads gtag.js -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#09090B">
@@ -352,6 +368,9 @@ background:radial-gradient(1100px 560px at 82% -12%,rgba(220,38,38,.16),transpar
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PQVLK3D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 
 <style>
@@ -814,7 +833,40 @@ document.addEventListener('click', e => {
 
 
 
-<!-- Google Ads: paste your gtag.js snippet here. Lead clicks already push to dataLayer as 'lead_click'. -->
+<!-- Google Ads Conversion Tracking -->
+<script>
+const GAW_ID = 'AW-17959203178';
+const GAW_FORM_LABEL = 'ObCTCPuJmv0bEOrizvNC';
+const GAW_PHONE_LABEL = 'ou7UCNq77bscEOrizvNC';
+const GAW_WHATSAPP_LABEL = 'bIN4CNS77bscEOrizvNC';
+const GAW_EMAIL_LABEL = 'T_tdCNe77bscEOrizvNC';
+
+function fireConversion(label, projectType) {
+  if (typeof gtag !== 'function') return;
+  var transactionId = Date.now() + '-' + Math.random().toString(36).slice(2, 9);
+  gtag('event', 'conversion', {
+    'send_to': GAW_ID + '/' + label,
+    'value': 1.0,
+    'currency': 'INR',
+    'transaction_id': transactionId,
+    'project_type': projectType || 'Pilates'
+  });
+}
+
+// Global click tracking for WhatsApp, Phone, and Email links
+document.addEventListener('click', function(e) {
+  var waLink = e.target.closest('a[href*="wa.me"]');
+  var telLink = e.target.closest('a[href^="tel:"]');
+  var mailLink = e.target.closest('a[href^="mailto:"]');
+  if (waLink) {
+    fireConversion(GAW_WHATSAPP_LABEL, 'Pilates WhatsApp Click');
+  } else if (telLink) {
+    fireConversion(GAW_PHONE_LABEL, 'Pilates Phone Click');
+  } else if (mailLink) {
+    fireConversion(GAW_EMAIL_LABEL, 'Pilates Email Click');
+  }
+});
+</script>
 
 <div class="util"><div class="cnt util-in" style="justify-content:center; text-align:center;">
 <div><b>Ready to build your studio? Call us for a custom quote:</b> <a href="tel:+919820166910" style="color:var(--white);margin-left:.5rem;font-weight:700;border-bottom:1px dashed var(--white);">+91 98201 66910</a></div>
@@ -1977,6 +2029,8 @@ async function plSend(e){
       body: JSON.stringify(body)
     });
     if(btn) btn.innerHTML = 'Sent Successfully!';
+    if (typeof fireConversion === 'function') fireConversion(GAW_FORM_LABEL, 'Pilates Form Submission');
+    window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'lead_submitted', lead_name: body.Name, lead_phone: body.Phone });
     setTimeout(() => { if (typeof plClose === 'function') plClose(); if(btn) btn.innerHTML = originalText; e.target.reset(); }, 2000);
   } catch(err) {
     if(btn) btn.innerHTML = 'Error. Please try again.';
