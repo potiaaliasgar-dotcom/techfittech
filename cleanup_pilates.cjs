@@ -21,8 +21,8 @@ imgMatches.forEach(m => {
 });
 
 // Always keep the specific images mentioned just in case
-usedImages.add('mr-ST-11092.png');
-usedImages.add('mr-ST-11093.png');
+usedImages.add('mr-ST-REMOVED-11092.png');
+usedImages.add('mr-ST-REMOVED-11093.png');
 usedImages.add('studio-pilates.jpg');
 usedImages.add('hero-pilates.jpg');
 

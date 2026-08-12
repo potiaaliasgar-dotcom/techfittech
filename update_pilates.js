@@ -2,8 +2,8 @@ const fs = require('fs');
 let html = fs.readFileSync('public/pilates.html', 'utf-8');
 
 const newProducts = [
-  { sku: 'ST-11092', name: 'NX3 Reformer Bundle', series: 'Reformers', img: '/pilates-assets/merrithew/mr-ST-11092.png', desc: 'Canadian FSC Maple, locking footbar, 26" carriage, EasyShift gearbar, black upholstery. Exceptional craftsmanship.', specs: ['Canadian FSC Maple', 'Black upholstery'] },
-  { sku: 'ST-11093', name: 'NX3 Reformer Plus Bundle', series: 'Reformers', img: '/pilates-assets/merrithew/mr-ST-11093.png', desc: 'Canadian FSC Maple, locking footbar, 26" carriage, EasyShift gearbar, black upholstery. Exceptional craftsmanship.', specs: ['Canadian FSC Maple', 'Black upholstery'] },
+  { sku: 'ST-REMOVED-11092', name: 'NX3 Reformer Bundle', series: 'Reformers', img: '/pilates-assets/merrithew/mr-ST-REMOVED-11092.png', desc: 'Canadian FSC Maple, locking footbar, 26" carriage, EasyShift gearbar, black upholstery. Exceptional craftsmanship.', specs: ['Canadian FSC Maple', 'Black upholstery'] },
+  { sku: 'ST-REMOVED-11093', name: 'NX3 Reformer Plus Bundle', series: 'Reformers', img: '/pilates-assets/merrithew/mr-ST-REMOVED-11093.png', desc: 'Canadian FSC Maple, locking footbar, 26" carriage, EasyShift gearbar, black upholstery. Exceptional craftsmanship.', specs: ['Canadian FSC Maple', 'Black upholstery'] },
   { sku: 'ST-11105', name: 'V2 Max™ Reformer Bundle (Jet Black)', series: 'Reformers', img: '/pilates-assets/merrithew/mr-ST-11105.png' },
   { sku: 'ST-11036', name: 'Complete Studio Package V2 Max™ Plus', series: 'Packages', img: '/pilates-assets/merrithew/mr-ST-11036.png' },
   { sku: 'ST-11038', name: 'Complete Studio Package SPX Max Plus', series: 'Packages', img: '/pilates-assets/merrithew/mr-ST-11038.png' },
@@ -35,7 +35,7 @@ html = html.replace(/const PL_DATA=\[(.*?)\];/s, (match, inner) => {
 
   newProducts.forEach((p, i) => {
     p.id = currentIndex + i + 1; // Assigning ID
-    p.brand = 'Merrithew STOTT PILATES';
+    p.brand = 'Merrithew';
     data.push(p);
 
     const q = (p.name + ' merr ' + p.sku + ' ' + p.series).toLowerCase().replace(/[^a-z0-9 ]/g, '');
@@ -54,7 +54,7 @@ if (emptyDivIdx > -1) {
 
 html = html.replace(/<i>139<\/i>/g, '<i>157</i>');
 html = html.replace(/data-count="207"/g, 'data-count="225"');
-html = html.replace(/<h2 class="brand-title">Merrithew STOTT PILATES<span class="pill">139<\/span><\/h2>/, '<h2 class="brand-title">Merrithew STOTT PILATES<span class="pill">157</span></h2>');
+html = html.replace(/<h2 class="brand-title">Merrithew<span class="pill">139<\/span><\/h2>/, '<h2 class="brand-title">Merrithew<span class="pill">157</span></h2>');
 html = html.replace(/numberOfItems":207/g, 'numberOfItems":225');
 html = html.replace(/46 apparatus \&middot\; 93 accessories/, '53 apparatus &middot; 104 accessories');
 
@@ -71,7 +71,7 @@ if (jsonLdMatch) {
         "@type": "Product",
         "name": p.name,
         "sku": p.sku,
-        "brand": { "@type": "Brand", "name": "Merrithew STOTT PILATES" },
+        "brand": { "@type": "Brand", "name": "Merrithew" },
         "image": `https://www.techfittech.com${p.img}`
       }
     });

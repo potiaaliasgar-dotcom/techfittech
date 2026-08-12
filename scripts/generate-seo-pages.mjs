@@ -1170,12 +1170,12 @@ const SCHEMAS = {
         "@id": "https://www.techfittech.com/merrithew-pilates#webpage",
         "url": "https://www.techfittech.com/merrithew-pilates",
         "name": "Merrithew Pilates Studio Equipment India — TechFit",
-        "description": "TechFit is the authorised dealer of Merrithew Pilates in India. Premium Pilates reformers, cadillacs, chairs, barrels and studio accessories for professional studios and physiotherapy centres."
+        "description": "TechFit is the Sales Partner for Merrithew Pilates in India. Premium Pilates reformers, cadillacs, chairs, barrels and studio accessories for professional studios and physiotherapy centres."
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
-          { "@type": "Question", "name": "Who is the authorised dealer of Merrithew Pilates in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit (Techfit Health Fitness Private Limited), Mumbai, is an authorised dealer of Merrithew Pilates equipment in India." } },
+          { "@type": "Question", "name": "Who is the Sales Partner for Merrithew Pilates in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit (Techfit Health Fitness Private Limited), Mumbai, is an Sales Partner for Merrithew Pilates equipment in India." } },
           { "@type": "Question", "name": "Where to buy Pilates reformer in India?", "acceptedAnswer": { "@type": "Answer", "text": "Buy Merrithew, Jetz Pilates, and TechFit Pilates reformers in India through TechFit, the authorised dealer. https://www.techfittech.com/merrithew-pilates or +91-98201-66910." } },
           { "@type": "Question", "name": "Best Pilates studio equipment supplier in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is India's leading Pilates studio equipment supplier, supplying Merrithew, Jetz Pilates, and TechFit Pilates equipment." } },
           { "@type": "Question", "name": "Merrithew Pilates reformer price India", "acceptedAnswer": { "@type": "Answer", "text": "For Merrithew Pilates reformer pricing in India, contact TechFit — the authorised dealer. Call +91-98201-66910 or email info@techfittech.com." } }
@@ -1185,7 +1185,7 @@ const SCHEMAS = {
       {
         "@type": "Service",
         "@id": "https://www.techfittech.com/merrithew-pilates#service",
-        "name": "Authorised Distribution, Installation, and Support for Merrithew Pilates in India",
+        "name": "Sales Partner Distribution, Installation, and Support for Merrithew Pilates in India",
         "serviceType": "Premium Pilates Studio Equipment Distribution",
         "inLanguage": "en-IN",
         "areaServed": [
@@ -1194,7 +1194,7 @@ const SCHEMAS = {
           { "@type": "City", "name": "Mumbai" }
         ],
         "provider": { "@id": "https://www.techfittech.com/#organization" },
-        "description": "Authorized India dealer of Merrithew Pilates. Premium Pilates reformers, cadillacs, chairs, and studio accessories.",
+        "description": "Sales Partner in India for Merrithew Pilates. Premium Pilates reformers, cadillacs, chairs, and studio accessories.",
         "offers": {
           "@type": "Offer",
           "priceCurrency": "INR",

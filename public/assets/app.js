@@ -2407,7 +2407,7 @@ ${footer()}
 
 <div class="ticker-wrap">
   <div class="ticker-in">
-    ${['GYM DESIGN & LAYOUT', 'EQUIPMENT SUPPLY', 'PILATES EQUIPMENT', 'GYM & SPORTS FLOORING', 'CUSTOM FABRICATION', 'WELLNESS & RECOVERY', 'INSTALLATION & AFTER-SALES', '800+ INSTALLATIONS COMPLETED', 'BH FITNESS · TUNTURI · MERRITHEW STOTT PILATES'].map(t => `<span class="ticker-item">${t}</span>`).join('').repeat(2)}
+    ${['GYM DESIGN & LAYOUT', 'EQUIPMENT SUPPLY', 'PILATES EQUIPMENT', 'GYM & SPORTS FLOORING', 'CUSTOM FABRICATION', 'WELLNESS & RECOVERY', 'INSTALLATION & AFTER-SALES', '800+ INSTALLATIONS COMPLETED', 'BH FITNESS · TUNTURI · MERRITHEW'].map(t => `<span class="ticker-item">${t}</span>`).join('').repeat(2)}
   </div>
 </div>
 
@@ -2449,7 +2449,7 @@ ${footer()}
         </div>
         <div class="pillar-num">02</div>
         <h3>Commercial Equipment Supply</h3>
-        <p>Reseller of BH Fitness, Tunturi and California Fitness. Authorised Reseller for Merrithew STOTT PILATES. Plus TechFit's own fabricated range.</p>
+        <p>Reseller of BH Fitness, Tunturi and California Fitness. Sales Partner for Merrithew. Plus TechFit's own fabricated range.</p>
       </div>
       <div class="pillar" role="button" tabindex="0" onclick="go('services')">
         <div class="pillar-icon">
@@ -2532,7 +2532,7 @@ ${footer()}
             <text x="100" y="26" font-family="'Times New Roman', Times, serif" font-size="34" font-weight="400" text-anchor="middle" fill="#000" letter-spacing="1">merrithew&reg;</text>
           </svg>
         </div>
-        <div class="brand-logo-name" style="margin-top:.4rem">STOTT PILATES&reg;</div>
+        <div class="brand-logo-name" style="margin-top:.4rem">Merrithew&reg;</div>
       </a>
       <a href="/alteon" class="brand-logo-box" onclick="event.preventDefault();go('alteon')"><div style="background:#fff;padding:.5rem .8rem;border-radius:.2rem;display:inline-block"><img src="${CLIENT_LOGOS['Alteon']}" alt="Alteon" style="max-height:34px;max-width:120px;object-fit:contain;display:block" loading="lazy"></div>
         <div class="brand-logo-name" style="margin-top:.4rem">Wellness &amp; Recovery</div>
