@@ -3585,7 +3585,10 @@
 
 @media(max-width: 480px) {
   .brands-logos {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .brand-logo-box {
+    grid-column: span 1 !important;
   }
 }
 
@@ -3670,3 +3673,10 @@
   .float-wa { right: 16px !important; font-size: 14px !important; }
   .float-wa svg { width: 20px !important; height: 20px !important; margin-right: 6px !important; }
 }
+
+
+/* Fix empty space before lineup images load */
+.lineup-img { aspect-ratio: 16/9; background-color: #1a1a1a; object-fit: cover; }
+
+/* Fix Footer Padding for WhatsApp pill */
+footer { padding-bottom: 80px !important; }

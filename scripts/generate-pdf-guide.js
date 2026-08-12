@@ -77,7 +77,7 @@ async function generatePDF() {
   doc.fillColor(colors.gray)
      .fontSize(10)
      .font('Helvetica')
-     .text('TECHFIT FACTORY & HEADQUARTERS: BYCULLA, MUMBAI', 60, doc.page.height - 80);
+     .text('TECHFIT FACTORY & HEADQUARTERS: Mumbai', 60, doc.page.height - 80);
 
   // ----------------------------------------------------
   // PAGE 2: WHY LOCAL INDIAN GYM SETUP WINS
@@ -102,7 +102,7 @@ async function generatePDF() {
   const advantages = [
     {
       title: '1. Up to 40% Net Cost Savings via Factory-Direct Sourcing',
-      desc: 'By sourcing directly from primary global brands like BH Fitness and Tunturi, and custom fabricating heavy steel rigs and cages domestically in Byculla, Mumbai, we completely bypass third-party trading markups and international sea-freight overheads.'
+      desc: 'By sourcing directly from primary global brands like BH Fitness and Tunturi, and custom fabricating heavy steel rigs and cages domestically in Mumbai, we completely bypass third-party trading markups and international sea-freight overheads.'
     },
     {
       title: '2. Zero Customs & Transit Delays',
@@ -219,7 +219,7 @@ async function generatePDF() {
     {
       num: 'PHASE 02',
       title: 'Custom Fabrication & Equipment Sourcing (Days 5 - 25)',
-      desc: 'Heavy strength frames, functional CrossFit rigs, and custom fight cages enter fabrication at our Byculla workshop. High-performance cardio systems and wellness capsules are prepared for dispatch with tailored console selections.'
+      desc: 'Heavy strength frames, functional CrossFit rigs, and custom fight cages enter fabrication at our Mumbai workshop. High-performance cardio systems and wellness capsules are prepared for dispatch with tailored console selections.'
     },
     {
       num: 'PHASE 03',

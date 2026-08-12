@@ -2,7 +2,7 @@
       <h2>The Brief</h2>
       <p>A championship cage needs to do three jobs at once. It has to protect athletes from edges and snags, reassure judges and officials with consistent dimensions and rigidity, and give broadcast partners clean, unobstructed sight lines for a premium TV product. Anything less and the event downgrades itself.</p>
       <h2>What We Delivered</h2>
-      <p>A full competition-grade octagon fabricated at our Byculla workshop and installed on-site in under 72 hours. Key specs:</p>
+      <p>A full competition-grade octagon fabricated at our Mumbai workshop and installed on-site in under 72 hours. Key specs:</p>
       <ul>
         <li>4mm+ heavy-gauge powder-coated steel poles</li>
         <li>High-tensile vinyl-coated chain link fencing for visibility and grip</li>

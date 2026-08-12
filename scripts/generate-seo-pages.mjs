@@ -23,7 +23,7 @@ const BASE = 'https://www.techfittech.com';
 const DEFAULT_OG_IMG = BASE + '/og-image.jpg';
 
 // Future-Proofing: Flip to true when real Google reviews exist
-const ENABLE_AGGREGATE_RATING = false;
+const ENABLE_AGGREGATE_RATING = true;
 
 // Load PRODUCTS array from products.json
 const productsPath = path.join(PUBLIC, 'assets/products.json');
@@ -404,7 +404,7 @@ const SEO_MAP = {
   },
   'commercial-gym-setup-mumbai': {
     title: "Commercial Gym Setup in Mumbai | Turnkey Manufacturer & Supplier",
-    desc: "The complete turnkey guide to commercial gym setups, hotel amenities, and custom fight infrastructure in Mumbai and the MMR, backed by TechFit Byculla factory.",
+    desc: "The complete turnkey guide to commercial gym setups, hotel amenities, and custom fight infrastructure in Mumbai and the MMR, backed by TechFit Mumbai factory.",
     h1: "Commercial Gym Setup in Mumbai: Factory-Direct B2B Turnkey Sourcing",
     lastmod: "2026-05-30",
     img: OG_RIGS
@@ -2466,7 +2466,7 @@ const SCHEMAS = {
         "@id": "https://www.techfittech.com/commercial-gym-setup-mumbai#article",
         "isPartOf": { "@id": "https://www.techfittech.com/commercial-gym-setup-mumbai#webpage" },
         "headline": "Commercial Gym Setup in Mumbai: Factory-Direct B2B Turnkey Sourcing",
-        "description": "The complete turnkey guide to commercial gym setups, hotel amenities, and custom fight infrastructure in Mumbai and the MMR, backed by TechFit Byculla factory.",
+        "description": "The complete turnkey guide to commercial gym setups, hotel amenities, and custom fight infrastructure in Mumbai and the MMR, backed by TechFit Mumbai factory.",
         "inLanguage": "en-IN",
         "author": [{ "@id": "https://www.techfittech.com/about#aliasgarpotia" }, { "@id": "https://www.techfittech.com/#organization" }],
         "publisher": { "@id": "https://www.techfittech.com/#organization" },
@@ -2478,7 +2478,7 @@ const SCHEMAS = {
         "@id": "https://www.techfittech.com/commercial-gym-setup-mumbai#webpage",
         "url": "https://www.techfittech.com/commercial-gym-setup-mumbai",
         "name": "Commercial Gym Setup in Mumbai | Turnkey Manufacturer & Supplier",
-        "description": "The complete turnkey guide to commercial gym setups, hotel amenities, and custom fight infrastructure in Mumbai and the MMR, backed by TechFit Byculla factory.",
+        "description": "The complete turnkey guide to commercial gym setups, hotel amenities, and custom fight infrastructure in Mumbai and the MMR, backed by TechFit Mumbai factory.",
         "inLanguage": "en-IN"
       },
       {
@@ -3052,7 +3052,7 @@ const NOSCRIPT_FALLBACKS = {
       <p>Rather than using unproven brands, TechFit partners as the official authorized dealer for premium commercial gym manufacturers like <strong>BH Fitness Spain</strong>. BH Fitness is one of Europe's oldest and most prestigious fitness equipment brands, offering incredible mechanical durability, high-end console displays, and beautiful aesthetics. By sourcing BH Fitness through TechFit, you get the exact same elite biomechanical validation and commercial cardio performance as any tier-1 import, but at factory-direct pricing, completely avoiding third-party importing markups.</p>
       
       <h4>B. Bespoke Local Steel Fabrication</h4>
-      <p>For strength equipment, CrossFit cages, free-weight racks, and combat sports elements, importing standard steel boxes from overseas is financially inefficient and limits customization. TechFit operates its own heavy-duty manufacturing and custom-fabrication workshop in Byculla, Mumbai. We construct custom rigs, cages, and platforms using heavy 11-gauge (3mm+) structural steel. We can custom powder coat frames to match your facility's branding, embroider custom logos into leather upholstery, and build cages to precise dimensions. This allows your gym to have a unique, custom-branded identity that catalog imports can never match.</p>
+      <p>For strength equipment, CrossFit cages, free-weight racks, and combat sports elements, importing standard steel boxes from overseas is financially inefficient and limits customization. TechFit operates its own heavy-duty manufacturing and custom-fabrication workshop in Mumbai. We construct custom rigs, cages, and platforms using heavy 11-gauge (3mm+) structural steel. We can custom powder coat frames to match your facility's branding, embroider custom logos into leather upholstery, and build cages to precise dimensions. This allows your gym to have a unique, custom-branded identity that catalog imports can never match.</p>
       
       <h4>C. Direct Engineering Accountability</h4>
       <p>A premium gym is only as good as its uptime. A broken treadmill or selectorized machine with an out-of-order sign destroys the luxury experience. Because TechFit is based centrally in Mumbai, we manage our own in-house engineering team. We do not outsource service to independent dealers. Under our comprehensive Annual Maintenance Contracts (AMC), we keep a deep stock of wear items, cables, pulleys, and electrical boards in our local warehouse, resolving service issues within 24 to 48 hours.</p>
@@ -3071,8 +3071,8 @@ const NOSCRIPT_FALLBACKS = {
       <h4>What should commercial gym developers look for in an Annual Maintenance Contract (AMC)?</h4>
       <p>When evaluating an AMC, look for three key metrics: response time, spare parts location, and technician origin. Many dealers use third-party regional mechanics who lack brand-specific training and do not carry official replacement parts. A high-quality AMC should guarantee a technician dispatch within 24 to 48 hours, ensure that all critical replacement parts are stored locally within India (preventing customs delays), and be executed by direct employees of the supplier who are fully accountable for your facility's operational uptime.</p>
 
-      <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">6. Tour Our Byculla Workshop &amp; Start Planning</h2>
-      <p>Don't settle for slow lead times, high markups, and rigid catalog colors. Discover how TechFit can deliver an elite, custom-branded commercial gym setup optimized for your CapEx and backed by India's most responsive engineering team. Contact our design experts today to review 2D space layouts, tour our custom steel fabrication facility in Byculla, Mumbai, or request a factual quotation for your project.</p>
+      <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">6. Tour Our Mumbai Workshop &amp; Start Planning</h2>
+      <p>Don't settle for slow lead times, high markups, and rigid catalog colors. Discover how TechFit can deliver an elite, custom-branded commercial gym setup optimized for your CapEx and backed by India's most responsive engineering team. Contact our design experts today to review 2D space layouts, tour our custom steel fabrication facility in Mumbai, or request a factual quotation for your project.</p>
       
       <div style="background-color:#f8f9fa;padding:1.5rem;border-left:4px solid #0056b3;margin-top:1.5rem;border-radius:4px;">
         <p style="margin:0;font-weight:bold;color:#111;">TechFit Sourcing &amp; Engineering Office</p>
@@ -3144,7 +3144,7 @@ const NOSCRIPT_FALLBACKS = {
       <p>TechFit is a reseller of world-class European cardio and strength brands, including <strong>Tunturi Finland</strong> (renowned for premium Scandinavian cardio design) and <strong>California Fitness</strong> (famous for durable, biomechanically sound strength equipment). By sourcing these premium brands through TechFit, you get the high-end movement paths and digital console integrations expected in luxury facilities, while completely avoiding third-party importing markups.</p>
       
       <h4>B. Heavy-Duty Local Manufacturing and Lifetime Frame Warranty</h4>
-      <p>Importing massive iron weights, heavy power racks, and thick metal platforms from overseas is highly inefficient. TechFit operates its own advanced steel fabrication and powder coating workshop in Byculla, Mumbai. We construct custom rigs, cages, racks, and plates using high-strength 11-gauge (3mm+) structural steel. Because we control the entire manufacturing process, we offer a lifetime warranty on all custom-fabricated structural steel frames, providing gym owners with absolute peace of mind.</p>
+      <p>Importing massive iron weights, heavy power racks, and thick metal platforms from overseas is highly inefficient. TechFit operates its own advanced steel fabrication and powder coating workshop in Mumbai. We construct custom rigs, cages, racks, and plates using high-strength 11-gauge (3mm+) structural steel. Because we control the entire manufacturing process, we offer a lifetime warranty on all custom-fabricated structural steel frames, providing gym owners with absolute peace of mind.</p>
       
       <h4>C. Single-Contract Turnkey Procurement</h4>
       <p>Procuring gym equipment from multiple vendors—such as cardio from one supplier, selectorized machines from another, and flooring from a third—is a logistical challenge. TechFit simplifies this by serving as your single-contract partner. We supply the cardio, the strength machines, the custom rigs, the free weights, and even the professional high-impact rubber gym flooring. This ensures seamless coordination, synchronized delivery, and a unified aesthetic, while optimizing your overall capital expenditure.</p>
@@ -3332,7 +3332,7 @@ const NOSCRIPT_FALLBACKS = {
       <p>Rather than using unproven brands, TechFit partners as a reseller for premium commercial gym manufacturers like <strong>BH Fitness Spain</strong> and <strong>Tunturi Finland</strong>. These brands represent Europe's oldest and most prestigious fitness equipment manufacturers, offering incredible mechanical durability, high-end console displays, and beautiful aesthetics. By sourcing these brands through TechFit, you get the exact same elite biomechanical validation and commercial cardio performance as any tier-1 import, but at factory-direct pricing, completely avoiding third-party importing markups.</p>
       
       <h4>B. Bespoke Local Steel Fabrication</h4>
-      <p>For strength equipment, CrossFit cages, free-weight racks, and combat sports elements, importing standard steel boxes from overseas is financially inefficient and limits customization. TechFit operates its own heavy-duty manufacturing and custom-fabrication workshop in Byculla, Mumbai. We construct custom rigs, cages, and platforms using heavy 11-gauge (3mm+) structural steel. We can custom powder coat frames to match your facility's branding, embroider custom logos into leather upholstery, and build cages to precise dimensions. This allows your gym to have a unique, custom-branded identity that catalog imports can never match.</p>
+      <p>For strength equipment, CrossFit cages, free-weight racks, and combat sports elements, importing standard steel boxes from overseas is financially inefficient and limits customization. TechFit operates its own heavy-duty manufacturing and custom-fabrication workshop in Mumbai. We construct custom rigs, cages, and platforms using heavy 11-gauge (3mm+) structural steel. We can custom powder coat frames to match your facility's branding, embroider custom logos into leather upholstery, and build cages to precise dimensions. This allows your gym to have a unique, custom-branded identity that catalog imports can never match.</p>
       
       <h4>C. Direct Engineering Accountability</h4>
       <p>A premium gym is only as good as its uptime. A broken treadmill or selectorized machine with an out-of-order sign destroys the luxury experience. Because TechFit is based centrally in Mumbai, we manage our own in-house engineering team. We do not outsource service to independent dealers. Under our comprehensive Annual Maintenance Contracts (AMC), we keep a deep stock of wear items, cables, pulleys, and electrical boards in our local warehouse, resolving service issues within 24 to 48 hours.</p>
@@ -3351,8 +3351,8 @@ const NOSCRIPT_FALLBACKS = {
       <h4>What should commercial gym developers look for in an Annual Maintenance Contract (AMC)?</h4>
       <p>When evaluating an AMC, look for three key metrics: response time, spare parts location, and technician origin. Many dealers use third-party regional mechanics who lack brand-specific training and do not carry official replacement parts. A high-quality AMC should guarantee a technician dispatch within 24 to 48 hours, ensure that all critical replacement parts are stored locally within India (preventing customs delays), and be executed by direct employees of the supplier who are fully accountable for your facility's operational uptime.</p>
 
-      <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">6. Tour Our Byculla Workshop &amp; Start Planning</h2>
-      <p>Don't settle for slow lead times, high markups, and rigid catalog colors. Discover how TechFit can deliver an elite, custom-branded commercial gym setup optimized for your CapEx and backed by India's most responsive engineering team. Contact our design experts today to review 2D space layouts, tour our custom steel fabrication facility in Byculla, Mumbai, or request a factual quotation for your project.</p>
+      <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">6. Tour Our Mumbai Workshop &amp; Start Planning</h2>
+      <p>Don't settle for slow lead times, high markups, and rigid catalog colors. Discover how TechFit can deliver an elite, custom-branded commercial gym setup optimized for your CapEx and backed by India's most responsive engineering team. Contact our design experts today to review 2D space layouts, tour our custom steel fabrication facility in Mumbai, or request a factual quotation for your project.</p>
       
       <div style="background-color:#f8f9fa;padding:1.5rem;border-left:4px solid #0056b3;margin-top:1.5rem;border-radius:4px;">
         <p style="margin:0;font-weight:bold;color:#111;">TechFit Sourcing &amp; Engineering Office</p>
@@ -3508,7 +3508,7 @@ const NOSCRIPT_FALLBACKS = {
       </table>
 
       <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">4. The TechFit Custom Advantage: Industrial Quality, Professional Validation</h2>
-      <p>TechFit is the undisputed market leader in professional combat sports infrastructure in India. We operate our own state-of-the-art heavy industrial fabrication facility in Byculla, Mumbai, delivering an elite local alternative built across four core areas:</p>
+      <p>TechFit is the undisputed market leader in professional combat sports infrastructure in India. We operate our own state-of-the-art heavy industrial fabrication facility in Mumbai, delivering an elite local alternative built across four core areas:</p>
       
       <h4>A. Official Fight League Supplier and Validation</h4>
       <p>TechFit is the official competition-grade MMA cage and boxing ring supplier to India's top professional combat sports promotions, including <strong>Matrix Fight Night (MFN)</strong>, <strong>Super Fight League (SFL)</strong>, and <strong>Kumite 1 League</strong>. We also equip signature celebrity gyms like Tiger Shroff's <strong>MMA Matrix</strong>. Sourcing from TechFit gives your facility the exact same professional-grade validation as top-tier televised fight promotions, building instant credibility with members.</p>
@@ -3537,7 +3537,7 @@ const NOSCRIPT_FALLBACKS = {
       <h4>What makes TechFit safety padding superior to stock foam wraps?</h4>
       <p>Standard stock foam wrap padding degrades and compacts over a few months of commercial use, exposing hard steel edges. TechFit utilizes multi-layer high-density closed-cell impact-absorbing polyurethane shielding encased in heavy-gauge reinforced vinyl covers. This ensures premium anti-impact defense that maintains its thickness and shape under the heaviest daily usage.</p>
 
-      <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">7. Tour Our Byculla Workshop &amp; Request Planning Parameters</h2>
+      <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">7. Tour Our Mumbai Workshop &amp; Request Planning Parameters</h2>
       <p>Transform your gym or fight academy with the professional-grade combat sports infrastructure chosen by India's top promotions and elite trainers. Contact our design experts in Mumbai today to review 2D/3D layouts, discuss structural manufacturing specifications, or request a custom B2B quotation for your facility.</p>
       
       <div style="background-color:#f8f9fa;padding:1.5rem;border-left:4px solid #0056b3;margin-top:1.5rem;border-radius:4px;">
@@ -3966,11 +3966,11 @@ if (ENABLE_AGGREGATE_RATING) {
         const obj = JSON.parse(rawJson);
         obj["aggregateRating"] = {
           "@type": "AggregateRating",
-          "ratingValue": "4.9",
+          "ratingValue": "5.0",
           "bestRating": "5",
           "worstRating": "1",
-          "ratingCount": "125",
-          "reviewCount": "125"
+          "ratingCount": "51",
+          "reviewCount": "51"
         };
         obj["review"] = [
           {
