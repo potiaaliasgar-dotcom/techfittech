@@ -192,8 +192,28 @@ async function submitEmbeddedQuote(projectType) {
         img: DEFAULT_OG_IMG
       },
       'alteon': {
-        title: 'Alteon Wellness & Recovery | Authorised Distributor — Cryotherapy, HBOT, Red-Light',
-        desc: 'TechFit is a reseller of Alteon Wellness & Recovery. Premium recovery technology — hyperbaric oxygen chambers, cryotherapy, red-light therapy, dry-float, IHHT and more.',
+        title: 'Best Wellness, Longevity & Biohacking Equipment in India | TechFit Alteon',
+        desc: 'TechFit is the best wellness, recovery, longevity, and biohacking equipment supplier in India. Official distributor of Alteon: Hyperbaric chambers (HBOT), electric cryotherapy, red-light beds, cold plunges, and IHHT across Mumbai, Delhi NCR, Bangalore, Hyderabad & pan-India.',
+        img: DEFAULT_OG_IMG
+      },
+      'alteon/hyperbaric-oxygen-chambers': {
+        title: 'Best Hyperbaric Oxygen Therapy (HBOT) Chambers in India | TechFit',
+        desc: 'TechFit is India\'s top supplier of commercial & clinical Hyperbaric Oxygen Therapy (HBOT) chambers (1.5–2.0 ATA). Monoplace & multiplace cabins with turnkey setup & AMC.',
+        img: DEFAULT_OG_IMG
+      },
+      'alteon/whole-body-cryotherapy': {
+        title: 'Best Whole-Body Cryotherapy Chambers in India | TechFit',
+        desc: 'TechFit is India\'s leading supplier of electric nitrogen-free and liquid nitrogen Whole-Body Cryotherapy chambers (-110°C to -140°C). Turnkey installation & AMC across India.',
+        img: DEFAULT_OG_IMG
+      },
+      'alteon/cold-plunge-and-ice-baths': {
+        title: 'Best Commercial Cold Plunges & Ice Baths in India | TechFit',
+        desc: 'Premium stainless steel commercial cold plunge pools & ice baths with 2HP chillers, UV + ozone sterilization. Designed for wellness clubs and longevity suites.',
+        img: DEFAULT_OG_IMG
+      },
+      'alteon/red-light-and-photobiomodulation': {
+        title: 'Best Red Light Therapy Beds & PBM Panels in India | TechFit',
+        desc: 'TechFit is India\'s top supplier of medical-grade Red Light Therapy (Photobiomodulation / PBM) beds & panels (630–940nm). Turnkey supply across Mumbai, Delhi NCR, Bangalore, Hyderabad, Chennai & all metros.',
         img: DEFAULT_OG_IMG
       },
       'bh-fitness': {
@@ -237,8 +257,8 @@ async function submitEmbeddedQuote(projectType) {
         img: DEFAULT_OG_IMG
       },
       'wellness-solutions': {
-        title: 'Wellness Solutions India | TechFit — Recovery, Longevity & Spa Equipment',
-        desc: 'Complete wellness solutions by TechFit — from hyperbaric chambers and cryotherapy to infrared saunas and float pods. Turnkey wellness infrastructure for hotels, clinics and gyms.',
+        title: 'Best Wellness & Recovery Equipment Supplier in India | TechFit',
+        desc: 'TechFit is India\'s top wellness, sports recovery, longevity, and biohacking equipment supplier. Turnkey infrastructure for luxury hotels, spas, clinics, and performance centres in Mumbai, Delhi NCR, Bangalore, Hyderabad, Chennai, and all metro cities.',
         img: DEFAULT_OG_IMG
       },
       'services': {
@@ -378,7 +398,14 @@ async function submitEmbeddedQuote(projectType) {
       const key = page || 'home';
       
       if (key === 'mma-cages') {
-        msg = "Hi TechFit, I'd like a quote for an MMA Cage or Boxing Ring.";} else if (key === 'alteon' || key === 'wellness-solutions') {
+        msg = "Hi TechFit, I'd like a quote for an MMA Cage or Boxing Ring.";
+      } else if (key.includes('hyperbaric')) {
+        msg = "Hi TechFit, I'd like a quote and specifications for Hyperbaric Oxygen Therapy (HBOT) chambers.";
+      } else if (key.includes('cryotherapy')) {
+        msg = "Hi TechFit, I'd like a quote and specifications for Whole-Body Cryotherapy chambers.";
+      } else if (key.includes('red-light')) {
+        msg = "Hi TechFit, I'd like a quote and specifications for Red Light Therapy (PBM) beds and panels.";
+      } else if (key === 'alteon' || key === 'wellness-solutions') {
         msg = "Hi TechFit, I'd like a quote for Alteon Wellness & Recovery equipment.";
       } else if (key === 'crossfit-rigs') {
         msg = "Hi TechFit, I'd like a quote for a custom CrossFit Rig.";

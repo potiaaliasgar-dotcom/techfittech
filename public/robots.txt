@@ -42,6 +42,12 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Google-CloudVertexBot
+Allow: /
+
 User-agent: Applebot-Extended
 Allow: /
 
@@ -57,5 +63,21 @@ Allow: /
 User-agent: YouBot
 Allow: /
 
+User-agent: Amazonbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: deepseek-bot
+Allow: /
+
 Sitemap: https://www.techfittech.com/sitemap.xml
 Sitemap: https://www.techfittech.com/sitemap-images.xml
+

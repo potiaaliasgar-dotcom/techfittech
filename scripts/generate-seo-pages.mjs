@@ -4120,8 +4120,51 @@ buildSSGRoute('hyrox', () => app.renderHyrox(), 'Official HYROX Equipment India 
 buildSSGRoute('alteon', () => app.renderAlteonHub(), 'Alteon Wellness & Recovery India', 'TechFit is the authorised distributor for Alteon Wellness in India.', 'og-image.jpg');
 
 // 3. ALTEON CATEGORIES
+// 3. ALTEON CATEGORIES
 ALTEON_DATA.categories.forEach(c => {
-    buildSSGRoute(`alteon/${c.id}`, () => app.renderAlteonCategory(c.id), `${c.name} India | Alteon Recovery`, c.desc || `Alteon ${c.name} supplied and installed by TechFit.`, 'og-image.jpg');
+    let title = `Best ${c.name} in India | TechFit Alteon`;
+    let desc = c.blurb || `Alteon ${c.name} supplied and installed in India by TechFit.`;
+    if (c.id === 'hyperbaric-oxygen-chambers') {
+        title = 'Best Hyperbaric Oxygen Therapy (HBOT) Chambers in India | TechFit';
+        desc = 'TechFit is India\'s top supplier of commercial & clinical Hyperbaric Oxygen Therapy (HBOT) chambers (1.5–2.0 ATA). Monoplace & multiplace cabins with turnkey setup & AMC.';
+    } else if (c.id === 'whole-body-cryotherapy') {
+        title = 'Best Whole-Body Cryotherapy Chambers in India | TechFit';
+        desc = 'TechFit is India\'s leading supplier of electric nitrogen-free and liquid nitrogen Whole-Body Cryotherapy chambers (-110°C to -140°C). Turnkey installation & AMC across India.';
+    } else if (c.id === 'cold-plunge-and-ice-baths') {
+        title = 'Best Commercial Cold Plunges & Ice Baths in India | TechFit';
+        desc = 'Premium stainless steel commercial cold plunge pools & ice baths with 2HP chillers, UV + ozone sterilization. Designed for wellness clubs and longevity suites.';
+    } else if (c.id === 'red-light-and-photobiomodulation') {
+        title = 'Best Red Light Therapy Beds & PBM Panels in India | TechFit';
+        desc = 'TechFit is India\'s top supplier of medical-grade Red Light Therapy (Photobiomodulation / PBM) beds & panels (630–940nm). Turnkey supply across Mumbai, Delhi NCR, Bangalore, Hyderabad, Chennai, Pune & all metros.';
+    } else if (c.id === 'full-spectrum-infrared-saunas') {
+        title = 'Best Full Spectrum Infrared Saunas in India | TechFit';
+        desc = 'Canadian Hemlock full spectrum infrared saunas with chromotherapy and ultra-low EMF radiant heat for luxury spas, hotels, and residences in India.';
+    } else if (c.id === 'dry-float-therapy') {
+        title = 'Best Dry Float Therapy Pods & Zero-Gravity Beds in India | TechFit';
+        desc = 'Waterless zero-gravity dry floatation systems combining sensory isolation, thermal warmth, and neuro-recovery for wellness clinics and luxury spas.';
+    } else if (c.id === 'altitude-and-ihht-training') {
+        title = 'Best IHHT & Altitude Training Machines in India | TechFit';
+        desc = 'Alteon Interval Hypoxic Hyperoxic Training (IHHT Cell Trainer) platforms in India for mitochondrial biogenesis, athletic performance, and anti-aging.';
+    } else if (c.id === 'recovery-loungers-and-beds') {
+        title = 'Best PEMF Recovery Loungers & Therapy Beds in India | TechFit';
+        desc = 'Multi-wave PEMF, infrared heat, and contour massage recovery loungers and beds for biohacking clubs, sports clinics, and luxury relaxation lounges.';
+    } else if (c.id === 'biopod-multisensory-capsule') {
+        title = 'Best BioPod Multisensory Wellness Capsule in India | TechFit';
+        desc = 'Multisensory wellness capsule uniting dry salt halotherapy, red light PBM, oxygen enrichment, and infrared warmth for complete cellular recovery.';
+    } else if (c.id === 'fitness-and-aqua') {
+        title = 'Best Vacuum Treadmills & Aqua Fitness Capsules in India | TechFit';
+        desc = 'Bodyshape V2 vacuum compression treadmills, infrared bikes, and aqua bike capsules for low-impact fat loss and active lymphatic recovery in India.';
+    } else if (c.id === 'dry-hydromassage-bed') {
+        title = 'Best Dry Hydromassage Beds in India | TechFit';
+        desc = 'Activ Aqua full-body dry hydromassage beds delivering touchless heated water jet therapy for circulation and deep muscle relaxation.';
+    } else if (c.id === 'ems-training-suit') {
+        title = 'Best Commercial EMS Training Suits in India | TechFit';
+        desc = 'Wireless electro-muscle stimulation (EMS) training suits delivering intense 20-minute full-body workouts with maximum joint safety.';
+    } else if (c.id === 'pelvilift-pelvic-floor') {
+        title = 'Best PelviLift Electromagnetic Pelvic Floor Chairs in India | TechFit';
+        desc = 'Non-invasive supramaximal electromagnetic pelvic floor stimulation chair (Emsella alternative) for core strengthening and clinical rehabilitation.';
+    }
+    buildSSGRoute(`alteon/${c.id}`, () => app.renderAlteonCategory(c.id), title, desc, 'og-image.jpg');
 });
 
 // 4. ALTEON PRODUCTS
