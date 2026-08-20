@@ -34,7 +34,7 @@ const guideSlugsStr = guideSlugsMatch[1].replace(/'/g, '"');
 let guideSlugs = [];
 try { guideSlugs = JSON.parse(guideSlugsStr); } catch(e){}
 
-const dedicatedRoutes = ['hyrox', 'alteon'];
+const dedicatedRoutes = ['hyrox', 'alteon', 'pilates'];
 let failed = false;
 
 console.log("=== Validating validPages against router ===");

@@ -62,6 +62,55 @@ const OG_CARDIO = BASE + '/og/og-cardio.jpg';
 const OG_FLOORING = BASE + '/og/og-flooring.jpg';
 
 const SEO_MAP = {
+  'hyperbaric-chamber-price-india': {
+    title: 'Hyperbaric Chamber Price in India (2026): Monoplace, Multiplace & Hard-Shell Cost Breakdown',
+    desc: 'Indicative hyperbaric oxygen therapy (HBOT) chamber prices in India for 2026. Compare monoplace vs multiplace, 1.5 vs 2.0 ATA, hard-shell vs soft-shell, room requirements and AMC costs.',
+    h1: 'Hyperbaric Chamber Price in India (2026): Monoplace, Multiplace & Hard-Shell Cost Breakdown',
+    lastmod: '2026-08-19',
+    img: OG_WELLNESS
+  },
+  'hyperbaric-chamber-manufacturers-india': {
+    title: 'Hyperbaric Chamber Manufacturers & Suppliers in India (2026): Compared',
+    desc: 'Compare top hyperbaric chamber manufacturers and suppliers in India. Evaluate hard-shell vs soft-shell, ATA pressure ratings, local AMC service, and pricing for commercial and clinical facilities.',
+    h1: 'Hyperbaric Chamber Manufacturers & Suppliers in India (2026): Compared',
+    lastmod: '2026-08-19',
+    img: OG_WELLNESS
+  },
+  'cryotherapy-chamber-price-india': {
+    title: 'Whole Body Cryotherapy Chamber Price in India (2026): Electric vs Liquid Nitrogen Cost Guide',
+    desc: 'Indicative whole body cryotherapy chamber prices in India for 2026. Compare electric nitrogen-free walk-in cabins vs liquid nitrogen cryosaunas, running costs, electrical requirements and AMC.',
+    h1: 'Whole Body Cryotherapy Chamber Price in India (2026): Electric vs Liquid Nitrogen Cost Guide',
+    lastmod: '2026-08-19',
+    img: OG_WELLNESS
+  },
+  'commercial-ice-bath-cold-plunge-price-india': {
+    title: 'Commercial Cold Plunge & Ice Bath Price in India (2026): Chiller, SS316 & Sanitation Guide',
+    desc: 'Indicative commercial cold plunge and ice bath tub prices in India for 2026. Compare stainless steel 316 vs acrylic, 1HP to 2HP chillers, UV ozone filtration, and commercial spa setup costs.',
+    h1: 'Commercial Cold Plunge & Ice Bath Price in India (2026): Chiller, SS316 & Sanitation Guide',
+    lastmod: '2026-08-19',
+    img: OG_WELLNESS
+  },
+  'red-light-therapy-bed-price-india': {
+    title: 'Red Light Therapy Bed & PBM Panel Price in India (2026): Commercial Sourcing Guide',
+    desc: 'Indicative prices for medical-grade Red Light Therapy (Photobiomodulation / PBM) beds and full-body panels in India for 2026. Compare wavelengths (630nm to 940nm), irradiance, and commercial setup costs.',
+    h1: 'Red Light Therapy Bed & PBM Panel Price in India (2026): Commercial Sourcing Guide',
+    lastmod: '2026-08-19',
+    img: OG_WELLNESS
+  },
+  'infrared-sauna-price-india': {
+    title: 'Full Spectrum Infrared Sauna Price in India (2026): Canadian Hemlock & Low-EMF Cost Guide',
+    desc: 'Indicative full spectrum infrared sauna prices in India for 2026. Compare Canadian Hemlock cabins, carbon vs ceramic heaters, chromotherapy, power requirements, and turnkey spa setup.',
+    h1: 'Full Spectrum Infrared Sauna Price in India (2026): Canadian Hemlock & Low-EMF Cost Guide',
+    lastmod: '2026-08-19',
+    img: OG_WELLNESS
+  },
+  'wellness-centre-setup-cost-india': {
+    title: 'Longevity Suite & Wellness Centre Setup Cost in India (2026): Turnkey Equipment & CapEx Guide',
+    desc: 'Complete cost breakdown for setting up a commercial wellness, recovery and longevity centre in India for 2026. Explore 3 turnkey configurations spanning HBOT, cryotherapy, cold plunge, sauna, and red light.',
+    h1: 'Longevity Suite & Wellness Centre Setup Cost in India (2026): Turnkey Equipment & CapEx Guide',
+    lastmod: '2026-08-19',
+    img: OG_WELLNESS
+  },
   'hyrox': {
     title: 'Official HYROX Equipment India | Centr x HYROX Reseller — TechFit',
     desc: 'TechFit is an authorised reseller of official Centr x HYROX competition and performance equipment in India — Perform Tread, Power Sled, Octo Kettlebells, Wall Balls, Sandbags, rigs, turf and more.',
@@ -78,31 +127,31 @@ const SEO_MAP = {
   },
 
   'alteon': {
-    title: 'Alteon Wellness & Recovery | Authorised Distributor — Cryotherapy, HBOT, Red-Light',
-    desc: 'TechFit is a reseller of Alteon Wellness & Recovery. Premium recovery technology — hyperbaric oxygen chambers, cryotherapy, red-light therapy, dry-float, IHHT and more.',
-    h1: 'Alteon Wellness & Recovery Technology',
-    lastmod: '2026-05-24',
+    title: 'Alteon Wellness & Recovery India | Authorised Distributor — Cryotherapy, HBOT, Red-Light',
+    desc: 'TechFit is the Authorised Distributor (India) for Alteon Wellness & Recovery. Premium longevity tech — hyperbaric oxygen chambers (HBOT), electric cryotherapy, red-light therapy beds, cold plunges, and IHHT.',
+    h1: 'Alteon Wellness & Recovery Technology India',
+    lastmod: '2026-08-19',
     img: OG_WELLNESS
   },
   'bh-fitness': {
-    title: 'BH Fitness | Reseller — Treadmills, Bikes, Ellipticals',
-    desc: 'TechFit is a reseller of BH Fitness commercial gym equipment. Treadmills, exercise bikes, ellipticals and strength machines for gyms, hotels and corporates.',
-    h1: 'BH Fitness | Reseller — Treadmills, Bikes, Ellipticals',
-    lastmod: '2026-05-25',
+    title: 'BH Fitness India | Authorised Distributor — Commercial Treadmills, Cardio & Strength',
+    desc: 'TechFit is the Authorised Distributor (India) for BH Fitness commercial gym equipment. Premium treadmills, exercise bikes, ellipticals and strength machines for gyms, hotels and corporates.',
+    h1: 'BH Fitness India | Authorised Distributor — Commercial Gym Equipment',
+    lastmod: '2026-08-19',
     img: OG_CARDIO
   },
   'tunturi': {
-    title: 'Tunturi | Reseller — Nordic Fitness Equipment',
-    desc: 'TechFit is a reseller of Tunturi fitness equipment. From Finland — premium cardio, strength and functional-training gear for commercial and home gyms.',
-    h1: 'Tunturi | Reseller — Nordic Fitness Equipment',
-    lastmod: '2026-05-22',
+    title: 'Tunturi Fitness India | Authorised Distributor — Nordic Cardio & Commercial Strength',
+    desc: 'TechFit is the Authorised Distributor (India) for Tunturi fitness equipment. From Finland — premium cardio, strength and functional-training gear for commercial gyms and fitness clubs.',
+    h1: 'Tunturi Fitness India | Authorised Distributor — Nordic Fitness Equipment',
+    lastmod: '2026-08-19',
     img: OG_CARDIO
   },
   'california-fitness': {
-    title: 'California Fitness | Reseller — Commercial Gym Equipment',
-    desc: 'TechFit is a reseller of California Fitness. Professional-grade cardio and strength equipment for gyms, studios and fitness chains.',
-    h1: 'California Fitness | Reseller — Gym Equipment',
-    lastmod: '2026-05-20',
+    title: 'California Fitness India | Authorised Distributor — Commercial Strength & Cardio',
+    desc: 'TechFit is the Authorised Distributor (India) for California Fitness. Professional-grade selectorized and plate-loaded strength equipment for commercial gyms and fitness clubs.',
+    h1: 'California Fitness India | Authorised Distributor — Commercial Gym Equipment',
+    lastmod: '2026-08-19',
     img: OG_CARDIO
   },
   'techfit': {
@@ -245,19 +294,31 @@ const SEO_MAP = {
     lastmod: '2026-05-15',
     img: OG_WELLNESS
   },
+      'blog-recovery-suite': {
+        title: 'Inside a Commercial Recovery Suite: HBOT, Cryo & Cold Plunge | TechFit',
+        desc: 'An inside look at the spatial planning, MEP electrical engineering, and equipment selection behind an elite 2,500 sq ft turnkey commercial recovery install in India.',
+        img: 'https://www.techfittech.com/og/og-wellness.jpg',
+        h1: 'Inside a Commercial Recovery Suite: HBOT, Cryotherapy and Cold Plunge Under One Roof'
+      },
+      'blog-electric-vs-nitrogen-cryotherapy': {
+        title: 'Electric vs Nitrogen Cryotherapy Chambers India (2026 Guide) | TechFit',
+        desc: 'A factual comparison of electric nitrogen-free cryotherapy chambers vs liquid nitrogen cryosaunas — safety profiles, recurring gas logistics, and 3-year commercial ROI.',
+        img: 'https://www.techfittech.com/og/og-wellness.jpg',
+        h1: 'Electric vs Nitrogen Cryotherapy Chambers: What Indian Wellness Centres Should Buy in 2026'
+      },
   'gym-flooring': {
     title: 'Gym Flooring India | TechFit — Rubber, Turf & Interlocking Tiles',
     desc: 'Professional gym flooring solutions — rubber rolls, interlocking tiles, artificial turf and shock-absorbent mats. Supplied and installed by TechFit across India.',
     h1: 'Gym Flooring India | TechFit Rubber & Turf Solutions',
-    lastmod: '2026-05-25',
+    lastmod: '2026-08-19',
     img: OG_FLOORING
   },
-  'flooring': {
-    title: 'Gym Flooring India | TechFit — Rubber, Turf & Interlocking Tiles',
-    desc: 'Professional gym flooring solutions — rubber rolls, interlocking tiles, artificial turf and shock-absorbent mats. Supplied and installed by TechFit across India.',
-    h1: 'Gym Flooring India | TechFit Rubber & Turf Solutions',
-    lastmod: '2026-05-25',
-    img: OG_FLOORING
+  'pilates': {
+    title: 'Pilates Equipment India | Commercial Reformers, Cadillacs & Towers — TechFit',
+    desc: 'Commercial Pilates reformers, cadillacs, chairs and towers for studios, physio clinics and luxury gyms in India. Turnkey setup & pan-India service by TechFit.',
+    h1: 'Commercial Pilates Equipment India',
+    lastmod: '2026-08-19',
+    img: OG_WELLNESS
   },
   'get-a-quote': {
     title: 'Get a Free Gym & Wellness Consultation | TechFit India',
@@ -597,34 +658,6 @@ const SEO_MAP = {
     h1: 'Corporate Gym & Wellness Setup in Hyderabad',
     lastmod: '2026-06-15',
     img: OG_CARDIO
-  },
-  'matrix-fitness-alternative-india': {
-    title: 'Matrix Fitness Alternative India | BH Fitness vs Matrix Fitness',
-    desc: 'Comparing Matrix Fitness with BH Fitness for commercial gyms in India. Analyze pricing, biomechanics, motor reliability, and after-sales service.',
-    h1: 'The Best Alternative to Matrix Fitness in India: Why Commercial Gyms Choose BH Fitness',
-    lastmod: '2026-06-15',
-    img: OG_WEIGHTS
-  },
-  'cybex-alternative-india': {
-    title: 'Cybex Alternative India | California Fitness vs Cybex',
-    desc: 'Comparing Cybex with California Fitness for commercial gyms in India. Analyze pricing, biomechanics, motor reliability, and after-sales service.',
-    h1: 'The Best Alternative to Cybex in India: Why Commercial Gyms Choose California Fitness',
-    lastmod: '2026-06-15',
-    img: OG_WEIGHTS
-  },
-  'hammer-strength-alternative-india': {
-    title: 'Hammer Strength Alternative India | California Fitness vs Hammer Strength',
-    desc: 'Comparing Hammer Strength with California Fitness for commercial gyms in India. Analyze pricing, biomechanics, motor reliability, and after-sales service.',
-    h1: 'The Best Alternative to Hammer Strength in India: Why Commercial Gyms Choose California Fitness',
-    lastmod: '2026-06-15',
-    img: OG_WEIGHTS
-  },
-  'nautilus-alternative-india': {
-    title: 'Nautilus Alternative India | Tunturi vs Nautilus',
-    desc: 'Comparing Nautilus with Tunturi for commercial gyms in India. Analyze pricing, biomechanics, motor reliability, and after-sales service.',
-    h1: 'The Best Alternative to Nautilus in India: Why Commercial Gyms Choose Tunturi',
-    lastmod: '2026-06-15',
-    img: OG_WEIGHTS
   },
   'cosco-vs-bh-fitness': {
     title: 'Cosco Alternative India | BH Fitness vs Cosco',
@@ -2740,10 +2773,10 @@ const NOSCRIPT_FALLBACKS = {
     <main style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <article>
       <header>
-        <h1>BH Fitness | Reseller</h1>
+        <h1>BH Fitness | Authorised Distributor (India)</h1>
       </header>
       <section>
-      <p>TechFit is a reseller of <strong>BH Fitness</strong> commercial gym equipment. Headquartered in Spain, BH Fitness is a leading global commercial fitness brand, delivering world-class biomechanics, structural durability, and cloud-connected display consoles.</p>
+      <p>TechFit is the Authorised Distributor (India) for <strong>BH Fitness</strong> commercial gym equipment. Headquartered in Spain, BH Fitness is a leading global commercial fitness brand, delivering world-class biomechanics, structural durability, and cloud-connected display consoles.</p>
       
       </section>
       <section>
@@ -2771,10 +2804,10 @@ const NOSCRIPT_FALLBACKS = {
     <main style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <article>
       <header>
-        <h1>Tunturi Fitness | Reseller</h1>
+        <h1>Tunturi Fitness | Authorised Distributor (India)</h1>
       </header>
       <section>
-      <p>TechFit is a reseller of <strong>Tunturi</strong> fitness equipment. From Finland, Tunturi is a pioneer in Nordic fitness innovation, designing high-quality cardio, strength, and functional training gear for commercial fitness studios, corporate gyms, residential amenities, and premium home setups since 1922.</p>
+      <p>TechFit is the Authorised Distributor (India) for <strong>Tunturi</strong> fitness equipment. From Finland, Tunturi is a pioneer in Nordic fitness innovation, designing high-quality cardio, strength, and functional training gear for commercial fitness studios, corporate gyms, residential amenities, and premium home setups since 1922.</p>
       
       </section>
       <section>
@@ -2796,10 +2829,10 @@ const NOSCRIPT_FALLBACKS = {
     <main style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <article>
       <header>
-        <h1>California Fitness | Commercial Strength &amp; Cardio Sourcing</h1>
+        <h1>California Fitness | Authorised Distributor (India)</h1>
       </header>
       <section>
-      <p>TechFit is a reseller of <strong>California Fitness</strong> equipment, delivering heavy-duty commercial cardio, selectorized strength stacks, plate-loaded machines, and free-weight benches designed specifically for commercial health clubs, high-traffic corporate fitness facilities, and personal training studios.</p>
+      <p>TechFit is the Authorised Distributor (India) for <strong>California Fitness</strong> equipment, delivering heavy-duty commercial cardio, selectorized strength stacks, plate-loaded machines, and free-weight benches designed specifically for commercial health clubs, high-traffic corporate fitness facilities, and personal training studios.</p>
       <p>California Fitness is built for high durability, smooth movement paths, and ease of serviceability. It provides gym owners with a highly reliable, heavy-use alternative for commercial fitness facilities, backed by TechFit\'s direct installation, layout planning, and AMC service framework.</p>
       <p><strong>Contact TechFit for California Fitness:</strong><br>
         Email: info@techfittech.com<br>
@@ -3230,7 +3263,7 @@ const NOSCRIPT_FALLBACKS = {
       </table>
 
       <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">4. The Alteon Elysion Sourcing Solution: Luxury Design, Clinical Safety</h2>
-      <p>TechFit provides clinical recovery centers, premium longevity clinics, and professional athletic academies with a highly optimized alternative. Through our partnership as a reseller of <strong>Alteon Wellness</strong>, we supply the state-of-the-art Elysion Hard-Shell Hyperbaric Chamber, structured across three key pillars:</p>
+      <p>TechFit provides clinical recovery centers, premium longevity clinics, and professional athletic academies with a highly optimized alternative. Through our partnership as a distributor of <strong>Alteon Wellness</strong>, we supply the <a href="/alteon/hyperbaric-oxygen-chambers">Alteon Hyperbaric Oxygen Chambers Range</a>, including the Elysion Hard-Shell Chamber, structured across three key pillars:</p>
       
       <h4>A. Premium Hard-Shell Wellness Sourcing</h4>
       <p>The Alteon Elysion represents the absolute pinnacle of premium wellness-grade hyperbaric engineering. It features a spacious, elegant hard-shell cabin with custom dark-matte finishes, premium wood-accented interiors, large viewports, and integrated multimedia setups. By sourcing Alteon through TechFit, you get clinical-grade performance up to 2.0 ATA in a luxury design that perfectly complements premium recovery clinics and private longevity suites, avoiding sterile hospital-style medical designs.</p>
@@ -3255,8 +3288,8 @@ const NOSCRIPT_FALLBACKS = {
       <h4>What safety protocols are mandatory for hyperbaric chamber operations in India?</h4>
       <p>Because hyperbaric chambers operate under high pressures and utilize high-purity oxygen, strict safety protocols must be followed. These include using certified automatic over-pressure relief valves, conducting weekly seal and emergency depressurization tests, and installing real-time internal carbon dioxide and oxygen concentration sensors. Sourcing your chamber through a partner with direct local engineering support like TechFit ensures that your technicians are thoroughly trained, your safety valves are regularly calibrated, and your facility operates in strict compliance with safety guidelines.</p>
 
-      <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">6. Plan a Clinical Recovery Suite &amp; Request Planning Parameters</h2>
-      <p>Transform your wellness center or athletic academy with the state-of-the-art Alteon Elysion hard-shell hyperbaric chamber, backed by India's most responsive engineering team. Contact our design experts in Mumbai today to review 2D spatial layouts, discuss mechanical installation requirements, or request a factual turnkey quotation for your recovery suite.</p>
+      <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">6. Plan a Clinical Recovery Suite &amp; Sourcing Resources</h3>
+      <p>Transform your wellness center or athletic academy with the state-of-the-art <a href="/alteon/hyperbaric-oxygen-chambers">Alteon Elysion hard-shell hyperbaric chamber</a>, backed by India's most responsive engineering team. Contact our design experts in Mumbai today to review 2D spatial layouts, explore our <a href="/hyperbaric-chamber-price-india">Hyperbaric Chamber Price Guide</a>, compare suppliers in our <a href="/hyperbaric-chamber-manufacturers-india">HBOT Manufacturers Guide</a>, and view the full <a href="/alteon/hyperbaric-oxygen-chambers">Alteon Hyperbaric Oxygen Chambers Range</a>.</p>
       
       <div style="background-color:#f8f9fa;padding:1.5rem;border-left:4px solid #0056b3;margin-top:1.5rem;border-radius:4px;">
         <p style="margin:0;font-weight:bold;color:#111;">TechFit Sourcing &amp; Engineering Office</p>
@@ -3442,8 +3475,8 @@ const NOSCRIPT_FALLBACKS = {
       <h4>Why is local engineering support critical for cryotherapy chamber operations?</h4>
       <p>Because whole-body cryotherapy chambers operate at severe sub-zero temperatures (-110°C to -140°C), the thermal stress on compressors, gaskets, and electronic controllers is extremely high. Regular preventative maintenance, diagnostic audits, and immediate access to replacement parts are required to ensure continuous performance. TechFit operates its own nationwide engineering service and maintains a deep stock of certified spare parts centrally in Mumbai, guaranteeing rapid dispatch and zero operational downtime.</p>
 
-      <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">7. Plan a Clinical Recovery Suite &amp; Request Planning Parameters</h2>
-      <p>Transform your wellness center or athletic academy with the state-of-the-art Alteon Cryoblast Pro electric whole-body cryotherapy chamber, backed by India's most responsive engineering team. Contact our design experts in Mumbai today to review 2D spatial layouts, discuss mechanical installation requirements, or request a factual turnkey quotation for your recovery suite.</p>
+      <h3 style="font-size:1.5rem;color:#222;margin-top:2rem;">7. Plan a Clinical Recovery Suite &amp; Sourcing Resources</h3>
+      <p>Transform your wellness center or athletic academy with the state-of-the-art <a href="/alteon/whole-body-cryotherapy">Alteon Cryoblast Pro electric whole-body cryotherapy chamber</a>, backed by India's most responsive engineering team. Contact our design experts in Mumbai today to review 2D spatial layouts, explore our <a href="/cryotherapy-chamber-price-india">Cryotherapy Chamber Price Guide</a>, check our <a href="/wellness-centre-setup-cost-india">Wellness Centre Setup Cost Guide</a>, and view the full <a href="/alteon/whole-body-cryotherapy">Alteon Whole-Body Cryotherapy Range</a>.</p>
       
       <div style="background-color:#f8f9fa;padding:1.5rem;border-left:4px solid #0056b3;margin-top:1.5rem;border-radius:4px;">
         <p style="margin:0;font-weight:bold;color:#111;">TechFit Sourcing &amp; Engineering Office</p>
@@ -3784,18 +3817,78 @@ function generatePage(html, route, seo) {
 
   const imgAltText = seo.imgAlt || routeImageAlts[route] || `${seo.h1 || seo.title} Preview`;
   const additionalOgTags = `\n  <meta property="og:image:type" content="image/jpeg">\n  <meta property="og:image:alt" content="${escapeHtml(imgAltText)}">\n  <meta name="twitter:image:alt" content="${escapeHtml(imgAltText)}">`;
-  out = out.replace(/<\/head>/i, `${additionalOgTags}\n</head>`);
+  // Ensure only the single matching hero image is preloaded per route
+  out = out.replace(/<link\s+rel="preload"\s+as="image"[^>]*>\n?/gi, '');
+  const heroPreloadMap = {
+    'home': '/assets/images/other/img-7edcc2dfb4.webp',
+    'mma-cages': '/assets/images/hero-mma.webp',
+    'alteon': '/assets/images/alteon/hero-revital.webp',
+    'hyrox': '/assets/images/hyrox/perform-tread-1.jpg'
+  };
+  const routeHero = heroPreloadMap[route];
+  if (routeHero) {
+    const preloadTag = `  <link rel="preload" as="image" href="${routeHero}" type="image/webp" fetchpriority="high">\n`;
+    out = out.replace(/<\/head>/i, `${preloadTag}</head>`);
+  }
 
   // Replace the default H1 with route-specific H1
   if (seo.h1) {
-    const h1Block = `<h2 class="sr-h1" style="position:absolute;left:-9999px" id="main-h1">${escapeHtml(seo.h1)}</h2>`;
+    const h1Block = `<span class="sr-h1" style="position:absolute;left:-9999px" id="main-h1">${escapeHtml(seo.h1)}</span>`;
     out = out.replace(/<h2 class="sr-h1" style="position:absolute;left:-9999px" id="main-h1">.*?<\/h2>/, h1Block);
   }
 
 
   // Inject the static JSON-LD schema into the <head> of this route copy!
-  if (SCHEMAS[route]) {
-    const enriched = enrichSchema(route, SCHEMAS[route]);
+  let routeSchema = SCHEMAS[route];
+  if (!routeSchema && GUIDES_DATA[route]) {
+    const g = GUIDES_DATA[route];
+    routeSchema = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": `https://www.techfittech.com/${route}#article`,
+          "isPartOf": { "@id": `https://www.techfittech.com/${route}#webpage` },
+          "headline": g.h1,
+          "description": g.desc || seo.desc,
+          "inLanguage": "en-IN",
+          "author": [{ "@id": "https://www.techfittech.com/about#aliasgarpotia" }, { "@id": "https://www.techfittech.com/#organization" }],
+          "publisher": { "@id": "https://www.techfittech.com/#organization" },
+          "datePublished": g.publishedDate || "2026-08-19",
+          "dateModified": "2026-08-19"
+        },
+        {
+          "@type": "WebPage",
+          "@id": `https://www.techfittech.com/${route}#webpage`,
+          "url": `https://www.techfittech.com/${route}`,
+          "name": seo.title || g.h1,
+          "description": g.desc || seo.desc,
+          "inLanguage": "en-IN"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.techfittech.com/about#aliasgarpotia"
+        }
+      ]
+    };
+    if (g.faqs && g.faqs.length > 0) {
+      routeSchema["@graph"].push({
+        "@type": "FAQPage",
+        "inLanguage": "en-IN",
+        "mainEntity": g.faqs.map(f => ({
+          "@type": "Question",
+          "name": f.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.a
+          }
+        }))
+      });
+    }
+  }
+
+  if (routeSchema) {
+    const enriched = enrichSchema(route, routeSchema);
     const schemaBlock = `\n  <script type="application/ld+json">\n${JSON.stringify(enriched, null, 2)}\n  </script>`;
     out = out.replace(/<\/head>/i, `${schemaBlock}\n</head>`);
   }
@@ -3828,7 +3921,7 @@ function generatePage(html, route, seo) {
       ${g.htmlContent}
       
       <h3>Frequently Asked Questions</h3>
-      ${g.faqs.map(f => `      <p><strong>Q: ${escapeHtml(f.q)}</strong><br>A: ${escapeHtml(f.a)}</p>\\n`).join('')}
+      ${g.faqs.map(f => `      <p><strong>Q: ${escapeHtml(f.q)}</strong><br>A: ${escapeHtml(f.a)}</p>`).join('\n')}
       
       <p><strong>Contact TechFit India:</strong><br>
         Email: info@techfittech.com<br>
@@ -3841,8 +3934,8 @@ function generatePage(html, route, seo) {
   } else {
     noscriptBlock = NOSCRIPT_FALLBACKS[route] || `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
-      <h2>TechFit | Gym Setup, Equipment &amp; Wellness Solutions</h2>
-      <p>Gym, wellness &amp; sports infrastructure partner with 800+ installations delivered. Reseller for BH Fitness, Tunturi, and California Fitness. Authorised Distributor for Alteon Wellness.</p>
+      <div style="font-size:1.5rem;font-weight:bold;margin-bottom:1rem;color:#111">TechFit | Gym Setup, Equipment &amp; Wellness Solutions</div>
+      <p>India's gym, wellness &amp; sports infrastructure partner with 800+ installations delivered. Authorised Distributor (India) for BH Fitness, Tunturi, California Fitness, and Alteon Wellness. Sales Partner for Merrithew. Based in Mumbai.</p>
       <p><strong>Services:</strong> Gym design &amp; layout, commercial equipment supply, custom fabrication of
         combat-sports equipment and CrossFit rigs, wellness and recovery technology from
         Alteon, installation, after-sales and AMC. Sister concern TechFit Active provides managed gym operations.</p>
@@ -3893,7 +3986,7 @@ function generatePage(html, route, seo) {
   if (schema && schema['@graph']) {
     for (const entity of schema['@graph']) {
       if (entity['@type'] === 'FAQPage' && entity.mainEntity) {
-        fallbackText += `<h2>Frequently Asked Questions</h2><ul>`;
+        fallbackText += `<div style="font-size:1.3rem;font-weight:bold;margin-top:1.5rem;margin-bottom:0.5rem;color:#111">Frequently Asked Questions</div><ul>`;
         for (const item of entity.mainEntity) {
           if (item['@type'] === 'Question' && item.acceptedAnswer) {
             fallbackText += `<li><strong>${item.name}</strong><br>${item.acceptedAnswer.text}</li>`;
@@ -4097,12 +4190,45 @@ for (const [route, seo] of Object.entries(SEO_MAP)) {
 
 console.log("\n🚀 Building Alteon & Hyrox Server-Rendered Pages...");
 
-function buildSSGRoute(route, renderFunc, title, desc, img) {
-    let appHtml = renderFunc();
-    const schemas = app.getServerSchemas ? app.getServerSchemas() : [];
+// Category FAQ Generator for Alteon Wellness Categories
+function getCategoryFaqs(c) {
+  const catName = c.name;
+  return [
+    {
+      q: `How much do commercial ${catName.toLowerCase()} cost in India?`,
+      a: `Indicative pricing for commercial-grade ${catName.toLowerCase()} in India depends on model configuration, chamber size, and custom integration. For customized B2B quotation, site feasibility assessment, and import pricing, contact TechFit at +91 98201 66910 or info@techfittech.com.`
+    },
+    {
+      q: `What electrical and spatial requirements are needed for ${catName.toLowerCase()}?`,
+      a: `Most Alteon ${catName.toLowerCase()} operate on standard commercial single-phase (220V/16A) or 3-phase power supplies, requiring dedicated room ventilation and level non-slip flooring. TechFit conducts a preliminary site survey to provide exact electrical and architectural schematics.`
+    },
+    {
+      q: `Who can install and use Alteon ${catName.toLowerCase()} in India?`,
+      a: `Alteon systems are engineered for 5-star hotel spas, luxury gym recovery suites, sports physiotherapy centres, longevity biohacking clinics, and high-end private residences across India.`
+    },
+    {
+      q: `What is the delivery and installation timeline across Indian metro cities?`,
+      a: `TechFit manages turnkey delivery, electrical commissioning, and technician staff training within 2 to 4 weeks across Mumbai, Delhi NCR, Bangalore, Hyderabad, Chennai, Pune, Kolkata, and Ahmedabad.`
+    },
+    {
+      q: `What warranty, spare parts, and AMC coverage does TechFit provide?`,
+      a: `TechFit provides a comprehensive manufacturer warranty, localized spare parts inventory in Mumbai, and dedicated annual maintenance contract (AMC) service engineers across India.`
+    }
+  ];
+}
+
+function buildSSGRoute(route, renderFunc, title, desc, img, extraSchemas = [], extraHtml = '') {
+    let appHtml = renderFunc() + (extraHtml || '');
+    let schemas = app.getServerSchemas ? app.getServerSchemas() : [];
+    if (extraSchemas && extraSchemas.length > 0) {
+        schemas = schemas.concat(extraSchemas);
+    }
+    
+    // Normalize image URL to absolute
+    const normImg = (img && img.startsWith('http')) ? img : `${BASE}/${(img || 'og-image.jpg').replace(/^\/+/, '')}`;
     
     // Add to SEO MAP for sitemaps!
-    SEO_MAP[route] = { title, desc, h1: title, img };
+    SEO_MAP[route] = { title, desc, h1: title, img: normImg, lastmod: '2026-08-19' };
     
     let baseHtml = generatePage(sourceHtml, route, SEO_MAP[route]);
     baseHtml = injectAppHtml(baseHtml, appHtml, schemas);
@@ -4114,12 +4240,61 @@ function buildSSGRoute(route, renderFunc, title, desc, img) {
 }
 
 // 1. HYROX
-buildSSGRoute('hyrox', () => app.renderHyrox(), 'Official HYROX Equipment India | TechFit', 'TechFit is the authorised reseller of official Centr x HYROX equipment in India. Buy HYROX equipment, rigs, and turnkey setups. Compare with Rogue Fitness.', 'assets/images/hyrox/perform-tread-1.jpg');
+buildSSGRoute('hyrox', () => app.renderHyrox(), 'Official HYROX Equipment India | TechFit', 'TechFit is the authorised reseller of official Centr x HYROX equipment in India. Buy HYROX equipment, rigs, and turnkey setups. Compare with Rogue Fitness.', `${BASE}/assets/images/hyrox/perform-tread-1.jpg`);
 
 // 2. ALTEON HUB
-buildSSGRoute('alteon', () => app.renderAlteonHub(), 'Alteon Wellness & Recovery India', 'TechFit is the authorised distributor for Alteon Wellness in India.', 'og-image.jpg');
+buildSSGRoute('alteon', () => app.renderAlteonHub(), 'Alteon Wellness India | HBOT, Cryotherapy, Cold Plunge & Red Light — Official Distributor TechFit', 'TechFit is the authorised distributor for Alteon Wellness in India — commercial hyperbaric oxygen chambers, cryotherapy, red-light therapy, and longevity tech.', `${BASE}/og/og-wellness.jpg`);
 
-// 3. ALTEON CATEGORIES
+const CAT_HEAD_TERMS = {
+  'hyperbaric-oxygen-chambers': 'Hyperbaric Oxygen Chamber',
+  'whole-body-cryotherapy': 'Whole-Body Cryotherapy Chamber',
+  'red-light-and-photobiomodulation': 'Red Light Therapy Bed',
+  'cold-plunge-and-ice-baths': 'Commercial Cold Plunge',
+  'full-spectrum-infrared-saunas': 'Full-Spectrum Infrared Sauna',
+  'dry-float-therapy': 'Dry Float Therapy',
+  'dry-floatation': 'Dry Floatation Therapy',
+  'altitude-and-ihht-training': 'IHHT Altitude Training',
+  'active-altitude-and-ihht': 'IHHT Altitude Training',
+  'pemf-and-frequency-therapy': 'PEMF Therapy',
+  'recovery-loungers-and-beds': 'PEMF Recovery Lounger',
+  'hydrogen-therapy': 'Molecular Hydrogen Therapy',
+  'lymphatic-drainage-and-compression': 'Lymphatic Compression Therapy',
+  'multisensory-somadome': 'Multisensory Meditation Pod',
+  'biopod-multisensory-capsule': 'Multisensory Wellness Capsule',
+  'hydro-massage': 'Dry Hydrotherapy Massage Bed',
+  'dry-hydromassage-bed': 'Dry Hydrotherapy Massage Bed',
+  'vacuum-therapy': 'Vacuum Therapy Treadmill',
+  'fitness-and-aqua': 'Vacuum Treadmill & Aqua Capsule',
+  'targeted-cryo-and-localized': 'Local Cryotherapy Machine',
+  'ems-and-pelvic-floor': 'EMS & Pelvic Floor Chair',
+  'ems-training-suit': 'Commercial EMS Training Suit',
+  'pelvilift-pelvic-floor': 'Pelvic Floor Chair',
+  'metabolic-and-body-composition': '3D Body Composition Scanner'
+};
+
+function getProductFaqs(p, c) {
+  if (p.faqs && p.faqs.length > 0) return p.faqs;
+  const prodName = p.name || 'Alteon Equipment';
+  return [
+    {
+      q: `Is the ${prodName} available for purchase and installation in India?`,
+      a: `Yes. TechFit is the Authorised Distributor for Alteon in India. We supply the ${prodName} nationwide across Mumbai, Delhi NCR, Bangalore, Hyderabad, Chennai, Pune, Kolkata, Ahmedabad, and other major cities with turnkey delivery, certified installation, and local AMC support.`
+    },
+    {
+      q: `What commercial facilities are best suited for the ${prodName}?`,
+      a: `The ${prodName} is engineered for heavy-duty commercial deployment in luxury longevity suites, biohacking clubs, sports recovery centres, 5-star hotel spas, medical wellness clinics, and high-end residential clubhouses.`
+    },
+    {
+      q: `What warranty and AMC maintenance support is provided in India?`,
+      a: `TechFit provides full manufacturer warranty coverage, certified in-house engineering support, and an extensive local spare parts repository in Mumbai. We offer rapid-response annual maintenance contracts (AMC) to guarantee maximum operational uptime.`
+    },
+    {
+      q: `Does TechFit provide site planning and installation for the ${prodName}?`,
+      a: `Yes. Our engineering team conducts comprehensive mechanical, electrical, and plumbing (MEP) site evaluations, space layout planning, power balancing, and hands-on operational training for your facility staff.`
+    }
+  ];
+}
+
 // 3. ALTEON CATEGORIES
 ALTEON_DATA.categories.forEach(c => {
     let title = `Best ${c.name} in India | TechFit Alteon`;
@@ -4164,34 +4339,118 @@ ALTEON_DATA.categories.forEach(c => {
         title = 'Best PelviLift Electromagnetic Pelvic Floor Chairs in India | TechFit';
         desc = 'Non-invasive supramaximal electromagnetic pelvic floor stimulation chair (Emsella alternative) for core strengthening and clinical rehabilitation.';
     }
-    buildSSGRoute(`alteon/${c.id}`, () => app.renderAlteonCategory(c.id), title, desc, 'og-image.jpg');
+
+    const catProducts = ALTEON_DATA.products.filter(p => p.categoryId === c.id);
+    const itemListSchema = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": `Alteon ${c.name} Range`,
+      "description": desc,
+      "itemListElement": catProducts.map((p, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "name": p.name,
+        "url": `${BASE}/alteon/${c.id}/${p.id}`,
+        "image": `${BASE}/${p.image.replace(/^\/+/, '')}`,
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "url": `${BASE}/alteon/${c.id}/${p.id}`,
+          "seller": { "@id": "https://www.techfittech.com/#organization" }
+        }
+      }))
+    };
+
+    const catFaqs = getCategoryFaqs(c);
+    const catFaqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": catFaqs.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    };
+
+    const catFaqHtml = `
+    <section class="sec" style="background:#111113;color:#ecece9;padding:60px 28px;border-top:1px solid rgba(255,255,255,0.09)">
+      <div style="max-width:1200px;margin:0 auto">
+        <h3 style="font-family:'Archivo',sans-serif;font-size:28px;text-transform:uppercase;margin-bottom:24px;color:#8fd0a6">${escapeHtml(c.name)} &mdash; Frequently Asked Questions</h3>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          ${catFaqs.map(f => `
+            <div style="background:#1a1a1d;border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:20px 24px">
+              <h4 style="font-size:17px;font-weight:700;color:#fff;margin-bottom:8px">${escapeHtml(f.q)}</h4>
+              <p style="font-size:15px;color:#a3a39c;line-height:1.6;margin:0">${escapeHtml(f.a)}</p>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </section>`;
+
+    buildSSGRoute(`alteon/${c.id}`, () => app.renderAlteonCategory(c.id), title, desc, `${BASE}/og/og-wellness.jpg`, [itemListSchema, catFaqSchema], catFaqHtml);
 });
 
 // 4. ALTEON PRODUCTS
 ALTEON_DATA.products.forEach(p => {
-    buildSSGRoute(`alteon/${p.categoryId}/${p.id}`, () => app.renderAlteonProduct(p.categoryId, p.id), `${p.name} India | Alteon`, p.overview ? p.overview.substring(0, 150) : `${p.name} supplied by TechFit.`, p.image);
+    const c = ALTEON_DATA.categories.find(cat => cat.id === p.categoryId);
+    const headTerm = CAT_HEAD_TERMS[p.categoryId] || (c ? c.name : 'Wellness & Recovery');
+    const prodTitle = `${p.name} — ${headTerm} India | TechFit (Alteon)`;
+    const prodImg = (p.image && p.image.startsWith('http')) ? p.image : `${BASE}/${(p.image || 'og-image.jpg').replace(/^\/+/, '')}`;
+    
+    const prodSchema = {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "@id": `${BASE}/alteon/${p.categoryId}/${p.id}#product`,
+      "name": p.name,
+      "category": c ? c.name : "Wellness & Recovery",
+      "brand": {
+        "@type": "Brand",
+        "name": "Alteon"
+      },
+      "image": prodImg,
+      "description": p.overview || `${p.name} commercial grade wellness & recovery equipment supplied by TechFit.`,
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "url": `${BASE}/alteon/${p.categoryId}/${p.id}`,
+        "areaServed": "IN",
+        "seller": {
+          "@id": "https://www.techfittech.com/#organization"
+        }
+      }
+    };
+
+    const prodFaqs = getProductFaqs(p, c);
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": prodFaqs.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    };
+
+    const extraSchemas = [prodSchema, faqSchema];
+    const extraHtml = `
+      <section class="sec" style="background:#111113;color:#ecece9;padding:60px 28px;border-top:1px solid rgba(255,255,255,0.09)">
+        <div style="max-width:1200px;margin:0 auto">
+          <h3 style="font-family:'Archivo',sans-serif;font-size:28px;text-transform:uppercase;margin-bottom:24px;color:#8fd0a6">${escapeHtml(p.name)} &mdash; Frequently Asked Questions</h3>
+          <div style="display:flex;flex-direction:column;gap:16px">
+            ${prodFaqs.map(f => `
+              <div style="background:#1a1a1d;border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:20px 24px">
+                <h4 style="font-size:17px;font-weight:700;color:#fff;margin-bottom:8px">${escapeHtml(f.q)}</h4>
+                <p style="font-size:15px;color:#a3a39c;line-height:1.6;margin:0">${escapeHtml(f.a)}</p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </section>`;
+
+    buildSSGRoute(`alteon/${p.categoryId}/${p.id}`, () => app.renderAlteonProduct(p.categoryId, p.id), prodTitle, p.overview ? p.overview.substring(0, 150) : `${p.name} supplied by TechFit.`, prodImg, extraSchemas, extraHtml);
 });
-
-// 5. ALTEON ADDONS (Alternatives)
-// buildSSGRoute('alteon/alternatives', () => app.renderAlteonAlternativeHub(), 'Alteon Alternatives in India', 'Compare Alteon wellness and recovery options against competitors.', 'og-image.jpg');
-// if (ALTEON_DATA.alternatives) {
-//     ALTEON_DATA.alternatives.forEach(a => {
-//         buildSSGRoute(`alteon/alternatives/${a.slug}`, () => app.renderAlteonAlternative(a.slug), `${a.name} Alternative India`, `Comparing ${a.name}? Discover the Alteon alternative supplied by TechFit.`, 'og-image.jpg');
-//     });
-// }
-
-// 6. ALTEON ADDONS (Guides)
-// buildSSGRoute('alteon/guides', () => app.renderAlteonGuideHub(), 'Alteon Guides & Knowledge Base', 'Guides and information on building wellness and recovery suites.', 'og-image.jpg');
-// if (ALTEON_DATA.guides) {
-//     ALTEON_DATA.guides.forEach(g => {
-//         buildSSGRoute(`alteon/guides/${g.slug}`, () => app.renderAlteonGuide(g.slug), g.title, g.meta || g.title, 'og-image.jpg');
-//     });
-// }
-
-// 7. ALTEON ADDONS (Comparisons)
-// ALTEON_DATA.categories.forEach(c => {
-//     buildSSGRoute(`alteon/compare/${c.id}`, () => app.renderAlteonCompare(c.id), `Compare Alteon ${c.name}`, `Compare specifications for all Alteon ${c.name} models.`, 'og-image.jpg');
-// });
 
 const escapeXml = escapeHtml;
 // 4. Generate dynamic sitemaps (Pages, Images, and Sitemap Index)
@@ -4201,49 +4460,41 @@ function generateSitemaps(seoMap) {
   pagesXml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
   
   // Add homepage first
-  pagesXml += `    <url><loc>https://www.techfittech.com/</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n`;
+  pagesXml += `    <url><loc>https://www.techfittech.com/</loc><lastmod>2026-08-19</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n`;
   
-  for (const [route, seo] of Object.entries(seoMap)) {
-    if (seo.noindex) continue;
-    
-    const priority = route.startsWith('blog-') ? '0.6' : (route === 'get-a-quote' ? '0.9' : '0.8');
-    const changefreq = route.startsWith('blog-') ? 'monthly' : 'weekly';
-    const lastmod = seo.lastmod || '2026-05-29';
-    
-    pagesXml += `    <url><loc>https://www.techfittech.com/${route}</loc><lastmod>${lastmod}</lastmod><changefreq>${changefreq}</changefreq><priority>${priority}</priority></url>\n`;
-  }
-  
-  // Dynamic Alteon Paths
-  try {
-    const alteonDataPath = './public/assets/alteon-data.js';
-    if (fs.existsSync(alteonDataPath)) {
-      let code = fs.readFileSync(alteonDataPath, 'utf8');
-      code = code.replace('window.ALTEON_DATA = ', 'const ALTEON_DATA = ');
-      code += '\nmodule.exports = ALTEON_DATA;';
-      fs.writeFileSync('./scripts/temp-alteon.cjs', code);
-      const ALTEON_DATA = require('./temp-alteon.cjs');
-      
-      ALTEON_DATA.categories.forEach(c => {
-        pagesXml += `    <url><loc>https://www.techfittech.com/alteon/${c.id}</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n`;
-      });
-      
-      ALTEON_DATA.products.forEach(p => {
-        const cat = ALTEON_DATA.categories.find(c => c.id === p.categoryId);
-        if (cat) {
-            pagesXml += `    <url><loc>https://www.techfittech.com/alteon/${cat.id}/${p.id}</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n`;
-        }
-      });
-      fs.unlinkSync('./scripts/temp-alteon.cjs');
-    }
-  } catch (e) {
-    console.warn("Failed to inject Alteon sitemap paths", e);
-  }
+  const redirectSources = new Set([
+    'flooring',
+    'matrix-fitness-alternative-india',
+    'cybex-alternative-india',
+    'hammer-strength-alternative-india',
+    'nautilus-alternative-india',
+    'about-us',
+    'jordan-fitness',
+    'bendis-pilates',
+    'padel-pickleball'
+  ]);
 
+  const addedUrls = new Set(['https://www.techfittech.com/']);
+
+  for (const [route, seo] of Object.entries(seoMap)) {
+    if (seo.noindex || redirectSources.has(route)) continue;
+    
+    const loc = `https://www.techfittech.com/${route}`;
+    if (addedUrls.has(loc)) continue;
+    addedUrls.add(loc);
+
+    const priority = route.startsWith('blog-') ? '0.6' : (route === 'get-a-quote' ? '0.9' : (route.startsWith('alteon/') && route.split('/').length > 2 ? '0.6' : '0.8'));
+    const changefreq = route.startsWith('blog-') ? 'monthly' : 'weekly';
+    const lastmod = seo.lastmod || '2026-08-19';
+    
+    pagesXml += `    <url><loc>${loc}</loc><lastmod>${lastmod}</lastmod><changefreq>${changefreq}</changefreq><priority>${priority}</priority></url>\n`;
+  }
+  
   pagesXml += '</urlset>\n';
   
   fs.writeFileSync(path.join(DIST, 'sitemap-pages.xml'), pagesXml, 'utf8');
   fs.writeFileSync(path.join(PUBLIC, 'sitemap-pages.xml'), pagesXml, 'utf8');
-  console.log('✔ Dynamic sitemap-pages.xml successfully generated in public/ and dist/');
+  console.log(`✔ Dynamic sitemap-pages.xml (${addedUrls.size} unique URLs) successfully generated in public/ and dist/`);
 
   // B. Images Sitemap
   let imagesXml = '<?xml version="1.0" encoding="UTF-8"?>\n';
@@ -4267,7 +4518,6 @@ function generateSitemaps(seoMap) {
     'aqua': "SS316 marine-grade underwater treadmill pool therapy systems",
     'wellness-solutions': "Alteon recovery suite: monoplace HBOT and cryotherapy chambers",
     'gym-flooring': "Heavy-duty sound-insulated commercial gym rubber floor tiles",
-    'flooring': "Heavy-duty sound-insulated commercial gym rubber floor tiles",
     'alteon': "Alteon hard-shell Elysion HBOT monoplace clinical oxygen chamber",
     'techfit': "TechFit bespoke manufacturing factory floor and steel rigs",
     'alternatives/technogym-india': "Technogym India commercial gym cardio and selectorized strength alternative",
@@ -4278,20 +4528,25 @@ function generateSitemaps(seoMap) {
     'alternatives/usi-cosco-techfit-cages': "USI and Cosco stock combat cages vs TechFit custom fabricated octagons"
   };
 
+  const addedImgUrls = new Set();
   for (const [route, seo] of Object.entries(seoMap)) {
-    if (seo.noindex) continue;
+    if (seo.noindex || redirectSources.has(route)) continue;
     
-    const imgUrl = seo.img.startsWith('http') ? seo.img : `${BASE}/${seo.img}`;
+    const loc = `https://www.techfittech.com/${route}`;
+    if (addedImgUrls.has(loc)) continue;
+    addedImgUrls.add(loc);
+
+    const imgUrl = (seo.img && seo.img.startsWith('http')) ? seo.img : `${BASE}/${(seo.img || 'og-image.jpg').replace(/^\/+/, '')}`;
     const title = seo.h1 || seo.title;
     const caption = routeImageAlts[route] || seo.desc;
 
-    imagesXml += `  <url>\n    <loc>https://www.techfittech.com/${route}</loc>\n    <image:image>\n      <image:loc>${escapeXml(imgUrl)}</image:loc>\n      <image:title>${escapeXml(title)}</image:title>\n      <image:caption>${escapeXml(caption)}</image:caption>\n    </image:image>\n  </url>\n`;
+    imagesXml += `  <url>\n    <loc>${loc}</loc>\n    <image:image>\n      <image:loc>${escapeXml(imgUrl)}</image:loc>\n      <image:title>${escapeXml(title)}</image:title>\n      <image:caption>${escapeXml(caption)}</image:caption>\n    </image:image>\n  </url>\n`;
   }
   imagesXml += '</urlset>\n';
   
   fs.writeFileSync(path.join(DIST, 'sitemap-images.xml'), imagesXml, 'utf8');
   fs.writeFileSync(path.join(PUBLIC, 'sitemap-images.xml'), imagesXml, 'utf8');
-  console.log('✔ Dynamic sitemap-images.xml successfully generated in public/ and dist/');
+  console.log(`✔ Dynamic sitemap-images.xml successfully generated in public/ and dist/`);
 
   // C. Sitemap Index
   let indexXml = '<?xml version="1.0" encoding="UTF-8"?>\n';

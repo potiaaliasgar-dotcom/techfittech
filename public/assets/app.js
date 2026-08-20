@@ -188,7 +188,7 @@ async function submitEmbeddedQuote(projectType) {
     const SEO_MAP = {
       'home': {
         title: 'TechFit | Gym, Wellness & Sports Infrastructure',
-        desc: 'TechFit is a one-stop gym, wellness and sports infrastructure partner. Reseller for BH Fitness, Tunturi, and California Fitness. Authorised Distributor for Alteon Wellness.',
+        desc: 'TechFit is a one-stop gym, wellness and sports infrastructure partner. Authorised Distributor (India) for BH Fitness, Tunturi, California Fitness, and Alteon Wellness. Sales Partner for Merrithew.',
         img: DEFAULT_OG_IMG
       },
       'alteon': {
@@ -217,18 +217,18 @@ async function submitEmbeddedQuote(projectType) {
         img: DEFAULT_OG_IMG
       },
       'bh-fitness': {
-        title: 'BH Fitness | Reseller — Treadmills, Bikes, Ellipticals',
-        desc: 'TechFit is a reseller of BH Fitness commercial gym equipment. Treadmills, exercise bikes, ellipticals and strength machines for gyms, hotels and corporates.',
+        title: 'BH Fitness India | Authorised Distributor — Commercial Treadmills, Cardio & Strength',
+        desc: 'TechFit is the Authorised Distributor (India) for BH Fitness commercial gym equipment. Premium treadmills, exercise bikes, ellipticals and strength machines for gyms, hotels and corporates.',
         img: DEFAULT_OG_IMG
       },
       'tunturi': {
-        title: 'Tunturi | Reseller — Nordic Fitness Equipment',
-        desc: 'TechFit is a reseller of Tunturi fitness equipment. From Finland — premium cardio, strength and functional-training gear for commercial and home gyms.',
+        title: 'Tunturi Fitness India | Authorised Distributor — Nordic Cardio & Commercial Strength',
+        desc: 'TechFit is the Authorised Distributor (India) for Tunturi fitness equipment. From Finland — premium cardio, strength and functional-training gear for commercial gyms and fitness clubs.',
         img: DEFAULT_OG_IMG
       },
       'california-fitness': {
-        title: 'California Fitness | Reseller — Commercial Gym Equipment',
-        desc: 'TechFit is a reseller of California Fitness. Professional-grade cardio and strength equipment for gyms, studios and fitness chains.',
+        title: 'California Fitness India | Authorised Distributor — Commercial Strength & Cardio',
+        desc: 'TechFit is the Authorised Distributor (India) for California Fitness. Professional-grade selectorized and plate-loaded strength equipment for commercial gyms and fitness clubs.',
         img: DEFAULT_OG_IMG
       },
       'techfit': {
@@ -574,8 +574,8 @@ function renderAlteonStyle(isServer = typeof window === 'undefined') {
 @media(max-width:860px){.alteon-page .model{grid-template-columns:1fr;gap:24px}.alteon-page .model:nth-child(even) .m-img{order:0}}
 .alteon-page .m-img{background:radial-gradient(120% 120% at 50% 15%,#202024,#0d0d0f);border:1px solid var(--line);border-radius:var(--r);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:22px}
 .alteon-page .m-img img{width:100%;height:100%;object-fit:contain}
-.alteon-page .m-info h2{font-size:13px;color:var(--green);font-family:'Archivo';letter-spacing:.18em}
-.alteon-page .m-info .mtitle{font-family:'Playfair Display',serif;color:var(--gold);font-size:34px;font-weight:600;margin:6px 0 4px;line-height:1.1}
+.alteon-page .m-info .m-eyebrow,.alteon-page .m-info h2{font-size:13px;color:var(--green);font-family:'Archivo';letter-spacing:.18em;text-transform:uppercase;display:block}
+.alteon-page .m-info .mtitle,.alteon-page .m-info h3.mtitle{font-family:'Playfair Display',serif;color:var(--gold);font-size:34px;font-weight:600;margin:6px 0 4px;line-height:1.1}
 .alteon-page .m-info .msub{color:var(--dim);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-family:'Archivo';font-weight:600}
 .alteon-page .m-info .mov{color:var(--muted);font-size:15px;margin:16px 0}
 .alteon-page .spectbl{width:100%;border-collapse:collapse;margin-top:6px}
@@ -754,8 +754,8 @@ function renderAlteonCategory(catId) {
                 ${pictureTag('/' + p.image, esc(p.name), '', true)}
             </div>
             <div class="m-info">
-                <h2>${esc(c.eyebrow)}</h2>
-                <div class="mtitle">${esc(p.name)}</div>
+                <span class="m-eyebrow">${esc(c.eyebrow)}</span>
+                <h3 class="mtitle">${esc(p.name)}</h3>
                 ${p.model ? `<div class="msub">Model . ${esc(p.model)}</div>` : ''}
                 ${ov}
                 ${specs ? `<table class="spectbl">${specs}</table>` : ''}
@@ -2321,7 +2321,7 @@ ${footer()}
 <section class="sec" style="background:#09090b;color:#fff">
   <section class="sec-in" style="text-align:center">
     <img src="${CLIENT_LOGOS['Alteon']}" alt="Alteon Wellness &amp; Recovery" style="max-height:56px;width:auto;margin:0 auto 2rem;display:block" loading="lazy">
-    <p style="color:rgba(255,255,255,.6);max-width:520px;margin:1rem auto 2rem;font-size:.92rem;line-height:1.7">TechFit is a reseller of Alteon Wellness &amp; Recovery. Speak to us about integrating Alteon&#x2019;s technology into your gym, hotel, or wellness centre.</p>
+    <p style="color:rgba(255,255,255,.6);max-width:520px;margin:1rem auto 2rem;font-size:.92rem;line-height:1.7">TechFit is the Authorised Distributor (India) for Alteon Wellness &amp; Recovery. Speak to us about integrating Alteon&#x2019;s technology into your gym, hotel, or wellness centre.</p>
       <button class="btn-red" style="font-size:1rem;padding:1rem 2.5rem" onclick="go('contact')">Book a Consultation</button>
     </div>
   </section>
@@ -2342,7 +2342,7 @@ ${footer()}
       <span style="color:var(--red);">India\'s Premier</span> <br>Fitness &amp; Wellness <br>Infrastructure Partner
     </h1>
     <p class="hero-sub" style="color:rgba(255,255,255,0.9); font-size:1.2rem; max-width:800px; margin:0 auto 2rem;">
-      800+ installations delivered. Commercial fitness equipment setup, wellness and recovery equipment, gym and sports flooring, functional rigs, and professional MMA cages. Reseller for BH Fitness and Tunturi. Authorised Distributor for Alteon Wellness.
+      800+ installations delivered. Commercial fitness equipment setup, wellness and recovery equipment, gym and sports flooring, functional rigs, and professional MMA cages. Authorised Distributor (India) for BH Fitness, Tunturi, and California Fitness. Authorised Distributor for Alteon Wellness.
     </p>
     <div class="hero-btns" style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; align-items:center;">
       <button class="btn-red" onclick="go('contact')">Get a Custom B2B Quote</button>
@@ -2396,7 +2396,7 @@ ${footer()}
         </div>
         <div class="pillar-num">02</div>
         <h3>Commercial Equipment Supply</h3>
-        <p>Reseller of BH Fitness, Tunturi and California Fitness. Sales Partner for Merrithew. Plus TechFit's own fabricated range.</p>
+        <p>Authorised Distributor (India) for BH Fitness, Tunturi and California Fitness. Sales Partner for Merrithew. Plus TechFit's own fabricated range.</p>
       </div>
       <div class="pillar" role="button" tabindex="0" onclick="go('services')">
         <div class="pillar-icon">
@@ -2776,24 +2776,24 @@ ${footer()}
     const brandMeta = {
       'BH Fitness': {
         slug: 'bh-fitness',
-        badge: "Europe's No.1 Fitness Brand · Reseller",
-        desc: "BH Fitness is Europe\'s leading fitness equipment brand, trusted by over 7,000 commercial gyms worldwide. As a reseller, we supply the full BH Fitness range — MOVEMIA connected cardio, INERTIA commercial line, PL Series selectorized strength, AFT360 functional training, and more.",
+        badge: "Europe's No.1 Fitness Brand · Authorised Distributor (India)",
+        desc: "BH Fitness is Europe\'s leading fitness equipment brand, trusted by over 7,000 commercial gyms worldwide. As the Authorised Distributor in India, we supply the full BH Fitness range — MOVEMIA connected cardio, INERTIA commercial line, PL Series selectorized strength, AFT360 functional training, and more.",
         why: ['MOVEMIA — connected cardio with Smart Focus app & entertainment integration', 'INERTIA — full commercial cardio and selectorized strength range', 'PL SERIES — premium plate-loaded strength equipment', 'AFT360 — modular functional training stations', 'Supplied to MMA Matrix, 5-star hotels, residential towers and premium gyms across India'],
         sortOrder: ['MOVEMIA', 'INERTIA', 'PL SERIES', 'AFT360', 'INDOOR CYCLING', 'OTHERS'],
         logo: (typeof CLIENT_LOGOS !== 'undefined' && CLIENT_LOGOS['BH Fitness Brand']) || ''
       },
       'Tunturi': {
         slug: 'tunturi',
-        badge: 'Finnish Precision Since 1922 · Reseller',
-        desc: 'Tunturi has been engineering premium fitness equipment in Finland since 1922. Reseller for the full commercial range — treadmills, ellipticals, rowers and spin bikes; and the complete strength line including SUBLIME (pin-loaded selectorised), STERLING (plate-loaded), PA and EVOLUTION series, plus benches, racks, power racks and free weights.',
-        why: ['Over a century of Finnish engineering heritage', 'Commercial-grade steel construction and warranties', 'Clean Scandinavian aesthetics perfect for hotels, boutique studios and residential amenity gyms', 'Full cardio and strength range including Sublime, Sterling, PA and Evolution series', 'Reseller — local service, local stock, local spares'],
+        badge: 'Finnish Precision Since 1922 · Authorised Distributor (India)',
+        desc: 'Tunturi has been engineering premium fitness equipment in Finland since 1922. Authorised Distributor in India for the full commercial range — treadmills, ellipticals, rowers and spin bikes; and the complete strength line including SUBLIME (pin-loaded selectorised), STERLING (plate-loaded), PA and EVOLUTION series, plus benches, racks, power racks and free weights.',
+        why: ['Over a century of Finnish engineering heritage', 'Commercial-grade steel construction and warranties', 'Clean Scandinavian aesthetics perfect for hotels, boutique studios and residential amenity gyms', 'Full cardio and strength range including Sublime, Sterling, PA and Evolution series', 'Authorised Distributor (India) — local service, local stock, local spares'],
         sortOrder: ['SUBLIME', 'STERLING', 'PA', 'EVOLUTION', 'TriMotion', 'STRENGTH', 'FREE WEIGHTS', 'CARDIO'],
         logo: (typeof CLIENT_LOGOS !== 'undefined' && CLIENT_LOGOS['Tunturi Brand']) || ''
       },
       'California Fitness': {
         slug: 'california-fitness',
-        badge: 'Commercial Grade · Reseller',
-        desc: 'California Fitness delivers premium commercial treadmills, ellipticals, bikes and a comprehensive strength range — organised into JF, CL, V, CF, HK, EG and PT series for every gym type and budget. Trusted by over 1,500 gyms across India.',
+        badge: 'Commercial Grade · Authorised Distributor (India)',
+        desc: 'California Fitness delivers premium commercial treadmills, ellipticals, bikes and a comprehensive strength range — organised into JF, CL, V, CF, HK, EG and PT series for every gym type and budget. Trusted by over 1,500 gyms across India. Supplied by TechFit as Authorised Distributor in India.',
         why: ['Premium commercial cardio — JF Series motorised treadmills, ellipticals and bikes', 'Strength engineered in multiple tiers — CL, V, CF, HK, EG, PT series for light to heavy commercial use', 'Best-in-class price-to-performance in the Indian commercial market', 'Full warranty + nationwide spares and service network', 'Popular choice for franchise gyms, residential amenity gyms, institutions and hotels'],
         sortOrder: ['JF SERIES', 'E SERIES', 'R SERIES', 'U SERIES', 'PREMIUM CARDIO', 'JS SERIES', 'JAB SERIES', 'JR SERIES', 'MG SERIES', 'V SERIES', 'CF SERIES', 'CL SERIES', 'HK SERIES', 'EG SERIES', 'PT SERIES', 'HG SERIES', 'OTHERS'],
         logo: (typeof CLIENT_LOGOS !== 'undefined' && CLIENT_LOGOS['California Brand']) || ''
@@ -3465,7 +3465,7 @@ ${footer()}`;
       </div>
       <div class="service-card">
         <h3>Equipment Supply</h3>
-        <p>Reseller of BH Fitness, Tunturi, and California Fitness plus TechFit's own fabricated range.</p>
+        <p>Authorised Distributor (India) for BH Fitness, Tunturi, and California Fitness plus TechFit's own fabricated range.</p>
         <ul class="service-steps">
           <li>Needs assessment and brand recommendation</li>
           <li>Detailed quote with full specifications</li>
@@ -3859,7 +3859,7 @@ ${footer()}`;
       <div class="pillar">
         <div class="pillar-num">01</div>
         <h3>Equipment Sourcing</h3>
-        <p>Reseller for BH Fitness, Tunturi and California Fitness &mdash; covering every commercial and residential budget segment.</p>
+        <p>Authorised Distributor (India) for BH Fitness, Tunturi and California Fitness &mdash; covering every commercial and residential budget segment.</p>
       </div>
       <div class="pillar">
         <div class="pillar-num">02</div>
@@ -4751,7 +4751,7 @@ ${footer()}
     <p style="margin-bottom:1.5rem">For operators and developers prioritizing operational uptime, high durability, and local responsiveness, TechFit provides a distinct strategic advantage. TechFit stands as India's premier B2B fitness partner by offering:</p>
     
     <h3 style="color:#fff;font-size:1.3rem;margin:1.5rem 0 0.5rem">1. Direct-Import Value with Europe's Leading Biomechanics</h3>
-    <p style="margin-bottom:1.5rem">TechFit is a B2B reseller of <strong>BH Fitness Spain</strong>—Europe's leading commercial gym manufacturer. This direct partnership bypasses multi-tier middleman markups, giving you world-class biomechanics, fluid movements, and cloud-connected cardio consoles at a highly optimized capital expenditure. You secure elite European engineering while conserving capital for other facility amenities.</p>
+    <p style="margin-bottom:1.5rem">TechFit is the Authorised Distributor in India for <strong>BH Fitness Spain</strong>—Europe's leading commercial gym manufacturer. This direct partnership bypasses multi-tier middleman markups, giving you world-class biomechanics, fluid movements, and cloud-connected cardio consoles at a highly optimized capital expenditure. You secure elite European engineering while conserving capital for other facility amenities.</p>
 
     <h3 style="color:#fff;font-size:1.3rem;margin:1.5rem 0 0.5rem">2. Bespoke In-House Manufacturing &amp; Customization</h3>
     <p style="margin-bottom:1.5rem">While imported brands limit you to fixed designs, TechFit operates a heavy industrial steel manufacturing facility in Mumbai. We design and build modular, heavy-duty CrossFit functional rigs, custom Olympic free weights, and competition-grade MMA cages/boxing rings to your exact site layout, custom color specifications, and club branding.</p>
@@ -5203,7 +5203,7 @@ ${footer()}
     <p style="margin-bottom:1.5rem">For operators and developers prioritizing operational uptime, high durability, and local responsiveness, TechFit provides a distinct strategic advantage. TechFit stands as India's premier B2B fitness partner by offering:</p>
     
     <h3 style="color:#fff;font-size:1.3rem;margin:1.5rem 0 0.5rem">1. Direct-Import Value with Europe's Leading Biomechanics</h3>
-    <p style="margin-bottom:1.5rem">TechFit is a B2B reseller of <strong>BH Fitness Spain</strong> and <strong>Tunturi Finland</strong>. This direct partnership bypasses multi-tier middleman markups, giving you world-class biomechanics, fluid movements, and cloud-connected cardio consoles at a highly optimized capital expenditure. You secure elite European engineering while conserving capital for other facility amenities.</p>
+    <p style="margin-bottom:1.5rem">TechFit is the Authorised Distributor in India for <strong>BH Fitness Spain</strong> and <strong>Tunturi Finland</strong>. This direct partnership bypasses multi-tier middleman markups, giving you world-class biomechanics, fluid movements, and cloud-connected cardio consoles at a highly optimized capital expenditure. You secure elite European engineering while conserving capital for other facility amenities.</p>
 
     <h3 style="color:#fff;font-size:1.3rem;margin:1.5rem 0 0.5rem">2. Bespoke In-House Manufacturing &amp; Customization</h3>
     <p style="margin-bottom:1.5rem">While imported brands limit you to fixed designs, TechFit operates a heavy industrial steel manufacturing facility in Mumbai. We design and build modular, heavy-duty CrossFit functional rigs, custom Olympic free weights, and competition-grade MMA cages/boxing rings to your exact site layout, custom color specifications, and club branding.</p>
@@ -6270,6 +6270,673 @@ ${footer()}
     faqs: [{"q":"Can I use Decathlon Domyos equipment in a commercial gym?","a":"Home-use ranges like Domyos are not warranted or engineered for continuous multi-user footfall, so they wear faster and can pose safety and downtime issues in commercial settings. Commercial-grade equipment is the appropriate choice."},{"q":"What makes equipment commercial-grade?","a":"Heavier frames, higher-duty components and consoles rated for constant use, backed by commercial warranties and spare-part support. TechFit supplies this class of equipment with installation and AMC."}],
     htmlContent: `<h2>Decathlon Domyos vs Commercial Gym Equipment</h2> <p>Decathlon's Domyos range is designed and priced for home and light personal use. It is excellent for that purpose, but a commercial gym, hotel fitness centre or society clubhouse sees continuous, multi-user footfall that home equipment is not warranted or engineered for — leading to faster wear, downtime and safety concerns. Commercial-grade cardio and strength equipment uses heavier frames, higher-duty motors and consoles rated for constant use.</p> <h2>What Commercial-Grade Sourcing Looks Like</h2> <p>TechFit supplies commercial-rated equipment (BH Fitness, Tunturi, California Fitness and more) with warranties and spare-part support intended for institutional use, plus custom functional rigs. Every project includes certified installation and an Annual Maintenance Contract, so a facility built for footfall stays safe and operational — the total-cost difference a consumer range cannot match.</p>`
   },
+  'hyperbaric-chamber-price-india': {
+  "badge": "2026 Cost & Sourcing Guide",
+  "h1": "Hyperbaric Chamber Price in India (2026): Monoplace, Multiplace & Hard-Shell Cost Breakdown",
+  "desc": "Commercial hyperbaric oxygen therapy (HBOT) chamber pricing parameters in India for 2026. Compare monoplace vs multiplace, 1.5 vs 2.0 ATA, hard-shell vs soft-shell, room requirements and AMC costs.",
+  "author": "Ali Asgar Potia",
+  "publishedDate": "2026-08-19",
+  "related": [
+    "alteon",
+    "wellness-solutions",
+    "wellness-centre-setup-cost-india",
+    "cryotherapy-chamber-price-india"
+  ],
+  "faqs": [
+    {
+      "q": "How much does a commercial hyperbaric chamber cost in India?",
+      "a": "The total investment for a commercial hyperbaric oxygen chamber in India depends on several core engineering drivers: structural shell type (rigid steel and acrylic cabin vs soft fabric bag), maximum certified working pressure (1.5 ATA to 2.0 ATA), seating capacity (monoplace single-recliner vs multiplace 2 to 4-seater executive cabin), integrated medical-grade PSA oxygen concentrators, internal climate control, and turnkey MEP installation with local AMC coverage. TechFit provides a formal quotation based on configuration and site conditions — request a quote."
+    },
+    {
+      "q": "What is the difference between monoplace and multiplace HBOT chambers?",
+      "a": "Monoplace chambers accommodate a single individual lying down or seated in a private recliner, offering private luxury for boutique longevity suites and clinics. Multiplace chambers seat 2 to 4 individuals simultaneously with individual oxygen headsets, offering higher client throughput and shared revenue per session for high-traffic wellness clubs and sports facilities."
+    },
+    {
+      "q": "Why choose a hard-shell Alteon chamber over a soft-shell inflatable chamber?",
+      "a": "Hard-shell chambers built with carbon steel and acrylic withstand operating pressures from 1.5 to 2.0 ATA, delivering the clinical-grade tissue oxygen saturation required for cellular repair and mitochondrial therapy. Soft-shell fabric chambers are typically limited to 1.3 ATA, suffer from zipper fatigue, and cannot achieve true clinical hyperbaric oxygenation."
+    },
+    {
+      "q": "Is HBOT legal and compliant for wellness centres and sports clubs in India?",
+      "a": "Yes. Wellness centres, longevity lounges, biohacking facilities, and sports performance institutes across India can legally install and operate hyperbaric chambers when using certified equipment with appropriate operator training and safety protocols provided by TechFit."
+    },
+    {
+      "q": "What space, electrical, and room preparation are required?",
+      "a": "A standard 1-seater monoplace chamber requires a room size of approximately 10ft x 12ft (120 sq ft), dedicated single-phase 220V/16A power supply, continuous air-conditioning (21°C to 24°C), and non-slip level flooring. TechFit conducts preliminary architectural surveys and provides exact CAD electrical schematics."
+    },
+    {
+      "q": "Which is the best hyperbaric chamber supplier in India?",
+      "a": "TechFit is the Authorised Distributor for Alteon Wellness in India, providing hospital-grade hard-shell chambers, turnkey delivery, certified technician installation, and pan-India Annual Maintenance Contracts (AMC) with dedicated spare parts inventory in Mumbai."
+    }
+  ],
+  "htmlContent": `
+    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(143,208,166,0.3);border-radius:12px;padding:1.5rem;margin-bottom:2rem">
+      <p style="margin:0;font-size:1.1rem;line-height:1.7;color:#fff"><strong>Summary for Facility Planners:</strong> TechFit is the Authorised Distributor (India) for Alteon commercial hyperbaric oxygen chambers (HBOT). Commercial hard-shell hyperbaric chamber investment in India depends on working pressure (1.5 ATA to 2.0 ATA), cabin capacity (monoplace vs multiplace), and integrated medical-grade oxygen concentrators. TechFit provides turnkey delivery, room layout planning, and pan-India AMC.</p>
+    </div>
+
+    <div style="margin-bottom:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+      <a class="btn btn-primary" href="/contact" style="text-decoration:none">Request Custom HBOT Proposal</a>
+      <a class="btn btn-ghost" href="/alteon/hyperbaric-oxygen-chambers" style="text-decoration:none">View Alteon HBOT Models →</a>
+    </div>
+
+    <h2>Hyperbaric Chamber Configuration Breakdown in India (2026)</h2>
+    <p>Hyperbaric Oxygen Therapy (HBOT) has transitioned from hospital burn units to mainstream longevity suites, luxury real estate amenities, and elite sports recovery centres. Investing in an HBOT system requires understanding chamber architecture, ATA pressure thresholds, and long-term operating parameters.</p>
+
+    <div style="overflow-x:auto;margin:2rem 0">
+      <table style="width:100%;border-collapse:collapse;text-align:left;min-width:650px">
+        <thead>
+          <tr style="background:rgba(255,255,255,0.1);border-bottom:2px solid var(--red)">
+            <th style="padding:1rem">Chamber Category</th>
+            <th style="padding:1rem">Operating Pressure</th>
+            <th style="padding:1rem">Capacity</th>
+            <th style="padding:1rem">Commercial Quotation</th>
+            <th style="padding:1rem">Ideal Facility Use Case</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+            <td style="padding:1rem"><strong>Alteon Elysion 1-Seater Hard-Shell</strong></td>
+            <td style="padding:1rem">1.5 to 1.9 ATA</td>
+            <td style="padding:1rem">1 Person (Monoplace Recliner)</td>
+            <td style="padding:1rem;color:#8fd0a6;font-weight:700">Pricing on request</td>
+            <td style="padding:1rem">Longevity clinics, boutique gyms, luxury villas</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+            <td style="padding:1rem"><strong>Alteon Multiplace Executive Cabin</strong></td>
+            <td style="padding:1rem">1.5 to 2.0 ATA</td>
+            <td style="padding:1rem">2 to 4 Persons</td>
+            <td style="padding:1rem;color:#8fd0a6;font-weight:700">Pricing on request</td>
+            <td style="padding:1rem">5-star hotel spas, sports academies, wellness clubs</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+            <td style="padding:1rem"><strong>Soft-Shell Mild Inflatable Chamber</strong></td>
+            <td style="padding:1rem">1.3 to 1.4 ATA max</td>
+            <td style="padding:1rem">1 Person (Lying Bag)</td>
+            <td style="padding:1rem;color:#eab308;font-weight:700">Pricing on request</td>
+            <td style="padding:1rem">Entry level personal home use (Not recommended for commercial)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Key Factors That Drive Commercial HBOT Costs</h2>
+    <p>When comparing quotations from suppliers across India, five core technical parameters dictate overall investment:</p>
+    <ul>
+      <li><strong>Structural Shell Material:</strong> Heavy gauge Q345R carbon steel or high-tensile acrylic cabins engineered for thousands of pressurization cycles vs zippered TPU fabric bags.</li>
+      <li><strong>Pressure Threshold (ATA):</strong> Achieving 1.5 to 2.0 ATA requires heavy duty air compressors, precision relief valves, and reinforced structural seams.</li>
+      <li><strong>Oxygen Concentrator Purity:</strong> Medical-grade PSA oxygen generators delivering 93% to 96% O2 concentration at 10 to 15 LPM.</li>
+      <li><strong>Internal Climate Control:</strong> Integrated internal cooling systems prevent the temperature spikes naturally caused by air compression, ensuring client comfort.</li>
+      <li><strong>Turnkey Commissioning & Training:</strong> Site survey, electrical matching, staff protocol training, and annual maintenance contracts (AMC).</li>
+    </ul>
+
+    <h2>Monoplace vs Multiplace Hyperbaric Chambers</h2>
+    <p>Monoplace chambers like the <a href="/alteon/hyperbaric-oxygen-chambers/hbot-1-seater-39" style="color:#8fd0a6">Alteon HBOT 1 Seater</a> provide total privacy, allowing guests to relax, read, or listen to audio via Bluetooth. Multiplace chambers allow coaches or therapy teams to run group recovery sessions simultaneously, maximizing throughput and member engagement for commercial wellness suites.</p>
+
+    <h2>Operating Considerations & Commercial ROI</h2>
+    <p>Running an Alteon commercial HBOT chamber in India is cost-efficient and straightforward:</p>
+    <ul>
+      <li><strong>Electricity Consumption:</strong> Approximately 1.5 to 2.2 kW per hour, operating on standard single-phase electrical lines.</li>
+      <li><strong>Consumables:</strong> Periodic oxygen mask and air intake filter replacements ensuring continuous hygiene and oxygen delivery.</li>
+      <li><strong>Annual Maintenance Contract (AMC):</strong> TechFit offers comprehensive AMCs covering compressor service, valve recalibration, and emergency technician dispatch across Mumbai, Delhi NCR, Bangalore, Hyderabad, Chennai, and Pune.</li>
+      <li><strong>Commercial Returns:</strong> With high appointment margins and growing demand among biohackers, athletes, and longevity clients, facility operators achieve rapid operational breakeven.</li>
+    </ul>
+
+    <h2>Site & Utility Requirements</h2>
+    <div style="overflow-x:auto;margin:2rem 0">
+      <table style="width:100%;border-collapse:collapse;text-align:left;min-width:600px">
+        <thead>
+          <tr style="background:rgba(255,255,255,0.1);border-bottom:2px solid var(--red)">
+            <th style="padding:1rem">Requirement</th>
+            <th style="padding:1rem">Specification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+            <td style="padding:1rem"><strong>Room Size</strong></td>
+            <td style="padding:1rem">Minimum 120 sq ft (10ft x 12ft) for monoplace; 200 sq ft for multiplace</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+            <td style="padding:1rem"><strong>Electrical Load</strong></td>
+            <td style="padding:1rem">Single Phase 220V / 16A dedicated line with MCB (3-phase for multiplace)</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+            <td style="padding:1rem"><strong>Ambient Climate</strong></td>
+            <td style="padding:1rem">Dedicated room air conditioning maintaining 21°C to 24°C</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+            <td style="padding:1rem"><strong>Flooring</strong></td>
+            <td style="padding:1rem">Level, non-slip commercial surface with 500kg point-load capacity</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Explore Related Wellness & Sourcing Guides</h2>
+    <p>Read our in-depth guides for complete wellness facility planning:</p>
+    <ul>
+      <li><a href="/hyperbaric-chamber-manufacturers-india" style="color:#8fd0a6">Hyperbaric Chamber Manufacturers in India Compared</a></li>
+      <li><a href="/cryotherapy-chamber-price-india" style="color:#8fd0a6">Whole Body Cryotherapy Chamber Sourcing Guide</a></li>
+      <li><a href="/commercial-ice-bath-cold-plunge-price-india" style="color:#8fd0a6">Commercial Cold Plunge & Ice Bath Guide</a></li>
+      <li><a href="/wellness-centre-setup-cost-india" style="color:#8fd0a6">Complete Wellness Centre Setup Cost in India</a></li>
+      <li><a href="/alternatives/sechrist-hyperbaric-india" style="color:#8fd0a6">Sechrist Hyperbaric Alternative in India</a></li>
+      <li><a href="/alteon/hyperbaric-oxygen-chambers" style="color:#8fd0a6">Alteon Hyperbaric Oxygen Chambers Range</a></li>
+    </ul>
+  `
+},
+  'hyperbaric-chamber-manufacturers-india': {
+  "badge": "2026 Industry Comparison",
+  "h1": "Hyperbaric Chamber Manufacturers & Suppliers in India (2026): Compared",
+  "desc": "Compare top hyperbaric chamber manufacturers and suppliers in India. Evaluate hard-shell vs soft-shell, ATA pressure ratings, local AMC service, and commercial procurement parameters for facilities.",
+  "author": "Ali Asgar Potia",
+  "publishedDate": "2026-08-19",
+  "related": [
+    "alteon",
+    "hyperbaric-chamber-price-india",
+    "wellness-solutions",
+    "wellness-centre-setup-cost-india"
+  ],
+  "faqs": [
+    {
+      "q": "Who are the top hyperbaric oxygen chamber suppliers in India?",
+      "a": "Key suppliers in India include TechFit (Authorised Distributor for Alteon hard-shell commercial and clinical chambers), Sechrist Clinical Importers (hospital ICU installations), and various soft-shell mild HBOT trading companies on IndiaMART and TradeIndia."
+    },
+    {
+      "q": "What should facility buyers check before ordering an HBOT chamber in India?",
+      "a": "Essential verification criteria include operating pressure threshold (minimum 1.5 ATA for real cellular therapy), hard-shell steel construction, medical-grade oxygen purity (93%+), local technician presence, and direct factory warranty."
+    },
+    {
+      "q": "Why is local AMC support critical for hyperbaric chambers in India?",
+      "a": "Hyperbaric chambers rely on precision compressors, pressure sensors, and oxygen concentrators. Sourcing from unverified traders without local engineers leads to prolonged downtime when filters, seals, or valves need servicing."
+    },
+    {
+      "q": "How does Alteon compare with Sechrist in India?",
+      "a": "Sechrist manufactures specialized hospital monoplace chambers designed for clinical ICUs that require dedicated bulk liquid oxygen infrastructure. Alteon hard-shell chambers provide 1.5 to 2.0 ATA clinical-grade hyperbaric performance with self-contained, high-purity PSA oxygen concentrators, whisper-quiet internal climate control, and rapid turnkey commissioning, making them the preferred choice for commercial longevity clinics, luxury resort spas, sports performance facilities, and private estates. TechFit provides a formal quotation based on configuration and site conditions — request a quote."
+    }
+  ],
+  "htmlContent": `
+    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(143,208,166,0.3);border-radius:12px;padding:1.5rem;margin-bottom:2rem">
+      <p style="margin:0;font-size:1.1rem;line-height:1.7;color:#fff"><strong>Executive Comparison:</strong> TechFit is India's leading turnkey supplier and Authorised Distributor for Alteon hard-shell hyperbaric oxygen therapy chambers. When evaluating hyperbaric chamber manufacturers and importers in India, key differentiators include chamber construction (hard-shell steel vs soft fabric), operating pressure (up to 2.0 ATA), certified oxygen concentrators, and local engineer AMC response times.</p>
+    </div>
+
+    <div style="margin-bottom:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+      <a class="btn btn-primary" href="/contact" style="text-decoration:none">Get HBOT Sourcing Consultation</a>
+      <a class="btn btn-ghost" href="/hyperbaric-chamber-price-india" style="text-decoration:none">View HBOT Price Guide →</a>
+    </div>
+
+    <h2>Hyperbaric Chamber Supplier Landscape in India (2026)</h2>
+    <p>Selecting the right hyperbaric chamber partner dictates patient safety, therapeutic efficacy, and commercial uptime. Below is a factual comparison of the primary hyperbaric equipment providers serving the Indian market.</p>
+
+    <div style="overflow-x:auto;margin:2rem 0">
+      <table style="width:100%;border-collapse:collapse;text-align:left;min-width:700px">
+        <thead>
+          <tr style="background:rgba(255,255,255,0.1);border-bottom:2px solid var(--red)">
+            <th style="padding:1rem">Supplier / Brand</th>
+            <th style="padding:1rem">Chamber Architecture</th>
+            <th style="padding:1rem">Max ATA</th>
+            <th style="padding:1rem">Oxygen Supply</th>
+            <th style="padding:1rem">Local Service & AMC</th>
+            <th style="padding:1rem">Target Segment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);background:rgba(143,208,166,0.04)">
+            <td style="padding:1rem"><strong>TechFit (Alteon)</strong></td>
+            <td style="padding:1rem">Q345R Hard-Shell Steel & Acrylic</td>
+            <td style="padding:1rem">1.5 to 2.0 ATA</td>
+            <td style="padding:1rem">Integrated PSA 95% Concentrator</td>
+            <td style="padding:1rem;color:#8fd0a6">Direct Mumbai Spares & Pan-India Engineers</td>
+            <td style="padding:1rem">Longevity clinics, hotel spas, sports clubs, luxury villas</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+            <td style="padding:1rem"><strong>Sechrist Importers</strong></td>
+            <td style="padding:1rem">Heavy Acrylic Tube</td>
+            <td style="padding:1rem">2.0 to 3.0 ATA</td>
+            <td style="padding:1rem">Liquid Bulk Oxygen Line Required</td>
+            <td style="padding:1rem">Specialized clinical agency</td>
+            <td style="padding:1rem">Multi-specialty hospital ICU & burn departments</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+            <td style="padding:1rem"><strong>Soft-Shell Inflatable Traders</strong></td>
+            <td style="padding:1rem">Zippered TPU Fabric Bag</td>
+            <td style="padding:1rem">1.3 to 1.4 ATA max</td>
+            <td style="padding:1rem">Basic 5 LPM concentrator</td>
+            <td style="padding:1rem;color:#f87171">Third-party trader warranty only</td>
+            <td style="padding:1rem">Budget personal home care</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+            <td style="padding:1rem"><strong>Generic IndiaMART Resellers</strong></td>
+            <td style="padding:1rem">Varies (Mixed imports)</td>
+            <td style="padding:1rem">1.3 to 1.5 ATA</td>
+            <td style="padding:1rem">External generic units</td>
+            <td style="padding:1rem;color:#f87171">No verified local technician network</td>
+            <td style="padding:1rem">Unverified low-cost procurement</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Why Hard-Shell Technology is Essential for Commercial Facilities</h2>
+    <p>True cellular hyperbaric therapy requires pressures of 1.5 ATA and above. Under 1.3 ATA (the limit of soft bags), oxygen dissolution in blood plasma is minimal. Furthermore, commercial facilities running 4 to 8 sessions daily experience rapid zipper failure and air leaks with inflatable units. Hard-shell Alteon chambers provide safe, whisper-quiet operation with integrated cooling and automatic safety pressure relief valves.</p>
+
+    <h2>Turnkey Installation & Pan-India Service Support</h2>
+    <p>TechFit manages the full procurement and commissioning cycle:</p>
+    <ul>
+      <li><strong>Architectural Layout:</strong> 2D and 3D spatial zoning for patient entry, changing suites, and technician workstations.</li>
+      <li><strong>Logistics & Rigging:</strong> Specialized transport, heavy-duty floor handling, and room placement across Indian metros.</li>
+      <li><strong>Commissioning:</strong> Electrical load calibration, oxygen sensor validation, and pressure decay testing.</li>
+      <li><strong>Staff Training:</strong> Operational protocols, client onboarding checklists, and safety standard operating procedures (SOPs).</li>
+    </ul>
+
+    <h2>Explore Related Wellness Solutions</h2>
+    <ul>
+      <li><a href="/hyperbaric-chamber-price-india" style="color:#8fd0a6">Hyperbaric Chamber Sourcing Guide in India</a></li>
+      <li><a href="/alteon/hyperbaric-oxygen-chambers" style="color:#8fd0a6">Alteon Hyperbaric Oxygen Therapy Chambers</a></li>
+      <li><a href="/alternatives/sechrist-hyperbaric-india" style="color:#8fd0a6">Sechrist Clinical Hyperbaric Alternative India</a></li>
+      <li><a href="/wellness-centre-setup-cost-india" style="color:#8fd0a6">Complete Wellness Centre Setup Cost Guide</a></li>
+    </ul>
+  `
+},
+  'cryotherapy-chamber-price-india': {
+  "badge": "2026 Cost & Sourcing Guide",
+  "h1": "Whole Body Cryotherapy Chamber Price in India (2026): Electric vs Liquid Nitrogen Cost Guide",
+  "desc": "Whole body cryotherapy chamber procurement parameters in India for 2026. Compare electric nitrogen-free walk-in cabins vs liquid nitrogen cryosaunas, running costs, electrical requirements and AMC.",
+  "author": "Ali Asgar Potia",
+  "publishedDate": "2026-08-19",
+  "related": [
+    "alteon",
+    "wellness-solutions",
+    "wellness-centre-setup-cost-india",
+    "hyperbaric-chamber-price-india"
+  ],
+  "faqs": [
+    {
+      "q": "What is the price of a whole body cryotherapy chamber in India?",
+      "a": "The cost of whole-body cryotherapy equipment in India is determined by key technical specifications: electric compressor-driven technology vs liquid nitrogen (LN2) delivery, maximum sub-zero temperature depth (-110°C to -140°C), cabin volume (single walk-in vs multi-person chamber), 3-phase electrical condensing units, spatial ventilation integration, and comprehensive AMC engineering support. Electric nitrogen-free chambers provide a significantly lower total cost of ownership by eliminating recurring cryogenic tanker refill bills. TechFit provides a formal quotation based on configuration and site conditions — request a quote."
+    },
+    {
+      "q": "Why is electric nitrogen-free cryotherapy better than liquid nitrogen?",
+      "a": "Electric cryotherapy operates on 100% breathable refrigerated air with zero risk of nitrogen asphyxiation. It requires zero recurring liquid nitrogen refill deliveries, dramatically reducing monthly operating expenditure to standard commercial electricity usage while enabling safe whole-body immersion including head and neck. TechFit provides a formal quotation based on configuration and site conditions — request a quote."
+    },
+    {
+      "q": "What electrical supply is needed for an electric cryo chamber?",
+      "a": "Electric cryotherapy cabins require a commercial 3-phase 415V / 32A power connection and an external heat dissipation condenser unit."
+    },
+    {
+      "q": "How many clients can use a cryotherapy chamber per hour?",
+      "a": "Sessions last 2 to 3 minutes, allowing a commercial electric chamber to serve 12 to 15 clients per hour with rapid temperature recovery between sessions."
+    }
+  ],
+  "htmlContent": `
+    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(143,208,166,0.3);border-radius:12px;padding:1.5rem;margin-bottom:2rem">
+      <p style="margin:0;font-size:1.1rem;line-height:1.7;color:#fff"><strong>Summary for Facility Planners:</strong> Whole body cryotherapy chamber investment in India depends on technology selection (electric nitrogen-free walk-in cabins vs traditional liquid nitrogen cryosaunas), chamber capacity, cooling range (-110°C to -140°C), and facility spatial layout. TechFit supplies and installs Alteon electric nitrogen-free cryotherapy chambers with turnkey installation, zero consumable gas costs, and pan-India warranty across Mumbai, Delhi NCR, Bangalore, and all metros.</p>
+    </div>
+
+    <div style="margin-bottom:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+      <a class="btn btn-primary" href="/contact" style="text-decoration:none">Request Cryo Chamber Proposal</a>
+      <a class="btn btn-ghost" href="/alteon/whole-body-cryotherapy" style="text-decoration:none">View Alteon Cryo Chambers →</a>
+    </div>
+
+    <h2>Whole Body Cryotherapy Configurations in India (2026)</h2>
+    <div style="overflow-x:auto;margin:2rem 0">
+      <table style="width:100%;border-collapse:collapse;text-align:left;min-width:650px">
+        <thead>
+          <tr style="background:rgba(255,255,255,0.1);border-bottom:2px solid var(--red)">
+            <th style="padding:1rem">Cryo Technology</th>
+            <th style="padding:1rem">Temperature Range</th>
+            <th style="padding:1rem">Commercial Quotation</th>
+            <th style="padding:1rem">Monthly Consumable Cost</th>
+            <th style="padding:1rem">Safety Profile</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);background:rgba(143,208,166,0.04)">
+            <td style="padding:1rem"><strong>Alteon Electric Nitrogen-Free Cabin</strong></td>
+            <td style="padding:1rem">-110°C to -140°C</td>
+            <td style="padding:1rem;color:#8fd0a6;font-weight:700">Pricing on request</td>
+            <td style="padding:1rem">Zero gas refills required</td>
+            <td style="padding:1rem">100% Breathable Clean Air (Maximum Safety)</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+            <td style="padding:1rem"><strong>Liquid Nitrogen (LN2) Cryosauna</strong></td>
+            <td style="padding:1rem">-120°C to -160°C</td>
+            <td style="padding:1rem;color:#eab308;font-weight:700">Pricing on request</td>
+            <td style="padding:1rem;color:#f87171">Recurring gas supply logistics</td>
+            <td style="padding:1rem">Head exposed only; nitrogen gas asphyxiation risk</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Electric vs Liquid Nitrogen: Total Cost of Ownership</h2>
+    <p>While liquid nitrogen cryosaunas have a lower upfront hardware cost, recurring cryogenic gas tanker logistics in Indian cities make them significantly more expensive over a 3-year operating horizon. Electric cryotherapy eliminates recurring tanker refill disruptions and delivers true whole-body cooling including head and neck exposure for vagus nerve stimulation.</p>
+
+    <h2>Explore Related Wellness Sourcing Guides</h2>
+    <ul>
+      <li><a href="/hyperbaric-chamber-price-india" style="color:#8fd0a6">Hyperbaric Oxygen Chamber Sourcing Guide</a></li>
+      <li><a href="/commercial-ice-bath-cold-plunge-price-india" style="color:#8fd0a6">Commercial Cold Plunge Guide</a></li>
+      <li><a href="/alternatives/mecotec-cryotherapy-india" style="color:#8fd0a6">Mecotec Cryotherapy Alternative in India</a></li>
+      <li><a href="/wellness-centre-setup-cost-india" style="color:#8fd0a6">Complete Wellness Centre Setup Cost Guide</a></li>
+      <li><a href="/alteon/whole-body-cryotherapy" style="color:#8fd0a6">Alteon Whole Body Cryotherapy Range</a></li>
+    </ul>
+  `
+},
+  'commercial-ice-bath-cold-plunge-price-india': {
+  "badge": "2026 Cost & Sourcing Guide",
+  "h1": "Commercial Cold Plunge & Ice Bath Price in India (2026): Chiller, SS316 & Sanitation Guide",
+  "desc": "Commercial cold plunge and ice bath tub procurement guide in India for 2026. Compare stainless steel 316 vs acrylic, 1HP to 2HP chillers, UV ozone filtration, and commercial spa setup.",
+  "author": "Ali Asgar Potia",
+  "publishedDate": "2026-08-19",
+  "related": [
+    "alteon",
+    "wellness-solutions",
+    "wellness-centre-setup-cost-india",
+    "cryotherapy-chamber-price-india"
+  ],
+  "faqs": [
+    {
+      "q": "What is the cost of a commercial cold plunge tub in India?",
+      "a": "Commercial cold plunge pricing in India is driven by the cooling unit capacity (industrial 1.0HP to 2.0HP chillers capable of holding 3°C water in high Indian ambient temperatures), tub metallurgy (marine-grade SS316 stainless steel vs standard acrylics), 24/7 automated continuous filtration (20-micron mechanical filters plus integrated UV-C and ozone sterilization), thermal insulation thickness, and warranty coverage. TechFit provides a formal quotation based on configuration and site conditions — request a quote."
+    },
+    {
+      "q": "Can cold plunge chillers maintain 3°C water in Indian summers?",
+      "a": "Yes. Alteon Polar Oval Pro systems use commercial 2.0 HP cooling units with high-ambient heat exchangers designed to maintain 3°C to 5°C water temperatures even when ambient room temperatures reach 42°C."
+    },
+    {
+      "q": "What water sanitation is required for commercial cold plunges?",
+      "a": "Commercial installations require continuous 24/7 circulation with 20-micron mechanical filtration, high-output UV-C sterilizers, and ozone generators to ensure water remains crystal clean without daily water changes."
+    }
+  ],
+  "htmlContent": `
+    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(143,208,166,0.3);border-radius:12px;padding:1.5rem;margin-bottom:2rem">
+      <p style="margin:0;font-size:1.1rem;line-height:1.7;color:#fff"><strong>Summary for Facility Planners:</strong> Commercial cold plunge tubs and ice bath systems in India vary based on chiller horsepower (0.8HP to 2.0HP), tub material (marine-grade SS316 vs acrylic/fibreglass), and automated dual filtration with UV + ozone sterilization. TechFit is the Authorised Distributor for Alteon Polar Oval Pro commercial cold plunges.</p>
+    </div>
+
+    <div style="margin-bottom:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+      <a class="btn btn-primary" href="/contact" style="text-decoration:none">Request Cold Plunge Quote</a>
+      <a class="btn btn-ghost" href="/alteon/cold-plunge-and-ice-baths" style="text-decoration:none">View Alteon Cold Plunges →</a>
+    </div>
+
+    <h2>Commercial Cold Plunge Configurations in India (2026)</h2>
+    <div style="overflow-x:auto;margin:2rem 0">
+      <table style="width:100%;border-collapse:collapse;text-align:left;min-width:650px">
+        <thead>
+          <tr style="background:rgba(255,255,255,0.1);border-bottom:2px solid var(--red)">
+            <th style="padding:1rem">Cold Plunge Model</th>
+            <th style="padding:1rem">Chiller Power</th>
+            <th style="padding:1rem">Tub Construction</th>
+            <th style="padding:1rem">Commercial Quotation</th>
+            <th style="padding:1rem">Facility Suitability</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);background:rgba(143,208,166,0.04)">
+            <td style="padding:1rem"><strong>Alteon Polar Oval Pro Commercial</strong></td>
+            <td style="padding:1rem">2.0 HP Industrial Chiller</td>
+            <td style="padding:1rem">Marine Grade SS316 + Acrylic Infill</td>
+            <td style="padding:1rem;color:#8fd0a6;font-weight:700">Pricing on request</td>
+            <td style="padding:1rem">High-traffic wellness clubs, 5-star hotel spas, biohacking suites</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+            <td style="padding:1rem"><strong>Compact Recovery Cold Plunge</strong></td>
+            <td style="padding:1rem">0.8 to 1.0 HP Chiller</td>
+            <td style="padding:1rem">Reinforced Fibreglass / Acrylic</td>
+            <td style="padding:1rem;color:#eab308;font-weight:700">Pricing on request</td>
+            <td style="padding:1rem">Boutique physio studios, executive home gyms</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Explore Related Recovery Equipment</h2>
+    <ul>
+      <li><a href="/alteon/cold-plunge-and-ice-baths" style="color:#8fd0a6">Alteon Cold Plunges & Ice Baths</a></li>
+      <li><a href="/infrared-sauna-price-india" style="color:#8fd0a6">Infrared Sauna Sourcing Guide India</a></li>
+      <li><a href="/cryotherapy-chamber-price-india" style="color:#8fd0a6">Whole Body Cryotherapy Guide</a></li>
+      <li><a href="/wellness-centre-setup-cost-india" style="color:#8fd0a6">Wellness Centre Setup Cost Guide</a></li>
+    </ul>
+  `
+},
+  'red-light-therapy-bed-price-india': {
+  "badge": "2026 Cost & Sourcing Guide",
+  "h1": "Red Light Therapy Bed & PBM Panel Price in India (2026): Commercial Sourcing Guide",
+  "desc": "Commercial photobiomodulation (PBM) red light therapy bed procurement guide in India for 2026. Compare wavelengths (630nm to 940nm), irradiance, and commercial setup parameters.",
+  "author": "Ali Asgar Potia",
+  "publishedDate": "2026-08-19",
+  "related": [
+    "alteon",
+    "wellness-solutions",
+    "wellness-centre-setup-cost-india",
+    "hyperbaric-chamber-price-india"
+  ],
+  "faqs": [
+    {
+      "q": "What is the price of a commercial red light therapy bed in India?",
+      "a": "The investment required for commercial photobiomodulation (PBM) equipment in India depends on LED array density, calibrated clinical wavelength spectrums (dual-wave 660nm/850nm vs 5-wavelength 630nm to 940nm arrays), optical irradiance levels (>100 mW/cm² for deep tissue penetration), 360-degree curved bed canopy design vs flat vertical panels, and commercial warranty support. TechFit provides a formal quotation based on configuration and site conditions — request a quote."
+    },
+    {
+      "q": "How do red light beds compare with vertical red light panels?",
+      "a": "Full-body contoured beds provide 360-degree simultaneous top and bottom irradiance with zero client repositioning and maximum luxury for high-end wellness suites and clinics. Vertical panel arrays provide targeted or single-side exposure for focused physiotherapy treatment rooms. TechFit provides a formal quotation based on configuration and site conditions — request a quote."
+    },
+    {
+      "q": "What wavelengths are most effective for athletic recovery and anti-aging?",
+      "a": "Clinical research validates red light (630nm to 660nm) for collagen synthesis and skin health, and near-infrared (810nm to 940nm) for deep muscle recovery, joint pain relief, and mitochondrial ATP production."
+    }
+  ],
+  "htmlContent": `
+    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(143,208,166,0.3);border-radius:12px;padding:1.5rem;margin-bottom:2rem">
+      <p style="margin:0;font-size:1.1rem;line-height:1.7;color:#fff"><strong>Summary for Facility Planners:</strong> Commercial full-body Red Light Therapy (Photobiomodulation / PBM) beds and multi-panel arrays in India vary based on LED density, optical irradiance, and multi-wavelength capabilities. TechFit supplies Alteon Red Revive and Red Lumen medical-grade PBM beds delivering calibrated 630nm, 660nm, 810nm, 850nm, and 940nm wavelengths with multi-wave control.</p>
+    </div>
+
+    <div style="margin-bottom:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+      <a class="btn btn-primary" href="/contact" style="text-decoration:none">Request Red Light Bed Proposal</a>
+      <a class="btn btn-ghost" href="/alteon/red-light-and-photobiomodulation" style="text-decoration:none">View Alteon Red Light Beds →</a>
+    </div>
+
+    <h2>Red Light Therapy Configurations in India (2026)</h2>
+    <div style="overflow-x:auto;margin:2rem 0">
+      <table style="width:100%;border-collapse:collapse;text-align:left;min-width:650px">
+        <thead>
+          <tr style="background:rgba(255,255,255,0.1);border-bottom:2px solid var(--red)">
+            <th style="padding:1rem">PBM Configuration</th>
+            <th style="padding:1rem">Wavelength Coverage</th>
+            <th style="padding:1rem">Optical Irradiance</th>
+            <th style="padding:1rem">Commercial Quotation</th>
+            <th style="padding:1rem">Ideal Facility Use Case</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);background:rgba(143,208,166,0.04)">
+            <td style="padding:1rem"><strong>Alteon Red Revive Curve Bed</strong></td>
+            <td style="padding:1rem">630nm + 660nm + 810nm + 850nm + 940nm</td>
+            <td style="padding:1rem">> 120 mW/cm²</td>
+            <td style="padding:1rem;color:#8fd0a6;font-weight:700">Pricing on request</td>
+            <td style="padding:1rem">Longevity clinics, 5-star hotel spas, elite athlete clubs</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+            <td style="padding:1rem"><strong>Alteon Red Lumen Full Canopy Panel</strong></td>
+            <td style="padding:1rem">660nm + 850nm dual wave</td>
+            <td style="padding:1rem">> 100 mW/cm²</td>
+            <td style="padding:1rem;color:#eab308;font-weight:700">Pricing on request</td>
+            <td style="padding:1rem">Physiotherapy suites, boutique recovery lounges</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Explore Related Longevity Technologies</h2>
+    <ul>
+      <li><a href="/alteon/red-light-and-photobiomodulation" style="color:#8fd0a6">Alteon Red Light & Photobiomodulation Range</a></li>
+      <li><a href="/hyperbaric-chamber-price-india" style="color:#8fd0a6">Hyperbaric Oxygen Chamber Sourcing Guide</a></li>
+      <li><a href="/wellness-centre-setup-cost-india" style="color:#8fd0a6">Complete Wellness Centre Setup Cost Guide</a></li>
+    </ul>
+  `
+},
+  'infrared-sauna-price-india': {
+  "badge": "2026 Cost & Sourcing Guide",
+  "h1": "Full Spectrum Infrared Sauna Price in India (2026): Canadian Hemlock & Low-EMF Cost Guide",
+  "desc": "Full spectrum infrared sauna procurement parameters in India for 2026. Compare Canadian Hemlock cabins, carbon vs ceramic heaters, chromotherapy, power requirements, and turnkey spa setup.",
+  "author": "Ali Asgar Potia",
+  "publishedDate": "2026-08-19",
+  "related": [
+    "alteon",
+    "wellness-solutions",
+    "wellness-centre-setup-cost-india",
+    "commercial-ice-bath-cold-plunge-price-india"
+  ],
+  "faqs": [
+    {
+      "q": "What is the price of an infrared sauna in India?",
+      "a": "Infrared sauna costs in India are determined by cabin capacity (2-person intimate models up to 6-person commercial suites), architectural timber selection (Grade-A Canadian Hemlock with non-toxic finishing), heater technology (full-spectrum near, mid, and far infrared carbon panels with ultra-low EMF shielding), integrated medical chromotherapy and acoustic resonance sound systems, and professional turnkey assembly. TechFit provides a formal quotation based on configuration and site conditions — request a quote."
+    },
+    {
+      "q": "What is the difference between full spectrum and traditional Finnish saunas?",
+      "a": "Full spectrum saunas emit near, mid, and far infrared waves directly warming the body at comfortable temperatures (45°C to 65°C) with deep detoxification. Traditional saunas heat the ambient air to 90°C via electric rock heaters."
+    },
+    {
+      "q": "What electrical connection is required for an infrared sauna in India?",
+      "a": "A 2 to 3 person sauna requires a standard 220V / 16A single-phase line, while 4 to 6 person commercial saunas require a 3-phase connection (4 to 7 kW)."
+    }
+  ],
+  "htmlContent": `
+    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(143,208,166,0.3);border-radius:12px;padding:1.5rem;margin-bottom:2rem">
+      <p style="margin:0;font-size:1.1rem;line-height:1.7;color:#fff"><strong>Summary for Facility Planners:</strong> Commercial and luxury residential full-spectrum infrared saunas in India vary based on cabin seating capacity (2-person to 6-person), premium wood selection (sustainably harvested Grade-A Canadian Hemlock), integrated chromotherapy, and ultra-low EMF carbon radiant heaters. TechFit provides turnkey assembly, electrical setup, and maintenance across India.</p>
+    </div>
+
+    <div style="margin-bottom:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+      <a class="btn btn-primary" href="/contact" style="text-decoration:none">Request Sauna Consultation</a>
+      <a class="btn btn-ghost" href="/alteon/full-spectrum-infrared-saunas" style="text-decoration:none">View Alteon Saunas →</a>
+    </div>
+
+    <h2>Infrared Sauna Configurations in India (2026)</h2>
+    <div style="overflow-x:auto;margin:2rem 0">
+      <table style="width:100%;border-collapse:collapse;text-align:left;min-width:650px">
+        <thead>
+          <tr style="background:rgba(255,255,255,0.1);border-bottom:2px solid var(--red)">
+            <th style="padding:1rem">Sauna Capacity</th>
+            <th style="padding:1rem">Wood Material</th>
+            <th style="padding:1rem">Heater Tech</th>
+            <th style="padding:1rem">Commercial Quotation</th>
+            <th style="padding:1rem">Ideal Facility Use Case</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);background:rgba(143,208,166,0.04)">
+            <td style="padding:1rem"><strong>Alteon Heal Spectra 2-Seater</strong></td>
+            <td style="padding:1rem">Grade-A Canadian Hemlock</td>
+            <td style="padding:1rem">Full Spectrum Ultra Low EMF Carbon</td>
+            <td style="padding:1rem;color:#8fd0a6;font-weight:700">Pricing on request</td>
+            <td style="padding:1rem">Luxury residences, executive recovery rooms</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+            <td style="padding:1rem"><strong>Alteon Heal Spectra 4-6 Seater</strong></td>
+            <td style="padding:1rem">Grade-A Canadian Hemlock</td>
+            <td style="padding:1rem">Full Spectrum Near/Mid/Far Carbon Array</td>
+            <td style="padding:1rem;color:#8fd0a6;font-weight:700">Pricing on request</td>
+            <td style="padding:1rem">Hotel spas, wellness clubs, recovery centres</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Explore Related Contrast Therapy Options</h2>
+    <ul>
+      <li><a href="/alteon/full-spectrum-infrared-saunas" style="color:#8fd0a6">Alteon Full Spectrum Infrared Saunas</a></li>
+      <li><a href="/commercial-ice-bath-cold-plunge-price-india" style="color:#8fd0a6">Commercial Cold Plunge Guide</a></li>
+      <li><a href="/wellness-centre-setup-cost-india" style="color:#8fd0a6">Complete Wellness Centre Setup Cost Guide</a></li>
+    </ul>
+  `
+},
+  'wellness-centre-setup-cost-india': {
+  "badge": "2026 Turnkey Infrastructure Guide",
+  "h1": "Longevity Suite & Wellness Centre Setup Cost in India (2026): Turnkey Equipment & CapEx Guide",
+  "desc": "Comprehensive turnkey infrastructure and equipment parameters for setting up a commercial wellness, recovery and longevity centre in India for 2026. Explore 3 turnkey configurations spanning HBOT, cryotherapy, cold plunge, sauna, and red light.",
+  "author": "Ali Asgar Potia",
+  "publishedDate": "2026-08-19",
+  "related": [
+    "alteon",
+    "wellness-solutions",
+    "hyperbaric-chamber-price-india",
+    "cryotherapy-chamber-price-india",
+    "commercial-ice-bath-cold-plunge-price-india",
+    "red-light-therapy-bed-price-india",
+    "infrared-sauna-price-india"
+  ],
+  "faqs": [
+    {
+      "q": "How much does it cost to set up a wellness and longevity centre in India?",
+      "a": "The capital outlay for a commercial longevity or recovery centre in India depends on total facility square footage, targeted treatment modalities (hyperbaric oxygen chambers, electric cryotherapy, commercial cold plunge tubs, full-spectrum saunas, red light therapy beds, and IHHT altitude training), MEP electrical and ventilation preparation, interior architectural styling, and post-installation AMC coverage. TechFit provides complete turnkey planning and custom B2B financial feasibility models. TechFit provides a formal quotation based on configuration and site conditions — request a quote."
+    },
+    {
+      "q": "What is the typical return on investment (ROI) for a recovery suite?",
+      "a": "Due to high session margins and growing demand among athletes, corporate executives, and biohackers, most commercial recovery centres achieve operational breakeven within 10 to 14 months."
+    },
+    {
+      "q": "Does TechFit provide end-to-end turnkey design and installation?",
+      "a": "Yes. TechFit handles 3D spatial layout, equipment procurement, MEP electrical planning, delivery, installation, staff operational training, and pan-India Annual Maintenance Contracts (AMC)."
+    }
+  ],
+  "htmlContent": `
+    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(143,208,166,0.3);border-radius:12px;padding:1.5rem;margin-bottom:2rem">
+      <p style="margin:0;font-size:1.1rem;line-height:1.7;color:#fff"><strong>Summary for Investors & Operators:</strong> Setting up a commercial wellness and longevity centre in India involves tailored equipment selection across boutique recovery studios, comprehensive athletic biohacking facilities, and luxury 5-star hotel resort spas. TechFit is India's premier turnkey infrastructure partner delivering end-to-end 3D design, equipment procurement, MEP electrical planning, certified installation, and AMC support.</p>
+    </div>
+
+    <div style="margin-bottom:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+      <a class="btn btn-primary" href="/contact" style="text-decoration:none">Get Turnkey Wellness Consultation</a>
+      <a class="btn btn-ghost" href="/alteon" style="text-decoration:none">Explore Alteon Equipment Portfolio →</a>
+    </div>
+
+    <h2>3 Turnkey Facility Configurations & Setup Scope (2026)</h2>
+
+    <div style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:2rem;margin:2rem 0">
+      <h3 style="color:#8fd0a6;margin-top:0">Tier 1: Boutique Contrast & Recovery Studio (1,000 to 1,500 sq ft)</h3>
+      <p><strong>Equipment CapEx:</strong> Pricing on request</p>
+      <ul>
+        <li><a href="/commercial-ice-bath-cold-plunge-price-india" style="color:#8fd0a6">1x Alteon Polar Oval Pro Commercial Cold Plunge (2HP Chiller)</a></li>
+        <li><a href="/infrared-sauna-price-india" style="color:#8fd0a6">1x Alteon Heal Spectra 4-Seater Full Spectrum Infrared Sauna</a></li>
+        <li><a href="/red-light-therapy-bed-price-india" style="color:#8fd0a6">1x Alteon Red Lumen Full Body PBM Panel Array</a></li>
+        <li>1x Alteon PEMF Multi-Therapy Recovery Lounger</li>
+      </ul>
+      <p><strong>Ideal For:</strong> Boutique gyms, crossfit boxes, physiotherapy sports clinics, and luxury residential amenity clubhouses.</p>
+    </div>
+
+    <div style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:2rem;margin:2rem 0">
+      <h3 style="color:#8fd0a6;margin-top:0">Tier 2: Comprehensive Biohacking & Athletic Club (2,000 to 3,500 sq ft)</h3>
+      <p><strong>Equipment CapEx:</strong> Pricing on request</p>
+      <ul>
+        <li><a href="/hyperbaric-chamber-price-india" style="color:#8fd0a6">1x Alteon Elysion 1-Seater Hard-Shell Hyperbaric Chamber (1.9 ATA)</a></li>
+        <li><a href="/cryotherapy-chamber-price-india" style="color:#8fd0a6">1x Alteon Electric Nitrogen-Free Cryotherapy Cabin (-110°C)</a></li>
+        <li><a href="/commercial-ice-bath-cold-plunge-price-india" style="color:#8fd0a6">1x Alteon Polar Oval Pro Dual Plunge Setup</a></li>
+        <li><a href="/infrared-sauna-price-india" style="color:#8fd0a6">1x 4-Seater Canadian Hemlock Infrared Sauna</a></li>
+        <li><a href="/red-light-therapy-bed-price-india" style="color:#8fd0a6">1x Alteon Red Revive Curve PBM Bed</a></li>
+      </ul>
+      <p><strong>Ideal For:</strong> Premium commercial gyms, sports performance institutes, and executive longevity clubs.</p>
+    </div>
+
+    <div style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:2rem;margin:2rem 0">
+      <h3 style="color:#8fd0a6;margin-top:0">Tier 3: Flagship Longevity Hospital Suite & 5-Star Resort Spa (4,000+ sq ft)</h3>
+      <p><strong>Equipment CapEx:</strong> Pricing on request</p>
+      <ul>
+        <li><a href="/hyperbaric-chamber-price-india" style="color:#8fd0a6">1x Alteon 4-Seater Executive Multiplace HBOT Chamber (2.0 ATA)</a></li>
+        <li><a href="/cryotherapy-chamber-price-india" style="color:#8fd0a6">1x Alteon Electric Walk-In Cryo Chamber (-140°C)</a></li>
+        <li><a href="/red-light-therapy-bed-price-india" style="color:#8fd0a6">1x Flagship Alteon Red Revive Curve PBM Bed</a></li>
+        <li>1x Alteon Dry Float Zero-Gravity Neuro-Recovery Bed</li>
+        <li>1x Alteon IHHT Cell Trainer Mitochondrial Biogenesis Machine</li>
+        <li><a href="/infrared-sauna-price-india" style="color:#8fd0a6">1x 6-Seater Custom Infrared Sauna + Dual Cold Plunge Suite</a></li>
+      </ul>
+      <p><strong>Ideal For:</strong> 5-star hotel luxury spas, private longevity hospitals, and celebrity wellness estates.</p>
+    </div>
+
+    <h2>Dedicated Category Sourcing Guides</h2>
+    <ul>
+      <li><a href="/hyperbaric-chamber-price-india" style="color:#8fd0a6">Hyperbaric Oxygen Chamber Sourcing Guide</a></li>
+      <li><a href="/hyperbaric-chamber-manufacturers-india" style="color:#8fd0a6">Hyperbaric Chamber Manufacturers Compared</a></li>
+      <li><a href="/cryotherapy-chamber-price-india" style="color:#8fd0a6">Whole Body Cryotherapy Chamber Guide</a></li>
+      <li><a href="/commercial-ice-bath-cold-plunge-price-india" style="color:#8fd0a6">Commercial Cold Plunge & Ice Bath Guide</a></li>
+      <li><a href="/red-light-therapy-bed-price-india" style="color:#8fd0a6">Red Light Therapy Bed Sourcing Guide</a></li>
+      <li><a href="/infrared-sauna-price-india" style="color:#8fd0a6">Infrared Sauna Sourcing Guide</a></li>
+      <li><a href="/commercial-gym-setup-cost-india" style="color:#8fd0a6">Commercial Gym Setup Cost in India Guide</a></li>
+    </ul>
+  `
+}
 };
 
 

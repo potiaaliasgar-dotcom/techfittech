@@ -325,7 +325,8 @@
       display: flex
     }
 
-    .nav-mob button {
+    .nav-mob button,
+    .nav-mob a {
       display: block;
       padding: .9rem 1.5rem;
       font-size: 12px;
@@ -339,9 +340,12 @@
       text-align: left;
       width: 100%;
       cursor: pointer;
+      text-decoration: none;
+      box-sizing: border-box;
     }
 
-    .nav-mob button:hover {
+    .nav-mob button:hover,
+    .nav-mob a:hover {
       color: var(--red);
       background: var(--red-10)
     }
@@ -2849,7 +2853,8 @@
       margin-bottom: 1rem
     }
 
-    .footer-col button {
+    .footer-col button,
+    .footer-col a {
       display: block;
       font-size: .82rem;
       color: rgba(255, 255, 255, .55);
@@ -2860,9 +2865,11 @@
       cursor: pointer;
       padding: 0;
       text-align: left;
+      text-decoration: none;
     }
 
-    .footer-col button:hover {
+    .footer-col button:hover,
+    .footer-col a:hover {
       color: var(--red)
     }
 

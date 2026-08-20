@@ -1,5 +1,23 @@
 [
   {
+    "slug": "recovery-suite",
+    "title": "Inside a Commercial Recovery Suite: HBOT, Cryotherapy and Cold Plunge Under One Roof",
+    "excerpt": "An inside look at the spatial planning, electrical capacity, and equipment selection behind an elite 2,500 sq ft turnkey commercial recovery install.",
+    "category": "Case Study",
+    "date": "August 2026",
+    "readTime": "6 min read",
+    "image": "/og/og-wellness.jpg"
+  },
+  {
+    "slug": "electric-vs-nitrogen-cryotherapy",
+    "title": "Electric vs Nitrogen Cryotherapy Chambers: What Indian Wellness Centres Should Buy in 2026",
+    "excerpt": "A factual analysis of electric nitrogen-free chambers vs liquid nitrogen cryosaunas — safety profiles, recurring gas costs, and 3-year commercial ROI.",
+    "category": "Insights",
+    "date": "August 2026",
+    "readTime": "7 min read",
+    "image": "/assets/images/other/img-00d6a577a1.jpg"
+  },
+  {
     "slug": "mfn",
     "title": "Inside the Octagon: How TechFit Built the Fighting Cage for Matrix Fight Night (MFN)",
     "excerpt": "The story behind India's most broadcast-ready MMA cage — engineered and installed by TechFit for Matrix Fight Night.",
@@ -28,8 +46,8 @@
   },
   {
     "slug": "mma-matrix",
-    "title": "MMA Matrix: Setting Up India's Most Recognised Fight Gym with Tiger &amp; Krishna Shroff",
-    "excerpt": "The story behind our 30+ MMA Matrix gym fit-outs across India &mdash; the Shroff family's flagship MMA brand.",
+    "title": "MMA Matrix: Setting Up India's Most Recognised Fight Gym with Tiger & Krishna Shroff",
+    "excerpt": "The story behind our 30+ MMA Matrix gym fit-outs across India — the Shroff family's flagship MMA brand.",
     "category": "Case Study",
     "date": "January 2026",
     "readTime": "7 min read",
@@ -37,7 +55,7 @@
   },
   {
     "slug": "one-stop",
-    "title": "Why TechFit is India's One-Stop Shop for Gym &amp; Sports Infrastructure",
+    "title": "Why TechFit is India's One-Stop Shop for Gym & Sports Infrastructure",
     "excerpt": "Why developers, hotels and fight leagues are consolidating procurement: manufacturing, distribution, installation and service — all under one roof.",
     "category": "Insights",
     "date": "April 2026",

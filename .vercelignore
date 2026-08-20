@@ -1,0 +1,9 @@
+node_modules
+dist
+dist */
+*.pdf
+*.xlsx
+case-studies-drafts
+scratch
+.git
+.DS_Store

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "optimize-images": "node scripts/optimize-images.mjs",
-    "build": "node --check public/assets/app.js && node scripts/guard-valid-pages.mjs && npm run optimize-images && node scripts/generate-pdf-guide.js && rm -rf dist && vite build && node scripts/generate-seo-pages.mjs && npx terser dist/assets/app.js -o dist/assets/app.js -c -m && node scripts/hash-assets.mjs && node scripts/validate-schemas.mjs",
+    "build": "rm -rf dist\\ * dist_* 'dist 2' 'dist 3' 'dist 4' 'dist 5' 'dist 6' && node --check public/assets/app.js && node scripts/guard-valid-pages.mjs && npm run optimize-images && node scripts/generate-pdf-guide.js && rm -rf dist && vite build && node scripts/generate-seo-pages.mjs && npx terser dist/assets/app.js -o dist/assets/app.js -c -m && node scripts/hash-assets.mjs && node scripts/validate-schemas.mjs && node scripts/guard-sitemap.mjs && node scripts/guard-llms.mjs",
     "preview": "vite preview"
   },
   "devDependencies": {
