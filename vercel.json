@@ -41,6 +41,16 @@
   ],
   "redirects": [
     {
+      "source": "/pilates/stott",
+      "destination": "/pilates",
+      "permanent": true
+    },
+    {
+      "source": "/pilates/stott/",
+      "destination": "/pilates",
+      "permanent": true
+    },
+    {
       "source": "/about-us",
       "destination": "/about",
       "permanent": true

@@ -318,17 +318,17 @@ async function generatePDF() {
   y += 25;
   doc.font('Helvetica')
      .fontSize(10.5)
-     .text('TechFit is the Authorised Distributor (India) for world-class, premium strength, recovery, and cardio brands.', 50, y, { width: 495, lineGap: 4 });
+     .text('TechFit is the Equipment Partner & Authorised Distributor (India) for world-class, premium strength, recovery, and cardio brands.', 50, y, { width: 495, lineGap: 4 });
 
   y += 50;
   const brands = [
     {
       title: 'BH Fitness — Commercial Gym Equipment (Spain)',
-      desc: 'A world-leading commercial fitness brand with over 100 years of engineering heritage. Supplied by TechFit as Authorised Distributor (India), featuring unmatched ergonomics, biomechanics, and premium touchscreen displays (Movemia and Inertia lines).'
+      desc: 'A world-leading commercial fitness brand with over 100 years of engineering heritage. Supplied by TechFit as Equipment Partner (India), featuring unmatched ergonomics, biomechanics, and premium touchscreen displays (Movemia and Inertia lines).'
     },
     {
       title: 'Tunturi — Premium Strength & Wellness (Finland)',
-      desc: 'Pioneers of European fitness and wellness since 1922. TechFit acts as Authorised Distributor (India) for Tunturi cardio and commercial strength stations representing absolute precision engineering, clean Scandinavian aesthetics, and commercial-grade durability.'
+      desc: 'Pioneers of European fitness and wellness since 1922. TechFit acts as Equipment Partner (India) for Tunturi cardio and commercial strength stations representing absolute precision engineering, clean Scandinavian aesthetics, and commercial-grade durability.'
     },
     {
       title: 'Alteon — Clinical Biohacking & Recovery Suites',
@@ -336,7 +336,7 @@ async function generatePDF() {
     },
     {
       title: 'California Fitness — Heavy Selectorized Strength',
-      desc: 'Maximum strength selectorized machines and plate-loaded stations, supplied by TechFit as Authorised Distributor (India). Engineered using thick-wall structural steel, heavy-duty pulleys, and precise biomechanical pivot angles for commercial power gyms.'
+      desc: 'Maximum strength selectorized machines and plate-loaded stations, supplied by TechFit as Equipment Partner (India). Engineered using thick-wall structural steel, heavy-duty pulleys, and precise biomechanical pivot angles for commercial power gyms.'
     }
   ];
 
