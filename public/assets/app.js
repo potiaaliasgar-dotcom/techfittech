@@ -42,7 +42,7 @@ function pictureTag(src, alt = '', className = '', isLazy = true, inlineStyles =
   const optimizedSrc = `/_vercel/image?url=${encodeURIComponent(src)}&w=800&q=75`;
   const retinaSrc = `/_vercel/image?url=${encodeURIComponent(src)}&w=1536&q=75`;
   
-  return `<img src="${optimizedSrc}" srcset="${optimizedSrc} 1x, ${retinaSrc} 2x" alt="${alt}" class="${className}" style="${inlineStyles}" ${idAttr} ${lazyAttr} decoding="async" ${width ? `width="${width}"` : ''} ${height ? `height="${height}"` : ''}>`;
+  return `<img src="${optimizedSrc}" srcset="${optimizedSrc} 1x, ${retinaSrc} 2x" onerror="this.onerror=null;this.removeAttribute('srcset');this.src='${src}'" alt="${alt}" class="${className}" style="${inlineStyles}" ${idAttr} ${lazyAttr} decoding="async" ${width ? `width="${width}"` : ''} ${height ? `height="${height}"` : ''}>`;
 }
 
 function renderQuoteFormHtml(projectType) {
@@ -188,7 +188,7 @@ async function submitEmbeddedQuote(projectType) {
     const SEO_MAP = {
       'home': {
         title: 'TechFit | Gym, Wellness & Sports Infrastructure',
-        desc: 'TechFit is a one-stop gym, wellness and sports infrastructure partner. Equipment Partner for BH Fitness, Tunturi, and California Fitness. Authorised Distributor for Alteon Wellness. Sales Partner for Merrithew.',
+        desc: 'TechFit is a one-stop gym, wellness and sports infrastructure partner. Equipment Partner & Reseller for BH Fitness, Tunturi, and California Fitness. Authorised Distributor for Alteon Wellness. Sales Partner for Merrithew.',
         img: DEFAULT_OG_IMG
       },
       'alteon': {
@@ -217,8 +217,8 @@ async function submitEmbeddedQuote(projectType) {
         img: DEFAULT_OG_IMG
       },
       'bh-fitness': {
-        title: 'BH Fitness India | Equipment Partner — Commercial Treadmills, Cardio & Strength',
-        desc: 'TechFit is the Equipment Partner (India) for BH Fitness commercial gym equipment. Premium treadmills, exercise bikes, ellipticals and strength machines for gyms, hotels and corporates.',
+        title: 'BH Fitness India | Equipment Partner & Reseller — Commercial Treadmills, Cardio & Strength',
+        desc: 'TechFit is the Equipment Partner and Reseller (India) for BH Fitness commercial gym equipment. Premium treadmills, exercise bikes, ellipticals and strength machines for gyms, hotels and corporates.',
         img: DEFAULT_OG_IMG
       },
       'tunturi': {
@@ -506,7 +506,7 @@ const wa = t => `https://wa.me/${ALTEON_PHONE}?text=${encodeURIComponent(t)}`;
 const esc = s => (s || '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 function getAlteonData() {
-    return window.ALTEON_DATA;
+    return window.ALTEON_DATA || { categories: [], products: [] };
 }
 
 function renderAlteonStyle(isServer = typeof window === 'undefined') {
@@ -674,7 +674,8 @@ function getServerSchemas() { return __serverSchemas || []; }
 function renderAlteonHub() {
     const _style = renderAlteonStyle();
     const DB = getAlteonData();
-    const cards = DB.categories.map(c => `
+    const categories = DB.categories || [];
+    const cards = categories.map(c => `
         <div class="card fade" onclick="go('alteon/${c.id}')">
             <div class="tile" style="background:${c.heroTileColor}">
                 ${pictureTag('/' + c.heroImage, esc(c.name), '', true)}
@@ -692,8 +693,10 @@ function renderAlteonHub() {
         "@context": "https://schema.org",
         "@type": "ItemList",
         "name": "Alteon Wellness and Recovery Catalogue",
-        "itemListElement": DB.categories.map((c, i) => ({ "@type": "ListItem", "position": i + 1, "name": c.name }))
+        "itemListElement": categories.map((c, i) => ({ "@type": "ListItem", "position": i + 1, "name": c.name }))
     });
+
+    const firstCatId = categories[0] ? categories[0].id : 'hyperbaric-oxygen-chambers';
 
     return _style + `
     <div class="alteon-page">
@@ -704,7 +707,7 @@ function renderAlteonHub() {
                     <h1>ALTEON<span class="g">Wellness and Recovery</span></h1>
                     <p>TechFit is the authorised India distributor of Alteon, clinical and commercial grade recovery and longevity technology for gyms, hotels, residences and wellness clinics.</p>
                     <div class="cta-row" style="margin-top:40px">
-                        <a class="btn btn-green" onclick="go('alteon/${DB.categories[0].id}')">Explore the range →</a>
+                        <a class="btn btn-green" onclick="go('alteon/${firstCatId}')">Explore the range →</a>
                         <a class="btn btn-ghost" href="${wa('Hi TechFit, I would like a consultation on Alteon wellness and recovery equipment.')}" target="_blank">Talk to a specialist</a>
                     </div>
                 </div>
@@ -741,9 +744,11 @@ function renderAlteonHub() {
 function renderAlteonCategory(catId) {
     const _style = renderAlteonStyle();
     const DB = getAlteonData();
-    const c = DB.categories.find(x => x.id === catId);
+    const categories = DB.categories || [];
+    const c = categories.find(x => x.id === catId);
     if (!c) return renderAlteonHub();
-    const items = DB.products.filter(p => p.categoryId === catId);
+    const products = DB.products || [];
+    const items = products.filter(p => p.categoryId === catId);
     
     const blocks = items.map(p => {
         const specs = (p.specs || []).map(s => `<tr><td>${esc(s[0])}</td><td>${esc(s[1])}</td></tr>`).join('');
@@ -802,10 +807,12 @@ window.setAlteonVariant = function(catId, prodId, idx) {
 function renderAlteonProduct(catId, prodId, variantIdx = 0) {
     const _style = renderAlteonStyle();
     const DB = getAlteonData();
-    const baseP = DB.products.find(x => x.id === prodId);
+    const products = DB.products || [];
+    const baseP = products.find(x => x.id === prodId);
     if (!baseP) return renderAlteonCategory(catId);
     const p = baseP.variants ? baseP.variants[variantIdx] : baseP;
-    const c = DB.categories.find(x => x.id === catId);
+    const categories = DB.categories || [];
+    const c = categories.find(x => x.id === catId) || { name: '', eyebrow: '' };
 
     const mainGallery = (p.gallery || []).slice(0, 1);
     const specGallery = (p.gallery || []).slice(1);
@@ -2342,7 +2349,7 @@ ${footer()}
       <span style="color:var(--red);">India\'s Premier</span> <br>Fitness &amp; Wellness <br>Infrastructure Partner
     </h1>
     <p class="hero-sub" style="color:rgba(255,255,255,0.9); font-size:1.2rem; max-width:800px; margin:0 auto 2rem;">
-      800+ installations delivered. Commercial fitness equipment setup, wellness and recovery equipment, gym and sports flooring, functional rigs, and professional MMA cages. Equipment Partner for BH Fitness, Tunturi, and California Fitness. Authorised Distributor for Alteon Wellness.
+      800+ installations delivered. Commercial fitness equipment setup, wellness and recovery equipment, gym and sports flooring, functional rigs, and professional MMA cages. Equipment Partner & Reseller for BH Fitness, Tunturi, and California Fitness. Authorised Distributor for Alteon Wellness.
     </p>
     <div class="hero-btns" style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; align-items:center;">
       <button class="btn-red" onclick="go('contact')">Get a Custom B2B Quote</button>
@@ -2396,7 +2403,7 @@ ${footer()}
         </div>
         <div class="pillar-num">02</div>
         <h3>Commercial Equipment Supply</h3>
-        <p>Equipment Partner for BH Fitness, Tunturi, and California Fitness. Sales Partner for Merrithew. Plus TechFit's own fabricated range.</p>
+        <p>Equipment Partner & Reseller for BH Fitness, Tunturi, and California Fitness. Sales Partner for Merrithew. Plus TechFit's own fabricated range.</p>
       </div>
       <div class="pillar" role="button" tabindex="0" onclick="go('services')">
         <div class="pillar-icon">
@@ -2776,8 +2783,8 @@ ${footer()}
     const brandMeta = {
       'BH Fitness': {
         slug: 'bh-fitness',
-        badge: "Europe's No.1 Fitness Brand · Equipment Partner",
-        desc: "BH Fitness is Europe\\'s leading fitness equipment brand, trusted by over 7,000 commercial gyms worldwide. As the Equipment Partner in India, we supply the full BH Fitness range — MOVEMIA connected cardio, INERTIA commercial line, PL Series selectorized strength, AFT360 functional training, and more.",
+        badge: "Europe's No.1 Fitness Brand · Equipment Partner & Reseller",
+        desc: "BH Fitness is Europe's leading fitness equipment brand, trusted by over 7,000 commercial gyms worldwide. As the Equipment Partner and Reseller in India, we supply the full BH Fitness range — MOVEMIA connected cardio, INERTIA commercial line, PL Series selectorized strength, AFT360 functional training, and more.",
         why: ['MOVEMIA — connected cardio with Smart Focus app & entertainment integration', 'INERTIA — full commercial cardio and selectorized strength range', 'PL SERIES — premium plate-loaded strength equipment', 'AFT360 — modular functional training stations', 'Supplied to MMA Matrix, 5-star hotels, residential towers and premium gyms across India'],
         sortOrder: ['MOVEMIA', 'INERTIA', 'PL SERIES', 'AFT360', 'INDOOR CYCLING', 'OTHERS'],
         logo: (typeof CLIENT_LOGOS !== 'undefined' && CLIENT_LOGOS['BH Fitness Brand']) || ''
@@ -2925,7 +2932,7 @@ ${footer()}
 
     <p style="color:var(--z500);font-size:0.85rem;margin-bottom:1.5rem">Showing ${filtered.length} products</p>
     <div class="prod-grid" id="prod-grid">
-      ${slice.map(p => prodCard(p)).join('')}
+      ${slice.map((p, index) => prodCard(p, index)).join('')}
     </div>
     ${total > 1 ? `<div class="pg-wrap">${Array.from({ length: total }, (_, i) => `<button class="pg-btn${pg === i + 1 ? ' active' : ''}" onclick="pg=${i + 1};render();window.scrollTo({top:0})">${i + 1}</button>`).join('')}</div>` : ''}
     ${slice.length === 0 ? '<p style="color:var(--z500);padding:2rem 0">No products found.</p>' : ''}
@@ -2937,7 +2944,7 @@ ${footer()}
 `;
     }
 
-    function prodCard(p) {
+    function prodCard(p, index = 0) {
       const n = p.n.replace(/'/g, "&#39;").replace(/`/g, "&#96;");
       return `<div class="prod-card" onclick="openModal('${p.s}','${p.b}')">
   <img class="prod-img" src="${p.img}" alt="${n}" ${index < 8 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} onerror="this.src='';this.style.background='#f4f4f5'" style="aspect-ratio: 4/3; object-fit: contain; background: #f4f4f5;" width="400" height="300">
@@ -3465,7 +3472,7 @@ ${footer()}`;
       </div>
       <div class="service-card">
         <h3>Equipment Supply</h3>
-        <p>Equipment Partner for BH Fitness, Tunturi, and California Fitness plus TechFit's own fabricated range.</p>
+        <p>Equipment Partner & Reseller for BH Fitness, Tunturi, and California Fitness plus TechFit's own fabricated range.</p>
         <ul class="service-steps">
           <li>Needs assessment and brand recommendation</li>
           <li>Detailed quote with full specifications</li>
@@ -3859,7 +3866,7 @@ ${footer()}`;
       <div class="pillar">
         <div class="pillar-num">01</div>
         <h3>Equipment Sourcing</h3>
-        <p>Equipment Partner for BH Fitness, Tunturi and California Fitness &mdash; covering every commercial and residential budget segment.</p>
+        <p>Equipment Partner & Reseller for BH Fitness, Tunturi and California Fitness &mdash; covering every commercial and residential budget segment.</p>
       </div>
       <div class="pillar">
         <div class="pillar-num">02</div>
@@ -4751,7 +4758,7 @@ ${footer()}
     <p style="margin-bottom:1.5rem">For operators and developers prioritizing operational uptime, high durability, and local responsiveness, TechFit provides a distinct strategic advantage. TechFit stands as India's premier B2B fitness partner by offering:</p>
     
     <h3 style="color:#fff;font-size:1.3rem;margin:1.5rem 0 0.5rem">1. Direct-Import Value with Europe's Leading Biomechanics</h3>
-    <p style="margin-bottom:1.5rem">TechFit is the Equipment Partner in India for <strong>BH Fitness Spain</strong>—Europe's leading commercial gym manufacturer. This direct partnership bypasses multi-tier middleman markups, giving you world-class biomechanics, fluid movements, and cloud-connected cardio consoles at a highly optimized capital expenditure. You secure elite European engineering while conserving capital for other facility amenities.</p>
+    <p style="margin-bottom:1.5rem">TechFit is the Equipment Partner and Reseller in India for <strong>BH Fitness Spain</strong>—Europe's leading commercial gym manufacturer. This direct partnership bypasses multi-tier middleman markups, giving you world-class biomechanics, fluid movements, and cloud-connected cardio consoles at a highly optimized capital expenditure. You secure elite European engineering while conserving capital for other facility amenities.</p>
 
     <h3 style="color:#fff;font-size:1.3rem;margin:1.5rem 0 0.5rem">2. Bespoke In-House Manufacturing &amp; Customization</h3>
     <p style="margin-bottom:1.5rem">While imported brands limit you to fixed designs, TechFit operates a heavy industrial steel manufacturing facility in Mumbai. We design and build modular, heavy-duty CrossFit functional rigs, custom Olympic free weights, and competition-grade MMA cages/boxing rings to your exact site layout, custom color specifications, and club branding.</p>
@@ -5203,7 +5210,7 @@ ${footer()}
     <p style="margin-bottom:1.5rem">For operators and developers prioritizing operational uptime, high durability, and local responsiveness, TechFit provides a distinct strategic advantage. TechFit stands as India's premier B2B fitness partner by offering:</p>
     
     <h3 style="color:#fff;font-size:1.3rem;margin:1.5rem 0 0.5rem">1. Direct-Import Value with Europe's Leading Biomechanics</h3>
-    <p style="margin-bottom:1.5rem">TechFit is the Equipment Partner in India for <strong>BH Fitness Spain</strong> and <strong>Tunturi Finland</strong>. This direct partnership bypasses multi-tier middleman markups, giving you world-class biomechanics, fluid movements, and cloud-connected cardio consoles at a highly optimized capital expenditure. You secure elite European engineering while conserving capital for other facility amenities.</p>
+    <p style="margin-bottom:1.5rem">TechFit is the Equipment Partner and Reseller in India for <strong>BH Fitness Spain</strong> and <strong>Tunturi Finland</strong>. This direct partnership bypasses multi-tier middleman markups, giving you world-class biomechanics, fluid movements, and cloud-connected cardio consoles at a highly optimized capital expenditure. You secure elite European engineering while conserving capital for other facility amenities.</p>
 
     <h3 style="color:#fff;font-size:1.3rem;margin:1.5rem 0 0.5rem">2. Bespoke In-House Manufacturing &amp; Customization</h3>
     <p style="margin-bottom:1.5rem">While imported brands limit you to fixed designs, TechFit operates a heavy industrial steel manufacturing facility in Mumbai. We design and build modular, heavy-duty CrossFit functional rigs, custom Olympic free weights, and competition-grade MMA cages/boxing rings to your exact site layout, custom color specifications, and club branding.</p>
@@ -5812,7 +5819,7 @@ ${footer()}
     category: `Commercial Gym Setup`,
     related: [{"slug":"bh-fitness-vs-life-fitness","name":"BH Fitness vs Life Fitness Comparison"},{"slug":"commercial-gym-equipment-list","name":"Commercial Gym Equipment List"}],
     faqs: [{"q":"What motor capacity is needed for a commercial treadmill?","a":"A commercial treadmill must use an AC (Alternating Current) motor with a continuous-duty rating of at least 3.0 HP (preferably 4.0 to 5.0 HP peak). DC motors are not suitable for heavy-duty commercial environments."},{"q":"What is a phenolic resin deck on a treadmill?","a":"A phenolic resin deck (like the HST deck on BH Fitness treadmills) is a high-durability, self-lubricating running deck that reduces friction, protects the motor, and extends belt life, drastically cutting maintenance frequency."},{"q":"Which brand is the best for commercial treadmills in India?","a":"Spanish-engineered BH Fitness LK & Move Series treadmills are widely regarded as the best commercial treadmills in India, delivering premium biomechanics and advanced Smart Focus touchscreen connectivity, fully backed by TechFit's pan-India local AMC support."}],
-    htmlContent: `<h2>The Critical Role of Cardio Equipment in Gym Retention</h2> <p>Cardio machines, specifically commercial treadmills, are the highest-usage, highest-wear assets in any fitness facility. If a treadmill breaks down, member satisfaction drops immediately. When B2B buyers (gym owners, real estate developers, hotel amenity managers) evaluate commercial treadmills in India, they must look beyond simple aesthetic design and analyze four core engineering components: continuous motor horsepower, self-lubricating deck technology, biomechanical shock absorption, and local after-sales spare-parts availability.</p> <h2>Continuous AC Motors vs peak Horsepower</h2> <p>A true commercial treadmill must use an <strong>AC (Alternating Current) motor</strong>, not a DC motor. Ensure the specification states "Continuous-Duty" (often written as CHP), representing the motor's ability to run continuously under full load for hours, rather than "Peak Horsepower" (PHP), which is a short-burst metric. Look for a minimum of <strong>3.0 CHP to 4.5 CHP</strong> AC motors. Lower-horsepower motors will overheat, trigger thermal shutdowns, and blow control boards under continuous usage.</p> <h2>Phenolic HST Decks & Biomechanical Cushioning</h2> <p>The running board is under constant impact. Elite treadmills, like the BH Fitness INERTIA and MOVEMIA series, feature <strong>HST Phenolic Resin Decks</strong>. These self-lubricating boards require zero manual wax application, preventing wax buildup that destroys drive belts and burns out motors. Additionally, premium multi-point cushioning systems (like the Pro-Tonic 10-point system) reduce joint impact by 30%, protecting athletes and keeping members coming back.</p> <h2>Top Commercial Treadmills Compared (2026 India Market)</h2> <table class="comp-table"> <thead> <tr> <th>Model / Feature</th> <th>BH Fitness INERTIA G688</th> <th>BH Fitness MOVEMIA TR1000</th> <th>Standard Catalog Import</th> </tr> </thead> <tbody> <tr> <td><strong>Motor Capacity</strong></td> <td>4.5 HP AC (Continuous)</td> <td>6.0 HP AC (Premium)</td> <td>3.0 HP AC (Basic)</td> </tr> <tr> <td><strong>Deck Technology</strong></td> <td>HST Self-Lubricating</td> <td>HST Self-Lubricating</td> <td>Manual Waxing Required</td> </tr> <tr> <td><strong>Display Console</strong></td> <td>LED / 19" Smart Focus</td> <td>22" Smart Focus Touchscreen</td> <td>Basic Segmented LCD</td> </tr> <tr> <td><strong>Local Uptime / AMC</strong></td> <td>TechFit Pan-India 24-hr Support</td> <td>TechFit Pan-India 24-hr Support</td> <td>Third-Party Spares Delayed</td> </tr> </tbody> </table> <h2>The TechFit AMC & Spares Assurance</h2> <p>Securing a premium treadmill is only half the battle; ensuring its uptime is what keeps your gym profitable. As the equipment partner for BH Fitness and Tunturi in India, TechFit maintains an extensive spare-parts inventory at our Mumbai warehouse (including drive belts, console boards, and running decks) and dispatches certified local engineers to resolve B2B breakdowns within 24–48 hours, delivering the highest operational uptime in the Indian commercial market.</p>`
+    htmlContent: `<h2>The Critical Role of Cardio Equipment in Gym Retention</h2> <p>Cardio machines, specifically commercial treadmills, are the highest-usage, highest-wear assets in any fitness facility. If a treadmill breaks down, member satisfaction drops immediately. When B2B buyers (gym owners, real estate developers, hotel amenity managers) evaluate commercial treadmills in India, they must look beyond simple aesthetic design and analyze four core engineering components: continuous motor horsepower, self-lubricating deck technology, biomechanical shock absorption, and local after-sales spare-parts availability.</p> <h2>Continuous AC Motors vs peak Horsepower</h2> <p>A true commercial treadmill must use an <strong>AC (Alternating Current) motor</strong>, not a DC motor. Ensure the specification states "Continuous-Duty" (often written as CHP), representing the motor's ability to run continuously under full load for hours, rather than "Peak Horsepower" (PHP), which is a short-burst metric. Look for a minimum of <strong>3.0 CHP to 4.5 CHP</strong> AC motors. Lower-horsepower motors will overheat, trigger thermal shutdowns, and blow control boards under continuous usage.</p> <h2>Phenolic HST Decks & Biomechanical Cushioning</h2> <p>The running board is under constant impact. Elite treadmills, like the BH Fitness INERTIA and MOVEMIA series, feature <strong>HST Phenolic Resin Decks</strong>. These self-lubricating boards require zero manual wax application, preventing wax buildup that destroys drive belts and burns out motors. Additionally, premium multi-point cushioning systems (like the Pro-Tonic 10-point system) reduce joint impact by 30%, protecting athletes and keeping members coming back.</p> <h2>Top Commercial Treadmills Compared (2026 India Market)</h2> <table class="comp-table"> <thead> <tr> <th>Model / Feature</th> <th>BH Fitness INERTIA G688</th> <th>BH Fitness MOVEMIA TR1000</th> <th>Standard Catalog Import</th> </tr> </thead> <tbody> <tr> <td><strong>Motor Capacity</strong></td> <td>4.5 HP AC (Continuous)</td> <td>6.0 HP AC (Premium)</td> <td>3.0 HP AC (Basic)</td> </tr> <tr> <td><strong>Deck Technology</strong></td> <td>HST Self-Lubricating</td> <td>HST Self-Lubricating</td> <td>Manual Waxing Required</td> </tr> <tr> <td><strong>Display Console</strong></td> <td>LED / 19" Smart Focus</td> <td>22" Smart Focus Touchscreen</td> <td>Basic Segmented LCD</td> </tr> <tr> <td><strong>Local Uptime / AMC</strong></td> <td>TechFit Pan-India 24-hr Support</td> <td>TechFit Pan-India 24-hr Support</td> <td>Third-Party Spares Delayed</td> </tr> </tbody> </table> <h2>The TechFit AMC & Spares Assurance</h2> <p>Securing a premium treadmill is only half the battle; ensuring its uptime is what keeps your gym profitable. As the Equipment Partner & Reseller for BH Fitness and Tunturi in India, TechFit maintains an extensive spare-parts inventory at our Mumbai warehouse (including drive belts, console boards, and running decks) and dispatches certified local engineers to resolve B2B breakdowns within 24–48 hours, delivering the highest operational uptime in the Indian commercial market.</p>`
   },
   'commercial-gym-equipment-list': {
     title: `Complete Commercial Gym Equipment List & Budget (2026)`,
@@ -5848,7 +5855,7 @@ ${footer()}
     category: `Brand Comparison`,
     related: [{"slug":"best-commercial-treadmills-india","name":"Best Commercial Treadmills Guide"},{"slug":"imported-vs-indian-gym-equipment","name":"Imported vs Indian Gym Sourcing"}],
     faqs: [{"q":"Is BH Fitness a good brand for commercial gyms?","a":"Yes. BH Fitness is one of Europe's oldest and most prestigious fitness brands, engineered in Spain since 1909. It is widely used in commercial health clubs, premium hotels, and elite training facilities globally."},{"q":"What is the CapEx difference between BH Fitness and Life Fitness in India?","a":"BH Fitness delivers premium European engineering and biomechanics at a highly optimized capital cost — typically saving B2B buyers 25% to 35% on setup CapEx compared to Life Fitness, primarily due to TechFit's direct equipment partnership network and local parts warehousing."},{"q":"How does after-sales service compare in India?","a":"TechFit maintains an extensive local spare-parts inventory for BH Fitness at our Mumbai facility and dispatches certified engineers for AMC support within 24-48 hours, delivering superior operational uptime compared to standard import routes."}],
-    htmlContent: `<h2>Objective B2B Brand Sourcing Analysis</h2> <p>For commercial gym owners, hotel developers, and real estate amenities in India, selecting the primary cardio and strength brand is one of the most critical decisions impacting CapEx return and member retention. Both <strong>BH Fitness (Spain)</strong> and <strong>Life Fitness</strong> are world-renowned, high-performance commercial brands. However, B2B buyers must evaluate these brands not just on historical name recognition, but on localized import duty exposures, continuous-duty motor specifications, and the availability of direct local after-sales engineers in India.</p> <h2>Continuous AC Motor Duty & self-Lubricating Decks</h2> <p>In high-traffic commercial environments, the drive system is under constant load. The BH Fitness INERTIA and MOVEMIA commercial treadmills feature <strong>4.5 HP to 6.0 HP continuous-duty AC motors</strong>, matching the heavy-duty outputs of Life Fitness commercial series. Additionally, BH Fitness includes self-lubricating <strong>HST Phenolic Decks</strong> as standard across its commercial models. This self-waxing technology cuts routine maintenance by 80% and extends drive belt life, whereas many standard import models still require manual waxing regimes.</p> <h2>Factual Brand Sourcing Matrix (2026 Indian Market)</h2> <table class="comp-table"> <thead> <tr> <th>Comparison Parameter</th> <th>Life Fitness Commercial Series</th> <th>BH Fitness (Spain) Commercial Series</th> </tr> </thead> <tbody> <tr> <td><strong>Biomechanical Engineering</strong></td> <td>World-Class Biomechanics</td> <td>World-Class European Biomechanics</td> </tr> <tr> <td><strong>Continuous AC Motor HP</strong></td> <td>3.0 HP - 4.5 HP AC</td> <td>4.5 HP - 6.0 HP AC (High Uptime)</td> </tr> <tr> <td><strong>CapEx Sourcing Cost</strong></td> <td>Premium Brand Markup (High CapEx)</td> <td>Optimized Direct Equipment Partnership (Save 25-35%)</td> </tr> <tr> <td><strong>India Spare-Parts Availability</strong></td> <td>Subject to import delays (4-8 weeks)</td> <td>Immediate Mumbai Factory Inventory (1-2 days)</td> </tr> <tr> <td><strong>AMC Technician Speed</strong></td> <td>Third-Party Dispatch dependent</td> <td>On-Call Direct TechFit Engineers (24-hr response)</td> </tr> </tbody> </table> <h2>The Direct Sourcing Advantage</h2> <p>TechFit is the official equipment partner for BH Fitness in India. By eliminating intermediate brokers and maintaining direct-import pathways, we pass substantial savings directly to commercial operators. This direct pathway also ensures that every commercial gym, hotel clubhouse, or developer amenity setup receives a robust <strong>Annual Maintenance Contract (AMC)</strong> managed by certified in-house engineers, securing immediate parts replacement and maximum machine uptime.</p>`
+    htmlContent: `<h2>Objective B2B Brand Sourcing Analysis</h2> <p>For commercial gym owners, hotel developers, and real estate amenities in India, selecting the primary cardio and strength brand is one of the most critical decisions impacting CapEx return and member retention. Both <strong>BH Fitness (Spain)</strong> and <strong>Life Fitness</strong> are world-renowned, high-performance commercial brands. However, B2B buyers must evaluate these brands not just on historical name recognition, but on localized import duty exposures, continuous-duty motor specifications, and the availability of direct local after-sales engineers in India.</p> <h2>Continuous AC Motor Duty & self-Lubricating Decks</h2> <p>In high-traffic commercial environments, the drive system is under constant load. The BH Fitness INERTIA and MOVEMIA commercial treadmills feature <strong>4.5 HP to 6.0 HP continuous-duty AC motors</strong>, matching the heavy-duty outputs of Life Fitness commercial series. Additionally, BH Fitness includes self-lubricating <strong>HST Phenolic Decks</strong> as standard across its commercial models. This self-waxing technology cuts routine maintenance by 80% and extends drive belt life, whereas many standard import models still require manual waxing regimes.</p> <h2>Factual Brand Sourcing Matrix (2026 Indian Market)</h2> <table class="comp-table"> <thead> <tr> <th>Comparison Parameter</th> <th>Life Fitness Commercial Series</th> <th>BH Fitness (Spain) Commercial Series</th> </tr> </thead> <tbody> <tr> <td><strong>Biomechanical Engineering</strong></td> <td>World-Class Biomechanics</td> <td>World-Class European Biomechanics</td> </tr> <tr> <td><strong>Continuous AC Motor HP</strong></td> <td>3.0 HP - 4.5 HP AC</td> <td>4.5 HP - 6.0 HP AC (High Uptime)</td> </tr> <tr> <td><strong>CapEx Sourcing Cost</strong></td> <td>Premium Brand Markup (High CapEx)</td> <td>Optimized Direct Equipment Partnership (Save 25-35%)</td> </tr> <tr> <td><strong>India Spare-Parts Availability</strong></td> <td>Subject to import delays (4-8 weeks)</td> <td>Immediate Mumbai Factory Inventory (1-2 days)</td> </tr> <tr> <td><strong>AMC Technician Speed</strong></td> <td>Third-Party Dispatch dependent</td> <td>On-Call Direct TechFit Engineers (24-hr response)</td> </tr> </tbody> </table> <h2>The Direct Sourcing Advantage</h2> <p>TechFit is the official Equipment Partner & Reseller for BH Fitness in India. By eliminating intermediate brokers and maintaining direct-import pathways, we pass substantial savings directly to commercial operators. This direct pathway also ensures that every commercial gym, hotel clubhouse, or developer amenity setup receives a robust <strong>Annual Maintenance Contract (AMC)</strong> managed by certified in-house engineers, securing immediate parts replacement and maximum machine uptime.</p>`
   },
   'tunturi-vs-precor': {
     title: `Tunturi vs Precor: B2B Commercial Sourcing Guide`,
@@ -6244,7 +6251,7 @@ ${footer()}
     category: `Sourcing Comparison`,
     related: [{"slug":"best-gym-equipment-brands-india","name":"Best Gym Equipment Brands in India"},{"slug":"imported-vs-indian-gym-equipment","name":"Imported vs Indian Gym Equipment"}],
     faqs: [{"q":"Is BH Fitness better than Cosco for a commercial gym?","a":"For continuous commercial use, commercial-grade brands like BH Fitness are built for higher footfall, with sturdier frames, better warranties and spare-part support. Cosco suits lighter or home use. TechFit advises based on your footfall and budget."},{"q":"Does TechFit provide warranty and service on commercial equipment?","a":"Yes. Every setup includes certified installation and an Annual Maintenance Contract with service-engineer support, so equipment stays reliable over its full life."}],
-    htmlContent: `<h2>Cosco vs BH Fitness: What B2B Buyers Should Weigh</h2> <p>Cosco is a well-known Indian sports brand with broad availability and entry-level pricing, while BH Fitness is a Spanish manufacturer built around commercial-grade cardio and strength for high-footfall facilities. For a home or light-use corner, budget brands can be enough; for a commercial gym, hotel or society clubhouse running all day, the deciding factors are frame durability, console reliability, spare-part support and warranty — where dedicated commercial lines are engineered to last.</p> <h2>How TechFit Advises on the Choice</h2> <p>As an equipment partner for BH Fitness and other commercial brands, TechFit helps operators match equipment to real usage and budget rather than headline price. We supply commercial-grade cardio, strength and functional equipment with certified installation and an Annual Maintenance Contract, so total cost of ownership — not just the sticker price — drives the decision.</p>`
+    htmlContent: `<h2>Cosco vs BH Fitness: What B2B Buyers Should Weigh</h2> <p>Cosco is a well-known Indian sports brand with broad availability and entry-level pricing, while BH Fitness is a Spanish manufacturer built around commercial-grade cardio and strength for high-footfall facilities. For a home or light-use corner, budget brands can be enough; for a commercial gym, hotel or society clubhouse running all day, the deciding factors are frame durability, console reliability, spare-part support and warranty — where dedicated commercial lines are engineered to last.</p> <h2>How TechFit Advises on the Choice</h2> <p>As an Equipment Partner & Reseller for BH Fitness and other commercial brands, TechFit helps operators match equipment to real usage and budget rather than headline price. We supply commercial-grade cardio, strength and functional equipment with certified installation and an Annual Maintenance Contract, so total cost of ownership — not just the sticker price — drives the decision.</p>`
   },
   'viva-vs-tunturi': {
     title: `Viva Fitness vs Tunturi: Commercial Equipment Compared`,
@@ -7100,31 +7107,6 @@ function renderAlternativesHub() {
   }
   gridHtml += '</div>';
 
-
-  // Add cross linking for alternatives
-  let crossLinkSection = '';
-  if (slug.startsWith('alternatives/') || slug.includes('-alternative-') || slug.includes('-vs-')) {
-    const alts = Object.keys(commercialPages).filter(k => (k.startsWith('alternatives/') || k.includes('-alternative-') || k.includes('-vs-')) && k !== slug).sort(() => 0.5 - Math.random()).slice(0, 3);
-    if (alts.length > 0) {
-      crossLinkSection = `
-        <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
-          <h3 style="color:#fff;font-size:1.5rem;margin-bottom:1.5rem;">Compare Other Brands</h3>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:1.5rem;">
-            ${alts.map(a => `
-              <div style="background:rgba(255,255,255,0.03);padding:1.5rem;border-radius:6px;border:1px solid rgba(255,255,255,0.05)">
-                <h4 style="color:#fff;font-size:1.1rem;margin-bottom:1rem;line-height:1.4">${commercialPages[a] || 'Read Comparison'}</h4>
-                <button class="btn btn-ghost" onclick="go('${a}')" style="width:100%;text-align:center">Read Guide</button>
-              </div>
-            `).join('')}
-          </div>
-          <div style="margin-top:2rem;text-align:center">
-             <button class="btn btn-ghost" onclick="go('alternatives')">View All Brand Comparisons</button>
-          </div>
-        </div>
-      `;
-    }
-  }
-
   return `
 <section class="phero" style="background:#09090b;padding:8rem 2rem 4rem;border-bottom:1px solid rgba(255,255,255,0.05)">
   <section class="sec-in" style="max-width:1000px;margin:0 auto;text-align:center">
@@ -7252,7 +7234,9 @@ function render404() {
       const path = window.location.pathname.substring(1) || 'home';
       const urlParams = new URLSearchParams(window.location.search);
 
-      const validPages = ['home', 'hyrox', 'alternatives', 'get-a-quote', 'for-gyms', 'for-developers', 'for-schools', 'for-hotels', 'techfit', 'alteon', 'bh-fitness', 'tunturi', 'california-fitness', 'mma-cages', 'crossfit-rigs', 'free-weights', 'aqua', 'wellness-solutions', 'services', 'about', 'contact', 'blogs', 'gym-flooring', 'flooring', 'blog-mfn', 'blog-sfl', 'blog-kumite', 'blog-mma-matrix', 'blog-one-stop', 'blog-wellness-boom', 'privacy-policy', 'case-studies', 'terms-of-service', 'thank-you', 'alternatives/technogym-india', 'alternatives/life-fitness-india', 'alternatives/sechrist-hyperbaric-india', 'alternatives/precor-india', 'alternatives/mecotec-cryotherapy-india', 'alternatives/usi-cosco-techfit-cages', 'commercial-gym-setup-cost-india', 'how-to-set-up-a-commercial-gym', 'best-commercial-treadmills-india', 'commercial-gym-equipment-list', 'hotel-gym-setup-guide', 'bh-fitness-vs-life-fitness', 'tunturi-vs-precor', 'best-gym-equipment-brands-india', 'imported-vs-indian-gym-equipment', 'gym-equipment-suppliers-india-compared', 'commercial-gym-setup-mumbai', 'commercial-gym-setup-pune', 'commercial-gym-setup-bangalore', 'commercial-gym-setup-hyderabad', 'commercial-gym-setup-delhi-ncr', 'commercial-gym-setup-chennai', 'commercial-gym-setup-kolkata', 'commercial-gym-setup-ahmedabad', 'commercial-gym-setup-jaipur', 'commercial-gym-setup-goa', 'commercial-gym-setup-chandigarh', 'commercial-gym-setup-surat', 'commercial-gym-setup-kochi', 'hotel-gym-setup-mumbai', 'hotel-gym-setup-pune', 'hotel-gym-setup-bangalore', 'hotel-gym-setup-delhi-ncr', 'hotel-gym-setup-hyderabad', 'society-gym-setup-mumbai', 'society-gym-setup-pune', 'society-gym-setup-bangalore', 'society-gym-setup-delhi-ncr', 'society-gym-setup-hyderabad', 'corporate-gym-setup-mumbai', 'corporate-gym-setup-pune', 'corporate-gym-setup-bangalore', 'corporate-gym-setup-delhi-ncr', 'corporate-gym-setup-hyderabad', 'cosco-vs-bh-fitness', 'viva-vs-tunturi', 'decathlon-domyos-vs-commercial-gym-equipment', 'alternatives/cybex-india', 'alternatives/hammer-strength-india', 'alternatives/nautilus-india', 'alternatives/star-trac-india', 'alternatives/body-solid-india', 'alternatives/hoist-fitness-india', 'alternatives/freemotion-india', 'alternatives/true-fitness-india', 'alternatives/american-fitness-india', 'alternatives/atlantis-strength-india', 'alternatives/fitline-india', 'alternatives/matrix-fitness-india', 'alternatives/jerai-fitness-india', 'alternatives/being-strong-india'];
+      const validPages = ['home', 'hyrox', 'alternatives', 'get-a-quote', 'for-gyms', 'for-developers', 'for-schools', 'for-hotels', 'techfit', 'alteon', 'bh-fitness', 'tunturi', 'california-fitness', 'mma-cages', 'crossfit-rigs', 'free-weights', 'aqua', 'wellness-solutions', 'services', 'about', 'contact', 'blogs', 'gym-flooring', 'flooring', 'blog-mfn', 'blog-sfl', 'blog-kumite', 'blog-mma-matrix', 'blog-one-stop', 'blog-wellness-boom', 'privacy-policy', 'case-studies', 'terms-of-service', 'thank-you', 'alternatives/technogym-india', 'alternatives/life-fitness-india', 'alternatives/sechrist-hyperbaric-india', 'alternatives/precor-india', 'alternatives/mecotec-cryotherapy-india', 'alternatives/usi-cosco-techfit-cages', 'commercial-gym-setup-cost-india', 'how-to-set-up-a-commercial-gym', 'best-commercial-treadmills-india', 'commercial-gym-equipment-list', 'hotel-gym-setup-guide', 'bh-fitness-vs-life-fitness', 'tunturi-vs-precor', 'best-gym-equipment-brands-india', 'imported-vs-indian-gym-equipment', 'gym-equipment-suppliers-india-compared', 'commercial-gym-setup-mumbai', 'commercial-gym-setup-pune', 'commercial-gym-setup-bangalore', 'commercial-gym-setup-hyderabad', 'commercial-gym-setup-delhi-ncr', 'commercial-gym-setup-chennai', 'commercial-gym-setup-kolkata', 'commercial-gym-setup-ahmedabad', 'commercial-gym-setup-jaipur', 'commercial-gym-setup-goa', 'commercial-gym-setup-chandigarh', 'commercial-gym-setup-surat', 'commercial-gym-setup-kochi', 'hotel-gym-setup-mumbai', 'hotel-gym-setup-pune', 'hotel-gym-setup-bangalore', 'hotel-gym-setup-delhi-ncr', 'hotel-gym-setup-hyderabad', 'society-gym-setup-mumbai', 'society-gym-setup-pune', 'society-gym-setup-bangalore', 'society-gym-setup-delhi-ncr', 'society-gym-setup-hyderabad', 'corporate-gym-setup-mumbai', 'corporate-gym-setup-pune', 'corporate-gym-setup-bangalore', 'corporate-gym-setup-delhi-ncr', 'corporate-gym-setup-hyderabad', 'cosco-vs-bh-fitness', 'viva-vs-tunturi', 'decathlon-domyos-vs-commercial-gym-equipment', 'alternatives/cybex-india', 'alternatives/hammer-strength-india', 'alternatives/nautilus-india', 'alternatives/star-trac-india', 'alternatives/body-solid-india', 'alternatives/hoist-fitness-india', 'alternatives/freemotion-india', 'alternatives/true-fitness-india', 'alternatives/american-fitness-india', 'alternatives/atlantis-strength-india', 'alternatives/fitline-india', 'alternatives/matrix-fitness-india', 'alternatives/jerai-fitness-india', 'alternatives/being-strong-india',
+      'hyperbaric-chamber-price-india', 'hyperbaric-chamber-manufacturers-india', 'cryotherapy-chamber-price-india', 'commercial-ice-bath-cold-plunge-price-india', 'red-light-therapy-bed-price-india', 'infrared-sauna-price-india', 'wellness-centre-setup-cost-india', 'blog-recovery-suite', 'blog-electric-vs-nitrogen-cryotherapy', 'pilates'
+    ];
 
       if (validPages.includes(path) || path === '' || path.startsWith('alteon/')) {
         page = path || 'home';
@@ -7277,6 +7261,7 @@ function render404() {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
+            entry.target.classList.add('active');
             entry.target.classList.add('hx-active');
             observer.unobserve(entry.target);
           }
@@ -7308,6 +7293,7 @@ function render404() {
         const observer = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
+              entry.target.classList.add('active');
               entry.target.classList.add('hx-active');
               observer.unobserve(entry.target);
             }

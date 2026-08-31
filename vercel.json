@@ -121,5 +121,15 @@
       "source": "/pilates",
       "destination": "/pilates.html"
     }
-  ]
+  ],
+  "images": {
+    "sizes": [
+      800,
+      1536
+    ],
+    "formats": [
+      "image/webp"
+    ],
+    "minimumCacheTTL": 2678400
+  }
 }

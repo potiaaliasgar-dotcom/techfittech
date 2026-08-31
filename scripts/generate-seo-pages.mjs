@@ -134,9 +134,9 @@ const SEO_MAP = {
     img: OG_WELLNESS
   },
   'bh-fitness': {
-    title: 'BH Fitness India | Equipment Partner — Commercial Treadmills, Cardio & Strength',
-    desc: 'TechFit is the Equipment Partner (India) for BH Fitness commercial gym equipment. Premium treadmills, exercise bikes, ellipticals and strength machines for gyms, hotels and corporates.',
-    h1: 'BH Fitness India | Equipment Partner — Commercial Gym Equipment',
+    title: 'BH Fitness India | Equipment Partner & Reseller — Commercial Treadmills, Cardio & Strength',
+    desc: 'TechFit is the Equipment Partner and Reseller (India) for BH Fitness commercial gym equipment. Premium treadmills, exercise bikes, ellipticals and strength machines for gyms, hotels and corporates.',
+    h1: 'BH Fitness India | Equipment Partner & Reseller — Commercial Gym Equipment',
     lastmod: '2026-08-19',
     img: OG_CARDIO
   },
@@ -1085,8 +1085,8 @@ const SCHEMAS = {
         "@type": "WebPage",
         "@id": "https://www.techfittech.com/bh-fitness#webpage",
         "url": "https://www.techfittech.com/bh-fitness",
-        "name": "BH Fitness India | Equipment Partner — TechFit",
-        "description": "Equipment Partner in India for BH Fitness commercial gym equipment. Treadmills, exercise spin bikes, ellipticals, and strength machines."
+        "name": "BH Fitness India | Equipment Partner & Reseller — TechFit",
+        "description": "Equipment Partner and Reseller in India for BH Fitness commercial gym equipment. Treadmills, exercise spin bikes, ellipticals, and strength machines."
       },
       {
         "@type": "Service",
@@ -1099,7 +1099,7 @@ const SCHEMAS = {
           { "@type": "City", "name": "Mumbai" }
         ],
         "provider": { "@id": "https://www.techfittech.com/#organization" },
-        "description": "Equipment partner in India for BH Fitness commercial gym equipment — Spanish-engineered treadmills, exercise bikes, ellipticals and strength machines. Direct-import supply, on-site installation and pan-India AMC.",
+        "description": "Equipment partner and reseller in India for BH Fitness commercial gym equipment — Spanish-engineered treadmills, exercise bikes, ellipticals and strength machines. Direct-import supply, on-site installation and pan-India AMC.",
         "offers": {
           "@type": "Offer",
           "priceCurrency": "INR",
@@ -1209,17 +1209,17 @@ const SCHEMAS = {
         "@type": "FAQPage",
         "mainEntity": [
           { "@type": "Question", "name": "Who is the Sales Partner for Merrithew Pilates in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit (Techfit Health Fitness Private Limited), Mumbai, is a Sales Partner for Merrithew Pilates equipment in India." } },
-          { "@type": "Question", "name": "Where to buy Pilates reformer in India?", "acceptedAnswer": { "@type": "Answer", "text": "Buy Merrithew, Jetz Pilates, and TechFit Pilates reformers in India through TechFit, the authorised dealer. https://www.techfittech.com/merrithew-pilates or +91-98201-66910." } },
+          { "@type": "Question", "name": "Where to buy Pilates reformer in India?", "acceptedAnswer": { "@type": "Answer", "text": "Buy Merrithew, Jetz Pilates, and TechFit Pilates reformers in India through TechFit, the sales partner. https://www.techfittech.com/merrithew-pilates or +91-98201-66910." } },
           { "@type": "Question", "name": "Best Pilates studio equipment supplier in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit is India's leading Pilates studio equipment supplier, supplying Merrithew, Jetz Pilates, and TechFit Pilates equipment." } },
-          { "@type": "Question", "name": "Merrithew Pilates reformer price India", "acceptedAnswer": { "@type": "Answer", "text": "For Merrithew Pilates reformer pricing in India, contact TechFit — the authorised dealer. Call +91-98201-66910 or email info@techfittech.com." } }
+          { "@type": "Question", "name": "Merrithew Pilates reformer price India", "acceptedAnswer": { "@type": "Answer", "text": "For Merrithew Pilates reformer pricing in India, contact TechFit — the sales partner. Call +91-98201-66910 or email info@techfittech.com." } }
         ]
       },
       { "@type": "Product", "name": "Merrithew Pilates Studio Equipment — India", "description": "Merrithew premium Pilates equipment including V2 Max reformers, cadillac reformers, stability chairs, barrels, and accessories. Available through TechFit in India.", "brand": { "@type": "Brand", "name": "Merrithew" }, "offers": { "@type": "Offer", "priceCurrency": "INR", "availability": "https://schema.org/InStock", "url": "https://www.techfittech.com/merrithew-pilates", "seller": { "@type": "Organization", "name": "TechFit", "url": "https://www.techfittech.com/" } } },
       {
         "@type": "Service",
         "@id": "https://www.techfittech.com/merrithew-pilates#service",
-        "name": "Sales Partner Distribution, Installation, and Support for Merrithew Pilates in India",
-        "serviceType": "Premium Pilates Studio Equipment Distribution",
+        "name": "Sales Partner Equipment Supply, Installation, and Support for Merrithew Pilates in India",
+        "serviceType": "Premium Pilates Studio Equipment Supply & Sales Partner",
         "inLanguage": "en-IN",
         "areaServed": [
           { "@type": "Country", "name": "India" },
@@ -2773,10 +2773,10 @@ const NOSCRIPT_FALLBACKS = {
     <main style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <article>
       <header>
-        <h1>BH Fitness | Equipment Partner (India)</h1>
+        <h1>BH Fitness | Equipment Partner & Reseller (India)</h1>
       </header>
       <section>
-      <p>TechFit is the Equipment Partner (India) for <strong>BH Fitness</strong> commercial gym equipment. Headquartered in Spain, BH Fitness is a leading global commercial fitness brand, delivering world-class biomechanics, structural durability, and cloud-connected display consoles.</p>
+      <p>TechFit is the Equipment Partner and Reseller (India) for <strong>BH Fitness</strong> commercial gym equipment. Headquartered in Spain, BH Fitness is a leading global commercial fitness brand, delivering world-class biomechanics, structural durability, and cloud-connected display consoles.</p>
       
       </section>
       <section>
@@ -3082,7 +3082,7 @@ const NOSCRIPT_FALLBACKS = {
       <p>TechFit active health fitness solutions provides a highly optimized, high-impact alternative for premium B2B buyers. We bridge the gap between world-class European engineering and boots-on-the-ground Indian manufacturing and engineering accountability. Our unique approach consists of three distinct pillars:</p>
       
       <h4>A. Premium European Cardio Sourcing</h4>
-      <p>Rather than using unproven brands, TechFit partners as the equipment partner for premium commercial gym manufacturers like <strong>BH Fitness Spain</strong>. BH Fitness is one of Europe's oldest and most prestigious fitness equipment brands, offering incredible mechanical durability, high-end console displays, and beautiful aesthetics. By sourcing BH Fitness through TechFit, you get the exact same elite biomechanical validation and commercial cardio performance as any tier-1 import, but at optimized pricing, completely avoiding third-party importing markups.</p>
+      <p>Rather than using unproven brands, TechFit partners as the equipment partner and reseller for premium commercial gym manufacturers like <strong>BH Fitness Spain</strong>. BH Fitness is one of Europe's oldest and most prestigious fitness equipment brands, offering incredible mechanical durability, high-end console displays, and beautiful aesthetics. By sourcing BH Fitness through TechFit, you get the exact same elite biomechanical validation and commercial cardio performance as any tier-1 import, but at optimized pricing, completely avoiding third-party importing markups.</p>
       
       <h4>B. Bespoke Local Steel Fabrication</h4>
       <p>For strength equipment, CrossFit cages, free-weight racks, and combat sports elements, importing standard steel boxes from overseas is financially inefficient and limits customization. TechFit operates its own heavy-duty manufacturing and custom-fabrication workshop in Mumbai. We construct custom rigs, cages, and platforms using heavy 11-gauge (3mm+) structural steel. We can custom powder coat frames to match your facility's branding, embroider custom logos into leather upholstery, and build cages to precise dimensions. This allows your gym to have a unique, custom-branded identity that catalog imports can never match.</p>
@@ -3362,7 +3362,7 @@ const NOSCRIPT_FALLBACKS = {
       <p>TechFit active health fitness solutions provides a highly optimized, high-impact alternative for premium B2B buyers. We bridge the gap between world-class European engineering and boots-on-the-ground Indian manufacturing and engineering accountability. Our unique approach consists of three distinct pillars:</p>
       
       <h4>A. Premium European Cardio Sourcing</h4>
-      <p>Rather than using unproven brands, TechFit partners as an equipment partner for premium commercial gym manufacturers like <strong>BH Fitness Spain</strong> and <strong>Tunturi Finland</strong>. These brands represent Europe's oldest and most prestigious fitness equipment manufacturers, offering incredible mechanical durability, high-end console displays, and beautiful aesthetics. By sourcing these brands through TechFit, you get the exact same elite biomechanical validation and commercial cardio performance as any tier-1 import, but at optimized pricing, completely avoiding third-party importing markups.</p>
+      <p>Rather than using unproven brands, TechFit partners as an equipment partner and reseller for premium commercial gym manufacturers like <strong>BH Fitness Spain</strong> and <strong>Tunturi Finland</strong>. These brands represent Europe's oldest and most prestigious fitness equipment manufacturers, offering incredible mechanical durability, high-end console displays, and beautiful aesthetics. By sourcing these brands through TechFit, you get the exact same elite biomechanical validation and commercial cardio performance as any tier-1 import, but at optimized pricing, completely avoiding third-party importing markups.</p>
       
       <h4>B. Bespoke Local Steel Fabrication</h4>
       <p>For strength equipment, CrossFit cages, free-weight racks, and combat sports elements, importing standard steel boxes from overseas is financially inefficient and limits customization. TechFit operates its own heavy-duty manufacturing and custom-fabrication workshop in Mumbai. We construct custom rigs, cages, and platforms using heavy 11-gauge (3mm+) structural steel. We can custom powder coat frames to match your facility's branding, embroider custom logos into leather upholstery, and build cages to precise dimensions. This allows your gym to have a unique, custom-branded identity that catalog imports can never match.</p>
@@ -3935,7 +3935,7 @@ function generatePage(html, route, seo) {
     noscriptBlock = NOSCRIPT_FALLBACKS[route] || `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <div style="font-size:1.5rem;font-weight:bold;margin-bottom:1rem;color:#111">TechFit | Gym Setup, Equipment &amp; Wellness Solutions</div>
-      <p>India's gym, wellness &amp; sports infrastructure partner with 800+ installations delivered. Equipment Partner for BH Fitness, Tunturi, California Fitness, and Alteon Wellness. Sales Partner for Merrithew. Based in Mumbai.</p>
+      <p>India's gym, wellness &amp; sports infrastructure partner with 800+ installations delivered. Equipment Partner &amp; Reseller for BH Fitness, Tunturi, California Fitness, and Alteon Wellness. Sales Partner for Merrithew. Based in Mumbai.</p>
       <p><strong>Services:</strong> Gym design &amp; layout, commercial equipment supply, custom fabrication of
         combat-sports equipment and CrossFit rigs, wellness and recovery technology from
         Alteon, installation, after-sales and AMC. Sister concern TechFit Active provides managed gym operations.</p>
