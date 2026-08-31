@@ -1011,6 +1011,8 @@ function alteonFloatingWA() {
         'blog-mma-matrix': () => renderBlog('mma-matrix'),
         'blog-one-stop': () => renderBlog('one-stop'),
         'blog-wellness-boom': () => renderBlog('wellness-boom'),
+        'blog-recovery-suite': () => renderBlog('recovery-suite'),
+        'blog-electric-vs-nitrogen-cryotherapy': () => renderBlog('electric-vs-nitrogen-cryotherapy'),
         'privacy-policy': renderPrivacyPolicy,
         'terms-of-service': renderTermsOfService,
         'alternatives/technogym-india': renderTechnogymAlternative,
@@ -1136,7 +1138,7 @@ function alteonFloatingWA() {
       'for-gyms': 'nl-solutions', 'for-developers': 'nl-solutions', 'for-schools': 'nl-solutions', 'for-hotels': 'nl-solutions', 'wellness-solutions': 'nl-solutions',
       'bh-fitness': 'nl-products', 'tunturi': 'nl-products', 'california-fitness': 'nl-products',
       'mma-cages': 'nl-products', 'crossfit-rigs': 'nl-products', 'free-weights': 'nl-products', 'aqua': 'nl-products',
-      'services': 'nl-services', 'about': 'nl-about', 'contact': 'nl-contact', 'blogs': 'nl-blogs', 'gym-flooring': 'nl-products', 'flooring': 'nl-products', 'blog-mfn': 'nl-blogs', 'blog-sfl': 'nl-blogs', 'blog-kumite': 'nl-blogs', 'blog-mma-matrix': 'nl-blogs', 'blog-one-stop': 'nl-blogs', 'blog-wellness-boom': 'nl-blogs', 'alteon': 'nl-products'
+      'services': 'nl-services', 'about': 'nl-about', 'contact': 'nl-contact', 'blogs': 'nl-blogs', 'gym-flooring': 'nl-products', 'flooring': 'nl-products', 'blog-mfn': 'nl-blogs', 'blog-sfl': 'nl-blogs', 'blog-kumite': 'nl-blogs', 'blog-mma-matrix': 'nl-blogs', 'blog-one-stop': 'nl-blogs', 'blog-wellness-boom': 'nl-blogs', 'blog-recovery-suite': 'nl-blogs', 'blog-electric-vs-nitrogen-cryotherapy': 'nl-blogs', 'alteon': 'nl-products'
     };
     function navActive() {
       document.querySelectorAll('.nl,.nd-btn').forEach(el => el.classList.remove('hx-active'));
