@@ -8360,10 +8360,6 @@ window.ALTEON_DATA = {
    "choose_note": "compare vacuum and infrared features, treadmill or bike specs and touchscreen."
   }
  ],
- "clientNames": [
-  "Matrix Wellness by Tiger Shroff and Krishna Shroff",
-  "MMA Matrix by Tiger Shroff and Krishna Shroff"
- ],
  "installations": [
   {
    "title": "Shangri-La",
