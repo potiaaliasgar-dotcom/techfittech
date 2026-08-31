@@ -134,23 +134,23 @@ const SEO_MAP = {
     img: OG_WELLNESS
   },
   'bh-fitness': {
-    title: 'BH Fitness India | Equipment Partner & Reseller — Commercial Treadmills, Cardio & Strength',
-    desc: 'TechFit is the Equipment Partner and Reseller (India) for BH Fitness commercial gym equipment. Premium treadmills, exercise bikes, ellipticals and strength machines for gyms, hotels and corporates.',
-    h1: 'BH Fitness India | Equipment Partner & Reseller — Commercial Gym Equipment',
+    title: 'BH Fitness India | Reseller — Commercial Treadmills, Cardio & Strength',
+    desc: 'TechFit is the Reseller (India) for BH Fitness commercial gym equipment. Premium treadmills, exercise bikes, ellipticals and strength machines for gyms, hotels and corporates.',
+    h1: 'BH Fitness India | Reseller — Commercial Gym Equipment',
     lastmod: '2026-08-19',
     img: OG_CARDIO
   },
   'tunturi': {
-    title: 'Tunturi Fitness India | Equipment Partner — Nordic Cardio & Commercial Strength',
-    desc: 'TechFit is the Equipment Partner (India) for Tunturi fitness equipment. From Finland — premium cardio, strength and functional-training gear for commercial gyms and fitness clubs.',
-    h1: 'Tunturi Fitness India | Equipment Partner — Nordic Fitness Equipment',
+    title: 'Tunturi Fitness India | Reseller — Nordic Cardio & Commercial Strength',
+    desc: 'TechFit is the Reseller (India) for Tunturi fitness equipment. From Finland — premium cardio, strength and functional-training gear for commercial gyms and fitness clubs.',
+    h1: 'Tunturi Fitness India | Reseller — Nordic Fitness Equipment',
     lastmod: '2026-08-19',
     img: OG_CARDIO
   },
   'california-fitness': {
-    title: 'California Fitness India | Equipment Partner — Commercial Strength & Cardio',
-    desc: 'TechFit is the Equipment Partner (India) for California Fitness. Professional-grade selectorized and plate-loaded strength equipment for commercial gyms and fitness clubs.',
-    h1: 'California Fitness India | Equipment Partner — Commercial Gym Equipment',
+    title: 'California Fitness India | Reseller — Commercial Strength & Cardio',
+    desc: 'TechFit is the Reseller (India) for California Fitness. Professional-grade selectorized and plate-loaded strength equipment for commercial gyms and fitness clubs.',
+    h1: 'California Fitness India | Reseller — Commercial Gym Equipment',
     lastmod: '2026-08-19',
     img: OG_CARDIO
   },
@@ -1085,8 +1085,8 @@ const SCHEMAS = {
         "@type": "WebPage",
         "@id": "https://www.techfittech.com/bh-fitness#webpage",
         "url": "https://www.techfittech.com/bh-fitness",
-        "name": "BH Fitness India | Equipment Partner & Reseller — TechFit",
-        "description": "Equipment Partner and Reseller in India for BH Fitness commercial gym equipment. Treadmills, exercise spin bikes, ellipticals, and strength machines."
+        "name": "BH Fitness India | Reseller — TechFit",
+        "description": "Reseller in India for BH Fitness commercial gym equipment. Treadmills, exercise spin bikes, ellipticals, and strength machines."
       },
       {
         "@type": "Service",
@@ -1099,7 +1099,7 @@ const SCHEMAS = {
           { "@type": "City", "name": "Mumbai" }
         ],
         "provider": { "@id": "https://www.techfittech.com/#organization" },
-        "description": "Equipment partner and reseller in India for BH Fitness commercial gym equipment — Spanish-engineered treadmills, exercise bikes, ellipticals and strength machines. Direct-import supply, on-site installation and pan-India AMC.",
+        "description": "Reseller in India for BH Fitness commercial gym equipment — Spanish-engineered treadmills, exercise bikes, ellipticals and strength machines. Direct-import supply, on-site installation and pan-India AMC.",
         "offers": {
           "@type": "Offer",
           "priceCurrency": "INR",
@@ -1124,8 +1124,8 @@ const SCHEMAS = {
         "@type": "WebPage",
         "@id": "https://www.techfittech.com/tunturi#webpage",
         "url": "https://www.techfittech.com/tunturi",
-        "name": "Tunturi India | Equipment Partner — TechFit",
-        "description": "Equipment Partner in India for Tunturi Finnish fitness equipment. Cardio, strength and functional training gears for commercial gym setups."
+        "name": "Tunturi India | Reseller — TechFit",
+        "description": "Reseller in India for Tunturi Finnish fitness equipment. Cardio, strength and functional training gears for commercial gym setups."
       },
       {
         "@type": "Service",
@@ -1138,7 +1138,7 @@ const SCHEMAS = {
           { "@type": "City", "name": "Mumbai" }
         ],
         "provider": { "@id": "https://www.techfittech.com/#organization" },
-        "description": "Equipment partner in India for Tunturi fitness equipment — Finnish-engineered cardio, strength and functional training gear for commercial gyms, studios and premium homes. Direct supply, installation and AMC.",
+        "description": "Reseller in India for Tunturi fitness equipment — Finnish-engineered cardio, strength and functional training gear for commercial gyms, studios and premium homes. Direct supply, installation and AMC.",
         "offers": {
           "@type": "Offer",
           "priceCurrency": "INR",
@@ -1163,8 +1163,8 @@ const SCHEMAS = {
         "@type": "WebPage",
         "@id": "https://www.techfittech.com/california-fitness#webpage",
         "url": "https://www.techfittech.com/california-fitness",
-        "name": "California Fitness India | Equipment Partner — TechFit",
-        "description": "Equipment Partner in India for California Fitness commercial gym equipment. Heavy-duty cardio, strength platforms, and functional accessories."
+        "name": "California Fitness India | Reseller — TechFit",
+        "description": "Reseller in India for California Fitness commercial gym equipment. Heavy-duty cardio, strength platforms, and functional accessories."
       },
       {
         "@type": "Service",
@@ -1177,7 +1177,7 @@ const SCHEMAS = {
           { "@type": "City", "name": "Mumbai" }
         ],
         "provider": { "@id": "https://www.techfittech.com/#organization" },
-        "description": "Equipment partner in India for California Fitness commercial gym equipment. Heavy-duty cardio, selectorized strength stacks and plate-loaded machines for high-traffic health clubs and corporate facilities. Direct supply, install and AMC.",
+        "description": "Reseller in India for California Fitness commercial gym equipment. Heavy-duty cardio, selectorized strength stacks and plate-loaded machines for high-traffic health clubs and corporate facilities. Direct supply, install and AMC.",
         "offers": {
           "@type": "Offer",
           "priceCurrency": "INR",
@@ -2300,7 +2300,7 @@ const SCHEMAS = {
         "inLanguage": "en-IN",
         "mainEntity": [
           { "@type": "Question", "name": "Is BH Fitness a good brand for commercial gyms?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. BH Fitness is one of Europe's oldest and most prestigious fitness brands, engineered in Spain since 1909. It is widely used in commercial health clubs, premium hotels, and elite training facilities globally." } },
-          { "@type": "Question", "name": "What is the CapEx difference between BH Fitness and Life Fitness in India?", "acceptedAnswer": { "@type": "Answer", "text": "BH Fitness delivers premium European engineering and biomechanics at a highly optimized capital cost — typically saving B2B buyers 25% to 35% on setup CapEx compared to Life Fitness, primarily due to TechFit\'s direct equipment partnership network and local parts warehousing." } },
+          { "@type": "Question", "name": "What is the CapEx difference between BH Fitness and Life Fitness in India?", "acceptedAnswer": { "@type": "Answer", "text": "BH Fitness delivers premium European engineering and biomechanics at a highly optimized capital cost — typically saving B2B buyers 25% to 35% on setup CapEx compared to Life Fitness, primarily due to TechFit\'s direct resellership network and local parts warehousing." } },
           { "@type": "Question", "name": "How does after-sales service compare in India?", "acceptedAnswer": { "@type": "Answer", "text": "TechFit maintains an extensive local spare-parts inventory for BH Fitness at our Mumbai facility and dispatches certified engineers for AMC support within 24-48 hours, delivering superior operational uptime compared to standard import routes." } }
         ]
       },
@@ -2346,7 +2346,7 @@ const SCHEMAS = {
         "inLanguage": "en-IN",
         "mainEntity": [
           { "@type": "Question", "name": "Is Tunturi suitable for commercial gym setups?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Tunturi is a premium Finnish brand with a century-long legacy in Nordic fitness engineering. Its professional commercial lines feature exceptional ergonomics, heavy steel frames, and self-generated magnetic resistance systems designed for high-traffic environments." } },
-          { "@type": "Question", "name": "What are the main differences between Tunturi and Precor?", "acceptedAnswer": { "@type": "Answer", "text": "While Precor is an excellent brand primarily focused on traditional club cardio, Tunturi specializes in Nordic ergonomic biomechanics and highly compact, self-generated cardio units. Tunturi offers significant CapEx savings (20-30%) and prompt local AMC support via TechFit\'s direct equipment partnership in India." } }
+          { "@type": "Question", "name": "What are the main differences between Tunturi and Precor?", "acceptedAnswer": { "@type": "Answer", "text": "While Precor is an excellent brand primarily focused on traditional club cardio, Tunturi specializes in Nordic ergonomic biomechanics and highly compact, self-generated cardio units. Tunturi offers significant CapEx savings (20-30%) and prompt local AMC support via TechFit\'s direct resellership in India." } }
         ]
       },
       {
@@ -2773,10 +2773,10 @@ const NOSCRIPT_FALLBACKS = {
     <main style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <article>
       <header>
-        <h1>BH Fitness | Equipment Partner & Reseller (India)</h1>
+        <h1>BH Fitness | Reseller (India)</h1>
       </header>
       <section>
-      <p>TechFit is the Equipment Partner and Reseller (India) for <strong>BH Fitness</strong> commercial gym equipment. Headquartered in Spain, BH Fitness is a leading global commercial fitness brand, delivering world-class biomechanics, structural durability, and cloud-connected display consoles.</p>
+      <p>TechFit is the Reseller (India) for <strong>BH Fitness</strong> commercial gym equipment. Headquartered in Spain, BH Fitness is a leading global commercial fitness brand, delivering world-class biomechanics, structural durability, and cloud-connected display consoles.</p>
       
       </section>
       <section>
@@ -2804,10 +2804,10 @@ const NOSCRIPT_FALLBACKS = {
     <main style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <article>
       <header>
-        <h1>Tunturi Fitness | Equipment Partner (India)</h1>
+        <h1>Tunturi Fitness | Reseller (India)</h1>
       </header>
       <section>
-      <p>TechFit is the Equipment Partner (India) for <strong>Tunturi</strong> fitness equipment. From Finland, Tunturi is a pioneer in Nordic fitness innovation, designing high-quality cardio, strength, and functional training gear for commercial fitness studios, corporate gyms, residential amenities, and premium home setups since 1922.</p>
+      <p>TechFit is the Reseller (India) for <strong>Tunturi</strong> fitness equipment. From Finland, Tunturi is a pioneer in Nordic fitness innovation, designing high-quality cardio, strength, and functional training gear for commercial fitness studios, corporate gyms, residential amenities, and premium home setups since 1922.</p>
       
       </section>
       <section>
@@ -2829,10 +2829,10 @@ const NOSCRIPT_FALLBACKS = {
     <main style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <article>
       <header>
-        <h1>California Fitness | Equipment Partner (India)</h1>
+        <h1>California Fitness | Reseller (India)</h1>
       </header>
       <section>
-      <p>TechFit is the Equipment Partner (India) for <strong>California Fitness</strong> equipment, delivering heavy-duty commercial cardio, selectorized strength stacks, plate-loaded machines, and free-weight benches designed specifically for commercial health clubs, high-traffic corporate fitness facilities, and personal training studios.</p>
+      <p>TechFit is the Reseller (India) for <strong>California Fitness</strong> equipment, delivering heavy-duty commercial cardio, selectorized strength stacks, plate-loaded machines, and free-weight benches designed specifically for commercial health clubs, high-traffic corporate fitness facilities, and personal training studios.</p>
       <p>California Fitness is built for high durability, smooth movement paths, and ease of serviceability. It provides gym owners with a highly reliable, heavy-use alternative for commercial fitness facilities, backed by TechFit\'s direct installation, layout planning, and AMC service framework.</p>
       <p><strong>Contact TechFit for California Fitness:</strong><br>
         Email: info@techfittech.com<br>
@@ -3082,7 +3082,7 @@ const NOSCRIPT_FALLBACKS = {
       <p>TechFit active health fitness solutions provides a highly optimized, high-impact alternative for premium B2B buyers. We bridge the gap between world-class European engineering and boots-on-the-ground Indian manufacturing and engineering accountability. Our unique approach consists of three distinct pillars:</p>
       
       <h4>A. Premium European Cardio Sourcing</h4>
-      <p>Rather than using unproven brands, TechFit partners as the equipment partner and reseller for premium commercial gym manufacturers like <strong>BH Fitness Spain</strong>. BH Fitness is one of Europe's oldest and most prestigious fitness equipment brands, offering incredible mechanical durability, high-end console displays, and beautiful aesthetics. By sourcing BH Fitness through TechFit, you get the exact same elite biomechanical validation and commercial cardio performance as any tier-1 import, but at optimized pricing, completely avoiding third-party importing markups.</p>
+      <p>Rather than using unproven brands, TechFit partners as the reseller for premium commercial gym manufacturers like <strong>BH Fitness Spain</strong>. BH Fitness is one of Europe's oldest and most prestigious fitness equipment brands, offering incredible mechanical durability, high-end console displays, and beautiful aesthetics. By sourcing BH Fitness through TechFit, you get the exact same elite biomechanical validation and commercial cardio performance as any tier-1 import, but at optimized pricing, completely avoiding third-party importing markups.</p>
       
       <h4>B. Bespoke Local Steel Fabrication</h4>
       <p>For strength equipment, CrossFit cages, free-weight racks, and combat sports elements, importing standard steel boxes from overseas is financially inefficient and limits customization. TechFit operates its own heavy-duty manufacturing and custom-fabrication workshop in Mumbai. We construct custom rigs, cages, and platforms using heavy 11-gauge (3mm+) structural steel. We can custom powder coat frames to match your facility's branding, embroider custom logos into leather upholstery, and build cages to precise dimensions. This allows your gym to have a unique, custom-branded identity that catalog imports can never match.</p>
@@ -3362,7 +3362,7 @@ const NOSCRIPT_FALLBACKS = {
       <p>TechFit active health fitness solutions provides a highly optimized, high-impact alternative for premium B2B buyers. We bridge the gap between world-class European engineering and boots-on-the-ground Indian manufacturing and engineering accountability. Our unique approach consists of three distinct pillars:</p>
       
       <h4>A. Premium European Cardio Sourcing</h4>
-      <p>Rather than using unproven brands, TechFit partners as an equipment partner and reseller for premium commercial gym manufacturers like <strong>BH Fitness Spain</strong> and <strong>Tunturi Finland</strong>. These brands represent Europe's oldest and most prestigious fitness equipment manufacturers, offering incredible mechanical durability, high-end console displays, and beautiful aesthetics. By sourcing these brands through TechFit, you get the exact same elite biomechanical validation and commercial cardio performance as any tier-1 import, but at optimized pricing, completely avoiding third-party importing markups.</p>
+      <p>Rather than using unproven brands, TechFit partners as a reseller for premium commercial gym manufacturers like <strong>BH Fitness Spain</strong> and <strong>Tunturi Finland</strong>. These brands represent Europe's oldest and most prestigious fitness equipment manufacturers, offering incredible mechanical durability, high-end console displays, and beautiful aesthetics. By sourcing these brands through TechFit, you get the exact same elite biomechanical validation and commercial cardio performance as any tier-1 import, but at optimized pricing, completely avoiding third-party importing markups.</p>
       
       <h4>B. Bespoke Local Steel Fabrication</h4>
       <p>For strength equipment, CrossFit cages, free-weight racks, and combat sports elements, importing standard steel boxes from overseas is financially inefficient and limits customization. TechFit operates its own heavy-duty manufacturing and custom-fabrication workshop in Mumbai. We construct custom rigs, cages, and platforms using heavy 11-gauge (3mm+) structural steel. We can custom powder coat frames to match your facility's branding, embroider custom logos into leather upholstery, and build cages to precise dimensions. This allows your gym to have a unique, custom-branded identity that catalog imports can never match.</p>
@@ -3935,7 +3935,7 @@ function generatePage(html, route, seo) {
     noscriptBlock = NOSCRIPT_FALLBACKS[route] || `  <noscript>
     <div style="padding:2rem;max-width:800px;margin:5rem auto;font-family:Arial,sans-serif;line-height:1.6">
       <div style="font-size:1.5rem;font-weight:bold;margin-bottom:1rem;color:#111">TechFit | Gym Setup, Equipment &amp; Wellness Solutions</div>
-      <p>India's gym, wellness &amp; sports infrastructure partner with 800+ installations delivered. Equipment Partner &amp; Reseller for BH Fitness, Tunturi, California Fitness, and Alteon Wellness. Sales Partner for Merrithew. Based in Mumbai.</p>
+      <p>India's gym, wellness &amp; sports infrastructure partner with 800+ installations delivered. Reseller for BH Fitness, Tunturi, California Fitness, and Alteon Wellness. Sales Partner for Merrithew. Based in Mumbai.</p>
       <p><strong>Services:</strong> Gym design &amp; layout, commercial equipment supply, custom fabrication of
         combat-sports equipment and CrossFit rigs, wellness and recovery technology from
         Alteon, installation, after-sales and AMC. Sister concern TechFit Active provides managed gym operations.</p>
