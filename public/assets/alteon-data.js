@@ -126,7 +126,7 @@ window.ALTEON_DATA = {
     "PEMF bed India",
     "recovery lounger"
    ],
-   "count": 5,
+   "count": 6,
    "heroImage": "assets/images/alteon/pemf-bed-50.webp",
    "heroTileColor": "#f3f4f7"
   },
@@ -134,13 +134,13 @@ window.ALTEON_DATA = {
    "id": "pemf-therapy",
    "name": "PEMF Therapy",
    "eyebrow": "PULSED FIELDS",
-   "blurb": "Pulsed electromagnetic field therapy in capsule and bed formats, layering PEMF with infrared heat, massage, light and salt therapy for cellular regeneration, circulation, recovery and deep relaxation.",
+   "blurb": "Pulsed electromagnetic field therapy at every level: an entry PEMF and crystal therapy mat, the seven therapy PEMF Multi-Therapy Pod with dual salt halotherapy, and the full body PEMF Bed for cellular regeneration, circulation, recovery and deep relaxation.",
    "competitors": [
     "BEMER",
     "PEMF bed suppliers",
     "iMRS"
    ],
-   "count": 2,
+   "count": 3,
    "heroImage": "assets/images/alteon/pemf-multi-therapy-pod-301.webp",
    "heroTileColor": "#f5f4f1"
   },
@@ -233,7 +233,7 @@ window.ALTEON_DATA = {
     "body composition analyser"
    ],
    "count": 1,
-   "heroImage": "assets/images/alteon/body-scan-pro-28.webp",
+   "heroImage": "assets/images/alteon/bodymap-clean-1600.webp",
    "heroTileColor": "#000000"
   }
  ],
@@ -1316,7 +1316,7 @@ window.ALTEON_DATA = {
      "Custom room layouts engineered per site"
     ]
    ],
-   "image": "assets/images/alteon/modular-medical-hbot-300.webp",
+   "image": "assets/images/alteon/modular-medical-hbot-302.webp",
    "tileColor": "#ffffff",
    "gallery": null
   },
@@ -2862,7 +2862,7 @@ window.ALTEON_DATA = {
      "1842 x 715 x 822 mm"
     ]
    ],
-   "image": "assets/images/alteon/red-revive-axis-healray-hrt-2-5.webp",
+   "image": "assets/images/alteon/red-revive-axis-hrt2-glow.webp",
    "tileColor": "#ffffff",
    "gallery": [
     "assets/images/alteon/gallery/Red Revive Axis HEALRAY HRT 2__0_1920x1281_p4.jpeg",
@@ -5719,6 +5719,61 @@ window.ALTEON_DATA = {
    "tileColor": "#fdfdfd"
   },
   {
+   "id": "compression-boots-310",
+   "name": "Compression Boots",
+   "category": "Recovery",
+   "categoryId": "recovery-loungers-and-beds",
+   "model": "Alteon Compression Boots",
+   "overview": "Alteon Compression Boots deliver dynamic air compression therapy to the legs, sequentially inflating and deflating chambers from the feet upward to flush metabolic waste, reduce swelling and accelerate recovery between sessions. The lowest cost, highest turnover recovery station on the Alteon menu, they slot into any gym, physio room or recovery lounge and pay for themselves in memberships and add on sessions.",
+   "howItWorks": "Sequential pneumatic chambers compress the limb in a graded wave, mimicking the muscle pump to accelerate venous return and lymphatic drainage. Programmes vary pressure and cycle time so athletes can recover after training while members relax through a 20 to 30 minute session.",
+   "benefits": [
+    "Accelerated recovery after training and competition",
+    "Reduced muscle soreness and swelling",
+    "Improved circulation and lymphatic drainage",
+    "Simple, operator free sessions with high member throughput",
+    "Ideal add on revenue station for gyms and studios"
+   ],
+   "features": [
+    "Sequential multi chamber pneumatic compression",
+    "Adjustable pressure levels and programmes",
+    "Full leg coverage boots",
+    "Compact controller, plug and play setup",
+    "Durable commercial grade construction"
+   ],
+   "applications": [
+    "Gyms and CrossFit boxes",
+    "Physiotherapy and sports clinics",
+    "Recovery lounges and spas",
+    "Team dressing rooms",
+    "Home recovery corners"
+   ],
+   "specs": [
+    [
+     "Therapy",
+     "Dynamic sequential air compression"
+    ],
+    [
+     "Coverage",
+     "Full leg boots"
+    ],
+    [
+     "Session",
+     "Typically 20 to 30 minutes"
+    ],
+    [
+     "Format",
+     "Boots pair with compact controller"
+    ],
+    [
+     "Placement",
+     "Any lounge chair or recovery bed"
+    ]
+   ],
+   "image": "assets/images/alteon/compression-boots-310.webp",
+   "tileColor": "#8b8c8e",
+   "gallery": null
+  },
+  {
    "id": "activ-couch-51",
    "name": "Activ Couch",
    "category": "Recovery",
@@ -5955,7 +6010,7 @@ window.ALTEON_DATA = {
      "Included"
     ]
    ],
-   "image": "assets/images/alteon/fit-red-couch-oxy-1600.webp",
+   "image": "assets/images/alteon/red-couch-oxy-208.webp",
    "tileColor": "#000000"
   },
   {
@@ -6088,6 +6143,58 @@ window.ALTEON_DATA = {
    ],
    "image": "assets/images/alteon/fit-halo-renew-1600.webp",
    "tileColor": "#000000"
+  },
+  {
+   "id": "pemf-mat-311",
+   "name": "PEMF Mat",
+   "category": "PEMF Therapy",
+   "categoryId": "pemf-therapy",
+   "model": "Alteon Multi Therapy PEMF and Crystal Mat",
+   "overview": "The Alteon PEMF Mat is a multi therapy mat that layers pulsed electromagnetic fields, far infrared heat, photon light, a five stone crystal bed and negative ions into one surface. The most affordable entry into PEMF on the Alteon menu, it turns any treatment table, lounger or floor space into a recovery station for cellular regeneration, circulation and deep relaxation.",
+   "howItWorks": "Coils embedded across the mat pulse low frequency electromagnetic fields through the body while far infrared elements warm the tissue, photon light and crystal layers add thermal mass and light therapy, and a negative ion layer freshens the microclimate. Sessions run lying down, fully clothed, with adjustable intensity and time.",
+   "benefits": [
+    "Cellular regeneration and improved microcirculation",
+    "Deep relaxation and stress reduction",
+    "Warmth and comfort from far infrared heat",
+    "Portable and usable on any bed, lounger or floor",
+    "The most affordable PEMF entry point for any facility"
+   ],
+   "features": [
+    "Full body PEMF coil array",
+    "Far infrared heating layer",
+    "Photon light therapy",
+    "Five stone crystal bed layer",
+    "Negative ion generation",
+    "Adjustable intensity and session time",
+    "Foldable and portable"
+   ],
+   "applications": [
+    "Recovery lounges and spas",
+    "Physiotherapy and wellness clinics",
+    "Yoga and meditation studios",
+    "Homes and corporate wellness rooms"
+   ],
+   "specs": [
+    [
+     "Therapies",
+     "PEMF, far infrared, photon light, crystal bed, negative ions"
+    ],
+    [
+     "Format",
+     "Flat multi layer therapy mat"
+    ],
+    [
+     "Use",
+     "Lying, fully clothed sessions"
+    ],
+    [
+     "Placement",
+     "Any bed, treatment table or floor"
+    ]
+   ],
+   "image": "assets/images/alteon/pemf-mat-311.webp",
+   "tileColor": "#000000",
+   "gallery": null
   },
   {
    "id": "pemf-multi-therapy-pod-301",
@@ -7914,7 +8021,7 @@ window.ALTEON_DATA = {
      "72 x 72 in"
     ]
    ],
-   "image": "assets/images/alteon/body-scan-pro-28.webp",
+   "image": "assets/images/alteon/bodymap-clean-1600.webp",
    "tileColor": "#000000",
    "gallery": [
     "assets/images/alteon/gallery/Body Scan Pro__0_1240x1754_p1.jpeg",
@@ -7926,6 +8033,8 @@ window.ALTEON_DATA = {
   }
  ],
  "clientLogos": [
+  "/assets/images/alteon/client-matrix-wellness.webp",
+  "/assets/images/alteon/client-mma-matrix.webp",
   "https://alteontech.com/assets/logo/logo1.svg",
   "https://alteontech.com/assets/logo/logo2.svg",
   "https://alteontech.com/assets/logo/logo3.svg",
@@ -7937,7 +8046,8 @@ window.ALTEON_DATA = {
   "https://alteontech.com/assets/logo/logo9.svg",
   "https://alteontech.com/assets/logo/logo11.svg",
   "https://alteontech.com/assets/logo/logo12.svg",
-  "https://alteontech.com/assets/logo/logo13.svg"
+  "https://alteontech.com/assets/logo/logo13.svg",
+  "https://alteontech.com/assets/logo/logo10.png"
  ],
  "guides": [
   {
@@ -8253,5 +8363,32 @@ window.ALTEON_DATA = {
  "clientNames": [
   "Matrix Wellness by Tiger Shroff and Krishna Shroff",
   "MMA Matrix by Tiger Shroff and Krishna Shroff"
+ ],
+ "installations": [
+  {
+   "title": "Shangri-La",
+   "subtitle": "Hydrothermal circuit design",
+   "img": "assets/images/alteon/install-shangri-la.webp"
+  },
+  {
+   "title": "Royal Palace, Dubai",
+   "subtitle": "Medical wellness loungers",
+   "img": "assets/images/alteon/install-royal-palace-dubai.webp"
+  },
+  {
+   "title": "BioPeak, Bangalore",
+   "subtitle": "Full equipment integration and hyperbaric installation",
+   "img": "assets/images/alteon/install-biopeak-bangalore.webp"
+  },
+  {
+   "title": "Prana, Mumbai",
+   "subtitle": "Cryotherapy, HBOT and PEMF",
+   "img": "assets/images/alteon/install-prana-mumbai.webp"
+  },
+  {
+   "title": "Ultrahuman",
+   "subtitle": "Complete longevity lab",
+   "img": "assets/images/alteon/install-ultrahuman.webp"
+  }
  ]
 };

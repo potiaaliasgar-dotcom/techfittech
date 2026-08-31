@@ -734,6 +734,7 @@ function renderAlteonHub() {
                 <div class="grid">${cards}</div>
             </div>
         </section>
+        ${alteonInstallBand()}
         ${alteonClientBand()}
         ${alteonCtaBand()}
         ${alteonFloatingWA()}
@@ -944,6 +945,18 @@ function renderAlteonProduct(catId, prodId, variantIdx = 0) {
         ${alteonFloatingWA()}
     </div>
     `;
+}
+
+function alteonInstallBand() {
+    const DB = getAlteonData();
+    const I = DB.installations || [];
+    if (!I.length) return '';
+    const cards = I.map(x => `
+        <div style="border-radius:16px;overflow:hidden;background:#101012;border:1px solid rgba(255,255,255,.08)">
+            ${pictureTag('/' + x.img, esc(x.title) + ' — Alteon installation', '', true, 'width:100%;height:190px;object-fit:cover;display:block')}
+            <div style="padding:14px 16px 16px"><div style="font-weight:600;letter-spacing:.01em">${esc(x.title)}</div><div style="color:var(--muted);font-size:.86rem;margin-top:3px">${esc(x.subtitle)}</div></div>
+        </div>`).join('');
+    return `<section style="padding:56px 0 8px"><div class="wrap"><div style="text-align:center;margin-bottom:26px"><span class="eyebrow">Proven Worldwide</span><h2 style="font-size:clamp(26px,3.6vw,40px);margin:12px 0 6px">Alteon installations across the world</h2><p style="color:var(--muted);max-width:620px;margin:0 auto">The same technology TechFit installs in India runs at flagship wellness destinations worldwide.</p></div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px">${cards}</div></div></section>`;
 }
 
 function alteonClientBand() {
