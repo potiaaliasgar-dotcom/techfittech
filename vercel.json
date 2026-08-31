@@ -114,6 +114,36 @@
       "source": "/padel-pickleball/",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/alteon/whole-body-cryotherapy/local-cryotherapy-23",
+      "destination": "/alteon/spot-and-local-cryotherapy/local-cryotherapy-23",
+      "permanent": true
+    },
+    {
+      "source": "/alteon/whole-body-cryotherapy/cryo-local-polar-bear-212",
+      "destination": "/alteon/spot-and-local-cryotherapy/cryo-local-polar-bear-212",
+      "permanent": true
+    },
+    {
+      "source": "/alteon/whole-body-cryotherapy/cryo-flow-213",
+      "destination": "/alteon/spot-and-local-cryotherapy/cryo-flow-213",
+      "permanent": true
+    },
+    {
+      "source": "/alteon/whole-body-cryotherapy/cryo-flow-mini-214",
+      "destination": "/alteon/spot-and-local-cryotherapy/cryo-flow-mini-214",
+      "permanent": true
+    },
+    {
+      "source": "/alteon/whole-body-cryotherapy/cryo-touch-215",
+      "destination": "/alteon/spot-and-local-cryotherapy/cryo-touch-215",
+      "permanent": true
+    },
+    {
+      "source": "/alteon/recovery-loungers-and-beds/pemf-bed-50",
+      "destination": "/alteon/pemf-therapy/pemf-bed-50",
+      "permanent": true
     }
   ],
   "rewrites": [

@@ -4320,9 +4320,15 @@ ALTEON_DATA.categories.forEach(c => {
     } else if (c.id === 'altitude-and-ihht-training') {
         title = 'Best IHHT & Altitude Training Machines in India | TechFit';
         desc = 'Alteon Interval Hypoxic Hyperoxic Training (IHHT Cell Trainer) platforms in India for mitochondrial biogenesis, athletic performance, and anti-aging.';
+    } else if (c.id === 'spot-and-local-cryotherapy') {
+        title = 'Best Local & Spot Cryotherapy Machines in India | TechFit';
+        desc = 'TechFit supplies Alteon local and spot cryotherapy machines in India — targeted ultra-cold air devices for pain management, physiotherapy, injury recovery and aesthetics. Portable and console models, turnkey supply & AMC.';
+    } else if (c.id === 'pemf-therapy') {
+        title = 'Best PEMF Therapy Machines, Pods & Beds in India | TechFit';
+        desc = 'TechFit is India\'s supplier of Alteon PEMF therapy systems — the PEMF Multi-Therapy Pod with dual salt halotherapy and the full-body PEMF Bed — for longevity clinics, gyms, spas and recovery suites across India.';
     } else if (c.id === 'recovery-loungers-and-beds') {
-        title = 'Best PEMF Recovery Loungers & Therapy Beds in India | TechFit';
-        desc = 'Multi-wave PEMF, infrared heat, and contour massage recovery loungers and beds for biohacking clubs, sports clinics, and luxury relaxation lounges.';
+        title = 'Best Recovery Loungers & Therapy Beds in India | TechFit';
+        desc = 'Infrared heat, red light, and contour massage recovery loungers and beds for biohacking clubs, sports clinics, and luxury relaxation lounges.';
     } else if (c.id === 'biopod-multisensory-capsule') {
         title = 'Best BioPod Multisensory Wellness Capsule in India | TechFit';
         desc = 'Multisensory wellness capsule uniting dry salt halotherapy, red light PBM, oxygen enrichment, and infrared warmth for complete cellular recovery.';
